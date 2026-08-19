@@ -19,6 +19,7 @@ from m5_regional_buildings import (
     load,
 )
 from m8_knowledge import building_content_profiles, research_profile_maps
+from economy_chains import ai_capital_affordability_trigger
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -85,9 +86,9 @@ def expected_report() -> tuple[str, list[str], dict[str, int]]:
     family_keys = set(family_rows)
     blocks = script_blocks(SCRIPT)
     tags = engine_tags()
-    if len(family_keys) != 200:
+    if len(family_keys) != 204:
         failures.append(
-            f"regional reusable-building union is {len(family_keys)}, expected 200"
+            f"regional reusable-building union is {len(family_keys)}, expected 204"
         )
     if set(blocks) != family_keys:
         failures.append("rendered regional-building union differs from its ledger")
@@ -103,6 +104,10 @@ def expected_report() -> tuple[str, list[str], dict[str, int]]:
         rendered_groups = frozenset(GROUP_RE.findall(block))
         has_institution = bool(ROMAN_INSTITUTION_RE.search(block))
         has_gate = bool(COUNTRY_POTENTIAL_RE.search(block))
+        if block.count("\n".join(ai_capital_affordability_trigger())) != 1:
+            failures.append(f"country affordability gate drift: {key}")
+        if "\tallow = {\n\t\talways = yes\n\t}" not in block:
+            failures.append(f"live construction allow drift: {key}")
         if key in FAMILY_EXACT_TAG_GATES:
             expected_tags = frozenset(
                 tags[tag] for tag in FAMILY_EXACT_TAG_GATES[key]
@@ -131,7 +136,7 @@ def expected_report() -> tuple[str, list[str], dict[str, int]]:
                 or not has_gate
             ):
                 failures.append(f"Roman adoption gate drift: {key}")
-        elif has_gate or rendered_tags or rendered_groups or has_institution:
+        elif rendered_tags or rendered_groups or has_institution:
             failures.append(f"neutral reusable family gained a regional gate: {key}")
 
         if key not in gated:

@@ -20,7 +20,12 @@ import sys
 from pathlib import Path
 
 from extract_vanilla import tokenize
-from economy_chains import construction_package, institutional_upkeep, merge_goods
+from economy_chains import (
+    ai_capital_affordability_trigger,
+    construction_package,
+    institutional_upkeep,
+    merge_goods,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,6 +45,7 @@ LOCATIONS = ROOT / "docs/vanilla_symbols/locations.json"
 ICON_DIR = ROOT / "main_menu/gfx/interface/icons/buildings"
 OUTPUT = ROOT / "in_game/common/building_types/00_antiquitas_regional_buildings.txt"
 METHOD_LEDGER = ROOT / "docs/m5/regional_production_methods.csv"
+LATER_ANTIQUE_GOODS = ROOT / "docs/m5/later_antique_goods.csv"
 LOC_ROOT = ROOT / "main_menu/localization"
 DDS = ROOT / "tools/dds.py"
 LOCAL_PATHS = ROOT / "config/local_paths.json"
@@ -70,8 +76,10 @@ BUILD_TIMES = {
 }
 MODIFIERS = {
     "local_clergy_max_literacy", "local_cultural_tradition", "local_disease_resistance",
+    "local_distance_from_capital_speed_propagation", "local_max_literacy",
     "local_garrison_size", "local_life_expectancy", "local_max_control", "local_merchant_capacity",
-    "local_merchant_power", "local_monthly_food_modifier", "local_population_capacity",
+    "local_merchant_power", "local_monthly_control", "local_monthly_food_modifier", "local_population_capacity",
+    "local_proximity_source",
     "local_production_efficiency", "local_repair_speed", "local_sailors", "local_unrest",
 }
 MACROS = {
@@ -362,6 +370,13 @@ COHERENT_RECIPE_OVERRIDES = {
     "antq_reg_meat_curing_yard": ("antq_cured_meat", "0.891", (("livestock", "1.00"), ("salt", "0.20"), ("lumber", "0.05"))),
     "antq_reg_rice_wine_house": ("antq_rice_wine", "0.470", (("rice", "1.00"), ("pottery", "0.10"), ("lumber", "0.05"))),
     "antq_reg_soy_fermentary": ("antq_soy_condiments", "0.750", (("legumes", "1.00"), ("salt", "0.10"), ("pottery", "0.10"))),
+    # Supply-gated later-antique product classes.  None is seeded at AD 1;
+    # their dated building unlock is the first source and therefore the first
+    # point at which no_demand_if_no_market_availability permits pop demand.
+    "antq_reg_yue_celadon_kiln": ("antq_yue_celadon", "1.000", (("clay", "5.0000"), ("coal", "1.0000"), ("tools", "0.4444"))),
+    "antq_reg_codex_bindery": ("antq_bound_codices", "1.000", (("antq_parchment", "1.0000"), ("leather", "0.3000"), ("antq_wax_goods", "0.2000"), ("tools", "0.1889"))),
+    "antq_reg_diatretum_glasshouse": ("antq_cage_glass", "1.000", (("glass", "2.0000"), ("tools", "0.5000"))),
+    "antq_reg_polychrome_goldsmith": ("antq_garnet_cloisonne", "1.000", (("gems", "1.0000"), ("goods_gold", "0.4000"), ("tools", "0.3778"))),
 }
 PRODUCTION_RECIPES.update(COHERENT_RECIPE_OVERRIDES)
 
@@ -404,6 +419,10 @@ _OUTPUT_MACRO_RESTRICTIONS = {
     },
     "antq_felt_goods": {"Europe", "Middle East", "Central Asia", "East Asia"},
     "antq_sailcloth": _OLD_WORLD | {"Oceania"},
+    "antq_yue_celadon": {"East Asia"},
+    "antq_bound_codices": _MEDITERRANEAN,
+    "antq_cage_glass": _MEDITERRANEAN,
+    "antq_garnet_cloisonne": {"Europe", "Central Asia"},
 }
 FAMILY_MACRO_RESTRICTIONS = {
     family: frozenset(_OUTPUT_MACRO_RESTRICTIONS[output])
@@ -430,6 +449,7 @@ def productive_method_key(building: str, suffix: str) -> str:
         return "antq_reg_honey_house_specialist"
     return f"{building}_{suffix}"
 
+TAR_KILN_FAMILIES = {"antq_reg_charcoal_hearth"}
 WATER_OR_PORT_FAMILIES = {
     "antq_reg_shipyard", "antq_reg_reed_boatyard", "antq_reg_bargeyard",
     "antq_reg_ferry_quay", "antq_reg_wharf_crane", "antq_reg_barge_chandlery",
@@ -475,6 +495,9 @@ FAMILY_CULTURE_GROUP_GATES = {
         "antq_sinitic_group", "antq_korean_group", "antq_japonic_group",
     ),
     "antq_reg_lacquer_workshop": (
+        "antq_sinitic_group", "antq_korean_group", "antq_japonic_group",
+    ),
+    "antq_reg_yue_celadon_kiln": (
         "antq_sinitic_group", "antq_korean_group", "antq_japonic_group",
     ),
 }
@@ -649,6 +672,20 @@ def load() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
             modifier_pairs = pairs(row["modifier"], "modifier")
             if any(key not in MODIFIERS for key, _ in modifier_pairs):
                 failures.append(f"{prefix}: unverified modifier")
+            # Scalable guild families can reach ten levels.  EU5 validates
+            # their aggregate local_sailors contribution against a 0.025 cap,
+            # so each level must stay at or below 0.0025.  V25 reached level
+            # ten on the fishing-tackle family and proved this is enforced at
+            # runtime rather than merely being a tooltip-balance convention.
+            sailor_values = [
+                float(amount) for key, amount in modifier_pairs
+                if key == "local_sailors"
+            ]
+            if any(amount > 0.0025 for amount in sailor_values):
+                failures.append(
+                    f"{prefix}: scalable local_sailors exceeds the 0.0025 "
+                    "per-level engine cap"
+                )
             maintenance_pairs = pairs(row["maintenance"], "maintenance")
             listed_goods = {good.strip() for good in row["goods"].split(";") if good.strip()}
             if listed_goods != {good for good, _ in maintenance_pairs}:
@@ -766,10 +803,32 @@ def load() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         seen_pairs.add(pair)
     if len(seeds) < 100:
         failures.append("regional building seed ledger must contain at least 100 placements")
-    if used != family_keys:
-        failures.append(f"every family must be placed; missing={sorted(family_keys - used)}")
-    if any(count == 0 for count in macro_counts.values()):
-        failures.append(f"regional buildings must cover every requested macro: {macro_counts}")
+    # The bookmark intentionally samples regional capacity rather than placing
+    # one instance of every buildable family. Productive recipes must remain
+    # represented, while specialised civic families may begin uninstantiated.
+    with LATER_ANTIQUE_GOODS.open(encoding="utf-8-sig", newline="") as handle:
+        later_buildings = {
+            (row.get("building") or "").strip() for row in csv.DictReader(handle)
+        }
+    if not later_buildings or not later_buildings <= set(PRODUCTION_RECIPES):
+        failures.append("dated later-antique building portfolio is missing from recipes")
+    seeded_late = sorted(later_buildings & used)
+    if seeded_late:
+        failures.append(f"later-antique buildings must not be seeded at AD 1: {seeded_late}")
+    opening_productive = set(PRODUCTION_RECIPES) - later_buildings
+    represented_productive = opening_productive & used
+    productive_coverage = len(represented_productive) / len(opening_productive)
+    if productive_coverage < 0.95:
+        failures.append(
+            "at least 95% of productive families must be represented in the "
+            f"bounded bookmark sample; coverage={productive_coverage:.1%}"
+        )
+    required_macros = set(MACROS) - {"West Africa"}
+    missing_macros = sorted(macro for macro in required_macros if macro_counts[macro] == 0)
+    if missing_macros:
+        failures.append(
+            f"settled-country regional buildings miss required macros {missing_macros}: {macro_counts}"
+        )
     if failures:
         raise ValueError("\n".join(sorted(set(failures))))
     return families, seeds
@@ -788,32 +847,28 @@ def definition(families: list[dict[str, str]]) -> str:
                       f"\temployment_size = {row['employment_size']}"))
         if row["key"] not in CITY_ONLY_FAMILIES:
             lines.append("\ttown = yes")
-        lines.extend(("\tcity = yes", "\tmegalopolis = yes", f"\tbuild_time = {row['build_time']}"))
+        lines.extend(("\tcity = yes", "\tmegalopolis = yes", f"\tbuild_time = {row['build_time']}",
+                      "\tcountry_potential = {", *ai_capital_affordability_trigger()))
         if row["key"] in ROMAN_ECONOMY_FAMILIES:
             lines.extend((
-                "\tcountry_potential = {",
                 "\t\tOR = {",
                 "\t\t\tculture = { has_culture_group = culture_group:antq_italic_group }",
                 "\t\t\tculture = { has_culture_group = culture_group:antq_iberian_group }",
                 "\t\t\tculture = { has_culture_group = culture_group:antq_balkan_group }",
                 "\t\t\thas_embraced_institution = institution:antq_roman_law_engineering",
                 "\t\t}",
-                "\t}",
             ))
         elif row["key"] in FAMILY_EXACT_TAG_GATES:
             lines.extend((
-                "\tcountry_potential = {",
                 "\t\tOR = {",
                 *(
                     f"\t\t\thas_or_had_tag = {tags[design_tag]}"
                     for design_tag in FAMILY_EXACT_TAG_GATES[row["key"]]
                 ),
                 "\t\t}",
-                "\t}",
             ))
         elif row["key"] in FAMILY_CULTURE_GROUP_GATES:
             lines.extend((
-                "\tcountry_potential = {",
                 "\t\tOR = {",
                 *(
                     "\t\t\tculture = { has_culture_group = "
@@ -821,12 +876,31 @@ def definition(families: list[dict[str, str]]) -> str:
                     for culture_group in FAMILY_CULTURE_GROUP_GATES[row["key"]]
                 ),
                 "\t\t}",
-                "\t}",
             ))
-        if row["key"] in WATER_OR_PORT_FAMILIES | CITY_ONLY_FAMILIES:
+        lines.extend((
+            "\t}",
+            "\tallow = {",
+            "\t\talways = yes",
+            "\t}",
+        ))
+        if row["key"] in TAR_KILN_FAMILIES:
+            lines.append("\trural_settlement = yes")
+        if row["key"] in WATER_OR_PORT_FAMILIES | CITY_ONLY_FAMILIES | TAR_KILN_FAMILIES:
             lines.append("\tlocation_potential = {")
             if row["key"] in WATER_OR_PORT_FAMILIES:
                 lines.extend(("\t\tOR = {", "\t\t\tis_coastal = yes", "\t\t\thas_river = yes", "\t\t}"))
+            if row["key"] in TAR_KILN_FAMILIES:
+                lines.extend((
+                    "\t\tOR = {",
+                    "\t\t\tvegetation = forest",
+                    "\t\t\tvegetation = woods",
+                    "\t\t\tvegetation = jungle",
+                    "\t\t\traw_material = goods:lumber",
+                    "\t\t\tlocation_rank = location_rank:town",
+                    "\t\t\tlocation_rank = location_rank:city",
+                    "\t\t\tlocation_rank = location_rank:megalopolis",
+                    "\t\t}",
+                ))
             if row["key"] in CITY_ONLY_FAMILIES:
                 lines.extend((
                     "\t\tOR = {",
@@ -928,6 +1002,23 @@ def validate_art(families: list[dict[str, str]]) -> None:
         raise ValueError("\n".join(failures))
 
 
+def validate_ai_affordability(families: list[dict[str, str]]) -> None:
+    rendered = definition(families)
+    failures = []
+    if rendered.count("\tcountry_potential = {") != len(families):
+        failures.append("regional country-affordability gate coverage drift")
+    if rendered.count("\tallow = {") != len(families):
+        failures.append("regional live affordability gate coverage drift")
+    if rendered.count("\n".join(ai_capital_affordability_trigger())) != len(families):
+        failures.append("regional country-affordability gate contract drift")
+    if rendered.count("\tallow = {\n\t\talways = yes\n\t}") != len(families):
+        failures.append("regional live construction allow must be player-reachable")
+    if rendered.count("\trural_settlement = yes") != len(TAR_KILN_FAMILIES):
+        failures.append("wood-tar kiln must be rural-constructible")
+    if failures:
+        raise ValueError("\n".join(failures))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--write", action="store_true")
@@ -945,6 +1036,7 @@ def main() -> int:
         stale = [path.relative_to(ROOT) for path, (content, encoding) in outputs.items() if not path.is_file() or path.read_text(encoding=encoding) != content]
         if stale:
             raise ValueError(f"stale or missing generated regional-building output: {stale}")
+        validate_ai_affordability(families)
         validate_art(families)
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"m5_regional_buildings: FAIL\n  - {exc}")

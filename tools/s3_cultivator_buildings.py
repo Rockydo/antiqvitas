@@ -6,6 +6,14 @@ import argparse, csv, hashlib, json, subprocess, sys
 from io import StringIO
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageOps
+from economy_chains import (
+    AI_CAPITAL_RESERVE_MONTHS,
+    AI_CAPITAL_SETTLEMENT_DATE,
+    AI_CAPITAL_SURPLUS_DIVISOR,
+    CULTIVATOR_CONSTRUCTION_PACKAGE,
+    PACKAGE_GOODS,
+    ai_capital_affordability_trigger,
+)
 from m5_regional_buildings import good_prices
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -71,13 +79,14 @@ def building_text(rows):
         o += [f"{k} = {{","\taudio_tier = 1","\tis_foreign = no","\tpop_type = peasants","\tcategory = rgo_building_category",
               "\temployment_size = rural_peasant_produce_employment","\tstartup_ramp_target = rural_startup_ramp_target",
               "\trural_settlement = yes","\ttown = yes","\tcity = yes","\tmegalopolis = yes","\tbuild_time = rural_build_time",
-              "\timportant_for_AI = yes","\tlocation_potential = {",*gate(r),"\t}","\tmax_levels = {","\t\tvalue = 1",
+              "\tcountry_potential = {",*ai_capital_affordability_trigger(),"\t}","\tallow = {","\t\talways = yes","\t}",
+              "\tlocation_potential = {",*gate(r),"\t}","\tmax_levels = {","\t\tvalue = 1",
               "\t\tif = {","\t\t\tlimit = { vegetation = farmland }","\t\t\tadd = 1","\t\t}"]
         if cap==3: o += ["\t\tif = {","\t\t\tlimit = { has_river = yes }","\t\t\tadd = 1","\t\t}"]
         o += [f"\t\tmin = {cap}","\t}","\tpossible_production_methods = {"]
         o += [f"\t\t{k}_{suffix}" for suffix, _name, _mult, _margin, _age, _profile in METHOD_TIERS]
         o += ["\t}","\tmodifier = {","\t\tlocal_food_capacity = 20",
-              "\t\tlocal_peasants_estate_power = 0.05","\t}","\tconstruction_demand = farm_constructions",
+              "\t\tlocal_peasants_estate_power = 0.05","\t}",f"\tconstruction_demand = {CULTIVATOR_CONSTRUCTION_PACKAGE}",
               "\tcustom_tags = { antq_cultivator }","}",""]
     return "\n".join(o)
 
@@ -102,6 +111,9 @@ def production_method_text(rows):
     for m in method_rows(rows):
         gross=prices[m["good"]]*float(m["output"]); target=gross/float(m["default_margin"])
         # Later practice substitutes knowledge and tools for brute material use.
+        # The installed rural-profit debug contract requires a 20% base-price
+        # margin; construction pacing, not an inflated recipe profit, prevents
+        # AI saturation of these marginal plots.
         tier=("maintenance","managed","intensive","specialized").index(m["tier"])
         shares=((.20,.30,.50),(.25,.30,.45),(.31,.29,.40),(.36,.28,.36))[tier]
         tools=target*shares[0]/prices["tools"]
@@ -184,6 +196,8 @@ def write(rows):
         f"- {len(CULTIVABLE_GOODS)} reviewed cultivable goods covered; coffee and silphium remain explicit historical exclusions.\n"
         f"- Exact climate, topography, vegetation, region, river, and coast gates.\n"
         f"- Hard caps 2-3; baseline outputs 0.18-0.38 versus native RGO production.\n"
+        f"- Recipes match the installed 20% rural-profit contract; ordinary AI evaluates plots without a high-frequency search override.\n"
+        f"- Player construction remains available on day one; AI construction begins after {AI_CAPITAL_SETTLEMENT_DATE} only with no loans, {AI_CAPITAL_RESERVE_MONTHS} months of gross-income reserves, and a surplus above 1/{AI_CAPITAL_SURPLUS_DIVISOR} of gross income.\n"
         f"- {len(rows)*len(METHOD_TIERS)} methods: baseline plus three research-gated stages; maximum output multiplier 1.35.\n",
         encoding="utf-8",
     )
@@ -202,6 +216,9 @@ def check(rows):
         )
     if set(REVIEWED_EXCLUSIONS) & covered:
         failures.append("reviewed historical exclusions became cultivators")
+    expected_small_cost = (("lumber", "0.05"), ("tools", "0.01"))
+    if PACKAGE_GOODS.get(CULTIVATOR_CONSTRUCTION_PACKAGE) != expected_small_cost:
+        failures.append("cultivator household construction basket drift")
     if not OUT.is_file() or OUT.read_text(encoding="utf-8-sig")!=building_text(rows): failures.append("building output stale")
     if not METHODS.is_file() or METHODS.read_text(encoding="utf-8-sig")!=production_method_text(rows): failures.append("production method output stale")
     if not METHOD_LEDGER.is_file() or METHOD_LEDGER.read_text(encoding="utf-8-sig")!=production_method_ledger(rows): failures.append("production method ledger stale")
@@ -226,6 +243,13 @@ def check(rows):
         if tuple(m["tier"] for m in family) != tuple(x[0] for x in METHOD_TIERS): failures.append(f"method tier drift {r['key']}")
         multipliers=[float(m["output_multiplier"]) for m in family]
         if any(b/a>1.35 for a,b in zip(multipliers,multipliers[1:])) or multipliers[-1]>1.35: failures.append(f"unbounded method gain {r['key']}")
+        if any(float(m["default_margin"]) != 1.20 for m in family): failures.append(f"rural profit contract drift {r['key']}")
+    if "\timportant_for_AI = yes" in building_text(rows): failures.append("cultivators must use ordinary profitability-aware AI evaluation")
+    rendered=building_text(rows)
+    if rendered.count("\tcountry_potential = {") != len(rows): failures.append("cultivator country-affordability gate coverage drift")
+    if rendered.count("\tallow = {") != len(rows): failures.append("cultivator live affordability gate coverage drift")
+    if rendered.count("\n".join(ai_capital_affordability_trigger())) != len(rows): failures.append("cultivator country-affordability gate contract drift")
+    if rendered.count("\tallow = {\n\t\talways = yes\n\t}") != len(rows): failures.append("cultivator live construction allow must be player-reachable")
     if not CONTACT.is_file(): failures.append("contact sheet missing")
     for lang in LANGS:
         p=ROOT/f"main_menu/localization/{lang}/antq_s3_cultivators_l_{lang}.yml"

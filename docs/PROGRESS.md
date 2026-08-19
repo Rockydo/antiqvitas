@@ -1,5 +1,13 @@
 # Progress
 
+## 2026-08-19 - Player construction allow is no longer actor-gated
+
+- Regional, cultivator, and tribal buildings keep the AI capital-settlement
+  date in country_potential but use `allow = { always = yes }` so the
+  construction UI does not depend on a country `scope:actor`.
+- Wood-Tar Kiln is rural-legal on forest/woods/jungle/lumber RGOs and remains
+  buildable in towns as the non-forest trade alternative.
+
 ## 2026-08-19 - Unique situation responses and remaining-century events
 
 - All 83 dated historical currents now have unique directed/delegated effect

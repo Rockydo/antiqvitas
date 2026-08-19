@@ -14,6 +14,20 @@ antq_reg_olive_press = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -66,6 +80,20 @@ antq_reg_wine_press = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -115,6 +143,20 @@ antq_reg_fish_saltery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.025
 	}
@@ -167,6 +209,20 @@ antq_reg_pottery_kiln = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.025
 	}
@@ -216,6 +272,20 @@ antq_reg_fullonica = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -259,6 +329,20 @@ antq_reg_glassworks = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.025
 	}
@@ -308,6 +392,20 @@ antq_reg_dye_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -357,6 +455,20 @@ antq_reg_metalwork = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -400,6 +512,20 @@ antq_reg_stone_yard = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.015
 	}
@@ -432,6 +558,20 @@ antq_reg_shipyard = {
 	city = yes
 	megalopolis = yes
 	build_time = medium_port_building_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			is_coastal = yes
@@ -439,7 +579,7 @@ antq_reg_shipyard = {
 		}
 	}
 	modifier = {
-		local_sailors = 0.008
+		local_sailors = 0.0025
 		local_repair_speed = 0.008
 	}
 	unique_production_methods = {
@@ -496,10 +636,22 @@ antq_reg_silk_loom = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_sinitic_group }
 			culture = { has_culture_group = culture_group:antq_korean_group }
 			culture = { has_culture_group = culture_group:antq_japonic_group }
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_production_efficiency = 0.02
@@ -538,14 +690,34 @@ antq_reg_scriptorium = {
 	pop_type = clergy
 	max_levels = guild_max_level
 	startup_ramp_target = guild_startup_ramp_target
-	category = consumer_goods_category
-	employment_size = religious_building_employment
+	category = government_category
+	employment_size = cultural_employment
 	town = yes
 	city = yes
 	megalopolis = yes
-	build_time = guild_build_time
+	build_time = government_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
-		local_clergy_max_literacy = 0.015
+		local_max_control = 0.025
+		local_monthly_control = 0.001
+		local_distance_from_capital_speed_propagation = 0.08
+		local_proximity_source = 15
+		local_clergy_max_literacy = 0.5
+		local_max_literacy = 0.25
+		local_cultural_tradition = 0.01
 	}
 	unique_production_methods = {
 		antq_reg_scriptorium_maintenance = {
@@ -593,6 +765,20 @@ antq_reg_jeweler = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -636,6 +822,20 @@ antq_reg_weapon_smith = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_garrison_size = 0.01
 	}
@@ -688,6 +888,20 @@ antq_reg_cotton_weavery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -731,6 +945,20 @@ antq_reg_linen_weavery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -774,6 +1002,20 @@ antq_reg_alum_dyehouse = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -823,6 +1065,20 @@ antq_reg_joinery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -872,6 +1128,20 @@ antq_reg_bronze_foundry = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -924,6 +1194,20 @@ antq_reg_ivory_carver = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -967,6 +1251,20 @@ antq_reg_leatherworks = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -1019,6 +1317,20 @@ antq_reg_amphora_depot = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.015
 	}
@@ -1050,6 +1362,20 @@ antq_reg_grain_mill = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_monthly_food_modifier = 0.01
 	}
@@ -1099,6 +1425,20 @@ antq_reg_ropewalk = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -1135,7 +1475,7 @@ antq_reg_ropewalk = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_brickworks = {
@@ -1151,6 +1491,20 @@ antq_reg_brickworks = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -1194,6 +1548,20 @@ antq_reg_lampworks = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -1243,6 +1611,20 @@ antq_reg_tile_yard = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -1292,8 +1674,23 @@ antq_reg_papyrus_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
-		local_clergy_max_literacy = 0.01
+		local_clergy_max_literacy = 0.2
+		local_max_literacy = 0.1
 	}
 	unique_production_methods = {
 		antq_reg_papyrus_workshop_maintenance = {
@@ -1341,6 +1738,20 @@ antq_reg_incense_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -1393,6 +1804,20 @@ antq_reg_basketry = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -1442,6 +1867,20 @@ antq_reg_linen_bleachery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -1485,6 +1924,20 @@ antq_reg_copper_smithy = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -1537,6 +1990,20 @@ antq_reg_spice_grinder = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -1580,6 +2047,20 @@ antq_reg_reed_boatyard = {
 	city = yes
 	megalopolis = yes
 	build_time = medium_port_building_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			is_coastal = yes
@@ -1587,7 +2068,7 @@ antq_reg_reed_boatyard = {
 		}
 	}
 	modifier = {
-		local_sailors = 0.005
+		local_sailors = 0.0025
 		local_repair_speed = 0.005
 	}
 	unique_production_methods = {
@@ -1639,6 +2120,20 @@ antq_reg_oil_bottler = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -1691,6 +2186,20 @@ antq_reg_garum_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -1743,6 +2252,20 @@ antq_reg_lime_kiln = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -1792,6 +2315,20 @@ antq_reg_marble_yard = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -1841,6 +2378,20 @@ antq_reg_wool_carder = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -1884,6 +2435,20 @@ antq_reg_mordant_dyehouse = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -1933,6 +2498,20 @@ antq_reg_scale_armoury = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -1985,6 +2564,20 @@ antq_reg_wheelwright = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -2034,6 +2627,20 @@ antq_reg_granary = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_monthly_food_modifier = 0.01
 	}
@@ -2063,6 +2670,20 @@ antq_reg_beadworks = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -2112,6 +2733,20 @@ antq_reg_loomweight_weavery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -2155,6 +2790,20 @@ antq_reg_bargeyard = {
 	city = yes
 	megalopolis = yes
 	build_time = medium_port_building_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			is_coastal = yes
@@ -2162,7 +2811,7 @@ antq_reg_bargeyard = {
 		}
 	}
 	modifier = {
-		local_sailors = 0.005
+		local_sailors = 0.0025
 		local_repair_speed = 0.005
 	}
 	unique_production_methods = {
@@ -2214,6 +2863,20 @@ antq_reg_saddlery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -2266,6 +2929,20 @@ antq_reg_parchmentery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_clergy_max_literacy = 0.01
 	}
@@ -2315,6 +2992,20 @@ antq_reg_mosaic_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_cultural_tradition = 0.01
 	}
@@ -2364,6 +3055,20 @@ antq_reg_stuccoworks = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -2416,6 +3121,20 @@ antq_reg_lead_foundry = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -2465,6 +3184,20 @@ antq_reg_lapidary = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -2508,6 +3241,20 @@ antq_reg_perfumery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -2560,6 +3307,20 @@ antq_reg_wax_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -2612,6 +3373,20 @@ antq_reg_sailmaker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			is_coastal = yes
@@ -2667,6 +3442,20 @@ antq_reg_brewhouse = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_monthly_food_modifier = 0.005
 	}
@@ -2716,6 +3505,20 @@ antq_reg_quernworks = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -2765,6 +3568,20 @@ antq_reg_textile_dye_finisher = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -2814,6 +3631,20 @@ antq_reg_monetal_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -2857,6 +3688,20 @@ antq_reg_hide_curing_yard = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -2909,6 +3754,20 @@ antq_reg_apothecary = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -2940,6 +3799,20 @@ antq_reg_bread_oven = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_monthly_food_modifier = 0.01
 	}
@@ -2989,6 +3862,20 @@ antq_reg_amphora_warehouse = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.015
 	}
@@ -3019,6 +3906,20 @@ antq_reg_tegula_kiln = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -3068,6 +3969,20 @@ antq_reg_hypocaust_yard = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_monthly_food_modifier = 0.005
 	}
@@ -3100,8 +4015,23 @@ antq_reg_stationer = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
-		local_clergy_max_literacy = 0.01
+		local_clergy_max_literacy = 0.3
+		local_max_literacy = 0.15
 	}
 	unique_production_methods = {
 		antq_reg_stationer_maintenance = {
@@ -3149,6 +4079,20 @@ antq_reg_weightmaker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -3201,6 +4145,20 @@ antq_reg_chariotwright = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -3250,6 +4208,20 @@ antq_reg_ferry_quay = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			is_coastal = yes
@@ -3308,6 +4280,20 @@ antq_reg_raised_granary = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_monthly_food_modifier = 0.01
 	}
@@ -3338,6 +4324,20 @@ antq_reg_saltworks = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.01
 	}
@@ -3369,6 +4369,20 @@ antq_reg_purple_dyehouse = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -3418,6 +4432,20 @@ antq_reg_iron_bloomery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -3461,6 +4489,20 @@ antq_reg_tin_smelter = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -3513,6 +4555,32 @@ antq_reg_charcoal_hearth = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	rural_settlement = yes
+	location_potential = {
+		OR = {
+			vegetation = forest
+			vegetation = woods
+			vegetation = jungle
+			raw_material = goods:lumber
+			location_rank = location_rank:town
+			location_rank = location_rank:city
+			location_rank = location_rank:megalopolis
+		}
+	}
 	modifier = {
 		local_production_efficiency = 0.01
 	}
@@ -3540,7 +4608,7 @@ antq_reg_charcoal_hearth = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_glass_bead_furnace = {
@@ -3556,6 +4624,20 @@ antq_reg_glass_bead_furnace = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -3605,6 +4687,20 @@ antq_reg_cordwainer = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -3657,6 +4753,20 @@ antq_reg_netmaker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -3709,6 +4819,20 @@ antq_reg_packsaddle_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -3761,6 +4885,20 @@ antq_reg_stone_carver = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_cultural_tradition = 0.01
 	}
@@ -3810,6 +4948,20 @@ antq_reg_cooperage = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -3859,6 +5011,20 @@ antq_reg_spice_warehouse = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.015
 	}
@@ -3890,6 +5056,20 @@ antq_reg_honey_house = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -3939,6 +5119,20 @@ antq_reg_soapworks = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -3991,6 +5185,20 @@ antq_reg_flax_retting_yard = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -4034,6 +5242,20 @@ antq_reg_bone_carver = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -4080,6 +5302,20 @@ antq_reg_hornworker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -4126,6 +5362,20 @@ antq_reg_amber_carver = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -4175,6 +5425,20 @@ antq_reg_coral_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -4218,6 +5482,20 @@ antq_reg_sponge_drying_yard = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -4250,6 +5528,20 @@ antq_reg_reed_matmaker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -4301,10 +5593,22 @@ antq_reg_lacquer_workshop = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_sinitic_group }
 			culture = { has_culture_group = culture_group:antq_korean_group }
 			culture = { has_culture_group = culture_group:antq_japonic_group }
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_cultural_tradition = 0.01
@@ -4355,6 +5659,20 @@ antq_reg_instrument_maker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_cultural_tradition = 0.01
 	}
@@ -4404,6 +5722,20 @@ antq_reg_figurine_kiln = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -4453,6 +5785,20 @@ antq_reg_public_cistern = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_life_expectancy = 0.01
 	}
@@ -4483,6 +5829,20 @@ antq_reg_fountain_house = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_life_expectancy = 0.01
 	}
@@ -4515,6 +5875,20 @@ antq_reg_macellum_stalls = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.015
 	}
@@ -4547,6 +5921,20 @@ antq_reg_mensores_office = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -4579,8 +5967,24 @@ antq_reg_way_station = {
 	city = yes
 	megalopolis = yes
 	build_time = infrastructure_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_max_control = 0.01
+		local_monthly_control = 0.0005
+		local_distance_from_capital_speed_propagation = 0.05
 	}
 	unique_production_methods = {
 		antq_reg_way_station_maintenance = {
@@ -4612,6 +6016,20 @@ antq_reg_caravanserai = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.015
 	}
@@ -4644,6 +6062,20 @@ antq_reg_wharf_crane = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			is_coastal = yes
@@ -4682,6 +6114,20 @@ antq_reg_lamp_oil_depot = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -4714,6 +6160,20 @@ antq_reg_bath_fuel_depot = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_life_expectancy = 0.005
 	}
@@ -4745,6 +6205,20 @@ antq_reg_pack_animal_yard = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -4777,6 +6251,20 @@ antq_reg_grain_weighhouse = {
 	city = yes
 	megalopolis = yes
 	build_time = market_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -4809,6 +6297,20 @@ antq_reg_customs_gate = {
 	city = yes
 	megalopolis = yes
 	build_time = government_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_power = 0.01
 	}
@@ -4842,6 +6344,20 @@ antq_reg_ironmongery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -4885,6 +6401,20 @@ antq_reg_bronze_vessel_shop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -4937,6 +6467,20 @@ antq_reg_oil_lamp_kiln = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -4986,6 +6530,20 @@ antq_reg_fineware_kiln = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -5035,6 +6593,20 @@ antq_reg_scroll_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.015
 	}
@@ -5084,6 +6656,20 @@ antq_reg_silverworkshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.015
 	}
@@ -5127,6 +6713,20 @@ antq_reg_arrow_fletchery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -5176,6 +6776,20 @@ antq_reg_harness_maker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -5228,6 +6842,20 @@ antq_reg_wickerwork = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.015
 	}
@@ -5277,6 +6905,20 @@ antq_reg_loom_house = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -5320,6 +6962,20 @@ antq_reg_cauldron_smithy = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -5372,6 +7028,20 @@ antq_reg_barge_chandlery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			is_coastal = yes
@@ -5430,6 +7100,20 @@ antq_reg_combmaker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.015
 	}
@@ -5473,6 +7157,20 @@ antq_reg_bell_foundry = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -5525,6 +7223,20 @@ antq_reg_oarwright = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			is_coastal = yes
@@ -5583,6 +7295,20 @@ antq_reg_spindlework = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -5626,6 +7352,20 @@ antq_reg_torchmaker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -5678,6 +7418,20 @@ antq_reg_sieve_maker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -5727,6 +7481,20 @@ antq_reg_mortar_grinder = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -5776,6 +7544,20 @@ antq_reg_seal_cutter = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.015
 	}
@@ -5819,6 +7601,20 @@ antq_reg_kiln_furniture = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -5868,6 +7664,20 @@ antq_reg_reed_pen_maker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_clergy_max_literacy = 0.01
 	}
@@ -5917,6 +7727,20 @@ antq_reg_sail_needle_shop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			is_coastal = yes
@@ -5975,6 +7799,20 @@ antq_reg_pulley_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			is_coastal = yes
@@ -6033,6 +7871,20 @@ antq_reg_locksmith = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -6076,6 +7928,20 @@ antq_reg_nailery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -6119,6 +7985,20 @@ antq_reg_chainmaker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -6162,6 +8042,20 @@ antq_reg_wiredrawer = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.015
 	}
@@ -6208,6 +8102,20 @@ antq_reg_shieldmaker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_garrison_size = 0.01
 	}
@@ -6260,6 +8168,20 @@ antq_reg_scabbard_maker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_garrison_size = 0.01
 	}
@@ -6312,8 +8234,22 @@ antq_reg_fishing_tackle = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
-		local_sailors = 0.003
+		local_sailors = 0.0025
 	}
 	unique_production_methods = {
 		antq_reg_fishing_tackle_maintenance = {
@@ -6364,6 +8300,20 @@ antq_reg_feltworks = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -6407,6 +8357,20 @@ antq_reg_carpet_loom = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -6456,6 +8420,20 @@ antq_reg_cork_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -6505,6 +8483,20 @@ antq_reg_brushmaker = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -6554,6 +8546,20 @@ antq_reg_tesserae_kiln = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -6605,11 +8611,23 @@ antq_reg_south_arabian_terrace_sluices = {
 	build_time = infrastructure_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = XBJ
 			has_or_had_tag = HIM
 			has_or_had_tag = QAT
 			has_or_had_tag = XBI
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_population_capacity = 0.02
@@ -6643,11 +8661,23 @@ antq_reg_arabian_caravan_station = {
 	build_time = market_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = AGR
 			has_or_had_tag = BED
 			has_or_had_tag = NAB
 			has_or_had_tag = XEQ
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_merchant_capacity = 0.02
@@ -6683,11 +8713,23 @@ antq_reg_aromatic_resin_sorting_house = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = XBJ
 			has_or_had_tag = HIM
 			has_or_had_tag = QAT
 			has_or_had_tag = XBI
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_merchant_power = 0.015
@@ -6722,9 +8764,21 @@ antq_reg_eastern_arabian_aflaj = {
 	build_time = infrastructure_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = GRH
 			has_or_had_tag = OMN
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_life_expectancy = 0.01
@@ -6761,8 +8815,20 @@ antq_reg_marcomannic_royal_compound = {
 	build_time = government_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = XBK
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_max_control = 0.01
@@ -6799,8 +8865,20 @@ antq_reg_germanic_assembly_field = {
 	build_time = cultural_building_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_germanic_group }
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_cultural_tradition = 0.01
@@ -6835,8 +8913,20 @@ antq_reg_semnonian_sacred_grove = {
 	build_time = religious_building_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = SEM
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_cultural_tradition = 0.012
@@ -6872,10 +8962,22 @@ antq_reg_rhine_frontier_market = {
 	build_time = market_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = XDW
 			has_or_had_tag = BTV
 			has_or_had_tag = XBL
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_merchant_capacity = 0.015
@@ -6911,8 +9013,20 @@ antq_reg_batavian_auxiliary_muster = {
 	build_time = small_fort_building
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = BTV
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_garrison_size = 0.015
@@ -6949,8 +9063,20 @@ antq_reg_aestian_amber_sorting_ground = {
 	build_time = market_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = AES
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_merchant_power = 0.012
@@ -6986,8 +9112,20 @@ antq_reg_vistula_migration_staging = {
 	build_time = infrastructure_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = GUT
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_population_capacity = 0.01
@@ -7024,12 +9162,24 @@ antq_reg_north_sea_boat_landing = {
 	build_time = medium_port_building_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = XBM
 			has_or_had_tag = XBN
 		}
 	}
+	allow = {
+		always = yes
+	}
 	modifier = {
-		local_sailors = 0.005
+		local_sailors = 0.0025
 		local_repair_speed = 0.005
 	}
 	unique_production_methods = {
@@ -7064,9 +9214,21 @@ antq_reg_southern_rock_shelter_custody = {
 	build_time = cultural_building_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = LMP
 			has_or_had_tag = ZHF
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_cultural_tradition = 0.008
@@ -7103,9 +9265,21 @@ antq_reg_seasonal_waterhole_camp = {
 	build_time = infrastructure_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = LMP
 			has_or_had_tag = ZHF
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_population_capacity = 0.01
@@ -7139,9 +9313,21 @@ antq_reg_riverine_gathering_ground = {
 	build_time = cultural_building_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			has_or_had_tag = LMP
 			has_or_had_tag = ZHF
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_merchant_capacity = 0.006
@@ -7176,6 +9362,20 @@ antq_reg_date_drying_yard = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_monthly_food_modifier = 0.01
 	}
@@ -7225,6 +9425,20 @@ antq_reg_sesame_oil_press = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -7277,6 +9491,20 @@ antq_reg_nut_grinding_house = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -7326,6 +9554,20 @@ antq_reg_coconut_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_monthly_food_modifier = 0.01
 	}
@@ -7375,6 +9617,20 @@ antq_reg_cheese_dairy = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_monthly_food_modifier = 0.01
 	}
@@ -7424,6 +9680,20 @@ antq_reg_meat_curing_yard = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_monthly_food_modifier = 0.01
 	}
@@ -7473,6 +9743,20 @@ antq_reg_rice_wine_house = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -7522,6 +9806,20 @@ antq_reg_soy_fermentary = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_monthly_food_modifier = 0.01
 	}
@@ -7558,6 +9856,263 @@ antq_reg_soy_fermentary = {
 	construction_demand = antq_s2_workshop_construction
 }
 
+antq_reg_yue_celadon_kiln = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
+			culture = { has_culture_group = culture_group:antq_sinitic_group }
+			culture = { has_culture_group = culture_group:antq_korean_group }
+			culture = { has_culture_group = culture_group:antq_japonic_group }
+		}
+	}
+	allow = {
+		always = yes
+	}
+	modifier = {
+		local_production_efficiency = 0.03
+	}
+	unique_production_methods = {
+		antq_reg_yue_celadon_kiln_maintenance = {
+			clay = 5.0000
+			coal = 1.0000
+			tools = 0.4444
+			produced = antq_yue_celadon
+			output = 1.0000
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+		antq_reg_yue_celadon_kiln_organized = {
+			clay = 5.4000
+			coal = 1.0800
+			tools = 0.4800
+			produced = antq_yue_celadon
+			output = 1.0810
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+		antq_reg_yue_celadon_kiln_intensive = {
+			clay = 5.9000
+			coal = 1.1800
+			tools = 0.5244
+			produced = antq_yue_celadon
+			output = 1.1820
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = antq_s2_workshop_construction
+}
+
+antq_reg_codex_bindery = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = clergy
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = cultural_category
+	employment_size = cultural_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = cultural_building_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	modifier = {
+		local_max_literacy = 0.02
+	}
+	unique_production_methods = {
+		antq_reg_codex_bindery_maintenance = {
+			antq_parchment = 1.0000
+			leather = 0.3000
+			antq_wax_goods = 0.2000
+			tools = 0.1889
+			produced = antq_bound_codices
+			output = 1.0000
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+		antq_reg_codex_bindery_organized = {
+			antq_parchment = 1.0800
+			leather = 0.3240
+			antq_wax_goods = 0.2160
+			tools = 0.2040
+			produced = antq_bound_codices
+			output = 1.0810
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+		antq_reg_codex_bindery_intensive = {
+			antq_parchment = 1.1800
+			leather = 0.3540
+			antq_wax_goods = 0.2360
+			tools = 0.2229
+			produced = antq_bound_codices
+			output = 1.1820
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = antq_s2_civic_construction
+}
+
+antq_reg_diatretum_glasshouse = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	modifier = {
+		local_production_efficiency = 0.03
+	}
+	unique_production_methods = {
+		antq_reg_diatretum_glasshouse_maintenance = {
+			glass = 2.0000
+			tools = 0.5000
+			produced = antq_cage_glass
+			output = 1.0000
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+		antq_reg_diatretum_glasshouse_organized = {
+			glass = 2.1600
+			tools = 0.5400
+			produced = antq_cage_glass
+			output = 1.0810
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+		antq_reg_diatretum_glasshouse_intensive = {
+			glass = 2.3600
+			tools = 0.5900
+			produced = antq_cage_glass
+			output = 1.1820
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = antq_s2_workshop_construction
+}
+
+antq_reg_polychrome_goldsmith = {
+	audio_tier = 2
+	is_special = no
+	is_foreign = no
+	pop_type = burghers
+	max_levels = guild_max_level
+	startup_ramp_target = guild_startup_ramp_target
+	category = consumer_goods_category
+	employment_size = guild_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
+	modifier = {
+		local_production_efficiency = 0.03
+	}
+	unique_production_methods = {
+		antq_reg_polychrome_goldsmith_maintenance = {
+			gems = 1.0000
+			goods_gold = 0.4000
+			tools = 0.3778
+			produced = antq_garnet_cloisonne
+			output = 1.0000
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+		antq_reg_polychrome_goldsmith_organized = {
+			gems = 1.0800
+			goods_gold = 0.4320
+			tools = 0.4080
+			produced = antq_garnet_cloisonne
+			output = 1.0810
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+		antq_reg_polychrome_goldsmith_intensive = {
+			gems = 1.1800
+			goods_gold = 0.4720
+			tools = 0.4458
+			produced = antq_garnet_cloisonne
+			output = 1.1820
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+	}
+	custom_tags = { guild }
+	construction_demand = antq_s2_workshop_construction
+}
+
 antq_reg_villa_rustica = {
 	audio_tier = 2
 	is_special = no
@@ -7573,11 +10128,23 @@ antq_reg_villa_rustica = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_monthly_food_modifier = 0.01
@@ -7631,11 +10198,23 @@ antq_reg_tabernae_row = {
 	build_time = market_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_merchant_capacity = 0.015
@@ -7670,11 +10249,23 @@ antq_reg_forum_basilica = {
 	build_time = government_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	location_potential = {
 		OR = {
@@ -7683,7 +10274,10 @@ antq_reg_forum_basilica = {
 		}
 	}
 	modifier = {
-		local_max_control = 0.01
+		local_max_control = 0.02
+		local_monthly_control = 0.001
+		local_distance_from_capital_speed_propagation = 0.05
+		local_proximity_source = 20
 		local_merchant_power = 0.015
 	}
 	unique_production_methods = {
@@ -7717,11 +10311,23 @@ antq_reg_horrea_complex = {
 	build_time = infrastructure_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	location_potential = {
 		OR = {
@@ -7763,11 +10369,23 @@ antq_reg_annona_bakery = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_monthly_food_modifier = 0.02
@@ -7820,11 +10438,23 @@ antq_reg_aqueduct_distribution = {
 	build_time = infrastructure_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	location_potential = {
 		OR = {
@@ -7865,11 +10495,23 @@ antq_reg_thermae_complex = {
 	build_time = cultural_building_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	location_potential = {
 		OR = {
@@ -7912,14 +10554,29 @@ antq_reg_cursus_mansio = {
 	build_time = infrastructure_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
 	}
+	allow = {
+		always = yes
+	}
 	modifier = {
-		local_max_control = 0.015
+		local_max_control = 0.02
+		local_monthly_control = 0.001
+		local_distance_from_capital_speed_propagation = 0.1
+		local_proximity_source = 10
 		local_merchant_capacity = 0.005
 	}
 	unique_production_methods = {
@@ -7953,11 +10610,23 @@ antq_reg_river_port = {
 	build_time = medium_port_building_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	location_potential = {
 		OR = {
@@ -7967,7 +10636,7 @@ antq_reg_river_port = {
 	}
 	modifier = {
 		local_merchant_capacity = 0.015
-		local_sailors = 0.008
+		local_sailors = 0.0025
 	}
 	unique_production_methods = {
 		antq_reg_river_port_maintenance = {
@@ -8000,11 +10669,23 @@ antq_reg_colonia_forum = {
 	build_time = government_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_max_control = 0.015
@@ -8042,11 +10723,23 @@ antq_reg_castra_fabrica = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_garrison_size = 0.015
@@ -8103,11 +10796,23 @@ antq_reg_frontier_magazine = {
 	build_time = small_fort_building
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_garrison_size = 0.02
@@ -8145,11 +10850,23 @@ antq_reg_quarry_contractors = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_production_efficiency = 0.02
@@ -8202,11 +10919,23 @@ antq_reg_olive_estate = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_production_efficiency = 0.02
@@ -8262,11 +10991,23 @@ antq_reg_vineyard_estate = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_production_efficiency = 0.02
@@ -8319,11 +11060,23 @@ antq_reg_textile_quarter = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_production_efficiency = 0.025
@@ -8370,11 +11123,23 @@ antq_reg_ceramic_quarter = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_production_efficiency = 0.025
@@ -8426,11 +11191,23 @@ antq_reg_insulae_quarter = {
 	build_time = infrastructure_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	location_potential = {
 		OR = {
@@ -8473,11 +11250,23 @@ antq_reg_temple_precinct = {
 	build_time = religious_building_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	location_potential = {
 		OR = {
@@ -8519,11 +11308,23 @@ antq_reg_collegia_hall = {
 	build_time = cultural_building_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	location_potential = {
 		OR = {
@@ -8567,11 +11368,23 @@ antq_reg_bronze_workers_collegium = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_production_efficiency = 0.02
@@ -8627,11 +11440,23 @@ antq_reg_lead_pipeworks = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_production_efficiency = 0.02
@@ -8684,11 +11509,23 @@ antq_reg_unguentarium = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_italic_group }
 			culture = { has_culture_group = culture_group:antq_iberian_group }
 			culture = { has_culture_group = culture_group:antq_balkan_group }
 			has_embraced_institution = institution:antq_roman_law_engineering
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_merchant_power = 0.01
@@ -8743,6 +11580,20 @@ antq_reg_herbal_apothecary = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_life_expectancy = 0.01
 	}
@@ -8789,6 +11640,20 @@ antq_reg_wool_drapery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -8834,10 +11699,22 @@ antq_reg_silk_drapery = {
 	build_time = guild_build_time
 	country_potential = {
 		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+		OR = {
 			culture = { has_culture_group = culture_group:antq_sinitic_group }
 			culture = { has_culture_group = culture_group:antq_korean_group }
 			culture = { has_culture_group = culture_group:antq_japonic_group }
 		}
+	}
+	allow = {
+		always = yes
 	}
 	modifier = {
 		local_production_efficiency = 0.02
@@ -8882,6 +11759,20 @@ antq_reg_dye_finishing_house = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -8928,6 +11819,20 @@ antq_reg_wheat_brewery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -8977,6 +11882,20 @@ antq_reg_millet_brewery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -9026,6 +11945,20 @@ antq_reg_fruit_brewery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -9075,6 +12008,20 @@ antq_reg_rice_brewery = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
@@ -9124,6 +12071,20 @@ antq_reg_stone_masonry_yard = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -9167,6 +12128,20 @@ antq_reg_clay_brickworks = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -9210,6 +12185,20 @@ antq_reg_crucible_steel_workshop = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
@@ -9256,6 +12245,20 @@ antq_reg_materia_medica = {
 	city = yes
 	megalopolis = yes
 	build_time = guild_build_time
+	country_potential = {
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	modifier = {
 		local_life_expectancy = 0.01
 	}

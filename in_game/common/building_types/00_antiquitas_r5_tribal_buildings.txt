@@ -13,14 +13,28 @@ antq_trib_grain_patch = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		vegetation = farmland
 	}
 	unique_production_methods = {
 		antq_trib_grain_patch_maintenance = {
-			tools = 0.0153
-			lumber = 0.0428
-			livestock = 0.0489
+			tools = 0.0336
+			lumber = 0.0550
 			produced = wheat
 			output = 0.22
 			debug_max_profit = rural_profit_margin
@@ -31,7 +45,7 @@ antq_trib_grain_patch = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -47,13 +61,27 @@ antq_trib_pulse_garden = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
 		antq_trib_pulse_garden_maintenance = {
-			tools = 0.0146
-			lumber = 0.0408
-			livestock = 0.0467
+			tools = 0.0321
+			lumber = 0.0525
 			produced = legumes
 			output = 0.21
 			debug_max_profit = rural_profit_margin
@@ -64,7 +92,7 @@ antq_trib_pulse_garden = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -80,14 +108,28 @@ antq_trib_tuber_mounds = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		continent = continent:america
 	}
 	unique_production_methods = {
 		antq_trib_tuber_mounds_maintenance = {
-			tools = 0.0139
-			lumber = 0.0389
-			livestock = 0.0444
+			tools = 0.0306
+			lumber = 0.0500
 			produced = potato
 			output = 0.20
 			debug_max_profit = rural_profit_margin
@@ -98,7 +140,7 @@ antq_trib_tuber_mounds = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -114,14 +156,28 @@ antq_trib_floodplain_plots = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		has_river = yes
 	}
 	unique_production_methods = {
 		antq_trib_floodplain_plots_maintenance = {
-			tools = 0.0153
-			lumber = 0.0428
-			livestock = 0.0489
+			tools = 0.0336
+			lumber = 0.0550
 			produced = millet
 			output = 0.22
 			debug_max_profit = rural_profit_margin
@@ -132,7 +188,7 @@ antq_trib_floodplain_plots = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -148,6 +204,21 @@ antq_trib_forest_garden = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = woods
@@ -157,9 +228,8 @@ antq_trib_forest_garden = {
 	}
 	unique_production_methods = {
 		antq_trib_forest_garden_maintenance = {
-			tools = 0.0132
-			lumber = 0.0369
-			livestock = 0.0422
+			tools = 0.0290
+			lumber = 0.0475
 			produced = fruit
 			output = 0.19
 			debug_max_profit = rural_profit_margin
@@ -170,7 +240,7 @@ antq_trib_forest_garden = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -186,6 +256,21 @@ antq_trib_nut_grove = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = woods
@@ -195,9 +280,8 @@ antq_trib_nut_grove = {
 	}
 	unique_production_methods = {
 		antq_trib_nut_grove_maintenance = {
-			tools = 0.0312
-			lumber = 0.0875
-			livestock = 0.1000
+			tools = 0.0688
+			lumber = 0.1125
 			produced = antq_tree_nuts
 			output = 0.18
 			debug_max_profit = rural_profit_margin
@@ -208,7 +292,7 @@ antq_trib_nut_grove = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -224,14 +308,28 @@ antq_trib_fishing_weir = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		has_river = yes
 	}
 	unique_production_methods = {
 		antq_trib_fishing_weir_maintenance = {
-			tools = 0.0139
-			lumber = 0.0389
-			livestock = 0.0444
+			tools = 0.0306
+			lumber = 0.0500
 			produced = fish
 			output = 0.20
 			debug_max_profit = rural_profit_margin
@@ -242,7 +340,7 @@ antq_trib_fishing_weir = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -258,14 +356,28 @@ antq_trib_shellfish_camp = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		is_port = yes
 	}
 	unique_production_methods = {
 		antq_trib_shellfish_camp_maintenance = {
-			tools = 0.0125
-			lumber = 0.0350
-			livestock = 0.0400
+			tools = 0.0275
+			lumber = 0.0450
 			produced = fish
 			output = 0.18
 			debug_max_profit = rural_profit_margin
@@ -276,7 +388,7 @@ antq_trib_shellfish_camp = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -292,6 +404,21 @@ antq_trib_cattle_fold = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = grasslands
@@ -301,9 +428,8 @@ antq_trib_cattle_fold = {
 	}
 	unique_production_methods = {
 		antq_trib_cattle_fold_maintenance = {
-			tools = 0.0208
-			lumber = 0.0583
-			livestock = 0.0667
+			tools = 0.0458
+			lumber = 0.0750
 			produced = livestock
 			output = 0.20
 			debug_max_profit = rural_profit_margin
@@ -314,7 +440,7 @@ antq_trib_cattle_fold = {
 		local_food_capacity = 6
 		local_population_capacity = 3
 	}
-	construction_demand = horse_breeders_construction
+	construction_demand = antq_small_tribal_pastoral_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -330,6 +456,21 @@ antq_trib_small_stock_enclosure = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			climate = arid
@@ -340,9 +481,8 @@ antq_trib_small_stock_enclosure = {
 	}
 	unique_production_methods = {
 		antq_trib_small_stock_enclosure_maintenance = {
-			tools = 0.0347
-			lumber = 0.0972
-			livestock = 0.1111
+			tools = 0.0764
+			lumber = 0.1250
 			produced = wool
 			output = 0.20
 			debug_max_profit = rural_profit_margin
@@ -353,7 +493,7 @@ antq_trib_small_stock_enclosure = {
 		local_food_capacity = 6
 		local_population_capacity = 3
 	}
-	construction_demand = horse_breeders_construction
+	construction_demand = antq_small_tribal_pastoral_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -369,6 +509,21 @@ antq_trib_horse_herd_camp = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = grasslands
@@ -378,9 +533,8 @@ antq_trib_horse_herd_camp = {
 	}
 	unique_production_methods = {
 		antq_trib_horse_herd_camp_maintenance = {
-			tools = 0.0333
-			lumber = 0.0933
-			livestock = 0.1067
+			tools = 0.0733
+			lumber = 0.1200
 			produced = horses
 			output = 0.16
 			debug_max_profit = rural_profit_margin
@@ -391,7 +545,7 @@ antq_trib_horse_herd_camp = {
 		local_food_capacity = 6
 		local_population_capacity = 3
 	}
-	construction_demand = horse_breeders_construction
+	construction_demand = antq_small_tribal_pastoral_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -407,6 +561,21 @@ antq_trib_camel_camp = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			climate = arid
@@ -415,9 +584,8 @@ antq_trib_camel_camp = {
 	}
 	unique_production_methods = {
 		antq_trib_camel_camp_maintenance = {
-			tools = 0.0417
-			lumber = 0.1167
-			livestock = 0.1333
+			tools = 0.0917
+			lumber = 0.1500
 			produced = antq_camels
 			output = 0.15
 			debug_max_profit = rural_profit_margin
@@ -428,7 +596,7 @@ antq_trib_camel_camp = {
 		local_food_capacity = 6
 		local_population_capacity = 3
 	}
-	construction_demand = horse_breeders_construction
+	construction_demand = antq_small_tribal_pastoral_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -444,6 +612,21 @@ antq_trib_reindeer_corral = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			climate = arctic
@@ -453,9 +636,8 @@ antq_trib_reindeer_corral = {
 	}
 	unique_production_methods = {
 		antq_trib_reindeer_corral_maintenance = {
-			tools = 0.0104
-			lumber = 0.0292
-			livestock = 0.0333
+			tools = 0.0229
+			lumber = 0.0375
 			produced = wild_game
 			output = 0.15
 			debug_max_profit = rural_profit_margin
@@ -466,7 +648,7 @@ antq_trib_reindeer_corral = {
 		local_food_capacity = 6
 		local_population_capacity = 3
 	}
-	construction_demand = horse_breeders_construction
+	construction_demand = antq_small_tribal_pastoral_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -482,6 +664,21 @@ antq_trib_woodland_pannage = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = woods
@@ -491,9 +688,8 @@ antq_trib_woodland_pannage = {
 	}
 	unique_production_methods = {
 		antq_trib_woodland_pannage_maintenance = {
-			tools = 0.0188
-			lumber = 0.0525
-			livestock = 0.0600
+			tools = 0.0413
+			lumber = 0.0675
 			produced = livestock
 			output = 0.18
 			debug_max_profit = rural_profit_margin
@@ -504,7 +700,7 @@ antq_trib_woodland_pannage = {
 		local_food_capacity = 6
 		local_population_capacity = 3
 	}
-	construction_demand = horse_breeders_construction
+	construction_demand = antq_small_tribal_pastoral_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -520,6 +716,21 @@ antq_trib_transhumance_station = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = hills
@@ -529,9 +740,8 @@ antq_trib_transhumance_station = {
 	}
 	unique_production_methods = {
 		antq_trib_transhumance_station_maintenance = {
-			tools = 0.0312
-			lumber = 0.0875
-			livestock = 0.1000
+			tools = 0.0688
+			lumber = 0.1125
 			produced = wool
 			output = 0.18
 			debug_max_profit = rural_profit_margin
@@ -542,7 +752,7 @@ antq_trib_transhumance_station = {
 		local_food_capacity = 6
 		local_population_capacity = 3
 	}
-	construction_demand = horse_breeders_construction
+	construction_demand = antq_small_tribal_pastoral_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -558,6 +768,21 @@ antq_trib_fodder_meadow = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = grasslands
@@ -566,9 +791,8 @@ antq_trib_fodder_meadow = {
 	}
 	unique_production_methods = {
 		antq_trib_fodder_meadow_maintenance = {
-			tools = 0.0177
-			lumber = 0.0496
-			livestock = 0.0567
+			tools = 0.0390
+			lumber = 0.0638
 			produced = livestock
 			output = 0.17
 			debug_max_profit = rural_profit_margin
@@ -579,7 +803,7 @@ antq_trib_fodder_meadow = {
 		local_food_capacity = 6
 		local_population_capacity = 3
 	}
-	construction_demand = horse_breeders_construction
+	construction_demand = antq_small_tribal_pastoral_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -595,13 +819,27 @@ antq_trib_household_loom = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
 		antq_trib_household_loom_maintenance = {
-			tools = 0.0333
-			lumber = 0.0933
-			livestock = 0.1067
+			tools = 0.0733
+			lumber = 0.1200
 			produced = cloth
 			output = 0.16
 			debug_max_profit = rural_profit_margin
@@ -611,7 +849,7 @@ antq_trib_household_loom = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -627,13 +865,27 @@ antq_trib_hide_curing_rack = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
 		antq_trib_hide_curing_rack_maintenance = {
-			tools = 0.0312
-			lumber = 0.0875
-			livestock = 0.1000
+			tools = 0.0688
+			lumber = 0.1125
 			produced = leather
 			output = 0.15
 			debug_max_profit = rural_profit_margin
@@ -643,7 +895,7 @@ antq_trib_hide_curing_rack = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -659,6 +911,21 @@ antq_trib_bone_antler_workshop = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			climate = arctic
@@ -669,9 +936,8 @@ antq_trib_bone_antler_workshop = {
 	}
 	unique_production_methods = {
 		antq_trib_bone_antler_workshop_maintenance = {
-			tools = 0.0250
-			lumber = 0.0700
-			livestock = 0.0800
+			leather = 0.0550
+			lumber = 0.0900
 			produced = tools
 			output = 0.12
 			debug_max_profit = rural_profit_margin
@@ -681,7 +947,7 @@ antq_trib_bone_antler_workshop = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -697,13 +963,27 @@ antq_trib_pottery_hearth = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
 		antq_trib_pottery_hearth_maintenance = {
-			tools = 0.0118
-			lumber = 0.0331
-			livestock = 0.0378
+			tools = 0.0260
+			lumber = 0.0425
 			produced = pottery
 			output = 0.17
 			debug_max_profit = rural_profit_margin
@@ -713,7 +993,7 @@ antq_trib_pottery_hearth = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -729,6 +1009,21 @@ antq_trib_charcoal_clamp = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = woods
@@ -738,9 +1033,8 @@ antq_trib_charcoal_clamp = {
 	}
 	unique_production_methods = {
 		antq_trib_charcoal_clamp_maintenance = {
-			tools = 0.0167
-			lumber = 0.0467
-			livestock = 0.0533
+			tools = 0.0367
+			lumber = 0.0600
 			produced = coal
 			output = 0.12
 			debug_max_profit = rural_profit_margin
@@ -750,7 +1044,7 @@ antq_trib_charcoal_clamp = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -766,6 +1060,21 @@ antq_trib_bloomery_hearth = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = hills
@@ -775,9 +1084,8 @@ antq_trib_bloomery_hearth = {
 	}
 	unique_production_methods = {
 		antq_trib_bloomery_hearth_maintenance = {
-			tools = 0.0208
-			lumber = 0.0583
-			livestock = 0.0667
+			tools = 0.0458
+			lumber = 0.0750
 			produced = iron
 			output = 0.10
 			debug_max_profit = rural_profit_margin
@@ -787,7 +1095,7 @@ antq_trib_bloomery_hearth = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -803,6 +1111,21 @@ antq_trib_basketry_shelter = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = wetlands
@@ -813,9 +1136,8 @@ antq_trib_basketry_shelter = {
 	}
 	unique_production_methods = {
 		antq_trib_basketry_shelter_maintenance = {
-			tools = 0.0292
-			lumber = 0.0817
-			livestock = 0.0933
+			tools = 0.0642
+			lumber = 0.1050
 			produced = furniture
 			output = 0.14
 			debug_max_profit = rural_profit_margin
@@ -825,7 +1147,7 @@ antq_trib_basketry_shelter = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -841,6 +1163,21 @@ antq_trib_dugout_canoe_yard = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			has_river = yes
@@ -849,9 +1186,8 @@ antq_trib_dugout_canoe_yard = {
 	}
 	unique_production_methods = {
 		antq_trib_dugout_canoe_yard_maintenance = {
-			tools = 0.0250
-			lumber = 0.0700
-			livestock = 0.0800
+			tools = 0.0550
+			lumber = 0.0900
 			produced = naval_supplies
 			output = 0.12
 			debug_max_profit = rural_profit_margin
@@ -861,7 +1197,7 @@ antq_trib_dugout_canoe_yard = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -877,6 +1213,21 @@ antq_trib_raised_granary = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
@@ -891,7 +1242,7 @@ antq_trib_raised_granary = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -907,6 +1258,21 @@ antq_trib_storage_pits = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
@@ -921,7 +1287,7 @@ antq_trib_storage_pits = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -937,6 +1303,21 @@ antq_trib_cattle_exchange = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = grasslands
@@ -956,7 +1337,7 @@ antq_trib_cattle_exchange = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -972,6 +1353,21 @@ antq_trib_river_landing = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		has_river = yes
 	}
@@ -987,7 +1383,7 @@ antq_trib_river_landing = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1003,6 +1399,21 @@ antq_trib_portage_station = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			has_river = yes
@@ -1022,7 +1433,7 @@ antq_trib_portage_station = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1038,6 +1449,21 @@ antq_trib_salt_exchange = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
@@ -1052,7 +1478,7 @@ antq_trib_salt_exchange = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1068,6 +1494,21 @@ antq_trib_caravan_camp = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			climate = arid
@@ -1088,7 +1529,7 @@ antq_trib_caravan_camp = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1104,6 +1545,21 @@ antq_trib_guest_hall = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
@@ -1118,7 +1574,7 @@ antq_trib_guest_hall = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1134,6 +1590,21 @@ antq_trib_assembly_ground = {
 	megalopolis = yes
 	build_time = cultural_building_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
@@ -1148,7 +1619,7 @@ antq_trib_assembly_ground = {
 		local_unrest = -0.02
 		local_cultural_tradition = 0.01
 	}
-	construction_demand = prestige_building_construction
+	construction_demand = antq_small_tribal_ritual_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1164,6 +1635,21 @@ antq_trib_sacred_grove = {
 	megalopolis = yes
 	build_time = cultural_building_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = woods
@@ -1183,7 +1669,7 @@ antq_trib_sacred_grove = {
 		local_unrest = -0.02
 		local_cultural_tradition = 0.01
 	}
-	construction_demand = prestige_building_construction
+	construction_demand = antq_small_tribal_ritual_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1199,6 +1685,21 @@ antq_trib_ancestor_house = {
 	megalopolis = yes
 	build_time = cultural_building_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
@@ -1213,7 +1714,7 @@ antq_trib_ancestor_house = {
 		local_unrest = -0.02
 		local_cultural_tradition = 0.01
 	}
-	construction_demand = prestige_building_construction
+	construction_demand = antq_small_tribal_ritual_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1229,6 +1730,21 @@ antq_trib_feast_hall = {
 	megalopolis = yes
 	build_time = cultural_building_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
@@ -1243,7 +1759,7 @@ antq_trib_feast_hall = {
 		local_unrest = -0.02
 		local_cultural_tradition = 0.01
 	}
-	construction_demand = prestige_building_construction
+	construction_demand = antq_small_tribal_ritual_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1259,6 +1775,21 @@ antq_trib_mound_precinct = {
 	megalopolis = yes
 	build_time = cultural_building_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = flatland
@@ -1277,7 +1808,7 @@ antq_trib_mound_precinct = {
 		local_unrest = -0.02
 		local_cultural_tradition = 0.01
 	}
-	construction_demand = prestige_building_construction
+	construction_demand = antq_small_tribal_ritual_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1293,6 +1824,21 @@ antq_trib_oath_stone = {
 	megalopolis = yes
 	build_time = cultural_building_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
@@ -1307,7 +1853,7 @@ antq_trib_oath_stone = {
 		local_unrest = -0.02
 		local_cultural_tradition = 0.01
 	}
-	construction_demand = prestige_building_construction
+	construction_demand = antq_small_tribal_ritual_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1323,6 +1869,21 @@ antq_trib_initiation_lodge = {
 	megalopolis = yes
 	build_time = cultural_building_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
@@ -1337,7 +1898,7 @@ antq_trib_initiation_lodge = {
 		local_unrest = -0.02
 		local_cultural_tradition = 0.01
 	}
-	construction_demand = prestige_building_construction
+	construction_demand = antq_small_tribal_ritual_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1353,6 +1914,21 @@ antq_trib_council_enclosure = {
 	megalopolis = yes
 	build_time = cultural_building_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
@@ -1367,7 +1943,7 @@ antq_trib_council_enclosure = {
 		local_unrest = -0.02
 		local_cultural_tradition = 0.01
 	}
-	construction_demand = prestige_building_construction
+	construction_demand = antq_small_tribal_ritual_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1383,6 +1959,21 @@ antq_trib_warrior_lodge = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
@@ -1398,7 +1989,7 @@ antq_trib_warrior_lodge = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1414,6 +2005,21 @@ antq_trib_palisade_ring = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
@@ -1429,7 +2035,7 @@ antq_trib_palisade_ring = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1445,6 +2051,21 @@ antq_trib_hill_refuge = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = hills
@@ -1465,7 +2086,7 @@ antq_trib_hill_refuge = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1481,6 +2102,21 @@ antq_trib_watch_mound = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = flatland
@@ -1500,7 +2136,7 @@ antq_trib_watch_mound = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1516,13 +2152,27 @@ antq_trib_shield_workshop = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 	}
 	unique_production_methods = {
 		antq_trib_shield_workshop_maintenance = {
-			tools = 0.0208
-			lumber = 0.0583
-			livestock = 0.0667
+			tools = 0.0458
+			lumber = 0.0750
 			produced = weaponry
 			output = 0.10
 			debug_max_profit = rural_profit_margin
@@ -1534,7 +2184,7 @@ antq_trib_shield_workshop = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1550,6 +2200,21 @@ antq_trib_spear_forge = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = hills
@@ -1559,9 +2224,8 @@ antq_trib_spear_forge = {
 	}
 	unique_production_methods = {
 		antq_trib_spear_forge_maintenance = {
-			tools = 0.0229
-			lumber = 0.0642
-			livestock = 0.0733
+			tools = 0.0504
+			lumber = 0.0825
 			produced = weaponry
 			output = 0.11
 			debug_max_profit = rural_profit_margin
@@ -1573,7 +2237,7 @@ antq_trib_spear_forge = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1589,6 +2253,21 @@ antq_trib_horse_muster = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = grasslands
@@ -1609,7 +2288,7 @@ antq_trib_horse_muster = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1625,6 +2304,21 @@ antq_trib_river_barricade = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		has_river = yes
 	}
@@ -1641,7 +2335,7 @@ antq_trib_river_barricade = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1657,6 +2351,21 @@ antq_trib_med_terraces = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = hills
@@ -1675,9 +2384,8 @@ antq_trib_med_terraces = {
 	}
 	unique_production_methods = {
 		antq_trib_med_terraces_maintenance = {
-			tools = 0.0125
-			lumber = 0.0350
-			livestock = 0.0400
+			tools = 0.0275
+			lumber = 0.0450
 			produced = fruit
 			output = 0.18
 			debug_max_profit = rural_profit_margin
@@ -1688,7 +2396,7 @@ antq_trib_med_terraces = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1704,6 +2412,21 @@ antq_trib_med_hill_cistern = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			climate = arid
@@ -1733,7 +2456,7 @@ antq_trib_med_hill_cistern = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1749,6 +2472,21 @@ antq_trib_med_lineage_press = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			climate = arid
@@ -1768,9 +2506,8 @@ antq_trib_med_lineage_press = {
 	}
 	unique_production_methods = {
 		antq_trib_med_lineage_press_maintenance = {
-			tools = 0.0222
-			lumber = 0.0622
-			livestock = 0.0711
+			tools = 0.0489
+			lumber = 0.0800
 			produced = wine
 			output = 0.16
 			debug_max_profit = rural_profit_margin
@@ -1780,7 +2517,7 @@ antq_trib_med_lineage_press = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1796,6 +2533,21 @@ antq_trib_med_hillfort_gate = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = hills
@@ -1825,7 +2577,7 @@ antq_trib_med_hillfort_gate = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1841,6 +2593,21 @@ antq_trib_north_bog_iron = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = wetlands
@@ -1858,9 +2625,8 @@ antq_trib_north_bog_iron = {
 	}
 	unique_production_methods = {
 		antq_trib_north_bog_iron_maintenance = {
-			tools = 0.0208
-			lumber = 0.0583
-			livestock = 0.0667
+			tools = 0.0458
+			lumber = 0.0750
 			produced = iron
 			output = 0.10
 			debug_max_profit = rural_profit_margin
@@ -1870,7 +2636,7 @@ antq_trib_north_bog_iron = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1886,6 +2652,21 @@ antq_trib_north_amber_shelter = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		is_port = yes
 		OR = {
@@ -1908,7 +2689,7 @@ antq_trib_north_amber_shelter = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1924,6 +2705,21 @@ antq_trib_north_causeway = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = wetlands
@@ -1951,7 +2747,7 @@ antq_trib_north_causeway = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -1967,6 +2763,21 @@ antq_trib_north_warband_hall = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			climate = arctic
@@ -1995,7 +2806,7 @@ antq_trib_north_warband_hall = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2011,6 +2822,21 @@ antq_trib_steppe_felt_camp = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = grasslands
@@ -2034,7 +2860,7 @@ antq_trib_steppe_felt_camp = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2050,6 +2876,21 @@ antq_trib_steppe_mare_camp = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = grasslands
@@ -2063,9 +2904,8 @@ antq_trib_steppe_mare_camp = {
 	}
 	unique_production_methods = {
 		antq_trib_steppe_mare_camp_maintenance = {
-			tools = 0.0188
-			lumber = 0.0525
-			livestock = 0.0600
+			tools = 0.0413
+			lumber = 0.0675
 			produced = livestock
 			output = 0.18
 			debug_max_profit = rural_profit_margin
@@ -2076,7 +2916,7 @@ antq_trib_steppe_mare_camp = {
 		local_food_capacity = 6
 		local_population_capacity = 3
 	}
-	construction_demand = horse_breeders_construction
+	construction_demand = antq_small_tribal_pastoral_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2092,6 +2932,21 @@ antq_trib_steppe_kurgan_moot = {
 	megalopolis = yes
 	build_time = cultural_building_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = grasslands
@@ -2115,7 +2970,7 @@ antq_trib_steppe_kurgan_moot = {
 		local_unrest = -0.02
 		local_cultural_tradition = 0.01
 	}
-	construction_demand = prestige_building_construction
+	construction_demand = antq_small_tribal_ritual_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2131,6 +2986,21 @@ antq_trib_steppe_bowyer = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			climate = arid
@@ -2145,9 +3015,8 @@ antq_trib_steppe_bowyer = {
 	}
 	unique_production_methods = {
 		antq_trib_steppe_bowyer_maintenance = {
-			tools = 0.0208
-			lumber = 0.0583
-			livestock = 0.0667
+			tools = 0.0458
+			lumber = 0.0750
 			produced = weaponry
 			output = 0.10
 			debug_max_profit = rural_profit_margin
@@ -2159,7 +3028,7 @@ antq_trib_steppe_bowyer = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2175,6 +3044,21 @@ antq_trib_nile_wadi_cistern = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			climate = arid
@@ -2197,7 +3081,7 @@ antq_trib_nile_wadi_cistern = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2213,6 +3097,21 @@ antq_trib_nile_reed_fishery = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		has_river = yes
 		OR = {
@@ -2222,9 +3121,8 @@ antq_trib_nile_reed_fishery = {
 	}
 	unique_production_methods = {
 		antq_trib_nile_reed_fishery_maintenance = {
-			tools = 0.0125
-			lumber = 0.0350
-			livestock = 0.0400
+			tools = 0.0275
+			lumber = 0.0450
 			produced = fish
 			output = 0.18
 			debug_max_profit = rural_profit_margin
@@ -2235,7 +3133,7 @@ antq_trib_nile_reed_fishery = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2251,6 +3149,21 @@ antq_trib_nile_caravan_well = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			climate = arid
@@ -2273,7 +3186,7 @@ antq_trib_nile_caravan_well = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2289,6 +3202,21 @@ antq_trib_nile_route_watch = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			climate = arid
@@ -2312,7 +3240,7 @@ antq_trib_nile_route_watch = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2328,6 +3256,21 @@ antq_trib_ssa_yam_fields = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = wetlands
@@ -2341,9 +3284,8 @@ antq_trib_ssa_yam_fields = {
 	}
 	unique_production_methods = {
 		antq_trib_ssa_yam_fields_maintenance = {
-			tools = 0.0125
-			lumber = 0.0350
-			livestock = 0.0400
+			tools = 0.0275
+			lumber = 0.0450
 			produced = fruit
 			output = 0.18
 			debug_max_profit = rural_profit_margin
@@ -2354,7 +3296,7 @@ antq_trib_ssa_yam_fields = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2370,6 +3312,21 @@ antq_trib_ssa_smelting_court = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			dominant_culture = { has_culture_group = culture_group:antq_subsaharan_group }
@@ -2377,9 +3334,8 @@ antq_trib_ssa_smelting_court = {
 	}
 	unique_production_methods = {
 		antq_trib_ssa_smelting_court_maintenance = {
-			tools = 0.0229
-			lumber = 0.0642
-			livestock = 0.0733
+			tools = 0.0504
+			lumber = 0.0825
 			produced = iron
 			output = 0.11
 			debug_max_profit = rural_profit_margin
@@ -2389,7 +3345,7 @@ antq_trib_ssa_smelting_court = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2405,6 +3361,21 @@ antq_trib_ssa_cattle_kraal = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = grasslands
@@ -2417,9 +3388,8 @@ antq_trib_ssa_cattle_kraal = {
 	}
 	unique_production_methods = {
 		antq_trib_ssa_cattle_kraal_maintenance = {
-			tools = 0.0198
-			lumber = 0.0554
-			livestock = 0.0633
+			tools = 0.0435
+			lumber = 0.0713
 			produced = livestock
 			output = 0.19
 			debug_max_profit = rural_profit_margin
@@ -2430,7 +3400,7 @@ antq_trib_ssa_cattle_kraal = {
 		local_food_capacity = 6
 		local_population_capacity = 3
 	}
-	construction_demand = horse_breeders_construction
+	construction_demand = antq_small_tribal_pastoral_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2446,6 +3416,21 @@ antq_trib_ssa_lineage_compound = {
 	megalopolis = yes
 	build_time = cultural_building_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			dominant_culture = { has_culture_group = culture_group:antq_subsaharan_group }
@@ -2463,7 +3448,7 @@ antq_trib_ssa_lineage_compound = {
 		local_unrest = -0.02
 		local_cultural_tradition = 0.01
 	}
-	construction_demand = prestige_building_construction
+	construction_demand = antq_small_tribal_ritual_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2479,6 +3464,21 @@ antq_trib_indic_millet_terraces = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = hills
@@ -2492,9 +3492,8 @@ antq_trib_indic_millet_terraces = {
 	}
 	unique_production_methods = {
 		antq_trib_indic_millet_terraces_maintenance = {
-			tools = 0.0139
-			lumber = 0.0389
-			livestock = 0.0444
+			tools = 0.0306
+			lumber = 0.0500
 			produced = millet
 			output = 0.20
 			debug_max_profit = rural_profit_margin
@@ -2505,7 +3504,7 @@ antq_trib_indic_millet_terraces = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2521,6 +3520,21 @@ antq_trib_indic_monsoon_tank = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		has_river = yes
 		OR = {
@@ -2540,7 +3554,7 @@ antq_trib_indic_monsoon_tank = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2556,6 +3570,21 @@ antq_trib_indic_cotton_veranda = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			climate = tropical
@@ -2570,9 +3599,8 @@ antq_trib_indic_cotton_veranda = {
 	}
 	unique_production_methods = {
 		antq_trib_indic_cotton_veranda_maintenance = {
-			tools = 0.0333
-			lumber = 0.0933
-			livestock = 0.1067
+			tools = 0.0733
+			lumber = 0.1200
 			produced = cloth
 			output = 0.16
 			debug_max_profit = rural_profit_margin
@@ -2582,7 +3610,7 @@ antq_trib_indic_cotton_veranda = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2598,6 +3626,21 @@ antq_trib_indic_clan_stockade = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = hills
@@ -2622,7 +3665,7 @@ antq_trib_indic_clan_stockade = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2638,6 +3681,21 @@ antq_trib_east_millet_terraces = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = hills
@@ -2652,9 +3710,8 @@ antq_trib_east_millet_terraces = {
 	}
 	unique_production_methods = {
 		antq_trib_east_millet_terraces_maintenance = {
-			tools = 0.0139
-			lumber = 0.0389
-			livestock = 0.0444
+			tools = 0.0306
+			lumber = 0.0500
 			produced = millet
 			output = 0.20
 			debug_max_profit = rural_profit_margin
@@ -2665,7 +3722,7 @@ antq_trib_east_millet_terraces = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2681,6 +3738,21 @@ antq_trib_east_raised_granary = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			dominant_culture = { has_culture_group = culture_group:antq_sinitic_group }
@@ -2700,7 +3772,7 @@ antq_trib_east_raised_granary = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2716,6 +3788,21 @@ antq_trib_east_lacquer_bamboo = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			vegetation = woods
@@ -2730,9 +3817,8 @@ antq_trib_east_lacquer_bamboo = {
 	}
 	unique_production_methods = {
 		antq_trib_east_lacquer_bamboo_maintenance = {
-			tools = 0.0250
-			lumber = 0.0700
-			livestock = 0.0800
+			tools = 0.0550
+			lumber = 0.0900
 			produced = furniture
 			output = 0.12
 			debug_max_profit = rural_profit_margin
@@ -2742,7 +3828,7 @@ antq_trib_east_lacquer_bamboo = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2758,6 +3844,21 @@ antq_trib_east_beacon = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = flatland
@@ -2782,7 +3883,7 @@ antq_trib_east_beacon = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2798,6 +3899,21 @@ antq_trib_ocean_stilt_granary = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		is_port = yes
 		OR = {
@@ -2819,7 +3935,7 @@ antq_trib_ocean_stilt_granary = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2835,6 +3951,21 @@ antq_trib_ocean_outrigger_yard = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		is_port = yes
 		OR = {
@@ -2846,9 +3977,8 @@ antq_trib_ocean_outrigger_yard = {
 	}
 	unique_production_methods = {
 		antq_trib_ocean_outrigger_yard_maintenance = {
-			tools = 0.0250
-			lumber = 0.0700
-			livestock = 0.0800
+			tools = 0.0550
+			lumber = 0.0900
 			produced = naval_supplies
 			output = 0.12
 			debug_max_profit = rural_profit_margin
@@ -2858,7 +3988,7 @@ antq_trib_ocean_outrigger_yard = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2874,6 +4004,21 @@ antq_trib_ocean_sago_grove = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = wetlands
@@ -2890,9 +4035,8 @@ antq_trib_ocean_sago_grove = {
 	}
 	unique_production_methods = {
 		antq_trib_ocean_sago_grove_maintenance = {
-			tools = 0.0125
-			lumber = 0.0350
-			livestock = 0.0400
+			tools = 0.0275
+			lumber = 0.0450
 			produced = fruit
 			output = 0.18
 			debug_max_profit = rural_profit_margin
@@ -2903,7 +4047,7 @@ antq_trib_ocean_sago_grove = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2919,6 +4063,21 @@ antq_trib_ocean_shell_exchange = {
 	megalopolis = yes
 	build_time = village_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		is_port = yes
 		OR = {
@@ -2940,7 +4099,7 @@ antq_trib_ocean_shell_exchange = {
 		local_merchant_capacity = 0.10
 		local_merchant_power = 0.01
 	}
-	construction_demand = basic_construction_needs
+	construction_demand = antq_small_tribal_exchange_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2956,6 +4115,21 @@ antq_trib_america_raised_fields = {
 	megalopolis = yes
 	build_time = rural_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		topography = wetlands
 		OR = {
@@ -2966,9 +4140,8 @@ antq_trib_america_raised_fields = {
 	}
 	unique_production_methods = {
 		antq_trib_america_raised_fields_maintenance = {
-			tools = 0.0139
-			lumber = 0.0389
-			livestock = 0.0444
+			tools = 0.0306
+			lumber = 0.0500
 			produced = maize
 			output = 0.20
 			debug_max_profit = rural_profit_margin
@@ -2979,7 +4152,7 @@ antq_trib_america_raised_fields = {
 		local_food_capacity = 10
 		local_monthly_food_modifier = 0.005
 	}
-	construction_demand = farm_constructions
+	construction_demand = antq_small_tribal_subsistence_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -2995,6 +4168,21 @@ antq_trib_america_obsidian_shelter = {
 	megalopolis = yes
 	build_time = workshop_build_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = hills
@@ -3009,9 +4197,8 @@ antq_trib_america_obsidian_shelter = {
 	}
 	unique_production_methods = {
 		antq_trib_america_obsidian_shelter_maintenance = {
-			tools = 0.0208
-			lumber = 0.0583
-			livestock = 0.0667
+			leather = 0.0458
+			lumber = 0.0750
 			produced = tools
 			output = 0.10
 			debug_max_profit = rural_profit_margin
@@ -3021,7 +4208,7 @@ antq_trib_america_obsidian_shelter = {
 	modifier = {
 		local_production_efficiency = 0.01
 	}
-	construction_demand = guild_construction
+	construction_demand = antq_small_tribal_craft_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -3037,6 +4224,21 @@ antq_trib_america_mound_plaza = {
 	megalopolis = yes
 	build_time = cultural_building_time
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			topography = flatland
@@ -3060,7 +4262,7 @@ antq_trib_america_mound_plaza = {
 		local_unrest = -0.02
 		local_cultural_tradition = 0.01
 	}
-	construction_demand = prestige_building_construction
+	construction_demand = antq_small_tribal_ritual_construction
 	custom_tags = { antq_tribal_building }
 }
 
@@ -3076,6 +4278,21 @@ antq_trib_america_palisaded_village = {
 	megalopolis = yes
 	build_time = small_fort_building
 	max_levels = 2
+	country_potential = {
+		has_tribal_government = yes
+		OR = {
+			is_ai = no
+			AND = {
+				current_date >= 3.1.1
+				num_loans = 0
+				gold >= { value = monthly_income_total multiply = 24 }
+				monthly_balance > { value = monthly_income_total divide = 2 }
+			}
+		}
+	}
+	allow = {
+		always = yes
+	}
 	location_potential = {
 		OR = {
 			dominant_culture = { has_culture_group = culture_group:antq_american_group }
@@ -3096,6 +4313,6 @@ antq_trib_america_palisaded_village = {
 		local_garrison_size = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	construction_demand = stockade_construction
+	construction_demand = antq_small_tribal_warrior_construction
 	custom_tags = { antq_tribal_building }
 }

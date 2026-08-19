@@ -86,6 +86,8 @@ save/reload scenarios remain open, so no Round 7 checkbox is closed yet.
   browser, location eligibility, construction queue, staffing, production method,
   output, market balance, AI construction, and downstream shipyard/building use on
   fresh starts; do not accept the existing pre-seeded ropewalks as the fix.
+  Static 2026-08-19: ropewalk/tar `allow = always` and wood-tar rural/forest
+  potential. Runtime construction-queue proof remains open.
 - [ ] Reopen tar and audit all analogous bottlenecks. Make the period-appropriate
   Wood-Tar Kiln/pitch producer constructible where timber and local practice allow,
   provide appropriate non-forest or trade alternatives, and test its lumber/tool
