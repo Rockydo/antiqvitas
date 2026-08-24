@@ -66,6 +66,10 @@ PERIOD_ROLE_GROUPS = {
         "antq_amber_ornaments", "antq_glass_beads", "antq_carpets",
         "antq_felt_goods", "antq_sailcloth",
     },
+    "later_antique_specialty": {
+        "antq_yue_celadon", "antq_bound_codices", "antq_cage_glass",
+        "antq_garnet_cloisonne",
+    },
 }
 FORBIDDEN_POST_ANTIQUE = {
     "cannons", "coffee", "firearms", "rubber", "saltpeter",
@@ -99,9 +103,9 @@ def build() -> tuple[str, str, dict[str, int]]:
         for row in rows(ledger)
     ]
     building_keys = [row["key"] for row in building_rows]
-    if len(building_keys) != 288 or len(building_keys) != len(set(building_keys)):
+    if len(building_keys) != 292 or len(building_keys) != len(set(building_keys)):
         failures.append(
-            f"active building ledger must contain 288 unique keys, got "
+            f"active building ledger must contain 292 unique keys, got "
             f"{len(building_keys)}/{len(set(building_keys))}"
         )
 

@@ -16,7 +16,8 @@ import io
 import json
 import re
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
+from decimal import Decimal
 from pathlib import Path
 
 from dates import AntqDate, M2_MIRROR_LANGUAGES
@@ -31,13 +32,35 @@ from m8_regional_depth import (
     validate_catalog,
 )
 from r5_knowledge_profiles import LATER_PATHS as R5_LATER_PATHS, OPENING_PATHS as R5_OPENING_PATHS
+from r6_identity_advances import (
+    CULTURE_PATHS as R6_CULTURE_PATHS,
+    DESIGN_BY_ENGINE,
+    IDENTITY_UNLOCKS,
+    PATHS as R6_IDENTITY_PATHS,
+    culture_node_key,
+    node_key as identity_node_key,
+)
 from m8_shared_depth import (
     EXPECTED_COUNTS as SHARED_DEPTH_COUNTS,
     SHARED_DEPTH_BY_AGE,
     validate_catalog as validate_shared_depth_catalog,
 )
+from m8_effect_scales import (
+    ADVANCE_EFFECT_SCALES,
+    ROLES as EFFECT_ROLES,
+    displayed_value,
+    effect_value,
+    is_displayed_zero,
+    resolved_decimal,
+)
+from economy_chains import (
+    OPENING_CUSTOM_CULTIVATORS,
+    OPENING_PRIMARY_PRODUCERS,
+    OPENING_STAPLE_BUILDINGS,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
+LOCAL_PATHS = ROOT / "config/local_paths.json"
 ADVANCES = ROOT / "in_game/common/advances"
 INSTITUTIONS = ROOT / "in_game/common/institution"
 SCRIPTED_TRIGGERS = ROOT / "in_game/common/scripted_triggers"
@@ -54,12 +77,16 @@ CULTIVATOR_METHOD_LEDGER = ROOT / "docs/m5/cultivator_production_methods.csv"
 REGIONAL_METHOD_LEDGER = ROOT / "docs/m5/regional_production_methods.csv"
 REACHABILITY_LEDGER = ROOT / "docs/m8/start_research_reachability.csv"
 VISIBILITY_LEDGER = ROOT / "docs/m8/advance_visibility.csv"
+EFFECT_SCALE_LEDGER = ROOT / "docs/m8/advance_effect_scale.csv"
+EFFECT_TOTAL_LEDGER = ROOT / "docs/m8/advance_effect_profile_totals.csv"
+EFFECT_SCALE_REPORT = ROOT / "docs/m8/ADVANCE_EFFECT_SCALE.md"
 INSTITUTION_LEDGER = ROOT / "docs/m8/institutions.csv"
 INSTALLED_INSTITUTION_LEDGER = ROOT / "docs/m8/installed_institution_inventory.csv"
 VANILLA_INSTITUTION_SYMBOLS = ROOT / "docs/vanilla_symbols/institution.json"
 REGIONAL_BUILDINGS = ROOT / "in_game/common/building_types/00_antiquitas_regional_buildings.txt"
 REGIONAL_BUILDING_LEDGER = ROOT / "docs/m5/regional_building_families.csv"
 REGIONAL_BUILDING_SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
+LATER_ANTIQUE_GOODS = ROOT / "docs/m5/later_antique_goods.csv"
 FOOD_BUILDING_SEEDS = ROOT / "docs/m5/food_building_seeds.csv"
 BRITAIN_BUILDING_SEEDS = ROOT / "docs/m5/s2_britain_ireland_building_seeds.csv"
 OWNERSHIP_LEDGER = ROOT / "docs/world_1ad/ownership_resolved.csv"
@@ -86,13 +113,77 @@ FORBIDDEN = (
     "gunpowder", "cannon", "arquebus", "musket", "flintlock", "colonial",
     "ocean_crossing", "steam", "printing_press",
 )
+# These twelve installed/DLC event contracts set a country variable whose only
+# vanilla reader lived in an advance ``allow`` block.  The effect-bearing block
+# is unsafe in the AD 1 Advances UI, so its minimal stub retains only this safe
+# reader.  Adding readers to every legacy key is also invalid: EU5 diagnoses
+# variables which are read but never set at database load.
+LEGACY_UNLOCK_VARIABLE_READERS = frozenset({
+    "bank_of_saint_george",
+    "coke_smelting",
+    "hurricane_hardy",
+    "imperatorskiy_moskovskiy_universitet",
+    "inigo_architecture",
+    "pis_marble_tradition",
+    "preobrazhensky_semyonovsky_imperial_guard",
+    "reforms_of_the_posadnichestvo",
+    "sailing_and_fighting_instructions",
+    "shared_brotherhood",
+    "ushkuiniks",
+    "water_frame",
+})
 ENGINE_NUMBER = re.compile(r"-?\d+(?:\.(\d+))?")
 UNLOCK = re.compile(r"^\s*unlock_(?:unit|levy)\s*=", re.IGNORECASE)
 TOP_LEVEL = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*\s*=\s*\{")
+INSTALLED_TOP_LEVEL = re.compile(r"^\s*[A-Za-z_][A-Za-z0-9_]*\s*=\s*\{")
 POTENTIAL = re.compile(r"^\s*potential\s*=")
 CAN_SPAWN = re.compile(r"^\s*can_spawn\s*=")
 ALLOW = re.compile(r"^\s*allow\s*=")
 CORE_TAGS = frozenset(("ROM", "HAN", "PAR"))
+# Ordinary construction, ship repair, and army upkeep consume these families.
+# They must sit on universally owned Age-I depth-zero cards, not on a later
+# regional identity node or a seeded-only workshop.
+DAY_ONE_SHARED_BUILDINGS = OPENING_STAPLE_BUILDINGS
+
+
+@dataclass(frozen=True)
+class ModifierContract:
+    unit: str
+    decimals: int
+    category: str
+    source: str
+
+
+def modifier_contracts() -> dict[str, ModifierContract]:
+    """Read presentation contracts from the pinned local EU5 database."""
+    config = json.loads(LOCAL_PATHS.read_text(encoding="utf-8-sig"))
+    game_root = Path(config["game_dir"])
+    definition_root = game_root / "game/main_menu/common/modifier_type_definitions"
+    result: dict[str, ModifierContract] = {}
+    for path in sorted(definition_root.glob("*.txt")):
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        for field in ADVANCE_EFFECT_SCALES:
+            match = re.search(
+                rf"(?ms)^{re.escape(field)}\s*=\s*\{{(?P<body>.*?)^\}}",
+                text,
+            )
+            if match is None:
+                continue
+            body = match.group("body")
+            unit = (
+                "already_percent" if re.search(r"(?m)^\s*already_percent\s*=\s*yes", body)
+                else "percent" if re.search(r"(?m)^\s*percent\s*=\s*yes", body)
+                else "flat"
+            )
+            decimals_match = re.search(r"(?m)^\s*decimals\s*=\s*(\d+)", body)
+            category_match = re.search(r"(?m)^\s*category\s*=\s*([A-Za-z_]+)", body)
+            result[field] = ModifierContract(
+                unit,
+                int(decimals_match.group(1)) if decimals_match else 2,
+                category_match.group(1) if category_match else "unknown",
+                "<GAME_ROOT>/" + path.relative_to(game_root).as_posix(),
+            )
+    return result
 # Opening law access is supplied exclusively by the profile-native foundations
 # generated below.  Exact vanilla law bridges used during early engine probing
 # are deliberately absent: once has_codified_laws is restored they surface as
@@ -135,6 +226,15 @@ START_CAPABILITIES: dict[str, tuple[tuple[str, str], ...]] = {
     "antq_professional_standing_armies": (
         ("always_allow_army_levies", "yes"),
     ),
+}
+
+# The mercenary manager constructs each country's live hiring pool from units
+# unlocked by advances that country already owns.  These two portable fallback
+# companies must therefore stay on shared, depth-zero Age-I foundations rather
+# than merely existing somewhere in the warfare tree.
+OPENING_PORTABLE_MERCENARY_UNLOCKS: dict[str, str] = {
+    "antq_hired_horse_company": "antq_professional_standing_armies",
+    "antq_local_retainer_company": "antq_auxiliary_service",
 }
 
 # Direct ancient-system bridges.  Start reforms and privileges sit on universal
@@ -346,6 +446,8 @@ CONTENT_UNLOCKS: dict[str, tuple[tuple[str, str], ...]] = {
         ("unlock_unit", "antq_seasonal_skirmishers"),
         ("unlock_unit", "antq_frontier_spear_company"),
         ("unlock_unit", "antq_caravan_guard_company"),
+        ("unlock_unit", "antq_hired_horse_company"),
+        ("unlock_unit", "antq_local_retainer_company"),
         ("unlock_unit", "antq_thureophoroi"),
         ("unlock_unit", "antq_hellenistic_phalanx"),
         ("unlock_unit", "antq_han_crossbow_infantry"),
@@ -513,6 +615,41 @@ class Advance:
     effects: tuple[tuple[str, str], ...]
     description: str
     source: str
+    exact_tags: tuple[str, ...] = ()
+    exact_cultures: tuple[str, ...] = ()
+
+
+def advance_effect_role(record: Advance) -> str:
+    """Assign a reviewed magnitude band from gameplay role, never key ordinal."""
+    if record.profile.startswith("law_"):
+        return "minor"
+    if record.key.startswith("antq_shared_"):
+        return ("minor", "minor", "standard", "standard", "major", "major")[
+            record.age_index
+        ]
+    if record.exact_tags or record.exact_cultures:
+        base = 0 if record.age_index == 0 else 1 if record.age_index <= 2 else 2
+        depth_step = 1 if record.depth >= 3 else 0
+        return EFFECT_ROLES[min(3, base + depth_step)]
+    if record.profile == "shared":
+        return "minor" if record.depth <= 1 else "standard"
+    role_index = 0 if record.depth <= 1 else 1 if record.depth <= 3 else 2
+    if record.age_index >= 4 and record.depth >= 4:
+        role_index += 1
+    return EFFECT_ROLES[min(3, role_index)]
+
+
+def calibrate_advance_effects(records: tuple[Advance, ...]) -> tuple[Advance, ...]:
+    """Replace every numeric/template reward with one reviewed display-safe value."""
+    calibrated: list[Advance] = []
+    for record in records:
+        role = advance_effect_role(record)
+        effects = tuple(
+            (field, effect_value(field, role))
+            for field, _old_value in record.effects
+        )
+        calibrated.append(replace(record, effects=effects))
+    return tuple(calibrated)
 
 
 @dataclass(frozen=True)
@@ -1531,6 +1668,53 @@ def advance_records() -> tuple[Advance, ...]:
                     ))
     records.extend(shared_depth_records())
     records.extend(law_foundation_records())
+    records.extend(identity_records())
+    records.extend(culture_identity_records())
+    return calibrate_advance_effects(tuple(records))
+
+
+def identity_records() -> tuple[Advance, ...]:
+    """Build early, middle, and late mini-DAGs visible only to exact polities."""
+    records: list[Advance] = []
+    for path in R6_IDENTITY_PATHS:
+        for stage, age_index in enumerate((0, 2, 4)):
+            track = path.tracks[stage]
+            conceptual_index = min(age_index, 4)
+            root = f"antq_{TRACKS[track][conceptual_index][0]}"
+            stage_indexes = tuple(range(stage * 3, stage * 3 + 3))
+            stage_keys = tuple(identity_node_key(path, index) for index in stage_indexes)
+            for ordinal, index in enumerate(stage_indexes):
+                required = root if ordinal == 0 else stage_keys[ordinal - 1]
+                name = path.names[index]
+                records.append(Advance(
+                    stage_keys[ordinal], f"{path.polity}: {name}", AGE_KEYS[age_index],
+                    age_index, ordinal + 1, track, path.profile, (required,),
+                    (path.effects[ordinal],),
+                    f"{name} develops a specifically {path.polity.lower()} strategic advantage; it is not a universal regional practice.",
+                    path.source, (path.engine_tag,),
+                ))
+    return tuple(records)
+
+
+def culture_identity_records() -> tuple[Advance, ...]:
+    """Build exact-culture early, middle, and late traditions."""
+    records: list[Advance] = []
+    for path in R6_CULTURE_PATHS:
+        for stage, age_index in enumerate((0, 2, 4)):
+            track = path.tracks[stage]
+            root = f"antq_{TRACKS[track][min(age_index, 4)][0]}"
+            stage_indexes = tuple(range(stage * 3, stage * 3 + 3))
+            stage_keys = tuple(culture_node_key(path, index) for index in stage_indexes)
+            for ordinal, index in enumerate(stage_indexes):
+                required = root if ordinal == 0 else stage_keys[ordinal - 1]
+                name = path.names[index]
+                records.append(Advance(
+                    stage_keys[ordinal], f"{path.culture_name}: {name}", AGE_KEYS[age_index],
+                    age_index, ordinal + 1, track, path.profile, (required,),
+                    (path.effects[ordinal],),
+                    f"{name} develops a practice specific to {path.culture_name} communities while remaining available to states that adopt that culture.",
+                    path.source, (), (path.culture,),
+                ))
     return tuple(records)
 
 
@@ -1538,7 +1722,6 @@ def shared_depth_records() -> tuple[Advance, ...]:
     """Build 80 culture-neutral depth nodes against each age's shared roots."""
     validate_shared_depth_catalog()
     records: list[Advance] = []
-    track_ordinals = {track: 0 for track in TRACKS}
     effect_fields = {
         "statecraft": "country_cabinet_efficiency",
         "warfare": "levy_recovery_modifier",
@@ -1551,8 +1734,10 @@ def shared_depth_records() -> tuple[Advance, ...]:
         root_offset = 5 if age_index == 5 else 0
         for slug, track, name, description in rows:
             root = f"antq_{TRACKS[track][conceptual_index][root_offset]}"
-            track_ordinals[track] += 1
-            value = 0.0005 + track_ordinals[track] * 0.0001
+            role = ("minor", "minor", "standard", "standard", "major", "major")[
+                age_index
+            ]
+            field = effect_fields[track]
             records.append(Advance(
                 f"antq_shared_{slug}",
                 name,
@@ -1562,7 +1747,7 @@ def shared_depth_records() -> tuple[Advance, ...]:
                 track,
                 "shared",
                 (root,),
-                ((effect_fields[track], f"{value:.4f}"),),
+                ((field, effect_value(field, role)),),
                 description,
                 "P15;CAH-XI" if age_index < 2 else "P15;CAH-XII",
             ))
@@ -1594,16 +1779,19 @@ BUILDING_TRACK_HINTS: dict[str, tuple[str, ...]] = {
     "warfare": (
         "weapon", "armour", "arrow", "harness", "chariot", "ironmongery",
         "shield", "scabbard", "chainmaker", "nailery", "locksmith",
-        "wiredrawer", "crucible_steel",
+        "wiredrawer", "crucible_steel", "bloomery",
     ),
     "learning": (
         "scriptorium", "papyrus", "parchment", "stationer", "scroll",
         "reed_pen", "instrument", "apothecary", "materia_medica", "herbal",
+        "bindery",
     ),
     "society": (
         "granary", "cistern", "fountain", "bath", "bread", "brewery",
         "brewhouse", "honey", "soap", "lamp", "figurine", "mosaic",
-        "macellum",
+        "macellum", "grain_mill", "meat_curing", "pottery_kiln",
+        "brickworks", "hide_curing", "linen", "fish_saltery",
+        "leatherworks",
     ),
 }
 
@@ -1654,6 +1842,38 @@ def csv_rows(path: Path, *, comments: bool = False) -> list[dict[str, str]]:
         {key: (value or "").strip() for key, value in row.items()}
         for row in csv.DictReader(lines)
     ]
+
+
+def later_antique_building_rows() -> dict[str, dict[str, str]]:
+    """Read the dated building/good contracts that must not leak into AD 1."""
+    rows = csv_rows(LATER_ANTIQUE_GOODS)
+    required = {
+        "good", "building", "age_index", "age", "profile", "macros",
+        "demand_gate", "source", "confidence", "note",
+    }
+    if len(rows) != 4 or not rows or not required <= set(rows[0]):
+        raise ValueError("later-antique goods ledger must contain four complete rows")
+    result: dict[str, dict[str, str]] = {}
+    for row in rows:
+        building = row["building"]
+        try:
+            age_index = int(row["age_index"])
+        except ValueError as exc:
+            raise ValueError(f"invalid later-antique age index for {building}") from exc
+        if (
+            not building.startswith("antq_reg_")
+            or not row["good"].startswith("antq_")
+            or building in result
+            or not 1 <= age_index < len(AGE_KEYS)
+            or row["age"] != AGE_KEYS[age_index]
+            or row["demand_gate"] != "market_availability"
+        ):
+            raise ValueError(f"invalid later-antique unlock contract for {building}")
+        profiles = set(row["profile"].split("|"))
+        if not profiles or not profiles <= set(ADVANCE_PROFILES):
+            raise ValueError(f"unknown later-antique profiles for {building}: {sorted(profiles)}")
+        result[building] = row
+    return result
 
 
 def cultivator_method_rows() -> list[dict[str, str]]:
@@ -1889,8 +2109,15 @@ def building_content_profiles(
         for buildings in ROMAN_ECONOMY_UNLOCKS.values()
         for building in buildings
     }
+    later = later_antique_building_rows()
     result: dict[str, set[str]] = defaultdict(set)
     for building in regional_building_keys():
+        if building in later:
+            result[building].update(later[building]["profile"].split("|"))
+            continue
+        if building in DAY_ONE_SHARED_BUILDINGS or building in OPENING_CUSTOM_CULTIVATORS:
+            result[building].add("shared")
+            continue
         if building in roman:
             result[building].add("roman_italic")
             continue
@@ -1904,6 +2131,8 @@ def building_content_profiles(
         # ancient craft, not a foreign institutional package.
         if len(result[building]) >= 10:
             result[building] = {"shared"}
+    for building in OPENING_CUSTOM_CULTIVATORS:
+        result[building] = {"shared"}
     return result
 
 
@@ -1916,27 +2145,33 @@ def add_profiled_unlock(
     *,
     age_index: int | None = None,
     opening: bool = False,
+    root: bool = False,
     track: str | None = None,
     ceiling: int = 8,
 ) -> None:
     """Place one unlock on bounded nodes, duplicating only across profiles."""
-    for profile in sorted(set(profiles)):
-        candidates = [
-            record for record in records
-            if record.profile == profile
-            and (age_index is None or record.age_index == age_index)
-            and (not opening or (record.age_index == 0 and record.depth <= 2))
-            and (track is None or record.track == track)
-        ]
-        if not candidates and track is not None:
-            candidates = [
-                record for record in records
-                if record.profile == profile
-                and (age_index is None or record.age_index == age_index)
-                and (not opening or (record.age_index == 0 and record.depth <= 2))
-            ]
+
+    def eligible(record: Advance, profile: str, *, require_track: bool) -> bool:
+        if record.profile != profile:
+            return False
+        if record.exact_tags or record.exact_cultures:
+            return False
+        if age_index is not None and record.age_index != age_index:
+            return False
+        if root and not (record.age_index == 0 and record.depth == 0):
+            return False
+        if opening and not (record.age_index == 0 and record.depth <= 2):
+            return False
+        if require_track and track is not None and record.track != track:
+            return False
+        return True
+
+    def pick(profile: str, *, require_track: bool) -> Advance | None:
         candidates = sorted(
-            candidates,
+            (
+                record for record in records
+                if eligible(record, profile, require_track=require_track)
+            ),
             key=lambda record: (
                 len(result[record.key]),
                 record.depth,
@@ -1945,30 +2180,15 @@ def add_profiled_unlock(
                 record.key,
             ),
         )
-        candidate = next(
+        return next(
             (record for record in candidates if len(result[record.key]) < ceiling),
             None,
         )
+
+    for profile in sorted(set(profiles)):
+        candidate = pick(profile, require_track=True)
         if candidate is None and track is not None:
-            candidates = sorted(
-                (
-                    record for record in records
-                    if record.profile == profile
-                    and (age_index is None or record.age_index == age_index)
-                    and (not opening or (record.age_index == 0 and record.depth <= 2))
-                ),
-                key=lambda record: (
-                    len(result[record.key]),
-                    record.depth,
-                    record.age_index,
-                    record.track,
-                    record.key,
-                ),
-            )
-            candidate = next(
-                (record for record in candidates if len(result[record.key]) < ceiling),
-                None,
-            )
+            candidate = pick(profile, require_track=False)
         if candidate is None:
             raise ValueError(
                 f"no <={ceiling}-unlock slot for {field}={target} in profile {profile}"
@@ -1989,6 +2209,7 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
     opening_profile_privileges = opening_profile_privilege_keys()
     unit_profiles = unit_content_profiles(tag_profiles)
     building_profiles = building_content_profiles(tag_profiles)
+    later_buildings = later_antique_building_rows()
 
     # Opening governments already exist in setup and must never be advertised
     # as research rewards. A shared opening form can span many unrelated setup
@@ -2127,9 +2348,29 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
         )
 
     for building in regional_building_keys():
+        later = building in later_buildings
+        root_building = building in OPENING_STAPLE_BUILDINGS and not later
+        opening_building = building in OPENING_PRIMARY_PRODUCERS and not later
+        later_age = (
+            int(later_buildings[building]["age_index"])
+            if later
+            else None
+        )
         add_profiled_unlock(
             records, result, "unlock_building", building,
-            building_profiles[building], track=building_track(building), ceiling=6,
+            building_profiles[building],
+            age_index=0 if opening_building else later_age,
+            opening=opening_building,
+            root=root_building,
+            track=building_track(building),
+            ceiling=8,
+        )
+    for building in sorted(OPENING_CUSTOM_CULTIVATORS):
+        add_profiled_unlock(
+            records, result, "unlock_building", building,
+            {"shared"},
+            age_index=0, opening=True, root=True,
+            track="society", ceiling=8,
         )
     age_indexes = {age: index for index, age in enumerate(AGE_KEYS)}
     for method in cultivator_method_rows():
@@ -2153,6 +2394,24 @@ def content_unlocks(records: tuple[Advance, ...]) -> dict[str, tuple[tuple[str, 
         add_profiled_unlock(
             records, result, "unlock_production_method", method["key"],
             {method["profile"]}, age_index=age_index, ceiling=8,
+        )
+
+    # Flagship branches take sole ownership of selected existing units and
+    # workshops. Their exact-tag potential turns a formerly broad-profile
+    # research reward into a genuinely polity-specific strategic choice.
+    identity_targets = {
+        entry for entries in IDENTITY_UNLOCKS.values() for entry in entries
+        if entry not in {("unlock_building", key) for key in OPENING_PRIMARY_PRODUCERS}
+    }
+    for advance in tuple(result):
+        result[advance] = [entry for entry in result[advance] if entry not in identity_targets]
+    for advance, entries in IDENTITY_UNLOCKS.items():
+        result[advance].extend(
+            entry for entry in entries
+            if not (
+                entry[0] == "unlock_building"
+                and entry[1] in OPENING_PRIMARY_PRODUCERS
+            )
         )
     return {key: tuple(entries) for key, entries in result.items()}
 
@@ -2205,6 +2464,17 @@ def technology_tier_summary() -> tuple[int, int, int, int]:
     return tuple(counts[level] for level in range(1, 5))
 
 
+def exact_advance_visible(record: Advance, design_tag: str, culture: str) -> bool:
+    if record.exact_tags and not any(
+        DESIGN_BY_ENGINE.get(engine_tag) == design_tag
+        for engine_tag in record.exact_tags
+    ):
+        return False
+    if record.exact_cultures and culture not in record.exact_cultures:
+        return False
+    return True
+
+
 def start_research_rows(records: tuple[Advance, ...]) -> list[dict[str, str]]:
     """Prove day-one Age-I choices for every playable M3 roster entry.
 
@@ -2246,13 +2516,16 @@ def start_research_rows(records: tuple[Advance, ...]) -> list[dict[str, str]]:
             record.key
             for record in age_one
             if (
-                (
-                    record.profile.startswith("law_")
-                    and record.profile == f"law_{tag_law_profiles.get(tag, '')}"
-                )
-                or (
-                    not record.profile.startswith("law_")
-                    and min(4, record.depth + 1) <= level
+                not (record.exact_tags or record.exact_cultures)
+                and (
+                    (
+                        record.profile.startswith("law_")
+                        and record.profile == f"law_{tag_law_profiles.get(tag, '')}"
+                    )
+                    or (
+                        not record.profile.startswith("law_")
+                        and min(4, record.depth + 1) <= level
+                    )
                 )
             )
         }
@@ -2261,8 +2534,10 @@ def start_research_rows(records: tuple[Advance, ...]) -> list[dict[str, str]]:
             for record in age_one
             if record.key not in owned
             and all(required in owned for required in record.requires)
+            and exact_advance_visible(record, tag, culture)
             and (
-                record.profile == "shared"
+                bool(record.exact_tags or record.exact_cultures)
+                or record.profile == "shared"
                 or (
                     record.profile.startswith("law_")
                     and record.profile == f"law_{tag_law_profiles.get(tag, '')}"
@@ -2301,7 +2576,7 @@ def start_research_ledger(records: tuple[Advance, ...]) -> str:
 
 def advance_visibility_ledger(records: tuple[Advance, ...]) -> str:
     """Report the cards each opening tag can actually see in every engine age."""
-    tag_profiles, _tag_cultures, _culture_groups = research_profile_maps()
+    tag_profiles, tag_cultures, _culture_groups = research_profile_maps()
     law_profiles = {
         row["tag"]: f"law_{row['profile']}"
         for row in csv_rows(S2_ANCIENT_LAW_PROFILES)
@@ -2324,8 +2599,10 @@ def advance_visibility_ledger(records: tuple[Advance, ...]) -> str:
         counts = tuple(
             sum(
                 record.age == age
+                and exact_advance_visible(record, tag, tag_cultures.get(tag, ""))
                 and (
-                    record.profile == "shared"
+                    bool(record.exact_tags or record.exact_cultures)
+                    or record.profile == "shared"
                     or record.profile in profiles
                     or record.profile == law_profile
                 )
@@ -2358,6 +2635,141 @@ def advance_visibility_ledger(records: tuple[Advance, ...]) -> str:
     return stream.getvalue()
 
 
+def effect_scope(record: Advance) -> str:
+    if record.exact_tags:
+        return "tags:" + "|".join(record.exact_tags)
+    if record.exact_cultures:
+        return "cultures:" + "|".join(record.exact_cultures)
+    return record.profile
+
+
+def representative_baseline(field: str, value: str) -> str:
+    """Render one transparent scale example without inventing an engine baseline."""
+    scale = ADVANCE_EFFECT_SCALES[field]
+    amount = resolved_decimal(field, value)
+    if scale.unit == "percent":
+        result = Decimal("100") * (Decimal("1") + amount)
+        return f"100 reference units -> {result.quantize(Decimal('0.01'))}"
+    if scale.unit == "already_percent":
+        return f"0 -> +{amount}% per month"
+    raise ValueError(f"unsupported advance-effect unit {scale.unit} for {field}")
+
+
+def advance_effect_scale_ledger(records: tuple[Advance, ...]) -> str:
+    contracts = modifier_contracts()
+    fields = (
+        "advance", "name", "age", "depth", "track", "profile", "scope",
+        "role", "modifier", "stacking_family", "engine_category", "unit",
+        "ui_decimals", "script_value", "display_value",
+        "representative_baseline_impact", "vanilla_advance_min",
+        "vanilla_advance_max", "modifier_definition", "historical_source",
+    )
+    stream = io.StringIO(newline="")
+    writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
+    writer.writeheader()
+    for record in records:
+        role = advance_effect_role(record)
+        for field, value in record.effects:
+            scale = ADVANCE_EFFECT_SCALES[field]
+            contract = contracts[field]
+            writer.writerow({
+                "advance": record.key,
+                "name": record.name,
+                "age": record.age,
+                "depth": record.depth,
+                "track": record.track,
+                "profile": record.profile,
+                "scope": effect_scope(record),
+                "role": role,
+                "modifier": field,
+                "stacking_family": field,
+                "engine_category": contract.category,
+                "unit": contract.unit,
+                "ui_decimals": contract.decimals,
+                "script_value": value,
+                "display_value": displayed_value(field, value),
+                "representative_baseline_impact": representative_baseline(field, value),
+                "vanilla_advance_min": scale.vanilla_advance_min,
+                "vanilla_advance_max": scale.vanilla_advance_max,
+                "modifier_definition": contract.source,
+                "historical_source": record.source,
+            })
+    return stream.getvalue()
+
+
+def advance_effect_profile_totals(records: tuple[Advance, ...]) -> str:
+    totals: dict[tuple[str, str, str], tuple[int, Decimal]] = {}
+    for record in records:
+        scope = effect_scope(record)
+        for field, value in record.effects:
+            key = (scope, record.track, field)
+            count, total = totals.get(key, (0, Decimal("0")))
+            totals[key] = (count + 1, total + resolved_decimal(field, value))
+    fields = (
+        "scope", "track", "modifier", "nodes", "script_total", "unit",
+        "display_total", "review_cap",
+    )
+    stream = io.StringIO(newline="")
+    writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
+    writer.writeheader()
+    for (scope, track, field), (count, total) in sorted(totals.items()):
+        scale = ADVANCE_EFFECT_SCALES[field]
+        cap = Decimal(scale.capstone) * Decimal(str((3 * count + 3) // 4))
+        total_text = format(total, "f")
+        writer.writerow({
+            "scope": scope,
+            "track": track,
+            "modifier": field,
+            "nodes": count,
+            "script_total": total_text,
+            "unit": scale.unit,
+            "display_total": displayed_value(field, total_text),
+            "review_cap": format(cap, "f"),
+        })
+    return stream.getvalue()
+
+
+def advance_effect_scale_report(records: tuple[Advance, ...]) -> str:
+    contracts = modifier_contracts()
+    by_field: dict[str, list[str]] = defaultdict(list)
+    for record in records:
+        for field, value in record.effects:
+            by_field[field].append(value)
+    lines = [
+        "# Advance Effect Scale",
+        "",
+        "Generated by `tools/m8_knowledge.py`. Every active advance reward is an",
+        "explicit numeric value selected from the reviewed engine-unit catalogue;",
+        "no ordinal-derived decimal or unresolved tiny/small constant remains.",
+        "",
+        f"- Advances audited: {len(records)}",
+        f"- Numeric rewards audited: {sum(map(len, by_field.values()))}",
+        f"- Modifier families: {len(by_field)} / {len(ADVANCE_EFFECT_SCALES)}",
+        "- Rewards that render as zero: 0",
+        "- Unit and precision contracts: pinned local EU5 modifier definitions",
+        "",
+        "| Modifier | Engine category | Unit | UI decimals | Nodes | Used values | Displayed values | Vanilla advance range |",
+        "|---|---|---|---:|---:|---|---|---|",
+    ]
+    for field in sorted(by_field):
+        scale = ADVANCE_EFFECT_SCALES[field]
+        contract = contracts[field]
+        values = sorted(set(by_field[field]), key=Decimal)
+        displays = [displayed_value(field, value) for value in values]
+        lines.append(
+            f"| `{field}` | {contract.category} | {contract.unit} | {contract.decimals} | {len(by_field[field])} | "
+            f"{', '.join(values)} | {', '.join(displays)} | "
+            f"{scale.vanilla_advance_min}-{scale.vanilla_advance_max} |"
+        )
+    lines.extend((
+        "",
+        "Per-card evidence is in `advance_effect_scale.csv`; cumulative scope/track",
+        "totals and their review caps are in `advance_effect_profile_totals.csv`.",
+        "",
+    ))
+    return "\n".join(lines)
+
+
 def institution_manager() -> str:
     lines = ["institution_manager = {", "\tinstitutions = {"]
     for institution in INSTITUTION_DATA:
@@ -2372,7 +2784,8 @@ def validate(records: tuple[Advance, ...]) -> None:
     unlocks = content_unlocks(records)
     law_foundation_count = len(law_unlock_packages())
     regional_path_count = sum(len(paths) for paths in AGE1_EXPANSION.values())
-    expected_advance_count = 330 + 25 * regional_path_count + law_foundation_count
+    identity_count = (len(R6_IDENTITY_PATHS) + len(R6_CULTURE_PATHS)) * 9
+    expected_advance_count = 330 + 25 * regional_path_count + law_foundation_count + identity_count
     if len(records) != expected_advance_count:
         failures.append(
             f"expected {expected_advance_count} advances including exact legal "
@@ -2385,11 +2798,11 @@ def validate(records: tuple[Advance, ...]) -> None:
     late_even = sum(ordinal % 2 == 0 for ordinal, _pair in enumerate(later_branch_pairs()))
     late_odd = regional_path_count - late_even
     expected_counts = (
-        61 + 5 * regional_path_count + law_foundation_count,
+        61 + 5 * regional_path_count + law_foundation_count + (len(R6_IDENTITY_PATHS) + len(R6_CULTURE_PATHS)) * 3,
         67 + 5 * regional_path_count,
+        67 + 5 * regional_path_count + (len(R6_IDENTITY_PATHS) + len(R6_CULTURE_PATHS)) * 3,
         67 + 5 * regional_path_count,
-        67 + 5 * regional_path_count,
-        34 + 5 * late_even,
+        34 + 5 * late_even + (len(R6_IDENTITY_PATHS) + len(R6_CULTURE_PATHS)) * 3,
         34 + 5 * late_odd,
     )
     for age_index, age in enumerate(AGE_KEYS):
@@ -2436,6 +2849,53 @@ def validate(records: tuple[Advance, ...]) -> None:
         failures.append(
             "the universally held Professional Standing Armies lost levy availability"
         )
+    staple_homes: dict[str, list[str]] = defaultdict(list)
+    for advance, entries in unlocks.items():
+        record = by_key.get(advance)
+        for field, target in entries:
+            if field == "unlock_building" and target in OPENING_STAPLE_BUILDINGS:
+                staple_homes[target].append(advance)
+                if (
+                    record is None
+                    or record.age_index != 0
+                    or record.depth != 0
+                    or record.profile != "shared"
+                    or record.exact_tags
+                    or record.exact_cultures
+                ):
+                    failures.append(
+                        f"opening staple {target} is not on a universally owned "
+                        f"Age-I depth-zero foundation: {advance}"
+                    )
+    missing_staples = sorted(OPENING_STAPLE_BUILDINGS - set(staple_homes))
+    if missing_staples:
+        failures.append(
+            "opening staples lack research unlocks: " + ", ".join(missing_staples)
+        )
+    for unit, expected_advance in OPENING_PORTABLE_MERCENARY_UNLOCKS.items():
+        actual_advances = sorted(
+            key
+            for key, entries in unlocks.items()
+            if ("unlock_unit", unit) in entries
+        )
+        if actual_advances != [expected_advance]:
+            failures.append(
+                f"portable mercenary {unit} must be unlocked exactly once by "
+                f"{expected_advance}, got {actual_advances}"
+            )
+            continue
+        advance = by_key.get(expected_advance)
+        if advance is None or (
+            advance.age_index != 0
+            or advance.depth != 0
+            or advance.profile != "shared"
+            or advance.exact_tags
+            or advance.exact_cultures
+        ):
+            failures.append(
+                f"portable mercenary {unit} is not on a universally owned "
+                f"Age-I depth-zero foundation: {expected_advance}"
+            )
     unlock_fields = {
         field for entries in unlocks.values() for field, _target in entries
     }
@@ -2499,9 +2959,13 @@ def validate(records: tuple[Advance, ...]) -> None:
         "unlock_building": building_profiles,
         "unlock_law": exact_law_profiles,
     }
+    identity_allowed_profiles: dict[tuple[str, str], set[str]] = defaultdict(set)
+    for path in R6_IDENTITY_PATHS:
+        identity_allowed_profiles[("unlock_unit", path.unit)].add(path.profile)
+        identity_allowed_profiles[("unlock_building", path.building)].add(path.profile)
     for field, (path, prefix) in target_sources.items():
         expected_targets = (
-            set(regional_building_keys())
+            set(regional_building_keys()) | set(OPENING_CUSTOM_CULTIVATORS)
             if field == "unlock_building"
             else set(ordered_top_level_keys(path, prefix))
         )
@@ -2554,8 +3018,8 @@ def validate(records: tuple[Advance, ...]) -> None:
                 continue
             if field == "unlock_law" and not target.startswith("antq_s2_"):
                 continue
-            allowed = target_map.get(target)
-            if allowed is None:
+            allowed = set(target_map.get(target, set())) | identity_allowed_profiles.get((field, target), set())
+            if not allowed:
                 failures.append(
                     f"{field} {target} has no checked research-profile contract"
                 )
@@ -2627,7 +3091,10 @@ def validate(records: tuple[Advance, ...]) -> None:
             )
     required_by = {required for record in records for required in record.requires}
     leaves = [record.key for record in records if record.key not in required_by]
-    expected_leaves = 160 + 5 * regional_path_count + law_foundation_count
+    expected_leaves = (
+        160 + 5 * regional_path_count + law_foundation_count
+        + (len(R6_IDENTITY_PATHS) + len(R6_CULTURE_PATHS)) * 3
+    )
     if len(leaves) != expected_leaves:
         failures.append(
             "the expanded branching trees and exact legal holders have an invalid leaf count"
@@ -2700,6 +3167,32 @@ def validate(records: tuple[Advance, ...]) -> None:
         & set(ADVANCE_PROFILES["subsaharan"].adoption_institutions)
     ):
         failures.append("Nile/North-African and sub-Saharan paths lack a Horn/Red-Sea bridge")
+    used_effect_fields = {
+        field for record in records for field, _value in record.effects
+    }
+    if used_effect_fields != set(ADVANCE_EFFECT_SCALES):
+        failures.append(
+            "advance-effect catalogue coverage mismatch: "
+            f"missing={sorted(set(ADVANCE_EFFECT_SCALES) - used_effect_fields)}, "
+            f"extra={sorted(used_effect_fields - set(ADVANCE_EFFECT_SCALES))}"
+        )
+    contracts = modifier_contracts()
+    if set(contracts) != set(ADVANCE_EFFECT_SCALES):
+        failures.append(
+            "pinned EU5 modifier-contract coverage mismatch: "
+            f"missing={sorted(set(ADVANCE_EFFECT_SCALES) - set(contracts))}, "
+            f"extra={sorted(set(contracts) - set(ADVANCE_EFFECT_SCALES))}"
+        )
+    for field, scale in ADVANCE_EFFECT_SCALES.items():
+        contract = contracts.get(field)
+        if contract is None:
+            continue
+        if contract.unit != scale.unit or contract.decimals != scale.decimals:
+            failures.append(
+                f"{field} catalogue contract {scale.unit}/{scale.decimals} disagrees "
+                f"with pinned EU5 {contract.unit}/{contract.decimals}"
+            )
+    effect_slots: set[tuple[str, str]] = set()
     for record in records:
         if record.profile not in ADVANCE_PROFILES:
             failures.append(f"{record.key} uses an unknown advance profile")
@@ -2710,6 +3203,25 @@ def validate(records: tuple[Advance, ...]) -> None:
         if not record.source:
             failures.append(f"{record.key} has no source")
         for field, value in record.effects:
+            effect_slot = (record.key, field)
+            if effect_slot in effect_slots:
+                failures.append(f"{record.key} unintentionally stacks duplicate {field} rewards")
+            effect_slots.add(effect_slot)
+            role = advance_effect_role(record)
+            if field not in ADVANCE_EFFECT_SCALES:
+                failures.append(f"{record.key} uses unreviewed advance effect {field}")
+                continue
+            if value != effect_value(field, role):
+                failures.append(
+                    f"{record.key} {field}={value} does not match its {role} scale "
+                    f"({effect_value(field, role)})"
+                )
+            if is_displayed_zero(field, value):
+                failures.append(
+                    f"{record.key} {field}={value} renders as {displayed_value(field, value)}"
+                )
+            if resolved_decimal(field, value) <= 0:
+                failures.append(f"{record.key} {field} is not a positive reward")
             numeric = ENGINE_NUMBER.fullmatch(value)
             if numeric is not None and len(numeric.group(1) or "") > 5:
                 failures.append(
@@ -2728,6 +3240,27 @@ def validate(records: tuple[Advance, ...]) -> None:
                 failures.append(f"{record.key} converges across incompatible profiles")
         if any(token in record.key for token in FORBIDDEN):
             failures.append(f"anachronistic token in {record.key}")
+    scope_totals: dict[tuple[str, str, str], tuple[int, Decimal]] = {}
+    for record in records:
+        for field, value in record.effects:
+            key = (effect_scope(record), record.track, field)
+            count, total = scope_totals.get(key, (0, Decimal("0")))
+            scope_totals[key] = (
+                count + 1,
+                total + resolved_decimal(field, value),
+            )
+    for (scope, track, field), (count, total) in scope_totals.items():
+        # A branch may contain many centuries of mutually competing cards.  Its
+        # full sum is bounded to an average no greater than three quarters of the capstone
+        # value, rather than a fixed node count that penalizes deeper branches.
+        cap = Decimal(ADVANCE_EFFECT_SCALES[field].capstone) * Decimal(
+            str((3 * count + 3) // 4)
+        )
+        if total > cap:
+            failures.append(
+                f"advance-effect total exceeds reviewed band: {scope}/{track}/{field} "
+                f"{total}>{cap}"
+            )
     names = " ".join(keys)
     if "stirrup" in names:
         failures.append("the contested stirrup is outside M8's research tree")
@@ -2805,6 +3338,12 @@ def validate(records: tuple[Advance, ...]) -> None:
 
 
 def advance_potential(record: Advance) -> list[str]:
+    if record.exact_tags or record.exact_cultures:
+        lines = ["\tpotential = {", "\t\tOR = {"]
+        lines.extend(f"\t\t\thas_or_had_tag = {tag}" for tag in record.exact_tags)
+        lines.extend(f"\t\t\tculture = culture:{culture}" for culture in record.exact_cultures)
+        lines.extend(("\t\t}", "\t}"))
+        return lines
     if record.profile.startswith("law_"):
         legal_profile = record.profile.removeprefix("law_")
         return [
@@ -2845,7 +3384,7 @@ def advance_script(records: tuple[Advance, ...]) -> str:
             lines.append(f"\t{field} = {value}")
         for field, target in unlocks.get(record.key, ()):
             lines.append(f"\t{field} = {target}")
-        if record.age_index == 0:
+        if record.age_index == 0 and not (record.exact_tags or record.exact_cultures):
             starting_level = 1 if record.profile.startswith("law_") else min(4, record.depth + 1)
             lines.append(f"\tstarting_technology_level = {starting_level}")
         for required in record.requires:
@@ -2983,11 +3522,63 @@ def replace_top_level_definition(text: str, key: str, replacement: str) -> str:
 
 
 def disabled_advance_content(path: Path) -> str:
-    """Keep every vanilla advance key valid but make it permanently unavailable."""
-    rendered = neutralize_references(
-        disabled_content(path, POTENTIAL, "potential", "advancement", True),
-        remap_effects=True,
-    )
+    """Keep vanilla advance identities without retaining their UI effects.
+
+    A false ``potential`` hides an advance from gameplay, but EU5 still builds
+    effect and unlock previews for every database entry when the Advances tree
+    opens.  Preserving the installed bodies therefore evaluated hundreds of
+    post-antique buildings, laws, organizations, and dynamic-localization
+    readers with no country/location scope during the AD 1 production run.
+
+    The compatibility contract only needs each referenced key to remain a
+    typed advance with a non-null age.  Emit that minimal shape and no preview
+    fields.  The one hardcoded opening-economy adapter is restored below.
+    """
+    source = path.read_text(encoding="utf-8-sig", errors="strict")
+    definitions: list[tuple[str, str]] = []
+    depth = 0
+    current_key: str | None = None
+    current_age: str | None = None
+    for line in source.splitlines():
+        code = line.split("#", 1)[0]
+        delta = brace_delta(line)
+        if depth == 0 and INSTALLED_TOP_LEVEL.match(code):
+            current_key = code.split("=", 1)[0].strip()
+            current_age = None
+        elif current_key is not None and depth == 1:
+            match = re.match(r"^\s*age\s*=\s*([A-Za-z0-9_]+)\s*$", code)
+            if match:
+                current_age = match.group(1)
+        depth += delta
+        if current_key is not None and depth == 0:
+            if current_age is None:
+                raise ValueError(
+                    f"{path.name}: installed advance {current_key} has no age"
+                )
+            definitions.append((current_key, current_age))
+            current_key = None
+            current_age = None
+    if depth != 0 or current_key is not None:
+        raise ValueError(f"unable to inventory installed advances in {path.name}")
+    lines = [
+        "# Generated by tools/m8_knowledge.py --write; M8 disables vanilla advancement gameplay.",
+        "# Compatibility stubs retain only a typed key and age; UI preview effects are removed.",
+    ]
+    for key, age in definitions:
+        lines.extend((f"{key} = {{", f"\tage = {age}"))
+        if key in LEGACY_UNLOCK_VARIABLE_READERS:
+            lines.extend((
+                "\tpotential = {",
+                "\t\talways = no # M8 disables vanilla advancement",
+                f"\t\thas_variable = unlocked_advance_{key} # preserve external setter/read contract",
+                "\t}",
+            ))
+        else:
+            lines.append(
+                "\tpotential = { always = no } # M8 disables vanilla advancement"
+            )
+        lines.extend(("}", ""))
+    rendered = "\n".join(lines) + "\n"
     if path.name == "0_age_of_traditions.txt":
         # Preserve the installed modifier-bearing compatibility key alongside
         # the custom census root. The opening economy has no functioning market
@@ -3181,7 +3772,13 @@ def advance_ledger(records: tuple[Advance, ...]) -> str:
             profile.name,
             str(record.depth),
             ";".join(record.requires),
-            profile.summary,
+            (
+                "Exclusive historical path for "
+                + ";".join(DESIGN_BY_ENGINE.get(tag, tag) for tag in record.exact_tags)
+                if record.exact_tags else
+                "Exact-culture path for " + ";".join(record.exact_cultures)
+                if record.exact_cultures else profile.summary
+            ),
             record.description,
             ";".join(
                 f"{field}={value}"
@@ -3303,6 +3900,9 @@ def outputs(records: tuple[Advance, ...]) -> dict[Path, str]:
         INSTALLED_INSTITUTION_LEDGER: installed_institution_ledger(),
         REACHABILITY_LEDGER: start_research_ledger(records),
         VISIBILITY_LEDGER: advance_visibility_ledger(records),
+        EFFECT_SCALE_LEDGER: advance_effect_scale_ledger(records),
+        EFFECT_TOTAL_LEDGER: advance_effect_profile_totals(records),
+        EFFECT_SCALE_REPORT: advance_effect_scale_report(records),
     }
     for language in ("english", *M2_MIRROR_LANGUAGES):
         rendered[LOC_ROOT / language / f"antq_m8_knowledge_l_{language}.yml"] = localization(records, language)
@@ -3383,6 +3983,22 @@ def top_level_definition_blocks(text: str) -> tuple[str, ...]:
     return tuple(blocks)
 
 
+def top_level_definition_fields(block: str) -> tuple[str, ...]:
+    """Return direct fields from one definition, excluding nested triggers."""
+    fields: list[str] = []
+    depth = 0
+    for line in block.splitlines():
+        code = line.split("#", 1)[0]
+        if depth == 1:
+            match = re.match(r"^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=", code)
+            if match:
+                fields.append(match.group(1))
+        depth += brace_delta(line)
+    if depth != 0:
+        raise ValueError("malformed top-level definition block")
+    return tuple(fields)
+
+
 def write(records: tuple[Advance, ...]) -> None:
     for path, content in outputs(records).items():
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -3415,16 +4031,43 @@ def check(records: tuple[Advance, ...]) -> bool:
             failures.append(f"{reason} in {path.relative_to(ROOT)}")
         if path.name != "00_antiquitas_m8_tree.txt":
             for block in top_level_definition_blocks(text):
-                legacy_laws = re.findall(r"(?m)^\s*unlock_law\s*=\s*([A-Za-z0-9_]+)", block)
-                if legacy_laws and not all(law.startswith("antq_s2_") for law in legacy_laws):
-                    if not re.search(
-                        r"potential\s*=\s*\{[^}]*always\s*=\s*no[^}]*\}",
-                        block,
-                        re.DOTALL,
-                    ):
-                        failures.append(
-                            f"legacy law unlock lacks a permanent compatibility gate in {path.relative_to(ROOT)}"
-                        )
+                key = block.split("=", 1)[0].strip()
+                fields = set(top_level_definition_fields(block))
+                allowed = {"age", "potential"}
+                if key == "taxation_advance":
+                    allowed |= {
+                        "icon", "depth", "research_cost", "enable_taxation",
+                        "has_stability_investment", "starting_technology_level",
+                        "ai_weight",
+                    }
+                preview_fields = sorted(fields - allowed)
+                if preview_fields:
+                    failures.append(
+                        f"disabled advance {key} retains UI preview fields "
+                        f"{', '.join(preview_fields)} in {path.relative_to(ROOT)}"
+                    )
+                if not re.search(
+                    r"potential\s*=\s*\{[^}]*always\s*=\s*no[^}]*\}",
+                    block,
+                    re.DOTALL,
+                ) and key != "taxation_advance":
+                    failures.append(
+                        f"disabled advance {key} lacks a permanent compatibility gate "
+                        f"in {path.relative_to(ROOT)}"
+                    )
+                has_variable_reader = (
+                    f"has_variable = unlocked_advance_{key}" in block
+                )
+                if key in LEGACY_UNLOCK_VARIABLE_READERS and not has_variable_reader:
+                    failures.append(
+                        f"disabled advance {key} lacks its safe external-variable reader "
+                        f"in {path.relative_to(ROOT)}"
+                    )
+                if key not in LEGACY_UNLOCK_VARIABLE_READERS and has_variable_reader:
+                    failures.append(
+                        f"disabled advance {key} has a reader for a never-set variable "
+                        f"in {path.relative_to(ROOT)}"
+                    )
     for path in institution_inventory:
         text = path.read_text(encoding="utf-8-sig") if path.is_file() else ""
         if "00_antiquitas_m8" not in path.name:
@@ -3467,6 +4110,7 @@ def check(records: tuple[Advance, ...]) -> bool:
         f"({len(records)} advances; {len(INSTITUTION_DATA)} ancient institutions; 18 legacy institutions removed; "
         f"{unlock_count} ancient-system unlocks; "
         f"{len(start_research_rows(records))} opening profiles researchable; "
+        f"{len(ADVANCE_EFFECT_SCALES)} display-safe effect families; "
         f"starting tiers 1/2/3/4 = {'/'.join(map(str, tiers))}; "
         "profile-isolated; max 8 unlocks/node; no vanilla unlocks)"
     )

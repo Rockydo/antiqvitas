@@ -5,8 +5,11 @@
 This generated audit enforces the plan's Appendix A anachronism sweep against
 the player-facing text written by ANTIQVITAS. It reads English localization
 values only; it deliberately does not inspect technical identifiers, comments,
-or copied exact-name vanilla compatibility overlays. `tools/m11_localization.py`
-separately proves the other supported language folders exactly mirror English.
+or copied exact-name vanilla compatibility overlays. The independently pinned
+`tools/m12_engine_loc_workarounds.py` contract also owns every reviewed mounted
+trait string that can otherwise bypass this authored-text inventory.
+`tools/m11_localization.py` separately proves the other supported language
+folders exactly mirror English.
 
 ## Checked inventory
 
@@ -57,17 +60,20 @@ separately proves the other supported language folders exactly mirror English.
 - `main_menu/localization/english/load_tips_l_english.yml`
 - `main_menu/localization/english/pops_l_english.yml`
 - `main_menu/localization/english/zz_antq_s2_ui_l_english.yml`
+- `main_menu/localization/english/zzz_antq_engine_formatter_fix_l_english.yml`
 - `main_menu/localization/english/zzz_antq_r5_geography_l_english.yml`
+- `main_menu/localization/english/zzzz_antq_ancient_expansion_l_english.yml`
+- `main_menu/localization/english/zzzz_antq_ancient_marriage_l_english.yml`
 
 ## Clear post-476 vocabulary
 
-The prohibited vocabulary is deliberately narrow: `absolutism`, `absolutist`, `anachronistic`, `anglican`, `calvinism`, `calvinist`, `columbian exchange`, `cannon`, `cannons`, `colonial`, `colonialism`, `colonies`, `colonist`, `colonization`, `colonize`, `colonized`, `crusade`, `crusader`, `factory`, `factories`, `feudalism`, `firearm`, `firearms`, `gun`, `guns`, `habsburg`, `industrial`, `industrialization`, `janissary`, `janissaries`, `jesuit`, `jesuits`, `lutheran`, `lutheranism`, `later history`, `middle ages`, `manufactory`, `manufactories`, `medieval`, `modern`, `musket`, `muskets`, `napoleon`, `napoleonic`, `newspaper`, `newspapers`, `ottoman`, `pistol`, `pistols`, `playable frame`, `printing press`, `protestant`, `protestantism`, `railroad`, `railroads`, `railway`, `railways`, `reformation`, `renaissance`, `rifle`, `rifles`, `qizilbash`, `safavid`, `safaviyya`, `serfdom`, `steam engine`, `steam engines`, `steamship`, `steamships`, `spectacle`, `spectacles`, `telescope`, `telescopes`, `united states`, `whisky`. Context-sensitive
+The prohibited vocabulary is deliberately narrow: `absolutism`, `absolutist`, `anachronistic`, `anglican`, `calvinism`, `calvinist`, `capitalism`, `capitalist`, `buccaneer`, `buccaneers`, `cannoneer`, `cannoneers`, `chivalric`, `chivalry`, `columbian exchange`, `cannon`, `cannons`, `colonial`, `colonialism`, `colonies`, `colonist`, `colonization`, `colonize`, `colonized`, `crusade`, `crusader`, `factory`, `factories`, `feudalism`, `firearm`, `firearms`, `gun`, `gunner`, `gunners`, `gunnery`, `gunpowder`, `guns`, `habsburg`, `industrial`, `industrialization`, `hussar`, `hussars`, `janissary`, `janissaries`, `jesuit`, `jesuits`, `lutheran`, `lutheranism`, `later history`, `middle ages`, `manufactory`, `manufactories`, `medieval`, `modern`, `musket`, `muskets`, `napoleon`, `napoleonic`, `newspaper`, `newspapers`, `ottoman`, `pistol`, `pistols`, `privateer`, `privateers`, `playable frame`, `printing press`, `protestant`, `protestantism`, `railroad`, `railroads`, `railway`, `railways`, `reformation`, `renaissance`, `rifle`, `rifles`, `qizilbash`, `safavid`, `safaviyya`, `scientist`, `scientists`, `serfdom`, `steam engine`, `steam engines`, `steamship`, `steamships`, `spectacle`, `spectacles`, `telescope`, `telescopes`, `united states`, `whisky`. Context-sensitive
 words such as `empire`, `church`, and `feudal` are not blocked because a raw
 word match would make unsupported historical assertions rather than improve
 the audit.
 
 ## Result
 
-48 English files and 82522 quoted player-facing entries contain
+51 English files and 85427 quoted player-facing entries contain
 zero prohibited terms. The check is pinned in `make validate`; a newly authored
 anachronism fails before it can reach a smoke run.

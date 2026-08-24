@@ -1,5 +1,46 @@
 ﻿# Technical and Design Decisions
 
+## 2026-08-24 - Cheese, olive oil, and mill grains are opening staples
+
+Cavalry maintenance demands cheese everywhere horses are raised, so the
+dairy cannot stay on four culture cards. Olive oil is a Mediterranean
+staple Rome must be able to press; the previous Iranian/Nile/Near-Eastern
+unlock left the player looking at a 0-supply good. Both buildings now sit
+on shared Age-I depth-zero cards, build from lumber/clay/stone, and operate
+from RGOs (livestock+salt; olives+lumber). Olive placement still requires
+mediterranean or arid climate. Grain mills expose opening millet, rice, and
+barley methods so a wheat-less market can still mill army grain products.
+Army/ship processed goods are part of the reachability contract, not only
+construction packages.
+
+## 2026-08-22 - Opening staples construct from raw materials
+
+A seeded workshop is not a constructibility proof. Ordinary construction,
+civic upkeep, and ship repair may only demand RGOs or goods whose opening
+producer is universally unlocked at Age-I depth zero. Those producers
+(brickworks, bloomery, ropewalk, tar kiln, linen weavery, pottery kiln,
+hide yard, leatherworks, grain mill, meat-curing yard, fish saltery,
+sailmaker, fletchery, shipyard) use a lumber/clay/stone basket so they
+do not consume their own outputs to appear. Ropewalks operate on fiber
+and lumber; tarred-rope and cloth coatings are not required to staff the
+first level. Dried fruit is a camel/caravan ration, not a universal
+shipboard food. Identity flagship cards no longer monopolize unique
+opening producers such as the iron bloomery.
+
+## 2026-08-20 - Standing councils reset the parliament timer silently
+
+Vanilla estate satisfaction equilibrium falls ~0.9% per month since the last
+council. `call_parliament` is quarantined to `ai_tick = never`, so unattended
+Rome reached −1107% after 1227 months. A monthly pulse now starts and
+immediately ends parliament at the capital when more than 36 months have
+passed. That resets the timer without opening the issue UI, which would stall
+the autonomous driver the same way stacked reports did.
+
+Quarantined disasters also drop `has_complacency_effects`; otherwise their
+names (Majapahit, Mali, Delhi, Tsardom) appear in Rome's complacency tooltip.
+Regional programme potentials use `dominant_culture ?=`. Rome refills empty
+cabinet slots on the monthly succession pulse.
+
 ## 2026-08-19 - Regional programmes overlay the small-state floor
 
 One `antq_tribal_kingdom` reform cannot map to many councils. Extra programmes

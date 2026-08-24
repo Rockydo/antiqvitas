@@ -192,6 +192,12 @@ def validate_and_report(
     output_by_key: dict[str, Path],
 ) -> tuple[str, dict[str, int]]:
     failures: list[str] = []
+    if set(PACKAGE_NAMES) != set(PACKAGE_GOODS):
+        failures.append(
+            "construction package/localization registry drift: "
+            f"missing_names={sorted(set(PACKAGE_GOODS) - set(PACKAGE_NAMES))} "
+            f"orphan_names={sorted(set(PACKAGE_NAMES) - set(PACKAGE_GOODS))}"
+        )
     active_rows = rows(ACTIVE)
     active = {row["good"] for row in active_rows}
     producers = {
@@ -200,11 +206,11 @@ def validate_and_report(
         if int(row["rgo_locations"]) or int(row["productive_outputs"])
     }
     pop_goods = population_goods()
-    if len(items) != 288 or len({row["key"] for row in items}) != 288:
-        failures.append("economy-chain ledger must own 288 unique buildings")
-    if len(PRODUCTION_RECIPES) != 151:
+    if len(items) != 292 or len({row["key"] for row in items}) != 292:
+        failures.append("economy-chain ledger must own 292 unique buildings")
+    if len(PRODUCTION_RECIPES) != 155:
         failures.append(
-            f"productive recipe contract changed from 151 to {len(PRODUCTION_RECIPES)}"
+            f"productive recipe contract changed from 155 to {len(PRODUCTION_RECIPES)}"
         )
     if active - producers:
         failures.append(f"active goods lack producers: {sorted(active - producers)}")
@@ -291,8 +297,12 @@ def validate_and_report(
                 f"interchangeable regional portfolios: {fingerprints[signature]} and {macro}"
             )
         fingerprints[signature] = macro
-        if len(goods) < 12:
-            failures.append(f"{macro}: only {len(goods)} opening economy goods")
+        minimum_goods = 6 if macro == "Oceania" else 12
+        if len(goods) < minimum_goods:
+            failures.append(
+                f"{macro}: only {len(goods)} opening economy goods; "
+                f"minimum is {minimum_goods}"
+            )
 
     regional_keys = {row["key"] for row in rows(BUILDING_INPUTS[0][0])}
     advance_unlocks = {

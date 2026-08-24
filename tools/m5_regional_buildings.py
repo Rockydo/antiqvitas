@@ -270,11 +270,12 @@ PRODUCTION_RECIPES = {
 # These source-led overrides make the economic identity real.  Coefficients
 # preserve the locally verified 20% guild margin at default prices.
 COHERENT_RECIPE_OVERRIDES = {
-    "antq_reg_olive_press": ("antq_olive_oil", "0.76", (("olives", "1.20"), ("pottery", "0.12"), ("tools", "0.05"), ("lumber", "0.08"))),
+    "antq_reg_olive_press": ("antq_olive_oil", "0.72", (("olives", "1.20"), ("lumber", "0.20"))),
+    "antq_reg_wine_press": ("wine", "1", (("fruit", "1.154"), ("lumber", "0.3418"))),
     "antq_reg_fish_saltery": ("antq_preserved_fish", "0.77", (("fish", "1.20"), ("salt", "0.12"), ("pottery", "0.10"), ("tools", "0.05"))),
     "antq_reg_grain_mill": ("antq_grain_products", "1.10", (("wheat", "1.00"), ("lumber", "0.15"), ("tools", "0.05"))),
     "antq_reg_bread_oven": ("antq_grain_products", "1.10", (("wheat", "1.00"), ("lumber", "0.15"), ("tools", "0.05"))),
-    "antq_reg_oil_bottler": ("antq_olive_oil", "0.76", (("olives", "1.20"), ("pottery", "0.12"), ("tools", "0.05"), ("lumber", "0.08"))),
+    "antq_reg_oil_bottler": ("antq_olive_oil", "0.72", (("olives", "1.20"), ("lumber", "0.20"))),
     "antq_reg_garum_workshop": ("antq_preserved_fish", "0.77", (("fish", "1.20"), ("salt", "0.12"), ("pottery", "0.10"), ("tools", "0.05"))),
     "antq_reg_incense_workshop": ("antq_perfumes", "0.52", (("incense", "0.80"), ("olives", "0.20"), ("pottery", "0.10"), ("tools", "0.10"))),
     "antq_reg_perfumery": ("antq_perfumes", "0.52", (("incense", "0.80"), ("olives", "0.20"), ("pottery", "0.10"), ("tools", "0.10"))),
@@ -295,11 +296,11 @@ COHERENT_RECIPE_OVERRIDES = {
     "antq_reg_purple_dyehouse": ("fine_cloth", "0.49", (("cloth", "0.50"), ("dyes", "0.20"), ("tools", "0.05"))),
     "antq_reg_textile_dye_finisher": ("fine_cloth", "0.49", (("cloth", "0.50"), ("dyes", "0.20"), ("tools", "0.05"))),
     "antq_reg_silk_loom": ("fine_cloth", "0.70", (("silk", "0.875"),)),
-    "antq_reg_scriptorium": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
+    "antq_reg_scriptorium": ("books", "0.78", (("antq_papyrus", "0.15"), ("dyes", "0.15"), ("lumber", "0.50"))),
     "antq_reg_papyrus_workshop": ("paper", "1.17", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
-    "antq_reg_scroll_workshop": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
-    "antq_reg_stationer": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
-    "antq_reg_reed_pen_maker": ("books", "0.78", (("antq_papyrus", "0.40"), ("dyes", "0.05"), ("lumber", "0.10"))),
+    "antq_reg_scroll_workshop": ("books", "0.78", (("antq_papyrus", "0.15"), ("dyes", "0.15"), ("lumber", "0.50"))),
+    "antq_reg_stationer": ("books", "0.78", (("antq_papyrus", "0.15"), ("dyes", "0.15"), ("lumber", "0.50"))),
+    "antq_reg_reed_pen_maker": ("books", "0.78", (("antq_papyrus", "0.15"), ("dyes", "0.15"), ("lumber", "0.50"))),
     "antq_reg_weapon_smith": ("weaponry", "1.06", (("iron", "0.60"), ("lumber", "0.20"), ("coal", "0.20"), ("tools", "0.05"))),
     "antq_reg_scale_armoury": ("weaponry", "1.08", (("iron", "0.50"), ("copper", "0.15"), ("leather", "0.20"), ("tools", "0.05"))),
     "antq_reg_arrow_fletchery": ("weaponry", "1.20", (("lumber", "0.60"), ("iron", "0.35"), ("tools", "0.35"))),
@@ -322,7 +323,7 @@ COHERENT_RECIPE_OVERRIDES = {
     "antq_reg_villa_rustica": ("antq_grain_products", "1.10", (("wheat", "1.00"), ("lumber", "0.15"), ("tools", "0.05"))),
     "antq_reg_annona_bakery": ("antq_grain_products", "1.10", (("wheat", "1.00"), ("lumber", "0.15"), ("tools", "0.05"))),
     "antq_reg_quarry_contractors": ("masonry", "2.16", (("stone", "1.20"), ("lumber", "0.20"), ("tools", "0.10"))),
-    "antq_reg_olive_estate": ("antq_olive_oil", "0.76", (("olives", "1.20"), ("pottery", "0.12"), ("tools", "0.05"), ("lumber", "0.08"))),
+    "antq_reg_olive_estate": ("antq_olive_oil", "0.72", (("olives", "1.20"), ("lumber", "0.20"))),
     "antq_reg_vineyard_estate": ("wine", "1", (("fruit", "1.154"), ("lumber", "0.157"), ("tools", "0.092"))),
     "antq_reg_textile_quarter": ("cloth", "1", (("wool", "1.0"),)),
     "antq_reg_ceramic_quarter": ("pottery", "1.0", (("clay", "1.0039"), ("lumber", "0.1201"), ("tools", "0.0504"))),
@@ -362,11 +363,11 @@ COHERENT_RECIPE_OVERRIDES = {
     "antq_reg_shipyard": ("naval_supplies", "1.140", (("lumber", "0.30"), ("antq_cordage", "0.30"), ("antq_sailcloth", "0.25"), ("tar", "0.30"), ("iron", "0.10"))),
     # Fourteenth pass: regionally bounded foods use their own goods and retain
     # the same checked 20% default-price guild margin as the craft expansion.
-    "antq_reg_date_drying_yard": ("antq_dried_fruit", "0.825", (("antq_dates", "1.00"), ("pottery", "0.05"), ("lumber", "0.05"))),
+    "antq_reg_date_drying_yard": ("antq_dried_fruit", "0.825", (("antq_dates", "1.00"), ("lumber", "0.0833"))),
     "antq_reg_sesame_oil_press": ("antq_sesame_oil", "1.002", (("antq_sesame", "1.00"), ("pottery", "0.08"), ("lumber", "0.05"), ("tools", "0.05"))),
     "antq_reg_nut_grinding_house": ("antq_nut_pastes", "0.953", (("antq_tree_nuts", "1.00"), ("pottery", "0.05"), ("tools", "0.05"))),
-    "antq_reg_coconut_workshop": ("antq_coconut_products", "0.923", (("antq_coconuts", "1.00"), ("pottery", "0.05"), ("tools", "0.05"))),
-    "antq_reg_cheese_dairy": ("antq_cheese_curds", "0.975", (("livestock", "1.00"), ("salt", "0.10"), ("pottery", "0.05"))),
+    "antq_reg_coconut_workshop": ("antq_coconut_products", "0.923", (("antq_coconuts", "1.00"), ("lumber", "0.1333"))),
+    "antq_reg_cheese_dairy": ("antq_cheese_curds", "0.95", (("livestock", "1.00"), ("salt", "0.10"))),
     "antq_reg_meat_curing_yard": ("antq_cured_meat", "0.891", (("livestock", "1.00"), ("salt", "0.20"), ("lumber", "0.05"))),
     "antq_reg_rice_wine_house": ("antq_rice_wine", "0.470", (("rice", "1.00"), ("pottery", "0.10"), ("lumber", "0.05"))),
     "antq_reg_soy_fermentary": ("antq_soy_condiments", "0.750", (("legumes", "1.00"), ("salt", "0.10"), ("pottery", "0.10"))),
@@ -374,6 +375,18 @@ COHERENT_RECIPE_OVERRIDES = {
     # their dated building unlock is the first source and therefore the first
     # point at which no_demand_if_no_market_availability permits pop demand.
     "antq_reg_yue_celadon_kiln": ("antq_yue_celadon", "1.000", (("clay", "5.0000"), ("coal", "1.0000"), ("tools", "0.4444"))),
+    # Opening staples must operate from RGOs so a fresh market can staff them
+    # before any processed craft exists. Coefficients keep the 20% guild margin.
+    "antq_reg_ropewalk": ("antq_cordage", "1.200", (("fiber_crops", "1.00"), ("lumber", "0.3333"))),
+    "antq_reg_hide_curing_yard": ("leather", "1.000", (("livestock", "1.00"), ("salt", "0.25"))),
+    "antq_reg_pottery_kiln": ("pottery", "1.0", (("clay", "1.00"), ("lumber", "0.2222"))),
+    "antq_reg_grain_mill": ("antq_grain_products", "1.10", (("wheat", "1.00"), ("lumber", "0.25"))),
+    "antq_reg_fish_saltery": ("antq_preserved_fish", "0.77", (("fish", "1.20"), ("salt", "0.1813"))),
+    "antq_reg_leatherworks": ("antq_leather_goods", "1.000", (("livestock", "1.00"), ("salt", "0.25"))),
+    "antq_reg_sailmaker": ("antq_sailcloth", "0.960", (("fiber_crops", "0.90"), ("lumber", "0.40"))),
+    "antq_reg_wine_press": ("wine", "1", (("fruit", "1.154"), ("lumber", "0.3418"))),
+    "antq_reg_olive_press": ("antq_olive_oil", "0.72", (("olives", "1.20"), ("lumber", "0.20"))),
+    "antq_reg_cheese_dairy": ("antq_cheese_curds", "0.95", (("livestock", "1.00"), ("salt", "0.10"))),
     "antq_reg_codex_bindery": ("antq_bound_codices", "1.000", (("antq_parchment", "1.0000"), ("leather", "0.3000"), ("antq_wax_goods", "0.2000"), ("tools", "0.1889"))),
     "antq_reg_diatretum_glasshouse": ("antq_cage_glass", "1.000", (("glass", "2.0000"), ("tools", "0.5000"))),
     "antq_reg_polychrome_goldsmith": ("antq_garnet_cloisonne", "1.000", (("gems", "1.0000"), ("goods_gold", "0.4000"), ("tools", "0.3778"))),
@@ -440,6 +453,14 @@ PRODUCTIVE_METHOD_TIERS = (
     ("organized", "Organized Workshop", 1.081, 1.08, "age_3_discovery"),
     ("intensive", "Specialist Workshop", 1.182, 1.18, "age_4_reformation"),
 )
+# Opening mill methods so a wheat-less rice/millet/barley market can still
+# produce army grain products on day one.
+GRAIN_MILL_OPENING_ALTERNATES = (
+    ("antq_reg_grain_mill_millet", "Millet Milling", (("millet", "1.0000"), ("lumber", "0.2500")), "1.1000"),
+    ("antq_reg_grain_mill_rice", "Rice Milling", (("rice", "1.0000"), ("lumber", "0.2500")), "1.1000"),
+    ("antq_reg_grain_mill_barley", "Barley Milling", (("antq_barley", "0.8333"), ("lumber", "0.2500")), "1.1000"),
+)
+OLIVE_CLIMATE_FAMILIES = {"antq_reg_olive_press", "antq_reg_oil_bottler"}
 
 
 def productive_method_key(building: str, suffix: str) -> str:
@@ -720,6 +741,20 @@ def load() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
             failures.append(
                 f"{key}: default-price guild margin {margin:.1%} must remain within 19%-21%"
             )
+    for method_key, _name, alt_inputs, alt_output in GRAIN_MILL_OPENING_ALTERNATES:
+        missing_prices = (
+            {good for good, _amount in alt_inputs} | {"antq_grain_products"}
+        ) - prices.keys()
+        if missing_prices:
+            failures.append(f"{method_key}: missing local default prices {sorted(missing_prices)}")
+            continue
+        input_value = sum(prices[good] * float(amount) for good, amount in alt_inputs)
+        output_value = prices["antq_grain_products"] * float(alt_output)
+        margin = output_value / input_value - 1 if input_value else -1
+        if not 0.19 <= margin <= 0.21:
+            failures.append(
+                f"{method_key}: default-price guild margin {margin:.1%} must remain within 19%-21%"
+            )
     with ADVANCES.open(encoding="utf-8-sig", newline="") as handle:
         unlock_profiles: dict[str, list[str]] = {key: [] for key in family_keys}
         for advance in csv.DictReader(handle):
@@ -885,7 +920,7 @@ def definition(families: list[dict[str, str]]) -> str:
         ))
         if row["key"] in TAR_KILN_FAMILIES:
             lines.append("\trural_settlement = yes")
-        if row["key"] in WATER_OR_PORT_FAMILIES | CITY_ONLY_FAMILIES | TAR_KILN_FAMILIES:
+        if row["key"] in WATER_OR_PORT_FAMILIES | CITY_ONLY_FAMILIES | TAR_KILN_FAMILIES | OLIVE_CLIMATE_FAMILIES:
             lines.append("\tlocation_potential = {")
             if row["key"] in WATER_OR_PORT_FAMILIES:
                 lines.extend(("\t\tOR = {", "\t\t\tis_coastal = yes", "\t\t\thas_river = yes", "\t\t}"))
@@ -908,6 +943,13 @@ def definition(families: list[dict[str, str]]) -> str:
                     "\t\t\tlocation_rank = location_rank:megalopolis",
                     "\t\t}",
                 ))
+            if row["key"] in OLIVE_CLIMATE_FAMILIES:
+                lines.extend((
+                    "\t\tOR = {",
+                    "\t\t\tclimate = mediterranean",
+                    "\t\t\tclimate = arid",
+                    "\t\t}",
+                ))
             lines.append("\t}")
         lines.append("\tmodifier = {")
         for key, amount in pairs(row["modifier"], "modifier"):
@@ -921,6 +963,18 @@ def definition(families: list[dict[str, str]]) -> str:
                 for good, amount in inputs:
                     lines.append(f"\t\t\t{good} = {float(amount)*input_mult:.4f}")
                 lines.extend((f"\t\t\tproduced = {produced}", f"\t\t\toutput = {float(output)*output_mult:.4f}", "\t\t\tdebug_max_profit = guild_profit_margin", "\t\t\tcategory = guild_input", "\t\t}"))
+            if row["key"] == "antq_reg_grain_mill":
+                for method_key, _name, alt_inputs, alt_output in GRAIN_MILL_OPENING_ALTERNATES:
+                    lines.append(f"\t\t{method_key} = {{")
+                    for good, amount in alt_inputs:
+                        lines.append(f"\t\t\t{good} = {amount}")
+                    lines.extend((
+                        f"\t\t\tproduced = {produced}",
+                        f"\t\t\toutput = {alt_output}",
+                        "\t\t\tdebug_max_profit = guild_profit_margin",
+                        "\t\t\tcategory = guild_input",
+                        "\t\t}",
+                    ))
         else:
             lines.append(f"\t\t{row['key']}_maintenance = {{")
             maintenance = merge_goods(
@@ -952,6 +1006,9 @@ def loc(families: list[dict[str, str]], language: str) -> str:
         if row["key"] in PRODUCTION_RECIPES:
             for suffix, method_name, _output_mult, _input_mult, _age in PRODUCTIVE_METHOD_TIERS[1:]:
                 lines.append(f" {productive_method_key(row['key'], suffix)}: \"{name}: {method_name}\"")
+            if row["key"] == "antq_reg_grain_mill":
+                for method_key, method_name, _inputs, _output in GRAIN_MILL_OPENING_ALTERNATES:
+                    lines.append(f" {method_key}: \"{name}: {method_name}\"")
     return "\n".join(lines) + "\n"
 
 

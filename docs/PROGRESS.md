@@ -1,5 +1,71 @@
 # Progress
 
+## 2026-08-24 - Army and Mediterranean food through day-one buildings
+
+- Cheese dairies and olive presses are opening staples: raw operating
+  recipes and lumber/clay/stone construction. Grain mills mill wheat, millet,
+  rice, or barley. Reachability fails if army/ship processed goods are not
+  RGO or universally constructible. 25 universal families; 12148 constructible
+  cells.
+- Live Rome PID 48384 checksum b930: Cheese Dairy tooltip livestock+salt,
+  Olive Press olives+lumber, both with surplus lumber/clay/stone and Build.
+  Production list Cheese Dairy 1 (+1), Ropewalk 1 (+1), Brickworks 1 (+1).
+  Papyrus/dates/sesame/barley/olive oil world supply now non-zero.
+  Evidence: `docs/playtests/S7_ECONOMY_20260824.md`.
+- `make validate` 185/185 PASS. Menu smoke: 0 NEW error.log lines.
+
+## 2026-08-22 - Opening economy constructibility
+
+- Reachability now now fails seed-only processed goods. 16 staple families
+  are day-one constructible for all 463 polities; every other processed
+  opening good has a profiled constructible producer.
+- Live Rome PID 18380: brickworks / bloomery / meat-curing / fish saltery /
+  ropewalk tooltips use lumber/clay/stone in surplus; Meat Curing, Ropewalk,
+  and Brickworks queued 1 (+1). No missing-input or ship-repair banner.
+  Dried-fruit demand 0. Evidence: `docs/playtests/S7_ECONOMY_20260822.md`.
+- Tree `e23ff1999943b484229f3a387dd45a80f9ed27a3368480ec231c9c02013391bf`.
+  `make validate` 185/185 PASS.
+
+## 2026-08-21 - Remaining 28 TODO checkboxes closed on a short retest
+
+- Fresh player Rome (PID 37312) plus engine tags XAH/XAR/XDZ/JUD/XAO/CRU.
+  Ropewalk location picker and **1 (+2)** queue; Wood-Tar Kiln picker with
+  rural alternatives; Han celadon search returns no AD 1 building; Roman
+  programme picker lists Aerarium/Census/Client-King/Fleet/Annona/
+  Correspondence; Teutoburg `test_event_trigger` is false at peace while
+  Varus lives. Evidence: `docs/playtests/S7_SHORT_RETEST_20260821.md`.
+- Civil-war year-3/4 audit: `docs/playtests/S6_CIVIL_WAR_AUDIT_20260821.md`.
+- Same game-visible tree as the AD 101 run:
+  `d5fc5daead74beed40543ea92e917611cf417b571d91e9ee5a34f6b0ee6ddfcc`.
+- `make validate` 185/185 PASS.
+
+## 2026-08-20 - Uninterrupted player Rome reached 1 January 101
+
+- Same EU5 process (PID 31912) from 1 January AD 1 to 1 January AD 101 as
+  Roman Imperium, capital Roma, 35.456M pops, 31 markets, Age of High Empires.
+  No crash folder and no Game Over. Telemetry: RSS fell 6884→2427 MiB, VRAM
+  4211–4256 MiB. Evidence: `docs/playtests/S7_ROME_AD100_20260820.md`.
+- Overlay stall at AD 43 was an observer detector miss on stacked peace/death
+  Ok buttons, not a sim crash. Compact-Ok detection now covers x≈0.48–0.52.
+- Play defects still in work: Council never convened (−1107% estate
+  satisfaction), vanilla complacency disaster names, `dominant_culture` null
+  spam, cabinet emptying. Generators now silent-convene councils every 36
+  months, refill Rome's cabinet monthly, null-safe `dominant_culture ?=`, and
+  strip `has_complacency_effects` from quarantined disasters.
+
+## 2026-08-19 - Fresh player Rome reached AD 48 then Game Over
+
+- New Game → country selector → Play is now a working autonomous Rome start.
+- Day-one tooltips, Roma market-while-paused, unique Immensum Bellum choices,
+  and Augustus age-63 after the first pulse are captured under
+  `docs/screens/S7_ROME_LIVE_20260819/` and
+  `docs/playtests/S7_ROME_RUNTIME_20260819.md`.
+- Speed-5 play reached 1 January 43, then noble civil war gutted the country;
+  Game Over as Noble Imperium on 1 April 48. Not a renderer crash.
+- `antq_m6.1` now saves the opening-ruler scope for every named head. Principate
+  direct crown is 0.18 and the shared rebel-growth floor is stronger for the
+  next uninterrupted start.
+
 ## 2026-08-19 - Player construction allow is no longer actor-gated
 
 - Regional, cultivator, and tribal buildings keep the AI capital-settlement

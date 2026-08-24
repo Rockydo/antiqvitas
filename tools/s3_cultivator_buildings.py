@@ -11,10 +11,12 @@ from economy_chains import (
     AI_CAPITAL_SETTLEMENT_DATE,
     AI_CAPITAL_SURPLUS_DIVISOR,
     CULTIVATOR_CONSTRUCTION_PACKAGE,
+    OPENING_CUSTOM_CULTIVATORS,
     PACKAGE_GOODS,
     ai_capital_affordability_trigger,
 )
-from m5_regional_buildings import good_prices
+from m5_regional_buildings import good_prices, owner_regions
+from s2_global_settlements import REGION_MACRO
 
 ROOT = Path(__file__).resolve().parents[1]
 CSV = ROOT/"docs/m5/cultivator_buildings.csv"
@@ -22,7 +24,11 @@ OUT = ROOT/"in_game/common/building_types/00_antiquitas_cultivator_buildings.txt
 METHODS = ROOT/"in_game/common/production_methods/00_antiquitas_cultivator_methods.txt"
 METHOD_LEDGER = ROOT/"docs/m5/cultivator_production_methods.csv"
 AVAIL = ROOT/"docs/m5/cultivator_availability.csv"
+SEED_LEDGER = ROOT/"docs/m5/cultivator_opening_seeds.csv"
+RGO_ANCHORS = ROOT/"docs/m5/rgo_anchors.csv"
 REPORT = ROOT/"docs/m5/CULTIVATOR_SYSTEM.md"
+SEED_FIELDS = ("key","family","location","macro","source","confidence","note")
+SEED_CAP_PER_GOOD = 24
 SHEETS = ROOT/"assets_queue/generated_sources/cultivator_buildings"
 MASTERS = ROOT/"assets_queue/generated/cultivator_buildings"
 ICONS = ROOT/"main_menu/gfx/interface/icons/buildings"
@@ -176,6 +182,84 @@ def art(rows):
             canvas.alpha_composite(im.resize((160,160),Image.Resampling.NEAREST),(x,y)); d.text((x,y+164),k[10:31],fill="white")
         canvas.convert("RGB").save(CONTACT)
 
+def opening_seed_rows(rows: list[dict[str, str]] | None = None) -> list[dict[str, str]]:
+    """Place bounded AD 1 cultivators on reviewed custom-good RGO anchors.
+
+    Live ``change_raw_material`` is unsafe on 1.3.11, so custom raw goods have
+    no native extraction unless a peasant plot is already present.
+    """
+    families = {row["good"]: row for row in (rows or load())}
+    regions = owner_regions()
+    by_good: dict[str, list[dict[str, str]]] = {}
+    with RGO_ANCHORS.open(encoding="utf-8-sig", newline="") as handle:
+        for row in csv.DictReader(handle):
+            good = (row.get("good") or "").strip()
+            family_row = families.get(good)
+            if family_row is None or family_row["key"] not in OPENING_CUSTOM_CULTIVATORS:
+                continue
+            location = (row.get("location") or "").strip()
+            if location not in regions:
+                continue
+            by_good.setdefault(good, []).append(row)
+    papyrus = families.get("antq_papyrus")
+    if papyrus and papyrus["key"] in OPENING_CUSTOM_CULTIVATORS:
+        extra = []
+        for location in (
+            "alexandria", "ashmunayn", "faiyum", "cairo", "minya", "giza", "qena",
+            "akhmim", "aswan", "asyut", "atfih", "beni_suef", "bilbeis",
+            "dakahla", "damanhur", "damietta", "edfu", "el_bahnasa",
+            "el_balyana", "el_mahalla", "esna", "faqus", "fuwa", "memphis",
+        ):
+            extra.append({
+                "location": location,
+                "good": "antq_papyrus",
+                "source": "P12.1;P12.3;PER",
+                "confidence": "secure" if location == "alexandria" else "contested",
+            })
+        by_good["antq_papyrus"] = extra + by_good.get("antq_papyrus", [])
+    seeds: list[dict[str, str]] = []
+    seen: set[tuple[str, str]] = set()
+    for good, anchors in sorted(by_good.items()):
+        family = families[good]["key"]
+        for row in anchors[:SEED_CAP_PER_GOOD]:
+            location = row["location"].strip()
+            pair = (family, location)
+            if pair in seen or location not in regions:
+                continue
+            seen.add(pair)
+            region = regions[location]
+            macro = REGION_MACRO.get(region)
+            if not macro:
+                continue
+            slug = location.replace("-", "_")
+            seeds.append({
+                "key": f"cult_{good.removeprefix('antq_')}_{slug}",
+                "family": family,
+                "building": family,
+                "location": location,
+                "level": "1",
+                "macro": macro,
+                "source": row.get("source") or "P12.1",
+                "confidence": row.get("confidence") or "contested",
+                "note": (
+                    "Opening peasant extraction for a custom raw good whose "
+                    "live RGO remap remains deferred."
+                ),
+            })
+    if len(seeds) < 8:
+        raise ValueError("custom-good cultivator opening seed sample is too shallow")
+    return seeds
+
+
+def seed_ledger(rows: list[dict[str, str]]) -> str:
+    stream = StringIO(newline="")
+    writer = csv.DictWriter(stream, fieldnames=list(SEED_FIELDS), lineterminator="\n")
+    writer.writeheader()
+    for row in opening_seed_rows(rows):
+        writer.writerow({field: row[field] for field in SEED_FIELDS})
+    return stream.getvalue()
+
+
 def availability(rows):
     s=StringIO(newline=""); w=csv.writer(s,lineterminator="\n")
     w.writerow(("building","good","climates","topographies","vegetations","regions","water_gate","max_levels","output","native_rgo_superior"))
@@ -190,6 +274,7 @@ def write(rows):
     for lang in LANGS:
         p=ROOT/f"main_menu/localization/{lang}/antq_s3_cultivators_l_{lang}.yml"; p.write_text(loc_text(lang,rows),encoding="utf-8",newline="\n")
     AVAIL.write_text(availability(rows),encoding="utf-8-sig",newline="")
+    SEED_LEDGER.write_text(seed_ledger(rows),encoding="utf-8-sig",newline="")
     REPORT.write_text(
         f"# Cultivator System\n\n"
         f"- {len(rows)} lower-yield peasant buildings from {len(rows)//4} four-up art sheets.\n"
@@ -198,7 +283,8 @@ def write(rows):
         f"- Hard caps 2-3; baseline outputs 0.18-0.38 versus native RGO production.\n"
         f"- Recipes match the installed 20% rural-profit contract; ordinary AI evaluates plots without a high-frequency search override.\n"
         f"- Player construction remains available on day one; AI construction begins after {AI_CAPITAL_SETTLEMENT_DATE} only with no loans, {AI_CAPITAL_RESERVE_MONTHS} months of gross-income reserves, and a surplus above 1/{AI_CAPITAL_SURPLUS_DIVISOR} of gross income.\n"
-        f"- {len(rows)*len(METHOD_TIERS)} methods: baseline plus three research-gated stages; maximum output multiplier 1.35.\n",
+        f"- {len(rows)*len(METHOD_TIERS)} methods: baseline plus three research-gated stages; maximum output multiplier 1.35.\n"
+        f"- {len(opening_seed_rows(rows))} AD 1 custom-good cultivator seeds cover deferred RGO remaps.\n",
         encoding="utf-8",
     )
     art(rows)
@@ -223,6 +309,9 @@ def check(rows):
     if not METHODS.is_file() or METHODS.read_text(encoding="utf-8-sig")!=production_method_text(rows): failures.append("production method output stale")
     if not METHOD_LEDGER.is_file() or METHOD_LEDGER.read_text(encoding="utf-8-sig")!=production_method_ledger(rows): failures.append("production method ledger stale")
     if not AVAIL.is_file() or AVAIL.read_text(encoding="utf-8-sig")!=availability(rows): failures.append("availability ledger stale")
+    if not SEED_LEDGER.is_file() or SEED_LEDGER.read_text(encoding="utf-8-sig")!=seed_ledger(rows): failures.append("opening cultivator seed ledger stale")
+    if not {row["family"] for row in opening_seed_rows(rows)} <= OPENING_CUSTOM_CULTIVATORS:
+        failures.append("opening cultivator seeds escaped the custom-good contract")
     hashes={}
     for i,r in enumerate(rows):
         if r["good"] not in goods: failures.append(f"unknown good {r['good']}")

@@ -28,43 +28,43 @@ antq_reg_olive_press = {
 	allow = {
 		always = yes
 	}
+	location_potential = {
+		OR = {
+			climate = mediterranean
+			climate = arid
+		}
+	}
 	modifier = {
 		local_production_efficiency = 0.02
 	}
 	unique_production_methods = {
 		antq_reg_olive_press_maintenance = {
 			olives = 1.2000
-			pottery = 0.1200
-			tools = 0.0500
-			lumber = 0.0800
+			lumber = 0.2000
 			produced = antq_olive_oil
-			output = 0.7600
+			output = 0.7200
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_olive_press_organized = {
 			olives = 1.2960
-			pottery = 0.1296
-			tools = 0.0540
-			lumber = 0.0864
+			lumber = 0.2160
 			produced = antq_olive_oil
-			output = 0.8216
+			output = 0.7783
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_olive_press_intensive = {
 			olives = 1.4160
-			pottery = 0.1416
-			tools = 0.0590
-			lumber = 0.0944
+			lumber = 0.2360
 			produced = antq_olive_oil
-			output = 0.8983
+			output = 0.8510
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_wine_press = {
@@ -100,8 +100,7 @@ antq_reg_wine_press = {
 	unique_production_methods = {
 		antq_reg_wine_press_maintenance = {
 			fruit = 1.1540
-			lumber = 0.1570
-			tools = 0.0920
+			lumber = 0.3418
 			produced = wine
 			output = 1.0000
 			debug_max_profit = guild_profit_margin
@@ -109,8 +108,7 @@ antq_reg_wine_press = {
 		}
 		antq_reg_wine_press_organized = {
 			fruit = 1.2463
-			lumber = 0.1696
-			tools = 0.0994
+			lumber = 0.3691
 			produced = wine
 			output = 1.0810
 			debug_max_profit = guild_profit_margin
@@ -118,8 +116,7 @@ antq_reg_wine_press = {
 		}
 		antq_reg_wine_press_intensive = {
 			fruit = 1.3617
-			lumber = 0.1853
-			tools = 0.1086
+			lumber = 0.4033
 			produced = wine
 			output = 1.1820
 			debug_max_profit = guild_profit_margin
@@ -163,9 +160,7 @@ antq_reg_fish_saltery = {
 	unique_production_methods = {
 		antq_reg_fish_saltery_maintenance = {
 			fish = 1.2000
-			salt = 0.1200
-			pottery = 0.1000
-			tools = 0.0500
+			salt = 0.1813
 			produced = antq_preserved_fish
 			output = 0.7700
 			debug_max_profit = guild_profit_margin
@@ -173,9 +168,7 @@ antq_reg_fish_saltery = {
 		}
 		antq_reg_fish_saltery_organized = {
 			fish = 1.2960
-			salt = 0.1296
-			pottery = 0.1080
-			tools = 0.0540
+			salt = 0.1958
 			produced = antq_preserved_fish
 			output = 0.8324
 			debug_max_profit = guild_profit_margin
@@ -183,9 +176,7 @@ antq_reg_fish_saltery = {
 		}
 		antq_reg_fish_saltery_intensive = {
 			fish = 1.4160
-			salt = 0.1416
-			pottery = 0.1180
-			tools = 0.0590
+			salt = 0.2139
 			produced = antq_preserved_fish
 			output = 0.9101
 			debug_max_profit = guild_profit_margin
@@ -193,7 +184,7 @@ antq_reg_fish_saltery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_pottery_kiln = {
@@ -228,27 +219,24 @@ antq_reg_pottery_kiln = {
 	}
 	unique_production_methods = {
 		antq_reg_pottery_kiln_maintenance = {
-			clay = 1.0039
-			lumber = 0.1201
-			tools = 0.0504
+			clay = 1.0000
+			lumber = 0.2222
 			produced = pottery
 			output = 1.0000
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_pottery_kiln_organized = {
-			clay = 1.0842
-			lumber = 0.1297
-			tools = 0.0544
+			clay = 1.0800
+			lumber = 0.2400
 			produced = pottery
 			output = 1.0810
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_pottery_kiln_intensive = {
-			clay = 1.1846
-			lumber = 0.1417
-			tools = 0.0595
+			clay = 1.1800
+			lumber = 0.2622
 			produced = pottery
 			output = 1.1820
 			debug_max_profit = guild_profit_margin
@@ -256,7 +244,7 @@ antq_reg_pottery_kiln = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_fullonica = {
@@ -535,8 +523,7 @@ antq_reg_stone_yard = {
 			masonry = 0.10
 			marble = 0.05
 			lumber = 0.04
-			tools = 0.05
-			antq_iron_hardware = 0.010
+			tools = 0.06
 			antq_cordage = 0.010
 			category = building_maintenance
 		}
@@ -618,7 +605,7 @@ antq_reg_shipyard = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_port_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_silk_loom = {
@@ -721,27 +708,27 @@ antq_reg_scriptorium = {
 	}
 	unique_production_methods = {
 		antq_reg_scriptorium_maintenance = {
-			antq_papyrus = 0.4000
-			dyes = 0.0500
-			lumber = 0.1000
+			antq_papyrus = 0.1500
+			dyes = 0.1500
+			lumber = 0.5000
 			produced = books
 			output = 0.7800
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_scriptorium_organized = {
-			antq_papyrus = 0.4320
-			dyes = 0.0540
-			lumber = 0.1080
+			antq_papyrus = 0.1620
+			dyes = 0.1620
+			lumber = 0.5400
 			produced = books
 			output = 0.8432
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_scriptorium_intensive = {
-			antq_papyrus = 0.4720
-			dyes = 0.0590
-			lumber = 0.1180
+			antq_papyrus = 0.1770
+			dyes = 0.1770
+			lumber = 0.5900
 			produced = books
 			output = 0.9220
 			debug_max_profit = guild_profit_margin
@@ -986,7 +973,7 @@ antq_reg_linen_weavery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_alum_dyehouse = {
@@ -1270,30 +1257,24 @@ antq_reg_leatherworks = {
 	}
 	unique_production_methods = {
 		antq_reg_leatherworks_maintenance = {
-			livestock = 1.0873
-			sand = 0.4345
-			tar = 0.0819
-			tools = 0.1627
+			livestock = 1.0000
+			salt = 0.2500
 			produced = antq_leather_goods
 			output = 1.0000
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_leatherworks_organized = {
-			livestock = 1.1743
-			sand = 0.4693
-			tar = 0.0885
-			tools = 0.1757
+			livestock = 1.0800
+			salt = 0.2700
 			produced = antq_leather_goods
 			output = 1.0810
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_leatherworks_intensive = {
-			livestock = 1.2830
-			sand = 0.5127
-			tar = 0.0966
-			tools = 0.1920
+			livestock = 1.1800
+			salt = 0.2950
 			produced = antq_leather_goods
 			output = 1.1820
 			debug_max_profit = guild_profit_margin
@@ -1301,7 +1282,7 @@ antq_reg_leatherworks = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_amphora_depot = {
@@ -1336,12 +1317,10 @@ antq_reg_amphora_depot = {
 	}
 	unique_production_methods = {
 		antq_reg_amphora_depot_maintenance = {
-			pottery = 0.14
+			pottery = 0.16
 			lumber = 0.05
 			tools = 0.03
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -1382,8 +1361,7 @@ antq_reg_grain_mill = {
 	unique_production_methods = {
 		antq_reg_grain_mill_maintenance = {
 			wheat = 1.0000
-			lumber = 0.1500
-			tools = 0.0500
+			lumber = 0.2500
 			produced = antq_grain_products
 			output = 1.1000
 			debug_max_profit = guild_profit_margin
@@ -1391,8 +1369,7 @@ antq_reg_grain_mill = {
 		}
 		antq_reg_grain_mill_organized = {
 			wheat = 1.0800
-			lumber = 0.1620
-			tools = 0.0540
+			lumber = 0.2700
 			produced = antq_grain_products
 			output = 1.1891
 			debug_max_profit = guild_profit_margin
@@ -1400,16 +1377,39 @@ antq_reg_grain_mill = {
 		}
 		antq_reg_grain_mill_intensive = {
 			wheat = 1.1800
-			lumber = 0.1770
-			tools = 0.0590
+			lumber = 0.2950
 			produced = antq_grain_products
 			output = 1.3002
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
+		antq_reg_grain_mill_millet = {
+			millet = 1.0000
+			lumber = 0.2500
+			produced = antq_grain_products
+			output = 1.1000
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+		antq_reg_grain_mill_rice = {
+			rice = 1.0000
+			lumber = 0.2500
+			produced = antq_grain_products
+			output = 1.1000
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
+		antq_reg_grain_mill_barley = {
+			antq_barley = 0.8333
+			lumber = 0.2500
+			produced = antq_grain_products
+			output = 1.1000
+			debug_max_profit = guild_profit_margin
+			category = guild_input
+		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_ropewalk = {
@@ -1444,30 +1444,24 @@ antq_reg_ropewalk = {
 	}
 	unique_production_methods = {
 		antq_reg_ropewalk_maintenance = {
-			lumber = 0.1963
-			fiber_crops = 0.4906
-			tar = 0.5393
-			cloth = 0.0486
+			fiber_crops = 1.0000
+			lumber = 0.3333
 			produced = antq_cordage
 			output = 1.2000
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_ropewalk_organized = {
-			lumber = 0.2120
-			fiber_crops = 0.5298
-			tar = 0.5824
-			cloth = 0.0525
+			fiber_crops = 1.0800
+			lumber = 0.3600
 			produced = antq_cordage
 			output = 1.2972
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_ropewalk_intensive = {
-			lumber = 0.2316
-			fiber_crops = 0.5789
-			tar = 0.6364
-			cloth = 0.0573
+			fiber_crops = 1.1800
+			lumber = 0.3933
 			produced = antq_cordage
 			output = 1.4184
 			debug_max_profit = guild_profit_margin
@@ -1532,7 +1526,7 @@ antq_reg_brickworks = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_lampworks = {
@@ -2134,37 +2128,37 @@ antq_reg_oil_bottler = {
 	allow = {
 		always = yes
 	}
+	location_potential = {
+		OR = {
+			climate = mediterranean
+			climate = arid
+		}
+	}
 	modifier = {
 		local_merchant_capacity = 0.01
 	}
 	unique_production_methods = {
 		antq_reg_oil_bottler_maintenance = {
 			olives = 1.2000
-			pottery = 0.1200
-			tools = 0.0500
-			lumber = 0.0800
+			lumber = 0.2000
 			produced = antq_olive_oil
-			output = 0.7600
+			output = 0.7200
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_oil_bottler_organized = {
 			olives = 1.2960
-			pottery = 0.1296
-			tools = 0.0540
-			lumber = 0.0864
+			lumber = 0.2160
 			produced = antq_olive_oil
-			output = 0.8216
+			output = 0.7783
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_oil_bottler_intensive = {
 			olives = 1.4160
-			pottery = 0.1416
-			tools = 0.0590
-			lumber = 0.0944
+			lumber = 0.2360
 			produced = antq_olive_oil
-			output = 0.8983
+			output = 0.8510
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -2648,8 +2642,8 @@ antq_reg_granary = {
 		antq_reg_granary_maintenance = {
 			wheat = 0.16
 			lumber = 0.05
-			antq_cordage = 0.020
-			antq_iron_hardware = 0.010
+			pottery = 0.020
+			antq_cordage = 0.010
 			category = building_maintenance
 		}
 	}
@@ -3398,27 +3392,24 @@ antq_reg_sailmaker = {
 	}
 	unique_production_methods = {
 		antq_reg_sailmaker_maintenance = {
-			fiber_crops = 0.6000
-			cloth = 0.3000
-			tools = 0.1000
+			fiber_crops = 0.9000
+			lumber = 0.4000
 			produced = antq_sailcloth
 			output = 0.9600
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_sailmaker_organized = {
-			fiber_crops = 0.6480
-			cloth = 0.3240
-			tools = 0.1080
+			fiber_crops = 0.9720
+			lumber = 0.4320
 			produced = antq_sailcloth
 			output = 1.0378
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_sailmaker_intensive = {
-			fiber_crops = 0.7080
-			cloth = 0.3540
-			tools = 0.1180
+			fiber_crops = 1.0620
+			lumber = 0.4720
 			produced = antq_sailcloth
 			output = 1.1347
 			debug_max_profit = guild_profit_margin
@@ -3426,7 +3417,7 @@ antq_reg_sailmaker = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_brewhouse = {
@@ -3707,30 +3698,24 @@ antq_reg_hide_curing_yard = {
 	}
 	unique_production_methods = {
 		antq_reg_hide_curing_yard_maintenance = {
-			livestock = 1.0873
-			sand = 0.4345
-			tar = 0.0819
-			tools = 0.1627
+			livestock = 1.0000
+			salt = 0.2500
 			produced = leather
 			output = 1.0000
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_hide_curing_yard_organized = {
-			livestock = 1.1743
-			sand = 0.4693
-			tar = 0.0885
-			tools = 0.1757
+			livestock = 1.0800
+			salt = 0.2700
 			produced = leather
 			output = 1.0810
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_hide_curing_yard_intensive = {
-			livestock = 1.2830
-			sand = 0.5127
-			tar = 0.0966
-			tools = 0.1920
+			livestock = 1.1800
+			salt = 0.2950
 			produced = leather
 			output = 1.1820
 			debug_max_profit = guild_profit_margin
@@ -3738,7 +3723,7 @@ antq_reg_hide_curing_yard = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_apothecary = {
@@ -3776,8 +3761,7 @@ antq_reg_apothecary = {
 			incense = 0.06
 			dyes = 0.03
 			pottery = 0.04
-			tools = 0.02
-			antq_iron_hardware = 0.010
+			tools = 0.03
 			antq_cordage = 0.010
 			category = building_maintenance
 		}
@@ -3881,11 +3865,10 @@ antq_reg_amphora_warehouse = {
 	}
 	unique_production_methods = {
 		antq_reg_amphora_warehouse_maintenance = {
-			pottery = 0.14
+			pottery = 0.16
 			lumber = 0.06
 			tools = 0.03
-			antq_cordage = 0.020
-			antq_iron_hardware = 0.010
+			antq_cordage = 0.010
 			category = building_maintenance
 		}
 	}
@@ -3992,8 +3975,7 @@ antq_reg_hypocaust_yard = {
 			lumber = 0.08
 			clay = 0.06
 			stone = 0.06
-			tools = 0.03
-			antq_iron_hardware = 0.010
+			tools = 0.04
 			antq_cordage = 0.010
 			category = building_maintenance
 		}
@@ -4035,27 +4017,27 @@ antq_reg_stationer = {
 	}
 	unique_production_methods = {
 		antq_reg_stationer_maintenance = {
-			antq_papyrus = 0.4000
-			dyes = 0.0500
-			lumber = 0.1000
+			antq_papyrus = 0.1500
+			dyes = 0.1500
+			lumber = 0.5000
 			produced = books
 			output = 0.7800
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_stationer_organized = {
-			antq_papyrus = 0.4320
-			dyes = 0.0540
-			lumber = 0.1080
+			antq_papyrus = 0.1620
+			dyes = 0.1620
+			lumber = 0.5400
 			produced = books
 			output = 0.8432
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_stationer_intensive = {
-			antq_papyrus = 0.4720
-			dyes = 0.0590
-			lumber = 0.1180
+			antq_papyrus = 0.1770
+			dyes = 0.1770
+			lumber = 0.5900
 			produced = books
 			output = 0.9220
 			debug_max_profit = guild_profit_margin
@@ -4302,8 +4284,8 @@ antq_reg_raised_granary = {
 			wheat = 0.16
 			lumber = 0.08
 			tools = 0.02
-			antq_cordage = 0.020
-			antq_iron_hardware = 0.010
+			pottery = 0.020
+			antq_cordage = 0.010
 			category = building_maintenance
 		}
 	}
@@ -4346,8 +4328,7 @@ antq_reg_saltworks = {
 			salt = 0.16
 			stone = 0.05
 			lumber = 0.04
-			tools = 0.02
-			antq_iron_hardware = 0.010
+			tools = 0.03
 			antq_cordage = 0.010
 			category = building_maintenance
 		}
@@ -4473,7 +4454,7 @@ antq_reg_iron_bloomery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_tin_smelter = {
@@ -5032,10 +5013,9 @@ antq_reg_spice_warehouse = {
 		antq_reg_spice_warehouse_maintenance = {
 			pepper = 0.08
 			incense = 0.06
-			pottery = 0.05
+			pottery = 0.07
 			tools = 0.02
-			antq_cordage = 0.020
-			antq_iron_hardware = 0.010
+			antq_cordage = 0.010
 			category = building_maintenance
 		}
 	}
@@ -5505,9 +5485,8 @@ antq_reg_sponge_drying_yard = {
 			fiber_crops = 0.06
 			lumber = 0.04
 			tools = 0.02
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -5806,9 +5785,8 @@ antq_reg_public_cistern = {
 		antq_reg_public_cistern_maintenance = {
 			stone = 0.12
 			lumber = 0.04
-			tools = 0.03
-			antq_lead_wares = 0.030
-			antq_iron_hardware = 0.020
+			tools = 0.05
+			masonry = 0.010
 			category = building_maintenance
 		}
 	}
@@ -5851,10 +5829,8 @@ antq_reg_fountain_house = {
 			stone = 0.10
 			clay = 0.04
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -5896,11 +5872,9 @@ antq_reg_macellum_stalls = {
 		antq_reg_macellum_stalls_maintenance = {
 			fish = 0.06
 			fruit = 0.06
-			pottery = 0.03
+			pottery = 0.05
 			tools = 0.02
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -5943,10 +5917,8 @@ antq_reg_mensores_office = {
 			copper = 0.04
 			lead = 0.04
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -5992,10 +5964,8 @@ antq_reg_way_station = {
 			livestock = 0.06
 			fiber_crops = 0.04
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -6038,10 +6008,8 @@ antq_reg_caravanserai = {
 			lumber = 0.08
 			fiber_crops = 0.06
 			pottery = 0.04
-			tools = 0.03
-			antq_iron_hardware = 0.020
-			antq_cordage = 0.020
-			antq_leather_goods = 0.010
+			tools = 0.05
+			antq_cordage = 0.015
 			category = building_maintenance
 		}
 	}
@@ -6091,9 +6059,8 @@ antq_reg_wharf_crane = {
 			naval_supplies = 0.06
 			fiber_crops = 0.04
 			tools = 0.04
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -6134,12 +6101,10 @@ antq_reg_lamp_oil_depot = {
 	unique_production_methods = {
 		antq_reg_lamp_oil_depot_maintenance = {
 			olives = 0.08
-			pottery = 0.08
+			pottery = 0.1
 			lumber = 0.04
 			tools = 0.02
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -6182,9 +6147,8 @@ antq_reg_bath_fuel_depot = {
 			coal = 0.08
 			lumber = 0.10
 			clay = 0.05
-			tools = 0.03
-			antq_lead_wares = 0.030
-			antq_iron_hardware = 0.020
+			tools = 0.05
+			masonry = 0.010
 			category = building_maintenance
 		}
 	}
@@ -6228,9 +6192,8 @@ antq_reg_pack_animal_yard = {
 			leather = 0.04
 			wool = 0.03
 			lumber = 0.04
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -6271,12 +6234,10 @@ antq_reg_grain_weighhouse = {
 	unique_production_methods = {
 		antq_reg_grain_weighhouse_maintenance = {
 			wheat = 0.12
-			pottery = 0.04
+			pottery = 0.06
 			lumber = 0.04
 			tools = 0.03
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -6317,13 +6278,10 @@ antq_reg_customs_gate = {
 	unique_production_methods = {
 		antq_reg_customs_gate_maintenance = {
 			lumber = 0.06
-			pottery = 0.04
+			pottery = 0.05
 			copper = 0.03
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
 			category = building_maintenance
 		}
 	}
@@ -6385,7 +6343,7 @@ antq_reg_ironmongery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_bronze_vessel_shop = {
@@ -6612,27 +6570,27 @@ antq_reg_scroll_workshop = {
 	}
 	unique_production_methods = {
 		antq_reg_scroll_workshop_maintenance = {
-			antq_papyrus = 0.4000
-			dyes = 0.0500
-			lumber = 0.1000
+			antq_papyrus = 0.1500
+			dyes = 0.1500
+			lumber = 0.5000
 			produced = books
 			output = 0.7800
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_scroll_workshop_organized = {
-			antq_papyrus = 0.4320
-			dyes = 0.0540
-			lumber = 0.1080
+			antq_papyrus = 0.1620
+			dyes = 0.1620
+			lumber = 0.5400
 			produced = books
 			output = 0.8432
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_scroll_workshop_intensive = {
-			antq_papyrus = 0.4720
-			dyes = 0.0590
-			lumber = 0.1180
+			antq_papyrus = 0.1770
+			dyes = 0.1770
+			lumber = 0.5900
 			produced = books
 			output = 0.9220
 			debug_max_profit = guild_profit_margin
@@ -6760,7 +6718,7 @@ antq_reg_arrow_fletchery = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_harness_maker = {
@@ -7683,27 +7641,27 @@ antq_reg_reed_pen_maker = {
 	}
 	unique_production_methods = {
 		antq_reg_reed_pen_maker_maintenance = {
-			antq_papyrus = 0.4000
-			dyes = 0.0500
-			lumber = 0.1000
+			antq_papyrus = 0.1500
+			dyes = 0.1500
+			lumber = 0.5000
 			produced = books
 			output = 0.7800
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_reed_pen_maker_organized = {
-			antq_papyrus = 0.4320
-			dyes = 0.0540
-			lumber = 0.1080
+			antq_papyrus = 0.1620
+			dyes = 0.1620
+			lumber = 0.5400
 			produced = books
 			output = 0.8432
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_reed_pen_maker_intensive = {
-			antq_papyrus = 0.4720
-			dyes = 0.0590
-			lumber = 0.1180
+			antq_papyrus = 0.1770
+			dyes = 0.1770
+			lumber = 0.5900
 			produced = books
 			output = 0.9220
 			debug_max_profit = guild_profit_margin
@@ -8636,9 +8594,8 @@ antq_reg_south_arabian_terrace_sluices = {
 		antq_reg_south_arabian_terrace_sluices_maintenance = {
 			stone = 0.12
 			clay = 0.06
-			tools = 0.04
-			antq_lead_wares = 0.030
-			antq_iron_hardware = 0.020
+			tools = 0.06
+			masonry = 0.010
 			category = building_maintenance
 		}
 	}
@@ -8686,11 +8643,9 @@ antq_reg_arabian_caravan_station = {
 		antq_reg_arabian_caravan_station_maintenance = {
 			lumber = 0.07
 			fiber_crops = 0.05
-			pottery = 0.04
+			pottery = 0.06
 			tools = 0.03
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -8739,8 +8694,7 @@ antq_reg_aromatic_resin_sorting_house = {
 			incense = 0.12
 			pottery = 0.05
 			lumber = 0.03
-			tools = 0.02
-			antq_iron_hardware = 0.010
+			tools = 0.03
 			antq_cordage = 0.010
 			category = building_maintenance
 		}
@@ -8789,10 +8743,8 @@ antq_reg_eastern_arabian_aflaj = {
 			stone = 0.10
 			clay = 0.06
 			tools = 0.04
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -8837,12 +8789,9 @@ antq_reg_marcomannic_royal_compound = {
 		antq_reg_marcomannic_royal_compound_maintenance = {
 			lumber = 0.12
 			livestock = 0.06
-			pottery = 0.03
+			pottery = 0.04
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
 			category = building_maintenance
 		}
 	}
@@ -8889,8 +8838,8 @@ antq_reg_germanic_assembly_field = {
 			livestock = 0.05
 			pottery = 0.03
 			antq_cordage = 0.020
-			antq_leather_goods = 0.020
-			antq_iron_hardware = 0.010
+			leather = 0.015
+			tools = 0.010
 			category = building_maintenance
 		}
 	}
@@ -8935,11 +8884,8 @@ antq_reg_semnonian_sacred_grove = {
 		antq_reg_semnonian_sacred_grove_maintenance = {
 			wild_game = 0.06
 			lumber = 0.04
-			pottery = 0.03
-			incense = 0.020
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.05
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -8988,9 +8934,8 @@ antq_reg_rhine_frontier_market = {
 			livestock = 0.05
 			salt = 0.04
 			tools = 0.03
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -9035,12 +8980,9 @@ antq_reg_batavian_auxiliary_muster = {
 		antq_reg_batavian_auxiliary_muster_maintenance = {
 			lumber = 0.10
 			livestock = 0.07
-			leather = 0.04
+			leather = 0.06
 			tools = 0.04
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			weaponry = 0.020
 			category = building_maintenance
 		}
 	}
@@ -9087,9 +9029,8 @@ antq_reg_aestian_amber_sorting_ground = {
 			lumber = 0.05
 			leather = 0.03
 			tools = 0.02
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -9136,10 +9077,8 @@ antq_reg_vistula_migration_staging = {
 			livestock = 0.08
 			wheat = 0.05
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -9186,12 +9125,9 @@ antq_reg_north_sea_boat_landing = {
 		antq_reg_north_sea_boat_landing_maintenance = {
 			lumber = 0.12
 			fiber_crops = 0.05
-			tar = 0.04
+			tar = 0.06
 			tools = 0.03
 			antq_cordage = 0.040
-			antq_sailcloth = 0.030
-			antq_iron_hardware = 0.020
-			antq_cured_meat = 0.020
 			category = building_maintenance
 		}
 	}
@@ -9239,10 +9175,8 @@ antq_reg_southern_rock_shelter_custody = {
 			stone = 0.04
 			wild_game = 0.04
 			fiber_crops = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -9289,8 +9223,8 @@ antq_reg_seasonal_waterhole_camp = {
 			stone = 0.03
 			fiber_crops = 0.04
 			wild_game = 0.03
-			antq_lead_wares = 0.030
-			antq_iron_hardware = 0.020
+			tools = 0.020
+			masonry = 0.010
 			category = building_maintenance
 		}
 	}
@@ -9338,10 +9272,8 @@ antq_reg_riverine_gathering_ground = {
 			fish = 0.05
 			fiber_crops = 0.04
 			wild_game = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -9382,8 +9314,7 @@ antq_reg_date_drying_yard = {
 	unique_production_methods = {
 		antq_reg_date_drying_yard_maintenance = {
 			antq_dates = 1.0000
-			pottery = 0.0500
-			lumber = 0.0500
+			lumber = 0.0833
 			produced = antq_dried_fruit
 			output = 0.8250
 			debug_max_profit = guild_profit_margin
@@ -9391,8 +9322,7 @@ antq_reg_date_drying_yard = {
 		}
 		antq_reg_date_drying_yard_organized = {
 			antq_dates = 1.0800
-			pottery = 0.0540
-			lumber = 0.0540
+			lumber = 0.0900
 			produced = antq_dried_fruit
 			output = 0.8918
 			debug_max_profit = guild_profit_margin
@@ -9400,8 +9330,7 @@ antq_reg_date_drying_yard = {
 		}
 		antq_reg_date_drying_yard_intensive = {
 			antq_dates = 1.1800
-			pottery = 0.0590
-			lumber = 0.0590
+			lumber = 0.0983
 			produced = antq_dried_fruit
 			output = 0.9751
 			debug_max_profit = guild_profit_margin
@@ -9574,8 +9503,7 @@ antq_reg_coconut_workshop = {
 	unique_production_methods = {
 		antq_reg_coconut_workshop_maintenance = {
 			antq_coconuts = 1.0000
-			pottery = 0.0500
-			tools = 0.0500
+			lumber = 0.1333
 			produced = antq_coconut_products
 			output = 0.9230
 			debug_max_profit = guild_profit_margin
@@ -9583,8 +9511,7 @@ antq_reg_coconut_workshop = {
 		}
 		antq_reg_coconut_workshop_organized = {
 			antq_coconuts = 1.0800
-			pottery = 0.0540
-			tools = 0.0540
+			lumber = 0.1440
 			produced = antq_coconut_products
 			output = 0.9978
 			debug_max_profit = guild_profit_margin
@@ -9592,8 +9519,7 @@ antq_reg_coconut_workshop = {
 		}
 		antq_reg_coconut_workshop_intensive = {
 			antq_coconuts = 1.1800
-			pottery = 0.0590
-			tools = 0.0590
+			lumber = 0.1573
 			produced = antq_coconut_products
 			output = 1.0910
 			debug_max_profit = guild_profit_margin
@@ -9638,33 +9564,30 @@ antq_reg_cheese_dairy = {
 		antq_reg_cheese_dairy_maintenance = {
 			livestock = 1.0000
 			salt = 0.1000
-			pottery = 0.0500
 			produced = antq_cheese_curds
-			output = 0.9750
+			output = 0.9500
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_cheese_dairy_organized = {
 			livestock = 1.0800
 			salt = 0.1080
-			pottery = 0.0540
 			produced = antq_cheese_curds
-			output = 1.0540
+			output = 1.0269
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_cheese_dairy_intensive = {
 			livestock = 1.1800
 			salt = 0.1180
-			pottery = 0.0590
 			produced = antq_cheese_curds
-			output = 1.1524
+			output = 1.1229
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_meat_curing_yard = {
@@ -9727,7 +9650,7 @@ antq_reg_meat_curing_yard = {
 		}
 	}
 	custom_tags = { guild }
-	construction_demand = antq_s2_workshop_construction
+	construction_demand = antq_s2_enabling_industry_construction
 }
 
 antq_reg_rice_wine_house = {
@@ -10222,12 +10145,10 @@ antq_reg_tabernae_row = {
 	}
 	unique_production_methods = {
 		antq_reg_tabernae_row_maintenance = {
-			pottery = 0.05
+			pottery = 0.07
 			lumber = 0.05
 			tools = 0.02
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -10286,10 +10207,8 @@ antq_reg_forum_basilica = {
 			marble = 0.04
 			lumber = 0.05
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -10343,10 +10262,9 @@ antq_reg_horrea_complex = {
 		antq_reg_horrea_complex_maintenance = {
 			lumber = 0.08
 			stone = 0.06
-			pottery = 0.06
+			pottery = 0.08
 			tools = 0.03
-			antq_cordage = 0.020
-			antq_iron_hardware = 0.010
+			antq_cordage = 0.010
 			category = building_maintenance
 		}
 	}
@@ -10471,9 +10389,8 @@ antq_reg_aqueduct_distribution = {
 			stone = 0.12
 			lead = 0.05
 			clay = 0.05
-			tools = 0.04
-			antq_lead_wares = 0.030
-			antq_iron_hardware = 0.020
+			tools = 0.06
+			masonry = 0.010
 			category = building_maintenance
 		}
 	}
@@ -10529,9 +10446,8 @@ antq_reg_thermae_complex = {
 			marble = 0.04
 			coal = 0.06
 			lumber = 0.06
-			tools = 0.03
-			antq_lead_wares = 0.030
-			antq_iron_hardware = 0.020
+			tools = 0.05
+			masonry = 0.010
 			category = building_maintenance
 		}
 	}
@@ -10584,10 +10500,8 @@ antq_reg_cursus_mansio = {
 			lumber = 0.08
 			livestock = 0.06
 			leather = 0.03
-			tools = 0.03
-			antq_iron_hardware = 0.020
-			antq_cordage = 0.020
-			antq_leather_goods = 0.010
+			tools = 0.05
+			antq_cordage = 0.015
 			category = building_maintenance
 		}
 	}
@@ -10644,9 +10558,8 @@ antq_reg_river_port = {
 			naval_supplies = 0.06
 			fiber_crops = 0.04
 			tools = 0.04
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -10697,10 +10610,8 @@ antq_reg_colonia_forum = {
 			marble = 0.03
 			lumber = 0.05
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -10822,12 +10733,9 @@ antq_reg_frontier_magazine = {
 		antq_reg_frontier_magazine_maintenance = {
 			wheat = 0.10
 			lumber = 0.08
-			leather = 0.03
+			leather = 0.05
 			tools = 0.03
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			weaponry = 0.020
 			category = building_maintenance
 		}
 	}
@@ -10943,31 +10851,25 @@ antq_reg_olive_estate = {
 	unique_production_methods = {
 		antq_reg_olive_estate_maintenance = {
 			olives = 1.2000
-			pottery = 0.1200
-			tools = 0.0500
-			lumber = 0.0800
+			lumber = 0.2000
 			produced = antq_olive_oil
-			output = 0.7600
+			output = 0.7200
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_olive_estate_organized = {
 			olives = 1.2960
-			pottery = 0.1296
-			tools = 0.0540
-			lumber = 0.0864
+			lumber = 0.2160
 			produced = antq_olive_oil
-			output = 0.8216
+			output = 0.7783
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
 		antq_reg_olive_estate_intensive = {
 			olives = 1.4160
-			pottery = 0.1416
-			tools = 0.0590
-			lumber = 0.0944
+			lumber = 0.2360
 			produced = antq_olive_oil
-			output = 0.8983
+			output = 0.8510
 			debug_max_profit = guild_profit_margin
 			category = guild_input
 		}
@@ -11225,10 +11127,8 @@ antq_reg_insulae_quarter = {
 			lumber = 0.08
 			clay = 0.08
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -11282,11 +11182,10 @@ antq_reg_temple_precinct = {
 		antq_reg_temple_precinct_maintenance = {
 			stone = 0.08
 			marble = 0.04
-			incense = 0.05
+			incense = 0.03
 			tools = 0.03
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -11340,12 +11239,9 @@ antq_reg_collegia_hall = {
 		antq_reg_collegia_hall_maintenance = {
 			stone = 0.06
 			lumber = 0.06
-			pottery = 0.04
+			pottery = 0.05
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
 			category = building_maintenance
 		}
 	}
