@@ -5,18 +5,30 @@
 antq_principate = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_principate
+			has_or_had_tag = XAA
+		}
+	}
 	country_modifier = {
-		global_nobles_estate_power = 0.10
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_crown_estate_power = 0.18
+		global_nobles_estate_power = 0.06
 		global_burghers_estate_power = 0.05
+		crown_estate_power_from_cabinet = 0.20
 		nobles_estate_power_from_cabinet = 0.15
 		replace_cabinet_member_cost_modifier = 0.10
-		global_crown_estate_power = 0.10
+		cultures_capacity = 10
 		monthly_towards_centralization = societal_value_monthly_move
 		global_monthly_control = 0.0005
 		global_trade_through_owned_territory_efficiency = 0.03
 		nobles_estate_max_tax = 0.02
 		burghers_estate_max_tax = 0.03
 		research_speed = 0.15
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_roman_senate
@@ -27,7 +39,16 @@ antq_principate = {
 antq_dominate = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dominate
+			has_or_had_tag = XAA
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = -0.05
 		crown_estate_power_from_cabinet = 0.25
 		set_cabinet_member_cost_modifier = -0.10
@@ -35,6 +56,7 @@ antq_dominate = {
 		monthly_towards_centralization = societal_value_monthly_move
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.15
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_imperial_consistory
@@ -45,15 +67,26 @@ antq_dominate = {
 antq_han_imperial_bureaucracy = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_imperial_bureaucracy
+			has_or_had_tag = XAR
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.15
 		global_nobles_estate_power = 0.05
 		crown_estate_power_from_cabinet = 0.25
 		set_cabinet_member_cost_modifier = -0.10
+		cultures_capacity = 8
 		monthly_legitimacy = 0.05
 		monthly_towards_centralization = societal_value_monthly_move
 		monthly_towards_innovative = societal_value_monthly_move
 		research_speed = 0.15
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_han_court_conference
@@ -64,7 +97,16 @@ antq_han_imperial_bureaucracy = {
 antq_lankan_kingdom = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_lankan_kingdom
+			has_or_had_tag = XBD
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.10
 		global_peasants_estate_power = 0.05
 		clergy_estate_power_from_cabinet = 0.15
@@ -72,6 +114,7 @@ antq_lankan_kingdom = {
 		global_crown_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_anuradhapura_royal_council
@@ -82,7 +125,21 @@ antq_lankan_kingdom = {
 antq_indian_ganasangha = {
 	major = yes
 	government = republic
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indian_ganasangha
+			has_or_had_tag = ARJ
+			has_or_had_tag = VDJ
+			has_or_had_tag = XAZ
+			has_or_had_tag = XFS
+			has_or_had_tag = XFV
+			has_or_had_tag = YDH
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.10
 		global_burghers_estate_power = 0.05
 		estate_power_from_cabinet = 0.20
@@ -90,6 +147,7 @@ antq_indian_ganasangha = {
 		monthly_republican_tradition = 0.05
 		global_nobles_estate_power = 0.05
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_gana_assembly
@@ -100,13 +158,25 @@ antq_indian_ganasangha = {
 antq_indo_scythian_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indo_scythian_kingship
+			has_or_had_tag = XAX
+			has_or_had_tag = XFT
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.05
 		nobles_estate_power_from_cabinet = 0.20
 		replace_cabinet_member_cost_modifier = 0.10
+		cultures_capacity = 3
 		global_nobles_estate_power = 0.05
 		land_morale_modifier = 0.025
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_iranian_great_council
@@ -117,13 +187,23 @@ antq_indo_scythian_kingship = {
 antq_indo_greek_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indo_greek_kingship
+			has_or_had_tag = XAY
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.05
 		burghers_estate_power_from_cabinet = 0.20
 		set_cabinet_member_cost_modifier = -0.05
 		global_burghers_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_civic_assembly
@@ -134,13 +214,24 @@ antq_indo_greek_kingship = {
 antq_parthian_king_of_kings = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_king_of_kings
+			has_or_had_tag = XAH
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.05
 		nobles_estate_power_from_cabinet = 0.30
 		replace_cabinet_member_cost_modifier = 0.15
+		cultures_capacity = 3
 		global_nobles_estate_power = 0.15
 		monthly_towards_decentralization = societal_value_monthly_move
 		research_speed = 0.15
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_iranian_great_council
@@ -151,7 +242,15 @@ antq_parthian_king_of_kings = {
 antq_sassanid_centralized_monarchy = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sassanid_centralized_monarchy
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.10
 		crown_estate_power_from_cabinet = 0.25
 		set_cabinet_member_cost_modifier = -0.10
@@ -159,6 +258,7 @@ antq_sassanid_centralized_monarchy = {
 		monthly_towards_centralization = societal_value_monthly_move
 		land_morale_modifier = 0.025
 		research_speed = 0.15
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_sasanian_royal_council
@@ -169,13 +269,22 @@ antq_sassanid_centralized_monarchy = {
 antq_client_monarchy = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_client_monarchy
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.05
 		estate_power_from_cabinet = 0.10
 		replace_cabinet_member_cost_modifier = 0.05
 		global_crown_estate_power = 0.05
 		monthly_towards_centralization = societal_value_minor_monthly_move
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_royal_council
@@ -186,13 +295,30 @@ antq_client_monarchy = {
 antq_parthian_subkingdom = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_parthian_subkingdom
+			has_or_had_tag = ADI
+			has_or_had_tag = MRG
+			has_or_had_tag = PRS
+			has_or_had_tag = XAI
+			has_or_had_tag = XAJ
+			has_or_had_tag = XAK
+			has_or_had_tag = XAM
+			has_or_had_tag = XAN
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.05
 		nobles_estate_power_from_cabinet = 0.20
 		replace_cabinet_member_cost_modifier = 0.10
 		global_nobles_estate_power = 0.10
 		monthly_towards_decentralization = societal_value_minor_monthly_move
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_iranian_great_council
@@ -203,7 +329,16 @@ antq_parthian_subkingdom = {
 antq_arian_satrapal_court = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_arian_satrapal_court
+			has_or_had_tag = XFZ
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.07
 		burghers_estate_power_from_cabinet = 0.12
 		global_trade_through_owned_territory_efficiency = 0.03
@@ -211,6 +346,7 @@ antq_arian_satrapal_court = {
 		global_nobles_estate_power = 0.05
 		global_trade_through_owned_territory_efficiency = 0.03
 		research_speed = 0.09
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_iranian_great_council
@@ -221,7 +357,16 @@ antq_arian_satrapal_court = {
 antq_kangju_confederated_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_kangju_confederated_kingship
+			has_or_had_tag = XCI
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.08
 		nobles_estate_power_from_cabinet = 0.18
 		global_trade_through_owned_territory_efficiency = 0.03
@@ -229,6 +374,7 @@ antq_kangju_confederated_kingship = {
 		global_tribes_estate_power = 0.08
 		monthly_towards_decentralization = societal_value_minor_monthly_move
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_confederation_council
@@ -239,7 +385,16 @@ antq_kangju_confederated_kingship = {
 antq_sogdian_city_compact = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sogdian_city_compact
+			has_or_had_tag = SOG
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.09
 		burghers_estate_power_from_cabinet = 0.20
 		global_trade_through_owned_territory_efficiency = 0.04
@@ -247,6 +402,7 @@ antq_sogdian_city_compact = {
 		global_burghers_estate_power = 0.08
 		global_trade_through_owned_territory_efficiency = 0.04
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_royal_council
@@ -257,7 +413,16 @@ antq_sogdian_city_compact = {
 antq_dayuan_oasis_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dayuan_oasis_kingship
+			has_or_had_tag = DAY
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.06
 		nobles_estate_power_from_cabinet = 0.12
 		global_production_efficiency = 0.025
@@ -265,6 +430,7 @@ antq_dayuan_oasis_kingship = {
 		global_burghers_estate_power = 0.05
 		global_production_efficiency = 0.025
 		research_speed = 0.09
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_royal_council
@@ -275,7 +441,16 @@ antq_dayuan_oasis_kingship = {
 antq_wusun_kunmi_confederacy = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_wusun_kunmi_confederacy
+			has_or_had_tag = WSN
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.09
 		nobles_estate_power_from_cabinet = 0.16
 		land_morale_modifier = 0.025
@@ -283,6 +458,7 @@ antq_wusun_kunmi_confederacy = {
 		global_tribes_estate_power = 0.08
 		land_morale_modifier = 0.025
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_confederation_council
@@ -293,7 +469,16 @@ antq_wusun_kunmi_confederacy = {
 antq_yuezhi_five_yabghus = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_yuezhi_five_yabghus
+			has_or_had_tag = YUE
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.07
 		nobles_estate_power_from_cabinet = 0.18
 		land_morale_modifier = 0.025
@@ -301,6 +486,7 @@ antq_yuezhi_five_yabghus = {
 		global_tribes_estate_power = 0.07
 		land_morale_modifier = 0.025
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_iranian_great_council
@@ -311,7 +497,28 @@ antq_yuezhi_five_yabghus = {
 antq_han_western_regions_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_han_western_regions_kingship
+			has_or_had_tag = DNH
+			has_or_had_tag = FJS
+			has_or_had_tag = GMU
+			has_or_had_tag = IWL
+			has_or_had_tag = KUC
+			has_or_had_tag = LOU
+			has_or_had_tag = PUL
+			has_or_had_tag = SHC
+			has_or_had_tag = XAS
+			has_or_had_tag = XAT
+			has_or_had_tag = XAV
+			has_or_had_tag = XGA
+			has_or_had_tag = YQI
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.05
 		nobles_estate_power_from_cabinet = 0.10
 		global_trade_through_owned_territory_efficiency = 0.025
@@ -319,6 +526,7 @@ antq_han_western_regions_kingship = {
 		global_burghers_estate_power = 0.05
 		global_trade_through_owned_territory_efficiency = 0.025
 		research_speed = 0.09
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_royal_council
@@ -329,7 +537,16 @@ antq_han_western_regions_kingship = {
 antq_yancai_aorsi_confederacy = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_yancai_aorsi_confederacy
+			has_or_had_tag = YNC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.10
 		tribes_estate_power_from_cabinet = 0.22
 		land_morale_modifier = 0.02
@@ -337,6 +554,7 @@ antq_yancai_aorsi_confederacy = {
 		global_tribes_estate_power = 0.10
 		land_morale_modifier = 0.02
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_confederation_council
@@ -347,14 +565,22 @@ antq_yancai_aorsi_confederacy = {
 antq_saryarka_late_iron_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_saryarka_late_iron_network
+			has_or_had_tag = SRY
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.11
 		global_peasants_estate_power = 0.04
 		tribes_estate_power_from_cabinet = 0.20
-		global_monthly_food_modifier = 0.02
+		global_monthly_food_modifier = 0.120
 		replace_cabinet_member_cost_modifier = 0.02
 		global_tribes_estate_power = 0.10
-		global_monthly_food_modifier = 0.02
 		research_speed = 0.06
 	}
 	on_activate = {
@@ -366,7 +592,16 @@ antq_saryarka_late_iron_network = {
 antq_altai_contact_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_altai_contact_network
+			has_or_had_tag = XFL
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.11
 		tribes_estate_power_from_cabinet = 0.21
 		global_trade_through_owned_territory_efficiency = 0.02
@@ -374,6 +609,7 @@ antq_altai_contact_network = {
 		global_tribes_estate_power = 0.10
 		global_trade_through_owned_territory_efficiency = 0.02
 		research_speed = 0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -384,14 +620,22 @@ antq_altai_contact_network = {
 antq_zhangzhung_plateau_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_zhangzhung_plateau_kingship
+			has_or_had_tag = ZHZ
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.06
 		global_tribes_estate_power = 0.05
 		nobles_estate_power_from_cabinet = 0.14
-		global_monthly_food_modifier = 0.015
+		global_monthly_food_modifier = 0.115
 		replace_cabinet_member_cost_modifier = 0.05
 		global_nobles_estate_power = 0.06
-		global_monthly_food_modifier = 0.015
 		research_speed = 0.08
 	}
 	on_activate = {
@@ -403,10 +647,19 @@ antq_zhangzhung_plateau_kingship = {
 antq_sumpa_highland_confederacy = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sumpa_highland_confederacy
+			has_or_had_tag = SMP
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.11
 		tribes_estate_power_from_cabinet = 0.21
-		global_monthly_food_modifier = 0.02
+		global_monthly_food_modifier = 0.120
 		global_trade_through_owned_territory_efficiency = 0.015
 		replace_cabinet_member_cost_modifier = 0.03
 		global_tribes_estate_power = 0.10
@@ -422,14 +675,22 @@ antq_sumpa_highland_confederacy = {
 antq_changtang_pastoral_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_changtang_pastoral_network
+			has_or_had_tag = CTP
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.12
 		tribes_estate_power_from_cabinet = 0.22
-		global_monthly_food_modifier = 0.025
+		global_monthly_food_modifier = 0.125
 		land_morale_modifier = 0.015
 		replace_cabinet_member_cost_modifier = 0.02
 		global_tribes_estate_power = 0.11
-		global_monthly_food_modifier = 0.025
 		research_speed = 0.06
 	}
 	on_activate = {
@@ -441,7 +702,18 @@ antq_changtang_pastoral_network = {
 antq_central_plateau_agropastoral_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_central_plateau_agropastoral_network
+			has_or_had_tag = UTV
+			has_or_had_tag = XGB
+			has_or_had_tag = XGC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.09
 		global_peasants_estate_power = 0.06
 		tribes_estate_power_from_cabinet = 0.18
@@ -450,6 +722,7 @@ antq_central_plateau_agropastoral_network = {
 		global_peasants_estate_power = 0.06
 		global_production_efficiency = 0.025
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -460,7 +733,18 @@ antq_central_plateau_agropastoral_network = {
 antq_eastern_plateau_corridor_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_eastern_plateau_corridor_network
+			has_or_had_tag = DRC
+			has_or_had_tag = EPC
+			has_or_had_tag = QMC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.10
 		global_peasants_estate_power = 0.04
 		tribes_estate_power_from_cabinet = 0.20
@@ -469,6 +753,7 @@ antq_eastern_plateau_corridor_network = {
 		global_tribes_estate_power = 0.10
 		global_trade_through_owned_territory_efficiency = 0.025
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -479,7 +764,17 @@ antq_eastern_plateau_corridor_network = {
 antq_tamilakam_velir_court = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_tamilakam_velir_court
+			has_or_had_tag = ATY
+			has_or_had_tag = XDN
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.08
 		global_burghers_estate_power = 0.05
 		nobles_estate_power_from_cabinet = 0.16
@@ -488,6 +783,7 @@ antq_tamilakam_velir_court = {
 		global_nobles_estate_power = 0.08
 		global_trade_through_owned_territory_efficiency = 0.02
 		research_speed = 0.09
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_royal_council
@@ -498,7 +794,17 @@ antq_tamilakam_velir_court = {
 antq_central_indian_urban_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_central_indian_urban_kingship
+			has_or_had_tag = VDS
+			has_or_had_tag = XGD
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.06
 		global_burghers_estate_power = 0.08
 		burghers_estate_power_from_cabinet = 0.16
@@ -507,6 +813,7 @@ antq_central_indian_urban_kingship = {
 		global_burghers_estate_power = 0.08
 		global_production_efficiency = 0.02
 		research_speed = 0.09
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_royal_council
@@ -517,14 +824,22 @@ antq_central_indian_urban_kingship = {
 antq_central_indian_janapada = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_central_indian_janapada
+			has_or_had_tag = CED
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.07
 		global_peasants_estate_power = 0.05
 		nobles_estate_power_from_cabinet = 0.15
-		global_monthly_food_modifier = 0.015
+		global_monthly_food_modifier = 0.115
 		replace_cabinet_member_cost_modifier = 0.04
 		global_nobles_estate_power = 0.07
-		global_monthly_food_modifier = 0.015
 		research_speed = 0.08
 	}
 	on_activate = {
@@ -536,7 +851,18 @@ antq_central_indian_janapada = {
 antq_central_indian_megalithic_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_central_indian_megalithic_network
+			has_or_had_tag = BSR
+			has_or_had_tag = NVM
+			has_or_had_tag = XGE
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.10
 		global_peasants_estate_power = 0.05
 		tribes_estate_power_from_cabinet = 0.20
@@ -545,6 +871,7 @@ antq_central_indian_megalithic_network = {
 		global_tribes_estate_power = 0.10
 		global_production_efficiency = 0.02
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -555,14 +882,22 @@ antq_central_indian_megalithic_network = {
 antq_upper_mahanadi_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_upper_mahanadi_kingship
+			has_or_had_tag = DKS
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.06
 		global_peasants_estate_power = 0.07
 		estate_power_from_cabinet = 0.15
-		global_monthly_food_modifier = 0.02
+		global_monthly_food_modifier = 0.120
 		replace_cabinet_member_cost_modifier = 0.04
 		global_peasants_estate_power = 0.07
-		global_monthly_food_modifier = 0.02
 		research_speed = 0.08
 	}
 	on_activate = {
@@ -574,7 +909,16 @@ antq_upper_mahanadi_kingship = {
 antq_indian_ocean_atoll_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_indian_ocean_atoll_network
+			has_or_had_tag = MLD
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.08
 		global_burghers_estate_power = 0.06
 		tribes_estate_power_from_cabinet = 0.16
@@ -583,6 +927,7 @@ antq_indian_ocean_atoll_network = {
 		global_burghers_estate_power = 0.06
 		global_trade_through_owned_territory_efficiency = 0.03
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -593,7 +938,18 @@ antq_indian_ocean_atoll_network = {
 antq_mainland_river_corridor_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_mainland_river_corridor_network
+			has_or_had_tag = UIR
+			has_or_had_tag = USH
+			has_or_had_tag = XDQ
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.08
 		global_burghers_estate_power = 0.05
 		tribes_estate_power_from_cabinet = 0.17
@@ -602,6 +958,7 @@ antq_mainland_river_corridor_network = {
 		global_tribes_estate_power = 0.08
 		global_trade_through_owned_territory_efficiency = 0.025
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -612,7 +969,16 @@ antq_mainland_river_corridor_network = {
 antq_sa_huynh_exchange_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sa_huynh_exchange_network
+			has_or_had_tag = SHY
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.07
 		global_burghers_estate_power = 0.06
 		tribes_estate_power_from_cabinet = 0.16
@@ -621,6 +987,7 @@ antq_sa_huynh_exchange_network = {
 		global_burghers_estate_power = 0.06
 		global_trade_through_owned_territory_efficiency = 0.03
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -631,7 +998,19 @@ antq_sa_huynh_exchange_network = {
 antq_mainland_highland_exchange_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_mainland_highland_exchange_network
+			has_or_had_tag = UMK
+			has_or_had_tag = XGF
+			has_or_had_tag = XGG
+			has_or_had_tag = XGH
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.10
 		global_peasants_estate_power = 0.04
 		tribes_estate_power_from_cabinet = 0.20
@@ -640,6 +1019,7 @@ antq_mainland_highland_exchange_network = {
 		global_tribes_estate_power = 0.10
 		global_trade_through_owned_territory_efficiency = 0.02
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -650,14 +1030,24 @@ antq_mainland_highland_exchange_network = {
 antq_mainland_iron_age_basin_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_mainland_iron_age_basin_network
+			has_or_had_tag = KGT
+			has_or_had_tag = KIB
+			has_or_had_tag = PWB
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.08
 		global_peasants_estate_power = 0.07
 		tribes_estate_power_from_cabinet = 0.17
-		global_monthly_food_modifier = 0.02
+		global_monthly_food_modifier = 0.120
 		replace_cabinet_member_cost_modifier = 0.025
 		global_peasants_estate_power = 0.07
-		global_monthly_food_modifier = 0.02
 		research_speed = 0.07
 	}
 	on_activate = {
@@ -669,7 +1059,17 @@ antq_mainland_iron_age_basin_network = {
 antq_amur_forest_river_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_amur_forest_river_network
+			has_or_had_tag = XGI
+			has_or_had_tag = XGJ
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.10
 		global_peasants_estate_power = 0.04
 		tribes_estate_power_from_cabinet = 0.20
@@ -678,6 +1078,7 @@ antq_amur_forest_river_network = {
 		global_tribes_estate_power = 0.10
 		global_trade_through_owned_territory_efficiency = 0.02
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -688,7 +1089,16 @@ antq_amur_forest_river_network = {
 antq_sakhalin_maritime_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sakhalin_maritime_network
+			has_or_had_tag = SKH
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.09
 		global_burghers_estate_power = 0.04
 		tribes_estate_power_from_cabinet = 0.18
@@ -697,6 +1107,7 @@ antq_sakhalin_maritime_network = {
 		global_tribes_estate_power = 0.09
 		global_trade_through_owned_territory_efficiency = 0.025
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -707,14 +1118,23 @@ antq_sakhalin_maritime_network = {
 antq_ussuri_poltsian_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_ussuri_poltsian_network
+			has_or_had_tag = XGK
+			has_or_had_tag = YIL
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.08
 		global_peasants_estate_power = 0.06
 		tribes_estate_power_from_cabinet = 0.18
-		global_monthly_food_modifier = 0.02
+		global_monthly_food_modifier = 0.120
 		replace_cabinet_member_cost_modifier = 0.025
 		global_peasants_estate_power = 0.06
-		global_monthly_food_modifier = 0.02
 		research_speed = 0.07
 	}
 	on_activate = {
@@ -726,7 +1146,16 @@ antq_ussuri_poltsian_network = {
 antq_northern_okjeo_corridor = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_northern_okjeo_corridor
+			has_or_had_tag = WJO
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.07
 		global_burghers_estate_power = 0.05
 		tribes_estate_power_from_cabinet = 0.16
@@ -735,6 +1164,7 @@ antq_northern_okjeo_corridor = {
 		global_burghers_estate_power = 0.05
 		global_trade_through_owned_territory_efficiency = 0.025
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -745,7 +1175,17 @@ antq_northern_okjeo_corridor = {
 antq_borneo_cave_river_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_borneo_cave_river_network
+			has_or_had_tag = NBR
+			has_or_had_tag = SGK
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.10
 		global_peasants_estate_power = 0.04
 		tribes_estate_power_from_cabinet = 0.20
@@ -754,6 +1194,7 @@ antq_borneo_cave_river_network = {
 		global_tribes_estate_power = 0.10
 		global_trade_through_owned_territory_efficiency = 0.02
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -764,7 +1205,19 @@ antq_borneo_cave_river_network = {
 antq_borneo_coastal_exchange_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_borneo_coastal_exchange_network
+			has_or_had_tag = KSB
+			has_or_had_tag = NEB
+			has_or_had_tag = RSW
+			has_or_had_tag = WBC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.07
 		global_burghers_estate_power = 0.06
 		tribes_estate_power_from_cabinet = 0.16
@@ -773,6 +1226,7 @@ antq_borneo_coastal_exchange_network = {
 		global_burghers_estate_power = 0.06
 		global_trade_through_owned_territory_efficiency = 0.03
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -783,7 +1237,18 @@ antq_borneo_coastal_exchange_network = {
 antq_borneo_interior_river_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_borneo_interior_river_network
+			has_or_had_tag = KPM
+			has_or_had_tag = XDM
+			has_or_had_tag = XGL
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.10
 		global_peasants_estate_power = 0.05
 		tribes_estate_power_from_cabinet = 0.20
@@ -792,6 +1257,7 @@ antq_borneo_interior_river_network = {
 		global_tribes_estate_power = 0.10
 		global_trade_through_owned_territory_efficiency = 0.02
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -802,14 +1268,22 @@ antq_borneo_interior_river_network = {
 antq_borneo_foothill_iron_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_borneo_foothill_iron_network
+			has_or_had_tag = XGM
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.08
 		global_peasants_estate_power = 0.06
 		tribes_estate_power_from_cabinet = 0.17
-		global_monthly_food_modifier = 0.02
+		global_monthly_food_modifier = 0.120
 		replace_cabinet_member_cost_modifier = 0.025
 		global_peasants_estate_power = 0.06
-		global_monthly_food_modifier = 0.02
 		research_speed = 0.07
 	}
 	on_activate = {
@@ -821,7 +1295,23 @@ antq_borneo_foothill_iron_network = {
 antq_philippine_coastal_river_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_philippine_coastal_river_network
+			has_or_had_tag = AGS
+			has_or_had_tag = BCP
+			has_or_had_tag = CXR
+			has_or_had_tag = LZC
+			has_or_had_tag = XGX
+			has_or_had_tag = XHB
+			has_or_had_tag = XHC
+			has_or_had_tag = ZBG
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.08
 		global_peasants_estate_power = 0.05
 		tribes_estate_power_from_cabinet = 0.17
@@ -830,6 +1320,7 @@ antq_philippine_coastal_river_network = {
 		global_tribes_estate_power = 0.08
 		global_trade_through_owned_territory_efficiency = 0.025
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -840,14 +1331,24 @@ antq_philippine_coastal_river_network = {
 antq_philippine_mortuary_community_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_philippine_mortuary_community_network
+			has_or_had_tag = MTT
+			has_or_had_tag = PNY
+			has_or_had_tag = XGZ
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.08
 		global_clergy_estate_power = 0.06
 		tribes_estate_power_from_cabinet = 0.17
-		global_monthly_food_modifier = 0.02
+		global_monthly_food_modifier = 0.120
 		replace_cabinet_member_cost_modifier = 0.025
 		global_clergy_estate_power = 0.06
-		global_monthly_food_modifier = 0.02
 		research_speed = 0.07
 	}
 	on_activate = {
@@ -859,7 +1360,17 @@ antq_philippine_mortuary_community_network = {
 antq_philippine_island_exchange_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_philippine_island_exchange_network
+			has_or_had_tag = SLU
+			has_or_had_tag = XHA
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.07
 		global_burghers_estate_power = 0.06
 		tribes_estate_power_from_cabinet = 0.15
@@ -868,6 +1379,7 @@ antq_philippine_island_exchange_network = {
 		global_burghers_estate_power = 0.06
 		global_trade_through_owned_territory_efficiency = 0.03
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -878,7 +1390,17 @@ antq_philippine_island_exchange_network = {
 antq_philippine_cave_coast_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_philippine_cave_coast_network
+			has_or_had_tag = PLW
+			has_or_had_tag = XGY
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.09
 		global_peasants_estate_power = 0.05
 		tribes_estate_power_from_cabinet = 0.18
@@ -887,6 +1409,7 @@ antq_philippine_cave_coast_network = {
 		global_tribes_estate_power = 0.09
 		global_trade_through_owned_territory_efficiency = 0.02
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -897,7 +1420,19 @@ antq_philippine_cave_coast_network = {
 antq_sulawesi_coastal_exchange_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sulawesi_coastal_exchange_network
+			has_or_had_tag = BGU
+			has_or_had_tag = BNC
+			has_or_had_tag = MKS
+			has_or_had_tag = XHD
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.075
 		global_peasants_estate_power = 0.045
 		tribes_estate_power_from_cabinet = 0.165
@@ -906,6 +1441,7 @@ antq_sulawesi_coastal_exchange_network = {
 		global_tribes_estate_power = 0.075
 		global_trade_through_owned_territory_efficiency = 0.028
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -916,7 +1452,16 @@ antq_sulawesi_coastal_exchange_network = {
 antq_sulawesi_island_exchange_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sulawesi_island_exchange_network
+			has_or_had_tag = BTM
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.065
 		global_burghers_estate_power = 0.065
 		tribes_estate_power_from_cabinet = 0.145
@@ -925,6 +1470,7 @@ antq_sulawesi_island_exchange_network = {
 		global_burghers_estate_power = 0.065
 		global_trade_through_owned_territory_efficiency = 0.032
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -935,14 +1481,22 @@ antq_sulawesi_island_exchange_network = {
 antq_sulawesi_highland_mortuary_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sulawesi_highland_mortuary_network
+			has_or_had_tag = LRP
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.095
 		global_clergy_estate_power = 0.065
 		tribes_estate_power_from_cabinet = 0.185
-		global_monthly_food_modifier = 0.022
+		global_monthly_food_modifier = 0.122
 		replace_cabinet_member_cost_modifier = 0.026
 		global_clergy_estate_power = 0.065
-		global_monthly_food_modifier = 0.022
 		research_speed = 0.07
 	}
 	on_activate = {
@@ -954,14 +1508,23 @@ antq_sulawesi_highland_mortuary_network = {
 antq_sulawesi_river_lake_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sulawesi_river_lake_network
+			has_or_had_tag = LWM
+			has_or_had_tag = XHF
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.085
 		global_peasants_estate_power = 0.055
 		tribes_estate_power_from_cabinet = 0.175
-		global_monthly_food_modifier = 0.024
+		global_monthly_food_modifier = 0.124
 		replace_cabinet_member_cost_modifier = 0.026
 		global_tribes_estate_power = 0.085
-		global_monthly_food_modifier = 0.024
 		research_speed = 0.07
 	}
 	on_activate = {
@@ -973,7 +1536,17 @@ antq_sulawesi_river_lake_network = {
 antq_sulawesi_peninsula_community_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sulawesi_peninsula_community_network
+			has_or_had_tag = MNH
+			has_or_had_tag = XHE
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.09
 		global_peasants_estate_power = 0.04
 		tribes_estate_power_from_cabinet = 0.16
@@ -982,6 +1555,7 @@ antq_sulawesi_peninsula_community_network = {
 		global_tribes_estate_power = 0.09
 		global_trade_through_owned_territory_efficiency = 0.024
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -992,7 +1566,17 @@ antq_sulawesi_peninsula_community_network = {
 antq_north_maluku_metal_age_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_north_maluku_metal_age_network
+			has_or_had_tag = NHM
+			has_or_had_tag = XHG
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.07
 		global_burghers_estate_power = 0.07
 		tribes_estate_power_from_cabinet = 0.15
@@ -1001,6 +1585,7 @@ antq_north_maluku_metal_age_network = {
 		global_burghers_estate_power = 0.07
 		global_trade_through_owned_territory_efficiency = 0.035
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -1011,14 +1596,24 @@ antq_north_maluku_metal_age_network = {
 antq_point_peninsula_seasonal_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_point_peninsula_seasonal_network
+			has_or_had_tag = FLP
+			has_or_had_tag = MHP
+			has_or_had_tag = PPA
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.083
 		global_peasants_estate_power = 0.047
 		tribes_estate_power_from_cabinet = 0.163
-		global_monthly_food_modifier = 0.021
+		global_monthly_food_modifier = 0.121
 		replace_cabinet_member_cost_modifier = 0.027
 		global_tribes_estate_power = 0.083
-		global_monthly_food_modifier = 0.021
 		research_speed = 0.07
 	}
 	on_activate = {
@@ -1030,7 +1625,17 @@ antq_point_peninsula_seasonal_network = {
 antq_havana_hopewell_exchange_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_havana_hopewell_exchange_network
+			has_or_had_tag = HVI
+			has_or_had_tag = XHH
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.071
 		global_clergy_estate_power = 0.057
 		tribes_estate_power_from_cabinet = 0.151
@@ -1039,6 +1644,7 @@ antq_havana_hopewell_exchange_network = {
 		global_clergy_estate_power = 0.057
 		global_trade_through_owned_territory_efficiency = 0.031
 		research_speed = 0.075
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -1049,14 +1655,23 @@ antq_havana_hopewell_exchange_network = {
 antq_central_mississippi_woodland_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_central_mississippi_woodland_network
+			has_or_had_tag = CMW
+			has_or_had_tag = XHI
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.087
 		global_peasants_estate_power = 0.053
 		tribes_estate_power_from_cabinet = 0.177
-		global_monthly_food_modifier = 0.023
+		global_monthly_food_modifier = 0.123
 		replace_cabinet_member_cost_modifier = 0.029
 		global_tribes_estate_power = 0.087
-		global_monthly_food_modifier = 0.023
 		research_speed = 0.07
 	}
 	on_activate = {
@@ -1068,7 +1683,16 @@ antq_central_mississippi_woodland_network = {
 antq_kansas_city_hopewell_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_kansas_city_hopewell_network
+			has_or_had_tag = KCP
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.077
 		global_burghers_estate_power = 0.063
 		tribes_estate_power_from_cabinet = 0.157
@@ -1077,6 +1701,7 @@ antq_kansas_city_hopewell_network = {
 		global_burghers_estate_power = 0.063
 		global_trade_through_owned_territory_efficiency = 0.029
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -1087,14 +1712,24 @@ antq_kansas_city_hopewell_network = {
 antq_mahan_small_state_league = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_mahan_small_state_league
+			has_or_had_tag = GMR
+			has_or_had_tag = HMR
+			has_or_had_tag = XAW
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.071
 		global_peasants_estate_power = 0.059
 		tribes_estate_power_from_cabinet = 0.159
-		global_monthly_food_modifier = 0.024
+		global_monthly_food_modifier = 0.124
 		replace_cabinet_member_cost_modifier = 0.031
 		global_peasants_estate_power = 0.059
-		global_monthly_food_modifier = 0.024
 		research_speed = 0.075
 	}
 	on_activate = {
@@ -1106,7 +1741,16 @@ antq_mahan_small_state_league = {
 antq_jinhan_small_state_league = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_jinhan_small_state_league
+			has_or_had_tag = JIN
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.073
 		global_burghers_estate_power = 0.057
 		tribes_estate_power_from_cabinet = 0.161
@@ -1115,6 +1759,7 @@ antq_jinhan_small_state_league = {
 		global_burghers_estate_power = 0.057
 		global_trade_through_owned_territory_efficiency = 0.027
 		research_speed = 0.075
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -1125,7 +1770,16 @@ antq_jinhan_small_state_league = {
 antq_byeonhan_iron_exchange_league = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_byeonhan_iron_exchange_league
+			has_or_had_tag = BYE
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.067
 		global_burghers_estate_power = 0.073
 		tribes_estate_power_from_cabinet = 0.153
@@ -1134,6 +1788,7 @@ antq_byeonhan_iron_exchange_league = {
 		global_burghers_estate_power = 0.073
 		global_trade_through_owned_territory_efficiency = 0.035
 		research_speed = 0.075
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -1144,7 +1799,16 @@ antq_byeonhan_iron_exchange_league = {
 antq_soanian_king_and_council = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_soanian_king_and_council
+			has_or_had_tag = XDG
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.083
 		global_nobles_estate_power = 0.067
 		tribes_estate_power_from_cabinet = 0.173
@@ -1154,6 +1818,7 @@ antq_soanian_king_and_council = {
 		global_nobles_estate_power = 0.067
 		country_cabinet_efficiency = 0.03
 		research_speed = 0.075
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -1164,11 +1829,23 @@ antq_soanian_king_and_council = {
 antq_andean_irrigated_valley_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_andean_irrigated_valley_network
+			has_or_had_tag = VCS
+			has_or_had_tag = VIR
+			has_or_had_tag = XCW
+			has_or_had_tag = XDI
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.077
 		global_clergy_estate_power = 0.051
 		tribes_estate_power_from_cabinet = 0.147
-		global_monthly_food_modifier = 0.024
+		global_monthly_food_modifier = 0.124
 		global_trade_through_owned_territory_efficiency = 0.021
 		research_speed = 0.075
 	}
@@ -1181,11 +1858,26 @@ antq_andean_irrigated_valley_network = {
 antq_andean_highland_community_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_andean_highland_community_network
+			has_or_had_tag = MYB
+			has_or_had_tag = REC
+			has_or_had_tag = UTC
+			has_or_had_tag = XDL
+			has_or_had_tag = XHJ
+			has_or_had_tag = XHL
+			has_or_had_tag = YUN
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.081
 		global_peasants_estate_power = 0.063
 		tribes_estate_power_from_cabinet = 0.159
-		global_monthly_food_modifier = 0.019
+		global_monthly_food_modifier = 0.119
 		replace_cabinet_member_cost_modifier = 0.023
 		research_speed = 0.075
 	}
@@ -1198,13 +1890,25 @@ antq_andean_highland_community_network = {
 antq_andean_ceremonial_centre_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_andean_ceremonial_centre_network
+			has_or_had_tag = NAZ
+			has_or_had_tag = TIW
+			has_or_had_tag = XHK
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.089
 		global_burghers_estate_power = 0.057
 		clergy_estate_power_from_cabinet = 0.181
 		global_production_efficiency = 0.023
 		replace_cabinet_member_cost_modifier = 0.029
 		research_speed = 0.09
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -1215,11 +1919,20 @@ antq_andean_ceremonial_centre_network = {
 antq_wankarani_mound_village_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_wankarani_mound_village_network
+			has_or_had_tag = WNK
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.087
 		global_peasants_estate_power = 0.069
 		tribes_estate_power_from_cabinet = 0.171
-		global_monthly_food_modifier = 0.017
+		global_monthly_food_modifier = 0.117
 		global_trade_through_owned_territory_efficiency = 0.019
 		research_speed = 0.075
 	}
@@ -1232,15 +1945,23 @@ antq_wankarani_mound_village_network = {
 antq_herrera_plateau_exchange_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herrera_plateau_exchange_network
+			has_or_had_tag = XHM
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.073
 		global_burghers_estate_power = 0.057
 		tribes_estate_power_from_cabinet = 0.151
-		global_monthly_food_modifier = 0.021
+		global_monthly_food_modifier = 0.121
 		global_trade_through_owned_territory_efficiency = 0.025
 		global_peasants_estate_power = 0.073
 		global_burghers_estate_power = 0.057
-		global_monthly_food_modifier = 0.021
 		global_trade_through_owned_territory_efficiency = 0.025
 		research_speed = 0.075
 	}
@@ -1253,15 +1974,23 @@ antq_herrera_plateau_exchange_network = {
 antq_sierra_nevada_early_community_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sierra_nevada_early_community_network
+			has_or_had_tag = SNE
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.083
 		global_peasants_estate_power = 0.061
 		tribes_estate_power_from_cabinet = 0.163
-		global_monthly_food_modifier = 0.018
+		global_monthly_food_modifier = 0.118
 		global_trade_through_owned_territory_efficiency = 0.017
 		global_tribes_estate_power = 0.083
 		global_peasants_estate_power = 0.061
-		global_monthly_food_modifier = 0.018
 		research_speed = 0.07
 	}
 	on_activate = {
@@ -1273,15 +2002,23 @@ antq_sierra_nevada_early_community_network = {
 antq_loja_regional_development_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_loja_regional_development_network
+			has_or_had_tag = LRC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.071
 		global_tribes_estate_power = 0.067
 		tribes_estate_power_from_cabinet = 0.157
-		global_monthly_food_modifier = 0.020
+		global_monthly_food_modifier = 0.120
 		global_trade_through_owned_territory_efficiency = 0.023
 		global_peasants_estate_power = 0.071
 		global_tribes_estate_power = 0.067
-		global_monthly_food_modifier = 0.020
 		global_trade_through_owned_territory_efficiency = 0.023
 		research_speed = 0.075
 	}
@@ -1294,11 +2031,20 @@ antq_loja_regional_development_network = {
 antq_daga_highland_garden_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_daga_highland_garden_network
+			has_or_had_tag = DGU
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.085
 		global_peasants_estate_power = 0.065
 		tribes_estate_power_from_cabinet = 0.170
-		global_monthly_food_modifier = 0.024
+		global_monthly_food_modifier = 0.124
 		replace_cabinet_member_cost_modifier = 0.026
 		research_speed = 0.065
 	}
@@ -1311,13 +2057,23 @@ antq_daga_highland_garden_network = {
 antq_bomberai_coastal_community_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_bomberai_coastal_community_network
+			has_or_had_tag = KBC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.070
 		global_burghers_estate_power = 0.065
 		tribes_estate_power_from_cabinet = 0.160
 		global_trade_through_owned_territory_efficiency = 0.030
 		replace_cabinet_member_cost_modifier = 0.025
 		research_speed = 0.065
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -1328,12 +2084,21 @@ antq_bomberai_coastal_community_network = {
 antq_early_mariana_island_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_early_mariana_island_network
+			has_or_had_tag = EMR
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.075
 		global_peasants_estate_power = 0.055
 		tribes_estate_power_from_cabinet = 0.160
 		global_trade_through_owned_territory_efficiency = 0.026
-		global_monthly_food_modifier = 0.020
+		global_monthly_food_modifier = 0.120
 		research_speed = 0.07
 	}
 	on_activate = {
@@ -1345,12 +2110,21 @@ antq_early_mariana_island_network = {
 antq_yap_ulithi_island_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_yap_ulithi_island_network
+			has_or_had_tag = WCR
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.080
 		global_burghers_estate_power = 0.060
 		tribes_estate_power_from_cabinet = 0.170
 		global_trade_through_owned_territory_efficiency = 0.032
-		global_monthly_food_modifier = 0.017
+		global_monthly_food_modifier = 0.117
 		research_speed = 0.07
 	}
 	on_activate = {
@@ -1362,11 +2136,20 @@ antq_yap_ulithi_island_network = {
 antq_orinoco_llanos_ceramic_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_orinoco_llanos_ceramic_network
+			has_or_had_tag = OLC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.075
 		global_tribes_estate_power = 0.060
 		tribes_estate_power_from_cabinet = 0.155
-		global_monthly_food_modifier = 0.022
+		global_monthly_food_modifier = 0.122
 		global_trade_through_owned_territory_efficiency = 0.020
 		research_speed = 0.07
 	}
@@ -1379,12 +2162,21 @@ antq_orinoco_llanos_ceramic_network = {
 antq_windward_island_ceramic_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_windward_island_ceramic_network
+			has_or_had_tag = WIC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.070
 		global_peasants_estate_power = 0.050
 		global_burghers_estate_power = 0.055
 		global_trade_through_owned_territory_efficiency = 0.030
-		global_monthly_food_modifier = 0.019
+		global_monthly_food_modifier = 0.119
 		research_speed = 0.07
 	}
 	on_activate = {
@@ -1396,11 +2188,20 @@ antq_windward_island_ceramic_network = {
 antq_central_california_coastal_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_central_california_coastal_network
+			has_or_had_tag = CCF
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.080
 		global_peasants_estate_power = 0.070
 		tribes_estate_power_from_cabinet = 0.165
-		global_monthly_food_modifier = 0.026
+		global_monthly_food_modifier = 0.126
 		global_trade_through_owned_territory_efficiency = 0.016
 		research_speed = 0.065
 	}
@@ -1413,11 +2214,20 @@ antq_central_california_coastal_network = {
 antq_acutuba_central_amazon_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_acutuba_central_amazon_network
+			has_or_had_tag = ACU
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.080
 		global_tribes_estate_power = 0.060
 		tribes_estate_power_from_cabinet = 0.160
-		global_monthly_food_modifier = 0.028
+		global_monthly_food_modifier = 0.128
 		global_trade_through_owned_territory_efficiency = 0.023
 		research_speed = 0.075
 	}
@@ -1430,11 +2240,30 @@ antq_acutuba_central_amazon_network = {
 antq_mesoamerican_urban_ritual_center = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_mesoamerican_urban_ritual_center
+			has_or_had_tag = IZA
+			has_or_had_tag = XCQ
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_clergy_estate_power = 0.10
+		global_burghers_estate_power = 0.07
+		clergy_estate_power_from_cabinet = 0.20
+		global_production_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = 0.04
 		global_clergy_estate_power = 0.10
 		global_burghers_estate_power = 0.07
 		global_production_efficiency = 0.025
 		research_speed = 0.09
+		global_monthly_food_modifier = 0.100
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1442,11 +2271,31 @@ antq_mesoamerican_urban_ritual_center = {
 antq_mesoamerican_formative_civic_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_mesoamerican_formative_civic_network
+			has_or_had_tag = MRF
+			has_or_had_tag = PTF
+			has_or_had_tag = SLC
+			has_or_had_tag = XCR
+			has_or_had_tag = XGS
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.07
 		global_peasants_estate_power = 0.06
-		global_monthly_food_modifier = 0.02
+		tribes_estate_power_from_cabinet = 0.15
+		global_monthly_food_modifier = 0.120
+		replace_cabinet_member_cost_modifier = 0.01
+		global_clergy_estate_power = 0.07
+		global_peasants_estate_power = 0.06
 		research_speed = 0.075
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1454,11 +2303,31 @@ antq_mesoamerican_formative_civic_network = {
 antq_mesoamerican_exchange_corridor_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_mesoamerican_exchange_corridor_network
+			has_or_had_tag = GPC
+			has_or_had_tag = NHC
+			has_or_had_tag = XGT
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_tribes_estate_power = 0.08
+		global_burghers_estate_power = 0.06
+		tribes_estate_power_from_cabinet = 0.15
+		global_trade_through_owned_territory_efficiency = 0.03
+		replace_cabinet_member_cost_modifier = 0.02
 		global_tribes_estate_power = 0.08
 		global_burghers_estate_power = 0.06
 		global_trade_through_owned_territory_efficiency = 0.03
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1466,11 +2335,28 @@ antq_mesoamerican_exchange_corridor_network = {
 antq_mesoamerican_highland_community_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_mesoamerican_highland_community_network
+			has_or_had_tag = CPH
+			has_or_had_tag = ONH
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.10
 		global_peasants_estate_power = 0.06
-		global_monthly_food_modifier = 0.02
+		tribes_estate_power_from_cabinet = 0.18
+		global_monthly_food_modifier = 0.120
+		replace_cabinet_member_cost_modifier = 0.01
+		global_tribes_estate_power = 0.10
+		global_peasants_estate_power = 0.06
 		research_speed = 0.065
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1478,11 +2364,31 @@ antq_mesoamerican_highland_community_network = {
 antq_west_mexican_shaft_tomb_chiefdom = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_west_mexican_shaft_tomb_chiefdom
+			has_or_had_tag = SJB
+			has_or_had_tag = XGU
+			has_or_had_tag = XGV
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_clergy_estate_power = 0.09
+		global_nobles_estate_power = 0.06
+		clergy_estate_power_from_cabinet = 0.18
+		global_production_efficiency = 0.02
+		replace_cabinet_member_cost_modifier = 0.03
 		global_clergy_estate_power = 0.09
 		global_nobles_estate_power = 0.06
 		global_production_efficiency = 0.02
 		research_speed = 0.075
+		global_monthly_food_modifier = 0.100
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1490,11 +2396,29 @@ antq_west_mexican_shaft_tomb_chiefdom = {
 antq_teuchitlan_civic_center_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_teuchitlan_civic_center_network
+			has_or_had_tag = TJC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_clergy_estate_power = 0.08
+		global_burghers_estate_power = 0.07
+		estate_power_from_cabinet = 0.18
+		global_trade_through_owned_territory_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = 0.03
 		global_clergy_estate_power = 0.08
 		global_burghers_estate_power = 0.07
 		global_trade_through_owned_territory_efficiency = 0.025
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1502,11 +2426,30 @@ antq_teuchitlan_civic_center_network = {
 antq_west_mexican_basin_community_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_west_mexican_basin_community_network
+			has_or_had_tag = BJC
+			has_or_had_tag = MBC
+			has_or_had_tag = PHC
+			has_or_had_tag = TVC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.08
 		global_peasants_estate_power = 0.07
-		global_monthly_food_modifier = 0.02
+		tribes_estate_power_from_cabinet = 0.15
+		global_monthly_food_modifier = 0.120
+		replace_cabinet_member_cost_modifier = 0.01
+		global_tribes_estate_power = 0.08
+		global_peasants_estate_power = 0.07
 		research_speed = 0.07
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1514,11 +2457,30 @@ antq_west_mexican_basin_community_network = {
 antq_west_mexican_highland_corridor_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_west_mexican_highland_corridor_network
+			has_or_had_tag = JZH
+			has_or_had_tag = MZC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_tribes_estate_power = 0.09
+		global_burghers_estate_power = 0.05
+		tribes_estate_power_from_cabinet = 0.16
+		global_trade_through_owned_territory_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = 0.02
 		global_tribes_estate_power = 0.09
 		global_burghers_estate_power = 0.05
 		global_trade_through_owned_territory_efficiency = 0.025
 		research_speed = 0.065
+		global_monthly_food_modifier = 0.100
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1526,11 +2488,27 @@ antq_west_mexican_highland_corridor_network = {
 antq_sonoran_desert_farming_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sonoran_desert_farming_network
+			has_or_had_tag = XGW
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.08
 		global_peasants_estate_power = 0.08
-		global_monthly_food_modifier = 0.025
+		tribes_estate_power_from_cabinet = 0.14
+		global_monthly_food_modifier = 0.125
+		replace_cabinet_member_cost_modifier = 0.01
+		global_tribes_estate_power = 0.08
+		global_peasants_estate_power = 0.08
 		research_speed = 0.065
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1538,13 +2516,26 @@ antq_sonoran_desert_farming_network = {
 antq_buffer_kingdom = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_buffer_kingdom
+			has_or_had_tag = CLZ
+			has_or_had_tag = IBR
+			has_or_had_tag = OSR
+			has_or_had_tag = XAQ
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.05
 		estate_power_from_cabinet = 0.10
 		replace_cabinet_member_cost_modifier = 0.05
 		global_nobles_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_royal_council
@@ -1555,7 +2546,16 @@ antq_buffer_kingdom = {
 antq_kushite_dual_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_kushite_dual_kingship
+			has_or_had_tag = XBE
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.10
 		global_peasants_estate_power = 0.05
 		clergy_estate_power_from_cabinet = 0.20
@@ -1563,6 +2563,7 @@ antq_kushite_dual_kingship = {
 		global_crown_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_meroitic_royal_council
@@ -1573,13 +2574,23 @@ antq_kushite_dual_kingship = {
 antq_steppe_confederation = {
 	major = yes
 	government = steppe_horde
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_steppe_confederation
+			has_or_had_tag = XIO
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.10
 		tribes_estate_power_from_cabinet = 0.30
 		replace_cabinet_member_cost_modifier = 0.10
 		global_tribes_estate_power = 0.10
 		monthly_towards_decentralization = societal_value_monthly_move
 		research_speed = 0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xiongnu_wing_council
@@ -1590,7 +2601,16 @@ antq_steppe_confederation = {
 antq_xianbei_eastern_confederacy = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_xianbei_eastern_confederacy
+			has_or_had_tag = XIA
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.12
 		global_nobles_estate_power = 0.06
 		tribes_estate_power_from_cabinet = 0.24
@@ -1598,6 +2618,7 @@ antq_xianbei_eastern_confederacy = {
 		global_tribes_estate_power = 0.08
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xianbei_chiefly_assembly
@@ -1608,13 +2629,23 @@ antq_xianbei_eastern_confederacy = {
 antq_early_korean_kingdom = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_early_korean_kingdom
+			has_or_had_tag = GOG
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.10
 		nobles_estate_power_from_cabinet = 0.15
 		set_cabinet_member_cost_modifier = -0.05
 		global_nobles_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_goguryeo_royal_council
@@ -1625,13 +2656,33 @@ antq_early_korean_kingdom = {
 antq_regional_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_regional_kingship
+			has_or_had_tag = BUY
+			has_or_had_tag = GRH
+			has_or_had_tag = KHW
+			has_or_had_tag = PND
+			has_or_had_tag = QAT
+			has_or_had_tag = XBA
+			has_or_had_tag = XBB
+			has_or_had_tag = XBC
+			has_or_had_tag = XBJ
+			has_or_had_tag = XCS
+			has_or_had_tag = XCU
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.05
 		estate_power_from_cabinet = 0.10
 		replace_cabinet_member_cost_modifier = 0.05
 		global_crown_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_royal_council
@@ -1642,13 +2693,90 @@ antq_regional_kingship = {
 antq_advanced_chiefdom = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_advanced_chiefdom
+			has_or_had_tag = ABN
+			has_or_had_tag = AKF
+			has_or_had_tag = AKS
+			has_or_had_tag = AVN
+			has_or_had_tag = CMB
+			has_or_had_tag = CPS
+			has_or_had_tag = CTU
+			has_or_had_tag = DOR
+			has_or_had_tag = EHW
+			has_or_had_tag = GMB
+			has_or_had_tag = HLS
+			has_or_had_tag = HLV
+			has_or_had_tag = HOK
+			has_or_had_tag = HRI
+			has_or_had_tag = IZM
+			has_or_had_tag = JAV
+			has_or_had_tag = KBI
+			has_or_had_tag = KYU
+			has_or_had_tag = LBR
+			has_or_had_tag = LCH
+			has_or_had_tag = LUG
+			has_or_had_tag = MIM
+			has_or_had_tag = MUP
+			has_or_had_tag = NAR
+			has_or_had_tag = NHR
+			has_or_had_tag = NOK
+			has_or_had_tag = OHW
+			has_or_had_tag = PYU
+			has_or_had_tag = RDN
+			has_or_had_tag = RKU
+			has_or_had_tag = RYS
+			has_or_had_tag = SBN
+			has_or_had_tag = SGM
+			has_or_had_tag = SRD
+			has_or_had_tag = SRS
+			has_or_had_tag = TKW
+			has_or_had_tag = VRN
+			has_or_had_tag = WGD
+			has_or_had_tag = XCK
+			has_or_had_tag = XCL
+			has_or_had_tag = XCM
+			has_or_had_tag = XCN
+			has_or_had_tag = XCO
+			has_or_had_tag = XCV
+			has_or_had_tag = XCY
+			has_or_had_tag = XCZ
+			has_or_had_tag = XDT
+			has_or_had_tag = XDU
+			has_or_had_tag = XDV
+			has_or_had_tag = XDW
+			has_or_had_tag = XDX
+			has_or_had_tag = XDY
+			has_or_had_tag = XEA
+			has_or_had_tag = XEB
+			has_or_had_tag = XEI
+			has_or_had_tag = XEJ
+			has_or_had_tag = XEK
+			has_or_had_tag = XEL
+			has_or_had_tag = XEM
+			has_or_had_tag = XEN
+			has_or_had_tag = XEO
+			has_or_had_tag = XGN
+			has_or_had_tag = XGO
+			has_or_had_tag = XGP
+			has_or_had_tag = XGQ
+			has_or_had_tag = XGR
+			has_or_had_tag = ZRB
+			has_or_had_tag = ZUM
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.05
 		tribes_estate_power_from_cabinet = 0.20
 		replace_cabinet_member_cost_modifier = -0.05
 		global_tribes_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -1659,7 +2787,21 @@ antq_advanced_chiefdom = {
 antq_northern_indian_coin_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_northern_indian_coin_kingship
+			has_or_had_tag = AGA
+			has_or_had_tag = AYM
+			has_or_had_tag = KSM
+			has_or_had_tag = PCM
+			has_or_had_tag = XDP
+			has_or_had_tag = XFU
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.08
 		global_burghers_estate_power = 0.07
 		nobles_estate_power_from_cabinet = 0.16
@@ -1669,6 +2811,7 @@ antq_northern_indian_coin_kingship = {
 		global_burghers_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_royal_council
@@ -1679,7 +2822,16 @@ antq_northern_indian_coin_kingship = {
 antq_pundranagara_urban_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_pundranagara_urban_kingship
+			has_or_had_tag = PDR
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.06
 		global_burghers_estate_power = 0.10
 		burghers_estate_power_from_cabinet = 0.18
@@ -1688,6 +2840,7 @@ antq_pundranagara_urban_kingship = {
 		global_burghers_estate_power = 0.08
 		global_trade_through_owned_territory_efficiency = 0.03
 		research_speed = 0.09
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_royal_council
@@ -1698,11 +2851,32 @@ antq_pundranagara_urban_kingship = {
 antq_bengal_riverine_community_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_bengal_riverine_community_network
+			has_or_had_tag = HRK
+			has_or_had_tag = SMT
+			has_or_had_tag = VNG
+			has_or_had_tag = XFW
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_tribes_estate_power = 0.07
+		global_burghers_estate_power = 0.06
+		tribes_estate_power_from_cabinet = 0.16
+		global_trade_through_owned_territory_efficiency = 0.03
+		replace_cabinet_member_cost_modifier = 0.04
 		global_tribes_estate_power = 0.06
 		global_burghers_estate_power = 0.05
 		global_trade_through_owned_territory_efficiency = 0.03
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1710,11 +2884,29 @@ antq_bengal_riverine_community_network = {
 antq_eastern_megalithic_community_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_eastern_megalithic_community_network
+			has_or_had_tag = XFX
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_tribes_estate_power = 0.09
+		global_peasants_estate_power = 0.07
+		tribes_estate_power_from_cabinet = 0.18
+		global_production_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = 0.04
 		global_tribes_estate_power = 0.08
 		global_peasants_estate_power = 0.06
 		global_production_efficiency = 0.025
 		research_speed = 0.065
+		global_monthly_food_modifier = 0.100
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1722,11 +2914,32 @@ antq_eastern_megalithic_community_network = {
 antq_eastern_hill_valley_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_eastern_hill_valley_network
+			has_or_had_tag = DDV
+			has_or_had_tag = IMV
+			has_or_had_tag = KJH
+			has_or_had_tag = SDY
+			has_or_had_tag = UBR
+			has_or_had_tag = XFY
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_tribes_estate_power = 0.10
+		global_peasants_estate_power = 0.05
+		tribes_estate_power_from_cabinet = 0.20
+		global_monthly_food_modifier = 0.120
+		replace_cabinet_member_cost_modifier = 0.03
 		global_tribes_estate_power = 0.09
-		global_monthly_food_modifier = 0.02
 		country_cabinet_efficiency = 0.02
 		research_speed = 0.06
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1734,11 +2947,30 @@ antq_eastern_hill_valley_network = {
 antq_himalayan_highland_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_himalayan_highland_network
+			has_or_had_tag = MYL
+			has_or_had_tag = SKM
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_tribes_estate_power = 0.11
+		global_peasants_estate_power = 0.04
+		tribes_estate_power_from_cabinet = 0.21
+		global_monthly_control = 0.02
+		replace_cabinet_member_cost_modifier = 0.03
 		global_tribes_estate_power = 0.10
 		global_monthly_control = 0.02
 		monthly_towards_decentralization = societal_value_minor_monthly_move
 		research_speed = 0.06
+		global_monthly_food_modifier = 0.100
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1746,11 +2978,34 @@ antq_himalayan_highland_network = {
 antq_far_side_port_chiefdom = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_far_side_port_chiefdom
+			has_or_had_tag = ARO
+			has_or_had_tag = MLA
+			has_or_had_tag = OPO
+			has_or_had_tag = XFN
+			has_or_had_tag = XFO
+			has_or_had_tag = XFP
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_burghers_estate_power = 0.08
+		global_tribes_estate_power = 0.05
+		burghers_estate_power_from_cabinet = 0.20
+		global_trade_through_owned_territory_efficiency = 0.04
+		replace_cabinet_member_cost_modifier = 0.02
 		global_burghers_estate_power = 0.08
 		global_tribes_estate_power = 0.05
 		global_trade_through_owned_territory_efficiency = 0.04
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1758,11 +3013,31 @@ antq_far_side_port_chiefdom = {
 antq_horn_pastoral_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_horn_pastoral_network
+			has_or_had_tag = AZA
+			has_or_had_tag = XDF
+			has_or_had_tag = XFQ
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_tribes_estate_power = 0.10
+		global_peasants_estate_power = 0.05
+		tribes_estate_power_from_cabinet = 0.20
+		global_trade_through_owned_territory_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = -0.02
 		global_tribes_estate_power = 0.10
 		monthly_towards_decentralization = societal_value_minor_monthly_move
 		global_trade_through_owned_territory_efficiency = 0.025
 		research_speed = 0.06
+		global_monthly_food_modifier = 0.100
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1770,11 +3045,31 @@ antq_horn_pastoral_network = {
 antq_west_african_savanna_compound_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_west_african_savanna_compound_network
+			has_or_had_tag = GTC
+			has_or_had_tag = KPC
+			has_or_had_tag = WAF
+			has_or_had_tag = ZMP
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.08
 		global_peasants_estate_power = 0.08
-		global_monthly_food_modifier = 0.025
+		tribes_estate_power_from_cabinet = 0.14
+		burghers_estate_power_from_cabinet = 0.08
+		global_monthly_food_modifier = 0.125
+		replace_cabinet_member_cost_modifier = -0.02
+		global_tribes_estate_power = 0.08
+		global_peasants_estate_power = 0.08
 		research_speed = 0.065
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1782,11 +3077,31 @@ antq_west_african_savanna_compound_network = {
 antq_west_african_ironworking_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_west_african_ironworking_network
+			has_or_had_tag = NSK
+			has_or_had_tag = VIC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_tribes_estate_power = 0.06
+		global_peasants_estate_power = 0.06
+		tribes_estate_power_from_cabinet = 0.10
+		burghers_estate_power_from_cabinet = 0.10
+		global_production_efficiency = 0.035
+		replace_cabinet_member_cost_modifier = -0.01
 		global_tribes_estate_power = 0.06
 		global_peasants_estate_power = 0.06
 		global_production_efficiency = 0.035
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1794,11 +3109,30 @@ antq_west_african_ironworking_network = {
 antq_west_african_forest_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_west_african_forest_network
+			has_or_had_tag = BSW
+			has_or_had_tag = OUE
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_tribes_estate_power = 0.09
+		global_peasants_estate_power = 0.05
+		tribes_estate_power_from_cabinet = 0.14
+		clergy_estate_power_from_cabinet = 0.08
+		global_monthly_food_modifier = 0.120
+		replace_cabinet_member_cost_modifier = -0.03
 		global_tribes_estate_power = 0.09
 		global_peasants_estate_power = 0.05
 		monthly_towards_decentralization = societal_value_minor_monthly_move
 		research_speed = 0.06
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1806,11 +3140,35 @@ antq_west_african_forest_network = {
 antq_early_ironworking_community_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_early_ironworking_community_network
+			has_or_had_tag = KWL
+			has_or_had_tag = RUV
+			has_or_had_tag = URW
+			has_or_had_tag = WDP
+			has_or_had_tag = XDE
+			has_or_had_tag = XFR
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_tribes_estate_power = 0.07
+		global_peasants_estate_power = 0.07
+		tribes_estate_power_from_cabinet = 0.12
+		burghers_estate_power_from_cabinet = 0.08
+		global_production_efficiency = 0.025
+		replace_cabinet_member_cost_modifier = -0.02
 		global_tribes_estate_power = 0.07
 		global_peasants_estate_power = 0.07
 		global_production_efficiency = 0.025
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1818,11 +3176,30 @@ antq_early_ironworking_community_network = {
 antq_mobile_hunter_herder_network = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_mobile_hunter_herder_network
+			has_or_had_tag = LMP
+			has_or_had_tag = ZHF
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
+		global_tribes_estate_power = 0.12
+		global_peasants_estate_power = 0.03
+		tribes_estate_power_from_cabinet = 0.18
+		global_trade_through_owned_territory_efficiency = 0.02
+		replace_cabinet_member_cost_modifier = -0.04
 		global_tribes_estate_power = 0.12
 		monthly_towards_decentralization = societal_value_minor_monthly_move
 		global_trade_through_owned_territory_efficiency = 0.02
 		research_speed = 0.05
+		global_monthly_food_modifier = 0.100
+	}
+	on_activate = {
+		set_parliament_type = parliament_type:antq_tribal_assembly
 	}
 	years = 2
 }
@@ -1830,13 +3207,23 @@ antq_mobile_hunter_herder_network = {
 antq_settled_town_cluster = {
 	major = yes
 	government = republic
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_settled_town_cluster
+			has_or_had_tag = DJN
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.05
 		burghers_estate_power_from_cabinet = 0.20
 		set_cabinet_member_cost_modifier = -0.10
 		global_burghers_estate_power = 0.05
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_civic_assembly
@@ -1847,13 +3234,146 @@ antq_settled_town_cluster = {
 antq_tribal_kingdom = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_tribal_kingdom
+			has_or_had_tag = AGR
+			has_or_had_tag = AKL
+			has_or_had_tag = AOR
+			has_or_had_tag = AUT
+			has_or_had_tag = BED
+			has_or_had_tag = BLF
+			has_or_had_tag = BLR
+			has_or_had_tag = BPC
+			has_or_had_tag = CAL
+			has_or_had_tag = CCI
+			has_or_had_tag = CRE
+			has_or_had_tag = CRV
+			has_or_had_tag = DAR
+			has_or_had_tag = DCT
+			has_or_had_tag = DNP
+			has_or_had_tag = DOB
+			has_or_had_tag = DUM
+			has_or_had_tag = EBL
+			has_or_had_tag = EPD
+			has_or_had_tag = ERD
+			has_or_had_tag = ETG
+			has_or_had_tag = GAN
+			has_or_had_tag = GET
+			has_or_had_tag = GTL
+			has_or_had_tag = GUT
+			has_or_had_tag = HER
+			has_or_had_tag = IAZ
+			has_or_had_tag = IBG
+			has_or_had_tag = ILM
+			has_or_had_tag = JUT
+			has_or_had_tag = KIN
+			has_or_had_tag = KLY
+			has_or_had_tag = KUL
+			has_or_had_tag = LBD
+			has_or_had_tag = LGB
+			has_or_had_tag = LPR
+			has_or_had_tag = MOK
+			has_or_had_tag = NCR
+			has_or_had_tag = NNR
+			has_or_had_tag = OMN
+			has_or_had_tag = PBI
+			has_or_had_tag = PDL
+			has_or_had_tag = PLH
+			has_or_had_tag = RBD
+			has_or_had_tag = RHB
+			has_or_had_tag = RLG
+			has_or_had_tag = ROX
+			has_or_had_tag = RUG
+			has_or_had_tag = RZM
+			has_or_had_tag = SEL
+			has_or_had_tag = SMY
+			has_or_had_tag = SNR
+			has_or_had_tag = SUG
+			has_or_had_tag = TGD
+			has_or_had_tag = UGR
+			has_or_had_tag = USD
+			has_or_had_tag = UVD
+			has_or_had_tag = UVF
+			has_or_had_tag = VAC
+			has_or_had_tag = VAN
+			has_or_had_tag = VCN
+			has_or_had_tag = VLF
+			has_or_had_tag = VNI
+			has_or_had_tag = VOT
+			has_or_had_tag = VYG
+			has_or_had_tag = VYP
+			has_or_had_tag = WAA
+			has_or_had_tag = WBB
+			has_or_had_tag = WHT
+			has_or_had_tag = WHU
+			has_or_had_tag = WSC
+			has_or_had_tag = XBG
+			has_or_had_tag = XBH
+			has_or_had_tag = XBN
+			has_or_had_tag = XBO
+			has_or_had_tag = XBP
+			has_or_had_tag = XBQ
+			has_or_had_tag = XBR
+			has_or_had_tag = XBS
+			has_or_had_tag = XBT
+			has_or_had_tag = XBU
+			has_or_had_tag = XBX
+			has_or_had_tag = XBZ
+			has_or_had_tag = XCA
+			has_or_had_tag = XCB
+			has_or_had_tag = XCC
+			has_or_had_tag = XCD
+			has_or_had_tag = XCE
+			has_or_had_tag = XCF
+			has_or_had_tag = XCJ
+			has_or_had_tag = XDJ
+			has_or_had_tag = XDK
+			has_or_had_tag = XDO
+			has_or_had_tag = XDR
+			has_or_had_tag = XDZ
+			has_or_had_tag = XEC
+			has_or_had_tag = XED
+			has_or_had_tag = XEE
+			has_or_had_tag = XEF
+			has_or_had_tag = XEG
+			has_or_had_tag = XEH
+			has_or_had_tag = XEP
+			has_or_had_tag = XEQ
+			has_or_had_tag = XER
+			has_or_had_tag = XES
+			has_or_had_tag = XET
+			has_or_had_tag = XEV
+			has_or_had_tag = XEW
+			has_or_had_tag = XEX
+			has_or_had_tag = XEY
+			has_or_had_tag = XEZ
+			has_or_had_tag = XFA
+			has_or_had_tag = XFB
+			has_or_had_tag = XFC
+			has_or_had_tag = XFD
+			has_or_had_tag = XFE
+			has_or_had_tag = XFF
+			has_or_had_tag = XFG
+			has_or_had_tag = XFH
+			has_or_had_tag = XFI
+			has_or_had_tag = XFJ
+			has_or_had_tag = XFK
+			has_or_had_tag = XFM
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.10
 		tribes_estate_power_from_cabinet = 0.25
 		replace_cabinet_member_cost_modifier = 0.05
+		court_spending_efficiency = 0.35
 		global_tribes_estate_power = 0.10
 		monthly_towards_decentralization = societal_value_minor_monthly_move
 		research_speed = 0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -1864,7 +3384,16 @@ antq_tribal_kingdom = {
 antq_artaxiad_highland_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_artaxiad_highland_kingship
+			has_or_had_tag = XAO
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.12
 		global_clergy_estate_power = 0.04
 		nobles_estate_power_from_cabinet = 0.25
@@ -1872,6 +3401,7 @@ antq_artaxiad_highland_kingship = {
 		global_nobles_estate_power = 0.08
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_armenian_royal_council
@@ -1882,7 +3412,16 @@ antq_artaxiad_highland_kingship = {
 antq_nabataean_caravan_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_nabataean_caravan_kingship
+			has_or_had_tag = NAB
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.08
 		global_burghers_estate_power = 0.12
 		burghers_estate_power_from_cabinet = 0.25
@@ -1890,6 +3429,7 @@ antq_nabataean_caravan_kingship = {
 		global_burghers_estate_power = 0.08
 		global_trade_through_owned_territory_efficiency = 0.04
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_nabataean_royal_council
@@ -1900,7 +3440,16 @@ antq_nabataean_caravan_kingship = {
 antq_himyarite_terrace_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_himyarite_terrace_kingship
+			has_or_had_tag = HIM
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.10
 		global_peasants_estate_power = 0.08
 		estate_power_from_cabinet = 0.22
@@ -1908,6 +3457,7 @@ antq_himyarite_terrace_kingship = {
 		global_peasants_estate_power = 0.08
 		global_pop_food_consumption = -0.01
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_himyarite_royal_council
@@ -1918,7 +3468,16 @@ antq_himyarite_terrace_kingship = {
 antq_satavahana_deccan_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_satavahana_deccan_kingship
+			has_or_had_tag = SAT
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.10
 		global_burghers_estate_power = 0.08
 		nobles_estate_power_from_cabinet = 0.18
@@ -1927,6 +3486,7 @@ antq_satavahana_deccan_kingship = {
 		global_nobles_estate_power = 0.05
 		global_burghers_estate_power = 0.05
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_satavahana_royal_council
@@ -1937,7 +3497,16 @@ antq_satavahana_deccan_kingship = {
 antq_catuvellaunian_oppidum_kingship = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_catuvellaunian_oppidum_kingship
+			has_or_had_tag = XBV
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.11
 		global_burghers_estate_power = 0.06
 		nobles_estate_power_from_cabinet = 0.22
@@ -1945,6 +3514,7 @@ antq_catuvellaunian_oppidum_kingship = {
 		global_nobles_estate_power = 0.08
 		global_burghers_estate_power = 0.04
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_catuvellaunian_royal_council
@@ -1955,7 +3525,16 @@ antq_catuvellaunian_oppidum_kingship = {
 antq_trinovantian_coin_kingship = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_trinovantian_coin_kingship
+			has_or_had_tag = XBW
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.11
 		global_burghers_estate_power = 0.09
 		nobles_estate_power_from_cabinet = 0.23
@@ -1963,6 +3542,7 @@ antq_trinovantian_coin_kingship = {
 		global_nobles_estate_power = 0.07
 		global_burghers_estate_power = 0.05
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_trinovantian_camulodunon_council
@@ -1973,7 +3553,16 @@ antq_trinovantian_coin_kingship = {
 antq_brigantian_hillfort_confederacy = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_brigantian_hillfort_confederacy
+			has_or_had_tag = XBY
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.13
 		global_nobles_estate_power = 0.08
 		tribes_estate_power_from_cabinet = 0.24
@@ -1981,6 +3570,7 @@ antq_brigantian_hillfort_confederacy = {
 		global_tribes_estate_power = 0.08
 		global_levy_size_modifier = 0.025
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_brigantian_northern_council
@@ -1991,7 +3581,16 @@ antq_brigantian_hillfort_confederacy = {
 antq_durotrigian_hillfort_coin_order = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_durotrigian_hillfort_coin_order
+			has_or_had_tag = XEU
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.08
 		global_burghers_estate_power = 0.11
 		estate_power_from_cabinet = 0.23
@@ -1999,6 +3598,7 @@ antq_durotrigian_hillfort_coin_order = {
 		global_burghers_estate_power = 0.07
 		global_production_efficiency = 0.025
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_durotrigian_hillfort_assembly
@@ -2009,7 +3609,16 @@ antq_durotrigian_hillfort_coin_order = {
 antq_ivernian_regional_assembly = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_ivernian_regional_assembly
+			has_or_had_tag = IVN
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.15
 		global_nobles_estate_power = 0.06
 		tribes_estate_power_from_cabinet = 0.25
@@ -2017,6 +3626,7 @@ antq_ivernian_regional_assembly = {
 		global_tribes_estate_power = 0.09
 		monthly_towards_decentralization = societal_value_minor_monthly_move
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_ivernian_regional_gathering
@@ -2027,7 +3637,16 @@ antq_ivernian_regional_assembly = {
 antq_aestian_amber_coast_order = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_aestian_amber_coast_order
+			has_or_had_tag = AES
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.14
 		global_burghers_estate_power = 0.09
 		tribes_estate_power_from_cabinet = 0.23
@@ -2036,6 +3655,7 @@ antq_aestian_amber_coast_order = {
 		global_tribes_estate_power = 0.08
 		global_trade_through_owned_territory_efficiency = 0.025
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_aestian_amber_coast_gathering
@@ -2046,7 +3666,16 @@ antq_aestian_amber_coast_order = {
 antq_frisian_terp_community_order = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_frisian_terp_community_order
+			has_or_had_tag = XBM
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.11
 		global_peasants_estate_power = 0.10
 		tribes_estate_power_from_cabinet = 0.21
@@ -2055,6 +3684,7 @@ antq_frisian_terp_community_order = {
 		global_peasants_estate_power = 0.07
 		global_road_building_time = -0.04
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_frisian_terp_assembly
@@ -2065,7 +3695,16 @@ antq_frisian_terp_community_order = {
 antq_dacian_divided_kingships = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_dacian_divided_kingships
+			has_or_had_tag = DAC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.13
 		global_tribes_estate_power = 0.08
 		nobles_estate_power_from_cabinet = 0.24
@@ -2074,6 +3713,7 @@ antq_dacian_divided_kingships = {
 		global_nobles_estate_power = 0.08
 		global_levy_size_modifier = 0.025
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_dacian_hillfort_council
@@ -2084,7 +3724,16 @@ antq_dacian_divided_kingships = {
 antq_garamantian_oasis_state = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_garamantian_oasis_state
+			has_or_had_tag = XBF
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.10
 		global_burghers_estate_power = 0.10
 		burghers_estate_power_from_cabinet = 0.20
@@ -2093,6 +3742,7 @@ antq_garamantian_oasis_state = {
 		global_burghers_estate_power = 0.07
 		global_production_efficiency = 0.025
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_garamantian_oasis_council
@@ -2103,7 +3753,16 @@ antq_garamantian_oasis_state = {
 antq_marcomannic_bohemian_kingship = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_marcomannic_bohemian_kingship
+			has_or_had_tag = XBK
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.12
 		global_nobles_estate_power = 0.10
 		tribes_estate_power_from_cabinet = 0.20
@@ -2112,6 +3771,7 @@ antq_marcomannic_bohemian_kingship = {
 		global_tribes_estate_power = 0.08
 		global_nobles_estate_power = 0.06
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_marcomannic_royal_council
@@ -2122,7 +3782,16 @@ antq_marcomannic_bohemian_kingship = {
 antq_cheruscan_kindred_assembly = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_cheruscan_kindred_assembly
+			has_or_had_tag = CRU
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.12
 		global_nobles_estate_power = 0.08
 		tribes_estate_power_from_cabinet = 0.24
@@ -2130,6 +3799,7 @@ antq_cheruscan_kindred_assembly = {
 		global_tribes_estate_power = 0.07
 		country_cabinet_efficiency = 0.02
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_cheruscan_coalition_assembly
@@ -2140,7 +3810,16 @@ antq_cheruscan_kindred_assembly = {
 antq_chattian_host_order = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_chattian_host_order
+			has_or_had_tag = XBL
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.11
 		global_tribes_estate_power = 0.08
 		nobles_estate_power_from_cabinet = 0.25
@@ -2148,6 +3827,7 @@ antq_chattian_host_order = {
 		global_nobles_estate_power = 0.07
 		global_levy_size_modifier = 0.03
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_chattian_host_council
@@ -2158,7 +3838,16 @@ antq_chattian_host_order = {
 antq_batavian_rhine_compact = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_batavian_rhine_compact
+			has_or_had_tag = BTV
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.10
 		global_tribes_estate_power = 0.06
 		nobles_estate_power_from_cabinet = 0.22
@@ -2166,6 +3855,7 @@ antq_batavian_rhine_compact = {
 		global_nobles_estate_power = 0.06
 		country_cabinet_efficiency = 0.025
 		research_speed = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_batavian_island_council
@@ -2176,7 +3866,16 @@ antq_batavian_rhine_compact = {
 antq_semnonian_sacred_confederacy = {
 	major = yes
 	government = tribe
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_semnonian_sacred_confederacy
+			has_or_had_tag = SEM
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.12
 		global_tribes_estate_power = 0.10
 		tribes_estate_power_from_cabinet = 0.22
@@ -2184,6 +3883,7 @@ antq_semnonian_sacred_confederacy = {
 		global_clergy_estate_power = 0.08
 		stability_cost_efficiency = -0.03
 		research_speed = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_semnonian_grove_assembly
@@ -2194,7 +3894,16 @@ antq_semnonian_sacred_confederacy = {
 antq_sabaean_marib_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_sabaean_marib_kingship
+			has_or_had_tag = XBI
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.10
 		global_burghers_estate_power = 0.08
 		estate_power_from_cabinet = 0.23
@@ -2202,6 +3911,7 @@ antq_sabaean_marib_kingship = {
 		global_peasants_estate_power = 0.08
 		global_pop_food_consumption = -0.01
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_sabaean_royal_council
@@ -2212,7 +3922,16 @@ antq_sabaean_marib_kingship = {
 antq_mauretanian_client_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_mauretanian_client_kingship
+			has_or_had_tag = XAG
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.08
 		global_burghers_estate_power = 0.08
 		nobles_estate_power_from_cabinet = 0.16
@@ -2221,6 +3940,7 @@ antq_mauretanian_client_kingship = {
 		global_nobles_estate_power = 0.05
 		global_burghers_estate_power = 0.05
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_mauretanian_royal_council
@@ -2231,7 +3951,16 @@ antq_mauretanian_client_kingship = {
 antq_herodian_judean_ethnarchy = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_judean_ethnarchy
+			has_or_had_tag = JUD
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.10
 		global_nobles_estate_power = 0.08
 		clergy_estate_power_from_cabinet = 0.20
@@ -2239,6 +3968,7 @@ antq_herodian_judean_ethnarchy = {
 		global_clergy_estate_power = 0.08
 		global_nobles_estate_power = 0.05
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_judean_ethnarchic_council
@@ -2249,14 +3979,25 @@ antq_herodian_judean_ethnarchy = {
 antq_cappadocian_client_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_cappadocian_client_kingship
+			has_or_had_tag = CAP
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.10
 		global_burghers_estate_power = 0.06
 		nobles_estate_power_from_cabinet = 0.20
 		replace_cabinet_member_cost_modifier = 0.07
+		cultures_capacity = 2
 		global_nobles_estate_power = 0.06
 		global_burghers_estate_power = 0.04
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_cappadocian_royal_council
@@ -2267,7 +4008,16 @@ antq_cappadocian_client_kingship = {
 antq_odrysian_client_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_odrysian_client_kingship
+			has_or_had_tag = THR
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.11
 		global_tribes_estate_power = 0.08
 		nobles_estate_power_from_cabinet = 0.22
@@ -2275,6 +4025,7 @@ antq_odrysian_client_kingship = {
 		global_nobles_estate_power = 0.07
 		global_tribes_estate_power = 0.06
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_thracian_royal_council
@@ -2285,7 +4036,16 @@ antq_odrysian_client_kingship = {
 antq_bosporan_client_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_bosporan_client_kingship
+			has_or_had_tag = XAF
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.10
 		global_nobles_estate_power = 0.08
 		burghers_estate_power_from_cabinet = 0.20
@@ -2293,6 +4053,7 @@ antq_bosporan_client_kingship = {
 		global_burghers_estate_power = 0.07
 		global_nobles_estate_power = 0.05
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_bosporan_royal_council
@@ -2303,7 +4064,16 @@ antq_bosporan_client_kingship = {
 antq_herodian_galilean_tetrarchy = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_galilean_tetrarchy
+			has_or_had_tag = XAB
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.10
 		global_nobles_estate_power = 0.07
 		burghers_estate_power_from_cabinet = 0.18
@@ -2311,6 +4081,7 @@ antq_herodian_galilean_tetrarchy = {
 		global_burghers_estate_power = 0.07
 		global_nobles_estate_power = 0.04
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_galilean_tetrarchic_council
@@ -2321,7 +4092,16 @@ antq_herodian_galilean_tetrarchy = {
 antq_herodian_batanean_tetrarchy = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_herodian_batanean_tetrarchy
+			has_or_had_tag = XAC
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.10
 		global_nobles_estate_power = 0.08
 		tribes_estate_power_from_cabinet = 0.20
@@ -2329,6 +4109,7 @@ antq_herodian_batanean_tetrarchy = {
 		global_tribes_estate_power = 0.07
 		global_nobles_estate_power = 0.05
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_batanean_tetrarchic_council
@@ -2339,14 +4120,25 @@ antq_herodian_batanean_tetrarchy = {
 antq_commagenean_client_kingship = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_commagenean_client_kingship
+			has_or_had_tag = XAE
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.11
 		global_clergy_estate_power = 0.07
 		nobles_estate_power_from_cabinet = 0.20
 		replace_cabinet_member_cost_modifier = 0.08
+		cultures_capacity = 2
 		global_nobles_estate_power = 0.07
 		global_clergy_estate_power = 0.05
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_commagenean_royal_council
@@ -2357,7 +4149,16 @@ antq_commagenean_client_kingship = {
 antq_emesan_client_dynasty = {
 	major = yes
 	government = monarchy
+	potential = {
+		OR = {
+			has_reform = government_reform:antq_emesan_client_dynasty
+			has_or_had_tag = EME
+		}
+	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.10
 		global_burghers_estate_power = 0.08
 		clergy_estate_power_from_cabinet = 0.18
@@ -2365,6 +4166,7 @@ antq_emesan_client_dynasty = {
 		global_clergy_estate_power = 0.07
 		global_burghers_estate_power = 0.05
 		research_speed = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_emesan_dynastic_council
@@ -2387,10 +4189,14 @@ antq_augustan_dyarchy = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.10
 		global_nobles_estate_power = 0.10
 		nobles_estate_power_from_cabinet = 0.20
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_roman_senate
@@ -2412,10 +4218,14 @@ antq_provincial_principate = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.10
 		global_peasants_estate_power = 0.05
 		burghers_estate_power_from_cabinet = 0.20
 		set_cabinet_member_cost_modifier = -0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_roman_senate
@@ -2435,10 +4245,14 @@ antq_memorialist_han_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.10
 		global_burghers_estate_power = 0.10
 		estate_power_from_cabinet = 0.20
 		replace_cabinet_member_cost_modifier = 0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_han_court_conference
@@ -2458,10 +4272,14 @@ antq_commandery_supervision = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.20
 		global_peasants_estate_power = 0.05
 		crown_estate_power_from_cabinet = 0.30
 		set_cabinet_member_cost_modifier = -0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_han_court_conference
@@ -2487,10 +4305,14 @@ antq_iranian_great_house_reform = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.20
 		global_tribes_estate_power = 0.10
 		nobles_estate_power_from_cabinet = 0.35
 		replace_cabinet_member_cost_modifier = 0.20
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_iranian_great_council
@@ -2516,10 +4338,14 @@ antq_iranian_royal_domain = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.20
 		global_clergy_estate_power = 0.05
 		crown_estate_power_from_cabinet = 0.25
 		set_cabinet_member_cost_modifier = -0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_iranian_great_council
@@ -2539,10 +4365,14 @@ antq_boule_magistracy = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.15
 		global_nobles_estate_power = 0.05
 		burghers_estate_power_from_cabinet = 0.25
 		set_cabinet_member_cost_modifier = -0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_civic_assembly
@@ -2562,10 +4392,14 @@ antq_federal_synedrion = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.10
 		global_burghers_estate_power = 0.10
 		estate_power_from_cabinet = 0.25
 		replace_cabinet_member_cost_modifier = 0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_civic_assembly
@@ -2584,10 +4418,14 @@ antq_lineage_rotation = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.10
 		global_peasants_estate_power = 0.10
 		estate_power_from_cabinet = 0.25
 		replace_cabinet_member_cost_modifier = -0.15
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_gana_assembly
@@ -2606,10 +4444,14 @@ antq_gana_muster_confederacy = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.15
 		global_burghers_estate_power = 0.05
 		nobles_estate_power_from_cabinet = 0.20
 		replace_cabinet_member_cost_modifier = 0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_gana_assembly
@@ -2630,10 +4472,14 @@ antq_steppe_wing_confederacy = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.20
 		global_nobles_estate_power = 0.15
 		tribes_estate_power_from_cabinet = 0.35
 		replace_cabinet_member_cost_modifier = 0.15
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_confederation_council
@@ -2654,10 +4500,14 @@ antq_steppe_gift_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.10
 		global_burghers_estate_power = 0.05
 		estate_power_from_cabinet = 0.20
 		set_cabinet_member_cost_modifier = -0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_confederation_council
@@ -2725,15 +4575,39 @@ antq_elder_moot_kingship = {
 			has_reform = government_reform:antq_windward_island_ceramic_network
 			has_reform = government_reform:antq_central_california_coastal_network
 			has_reform = government_reform:antq_acutuba_central_amazon_network
+			has_reform = government_reform:antq_bengal_riverine_community_network
+			has_reform = government_reform:antq_eastern_megalithic_community_network
+			has_reform = government_reform:antq_eastern_hill_valley_network
+			has_reform = government_reform:antq_himalayan_highland_network
+			has_reform = government_reform:antq_far_side_port_chiefdom
+			has_reform = government_reform:antq_horn_pastoral_network
+			has_reform = government_reform:antq_west_african_savanna_compound_network
+			has_reform = government_reform:antq_west_african_ironworking_network
+			has_reform = government_reform:antq_west_african_forest_network
+			has_reform = government_reform:antq_early_ironworking_community_network
+			has_reform = government_reform:antq_mobile_hunter_herder_network
+			has_reform = government_reform:antq_mesoamerican_formative_civic_network
+			has_reform = government_reform:antq_mesoamerican_highland_community_network
+			has_reform = government_reform:antq_mesoamerican_exchange_corridor_network
+			has_reform = government_reform:antq_mesoamerican_urban_ritual_center
+			has_reform = government_reform:antq_west_mexican_shaft_tomb_chiefdom
+			has_reform = government_reform:antq_teuchitlan_civic_center_network
+			has_reform = government_reform:antq_west_mexican_basin_community_network
+			has_reform = government_reform:antq_west_mexican_highland_corridor_network
+			has_reform = government_reform:antq_sonoran_desert_farming_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.20
 		global_clergy_estate_power = 0.10
 		tribes_estate_power_from_cabinet = 0.25
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -2801,15 +4675,39 @@ antq_warband_retinue_kingship = {
 			has_reform = government_reform:antq_windward_island_ceramic_network
 			has_reform = government_reform:antq_central_california_coastal_network
 			has_reform = government_reform:antq_acutuba_central_amazon_network
+			has_reform = government_reform:antq_bengal_riverine_community_network
+			has_reform = government_reform:antq_eastern_megalithic_community_network
+			has_reform = government_reform:antq_eastern_hill_valley_network
+			has_reform = government_reform:antq_himalayan_highland_network
+			has_reform = government_reform:antq_far_side_port_chiefdom
+			has_reform = government_reform:antq_horn_pastoral_network
+			has_reform = government_reform:antq_west_african_savanna_compound_network
+			has_reform = government_reform:antq_west_african_ironworking_network
+			has_reform = government_reform:antq_west_african_forest_network
+			has_reform = government_reform:antq_early_ironworking_community_network
+			has_reform = government_reform:antq_mobile_hunter_herder_network
+			has_reform = government_reform:antq_mesoamerican_formative_civic_network
+			has_reform = government_reform:antq_mesoamerican_highland_community_network
+			has_reform = government_reform:antq_mesoamerican_exchange_corridor_network
+			has_reform = government_reform:antq_mesoamerican_urban_ritual_center
+			has_reform = government_reform:antq_west_mexican_shaft_tomb_chiefdom
+			has_reform = government_reform:antq_teuchitlan_civic_center_network
+			has_reform = government_reform:antq_west_mexican_basin_community_network
+			has_reform = government_reform:antq_west_mexican_highland_corridor_network
+			has_reform = government_reform:antq_sonoran_desert_farming_network
 			has_reform = government_reform:antq_elder_moot_kingship
 			has_reform = government_reform:antq_warband_retinue_kingship
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.15
 		global_tribes_estate_power = 0.10
 		nobles_estate_power_from_cabinet = 0.30
 		replace_cabinet_member_cost_modifier = 0.15
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_tribal_assembly
@@ -2827,10 +4725,14 @@ antq_temple_endowment_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.20
 		global_crown_estate_power = 0.05
 		clergy_estate_power_from_cabinet = 0.30
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_sacral_court
@@ -2848,10 +4750,14 @@ antq_irrigation_palace = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.15
 		global_crown_estate_power = 0.10
 		crown_estate_power_from_cabinet = 0.20
 		set_cabinet_member_cost_modifier = -0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_sacral_court
@@ -2882,10 +4788,14 @@ antq_petition_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.10
 		global_nobles_estate_power = 0.05
 		estate_power_from_cabinet = 0.20
 		set_cabinet_member_cost_modifier = -0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_royal_council
@@ -2916,10 +4826,14 @@ antq_frontier_muster_monarchy = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.15
 		global_tribes_estate_power = 0.05
 		nobles_estate_power_from_cabinet = 0.25
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_royal_council
@@ -2943,10 +4857,14 @@ antq_xiongnu_dual_wing_command = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.20
 		global_nobles_estate_power = 0.10
 		tribes_estate_power_from_cabinet = 0.40
 		replace_cabinet_member_cost_modifier = 0.15
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xiongnu_wing_council
@@ -2970,10 +4888,14 @@ antq_xiongnu_gift_circuit = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.15
 		global_burghers_estate_power = 0.10
 		estate_power_from_cabinet = 0.25
 		set_cabinet_member_cost_modifier = -0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xiongnu_wing_council
@@ -2992,10 +4914,14 @@ antq_goguryeo_fortress_lineages = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.15
 		global_tribes_estate_power = 0.10
 		nobles_estate_power_from_cabinet = 0.30
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_goguryeo_royal_council
@@ -3014,10 +4940,14 @@ antq_goguryeo_granary_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.15
 		global_peasants_estate_power = 0.10
 		crown_estate_power_from_cabinet = 0.30
 		set_cabinet_member_cost_modifier = -0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_goguryeo_royal_council
@@ -3036,10 +4966,14 @@ antq_kushite_dual_household = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.15
 		global_nobles_estate_power = 0.10
 		estate_power_from_cabinet = 0.30
 		replace_cabinet_member_cost_modifier = 0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_meroitic_royal_council
@@ -3058,10 +4992,14 @@ antq_kushite_temple_domain = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.20
 		global_burghers_estate_power = 0.05
 		clergy_estate_power_from_cabinet = 0.30
 		set_cabinet_member_cost_modifier = -0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_meroitic_royal_council
@@ -3080,10 +5018,14 @@ antq_lankan_reservoir_kingship = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.15
 		global_peasants_estate_power = 0.15
 		crown_estate_power_from_cabinet = 0.25
 		set_cabinet_member_cost_modifier = -0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_anuradhapura_royal_council
@@ -3102,10 +5044,14 @@ antq_lankan_sangha_endowments = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.20
 		global_burghers_estate_power = 0.10
 		clergy_estate_power_from_cabinet = 0.25
 		replace_cabinet_member_cost_modifier = 0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_anuradhapura_royal_council
@@ -3124,10 +5070,14 @@ antq_armenian_dynast_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.20
 		global_tribes_estate_power = 0.05
 		nobles_estate_power_from_cabinet = 0.35
 		replace_cabinet_member_cost_modifier = 0.18
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_armenian_royal_council
@@ -3146,10 +5096,14 @@ antq_armenian_royal_domain_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.18
 		global_burghers_estate_power = 0.07
 		crown_estate_power_from_cabinet = 0.28
 		set_cabinet_member_cost_modifier = -0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_armenian_royal_council
@@ -3168,10 +5122,14 @@ antq_nabataean_water_stewardship = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.15
 		global_crown_estate_power = 0.10
 		crown_estate_power_from_cabinet = 0.22
 		set_cabinet_member_cost_modifier = -0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_nabataean_royal_council
@@ -3190,10 +5148,14 @@ antq_nabataean_customs_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.20
 		global_nobles_estate_power = 0.05
 		burghers_estate_power_from_cabinet = 0.32
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_nabataean_royal_council
@@ -3212,10 +5174,14 @@ antq_himyarite_irrigation_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.18
 		global_crown_estate_power = 0.10
 		crown_estate_power_from_cabinet = 0.24
 		set_cabinet_member_cost_modifier = -0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_himyarite_royal_council
@@ -3234,10 +5200,14 @@ antq_himyarite_incense_route_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.18
 		global_nobles_estate_power = 0.07
 		burghers_estate_power_from_cabinet = 0.28
 		replace_cabinet_member_cost_modifier = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_himyarite_royal_council
@@ -3256,10 +5226,14 @@ antq_satavahana_guild_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.20
 		global_clergy_estate_power = 0.05
 		burghers_estate_power_from_cabinet = 0.30
 		set_cabinet_member_cost_modifier = -0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_satavahana_royal_council
@@ -3278,10 +5252,14 @@ antq_satavahana_maharathi_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.20
 		global_tribes_estate_power = 0.06
 		nobles_estate_power_from_cabinet = 0.34
 		replace_cabinet_member_cost_modifier = 0.16
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_satavahana_royal_council
@@ -3300,10 +5278,14 @@ antq_catuvellaunian_dynastic_mint_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.15
 		global_nobles_estate_power = 0.10
 		burghers_estate_power_from_cabinet = 0.28
 		set_cabinet_member_cost_modifier = -0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_catuvellaunian_royal_council
@@ -3322,10 +5304,14 @@ antq_catuvellaunian_oppida_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.10
 		global_tribes_estate_power = 0.08
 		estate_power_from_cabinet = 0.25
 		replace_cabinet_member_cost_modifier = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_catuvellaunian_royal_council
@@ -3344,10 +5330,14 @@ antq_marcomannic_retinue_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.20
 		global_tribes_estate_power = 0.08
 		nobles_estate_power_from_cabinet = 0.35
 		replace_cabinet_member_cost_modifier = 0.18
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_marcomannic_royal_council
@@ -3366,10 +5356,14 @@ antq_marcomannic_allied_host_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.20
 		global_peasants_estate_power = 0.06
 		tribes_estate_power_from_cabinet = 0.32
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_marcomannic_royal_council
@@ -3388,10 +5382,14 @@ antq_sabaean_irrigation_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.18
 		global_crown_estate_power = 0.10
 		crown_estate_power_from_cabinet = 0.24
 		set_cabinet_member_cost_modifier = -0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_sabaean_royal_council
@@ -3410,10 +5408,14 @@ antq_sabaean_sanctuary_route_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.14
 		global_burghers_estate_power = 0.14
 		burghers_estate_power_from_cabinet = 0.25
 		replace_cabinet_member_cost_modifier = 0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_sabaean_royal_council
@@ -3432,10 +5434,14 @@ antq_mauretanian_urban_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.18
 		global_crown_estate_power = 0.08
 		burghers_estate_power_from_cabinet = 0.28
 		set_cabinet_member_cost_modifier = -0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_mauretanian_royal_council
@@ -3454,10 +5460,14 @@ antq_mauretanian_frontier_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.16
 		global_nobles_estate_power = 0.10
 		nobles_estate_power_from_cabinet = 0.28
 		replace_cabinet_member_cost_modifier = 0.12
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_mauretanian_royal_council
@@ -3476,10 +5486,14 @@ antq_judean_temple_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.18
 		global_burghers_estate_power = 0.06
 		clergy_estate_power_from_cabinet = 0.30
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_judean_ethnarchic_council
@@ -3498,10 +5512,14 @@ antq_judean_toparchy_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_peasants_estate_power = 0.12
 		global_nobles_estate_power = 0.08
 		estate_power_from_cabinet = 0.25
 		set_cabinet_member_cost_modifier = -0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_judean_ethnarchic_council
@@ -3520,10 +5538,14 @@ antq_cappadocian_domain_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.18
 		global_peasants_estate_power = 0.08
 		crown_estate_power_from_cabinet = 0.28
 		set_cabinet_member_cost_modifier = -0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_cappadocian_royal_council
@@ -3542,10 +5564,14 @@ antq_cappadocian_pass_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.14
 		global_nobles_estate_power = 0.10
 		burghers_estate_power_from_cabinet = 0.25
 		replace_cabinet_member_cost_modifier = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_cappadocian_royal_council
@@ -3564,10 +5590,14 @@ antq_thracian_dynastic_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.20
 		global_burghers_estate_power = 0.05
 		nobles_estate_power_from_cabinet = 0.34
 		replace_cabinet_member_cost_modifier = 0.16
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_thracian_royal_council
@@ -3586,10 +5616,14 @@ antq_thracian_mountain_host = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.18
 		global_peasants_estate_power = 0.08
 		tribes_estate_power_from_cabinet = 0.30
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_thracian_royal_council
@@ -3608,10 +5642,14 @@ antq_bosporan_polis_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.20
 		global_clergy_estate_power = 0.05
 		burghers_estate_power_from_cabinet = 0.30
 		set_cabinet_member_cost_modifier = -0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_bosporan_royal_council
@@ -3630,10 +5668,14 @@ antq_bosporan_steppe_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.18
 		global_nobles_estate_power = 0.10
 		tribes_estate_power_from_cabinet = 0.30
 		replace_cabinet_member_cost_modifier = 0.12
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_bosporan_royal_council
@@ -3652,10 +5694,14 @@ antq_galilean_lake_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.18
 		global_peasants_estate_power = 0.08
 		burghers_estate_power_from_cabinet = 0.30
 		set_cabinet_member_cost_modifier = -0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_galilean_tetrarchic_council
@@ -3674,10 +5720,14 @@ antq_galilean_peraean_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.14
 		global_tribes_estate_power = 0.12
 		estate_power_from_cabinet = 0.26
 		replace_cabinet_member_cost_modifier = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_galilean_tetrarchic_council
@@ -3696,10 +5746,14 @@ antq_batanean_highland_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.16
 		global_clergy_estate_power = 0.08
 		crown_estate_power_from_cabinet = 0.26
 		set_cabinet_member_cost_modifier = -0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_batanean_tetrarchic_council
@@ -3718,10 +5772,14 @@ antq_batanean_frontier_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.20
 		global_nobles_estate_power = 0.08
 		tribes_estate_power_from_cabinet = 0.32
 		replace_cabinet_member_cost_modifier = 0.11
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_batanean_tetrarchic_council
@@ -3740,10 +5798,14 @@ antq_commagenean_sanctuary_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.18
 		global_nobles_estate_power = 0.10
 		clergy_estate_power_from_cabinet = 0.30
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_commagenean_royal_council
@@ -3762,10 +5824,14 @@ antq_commagenean_euphrates_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.18
 		global_nobles_estate_power = 0.08
 		burghers_estate_power_from_cabinet = 0.28
 		set_cabinet_member_cost_modifier = -0.04
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_commagenean_royal_council
@@ -3784,10 +5850,14 @@ antq_emesan_sanctuary_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.20
 		global_crown_estate_power = 0.06
 		clergy_estate_power_from_cabinet = 0.32
 		replace_cabinet_member_cost_modifier = 0.11
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_emesan_dynastic_council
@@ -3806,10 +5876,14 @@ antq_emesan_caravan_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.20
 		global_nobles_estate_power = 0.07
 		burghers_estate_power_from_cabinet = 0.30
 		set_cabinet_member_cost_modifier = -0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_emesan_dynastic_council
@@ -3828,11 +5902,15 @@ antq_cheruscan_coalition_leadership = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.16
 		global_nobles_estate_power = 0.10
 		tribes_estate_power_from_cabinet = 0.30
 		global_levy_size_modifier = 0.025
 		replace_cabinet_member_cost_modifier = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_cheruscan_coalition_assembly
@@ -3851,11 +5929,15 @@ antq_cheruscan_retinue_kingship = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.18
 		global_tribes_estate_power = 0.08
 		nobles_estate_power_from_cabinet = 0.32
 		country_cabinet_efficiency = 0.02
 		replace_cabinet_member_cost_modifier = 0.14
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_cheruscan_coalition_assembly
@@ -3874,11 +5956,15 @@ antq_chattian_elder_war_council = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.13
 		global_nobles_estate_power = 0.12
 		tribes_estate_power_from_cabinet = 0.26
 		country_cabinet_efficiency = 0.025
 		replace_cabinet_member_cost_modifier = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_chattian_host_council
@@ -3897,11 +5983,15 @@ antq_chattian_chosen_warrior_host = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.18
 		global_tribes_estate_power = 0.10
 		nobles_estate_power_from_cabinet = 0.32
 		global_levy_size_modifier = 0.045
 		replace_cabinet_member_cost_modifier = 0.12
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_chattian_host_council
@@ -3920,11 +6010,15 @@ antq_batavian_auxiliary_treaty = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.16
 		global_crown_estate_power = 0.06
 		nobles_estate_power_from_cabinet = 0.30
 		global_levy_size_modifier = 0.035
 		country_cabinet_efficiency = 0.025
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_batavian_island_council
@@ -3943,11 +6037,15 @@ antq_batavian_island_assembly = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.16
 		global_peasants_estate_power = 0.08
 		tribes_estate_power_from_cabinet = 0.28
 		global_monthly_control = 0.0005
 		replace_cabinet_member_cost_modifier = 0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_batavian_island_council
@@ -3966,11 +6064,15 @@ antq_semnonian_grove_delegation = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_clergy_estate_power = 0.18
 		global_tribes_estate_power = 0.12
 		clergy_estate_power_from_cabinet = 0.28
 		stability_cost_efficiency = -0.03
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_semnonian_grove_assembly
@@ -3989,11 +6091,15 @@ antq_semnonian_district_muster = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.18
 		global_nobles_estate_power = 0.08
 		tribes_estate_power_from_cabinet = 0.31
 		global_levy_size_modifier = 0.03
 		replace_cabinet_member_cost_modifier = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_semnonian_grove_assembly
@@ -4012,11 +6118,15 @@ antq_trinovantian_oppidum_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.10
 		global_nobles_estate_power = 0.11
 		global_burghers_estate_power = 0.09
 		country_cabinet_efficiency = 0.03
 		set_cabinet_member_cost_modifier = -0.04
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_trinovantian_camulodunon_council
@@ -4035,11 +6145,15 @@ antq_trinovantian_channel_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.18
 		global_nobles_estate_power = 0.07
 		burghers_estate_power_from_cabinet = 0.30
 		global_trade_through_owned_territory_efficiency = 0.035
 		replace_cabinet_member_cost_modifier = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_trinovantian_camulodunon_council
@@ -4058,11 +6172,15 @@ antq_brigantian_kindred_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.19
 		global_nobles_estate_power = 0.07
 		tribes_estate_power_from_cabinet = 0.31
 		replace_cabinet_member_cost_modifier = 0.09
 		stability_cost_efficiency = -0.02
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_brigantian_northern_council
@@ -4081,11 +6199,15 @@ antq_brigantian_hillfort_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.17
 		global_tribes_estate_power = 0.10
 		nobles_estate_power_from_cabinet = 0.29
 		global_levy_size_modifier = 0.03
 		replace_cabinet_member_cost_modifier = 0.13
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_brigantian_northern_council
@@ -4104,11 +6226,15 @@ antq_durotrigian_coin_weight_council = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.19
 		global_nobles_estate_power = 0.06
 		burghers_estate_power_from_cabinet = 0.31
 		global_production_efficiency = 0.025
 		set_cabinet_member_cost_modifier = -0.04
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_durotrigian_hillfort_assembly
@@ -4127,11 +6253,15 @@ antq_durotrigian_settlement_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.15
 		global_peasants_estate_power = 0.11
 		tribes_estate_power_from_cabinet = 0.27
 		global_monthly_control = 0.0005
 		replace_cabinet_member_cost_modifier = 0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_durotrigian_hillfort_assembly
@@ -4150,11 +6280,15 @@ antq_ivernian_seaway_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.13
 		global_tribes_estate_power = 0.12
 		estate_power_from_cabinet = 0.25
 		global_trade_through_owned_territory_efficiency = 0.03
 		replace_cabinet_member_cost_modifier = 0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_ivernian_regional_gathering
@@ -4173,11 +6307,15 @@ antq_ivernian_cattle_gift_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.14
 		global_tribes_estate_power = 0.13
 		nobles_estate_power_from_cabinet = 0.25
 		global_levy_size_modifier = 0.025
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_ivernian_regional_gathering
@@ -4196,11 +6334,15 @@ antq_aestian_shore_exchange_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.18
 		global_tribes_estate_power = 0.10
 		burghers_estate_power_from_cabinet = 0.30
 		global_trade_through_owned_territory_efficiency = 0.035
 		replace_cabinet_member_cost_modifier = 0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_aestian_amber_coast_gathering
@@ -4219,11 +6361,15 @@ antq_aestian_woodland_assembly = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.20
 		global_peasants_estate_power = 0.08
 		tribes_estate_power_from_cabinet = 0.32
 		stability_cost_efficiency = -0.02
 		replace_cabinet_member_cost_modifier = 0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_aestian_amber_coast_gathering
@@ -4242,11 +6388,15 @@ antq_frisian_tidal_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.18
 		global_peasants_estate_power = 0.11
 		tribes_estate_power_from_cabinet = 0.29
 		global_monthly_control = 0.0005
 		replace_cabinet_member_cost_modifier = 0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_frisian_terp_assembly
@@ -4265,11 +6415,15 @@ antq_frisian_frontier_council = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.13
 		global_burghers_estate_power = 0.10
 		nobles_estate_power_from_cabinet = 0.23
 		country_cabinet_efficiency = 0.025
 		replace_cabinet_member_cost_modifier = 0.09
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_frisian_terp_assembly
@@ -4288,11 +6442,15 @@ antq_dacian_hillfort_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.14
 		global_nobles_estate_power = 0.13
 		estate_power_from_cabinet = 0.28
 		global_levy_size_modifier = 0.025
 		replace_cabinet_member_cost_modifier = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_dacian_hillfort_council
@@ -4311,11 +6469,15 @@ antq_dacian_mountain_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.19
 		global_burghers_estate_power = 0.09
 		nobles_estate_power_from_cabinet = 0.31
 		global_levy_size_modifier = 0.035
 		replace_cabinet_member_cost_modifier = 0.13
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_dacian_hillfort_council
@@ -4334,11 +6496,15 @@ antq_garamantian_irrigation_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.12
 		global_peasants_estate_power = 0.15
 		estate_power_from_cabinet = 0.28
 		global_production_efficiency = 0.03
 		set_cabinet_member_cost_modifier = -0.04
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_garamantian_oasis_council
@@ -4357,11 +6523,15 @@ antq_garamantian_caravan_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_burghers_estate_power = 0.19
 		global_tribes_estate_power = 0.09
 		burghers_estate_power_from_cabinet = 0.31
 		global_trade_through_owned_territory_efficiency = 0.04
 		replace_cabinet_member_cost_modifier = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_garamantian_oasis_council
@@ -4383,10 +6553,14 @@ antq_flavian_imperial_settlement = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.12
 		global_nobles_estate_power = 0.08
 		estate_power_from_cabinet = 0.22
 		replace_cabinet_member_cost_modifier = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_roman_senate
@@ -4408,11 +6582,15 @@ antq_antonine_provincial_principate = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.10
 		global_burghers_estate_power = 0.10
 		nobles_estate_power_from_cabinet = 0.18
 		burghers_estate_power_from_cabinet = 0.16
 		set_cabinet_member_cost_modifier = -0.04
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_roman_senate
@@ -4434,10 +6612,14 @@ antq_severan_military_principate = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.16
 		global_nobles_estate_power = 0.06
 		crown_estate_power_from_cabinet = 0.28
 		replace_cabinet_member_cost_modifier = 0.14
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_roman_senate
@@ -4457,10 +6639,14 @@ antq_tetrarchic_collegium = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.18
 		estate_power_from_cabinet = 0.20
 		crown_estate_power_from_cabinet = 0.30
 		set_cabinet_member_cost_modifier = -0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_imperial_consistory
@@ -4480,10 +6666,14 @@ antq_constantinian_consistory = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.20
 		global_clergy_estate_power = 0.10
 		crown_estate_power_from_cabinet = 0.34
 		set_cabinet_member_cost_modifier = -0.12
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_imperial_consistory
@@ -4503,11 +6693,15 @@ antq_late_imperial_twin_courts = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.14
 		global_nobles_estate_power = 0.10
 		global_clergy_estate_power = 0.08
 		estate_power_from_cabinet = 0.26
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_imperial_consistory
@@ -4527,10 +6721,14 @@ antq_xin_state_reorganization = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.18
 		global_nobles_estate_power = -0.04
 		crown_estate_power_from_cabinet = 0.28
 		replace_cabinet_member_cost_modifier = 0.12
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_han_court_conference
@@ -4552,10 +6750,14 @@ antq_guangwu_restoration_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.14
 		global_nobles_estate_power = 0.08
 		estate_power_from_cabinet = 0.20
 		set_cabinet_member_cost_modifier = -0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
@@ -4577,10 +6779,14 @@ antq_eastern_han_secretariat = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.16
 		global_nobles_estate_power = 0.06
 		crown_estate_power_from_cabinet = 0.30
 		set_cabinet_member_cost_modifier = -0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
@@ -4602,10 +6808,14 @@ antq_affinal_regency_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.15
 		global_crown_estate_power = 0.08
 		nobles_estate_power_from_cabinet = 0.28
 		replace_cabinet_member_cost_modifier = 0.14
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
@@ -4627,11 +6837,15 @@ antq_provincial_inspectorate_commands = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.14
 		global_tribes_estate_power = 0.05
 		nobles_estate_power_from_cabinet = 0.24
 		global_monthly_control = -0.0005
 		replace_cabinet_member_cost_modifier = 0.12
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
@@ -4653,10 +6867,14 @@ antq_three_kingdoms_chancellery = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.12
 		global_nobles_estate_power = 0.12
 		estate_power_from_cabinet = 0.26
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
@@ -4678,10 +6896,14 @@ antq_jin_reunification_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.13
 		global_nobles_estate_power = 0.13
 		nobles_estate_power_from_cabinet = 0.22
 		set_cabinet_member_cost_modifier = -0.04
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
@@ -4707,11 +6929,15 @@ antq_vologasid_dynastic_settlement = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.10
 		global_nobles_estate_power = 0.10
 		estate_power_from_cabinet = 0.20
 		country_cabinet_efficiency = 0.025
 		replace_cabinet_member_cost_modifier = -0.03
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_iranian_great_council
@@ -4737,11 +6963,15 @@ antq_arsacid_dual_court_compact = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.08
 		global_nobles_estate_power = 0.13
 		global_burghers_estate_power = 0.06
 		nobles_estate_power_from_cabinet = 0.22
 		set_cabinet_member_cost_modifier = -0.04
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_iranian_great_council
@@ -4767,11 +6997,15 @@ antq_late_arsacid_house_mobilization = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.16
 		global_crown_estate_power = 0.06
 		global_levy_size_modifier = 0.06
 		nobles_estate_power_from_cabinet = 0.28
 		replace_cabinet_member_cost_modifier = 0.12
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_iranian_great_council
@@ -4793,11 +7027,15 @@ antq_ardashir_unification_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.20
 		global_nobles_estate_power = -0.03
 		crown_estate_power_from_cabinet = 0.32
 		global_monthly_control = 0.001
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_sasanian_royal_council
@@ -4819,11 +7057,15 @@ antq_shapur_imperial_settlement = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.16
 		global_burghers_estate_power = 0.08
 		estate_power_from_cabinet = 0.24
 		global_production_efficiency = 0.03
 		set_cabinet_member_cost_modifier = -0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_sasanian_royal_council
@@ -4845,11 +7087,15 @@ antq_sasanian_shahrdar_marzban_order = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.13
 		global_nobles_estate_power = 0.12
 		nobles_estate_power_from_cabinet = 0.24
 		global_levy_size_modifier = 0.045
 		replace_cabinet_member_cost_modifier = 0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_sasanian_royal_council
@@ -4871,11 +7117,15 @@ antq_yazdegerd_concordat_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.15
 		global_clergy_estate_power = 0.09
 		global_nobles_estate_power = 0.07
 		crown_estate_power_from_cabinet = 0.26
 		stability_cost_efficiency = -0.03
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_sasanian_royal_council
@@ -4897,11 +7147,15 @@ antq_bahram_great_house_settlement = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_nobles_estate_power = 0.14
 		global_crown_estate_power = 0.11
 		nobles_estate_power_from_cabinet = 0.25
 		global_levy_size_modifier = 0.035
 		replace_cabinet_member_cost_modifier = 0.05
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_sasanian_royal_council
@@ -4925,11 +7179,15 @@ antq_xiongnu_southern_frontier_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.12
 		global_crown_estate_power = 0.08
 		tribes_estate_power_from_cabinet = 0.24
 		country_cabinet_efficiency = 0.025
 		replace_cabinet_member_cost_modifier = 0.06
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xiongnu_wing_council
@@ -4953,11 +7211,15 @@ antq_xiongnu_northern_western_confederacy = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.18
 		global_nobles_estate_power = 0.08
 		tribes_estate_power_from_cabinet = 0.30
 		global_levy_size_modifier = 0.04
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xiongnu_wing_council
@@ -4981,11 +7243,15 @@ antq_southern_xiongnu_commandery_settlement = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.11
 		global_tribes_estate_power = 0.12
 		crown_estate_power_from_cabinet = 0.22
 		global_monthly_control = 0.0005
 		set_cabinet_member_cost_modifier = -0.04
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xiongnu_wing_council
@@ -5009,11 +7275,15 @@ antq_xiongnu_five_divisions_order = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.12
 		global_tribes_estate_power = 0.10
 		crown_estate_power_from_cabinet = 0.24
 		global_monthly_control = 0.0007
 		replace_cabinet_member_cost_modifier = 0.07
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xiongnu_wing_council
@@ -5037,11 +7307,15 @@ antq_han_zhao_chanyu_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.16
 		global_tribes_estate_power = 0.08
 		global_nobles_estate_power = 0.06
 		crown_estate_power_from_cabinet = 0.28
 		replace_cabinet_member_cost_modifier = 0.10
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xiongnu_wing_council
@@ -5063,11 +7337,15 @@ antq_tanshihuai_three_divisions = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.16
 		global_nobles_estate_power = 0.08
 		tribes_estate_power_from_cabinet = 0.30
 		global_levy_size_modifier = 0.045
 		replace_cabinet_member_cost_modifier = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xianbei_chiefly_assembly
@@ -5089,11 +7367,15 @@ antq_xianbei_successor_federations = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.20
 		global_nobles_estate_power = 0.10
 		nobles_estate_power_from_cabinet = 0.22
 		replace_cabinet_member_cost_modifier = 0.12
 		stability_cost_efficiency = 0.04
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xianbei_chiefly_assembly
@@ -5115,11 +7397,15 @@ antq_murong_frontier_court = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.12
 		global_tribes_estate_power = 0.10
 		global_nobles_estate_power = 0.08
 		country_cabinet_efficiency = 0.03
 		global_monthly_control = 0.0006
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xianbei_chiefly_assembly
@@ -5141,11 +7427,15 @@ antq_tuoba_dai_confederacy = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_tribes_estate_power = 0.14
 		global_crown_estate_power = 0.10
 		tribes_estate_power_from_cabinet = 0.25
 		global_levy_size_modifier = 0.035
 		set_cabinet_member_cost_modifier = -0.03
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xianbei_chiefly_assembly
@@ -5167,11 +7457,15 @@ antq_rouran_khaganate = {
 		}
 	}
 	country_modifier = {
+		global_estate_target_satisfaction = 0.60
+		monthly_rebel_growth = -0.003
+		pop_join_rebel_threshold = -0.15
 		global_crown_estate_power = 0.13
 		global_tribes_estate_power = 0.13
 		crown_estate_power_from_cabinet = 0.24
 		global_levy_size_modifier = 0.05
 		replace_cabinet_member_cost_modifier = 0.08
+		global_monthly_food_modifier = 0.100
 	}
 	on_activate = {
 		set_parliament_type = parliament_type:antq_xianbei_chiefly_assembly

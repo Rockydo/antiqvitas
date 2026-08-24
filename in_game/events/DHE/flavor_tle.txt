@@ -22,7 +22,7 @@ flavor_tle.1 = {
 			is_general = no			
 		}
 		scope:target = {
-			NOT = { controller = c:TLE }
+			NOT = { controller = c:DUMMY }
 			is_capital = yes
 		}
 	}

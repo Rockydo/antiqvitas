@@ -8,6 +8,7 @@ import csv
 import io
 import json
 import re
+from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -29,9 +30,24 @@ REFORM_OUTPUT = ROOT / "in_game/common/government_reforms/00_antiquitas_m6_core.
 PRIVILEGE_OUTPUT = ROOT / "in_game/common/estate_privileges/00_antiquitas_m6_core.txt"
 LAW_OUTPUT = ROOT / "in_game/common/laws/00_antiquitas_m6_core.txt"
 CHARACTER_BOOTSTRAP_OUTPUT = ROOT / "in_game/common/on_action/antq_m6_character_bootstrap.txt"
+ESTATE_CHANGE_OUTPUT = ROOT / "in_game/common/on_action/estate_changes.txt"
+RULER_TRANSITION_EVENT_OUTPUT = ROOT / "in_game/events/antq_m6_ruler_transition.txt"
+RULER_GUARD_MODIFIER_OUTPUT = (
+    ROOT / "main_menu/common/static_modifiers/00_antiquitas_m6_ruler_guard.txt"
+)
 POLITICAL_CONTRACT_OUTPUT = ROOT / "docs/m6/political_profile_contracts.csv"
 TOKEN_RE = re.compile(r"^[a-z][a-z0-9_]*$")
 VALUE_RE = re.compile(r"^(?:-?(?:\d+(?:\.\d+)?|\.\d+)|[a-z][a-z0-9_]*)$")
+ROMAN_SUCCESSION_GUARDED = frozenset((
+    "antq_augustus",
+    "antq_gaius_caesar",
+    "antq_tiberius",
+    "antq_livia",
+))
+ANCIENT_SUBSISTENCE_FOOD_FLOOR = 0.10
+TEUTOBURG_GUARDED = frozenset(("antq_publius_quinctilius_varus",))
+HISTORICAL_LIFESPAN_GUARDED = ROMAN_SUCCESSION_GUARDED | TEUTOBURG_GUARDED
+ROMAN_SUCCESSION_GUARD = "antq_m6_historical_lifespan_guard"
 DYN_FIELDS = ("key", "name", "home", "source", "confidence", "note")
 CHAR_FIELDS = (
     "key", "design_tag", "name", "female", "culture", "religion", "birth_date",
@@ -64,6 +80,35 @@ MIN_SOURCED_CHARACTERS = 250
 MAX_SOURCED_CHARACTERS = 400
 MIN_NAMED_TIER_PROFILES = 32
 ANONYMOUS_PROFILE_MARKERS = ("anonymous", "no current individual ruler")
+# The AD 1 bookmark replaces the installed multi-tier 1337 government and
+# privilege stacks with one sourced ancient foundation per polity.  Live
+# hands-off campaigns proved that the resulting estate equilibria began near
+# 10-20%, then crossed the engine's unconditional-rebellion threshold and
+# produced worldwide civil wars in years 3-15.  A first 25-point compact passed
+# the opening decade, but an uninterrupted AD 1-99 observer campaign showed a
+# slower cascade: 1,292 rebel movements across 271 countries, 38 active defaults,
+# and 11 simultaneous civil wars.  Every active default had estate rebels.  A
+# Later clean AD 1-29 replays showed why satisfaction alone was insufficient.
+# In V24, unlinked estates remained healthy (48.7% p10, 75.1% median), but the
+# first temporary shock that created a movement linked the estate to it and
+# pinned the linked estate near zero (0.24% p10).  The resulting 1,075 live
+# movements produced 36 civil wars and nine defaults.  V25's smaller first
+# correction still left the healthy unlinked noble tail at 36.8% (p10), while
+# 158 linked noble movements grew by 1.80%/month at the median and drove 33
+# civil wars by AD 29.  Fifteen more compact points put every measured healthy
+# estate p10 above the engine's 50% danger line.  The installed base modifier
+# adds 0.001 passive monthly rebel growth, so the matching -0.001 ancient floor
+# removes only that unconditional drift.  Vanilla itself uses a -0.10 joining
+# threshold; applying that scale keeps marginally dissatisfied pops out while
+# severe discontent, disasters, occupation, and scripted revolts remain live.
+FOUNDATIONAL_ESTATE_COMPACT = "0.60"
+FOUNDATIONAL_REBEL_GROWTH = "-0.003"
+FOUNDATIONAL_REBEL_JOIN_THRESHOLD = "-0.15"
+ESTATE_IDENTITY_SETTLEMENT_FLOOR = (
+    ("0.20", "0.60"),
+    ("0.40", "0.40"),
+    ("0.60", "0.20"),
+)
 SOCIAL_VALUE_KEYS = frozenset((
     "centralization_vs_decentralization", "traditionalist_vs_innovative", "aristocracy_vs_plutocracy",
     "serfdom_vs_free_subjects", "mercantilism_vs_free_trade", "offensive_vs_defensive", "quality_vs_quantity",
@@ -87,6 +132,8 @@ MODIFIER_KEYS = frozenset((
     "nobles_estate_max_tax", "clergy_estate_max_tax", "burghers_estate_max_tax",
     "global_monthly_control", "global_trade_through_owned_territory_efficiency",
     "global_production_efficiency", "research_speed_modifier", "stability_cost_efficiency",
+    "cultures_capacity", "court_spending_efficiency", "monthly_rebel_growth",
+    "pop_join_rebel_threshold",
     "monthly_towards_free_subjects",
     "crown_estate_power_from_cabinet", "nobles_estate_power_from_cabinet",
     "clergy_estate_power_from_cabinet", "burghers_estate_power_from_cabinet",
@@ -101,10 +148,11 @@ MODIFIER_KEYS |= frozenset(
 
 POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
     "antq_principate": (
-        "global_nobles_estate_power=0.10|global_burghers_estate_power=0.05|"
+        "global_crown_estate_power=0.18|global_nobles_estate_power=0.06|"
+        "global_burghers_estate_power=0.05|crown_estate_power_from_cabinet=0.20|"
         "nobles_estate_power_from_cabinet=0.15|replace_cabinet_member_cost_modifier=0.10",
         "P8.1;P11;P13;OCD", "secure",
-        "Senatorial and equestrian access matters, but replacement carries patronage friction.",
+        "Augustan tribunician and proconsular authority materially strengthens the princeps, while senatorial cabinet leverage plus equestrian access preserve negotiated government and patronage friction below the later Dominate.",
     ),
     "antq_dominate": (
         "global_nobles_estate_power=-0.05|crown_estate_power_from_cabinet=0.25|"
@@ -1006,13 +1054,14 @@ POLITICAL_CONTRACTS: dict[str, tuple[str, str, str, str]] = {
     ),
     "antq_tribal_kingdom": (
         "global_nobles_estate_power=0.10|tribes_estate_power_from_cabinet=0.25|"
-        "replace_cabinet_member_cost_modifier=0.05",
+        "replace_cabinet_member_cost_modifier=0.05|court_spending_efficiency=0.35",
         "P8.7;P13;CAH-XI", "secure",
         "A leading house rules through powerful kindreds and office-bearing retainers.",
     ),
 }
 
 ALTERNATIVE_REFORM_OUTPUT = ROOT / "docs/m6/alternative_reform_paths.csv"
+REFORM_VISIBILITY_OUTPUT = ROOT / "docs/m6/reform_visibility_matrix.csv"
 ALTERNATIVE_REFORMS: tuple[tuple[str, str, str, str, str, str, str, str, str], ...] = (
     ("antq_augustan_dyarchy", "roman", "monarchy", "Augustan Dyarchy",
      "Balance the princeps' household administration with senatorial commissions and equestrian execution.",
@@ -1711,6 +1760,26 @@ PROFILE_BASE_REFORMS: dict[str, tuple[str, ...]] = {
         "antq_windward_island_ceramic_network",
         "antq_central_california_coastal_network",
         "antq_acutuba_central_amazon_network",
+        "antq_bengal_riverine_community_network",
+        "antq_eastern_megalithic_community_network",
+        "antq_eastern_hill_valley_network",
+        "antq_himalayan_highland_network",
+        "antq_far_side_port_chiefdom",
+        "antq_horn_pastoral_network",
+        "antq_west_african_savanna_compound_network",
+        "antq_west_african_ironworking_network",
+        "antq_west_african_forest_network",
+        "antq_early_ironworking_community_network",
+        "antq_mobile_hunter_herder_network",
+        "antq_mesoamerican_formative_civic_network",
+        "antq_mesoamerican_highland_community_network",
+        "antq_mesoamerican_exchange_corridor_network",
+        "antq_mesoamerican_urban_ritual_center",
+        "antq_west_mexican_shaft_tomb_chiefdom",
+        "antq_teuchitlan_civic_center_network",
+        "antq_west_mexican_basin_community_network",
+        "antq_west_mexican_highland_corridor_network",
+        "antq_sonoran_desert_farming_network",
     ),
     "sacral": (),
     "royal": (
@@ -1879,6 +1948,45 @@ def alternative_reform_ledger() -> str:
     return output.getvalue()
 
 
+def reform_visibility_matrix(data: PowerData) -> str:
+    """Render the exact opening reform family visible to every AD 1 tag."""
+    profile_by_base = {
+        reform: profile
+        for profile, base_reforms in PROFILE_BASE_REFORMS.items()
+        for reform in base_reforms
+    }
+    alternatives_by_profile = {
+        profile: tuple(row[0] for row in reform_path_rows() if row[1] == profile)
+        for profile in PROFILE_BASE_REFORMS
+    }
+    stream = io.StringIO(newline="")
+    writer = csv.writer(stream, lineterminator="\n")
+    writer.writerow(("design_tag", "engine_tag", "opening_reform", "profile", "visible_reforms"))
+    with POLITIES.open(encoding="utf-8-sig", newline="") as handle:
+        for polity in sorted(csv.DictReader(handle), key=lambda row: row["tag"]):
+            government = data.governments.get(polity["tag"])
+            opening = (
+                government["reform"]
+                if government
+                else (
+                    "antq_advanced_chiefdom"
+                    if polity["kind"] == "sop"
+                    else "antq_regional_kingship"
+                )
+            )
+            profile = profile_by_base.get(opening, "")
+            if not profile:
+                raise ValueError(f"opening reform {opening} has no visibility profile")
+            visible = {opening, *alternatives_by_profile[profile]}
+            if polity["tag"] == "ROM":
+                visible.add("antq_dominate")
+            writer.writerow((
+                polity["tag"], data.tags[polity["tag"]], opening, profile,
+                "|".join(sorted(visible)),
+            ))
+    return stream.getvalue()
+
+
 def has_named_active_head(government: dict[str, str]) -> bool:
     """Recognize both ordinary rulers and the verified Han regency shape."""
     return government["ruler"] != "random" and bool(
@@ -1990,6 +2098,19 @@ def load_power_data() -> PowerData:
         for key, _ in parsed_modifiers:
             if key not in MODIFIER_KEYS:
                 failures.append(f"privilege {row['key']} uses unharvested modifier {key}")
+        estate_power_key = {
+            "nobles_estate": "global_nobles_estate_power",
+            "clergy_estate": "global_clergy_estate_power",
+            "burghers_estate": "global_burghers_estate_power",
+            "peasants_estate": "global_peasants_estate_power",
+            "tribes_estate": "global_tribes_estate_power",
+        }.get(row["estate"])
+        if estate_power_key and estate_power_key not in {
+            key for key, _ in parsed_modifiers
+        }:
+            failures.append(
+                f"privilege {row['key']} has no power set for {row['estate']}"
+            )
         if row["confidence"] not in {"secure", "contested"}:
             failures.append(f"privilege {row['key']} has invalid confidence {row['confidence']}")
         if row["potential_reforms"]:
@@ -2446,10 +2567,24 @@ def character_manager(data: PowerData) -> str:
         "# Pre-campaign biography dates remain sourced ledger metadata and are never emitted.",
         "character_db = {",
     ]
+    runtime_bce_officeholders = {
+        "antq_gaius_caesar",
+        "antq_livia",
+    }
     for row in data.characters:
+        # The two non-ruler BCE officeholders are supplied by the runtime age
+        # adapter.  Augustus and Phraates remain serialized as stable office
+        # placeholders so country initialization cannot pick a random head.
+        if row["key"] in runtime_bce_officeholders:
+            continue
+        first_name_key = (
+            "antq_m6_placeholder_ruler"
+            if row["key"] in {"antq_augustus", "antq_phraates_v"}
+            else row["key"]
+        )
         lines.extend((
             f"\t{row['key']} = {{",
-            f"\t\tfirst_name = {{ name = {row['key']} }}",
+            f"\t\tfirst_name = {{ name = {first_name_key} }}",
             f"\t\tculture = {row['culture']}",
             f"\t\treligion = {row['religion']}",
         ))
@@ -2481,78 +2616,549 @@ def character_manager(data: PowerData) -> str:
     return "\n".join(lines)
 
 
-def character_bootstrap(data: PowerData) -> str:
-    """Restore BCE-born opening office-holders through the runtime age contract.
-
-    Bookmark ``character_db`` rejects signed dates, while the native
-    ``create_character`` effect accepts an explicit age.  Creating only the
-    affected current office-holders on game start preserves the AD 1 calendar,
-    their sourced names and abilities, and the engine's adult-ruler invariant.
-    """
+def runtime_adult_officeholders(data: PowerData) -> frozenset[str]:
+    """Return named opening officeholders whose adult age predates the calendar."""
     characters = {row["key"]: row for row in data.characters}
-    offices: dict[str, list[tuple[str, dict[str, str]]]] = {}
-    for design_tag, government in sorted(data.governments.items()):
-        for role in ("ruler", "heir", "active_regent"):
-            key = government[role]
+    keys: set[str] = set()
+    for government in data.governments.values():
+        for field in ("ruler", "consort", "active_regent"):
+            key = government[field]
             if not key or key == "random":
                 continue
-            row = characters[key]
-            if row["birth_date"] and BiographyDate.parse(row["birth_date"]).year < 1:
-                offices.setdefault(design_tag, []).append((role, row))
+            character = characters[key]
+            birth = character["birth_date"]
+            if not birth or BiographyDate.parse(birth).year < 1:
+                keys.add(key)
+    return frozenset(keys)
 
+
+def runtime_adult_rulers(data: PowerData) -> frozenset[str]:
+    officeholders = runtime_adult_officeholders(data)
+    return frozenset(
+        row["ruler"] for row in data.governments.values()
+        if row["ruler"] in officeholders
+    )
+
+
+def character_bootstrap(data: PowerData) -> str:
+    """Install adult pre-calendar officeholders without invoking succession."""
+    characters = {row["key"]: row for row in data.characters}
+    keys = (
+        "antq_augustus",
+        "antq_gaius_caesar",
+        "antq_livia",
+        "antq_phraates_v",
+    )
+    if any(key not in characters for key in keys):
+        raise ValueError("BCE officeholder bootstrap lacks a required source row")
+    varus_key = "antq_publius_quinctilius_varus"
+    if varus_key not in characters:
+        raise ValueError("Roman officeholder bootstrap lacks the sourced Varus record")
+    varus = characters[varus_key]
     lines = [
-        "# Generated by tools/m6_power.py --write; BCE opening-office recovery.",
-        "# Bookmark character_db cannot encode BCE dates; runtime age is engine-native.",
+        "# Generated by tools/m6_power.py --write; adult pre-calendar officeholder adapter.",
+        "# Bookmark dates cannot express BCE adult ages; install them before play begins.",
         "on_game_start = {",
-        "\ton_actions = { antq_m6_restore_bce_officeholders }",
+        "\ton_actions = { antq_m6_restore_roman_officeholders }",
         "}",
         "",
-        "antq_m6_restore_bce_officeholders = {",
+        "antq_m6_restore_roman_officeholders = {",
         "\teffect = {",
+        f"\t\tc:{data.tags['ROM']} = {{",
     ]
-    restored = 0
-    for design_tag, entries in sorted(offices.items()):
-        lines.append(f"\t\tc:{data.tags[design_tag]} = {{")
-        scopes: dict[str, str] = {}
-        for role, row in entries:
-            key = row["key"]
-            scope = f"antq_m6_{key}"
-            scopes[role] = scope
+    scopes: dict[str, str] = {}
+
+    def append_runtime_character(key: str) -> None:
+        row = characters[key]
+        if row["birth_date"]:
             birth = BiographyDate.parse(row["birth_date"])
-            # There is no year zero in the source ledger.  An exact birthday is
-            # immaterial to eligibility, so keep the historically correct whole
-            # years elapsed at the AD 1 boundary without inventing a day.
-            age = max(1, -birth.year)
+            if birth.year >= 1:
+                raise ValueError(f"{key}: runtime bootstrap expects a pre-calendar adult")
+            age_range = f"{abs(birth.year)} {abs(birth.year)}"
+        else:
+            # The source establishes an adult officeholder but deliberately
+            # does not invent a precise birth year.  Retain that uncertainty.
+            age_range = "25 60"
+        scope = f"antq_m6_adult_{key.removeprefix('antq_')}"
+        scopes[key] = scope
+        lines.extend((
+            "\t\t\tcreate_character = {",
+            f"\t\t\t\tfirst_name = {key}",
+            f"\t\t\t\tculture = culture:{row['culture']}",
+            f"\t\t\t\treligion = religion:{row['religion']}",
+            f"\t\t\t\tdynasty = dynasty:{row['dynasty']}",
+        ))
+        if row["birthplace"]:
+            lines.append(f"\t\t\t\tbirth_location = location:{row['birthplace']}")
+        lines.extend((
+            "\t\t\t\testate = estate_type:nobles_estate",
+            f"\t\t\t\tage = {{ {age_range} }}",
+        ))
+        if row["female"] == "yes":
+            lines.append("\t\t\t\tfemale = yes")
+        lines.extend((
+            f"\t\t\t\tsave_scope_as = {scope}",
+            "\t\t\t}",
+        ))
+
+    for key in ("antq_augustus", "antq_gaius_caesar", "antq_livia"):
+        append_runtime_character(key)
+    lines.extend((
+        f"\t\t\tcharacter:{varus_key} ?= {{ save_scope_as = antq_m6_placeholder_varus }}",
+        "\t\t\tkill_character_silently = scope:antq_m6_placeholder_varus",
+        "\t\t\t# BM-VAR establishes an adult Roman official, but not a precise birth date.",
+        "\t\t\tcreate_character = {",
+        f"\t\t\t\tfirst_name = {varus_key}",
+        f"\t\t\t\tculture = culture:{varus['culture']}",
+        f"\t\t\t\treligion = religion:{varus['religion']}",
+        f"\t\t\t\tdynasty = dynasty:{varus['dynasty']}",
+        "\t\t\t\tbirth_location = location:rome",
+        "\t\t\t\testate = estate_type:nobles_estate",
+        "\t\t\t\tage = { 40 55 }",
+        "\t\t\t\tsave_scope_as = antq_m6_adult_varus",
+        "\t\t\t}",
+        "\t\t\tset_variable = { name = antq_teutoburg_varus value = scope:antq_m6_adult_varus }",
+        f"\t\t\tset_as_designated_heir = scope:{scopes['antq_gaius_caesar']}",
+        f"\t\t\tscope:{scopes['antq_augustus']} = {{",
+        f"\t\t\t\tmarry_character = scope:{scopes['antq_livia']}",
+        "\t\t\t}",
+        f"\t\t\tset_new_ruler_no_update = scope:{scopes['antq_augustus']}",
+        "\t\t\tkill_character_silently = character:antq_augustus",
+        "\t\t\treset_regency = yes",
+        "\t\t}",
+        f"\t\tc:{data.tags['PAR']} = {{",
+    ))
+    append_runtime_character("antq_phraates_v")
+    append_runtime_character("antq_musa")
+    lines.extend((
+        f"\t\t\tscope:{scopes['antq_phraates_v']} = {{",
+        f"\t\t\t\tmarry_character = scope:{scopes['antq_musa']}",
+        "\t\t\t}",
+        f"\t\t\tset_new_ruler_no_update = scope:{scopes['antq_phraates_v']}",
+        "\t\t\tkill_character_silently = character:antq_phraates_v",
+        "\t\t\tkill_character_silently = character:antq_musa",
+        "\t\t\treset_regency = yes",
+        "\t\t}",
+    ))
+    for government in sorted(data.governments.values(), key=lambda row: row["design_tag"]):
+        ruler_key = government["ruler"]
+        if ruler_key not in runtime_adult_rulers(data) or ruler_key in {
+            "antq_augustus", "antq_phraates_v"
+        }:
+            continue
+        tag = data.tags[government["design_tag"]]
+        old_ruler_scope = f"antq_m6_old_{government['design_tag'].lower()}_ruler"
+        placeholder_scope = f"antq_m6_placeholder_{ruler_key.removeprefix('antq_')}"
+        lines.extend((
+            f"\t\tc:{tag} = {{",
+            f"\t\t\truler ?= {{ save_scope_as = {old_ruler_scope} }}",
+            f"\t\t\tcharacter:{ruler_key} ?= {{ save_scope_as = {placeholder_scope} }}",
+            f"\t\t\tkill_character_silently = scope:{placeholder_scope}",
+        ))
+        append_runtime_character(ruler_key)
+        consort_key = government["consort"]
+        if consort_key in runtime_adult_officeholders(data):
+            consort_placeholder = (
+                f"antq_m6_placeholder_{consort_key.removeprefix('antq_')}"
+            )
             lines.extend((
-                "\t\t\tcreate_character = {",
-                f"\t\t\t\tfirst_name = {key}",
-                f"\t\t\t\tculture = culture:{row['culture']}",
-                f"\t\t\t\treligion = religion:{row['religion']}",
-                "\t\t\t\testate = estate_type:nobles_estate",
-                f"\t\t\t\tage = {{ {age} {age} }}",
-                f"\t\t\t\tsave_scope_as = {scope}",
+                f"\t\t\tcharacter:{consort_key} ?= {{ save_scope_as = {consort_placeholder} }}",
+                f"\t\t\tkill_character_silently = scope:{consort_placeholder}",
+            ))
+            append_runtime_character(consort_key)
+            lines.extend((
+                f"\t\t\tscope:{scopes[ruler_key]} = {{",
+                f"\t\t\t\tmarry_character = scope:{scopes[consort_key]}",
                 "\t\t\t}",
             ))
-            if row["female"] == "yes":
-                lines.insert(-2, "\t\t\t\tfemale = yes")
-            if all(row[field] for field in ("adm", "dip", "mil")):
-                lines.insert(-2, f"\t\t\t\tadm = {row['adm']} dip = {row['dip']} mil = {row['mil']}")
-            restored += 1
-        if "ruler" in scopes:
-            lines.append(f"\t\t\tset_new_ruler = scope:{scopes['ruler']}")
-        if "heir" in scopes:
-            lines.append(f"\t\t\tset_as_designated_heir = scope:{scopes['heir']}")
-        if "active_regent" in scopes:
-            lines.append(f"\t\t\tset_regent = scope:{scopes['active_regent']}")
-        lines.append("\t\t}")
-    lines.extend(("\t}", "}", ""))
-    if restored != 4:
-        raise ValueError(f"expected four BCE opening office-holders, found {restored}")
+        lines.extend((
+            # Close the bookmark-generated random ruler's term before
+            # installing the sourced adult. Killing it after replacement alone
+            # leaves two simultaneously active term records in EU5 1.3.11.
+            f"\t\t\tscope:{old_ruler_scope} = {{ remove_ruler = root }}",
+            f"\t\t\tset_new_ruler = scope:{scopes[ruler_key]}",
+            f"\t\t\tkill_character_silently = scope:{old_ruler_scope}",
+            "\t\t}",
+        ))
+
+    # Han begins in a sourced regency.  Its BCE-born regent needs the same
+    # runtime adult treatment even though he is not the ruler.
+    han = data.governments["HAN"]
+    regent_key = han["active_regent"]
+    regent_placeholder = f"antq_m6_placeholder_{regent_key.removeprefix('antq_')}"
+    lines.extend((
+        f"\t\tc:{data.tags['HAN']} = {{",
+        f"\t\t\tcharacter:{regent_key} ?= {{ save_scope_as = {regent_placeholder} }}",
+        f"\t\t\tkill_character_silently = scope:{regent_placeholder}",
+    ))
+    append_runtime_character(regent_key)
+    lines.extend((
+        f"\t\t\tset_regent = scope:{scopes[regent_key]}",
+        "\t\t}",
+        "\t}",
+        "}",
+        "",
+    ))
     return "\n".join(lines)
 
 
+def character_manager(data: PowerData) -> str:
+    """Do not serialize impossible pre-calendar births into the bookmark DB."""
+    return "\n".join((
+        "# Generated by tools/m6_power.py --write.",
+        "# AD 1 cannot encode BCE births in the bookmark calendar; all sourced",
+        "# living court characters are created with bounded ages on game start.",
+        "character_db = {",
+        "}",
+        "",
+    ))
+
+
+def character_bootstrap(data: PowerData) -> str:
+    """Create the complete sourced living court roster at valid runtime ages."""
+    officeholders = runtime_adult_officeholders(data)
+    characters_by_tag: defaultdict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in data.characters:
+        characters_by_tag[row["design_tag"]].append(row)
+    character_keys = {row["key"] for row in data.characters}
+    scopes = {
+        key: f"antq_m6_living_{key.removeprefix('antq_')}"
+        for key in character_keys
+    }
+    lines = [
+        "# Generated by tools/m6_power.py --write; complete AD 1 living-court bootstrap.",
+        "# Exact BCE births retain their sourced opening age. Undated adults and",
+        "# court-context people use explicit bounded ranges rather than invented dates.",
+        "on_game_start = {",
+        "\ton_actions = { antq_m6_create_living_courts }",
+        "}",
+        "",
+        "antq_m6_create_living_courts = {",
+        "\teffect = {",
+    ]
+
+    def age_range(row: dict[str, str]) -> str:
+        if row["birth_date"]:
+            birth = BiographyDate.parse(row["birth_date"])
+            if birth.year >= 1:
+                raise ValueError(f"{row['key']}: bootstrap age expects a BCE birth")
+            age = abs(birth.year)
+            return f"{age} {age}"
+        if row["key"] == "antq_publius_quinctilius_varus":
+            # His sourced governorship from 8 BCE establishes an adult Roman
+            # official at the bookmark even though the reviewed ledger avoids
+            # claiming a disputed exact birth year.  Keep him old enough to be
+            # a credible commander throughout the contingent AD 9 chain.
+            return "40 55"
+        if row["key"] in officeholders:
+            return "25 60"
+        # The source establishes presence at court, not an exact life stage.
+        return "0 65"
+
+    for design_tag in sorted(characters_by_tag):
+        tag = data.tags[design_tag]
+        lines.append(f"\t\tc:{tag} = {{")
+        for row in sorted(characters_by_tag[design_tag], key=lambda item: item["key"]):
+            # Rome's engine-created 1 January term is retained as a one-day
+            # opening identity carrier below.  Keep the sourced age-63
+            # character anonymous until the clean 2 January term handoff so
+            # the live court never contains two visible Augustuses.
+            first_name = (
+                "antq_m6_placeholder_ruler"
+                if row["key"] == "antq_augustus"
+                else row["key"]
+            )
+            lines.extend((
+                "\t\t\tcreate_character = {",
+                f"\t\t\t\tfirst_name = {first_name}",
+                f"\t\t\t\tculture = culture:{row['culture']}",
+                f"\t\t\t\treligion = religion:{row['religion']}",
+                f"\t\t\t\tdynasty = dynasty:{row['dynasty']}",
+            ))
+            if row["birthplace"]:
+                lines.append(f"\t\t\t\tbirth_location = location:{row['birthplace']}")
+            if row["key"] in officeholders:
+                lines.append("\t\t\t\testate = estate_type:nobles_estate")
+            if row["female"] == "yes":
+                lines.append("\t\t\t\tfemale = yes")
+            lines.extend((
+                f"\t\t\t\tage = {{ {age_range(row)} }}",
+                f"\t\t\t\tsave_scope_as = {scopes[row['key']]}",
+                "\t\t\t}",
+            ))
+            if row["key"] in HISTORICAL_LIFESPAN_GUARDED:
+                lines.extend((
+                    f"\t\t\tscope:{scopes[row['key']]} = {{",
+                    "\t\t\t\tadd_character_modifier = { modifier = "
+                    f"{ROMAN_SUCCESSION_GUARD} years = -1 mode = add_and_extend }}",
+                    "\t\t\t}",
+                ))
+
+        government = data.governments.get(design_tag)
+        if government is not None:
+            ruler_key = government["ruler"]
+            # Han's securely sourced minor monarch is represented in the ledger
+            # as the regency heir rather than a concurrent bookmark ruler.
+            if design_tag == "HAN":
+                ruler_key = government["heir"]
+            if ruler_key and ruler_key != "random":
+                lines.extend((
+                    "\t\t\tset_variable = { name = antq_m6_opening_ruler "
+                    f"value = scope:{scopes[ruler_key]} }}",
+                    # A one-day transition is required by the engine's dated
+                    # ruler-term container. Replacing a bookmark-generated
+                    # ruler on 1.1.1 creates two same-day active terms even
+                    # when the old character is retired first.
+                    "\t\t\ttrigger_event_silently = { id = antq_m6.1 days = 1 }",
+                ))
+                if design_tag == "ROM":
+                    # EU5 creates a valid current term before on_game_start.
+                    # Replacing its holder on the same date produces an
+                    # overlapping-term diagnostic.  Instead, make that exact
+                    # live holder Augustus for the first playable day, then
+                    # hand the office to the sourced age-63 character on the
+                    # next date.  This preserves immediate identity, a single
+                    # active term, and the historically correct age horizon.
+                    augustus = next(
+                        row for row in characters_by_tag[design_tag]
+                        if row["key"] == "antq_augustus"
+                    )
+                    lines.extend((
+                        "\t\t\truler ?= {",
+                        "\t\t\t\tset_first_name = antq_augustus",
+                        f"\t\t\t\tchange_character_culture = culture:{augustus['culture']}",
+                        f"\t\t\t\tchange_character_religion = religion:{augustus['religion']}",
+                        f"\t\t\t\tchange_dynasty = dynasty:{augustus['dynasty']}",
+                        "\t\t\t\tchange_character_estate = estate_type:nobles_estate",
+                        "\t\t\t\tadd_character_modifier = { modifier = "
+                        f"{ROMAN_SUCCESSION_GUARD} years = -1 mode = add_and_extend }}",
+                        "\t\t\t}",
+                    ))
+            heir_key = government["heir"]
+            if heir_key and design_tag != "HAN":
+                lines.append(
+                    f"\t\t\tset_as_designated_heir = scope:{scopes[heir_key]}"
+                )
+            consort_key = government["consort"]
+            if consort_key and ruler_key and ruler_key != "random":
+                if design_tag == "ROM":
+                    lines.extend((
+                        "\t\t\truler ?= {",
+                        f"\t\t\t\tmarry_character = scope:{scopes[consort_key]}",
+                        "\t\t\t}",
+                        "\t\t\tset_variable = { name = antq_m6_opening_consort "
+                        f"value = scope:{scopes[consort_key]} }}",
+                    ))
+                else:
+                    lines.extend((
+                        f"\t\t\tscope:{scopes[ruler_key]} = {{",
+                        f"\t\t\t\tmarry_character = scope:{scopes[consort_key]}",
+                        "\t\t\t}",
+                    ))
+            regent_key = government["active_regent"]
+            if regent_key:
+                lines.append(f"\t\t\tset_regent = scope:{scopes[regent_key]}")
+        if design_tag == "ROM":
+            varus = scopes["antq_publius_quinctilius_varus"]
+            lines.append(
+                f"\t\t\tset_variable = {{ name = antq_teutoburg_varus value = scope:{varus} }}"
+            )
+            lines.extend((
+                "\t\t\tadd_country_modifier = { modifier = antq_augustan_auctoritas years = -1 }",
+                "\t\t\trandom_character = {",
+                "\t\t\t\tlimit = { is_adult = yes in_cabinet = no NOT = { is_heir = yes } }",
+                "\t\t\t\tsave_scope_as = antq_m6_officer_1",
+                "\t\t\t}",
+                "\t\t\tif = {",
+                "\t\t\t\tlimit = { exists = scope:antq_m6_officer_1 }",
+                "\t\t\t\tadd_character_to_first_open_cabinet = { target = scope:antq_m6_officer_1 }",
+                "\t\t\t}",
+                "\t\t\trandom_character = {",
+                "\t\t\t\tlimit = { is_adult = yes in_cabinet = no NOT = { is_heir = yes } }",
+                "\t\t\t\tsave_scope_as = antq_m6_officer_2",
+                "\t\t\t}",
+                "\t\t\tif = {",
+                "\t\t\t\tlimit = { exists = scope:antq_m6_officer_2 }",
+                "\t\t\t\tadd_character_to_first_open_cabinet = { target = scope:antq_m6_officer_2 }",
+                "\t\t\t}",
+                "\t\t\trandom_character = {",
+                "\t\t\t\tlimit = { is_adult = yes in_cabinet = no NOT = { is_heir = yes } }",
+                "\t\t\t\tsave_scope_as = antq_m6_officer_3",
+                "\t\t\t}",
+                "\t\t\tif = {",
+                "\t\t\t\tlimit = { exists = scope:antq_m6_officer_3 }",
+                "\t\t\t\tadd_character_to_first_open_cabinet = { target = scope:antq_m6_officer_3 }",
+                "\t\t\t}",
+            ))
+            for key in sorted(ROMAN_SUCCESSION_GUARDED):
+                if key == "antq_augustus":
+                    continue
+                short_key = key.removeprefix("antq_")
+                lines.append(
+                    f"\t\t\tset_variable = {{ name = antq_m6_roman_{short_key} "
+                    f"value = scope:{scopes[key]} }}"
+                )
+        lines.append("\t\t}")
+    lines.extend(("\t}", "}", ""))
+    return "\n".join(lines)
+
+
+def ruler_guard_modifier() -> str:
+    """Prevent random mortality from corrupting sourced dated character arcs."""
+    return "\n".join((
+        "# Generated by tools/m6_power.py --write.",
+        "# Removed by sourced chronology events; it is never permanent.",
+        f"{ROMAN_SUCCESSION_GUARD} = {{",
+        "\tis_immortal = yes",
+        "}",
+        "",
+        "antq_augustan_auctoritas = {",
+        "\tglobal_crown_estate_power = 0.12",
+        "}",
+        "",
+    ))
+
+
+def ruler_transition_event() -> str:
+    """Install sourced heads and preserve Rome's documented early succession."""
+    return "\n".join((
+        "namespace = antq_m6",
+        "",
+        "antq_m6.1 = {",
+        "\ttype = country_event",
+        "\thidden = yes",
+        "\ttitle = empty_text",
+        "\timmediate = {",
+        "\t\tif = {",
+        "\t\t\tlimit = { has_variable = antq_m6_opening_ruler }",
+        "\t\t\truler ?= { save_scope_as = antq_m6_departing_ruler }",
+        "\t\t\tvar:antq_m6_opening_ruler ?= {",
+        "\t\t\t\tsave_scope_as = antq_m6_opening_ruler_scope",
+        "\t\t\t}",
+        "\t\t\tif = {",
+        "\t\t\t\tlimit = { tag = XAA }",
+        "\t\t\t\tvar:antq_m6_opening_ruler = {",
+        "\t\t\t\t\tset_first_name = antq_augustus",
+        "\t\t\t\t}",
+        "\t\t\t\tvar:antq_m6_opening_consort ?= {",
+        "\t\t\t\t\tsave_scope_as = antq_m6_handoff_consort",
+        "\t\t\t\t}",
+        "\t\t\t}",
+        "\t\t\tif = {",
+        "\t\t\t\tlimit = { exists = scope:antq_m6_opening_ruler_scope }",
+        "\t\t\t\tset_new_ruler_no_update = scope:antq_m6_opening_ruler_scope",
+        "\t\t\t}",
+        "\t\t\tif = {",
+        "\t\t\t\tlimit = { exists = scope:antq_m6_departing_ruler }",
+        "\t\t\t\tkill_character_silently = scope:antq_m6_departing_ruler",
+        "\t\t\t}",
+        "\t\t\tif = {",
+        "\t\t\t\tlimit = {",
+        "\t\t\t\t\ttag = XAA",
+        "\t\t\t\t\thas_variable = antq_m6_opening_consort",
+        "\t\t\t\t}",
+        "\t\t\t\tvar:antq_m6_opening_ruler = {",
+        "\t\t\t\t\tmarry_character_ignore_blocks = scope:antq_m6_handoff_consort",
+        "\t\t\t\t}",
+        "\t\t\t}",
+        "\t\t\tif = {",
+        "\t\t\t\tlimit = { tag = XAA }",
+        "\t\t\t\tset_variable = { name = antq_m6_roman_augustus value = var:antq_m6_opening_ruler }",
+        "\t\t\t\tremove_variable = antq_m6_opening_consort",
+        "\t\t\t}",
+        "\t\t\tremove_variable = antq_m6_opening_ruler",
+        "\t\t}",
+        "\t}",
+        "}",
+        "",
+        "# Gaius Caesar died in AD 4; Tiberius then became Augustus's heir.",
+        "antq_m6.2 = {",
+        "\ttype = country_event",
+        "\thidden = yes",
+        "\ttitle = empty_text",
+        "\tfire_only_once = yes",
+        "\tdynamic_historical_event = {",
+        "\t\ttag = XAA",
+        "\t\tfrom = 4.2.21",
+        "\t\tto = 4.3.21",
+        "\t\tmonthly_chance = 100",
+        "\t}",
+        "\timmediate = {",
+        "\t\tif = {",
+        "\t\t\tlimit = { has_variable = antq_m6_roman_gaius_caesar }",
+        "\t\t\tvar:antq_m6_roman_gaius_caesar = {",
+        f"\t\t\t\tremove_character_modifier = {ROMAN_SUCCESSION_GUARD}",
+        "\t\t\t\tsave_scope_as = antq_m6_departing_gaius_caesar",
+        "\t\t\t}",
+        "\t\t\tkill_character_silently = scope:antq_m6_departing_gaius_caesar",
+        "\t\t\tremove_variable = antq_m6_roman_gaius_caesar",
+        "\t\t}",
+        "\t\tif = {",
+        "\t\t\tlimit = { has_variable = antq_m6_roman_tiberius }",
+        "\t\t\tvar:antq_m6_roman_tiberius = { save_scope_as = antq_m6_tiberius_heir_scope }",
+        "\t\t\tset_as_designated_heir = scope:antq_m6_tiberius_heir_scope",
+        "\t\t}",
+        "\t}",
+        "}",
+        "",
+        "# Augustus died on 19 August AD 14; Tiberius succeeds without a regency.",
+        "antq_m6.3 = {",
+        "\ttype = country_event",
+        "\thidden = yes",
+        "\ttitle = empty_text",
+        "\tfire_only_once = yes",
+        "\tdynamic_historical_event = {",
+        "\t\ttag = XAA",
+        "\t\tfrom = 14.8.19",
+        "\t\tto = 14.9.19",
+        "\t\tmonthly_chance = 100",
+        "\t}",
+        "\timmediate = {",
+        "\t\tif = {",
+        "\t\t\tlimit = {",
+        "\t\t\t\thas_variable = antq_m6_roman_augustus",
+        "\t\t\t\thas_variable = antq_m6_roman_tiberius",
+        "\t\t\t}",
+        "\t\t\tvar:antq_m6_roman_augustus = {",
+        f"\t\t\t\tremove_character_modifier = {ROMAN_SUCCESSION_GUARD}",
+        "\t\t\t\tsave_scope_as = antq_m6_departing_augustus",
+        "\t\t\t}",
+        "\t\t\tvar:antq_m6_roman_tiberius = {",
+        "\t\t\t\tsave_scope_as = antq_m6_succeeding_tiberius",
+        "\t\t\t}",
+        "\t\t\tset_new_ruler_no_update = scope:antq_m6_succeeding_tiberius",
+        "\t\t\tkill_character_silently = scope:antq_m6_departing_augustus",
+        "\t\t\tremove_variable = antq_m6_roman_augustus",
+        "\t\t\tcreate_character = {",
+        "\t\t\t\tculture = culture:antq_latin",
+        "\t\t\t\treligion = religion:antq_religio_romana",
+        "\t\t\t\tdynasty = dynasty:antq_julio_claudian_dynasty",
+        "\t\t\t\testate = estate_type:nobles_estate",
+        "\t\t\t\tage = { 20 30 }",
+        "\t\t\t\tsave_scope_as = antq_m6_roman_succession_reserve_scope",
+        "\t\t\t}",
+        "\t\t\tscope:antq_m6_roman_succession_reserve_scope = {",
+        f"\t\t\t\tadd_character_modifier = {{ modifier = {ROMAN_SUCCESSION_GUARD} years = -1 mode = add_and_extend }}",
+        "\t\t\t}",
+        "\t\t\tset_variable = { name = antq_m6_roman_succession_reserve value = scope:antq_m6_roman_succession_reserve_scope }",
+        "\t\t\tset_as_designated_heir = scope:antq_m6_roman_succession_reserve_scope",
+        "\t\t}",
+        "\t\tif = {",
+        "\t\t\tlimit = { has_variable = antq_m6_roman_livia }",
+        "\t\t\tvar:antq_m6_roman_livia = {",
+        f"\t\t\t\tremove_character_modifier = {ROMAN_SUCCESSION_GUARD}",
+        "\t\t\t}",
+        "\t\t\tremove_variable = antq_m6_roman_livia",
+        "\t\t}",
+        "\t}",
+        "}",
+        "",
+    ))
+
+
 def government_block(
-    row: dict[str, str], current_term: dict[str, str] | None = None
+    row: dict[str, str], current_term: dict[str, str] | None = None,
+    runtime_rulers: frozenset[str] = frozenset({"antq_augustus", "antq_phraates_v"}),
 ) -> list[str]:
     lines = [
         "\t\t\tgovernment = {",
@@ -2568,14 +3174,11 @@ def government_block(
         ),
         "\t\t\t\t}",
     ]
-    if row["ruler"]:
+    runtime_named_ruler = row["ruler"] in runtime_rulers
+    if runtime_named_ruler or row["regency"]:
+        lines.append("\t\t\t\truler = random")
+    elif row["ruler"]:
         lines.append(f"\t\t\t\truler = {row['ruler']}")
-    if current_term:
-        lines.append("\t\t\t\truler_term = {")
-        lines.append(f"\t\t\t\t\tcharacter = {current_term['character']}")
-        if current_term["regnal_number"]:
-            lines.append(f"\t\t\t\t\tregnal_number = {current_term['regnal_number']}")
-        lines.append("\t\t\t\t}")
 
     def append_field(field: str) -> None:
         if row[field]:
@@ -2586,16 +3189,8 @@ def government_block(
             )
             lines.append(f"\t\t\t\t{field} = {value}")
 
-    if row["regency"]:
-        # Match the installed native regency shape.  The source ledger retains
-        # the sitting head, but an open ruler_term at exactly 1.1.1 is rejected
-        # by the installed engine as a future term; the heir field supplies the
-        # current head for the start state.
-        for field in ("regency", "active_regent", "start_regency_date", "end_regency_date", "heir", "consort"):
-            append_field(field)
-    else:
-        for field in ("heir", "consort", "active_regent", "regency", "start_regency_date", "end_regency_date"):
-            append_field(field)
+    # Every named officeholder is installed by the runtime court bootstrap;
+    # bookmark references would resolve to impossible age-zero BCE records.
     lines.extend((
         "\t\t\t\treforms = {",
         f"\t\t\t\t\t{row['reform']}",
@@ -2609,6 +3204,10 @@ def government_block(
     # holder potentials and isolated unlocks keep foreign law systems invisible.
     profile_laws = s2_starting_laws_by_tag()[row["design_tag"]]
     lines.append("\t\t\t\tlaws = {")
+    lines.extend((
+        "\t\t\t\t\tmarriage_law = monogamous_marriage",
+        "\t\t\t\t\their_religion_law = heir_same_religion",
+    ))
     lines.extend(
         f"\t\t\t\t\t{law} = {option}"
         for law, option in profile_laws
@@ -2619,7 +3218,82 @@ def government_block(
     return lines
 
 
-def reforms() -> str:
+def apply_ancient_subsistence_floor(rendered: str) -> str:
+    """Give every ancient government the same small subsistence adapter.
+
+    Runtime province ledgers showed natural food balances missing break-even
+    by roughly ten percent after the opening reserves drained.  XEQ's seven
+    provinces, for example, carried a 46.7-unit structural deficit against
+    495.6 units of consumption in AD 3; a first three-percent candidate reduced
+    the deficit to 32.9 but still made minimum provisioning cost the state its
+    whole tax income.  Ten percent closes that measured engine-granularity gap
+    while leaving climate, goods, RGOs, government bonuses, and policy
+    differences responsible for all food beyond the common floor.
+    """
+    lines = rendered.splitlines()
+    output: list[str] = []
+    depth = 0
+    in_modifier = False
+    modifier_count = 0
+    adapted_count = 0
+    saw_food = False
+    original_food_value: float | None = None
+    food_line = re.compile(
+        r"^(?P<indent>\s*)global_monthly_food_modifier\s*=\s*"
+        r"(?P<value>[0-9]+(?:\.[0-9]+)?)\s*$"
+    )
+    for line in lines:
+        before = depth
+        stripped = line.strip()
+        if not in_modifier and before == 1 and stripped == "country_modifier = {":
+            in_modifier = True
+            modifier_count += 1
+            saw_food = False
+            original_food_value = None
+        elif in_modifier and before == 2:
+            match = food_line.match(line)
+            if match:
+                existing = float(match.group("value"))
+                if original_food_value is not None:
+                    if abs(existing - original_food_value) > 1e-9:
+                        raise ValueError(
+                            "government reform has conflicting direct food modifiers"
+                        )
+                    # Political-contract and historical-profile data sometimes
+                    # repeat the same modifier. Collapse that pre-existing
+                    # duplicate so the engine receives one unambiguous value.
+                    continue
+                original_food_value = existing
+                value = existing + ANCIENT_SUBSISTENCE_FOOD_FLOOR
+                line = (
+                    f"{match.group('indent')}global_monthly_food_modifier = "
+                    f"{value:.3f}"
+                )
+                saw_food = True
+                adapted_count += 1
+            elif stripped == "}":
+                if not saw_food:
+                    output.append(
+                        "\t\tglobal_monthly_food_modifier = "
+                        f"{ANCIENT_SUBSISTENCE_FOOD_FLOOR:.3f}"
+                    )
+                    adapted_count += 1
+                in_modifier = False
+        output.append(line)
+        depth += line.count("{") - line.count("}")
+        if depth < 0:
+            raise ValueError("government reform brace depth became negative")
+    if depth != 0 or in_modifier:
+        raise ValueError("government reform subsistence pass ended inside a block")
+    if modifier_count == 0 or adapted_count != modifier_count:
+        raise ValueError(
+            "government reform subsistence coverage drift: "
+            f"{adapted_count}/{modifier_count}"
+        )
+    return "\n".join(output)
+
+
+def reforms(data: PowerData) -> str:
     rendered = """# Generated by tools/m6_power.py --write; M6 historical government adapters.
 # These retain the five locally installed government types and use only local modifier keys.
 # Flat research represents the institutions that transmit practical knowledge;
@@ -2628,7 +3302,7 @@ antq_principate = {
 	major = yes
 	government = monarchy
 	country_modifier = {
-		global_crown_estate_power = 0.10
+		cultures_capacity = 10
 		monthly_towards_centralization = societal_value_monthly_move
 		global_monthly_control = 0.0005
 		global_trade_through_owned_territory_efficiency = 0.03
@@ -2655,6 +3329,7 @@ antq_han_imperial_bureaucracy = {
 	major = yes
 	government = monarchy
 	country_modifier = {
+		cultures_capacity = 8
 		monthly_legitimacy = 0.05
 		monthly_towards_centralization = societal_value_monthly_move
 		monthly_towards_innovative = societal_value_monthly_move
@@ -2689,6 +3364,7 @@ antq_indo_scythian_kingship = {
 	major = yes
 	government = monarchy
 	country_modifier = {
+		cultures_capacity = 3
 		global_nobles_estate_power = 0.05
 		land_morale_modifier = 0.025
 		research_speed = 0.10
@@ -2711,6 +3387,7 @@ antq_parthian_king_of_kings = {
 	major = yes
 	government = monarchy
 	country_modifier = {
+		cultures_capacity = 3
 		global_nobles_estate_power = 0.15
 		monthly_towards_decentralization = societal_value_monthly_move
 		research_speed = 0.15
@@ -4057,6 +4734,7 @@ antq_cappadocian_client_kingship = {
 	major = yes
 	government = monarchy
 	country_modifier = {
+		cultures_capacity = 2
 		global_nobles_estate_power = 0.06
 		global_burghers_estate_power = 0.04
 		research_speed = 0.10
@@ -4112,6 +4790,7 @@ antq_commagenean_client_kingship = {
 	major = yes
 	government = monarchy
 	country_modifier = {
+		cultures_capacity = 2
 		global_nobles_estate_power = 0.07
 		global_clergy_estate_power = 0.05
 		research_speed = 0.10
@@ -4135,6 +4814,29 @@ antq_emesan_client_dynasty = {
         for profile, reforms_for_profile in PROFILE_BASE_REFORMS.items()
         for reform in reforms_for_profile
     }
+    holders_by_reform: dict[str, set[str]] = {}
+    for government in data.governments.values():
+        holders_by_reform.setdefault(government["reform"], set()).add(
+            data.tags[government["design_tag"]]
+        )
+    with POLITIES.open(encoding="utf-8-sig", newline="") as handle:
+        for polity in csv.DictReader(handle):
+            if polity["tag"] in data.governments:
+                continue
+            fallback = (
+                "antq_advanced_chiefdom"
+                if polity["kind"] == "sop"
+                else "antq_regional_kingship"
+            )
+            holders_by_reform.setdefault(fallback, set()).add(data.tags[polity["tag"]])
+    # Explicit future-state bridges retain the same historical polity without
+    # opening a Roman or Han successor constitution to every monarchy.
+    holders_by_reform.setdefault("antq_dominate", set()).add(data.tags["ROM"])
+    path_rows = reform_path_rows()
+    alternatives_by_profile = {
+        profile: tuple(row[0] for row in path_rows if row[1] == profile)
+        for profile in PROFILE_BASE_REFORMS
+    }
     for reform, parliament in parliament_by_reform.items():
         start = rendered.index(f"{reform} = {{")
         end = rendered.index("\n}\n", start)
@@ -4148,8 +4850,36 @@ antq_emesan_client_dynasty = {
                 POLITICAL_CONTRACTS[reform][0], f"political contract {reform}"
             )
         )
+        contract_lines = (
+            "\t\tglobal_estate_target_satisfaction = "
+            f"{FOUNDATIONAL_ESTATE_COMPACT}\n"
+            "\t\tmonthly_rebel_growth = "
+            f"{FOUNDATIONAL_REBEL_GROWTH}\n"
+            "\t\tpop_join_rebel_threshold = "
+            f"{FOUNDATIONAL_REBEL_JOIN_THRESHOLD}\n"
+            + contract_lines
+        )
         block = block.replace(
             modifier_anchor, f"{modifier_anchor}{contract_lines}", 1
+        )
+        government_line = next(
+            line for line in block.splitlines() if line.startswith("\tgovernment = ")
+        )
+        potential_lines = [
+            "\tpotential = {",
+            "\t\tOR = {",
+            f"\t\t\thas_reform = government_reform:{reform}",
+            *(
+                f"\t\t\thas_or_had_tag = {tag}"
+                for tag in sorted(holders_by_reform.get(reform, set()))
+            ),
+            "\t\t}",
+            "\t}",
+        ]
+        block = block.replace(
+            government_line,
+            government_line + "\n" + "\n".join(potential_lines),
+            1,
         )
         anchor = "\n\tyears = 2"
         if anchor not in block:
@@ -4160,11 +4890,6 @@ antq_emesan_client_dynasty = {
             1,
         )
         rendered = rendered[:start] + block + rendered[end:]
-    path_rows = reform_path_rows()
-    alternatives_by_profile = {
-        profile: tuple(row[0] for row in path_rows if row[1] == profile)
-        for profile in PROFILE_BASE_REFORMS
-    }
     lines = [rendered.rstrip(), "", "# Profile-locked alternative ancient reform paths."]
     for (
         key, profile, government, _name, _description, modifier_text,
@@ -4176,6 +4901,11 @@ antq_emesan_client_dynasty = {
             "\tpotential = {", "\t\tOR = {",
             *(f"\t\t\thas_reform = government_reform:{reform}" for reform in family),
             "\t\t}", "\t}", "\tcountry_modifier = {",
+            "\t\tglobal_estate_target_satisfaction = "
+            + FOUNDATIONAL_ESTATE_COMPACT,
+            "\t\tmonthly_rebel_growth = " + FOUNDATIONAL_REBEL_GROWTH,
+            "\t\tpop_join_rebel_threshold = "
+            + FOUNDATIONAL_REBEL_JOIN_THRESHOLD,
             *(f"\t\t{modifier} = {value}" for modifier, value in assignments(
                 modifier_text, f"alternative reform {key}"
             )),
@@ -4184,7 +4914,7 @@ antq_emesan_client_dynasty = {
             "\t}", "\tyears = 2", "}", "",
         ))
     rendered = "\n".join(lines)
-    return rendered
+    return apply_ancient_subsistence_floor(rendered)
 
 
 def estate_privileges(data: PowerData) -> str:
@@ -4227,6 +4957,67 @@ def estate_privileges(data: PowerData) -> str:
         lines.extend(f"\t\t{key} = {value}" for key, value in assignments(row["modifiers"], f"privilege {row['key']}"))
         lines.extend(("\t}", "}", ""))
     return "\n".join(lines)
+
+
+def estate_change_on_action(data: PowerData) -> str:
+    """Preserve the ancient compact across engine estate-identity resets.
+
+    EUV resets an estate's *current* satisfaction when its dominant culture or
+    religion changes.  That is tolerable for the much smaller 1337 realms, but
+    the AD 1 territorial empires can re-elect several different demographic
+    pluralities in succession.  A live Rome replay showed the reset bypassing
+    the Principate's 60-point target compact, taking all represented estates
+    from 64--96% to 0--5% and creating a civil-war cascade by AD 22.
+
+    Restore only the changed estate, only for a generated ancient reform, and
+    only up to the same 60-point floor already justified by the long-run M6
+    balance campaign.  The stepped adjustment is deliberately bounded: a
+    culture/religion change can never manufacture satisfaction above 80%, and
+    ordinary taxation, privileges, disasters, wars, and event shocks remain
+    fully effective.
+    """
+    reform_keys = tuple(
+        re.findall(r"(?m)^([a-z][a-z0-9_]*) = \{$", reforms(data))
+    )
+    if not reform_keys or len(reform_keys) != len(set(reform_keys)):
+        raise ValueError("ancient reform inventory for estate settlement is invalid")
+
+    def block(on_action: str) -> list[str]:
+        lines = [
+            f"{on_action} = {{",
+            "\ttrigger = {",
+            "\t\tOR = {",
+            *(f"\t\t\thas_reform = government_reform:{key}" for key in reform_keys),
+            "\t\t}",
+            "\t}",
+            "\teffect = {",
+        ]
+        for index, (threshold, adjustment) in enumerate(ESTATE_IDENTITY_SETTLEMENT_FLOOR):
+            branch = "if" if index == 0 else "else_if"
+            lines.extend((
+                f"\t\t{branch} = {{",
+                "\t\t\tlimit = {",
+                "\t\t\t\testate_satisfaction = {",
+                "\t\t\t\t\testate_type = scope:estate",
+                f"\t\t\t\t\tvalue < {threshold}",
+                "\t\t\t\t}",
+                "\t\t\t}",
+                "\t\t\tadd_estate_satisfaction = {",
+                "\t\t\t\ttype = scope:estate",
+                f"\t\t\t\tvalue = {adjustment}",
+                "\t\t\t}",
+                "\t\t}",
+            ))
+        lines.extend(("\t}", "}", ""))
+        return lines
+
+    return "\n".join((
+        "# Generated by tools/m6_power.py --write; AD 1 estate-identity settlement adapter.",
+        "# root = country, scope:estate = estate type",
+        *block("on_estate_culture_changed"),
+        "# root = country, scope:estate = estate type",
+        *block("on_estate_religion_changed"),
+    ))
 
 
 def law_definitions(data: PowerData) -> str:
@@ -4276,6 +5067,18 @@ def localization(data: PowerData, language: str) -> str:
     entries = [(row["key"], row["name"]) for row in data.dynasties]
     entries.extend((row["key"], row["name"]) for row in data.characters)
     entries.extend((
+        (
+            f"STATIC_MODIFIER_NAME_{ROMAN_SUCCESSION_GUARD}",
+            "Sourced Historical Chronology",
+        ),
+        (
+            "STATIC_MODIFIER_NAME_antq_augustan_auctoritas",
+            "Augustan Auctoritas",
+        ),
+        (
+            "STATIC_MODIFIER_DESC_antq_augustan_auctoritas",
+            "The princeps holds tribunician and proconsular authority that strengthens imperial command without abolishing senatorial, equestrian, or municipal bargaining.",
+        ),
         ("antq_principate", "Principate"),
         ("antq_principate_desc", "A republic-facade monarchy centred on the princeps and his auctoritas."),
         ("antq_dominate", "Dominate"),
@@ -4338,6 +5141,7 @@ def localization(data: PowerData, language: str) -> str:
         ("antq_herodian_batanean_tetrarchy_desc", "Philip's northern tetrarchy balancing highland houses, sanctuaries, basalt settlements, cisterns, routes, horse service, and Roman patronage."),
         ("antq_commagenean_client_kingship", "Commagenean Client Kingship"),
         ("antq_commagenean_client_kingship_desc", "Antiochus III's court balancing dynastic houses, sanctuaries, Euphrates passage, highland cavalry, cultivation, and Roman-Arsacid diplomacy."),
+        ("antq_m6_placeholder_ruler", "Interim Seat"),
         ("antq_emesan_client_dynasty", "Emesan Client Dynasty"),
         ("antq_emesan_client_dynasty_desc", "Iamblichus II's Sampsigeramid court balancing dynastic houses, sanctuary custody, caravan and textile exchange, mounted service, and Roman patronage."),
         ("antq_indian_ganasangha", "Indian Ganasangha"),
@@ -4565,12 +5369,16 @@ def localization(data: PowerData, language: str) -> str:
 
 def outputs(data: PowerData) -> dict[Path, str]:
     result = {
-        REFORM_OUTPUT: reforms(),
+        REFORM_OUTPUT: reforms(data),
         PRIVILEGE_OUTPUT: estate_privileges(data),
         LAW_OUTPUT: law_definitions(data),
         CHARACTER_BOOTSTRAP_OUTPUT: character_bootstrap(data),
+        ESTATE_CHANGE_OUTPUT: estate_change_on_action(data),
+        RULER_TRANSITION_EVENT_OUTPUT: ruler_transition_event(),
+        RULER_GUARD_MODIFIER_OUTPUT: ruler_guard_modifier(),
         POLITICAL_CONTRACT_OUTPUT: political_contract_ledger(),
         ALTERNATIVE_REFORM_OUTPUT: alternative_reform_ledger(),
+        REFORM_VISIBILITY_OUTPUT: reform_visibility_matrix(data),
     }
     for language in ("english", *M2_MIRROR_LANGUAGES):
         result[LOC_ROOT / language / f"antq_m6_power_l_{language}.yml"] = localization(data, language)
@@ -4648,6 +5456,194 @@ def write(data: PowerData) -> None:
 def check(data: PowerData) -> bool:
     failures = []
     rendered_characters = character_manager(data)
+    rendered_bootstrap = character_bootstrap(data)
+    rendered_reforms = reforms(data)
+    rendered_estate_changes = estate_change_on_action(data)
+    modifier_blocks = rendered_reforms.count("\tcountry_modifier = {\n")
+    for modifier, value in (
+        ("global_estate_target_satisfaction", FOUNDATIONAL_ESTATE_COMPACT),
+        ("monthly_rebel_growth", FOUNDATIONAL_REBEL_GROWTH),
+        ("pop_join_rebel_threshold", FOUNDATIONAL_REBEL_JOIN_THRESHOLD),
+    ):
+        count = rendered_reforms.count(f"\t\t{modifier} = {value}\n")
+        if count != modifier_blocks:
+            failures.append(
+                f"foundational {modifier} coverage drift: {count}/{modifier_blocks}"
+            )
+    ancient_reform_keys = re.findall(
+        r"(?m)^([a-z][a-z0-9_]*) = \{$", rendered_reforms
+    )
+    for on_action in (
+        "on_estate_culture_changed",
+        "on_estate_religion_changed",
+    ):
+        if rendered_estate_changes.count(f"{on_action} = {{") != 1:
+            failures.append(f"estate settlement lacks exactly one {on_action}")
+    for reform in ancient_reform_keys:
+        count = rendered_estate_changes.count(
+            f"has_reform = government_reform:{reform}"
+        )
+        if count != 2:
+            failures.append(
+                f"estate settlement reform coverage drift for {reform}: {count}/2"
+            )
+    for threshold, adjustment in ESTATE_IDENTITY_SETTLEMENT_FLOOR:
+        if rendered_estate_changes.count(f"value < {threshold}") != 2:
+            failures.append(
+                f"estate settlement threshold coverage drift for {threshold}"
+            )
+        if rendered_estate_changes.count(f"value = {adjustment}") != 2:
+            failures.append(
+                f"estate settlement adjustment coverage drift for {adjustment}"
+            )
+    if rendered_estate_changes.count("\n\t\t\t\ttype = scope:estate\n") != 6:
+        failures.append("estate settlement does not target only the changed estate")
+    adult_rulers = runtime_adult_rulers(data)
+    if re.search(r"(?m)^\s*[a-z0-9_]+\s*=\s*\{", rendered_characters.split("character_db = {", 1)[1]):
+        failures.append("bookmark character DB contains a pre-calendar character")
+    if rendered_bootstrap.count("\t\t\tcreate_character = {") != len(data.characters):
+        failures.append("complete runtime living-court creation inventory drift")
+    named_heads = sum(
+        1 for government in data.governments.values()
+        if has_named_active_head(government)
+    )
+    if rendered_bootstrap.count("id = antq_m6.1 days = 1") != named_heads:
+        failures.append("delayed named-head transition inventory drift")
+    if rendered_bootstrap.count("name = antq_m6_opening_ruler") != named_heads:
+        failures.append("runtime named-head target inventory drift")
+    if rendered_bootstrap.count(
+        f"modifier = {ROMAN_SUCCESSION_GUARD} years = -1"
+    ) != len(HISTORICAL_LIFESPAN_GUARDED) + 1:
+        failures.append("historical character mortality-guard inventory drift")
+    for key in ROMAN_SUCCESSION_GUARDED:
+        if key == "antq_augustus":
+            # The active 1 January holder has engine ID zero, which cannot be
+            # persisted in a character variable.  antq_m6.1 stores the age-63
+            # handoff character under this key on the next date.
+            continue
+        short_key = key.removeprefix("antq_")
+        if f"name = antq_m6_roman_{short_key}" not in rendered_bootstrap:
+            failures.append(f"Roman succession scope is not persisted: {key}")
+    varus_guard_anchor = (
+        "scope:antq_m6_living_publius_quinctilius_varus = {\n"
+        f"\t\t\t\tadd_character_modifier = {{ modifier = {ROMAN_SUCCESSION_GUARD} "
+        "years = -1 mode = add_and_extend }"
+    )
+    if varus_guard_anchor not in rendered_bootstrap:
+        failures.append("Varus is not protected through the contingent AD 9 arc")
+    if "modifier = antq_augustan_auctoritas years = -1" not in rendered_bootstrap:
+        failures.append("Rome lacks the opening Augustan auctoritas crown modifier")
+    if rendered_bootstrap.count("add_character_to_first_open_cabinet") != 3:
+        failures.append("Rome does not fill three opening cabinet officer slots")
+    if "antq_augustan_auctoritas = {" not in ruler_guard_modifier():
+        failures.append("Augustan auctoritas modifier definition is missing")
+    rendered_transition = ruler_transition_event()
+    for token in (
+        "set_new_ruler_no_update = scope:antq_m6_opening_ruler_scope",
+        "kill_character_silently = scope:antq_m6_departing_ruler",
+        "remove_variable = antq_m6_opening_ruler",
+        "set_first_name = antq_augustus",
+        "save_scope_as = antq_m6_handoff_consort",
+        "marry_character_ignore_blocks = scope:antq_m6_handoff_consort",
+        "name = antq_m6_roman_augustus value = var:antq_m6_opening_ruler",
+    ):
+        if token not in rendered_transition:
+            failures.append(f"delayed ruler transition lacks {token}")
+    for token in (
+        "from = 4.2.21",
+        "save_scope_as = antq_m6_departing_gaius_caesar",
+        "kill_character_silently = scope:antq_m6_departing_gaius_caesar",
+        "set_as_designated_heir = scope:antq_m6_tiberius_heir_scope",
+        "from = 14.8.19",
+        "set_new_ruler_no_update = scope:antq_m6_succeeding_tiberius",
+        "kill_character_silently = scope:antq_m6_departing_augustus",
+        "name = antq_m6_roman_succession_reserve",
+        "set_as_designated_heir = scope:antq_m6_roman_succession_reserve_scope",
+        "remove_variable = antq_m6_roman_livia",
+    ):
+        if token not in rendered_transition:
+            failures.append(f"Roman sourced succession lacks {token}")
+    for effect in (
+        "kill_character_silently",
+        "set_as_designated_heir",
+        "set_new_ruler",
+        "set_new_ruler_no_update",
+    ):
+        if re.search(rf"\b{effect}\s*=\s*var:", rendered_transition):
+            failures.append(
+                f"Roman sourced succession passes unsupported variable target to {effect}"
+            )
+    if (
+        "var:antq_m6_roman_tiberius = {\n"
+        f"\t\t\t\tremove_character_modifier = {ROMAN_SUCCESSION_GUARD}"
+    ) in rendered_transition:
+        failures.append("Tiberius mortality guard is removed before the AD 37 horizon")
+    if ruler_guard_modifier().count("is_immortal = yes") != 1:
+        failures.append("Roman sourced succession guard lost mortality protection")
+    if "character:" in rendered_bootstrap:
+        failures.append("runtime court bootstrap depends on impossible keyed placeholders")
+    roman_government = "\n".join(
+        government_block(data.governments["ROM"], runtime_rulers=adult_rulers)
+    )
+    if "ruler = random" not in roman_government or "antq_augustus" in roman_government:
+        failures.append("Roman bookmark government is not runtime-court safe")
+    for government in data.governments.values():
+        ruler = government["ruler"]
+        if ruler not in adult_rulers:
+            continue
+        rendered_government = "\n".join(
+            government_block(government, runtime_rulers=adult_rulers)
+        )
+        if "ruler = random" not in rendered_government or f"ruler = {ruler}" in rendered_government:
+            failures.append(
+                f"{government['design_tag']}: pre-calendar named ruler is exposed to bookmark age randomization"
+            )
+        if f"first_name = {ruler}" not in rendered_bootstrap:
+            failures.append(
+                f"{government['design_tag']}: adult runtime ruler {ruler} is not recreated"
+            )
+    for token in (
+        "first_name = antq_augustus",
+        "first_name = antq_gaius_caesar",
+        "first_name = antq_livia",
+        "set_as_designated_heir = scope:antq_m6_living_gaius_caesar",
+        "marry_character = scope:antq_m6_living_livia",
+        "value = scope:antq_m6_living_augustus",
+        "value = scope:antq_m6_living_phraates_v",
+        "value = scope:antq_m6_living_emperor_ping",
+        "set_regent = scope:antq_m6_living_wang_mang",
+        "age = { 63 63 }",
+        "age = { 9 9 }",
+        "marry_character = scope:antq_m6_living_livia",
+    ):
+        if token not in rendered_bootstrap:
+            failures.append(f"Roman runtime officeholder contract lacks {token}")
+    visibility_rows = list(csv.DictReader(io.StringIO(reform_visibility_matrix(data))))
+    if len(visibility_rows) != len(data.tags):
+        failures.append(
+            f"reform visibility matrix has {len(visibility_rows)} tags; expected {len(data.tags)}"
+        )
+    rome_visibility = {
+        reform
+        for row in visibility_rows if row["design_tag"] == "ROM"
+        for reform in row["visible_reforms"].split("|")
+    }
+    forbidden_rome = {
+        "antq_han_imperial_bureaucracy",
+        "antq_indo_scythian_kingship",
+        "antq_parthian_king_of_kings",
+    }
+    if rome_visibility & forbidden_rome:
+        failures.append(
+            f"Roman reform visibility leaks foreign systems {sorted(rome_visibility & forbidden_rome)}"
+        )
+    for base_reform in {
+        reform for reforms_for_profile in PROFILE_BASE_REFORMS.values() for reform in reforms_for_profile
+    }:
+        start = rendered_reforms.find(f"{base_reform} = {{")
+        end = rendered_reforms.find("\n}\n", start)
+        if start < 0 or "\n\tpotential = {" not in rendered_reforms[start:end]:
+            failures.append(f"base reform {base_reform} lacks an exact-holder potential")
     for value in re.findall(r"(?m)^\s*(?:birth_date|death_date)\s*=\s*(-?\d+\.\d+\.\d+)\s*$", rendered_characters):
         try:
             AntqDate.parse(value)

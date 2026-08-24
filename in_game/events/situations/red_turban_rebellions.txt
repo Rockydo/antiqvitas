@@ -68,7 +68,7 @@ scripted_effect rtr_setup_countries_to_release = {
 }
 
 scripted_effect rtr_clear_yuan_loans_on_player_switch = {
-	c:CHI ?= {
+	c:DUMMY ?= {
 		every_loan = {
 			cancel_loan = this
 		}
@@ -428,7 +428,7 @@ scripted_effect rtr_add_country_to_rebels_and_dow_china = {
 		}
 		add_opinion = {
 			modifier = opinion_rtr_red_turban_rebellions
-			target = c:CHI
+			target = c:DUMMY
 		}
 	}
 	if = {
@@ -495,10 +495,10 @@ scripted_effect rtr_join_china_in_wars = {
 scripted_trigger rtr_can_see_the_situation = {
 	OR = {
 		tag = CHI
-		is_neighbor_of = c:CHI
-		is_subject_of = c:CHI
-		is_enemy_of = c:CHI
-		is_rival_of = c:CHI
+		is_neighbor_of = c:DUMMY
+		is_subject_of = c:DUMMY
+		is_enemy_of = c:DUMMY
+		is_rival_of = c:DUMMY
 		capital ?= {
 			sub_continent ?= sub_continent:east_asia
 		}
@@ -520,10 +520,10 @@ scripted_effect rtr_become_china_effect = {
 	}
 	if = {
 		limit = {
-			country_exists = c:CHI
+			country_exists = c:DUMMY
 		}
 		custom_tooltip = rtr_become_china_effect_tt
-		c:CHI = { trigger_event_non_silently = red_turban_rebellions.101 }
+		c:DUMMY = { trigger_event_non_silently = red_turban_rebellions.101 }
 	}
 	else = {
 		form_country = formable_country:CHI_f
@@ -678,7 +678,7 @@ red_turban_rebellions.2 = {
 	outcome = neutral
 	image = "gfx/interface/illustrations/situation/red_turban_rebellions.dds"
 	immediate = {
-		c:CHI = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		character:yua_togon_temur = { save_scope_as = target_ruler }
@@ -690,7 +690,7 @@ red_turban_rebellions.2 = {
 	option = {
 		name = red_turban_rebellions.2.a
 		if = {
-			limit = { is_subject_of = c:CHI }
+			limit = { is_subject_of = c:DUMMY }
 			add_liberty_desire = liberty_desire_severe_plus
 		}
 	}
@@ -764,10 +764,10 @@ red_turban_rebellions.3 = {
 				save_scope_as = target_dynasty
 			}
 		}
-		c:CSO = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 		location:qiaoxian = {
 			save_scope_as = target_location
-			province = { every_location_in_province = { limit = { owner = root } add_core = c:CSO } }
+			province = { every_location_in_province = { limit = { owner = root } add_core = c:DUMMY } }
 		}
 		if = {
 			limit = { exists = scope:target_country }
@@ -826,7 +826,7 @@ red_turban_rebellions.3 = {
 			rtr_change_allegiance_points = { value = -100 }
 			trigger_event_silently = { id = red_turban_rebellions.30 days = { 20 60 } }
 		}
-		rtr_add_country_to_rebels_and_dow_china = { country = c:CSO }
+		rtr_add_country_to_rebels_and_dow_china = { country = c:DUMMY }
 	}
 	option = {
 		name = red_turban_rebellions.play_as_tag
@@ -1125,8 +1125,8 @@ red_turban_rebellions.5 = {
 	option = {
 		name = red_turban_rebellions.5.a
 		rtr_release_warlord_tag = { tag = CTW culture = culture:chu_culture accepted_culture = culture:jianghuai_culture }
-		c:CTW = { rtr_change_allegiance_points = { value = -100 } }
-		rtr_add_country_to_rebels_and_dow_china = { country = c:CTW }
+		c:DUMMY = { rtr_change_allegiance_points = { value = -100 } }
+		rtr_add_country_to_rebels_and_dow_china = { country = c:DUMMY }
 		if = {
 			limit = { exists = scope:monk_character }
 			scope:monk_character = {
@@ -1258,18 +1258,18 @@ red_turban_rebellions.6 = {
 		character:ctw_shouhui_xu = { save_scope_as = ctw_shouhui_xu }
 		character:ctw_pusheng_zou = { save_scope_as = ctw_pusheng_zou }
 		character:ctw_wenjun_ni = { save_scope_as = ctw_wenjun_ni }
-		c:CTW = { save_scope_as = target_country_2 }
+		c:DUMMY = { save_scope_as = target_country_2 }
 	}
 	option = {
 		name = red_turban_rebellions.6.a
 		rtr_release_warlord_tag = { tag = CHE culture = culture:chu_culture accepted_culture = culture:gan_culture }
-		c:CHE = { rtr_change_allegiance_points = { value = -100 } }
-		rtr_add_country_to_rebels_and_dow_china = { country = c:CHE }
+		c:DUMMY = { rtr_change_allegiance_points = { value = -100 } }
+		rtr_add_country_to_rebels_and_dow_china = { country = c:DUMMY }
 		if = {
-			limit = { country_exists = c:CTW }
+			limit = { country_exists = c:DUMMY }
 			custom_tooltip = {
 				text = red_turban_rebellions.34.a.tt
-				c:CTW = { trigger_event_silently = { id = red_turban_rebellions.34 days = 2 } }
+				c:DUMMY = { trigger_event_silently = { id = red_turban_rebellions.34 days = 2 } }
 			}
 		}
 	}
@@ -1286,10 +1286,10 @@ red_turban_rebellions.6 = {
 			scope:target_country = { trigger_event_non_silently = { id = red_turban_rebellions.19 days = 1 } }
 		}
 		if = {
-			limit = { country_exists = c:CTW }
+			limit = { country_exists = c:DUMMY }
 			custom_tooltip = {
 				text = red_turban_rebellions.34.a.tt
-				c:CTW = { trigger_event_silently = { id = red_turban_rebellions.34 days = 2 } }
+				c:DUMMY = { trigger_event_silently = { id = red_turban_rebellions.34 days = 2 } }
 			}
 		}
 	}
@@ -1373,8 +1373,8 @@ red_turban_rebellions.7 = {
 	option = {
 		name = red_turban_rebellions.7.a
 		rtr_release_warlord_tag = { tag = WUU culture = culture:wu_culture accepted_culture = culture:jianghuai_culture }
-		c:WUU = { rtr_change_allegiance_points = { value = -100 } }
-		rtr_add_country_to_rebels_and_dow_china = { country = c:WUU }
+		c:DUMMY = { rtr_change_allegiance_points = { value = -100 } }
+		rtr_add_country_to_rebels_and_dow_china = { country = c:DUMMY }
 	}
 	option = {
 		name = red_turban_rebellions.play_as_tag
@@ -1390,7 +1390,7 @@ red_turban_rebellions.7 = {
 		}
 	}
 	after = {
-		c:WUU = {
+		c:DUMMY = {
 			set_variable = {
 				name = character_creator
 				value = 18	#His 18 buddies
@@ -1475,7 +1475,7 @@ red_turban_rebellions.8 = {
 				save_scope_as = target_character
 			}
 		}
-		c:CFN = {
+		c:DUMMY = {
 			change_societal_value = {
 				type = land_vs_naval
 				value = 75
@@ -1501,8 +1501,8 @@ red_turban_rebellions.8 = {
 	option = {
 		name = red_turban_rebellions.8.a
 		rtr_release_warlord_tag = { tag = CFN culture = culture:taizhou_wu_culture accepted_culture = culture:ouhai_culture }
-		c:CFN = { rtr_change_allegiance_points = { value = -100 } }
-		rtr_add_country_to_rebels_and_dow_china = { country = c:CFN }
+		c:DUMMY = { rtr_change_allegiance_points = { value = -100 } }
+		rtr_add_country_to_rebels_and_dow_china = { country = c:DUMMY }
 	}
 	option = {
 		name = red_turban_rebellions.play_as_tag
@@ -1586,8 +1586,8 @@ red_turban_rebellions.9 = {
 	option = {
 		name = red_turban_rebellions.9.a
 		rtr_release_warlord_tag = { tag = CMO culture = culture:jiaodong_culture accepted_culture = culture:jilu_culture }
-		c:CMO = { rtr_change_allegiance_points = { value = -100 } }
-		rtr_add_country_to_rebels_and_dow_china = { country = c:CMO }
+		c:DUMMY = { rtr_change_allegiance_points = { value = -100 } }
+		rtr_add_country_to_rebels_and_dow_china = { country = c:DUMMY }
 	}
 	option = {
 		name = red_turban_rebellions.play_as_tag
@@ -1612,11 +1612,11 @@ red_turban_rebellions.10 = {
 	desc = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { country_exists = c:CHE }
+				trigger = { country_exists = c:DUMMY }
 				desc = red_turban_rebellions.10.desc
 			}
 			triggered_desc = {
-				trigger = { NOT = { country_exists = c:CHE } }
+				trigger = { NOT = { country_exists = c:DUMMY } }
 				desc = red_turban_rebellions.10.desc.fallback
 			}
 		}
@@ -1700,20 +1700,20 @@ red_turban_rebellions.10 = {
 	}
 	option = {
 		name = red_turban_rebellions.10.a
-		trigger = { country_exists = c:CHE }
+		trigger = { country_exists = c:DUMMY }
 		rtr_release_warlord_tag = { tag = CXI culture = culture:shu_culture accepted_culture = culture:tujia_culture }
-		c:CXI = { rtr_change_allegiance_points = { value = -100 } }
-		rtr_add_country_to_rebels_and_dow_china = { country = c:CXI }
+		c:DUMMY = { rtr_change_allegiance_points = { value = -100 } }
+		rtr_add_country_to_rebels_and_dow_china = { country = c:DUMMY }
 		hidden_effect = {
-			c:CHE = { trigger_event_non_silently = { id = red_turban_rebellions.35 days = 1 } }
+			c:DUMMY = { trigger_event_non_silently = { id = red_turban_rebellions.35 days = 1 } }
 		}
 	}
 	option = {
 		name = red_turban_rebellions.10.b
-		trigger = { NOT = { country_exists = c:CHE } }
+		trigger = { NOT = { country_exists = c:DUMMY } }
 		rtr_release_warlord_tag = { tag = CXI culture = culture:shu_culture accepted_culture = culture:tujia_culture }
-		c:CXI = { rtr_change_allegiance_points = { value = -100 } }
-		rtr_add_country_to_rebels_and_dow_china = { country = c:CXI }
+		c:DUMMY = { rtr_change_allegiance_points = { value = -100 } }
+		rtr_add_country_to_rebels_and_dow_china = { country = c:DUMMY }
 	}
 	option = {
 		name = red_turban_rebellions.play_as_tag
@@ -1728,9 +1728,9 @@ red_turban_rebellions.10 = {
 			scope:target_country = { trigger_event_non_silently = { id = red_turban_rebellions.19 days = 1 } }
 		}
 		if = {
-			limit = { country_exists = c:CHE }
+			limit = { country_exists = c:DUMMY }
 			hidden_effect = {
-				c:CHE = { trigger_event_non_silently = { id = red_turban_rebellions.35 days = 1 } }
+				c:DUMMY = { trigger_event_non_silently = { id = red_turban_rebellions.35 days = 1 } }
 			}
 		}
 	}
@@ -1801,8 +1801,8 @@ red_turban_rebellions.11 = {
 	option = {
 		name = red_turban_rebellions.11.a
 		rtr_release_warlord_tag = { tag = CGU culture = culture:jianghuai_culture accepted_culture = culture:zhongyuan_culture }
-		c:CGU = { rtr_change_allegiance_points = { value = -100 } }
-		rtr_add_country_to_rebels_and_dow_china = { country = c:CGU }
+		c:DUMMY = { rtr_change_allegiance_points = { value = -100 } }
+		rtr_add_country_to_rebels_and_dow_china = { country = c:DUMMY }
 	}
 	option = {
 		name = red_turban_rebellions.play_as_tag
@@ -1933,7 +1933,7 @@ red_turban_rebellions.12 = {
 			}
 		}
 		character:cgu_zixing_guo = { save_scope_as = cgu_zixing_guo }
-		c:MNG = {
+		c:DUMMY = {
 			change_country_flag = CHI_Ming
 			add_army_tradition = army_tradition_ultimate_bonus
 		}
@@ -1941,9 +1941,9 @@ red_turban_rebellions.12 = {
 	after = {
 		every_in_list = {
 			list = characters_to_move
-			move_country = c:MNG
+			move_country = c:DUMMY
 		}
-		c:MNG = {
+		c:DUMMY = {
 			set_new_ruler = scope:target_character
 		}
 		scope:target_character ?= {
@@ -1954,17 +1954,17 @@ red_turban_rebellions.12 = {
 			}
 		}
 		hidden_effect = {
-			c:MNG = { trigger_event_silently = { id = red_turban_rebellions.36 days = { 30 60 } } }	#Additional Loyalists join Ming
+			c:DUMMY = { trigger_event_silently = { id = red_turban_rebellions.36 days = { 30 60 } } }	#Additional Loyalists join Ming
 			if = {
-				limit = { country_exists = c:CGU }
-				c:CGU = { trigger_event_silently = { id = red_turban_rebellions.37 days = { 45 90 } } }	#Guo leadership dies and Ming inherits it
+				limit = { country_exists = c:DUMMY }
+				c:DUMMY = { trigger_event_silently = { id = red_turban_rebellions.37 days = { 45 90 } } }	#Guo leadership dies and Ming inherits it
 			}
 		}
 	}
 	option = {
 		name = red_turban_rebellions.12.a
 		rtr_release_warlord_tag = { tag = MNG culture = culture:jianghuai_culture accepted_culture = culture:wu_culture }
-		c:MNG = {
+		c:DUMMY = {
 			rtr_change_allegiance_points = { value = -100 }
 			hidden_effect = {
 				set_gold = {
@@ -1987,19 +1987,19 @@ red_turban_rebellions.12 = {
 				}
 			}
 		}
-		rtr_add_country_to_rebels_and_dow_china = { country = c:MNG }
+		rtr_add_country_to_rebels_and_dow_china = { country = c:DUMMY }
 		if = {
-			limit = { country_exists = c:CGU }
-			c:CGU = {
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = {
 				if = {
 					limit = { has_regent = yes is_ai = yes }
-					every_owned_location = { add_core = c:MNG }
-					c:MNG = { annex_country = { country = prev } }
+					every_owned_location = { add_core = c:DUMMY }
+					c:DUMMY = { annex_country = { country = prev } }
 				}
 				else = {
 					create_relation = {
 						first = this
-						second = c:MNG
+						second = c:DUMMY
 						type = relation_type:alliance
 					}
 				}
@@ -2014,17 +2014,17 @@ red_turban_rebellions.12 = {
 		scope:target_country = { rtr_change_allegiance_points = { value = -100 } }
 		rtr_add_country_to_rebels_and_dow_china = { country = scope:target_country }
 		if = {
-			limit = { country_exists = c:CGU }
-			c:CGU = {
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = {
 				if = {
 					limit = { has_regent = yes is_ai = yes }
-					every_owned_location = { add_core = c:MNG }
-					c:MNG = { annex_country = { country = prev } }
+					every_owned_location = { add_core = c:DUMMY }
+					c:DUMMY = { annex_country = { country = prev } }
 				}
 				else = {
 					create_relation = {
 						first = this
-						second = c:MNG
+						second = c:DUMMY
 						type = relation_type:alliance
 					}
 				}
@@ -2115,7 +2115,7 @@ red_turban_rebellions.13 = {
 	option = {
 		name = red_turban_rebellions.13.a
 		rtr_release_warlord_tag = { tag = CNP culture = culture:fuzhou_culture accepted_culture = culture:minnan_culture }
-		c:CNP = { rtr_join_china_in_wars = yes }
+		c:DUMMY = { rtr_join_china_in_wars = yes }
 	}
 	option = {
 		name = red_turban_rebellions.release_loyalist.b
@@ -2127,7 +2127,7 @@ red_turban_rebellions.13 = {
 		high_risk_option = yes
 		trigger = { hidden_trigger = { is_ai = no } }
 		rtr_release_warlord_tag = { tag = CNP culture = culture:fuzhou_culture accepted_culture = culture:minnan_culture }
-		c:CNP = { rtr_join_china_in_wars = yes }
+		c:DUMMY = { rtr_join_china_in_wars = yes }
 		hidden_effect = { rtr_clear_yuan_loans_on_player_switch = yes }
 		change_player = scope:target_country
 		hidden_effect = {
@@ -2208,7 +2208,7 @@ red_turban_rebellions.14 = {
 		name = red_turban_rebellions.release_loyalist.a
 		historical_option = yes
 		rtr_release_warlord_tag = { tag = CDN culture = culture:yuehai_culture accepted_culture = culture:kejia_culture }
-		c:CDN = { rtr_join_china_in_wars = yes }
+		c:DUMMY = { rtr_join_china_in_wars = yes }
 	}
 	option = {
 		name = red_turban_rebellions.release_loyalist.b
@@ -2220,7 +2220,7 @@ red_turban_rebellions.14 = {
 		high_risk_option = yes
 		trigger = { hidden_trigger = { is_ai = no } }
 		rtr_release_warlord_tag = { tag = CDN culture = culture:yuehai_culture accepted_culture = culture:kejia_culture }
-		c:CDN = { rtr_join_china_in_wars = yes }
+		c:DUMMY = { rtr_join_china_in_wars = yes }
 		hidden_effect = { rtr_clear_yuan_loans_on_player_switch = yes }
 		change_player = scope:target_country
 		hidden_effect = {
@@ -2300,7 +2300,7 @@ red_turban_rebellions.15 = {
 		name = red_turban_rebellions.release_loyalist.a
 		historical_option = yes
 		rtr_release_warlord_tag = { tag = CSI culture = culture:qin_culture accepted_culture = culture:zhongyuan_culture }
-		c:CSI = { rtr_join_china_in_wars = yes }
+		c:DUMMY = { rtr_join_china_in_wars = yes }
 	}
 	option = {
 		name = red_turban_rebellions.release_loyalist.b
@@ -2312,7 +2312,7 @@ red_turban_rebellions.15 = {
 		high_risk_option = yes
 		trigger = { hidden_trigger = { is_ai = no } }
 		rtr_release_warlord_tag = { tag = CSI culture = culture:qin_culture accepted_culture = culture:zhongyuan_culture }
-		c:CSI = { rtr_join_china_in_wars = yes }
+		c:DUMMY = { rtr_join_china_in_wars = yes }
 		hidden_effect = { rtr_clear_yuan_loans_on_player_switch = yes }
 		change_player = scope:target_country
 		hidden_effect = {
@@ -2399,7 +2399,7 @@ red_turban_rebellions.16 = {
 		name = red_turban_rebellions.release_loyalist.a
 		historical_option = yes
 		rtr_release_warlord_tag = { tag = CKO culture = culture:mongolian_culture accepted_culture = culture:zhongyuan_culture }
-		c:CKO = { rtr_join_china_in_wars = yes }
+		c:DUMMY = { rtr_join_china_in_wars = yes }
 	}
 	option = {
 		name = red_turban_rebellions.release_loyalist.b
@@ -2411,7 +2411,7 @@ red_turban_rebellions.16 = {
 		high_risk_option = yes
 		trigger = { hidden_trigger = { is_ai = no } }
 		rtr_release_warlord_tag = { tag = CKO culture = culture:mongolian_culture accepted_culture = culture:zhongyuan_culture }
-		c:CKO = { rtr_join_china_in_wars = yes }
+		c:DUMMY = { rtr_join_china_in_wars = yes }
 		hidden_effect = { rtr_clear_yuan_loans_on_player_switch = yes }
 		change_player = scope:target_country
 		hidden_effect = {
@@ -2491,7 +2491,7 @@ red_turban_rebellions.17 = {
 		name = red_turban_rebellions.release_loyalist.a
 		historical_option = yes
 		rtr_release_warlord_tag = { tag = CNA culture = culture:mongolian_culture accepted_culture = culture:kharchin_culture }
-		c:CNA = { rtr_join_china_in_wars = yes }
+		c:DUMMY = { rtr_join_china_in_wars = yes }
 	}
 	option = {
 		name = red_turban_rebellions.release_loyalist.b
@@ -2503,7 +2503,7 @@ red_turban_rebellions.17 = {
 		high_risk_option = yes
 		trigger = { hidden_trigger = { is_ai = no } }
 		rtr_release_warlord_tag = { tag = CNA culture = culture:mongolian_culture accepted_culture = culture:kharchin_culture }
-		c:CNA = { rtr_join_china_in_wars = yes }
+		c:DUMMY = { rtr_join_china_in_wars = yes }
 		hidden_effect = { rtr_clear_yuan_loans_on_player_switch = yes }
 		change_player = scope:target_country
 		hidden_effect = {
@@ -2586,7 +2586,7 @@ red_turban_rebellions.19 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		save_scope_as = target_country
 		ruler_or_regent ?= { save_scope_as = target_character }
-		c:CHI = { save_scope_as = from_country }
+		c:DUMMY = { save_scope_as = from_country }
 	}
 	option = {
 		name = red_turban_rebellions.19.a
@@ -2736,7 +2736,7 @@ red_turban_rebellions.22 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		save_scope_as = target_country
-		c:CHI = { save_scope_as = from_country }
+		c:DUMMY = { save_scope_as = from_country }
 		ruler_or_regent ?= { save_scope_as = target_character }
 	}
 	option = {
@@ -2918,11 +2918,11 @@ red_turban_rebellions.33 = {
 	}
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:KOR
+		country_exists = c:DUMMY
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
-		c:KOR = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 	}
@@ -3413,8 +3413,8 @@ red_turban_rebellions.43 = {
 	trigger = {
 		current_date > 476.9.4
 		has_variable = rtr_korea_rebellion_event
-		country_exists = c:KOR
-		c:KOR = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_subject_of = root
 			any_character = {
 				culture = culture:mongolian_culture
@@ -3433,7 +3433,7 @@ red_turban_rebellions.43 = {
 			name = num_of_mongolian_generals
 			value = 0
 		}
-		c:KOR = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			every_character = {
 				limit = { culture = culture:mongolian_culture }
@@ -3529,7 +3529,7 @@ red_turban_rebellions.44 = {
 		has_variable = rtr_tibet_rebellion_event
 		region:tibet_region = {
 			any_country_with_capital_in_geography = {
-				is_subject_of = c:CHI
+				is_subject_of = c:DUMMY
 			}
 		}
 	}
@@ -3538,8 +3538,8 @@ red_turban_rebellions.44 = {
 		name = red_turban_rebellions.44.a
 		region:tibet_region = {
 			every_country_with_capital_in_geography = {
-				limit = { is_subject_of = c:CHI }
-				c:CHI = { cancel_subject = prev }
+				limit = { is_subject_of = c:DUMMY }
+				c:DUMMY = { cancel_subject = prev }
 			}
 		}
 	}
@@ -3575,7 +3575,7 @@ red_turban_rebellions.100 = {
 			limit = { has_regent = yes }
 			regent ?= { save_scope_as = target_character }
 		}
-		c:CHI = {
+		c:DUMMY = {
 			save_scope_as = china_country
 			if = {
 				limit = { has_ruler = yes }
@@ -3702,10 +3702,10 @@ red_turban_rebellions.103 = {
                 limit = {
                     NOT = { tag = CHI }
                     OR = {
-                        is_neighbor_of = c:CHI
-                        is_subject_of = c:CHI
-                        is_enemy_of = c:CHI
-                        is_rival_of = c:CHI
+                        is_neighbor_of = c:DUMMY
+                        is_subject_of = c:DUMMY
+                        is_enemy_of = c:DUMMY
+                        is_rival_of = c:DUMMY
                         capital.sub_continent = sub_continent:east_asia
                         is_member_of_international_organization = international_organization:red_turban_rebels
                     }
@@ -3881,7 +3881,7 @@ red_turban_rebellions.1000 = {
 	}
 	trigger = {
 		current_date > 476.9.4
-		is_subject_of = c:CHI
+		is_subject_of = c:DUMMY
 		NOT = { has_variable = rtr_had_vassal_break_away_event }
 		capital = {
 			OR = {
@@ -3892,7 +3892,7 @@ red_turban_rebellions.1000 = {
 	}
 	immediate = {
 		set_variable = rtr_had_vassal_break_away_event
-		c:CHI = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 		save_scope_as = root_country
 		capital.region = { save_scope_as = target_region }
 	}

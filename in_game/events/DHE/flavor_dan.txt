@@ -18,7 +18,7 @@ flavor_dan.1 = { #Bruchardi Flood
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -154,7 +154,7 @@ flavor_dan.2 = { #University of Copenhagen
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -167,7 +167,7 @@ flavor_dan.2 = { #University of Copenhagen
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:PAP = {
+		c:DUMMY = {
 			ruler ?= {
 				save_scope_as = target_character
 			}
@@ -178,8 +178,8 @@ flavor_dan.2 = { #University of Copenhagen
 		current_date > 476.9.4
 		owns = location:kobenhavn
 		religion = religion:catholic
-		c:PAP = {
-			opinion = { target = c:DAN value >= 0 }
+		c:DUMMY = {
+			opinion = { target = c:DUMMY value >= 0 }
 			has_ruler = yes
 		}
 	}
@@ -223,7 +223,7 @@ flavor_dan.3 = { #Order of Saint Clare in Copenhagen
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -296,7 +296,7 @@ flavor_dan.4 = { #Reforms of Christian II
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -348,7 +348,7 @@ flavor_dan.5 = { #double check with Kalmar Union Work - Scandinavian Constitutio
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -365,8 +365,8 @@ flavor_dan.5 = { #double check with Kalmar Union Work - Scandinavian Constitutio
 
 	trigger = {
 		current_date > 476.9.4
-		in_union_with = c:SWE
-		in_union_with = c:NOR
+		in_union_with = c:DUMMY
+		in_union_with = c:DUMMY
 	}
 
 	option = {
@@ -376,11 +376,11 @@ flavor_dan.5 = { #double check with Kalmar Union Work - Scandinavian Constitutio
 		change_societal_value = { type = centralization_vs_decentralization value = societal_value_move_to_left }
 		add_legitimacy = legitimacy_weak_bonus
 		add_prestige = prestige_weak_bonus
-		c:SWE = {
-			add_opinion = { target = c:DAN modifier = opinion_enforced_scandinavian_constitution }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_enforced_scandinavian_constitution }
 		}
-		c:NOR = {
-			add_opinion = { target = c:DAN modifier = opinion_enforced_scandinavian_constitution }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_enforced_scandinavian_constitution }
 		}
 	}
 	option = {
@@ -388,11 +388,11 @@ flavor_dan.5 = { #double check with Kalmar Union Work - Scandinavian Constitutio
 		change_societal_value = { type = centralization_vs_decentralization value = societal_value_move_to_right }
 		add_prestige = prestige_weak_penalty
 		add_legitimacy = legitimacy_weak_penalty
-		c:SWE = {
-			add_opinion = { target = c:DAN modifier = opinion_discarded_scandinavian_constitution }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_discarded_scandinavian_constitution }
 		}
-		c:NOR = {
-			add_opinion = { target = c:DAN modifier = opinion_discarded_scandinavian_constitution }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_discarded_scandinavian_constitution }
 		}
 	}
 }
@@ -406,7 +406,7 @@ flavor_dan.6 = { #A new dynasty in Denmark
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 6
@@ -459,7 +459,7 @@ flavor_dan.7 = { #Naval Reforms of John I
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -522,7 +522,7 @@ flavor_dan.8 = { #House Oldenburg in Denmark
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -537,7 +537,7 @@ flavor_dan.8 = { #House Oldenburg in Denmark
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		hidden_effect = {
 			ruler = { save_scope_as = target_character }
-			c:SHL = {
+			c:DUMMY = {
 				ruler = { save_scope_as = count_of_holstein }
 				heir = { save_scope_as = target_heir }
 			}
@@ -551,8 +551,8 @@ flavor_dan.8 = { #House Oldenburg in Denmark
 			age_in_years > 40
 		}
 
-		country_exists = c:SHL
-		c:SHL = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_subject_of = root
 			has_ruler = yes
 			ruler != root.ruler
@@ -623,7 +623,7 @@ flavor_dan.10 = { #Great Fire of Copenhagen of 1728 #DEVASTATION
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -710,7 +710,7 @@ flavor_dan.11 = { #Dutch Relations
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -744,7 +744,7 @@ flavor_dan.11 = { #Dutch Relations
 			}
 			add_opinion = { target = root modifier = danish_dutch_inspiration }
 			hidden_effect = {
-				c:DAN = {
+				c:DUMMY = {
 					add_opinion = { target = prev modifier = danish_dutch_inspiration }
 				}
 			}
@@ -767,7 +767,7 @@ flavor_dan.12 = { #Hans Tausen start preaching in Denmark
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -875,7 +875,7 @@ flavor_dan.13 = { #Cattle Trade
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -913,7 +913,7 @@ flavor_dan.14 = { #Jens Dinesen Jersin
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -980,7 +980,7 @@ flavor_dan.15 = { #Niels Juel offers service
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1051,7 +1051,7 @@ flavor_dan.16 = { #1660 state of emergency
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1116,7 +1116,7 @@ flavor_dan.17 = { #Peder Griffenfeld
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1179,7 +1179,7 @@ flavor_dan.18 = { #Tycho Brahe
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 1574.1
 		to = 476.9.4
 		monthly_chance = 2
@@ -1236,7 +1236,7 @@ flavor_dan.19 = { #The Assassination of Gerhard III
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1271,12 +1271,12 @@ flavor_dan.19 = { #The Assassination of Gerhard III
 		if = {
 			limit = { scope:target_gerhard = { is_alive = yes } }
 			if = {
-				limit = { country_exists = c:HTR }
-				c:HTR = { save_scope_as = target_country }
+				limit = { country_exists = c:DUMMY }
+				c:DUMMY = { save_scope_as = target_country }
 			}
 			else_if = {
-				limit = { country_exists = c:HPL }
-				c:HPL = { save_scope_as = target_country }
+				limit = { country_exists = c:DUMMY }
+				c:DUMMY = { save_scope_as = target_country }
 			}
 			else = {
 				random_neighbor_country = { save_scope_as = target_country }
@@ -1307,10 +1307,10 @@ flavor_dan.19 = { #The Assassination of Gerhard III
 		if = {
 			limit = {
 				scope:target_valdemar.first_spouse ?= character:dan_helvig
-				country_exists = c:SLV
-				c:SLV = { is_subject_of = root }
+				country_exists = c:DUMMY
+				c:DUMMY = { is_subject_of = root }
 			}
-			annex_country = { country = c:SLV }
+			annex_country = { country = c:DUMMY }
 			province_definition:norrejylland_province = {
 				every_location_in_province_definition = {
 					limit = { owner ?= root }
@@ -1333,9 +1333,9 @@ flavor_dan.19 = { #The Assassination of Gerhard III
 		if = {
 			limit = {
 				scope:target_valdemar.first_spouse ?= character:dan_helvig
-				country_exists = c:SLV
+				country_exists = c:DUMMY
 			}
-			annex_country = { country = c:SLV }
+			annex_country = { country = c:DUMMY }
 			province_definition:norrejylland_province = {
 				every_location_in_province_definition = {
 					limit = { owner = root }
@@ -1357,7 +1357,7 @@ flavor_dan.20 = { #Moving to Copenhagen
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1444,7 +1444,7 @@ flavor_dan.21 = { #Peter Tordenskjold
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1515,7 +1515,7 @@ flavor_dan.22 = { #Hans Christian Andersen
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -1580,7 +1580,7 @@ flavor_dan.23 = { #Ludvig Holberg
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -1645,7 +1645,7 @@ flavor_dan.24 = { #The Translation of the New Testament
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1782,7 +1782,7 @@ flavor_dan.25 = { #Storming of the Church of Our Lady
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1855,7 +1855,7 @@ flavor_dan.26 = { #Chronica Jutensis
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1921,7 +1921,7 @@ flavor_dan.27 = { #Resettling Greenland
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1979,7 +1979,7 @@ flavor_dan.28 = { #The Rediscovery of Vinland
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2016,7 +2016,7 @@ flavor_dan.29 = { #The Kastellet
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2065,7 +2065,7 @@ flavor_dan.30 = { #Preserving Gesta Danorum
 	image = "gfx/interface/illustrations/institutions/printing_press.dds"
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2119,7 +2119,7 @@ flavor_dan.31 = { #Kronborg
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2163,7 +2163,7 @@ flavor_dan.32 = { #Anders Sørensen Vedel
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2229,7 +2229,7 @@ flavor_dan.33 = { #Otto Ruud
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2288,7 +2288,7 @@ flavor_dan.34 = { #Pal Laxmand
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2346,7 +2346,7 @@ flavor_dan.35 = { #The Murder of Pal Laxmand #GRAVEYARD
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2393,7 +2393,7 @@ flavor_dan.36 = { #Legacy of the North Sea Empire
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2445,7 +2445,7 @@ flavor_dan.37 = { #Decline of the Hanseatic League
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2483,7 +2483,7 @@ flavor_dan.38 = { #Lion from the North
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2519,7 +2519,7 @@ flavor_dan.39 = { #Danish Colonial Empire
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2560,7 +2560,7 @@ flavor_dan.40 = { #Reconquest of Scania
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2618,7 +2618,7 @@ flavor_dan.41 = { #Danish Golden Age of Painting
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2686,7 +2686,7 @@ flavor_dan.43 = { #Founding of Christianstad
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2748,7 +2748,7 @@ flavor_dan.44 = { #The Trinity Chruch of Christianstad
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2837,7 +2837,7 @@ flavor_dan.46 = { #Expanding the Royal Life Guards
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2883,7 +2883,7 @@ flavor_dan.47 = { #The Scanian Regiment
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2930,7 +2930,7 @@ flavor_dan.48 = { #Andrew Sinclair
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3002,7 +3002,7 @@ flavor_dan.49 = { #Falk Lykke
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3069,7 +3069,7 @@ flavor_dan.50 = { #The King's Law
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3109,7 +3109,7 @@ flavor_dan.51 = { #Rebuilding Jomsborg
 	historical_info = flavor_dan.51.historical_info
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3160,7 +3160,7 @@ flavor_dan.52 = { #The Nyhavn Canal
 	historical_info = flavor_dan.52.historical_info
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3214,7 +3214,7 @@ flavor_dan.53 = { #Appointment of General Building Master
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3276,7 +3276,7 @@ flavor_dan.54 = { #Christian Frederik Hansen
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3323,7 +3323,7 @@ flavor_dan.55 = { #Christiansborg Palace
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3376,7 +3376,7 @@ flavor_dan.56 = { #Berthel Thorvaldsen
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3440,7 +3440,7 @@ flavor_dan.57 = { #Thorvaldsen's Museum
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3508,7 +3508,7 @@ flavor_dan.58 = { #Royal Academy of Fine Arts
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3556,7 +3556,7 @@ flavor_dan.59 = { #Fall of Visby
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3639,7 +3639,7 @@ flavor_dan.61 = { #College of Missions
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3684,7 +3684,7 @@ flavor_dan.62 = { #Royal Porcelain Factory
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3732,7 +3732,7 @@ flavor_dan.63 = { #The Vornedskab #GRAVEYARD
 	historical_info = flavor_dan.63.historical_info
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3773,7 +3773,7 @@ flavor_dan.64 = { #Amazigh Raid on Iceland #DEVASTATION
 	historical_info = flavor_dan.64.historical_info
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3831,7 +3831,7 @@ flavor_dan.65 = { #Royal Life Guards' Mutiny
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3874,7 +3874,7 @@ flavor_dan.66 = { #Expanding the Copenhagen Dockyard
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3923,7 +3923,7 @@ flavor_dan.67 = { #The Elmelunde Frescos
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3967,7 +3967,7 @@ flavor_dan.68 = { #Dominium Maris Baltici
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4021,7 +4021,7 @@ flavor_dan.1000 = { #Danish-Indian Charter
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -4114,28 +4114,28 @@ flavor_dan.1001 = { #Denmark offers to buy Trade Office Rigts
 		name = flavor_dan.1001.a
 		historical_option = yes
 
-		c:DAN = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = opinion_dansborg
 			}
 		}
 
-		add_gold = { value = c:DAN.monthly_income_trade_and_tax multiply = 4 }
-		c:DAN = {
+		add_gold = { value = c:DUMMY.monthly_income_trade_and_tax multiply = 4 }
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_dan.1002 }
 		}
 		scope:dansborg = {
 			change_building_level_in_location = {
 				building = building_type:trade_office
 				value = 1
-				owner = c:DAN
+				owner = c:DUMMY
 			}
 		}
 	}
 	option = {
 		name = flavor_dan.1001.b
-		c:DAN = {
+		c:DUMMY = {
 			trigger_event_non_silently = { id = flavor_dan.1003 }
 		}
 	}
@@ -4172,7 +4172,7 @@ flavor_dan.1002 = { #Offer accepted
 				change_building_level_in_location = {
 					building = building_type:trade_office
 					value = 1
-					owner = c:DAN
+					owner = c:DUMMY
 				}
 			}
 		}
@@ -4215,7 +4215,7 @@ flavor_dan.1100 = { #Peder Oxe pushed into exile? #PRISON
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -4316,7 +4316,7 @@ flavor_dan.1200 = { #A Royal Marriage
 	historical_info = flavor_dan.1200.historical_info
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4353,14 +4353,14 @@ flavor_dan.1200 = { #A Royal Marriage
 		add_prestige = prestige_mild_bonus
 		custom_tooltip = {
 			text = flavor_dan.1200.dan.tt
-			c:SLV = { trigger_event_non_silently = flavor_dan.1203 }
+			c:DUMMY = { trigger_event_non_silently = flavor_dan.1203 }
 		}
 	}
 
 	option = {
 		name = flavor_dan.1200.b
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
-		reverse_add_opinion = { target = c:SLV modifier = refused_diplomatic_offer }
+		reverse_add_opinion = { target = c:DUMMY modifier = refused_diplomatic_offer }
 	}
 
 }
@@ -4408,7 +4408,7 @@ flavor_dan.1202 = { #Marriage Refused
 
 	option = {
 		name = flavor_dan.1202.a
-		show_as_tooltip = { add_opinion = { target = c:SLV modifier = refused_diplomatic_offer } }
+		show_as_tooltip = { add_opinion = { target = c:DUMMY modifier = refused_diplomatic_offer } }
 	}
 	trigger = {
 		current_date > 476.9.4
@@ -4438,15 +4438,15 @@ flavor_dan.1203 = { #A Royal Marriage
 		scope:target_valdemar = { marry_character = scope:target_helvig }
 		custom_tooltip = {
 			text = flavor_dan.1200.slv.tt
-			c:DAN = { trigger_event_non_silently = flavor_dan.1201 }
+			c:DUMMY = { trigger_event_non_silently = flavor_dan.1201 }
 		}
 	}
 
 	option = {
 		name = flavor_dan.1200.b
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
-		reverse_add_opinion = { target = c:DAN modifier = refused_diplomatic_offer }
-		hidden_effect = { c:DAN = { trigger_event_non_silently = flavor_dan.1202 } }
+		reverse_add_opinion = { target = c:DUMMY modifier = refused_diplomatic_offer }
+		hidden_effect = { c:DUMMY = { trigger_event_non_silently = flavor_dan.1202 } }
 	}
 
 	trigger = {

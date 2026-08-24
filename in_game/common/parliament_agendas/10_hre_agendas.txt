@@ -59,7 +59,7 @@ pa_hre_elevate_prussia_to_kingdom = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		international_organization_type = international_organization_type:hre
 		international_organization_has_unlocked_parliament_agenda_trigger = { type = pa_hre_elevate_prussia_to_kingdom }
-		c:PRU = {
+		c:DUMMY = {
 			NOT = { is_leader_of_international_organization = root }
 			is_member_of_international_organization = root
 			has_special_status_in_international_organization = { type = scope:target international_organization = root }
@@ -75,7 +75,7 @@ pa_hre_elevate_prussia_to_kingdom = {
 		international_organization_lock_parliament_agenda_effect = { type = pa_hre_elevate_prussia_to_kingdom }
 		custom_tooltip = pa_hre_elevate_prussia_to_kingdom_tt
 		hidden_effect = {
-			c:PRU = {
+			c:DUMMY = {
 				trigger_event_non_silently = king_in_prussia.6
 			}
 		}

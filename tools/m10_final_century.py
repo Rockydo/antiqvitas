@@ -12,12 +12,16 @@ from advance_event_packages import knowledge_response_lines
 from dates import AntqDate, M2_MIRROR_LANGUAGES, indexed_timeline, load_timeline
 from m10_fourth_century import script_token
 from m10_history import (
+    alternative_event_option_lines,
     current_lifecycle_lines,
     disaster_modifier_lines,
     engine_tags,
+    event_choice_localization,
+    historical_event_choice_lines,
     resolution_trigger_lines,
     situation_presentation_lines,
     start_country_locations,
+    validate_ai_chance_syntax,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -44,7 +48,9 @@ TARGETS = {
     "constantinople_earthquake": "ERO",
     "adventus_saxonum": "ROM",
     "chalcedon_avarayr": "ARM",
-    "vandal_sack_rome": "VND",
+    # Rome receives the sack event. VND is created dynamically in 429 and is
+    # therefore not a bookmark-registry tag accepted by DHE metadata.
+    "vandal_sack_rome": "ROM",
     "cape_bon": "ERO",
     "odoacer_finale": "ROM",
 }
@@ -234,8 +240,10 @@ def event_script(records: tuple[Current, ...]) -> str:
             lines.append(f'\timage = "{image}"')
         if record.kind not in {"situation", "disaster"}:
             lines.extend(("\tdynamic_historical_event = {", f"\t\ttag = {record.engine_tag}", f"\t\tfrom = {start.engine()}", f"\t\tto = {end.engine()}", "\t\tmonthly_chance = 100", "\t}"))
-        lines.extend(("\toption = {", f"\t\tname = {record.event_key}.a", "\t\thistorical_option = yes", *impact(record), *knowledge_response_lines(record.kind, 5), "\t}", "}", ""))
-    return "\n".join(lines)
+        lines.extend(("\toption = {", f"\t\tname = {record.event_key}.a", "\t\thistorical_option = yes", *historical_event_choice_lines(record), *impact(record), *knowledge_response_lines(record.kind, 5), "\t}", *alternative_event_option_lines(record), "}", ""))
+    script = "\n".join(lines)
+    validate_ai_chance_syntax(script, source=str(EVENTS.relative_to(ROOT)))
+    return script
 
 
 def manager_script(records: tuple[Current, ...], kind: str) -> str:
@@ -264,8 +272,11 @@ def manager_script(records: tuple[Current, ...], kind: str) -> str:
 def localization(records: tuple[Current, ...], language: str) -> str:
     lines = [f"l_{language}:", ' VSG: "Visigoths"', ' VSG_ADJ: "Visigothic"', ' VND: "Vandals"', ' VND_ADJ: "Vandal"', ' ODO: "Kingdom of Italy"', ' ODO_ADJ: "Italian"']
     for record in records:
-        description = f"{record.summary} This historical current follows the strong setting."
-        lines.extend((f' {record.event_key}.title: "{record.label}"', f' {record.event_key}.desc: "{description}"', f' {record.event_key}.a: "Meet the historical current."', f' {record.event_key}.entry: "{record.label}"', f' {record.event_key}.entry_short: "{record.label}"'))
+        description = (
+            f"{record.summary}. Decisions taken during this current alter its "
+            "pace, cost, and eventual resolution."
+        )
+        lines.extend((f' {record.event_key}.title: "{record.label}"', f' {record.event_key}.desc: "{description}"', f' {record.event_key}.a: "{event_choice_localization(record)[0]}"', f' {record.event_key}.b: "{event_choice_localization(record)[1]}"', f' {record.event_key}.c: "{event_choice_localization(record)[2]}"', f' {record.event_key}.entry: "{record.label}"', f' {record.event_key}.entry_short: "{record.label}"'))
         if record.kind in {"situation", "disaster"}:
             lines.extend((f' {record.script_key}: "{record.label}"', f' {record.script_key}_desc: "{description}"'))
     return "\n".join(lines) + "\n"

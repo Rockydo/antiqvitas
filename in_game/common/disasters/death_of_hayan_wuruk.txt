@@ -43,7 +43,7 @@ death_of_hayan_wuruk = {
 	}
 
 	on_monthly = {
-		c:MAJ = {
+		c:DUMMY = {
 			if = {
 				limit = { has_variable = maj_death_of_hayan_wuruk_timer }
 				change_variable = {

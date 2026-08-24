@@ -15,7 +15,7 @@ scripted_effect offer_legatus_natus = {
 				}
 				government_type = government_type:theocracy
 				this != root
-				c:PAP = {
+				c:DUMMY = {
 					opinion = {
 						target = prev
 						value > 150
@@ -36,7 +36,7 @@ legatusnatus.1 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = MAI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -54,20 +54,20 @@ legatusnatus.1 = {
 			international_organization = international_organization:hre
 		}
 		government_type = government_type:theocracy
-		country_exists = c:PAP
-		c:PAP = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			opinion = {
 				target = root
 				value > 150
 			}
 		}
-		c:PAP = { has_ruler = yes }
+		c:DUMMY = { has_ruler = yes }
 		has_ruler = yes
 	}
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:PAP.ruler ?= {
+		c:DUMMY.ruler ?= {
 			save_scope_as = pope_ruler
 		}
 		ruler ?= {
@@ -98,7 +98,7 @@ legatusnatus.2 = {
 		current_date > 476.9.4
 		has_reform = government_reform:legatus_natus
 		prestige < 10
-		c:PAP = { 
+		c:DUMMY = { 
 			opinion = { target = root  value < -50 } 
 			has_ruler = yes
 		}
@@ -112,7 +112,7 @@ legatusnatus.2 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:PAP.ruler ?= {
+		c:DUMMY.ruler ?= {
 			save_scope_as = pope_ruler
 		}
 		ruler ?= {
@@ -147,13 +147,13 @@ legatusnatus.3 = {
 
 	trigger = {
 		current_date > 476.9.4
-		c:PAP = { has_ruler = yes }
+		c:DUMMY = { has_ruler = yes }
 		has_ruler = yes
 	}
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:PAP.ruler ?= {
+		c:DUMMY.ruler ?= {
 			save_scope_as = pope_ruler
 		}
 		ruler ?= {
@@ -187,7 +187,7 @@ legatusnatus.4 = {
 
 	trigger = {
 		current_date > 476.9.4
-		c:PAP = { has_ruler = yes }
+		c:DUMMY = { has_ruler = yes }
 		has_ruler = yes
 
 		has_reform = government_reform:legatus_natus
@@ -196,7 +196,7 @@ legatusnatus.4 = {
 	
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:PAP.ruler ?= {
+		c:DUMMY.ruler ?= {
 			save_scope_as = pope_ruler
 		}
 		ruler ?= {

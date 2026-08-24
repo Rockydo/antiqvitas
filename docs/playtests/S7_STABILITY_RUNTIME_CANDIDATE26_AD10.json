@@ -1,0 +1,78 @@
+{
+  "save": "G:\\antiqvitas_user_data\\save games\\autosave_4f67f2fa-a0a9-47f9-89ec-2dc3ba13e14c.eu5",
+  "date": "10.1.1",
+  "real_polities": 460,
+  "stability": {
+    "minimum": -35.42993,
+    "p10": 8.951549,
+    "median": 18.653565,
+    "p90": 36.091941000000006,
+    "maximum": 46.7371,
+    "negative_count": 9,
+    "severe_count": 8
+  },
+  "estates": {
+    "records": 2570,
+    "minimum": 0.19621,
+    "p10": 0.50004,
+    "median": 0.64254,
+    "polity_mean_p10": 0.6181062333333333,
+    "below_10_percent": 0,
+    "below_25_percent": 2
+  },
+  "wars": {
+    "distinct_civil_wars": 6,
+    "active_wars": 5,
+    "active_civil_wars": 1,
+    "elapsed_years": 9.0,
+    "civil_wars_per_polity_year": 0.0014398848092152627
+  },
+  "epidemics": {
+    "non_endemic_outbreaks": 4,
+    "outbreaks": [
+      {
+        "id": 6700,
+        "type": "influenza",
+        "outbreak_date": "2.2.1",
+        "died_out_date": "2.5.21",
+        "affected_locations": 7,
+        "age_years": 7.916666666666666,
+        "affected_locations_per_year": 0.8842105263157896
+      },
+      {
+        "id": 6701,
+        "type": "smallpox",
+        "outbreak_date": "2.3.1",
+        "died_out_date": "2.4.6",
+        "affected_locations": 1,
+        "age_years": 7.833333333333334,
+        "affected_locations_per_year": 0.1276595744680851
+      },
+      {
+        "id": 6702,
+        "type": "typhus",
+        "outbreak_date": "8.5.1",
+        "died_out_date": "8.7.11",
+        "affected_locations": 9,
+        "age_years": 1.666666666666666,
+        "affected_locations_per_year": 5.400000000000002
+      },
+      {
+        "id": 6703,
+        "type": "influenza",
+        "outbreak_date": "9.5.1",
+        "died_out_date": "10.1.1",
+        "affected_locations": 46,
+        "age_years": 0.6666666666666661,
+        "affected_locations_per_year": 69.00000000000006
+      }
+    ]
+  },
+  "log": {
+    "path": "G:\\antiqvitas_user_data\\logs\\error.log",
+    "script_errors": 0,
+    "ai_command_errors": 0,
+    "locations": {}
+  },
+  "failures": []
+}

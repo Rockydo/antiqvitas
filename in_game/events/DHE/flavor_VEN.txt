@@ -6,7 +6,7 @@ flavor_ven.1 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -54,7 +54,7 @@ flavor_ven.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -73,8 +73,8 @@ flavor_ven.2 = {
 		current_date > 476.9.4
 		tag = VEN
 		NOT = {	current_year >= 1550	}
-		NOT = {	country_exists = c:BYZ }
-		location:constantinople = {	owner = c:TUR	}
+		NOT = {	country_exists = c:DUMMY }
+		location:constantinople = {	owner = c:DUMMY	}
 
 		"culture_percentage_in_country(culture:greek_culture)" > 0
 	}
@@ -106,7 +106,7 @@ flavor_ven.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -131,7 +131,7 @@ flavor_ven.3 = {
 		name = flavor_ven.3.a
 		unlock_law_effect = { type = venetian_papal_relation_law }
 		historical_option = yes
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = ven_venetian_first }
 		}
 		add_policy = policy:venetian_first
@@ -139,7 +139,7 @@ flavor_ven.3 = {
 	option = {
 		name = flavor_ven.3.b
 		unlock_law_effect = { type = venetian_papal_relation_law }
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = ven_christian_first }
 		}
 		add_policy = policy:christian_first
@@ -156,7 +156,7 @@ flavor_ven.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -182,7 +182,7 @@ flavor_ven.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -226,7 +226,7 @@ flavor_ven.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -268,7 +268,7 @@ flavor_ven.7 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -307,7 +307,7 @@ flavor_ven.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -350,7 +350,7 @@ flavor_ven.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -395,7 +395,7 @@ flavor_ven.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -435,7 +435,7 @@ flavor_ven.11 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -497,7 +497,7 @@ flavor_ven.12 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -548,7 +548,7 @@ flavor_ven.13 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -612,7 +612,7 @@ flavor_ven.14 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -627,11 +627,11 @@ flavor_ven.14 = {
 		location:constantinople = {
 			trigger_if = {
 				limit = {
-					country_exists = c:BYZ
+					country_exists = c:DUMMY
 				}
-				NOT = {	owner = c:BYZ }
+				NOT = {	owner = c:DUMMY }
 			}
-			NOT = { owner = c:VEN }
+			NOT = { owner = c:DUMMY }
 		}
 	}
 
@@ -654,7 +654,7 @@ flavor_ven.15 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -724,7 +724,7 @@ flavor_ven.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -796,7 +796,7 @@ flavor_ven.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -837,7 +837,7 @@ flavor_ven.18 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -876,7 +876,7 @@ flavor_ven.19 = {
 		current_date > 476.9.4
 
 		NOT = {
-			is_at_war_with = c:TUR
+			is_at_war_with = c:DUMMY
 			owns = location:lecce
 		}
 		religion.group = religion_group:christian
@@ -888,7 +888,7 @@ flavor_ven.19 = {
 
 		custom_tooltip = flavor_ven.19.a.tt
 
-		c:TUR = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = flavor_tur.81
 				days = { 2 3 }
@@ -914,7 +914,7 @@ flavor_ven.19 = {
 
 		custom_tooltip = flavor_ven.19.b.tt
 
-		c:TUR = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = flavor_tur.82
 				days = { 2 3 }
@@ -925,10 +925,10 @@ flavor_ven.19 = {
 			limit = {
 				AND = {
 					religion = religion:catholic
-					country_exists = c:PAP
+					country_exists = c:DUMMY
 				}
 			}
-			c:PAP = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = opinion_displeased  }
 			}
 		}
@@ -943,11 +943,11 @@ flavor_ven.19 = {
 	option = {
 		name = flavor_ven.19.c
 
-		c:TUR = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_irritated  }
 		}
 
-		c:TUR = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = flavor_tur.83
 				days = { 2 3 }
@@ -967,7 +967,7 @@ flavor_ven.20 = { #Domini di Terraferma
 	historical_info = flavor_ven.20.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -975,7 +975,7 @@ flavor_ven.20 = { #Domini di Terraferma
 
 	trigger = {
 		current_date > 476.9.4
-		c:VER = {
+		c:DUMMY = {
 			NOT = { is_allied_with = { target = ROOT } }
 			NOT = { has_truce_with = ROOT }
 			NOT = { is_at_war_with = ROOT }
@@ -996,7 +996,7 @@ flavor_ven.20 = { #Domini di Terraferma
 	option = {
 		name = flavor_ven.20.a
 		historical_option = yes
-		c:VER = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = border_friction_from_event
@@ -1005,7 +1005,7 @@ flavor_ven.20 = { #Domini di Terraferma
 		add_casus_belli =  {
 			type = casus_belli:cb_conquer_province
 			province = location:treviso.province
-			target = c:VER
+			target = c:DUMMY
 		}
 	}
 
@@ -1027,7 +1027,7 @@ flavor_ven.21 = { #Teatro San Cassiano
 	historical_info = flavor_ven.21.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1138,7 +1138,7 @@ flavor_ven.24 = { #The Flooding of Venice
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1224,7 +1224,7 @@ flavor_ven.25 = { #Fall of Constantinople
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -1268,15 +1268,15 @@ flavor_ven.25 = { #Fall of Constantinople
 			text = flavor_ven.25.b.tt
 			location:constantinople = {
 				remove_core = root
-				add_core = c:LAT
+				add_core = c:DUMMY
 			}
-			create_country_from_cores_in_our_locations = c:LAT
-			c:LAT = {
+			create_country_from_cores_in_our_locations = c:DUMMY
+			c:DUMMY = {
 				make_subject_of = { target = root type = subject_type:vassal }
 				change_religion = religion:catholic
-				change_religion_for_ruler_and_family = { country = c:LAT religion = religion:catholic }
+				change_religion_for_ruler_and_family = { country = c:DUMMY religion = religion:catholic }
 				change_government_type = government_type:monarchy
-				every_owned_location = { add_core = c:LAT }
+				every_owned_location = { add_core = c:DUMMY }
 			}
 		}
 	}
@@ -1290,15 +1290,15 @@ flavor_ven.25 = { #Fall of Constantinople
 					area = area:thrace_area
 				}
 				remove_core = root
-				add_core = c:LAT
+				add_core = c:DUMMY
 			}
-			create_country_from_cores_in_our_locations = c:LAT
-			c:LAT = {
+			create_country_from_cores_in_our_locations = c:DUMMY
+			c:DUMMY = {
 				make_subject_of = { target = root type = subject_type:vassal }
 				change_religion = religion:catholic
-				change_religion_for_ruler_and_family = { country = c:LAT religion = religion:catholic }
+				change_religion_for_ruler_and_family = { country = c:DUMMY religion = religion:catholic }
 				change_government_type = government_type:monarchy
-				every_owned_location = { add_core = c:LAT }
+				every_owned_location = { add_core = c:DUMMY }
 			}
 		}
 	}
@@ -1318,7 +1318,7 @@ flavor_ven.26 = { #Liberation of Jerusalem
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -1353,14 +1353,14 @@ flavor_ven.26 = { #Liberation of Jerusalem
 			text = flavor_ven.26.b.tt
 			location:jerusalem = {
 				remove_core = root
-				add_core = c:KOJ
+				add_core = c:DUMMY
 			}
-			create_country_from_cores_in_our_locations = c:KOJ
-			c:KOJ = {
+			create_country_from_cores_in_our_locations = c:DUMMY
+			c:DUMMY = {
 				change_religion = religion:catholic
-				change_religion_for_ruler_and_family = { country = c:KOJ religion = religion:catholic }
+				change_religion_for_ruler_and_family = { country = c:DUMMY religion = religion:catholic }
 				change_government_type = government_type:monarchy
-				every_owned_location = { add_core = c:KOJ }
+				every_owned_location = { add_core = c:DUMMY }
 				make_subject_of = { target = root type = subject_type:vassal }
 			}
 		}
@@ -1375,14 +1375,14 @@ flavor_ven.26 = { #Liberation of Jerusalem
 					area = area:levant_area
 				}
 				remove_core = root
-				add_core = c:KOJ
+				add_core = c:DUMMY
 			}
-			create_country_from_cores_in_our_locations = c:KOJ
-			c:KOJ = {
+			create_country_from_cores_in_our_locations = c:DUMMY
+			c:DUMMY = {
 				change_religion = religion:catholic
-				change_religion_for_ruler_and_family = { country = c:KOJ religion = religion:catholic }
+				change_religion_for_ruler_and_family = { country = c:DUMMY religion = religion:catholic }
 				change_government_type = government_type:monarchy
-				every_owned_location = { add_core = c:KOJ }
+				every_owned_location = { add_core = c:DUMMY }
 				make_subject_of = { target = root type = subject_type:vassal }
 			}
 		}
@@ -1400,7 +1400,7 @@ flavor_ven.27 = { #Expanding the Doge's Palace
 	historical_info = flavor_ven.27.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1450,7 +1450,7 @@ flavor_ven.28 = { #The Venetian Arsenal
 	historical_info = flavor_ven.28.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1481,7 +1481,7 @@ flavor_ven.29 = { #Basilica dei Santi Giovanni e Paolo
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1528,7 +1528,7 @@ flavor_ven.30 = { #Mediterranean Naval Superpower
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1607,7 +1607,7 @@ flavor_ven.31 = { # Tiziano Vecelli
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1662,7 +1662,7 @@ flavor_ven.32 = { # Venice During the Renaissance
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1706,7 +1706,7 @@ flavor_ven.33 = { # The Venetian Carnival
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1757,7 +1757,7 @@ flavor_ven.34 = { # Revising the Promissione Ducale
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1810,7 +1810,7 @@ flavor_ven.35 = { # The Question of Relazioni
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1879,7 +1879,7 @@ flavor_ven.36 = { # The Golden Republic
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1934,7 +1934,7 @@ flavor_ven.38 = { #The Loredanian Academy
 	historical_info = flavor_ven.38.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1987,7 +1987,7 @@ flavor_ven.39 = { #Venetian School of Music
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2036,7 +2036,7 @@ flavor_ven.40 = { #Fall of Genoa
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2082,7 +2082,7 @@ flavor_ven.41 = { #Devotion of Verona to Venice
 	historical_info = flavor_ven.41.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2128,7 +2128,7 @@ flavor_ven.43 = { #Lorenzo Marcello
 	historical_info = flavor_ven.43.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2190,7 +2190,7 @@ flavor_ven.44 = { #Adrian Willaert
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2243,7 +2243,7 @@ flavor_ven.45 = { #Giuseppe Zarlino
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2296,7 +2296,7 @@ flavor_ven.46 = { #Baldassare Donato
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2352,7 +2352,7 @@ flavor_ven.47 = { #Claudio Merulo
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2405,7 +2405,7 @@ flavor_ven.48 = { #Giovanni Gabrieli
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2460,7 +2460,7 @@ flavor_ven.49 = { #Revolt of Saint Titus
 	historical_info = flavor_ven.49.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2468,8 +2468,8 @@ flavor_ven.49 = { #Revolt of Saint Titus
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:CRT
-		c:CRT = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_subject_of = ROOT
 			stability < 10
 			own_entire_province = province_definition:crete_province
@@ -2489,7 +2489,7 @@ flavor_ven.49 = { #Revolt of Saint Titus
 	option = {
 		name = flavor_ven.49.a
 		historical_option = yes
-		c:CRT = {
+		c:DUMMY = {
 			add_liberty_desire = liberty_desire_extreme_plus
 			add_opinion = {
 				target = overlord
@@ -2507,7 +2507,7 @@ flavor_ven.49 = { #Revolt of Saint Titus
 	option = {
 		name = flavor_ven.49.b
 		change_gold_effect = { scale = -6 }
-		c:CRT = {
+		c:DUMMY = {
 			add_gold = {
 				value = overlord.monthly_income_trade_and_tax
 				multiply = 6
@@ -2528,7 +2528,7 @@ flavor_ven.50 = { #Rebellion of the Callergis
 	historical_info = flavor_ven.50.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2540,8 +2540,8 @@ flavor_ven.50 = { #Rebellion of the Callergis
 			text = variable_ven_enable_callgeri_revolt_tt
 			has_variable = ven_enable_callgeri_revolt
 		}
-		country_exists = c:CRT
-		c:CRT = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_subject_of = ROOT
 			own_entire_province = province_definition:crete_province
 		}
@@ -2554,7 +2554,7 @@ flavor_ven.50 = { #Rebellion of the Callergis
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
-		c:CRT = {
+		c:DUMMY = {
 			create_rebel = {
 				category = estate
 				estate = nobles_estate
@@ -2569,7 +2569,7 @@ flavor_ven.50 = { #Rebellion of the Callergis
 		historical_option = yes
 		custom_tooltip = {
 			text = callergis_rebellion_joining
-			c:CRT = {
+			c:DUMMY = {
 				every_owned_location = {
 					limit = {
 						area = area:aegean_archipelago_area
@@ -2590,7 +2590,7 @@ flavor_ven.50 = { #Rebellion of the Callergis
 
 	option = {
 		name = flavor_ven.50.b
-		c:CRT = {
+		c:DUMMY = {
 			destroy_rebel = scope:callergis_rebellion
 		}
   		add_legitimacy = legitimacy_extreme_penalty
@@ -2611,7 +2611,7 @@ flavor_ven.51 = { #Piazza San Marco
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2663,7 +2663,7 @@ flavor_ven.52 = { #St Marks Clocktower
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2713,7 +2713,7 @@ flavor_ven.53 = { # The Venetian Salt Trade
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2754,7 +2754,7 @@ flavor_ven.54 = { #Jacopo Robusti
 
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2805,7 +2805,7 @@ flavor_ven.55 = { #Tintoretto's Crucifixion
 	historical_info = flavor_ven.55.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2855,7 +2855,7 @@ flavor_ven.56 = { #Jacopo Sansovino
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2920,7 +2920,7 @@ flavor_ven.57 = { #Designing the Zecca of Venice
 	historical_info = flavor_ven.57.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2963,7 +2963,7 @@ flavor_ven.58 = { #The Patriarchate of Venice
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2974,13 +2974,13 @@ flavor_ven.58 = { #The Patriarchate of Venice
 		owns = location:venice
 		owns = location:aquileia
 		religion = religion:catholic
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 		NOT = {
-			country_exists = c:AQU
+			country_exists = c:DUMMY
 		}
 		root = {
 			opinion = {
-				target = c:PAP
+				target = c:DUMMY
 				value >= 100
 			}
 		}
@@ -3000,7 +3000,7 @@ flavor_ven.58 = { #The Patriarchate of Venice
 		add_religious_influence = religious_influence_mild_bonus
 		add_prestige = prestige_mild_bonus
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_bonus }
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = opinion_good_relations
@@ -3020,7 +3020,7 @@ flavor_ven.59 = { #The Doge's Power Grab
 	historical_info = flavor_ven.59.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3099,7 +3099,7 @@ flavor_ven.60 = { #Fortifying Ragusa
 	historical_info = flavor_ven.60.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3150,7 +3150,7 @@ flavor_ven.61 = { #Bartolomeo Platina
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3221,7 +3221,7 @@ flavor_ven.62 = { #The Marriage of the Sea
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3273,7 +3273,7 @@ flavor_ven.63 = { #Renovating the Bucentaur
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3329,7 +3329,7 @@ flavor_ven.64 = { #Voyage of the Zeno Brothers
 	historical_info = flavor_ven.64.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3390,7 +3390,7 @@ flavor_ven.65 = { #Castello a Mare
 	historical_info = flavor_ven.65.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3446,7 +3446,7 @@ flavor_ven.66 = { #Pietro Loredan
 	historical_info = flavor_ven.66.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3517,7 +3517,7 @@ flavor_ven.67 = { #Bartolomeo Bono
 	historical_info = flavor_ven.67.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3580,7 +3580,7 @@ flavor_ven.68 = { #Antonio Vivaldi
 	historical_info = flavor_ven.68.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3630,7 +3630,7 @@ flavor_ven.69 = { #War of Padua
 	historical_info = flavor_ven.69.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -3638,7 +3638,7 @@ flavor_ven.69 = { #War of Padua
 
 	trigger = {
 		current_date > 476.9.4
-		is_at_war_with = c:PAD
+		is_at_war_with = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -3678,7 +3678,7 @@ flavor_ven.70 = { #Benedetto Marcello
 	historical_info = flavor_ven.70.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3742,7 +3742,7 @@ flavor_ven.71 = { #The Question of Concio
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3798,7 +3798,7 @@ flavor_ven.72 = { #Magistrato alla Sanità
 	historical_info = flavor_ven.72.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3841,7 +3841,7 @@ flavor_ven.73 = { # The Banco del Giro
 
 	major = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3984,7 +3984,7 @@ flavor_ven.74 = { #Venetian Holy Inquisition
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4037,7 +4037,7 @@ flavor_ven.75 = { #Supporting the Muda Convoys
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4078,7 +4078,7 @@ flavor_ven.76 = { # Alessandro Leopardi
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4136,7 +4136,7 @@ flavor_ven.77 = { #Expanding Domini di Terraferma
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4182,7 +4182,7 @@ flavor_ven.78 = { # Paolo Sarpi
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4248,7 +4248,7 @@ flavor_ven.79 = { #A Foothold in Cyprus
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4316,7 +4316,7 @@ flavor_ven.80 = { #Divine Intervention
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4363,7 +4363,7 @@ flavor_ven.81 = { #Francesco Foscari & Ca' Foscari
 	historical_info = flavor_ven.81.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4436,7 +4436,7 @@ flavor_ven.82 = { #The Venetian Statutes
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4499,7 +4499,7 @@ flavor_ven.83 = { #Fra Mauro and the Map of the World
 	historical_info = flavor_ven.83.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4566,7 +4566,7 @@ flavor_ven.84 = { #A Foscari Doge of Venice
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4633,7 +4633,7 @@ flavor_ven.85 = { #The Diarii
 	historical_info = flavor_ven.85.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4699,7 +4699,7 @@ flavor_ven.86 = { #Greek Printing of Venice
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4775,7 +4775,7 @@ flavor_ven.87 = { #A Scholar Against All Odds
 	historical_info = flavor_ven.87.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4843,7 +4843,7 @@ flavor_ven.88 = { #The Musical Bridge
 	historical_info = flavor_ven.88.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4853,10 +4853,10 @@ flavor_ven.88 = { #The Musical Bridge
 		current_date > 476.9.4
 		owns = location:venice
 		OR = {
-			country_exists = c:ENG
+			country_exists = c:DUMMY
 			AND = {
 				tag_exists = GBR
-				country_exists = c:GBR
+				country_exists = c:DUMMY
 			}
 		}
 	}
@@ -4882,18 +4882,18 @@ flavor_ven.88 = { #The Musical Bridge
 		}
 		if = {
 			limit = {
-				country_exists = c:ENG
+				country_exists = c:DUMMY
 			}
-			c:ENG = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}
 		else_if = {
 			limit = {
 				tag_exists = GBR
-				country_exists = c:GBR
+				country_exists = c:DUMMY
 			}
-			c:GBR = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}
@@ -4933,7 +4933,7 @@ flavor_ven.89 = { #Castelli's Experiments
 	historical_info = flavor_ven.89.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5008,7 +5008,7 @@ flavor_ven.90 = { #Nicolò Minato
 	historical_info = flavor_ven.90.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5086,7 +5086,7 @@ flavor_ven.91 = { #Expanding the Venetian Ghetto
 	historical_info = flavor_ven.91.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5170,7 +5170,7 @@ flavor_ven.92 = { #The Botanical Garden of Padua
 	historical_info = flavor_ven.92.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5222,7 +5222,7 @@ flavor_ven.93 = { #The Reforms of Lazzaretto Vecchio
 	historical_info = flavor_ven.93.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5279,7 +5279,7 @@ flavor_ven.94 = { #The Coffeehouse Controversy
 	historical_info = flavor_ven.94.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5347,7 +5347,7 @@ flavor_ven.95 = { #An Expedition to Dalmatia
 	historical_info = flavor_ven.95.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5431,7 +5431,7 @@ flavor_ven.96 = { #The Exhibition of Rosalba Carriera
 	historical_info = flavor_ven.96.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5496,7 +5496,7 @@ flavor_ven.97 = { #The Suppression of the Ridotto
 	historical_info = flavor_ven.97.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5601,7 +5601,7 @@ flavor_ven.98 = { #The Astrarium
 	historical_info = flavor_ven.98.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5683,7 +5683,7 @@ flavor_ven.99 = { #The Cipher Secretary
 	historical_info = flavor_ven.99.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5738,7 +5738,7 @@ flavor_ven.100 = { #The Inventions of Tito Livio Burattini
 	historical_info = flavor_ven.98.historical_info
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5802,7 +5802,7 @@ flavor_ven.1000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5810,19 +5810,19 @@ flavor_ven.1000 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:MAM
-		country_exists = c:POR
-		NOT = {	is_rival_of = c:MAM	}
-		NOT = {	is_at_war_with = c:MAM	}
-		location:alexandria = {	owner = c:MAM }
-		c:MAM = {
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		NOT = {	is_rival_of = c:DUMMY	}
+		NOT = {	is_at_war_with = c:DUMMY	}
+		location:alexandria = {	owner = c:DUMMY }
+		c:DUMMY = {
 			custom_tooltip = {
 				text = variable_MAM_POR_conflict_tt
 				has_variable = MAM_POR_conflict
 			}
 		}
-		location:alula.market.most_powerful_merchant = c:POR
-		location:alexandria.market.most_powerful_merchant = c:VEN
+		location:alula.market.most_powerful_merchant = c:DUMMY
+		location:alexandria.market.most_powerful_merchant = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -5833,14 +5833,14 @@ flavor_ven.1000 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		save_scope_as = ven_scope
-		c:MAM = { remove_variable = MAM_POR_conflict }
+		c:DUMMY = { remove_variable = MAM_POR_conflict }
 	}
 
 	option = {
 		name = flavor_ven.1000.a
 		historical_option = yes
-		c:MAM = { trigger_event_silently = { id = flavor_ven.1001 } }
-		c:POR = {
+		c:DUMMY = { trigger_event_silently = { id = flavor_ven.1001 } }
+		c:DUMMY = {
 			add_opinion = { target = root modifier = ven_helping_mamelukes }
 		}
 	}

@@ -15,7 +15,7 @@ flavor_pap_holy_league.1 = {
 	major = yes
 	
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -25,8 +25,8 @@ flavor_pap_holy_league.1 = {
 		current_date > 476.9.4
 		has_ruler = yes
 		at_war = no
-		country_exists = c:TUR
-		c:TUR = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			owns = location:constantinople
 			has_ruler = yes
 			at_war = no
@@ -40,37 +40,37 @@ flavor_pap_holy_league.1 = {
 	}
 
 	immediate = {
-		c:TUR = {
+		c:DUMMY = {
 			save_scope_as = crusade_target
 			ruler = {
 				save_scope_as = ottoman_ruler
 			}
 		}
-		c:GEN ?= {
+		c:DUMMY ?= {
 			add_to_list = holy_league_list
 		}
-		c:VEN ?= {
+		c:DUMMY ?= {
 			add_to_list = holy_league_list
 		}
-		c:SPA ?= {
+		c:DUMMY ?= {
 			add_to_list = holy_league_list
 		}
-		c:ARA ?= {
+		c:DUMMY ?= {
 			add_to_list = holy_league_list
 		}
-		c:KNI ?= {
+		c:DUMMY ?= {
 			add_to_list = holy_league_list
 		}
-		c:NAP ?= {
+		c:DUMMY ?= {
 			add_to_list = holy_league_list
 		}
-		c:TUS ?= {
+		c:DUMMY ?= {
 			add_to_list = holy_league_list
 		}
-		c:PAR ?= {
+		c:DUMMY ?= {
 			add_to_list = holy_league_list
 		}
-		c:SAV ?= {
+		c:DUMMY ?= {
 			add_to_list = holy_league_list
 		}
 		ruler = {
@@ -124,7 +124,7 @@ flavor_pap_holy_league.1 = {
 			custom_tooltip = flavor_pap_holy_league.1.a.tt
 		}
 		
-		c:TUR ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = flavor_pap_holy_league.8
 		}
 	}
@@ -168,7 +168,7 @@ flavor_pap_holy_league.2 = {
 
 		add_prestige = prestige_mild_bonus
 		
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_pap_holy_league.3
 			add_opinion = { target = ROOT modifier = pap_joined_the_holy_league }
 		}
@@ -177,11 +177,11 @@ flavor_pap_holy_league.2 = {
 			factor = 100
 			modifier = {
 				factor = 0
-				is_allied_with = { target = c:TUR }
+				is_allied_with = { target = c:DUMMY }
 			}
 			modifier = {
 				factor = 0
-				c:PAP = { is_rival_of = root }
+				c:DUMMY = { is_rival_of = root }
 			}
 		}
 	}
@@ -191,7 +191,7 @@ flavor_pap_holy_league.2 = {
 	
 		add_prestige = prestige_severe_penalty
 		
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_pap_holy_league.4
 			add_opinion = { target = ROOT modifier = pap_refused_the_holy_league }
 		}

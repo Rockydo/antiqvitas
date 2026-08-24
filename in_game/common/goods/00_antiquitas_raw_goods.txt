@@ -38,6 +38,23 @@ antq_barley = {
 	no_demand_if_no_market_availability = yes
 }
 
+antq_bound_codices = {
+	category = produced
+	color = rgb { 123 74 52 }
+	default_market_price = 8
+	transport_cost = 0.5
+
+	demand_add = {
+		nobles = 0.015
+		burghers = 0.008
+		clergy = 0.025
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
 antq_bronze_wares = {
 	category = produced
 	color = rgb { 143 91 50 }
@@ -49,6 +66,23 @@ antq_bronze_wares = {
 		nobles = 0.030
 		burghers = 0.018
 		clergy = 0.015
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
+antq_cage_glass = {
+	category = produced
+	color = rgb { 110 175 181 }
+	default_market_price = 9
+	transport_cost = 1
+
+	demand_add = {
+		nobles = 0.030
+		burghers = 0.010
+		clergy = 0.010
 	}
 
 	origin_in_old_world = yes
@@ -255,6 +289,23 @@ antq_fine_ceramics = {
 		nobles = 0.030
 		burghers = 0.022
 		clergy = 0.012
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
+antq_garnet_cloisonne = {
+	category = produced
+	color = rgb { 177 48 38 }
+	default_market_price = 10
+	transport_cost = 0.75
+
+	demand_add = {
+		nobles = 0.035
+		burghers = 0.008
+		clergy = 0.006
 	}
 
 	origin_in_old_world = yes
@@ -697,6 +748,23 @@ antq_wax_goods = {
 		nobles = 0.012
 		burghers = 0.012
 		clergy = 0.018
+	}
+
+	origin_in_old_world = yes
+	custom_tags = { old_world_goods antq_ancient_economy }
+	no_demand_if_no_market_availability = yes
+}
+
+antq_yue_celadon = {
+	category = produced
+	color = rgb { 126 145 105 }
+	default_market_price = 7
+	transport_cost = 1
+
+	demand_add = {
+		nobles = 0.025
+		burghers = 0.012
+		clergy = 0.005
 	}
 
 	origin_in_old_world = yes

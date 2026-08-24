@@ -10,7 +10,7 @@ flavor_hab_tir.1 = { #Tirols Troubled Marriage
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TIR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -73,7 +73,7 @@ flavor_hab_tir.2 = { #A new husband for Margarete
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TIR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -234,7 +234,7 @@ flavor_hab_tir.4 = { #The new dynasty takes charge of Tirol
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TIR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -276,16 +276,16 @@ flavor_hab_tir.4 = { #The new dynasty takes charge of Tirol
 			}
 		}
 		OR = {
-			c:UBV ?= { ruler.dynasty = root.ruler.dynasty }
-			c:BAV ?= { ruler.dynasty = root.ruler.dynasty }
-			c:HAB ?= { ruler.dynasty = root.ruler.dynasty }
-			c:BOH ?= { ruler.dynasty = root.ruler.dynasty }
+			c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
+			c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
+			c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
+			c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
 			AND = {
 				NOR = {
-					c:UBV ?= { ruler.dynasty = root.ruler.dynasty }
-					c:BAV ?= { ruler.dynasty = root.ruler.dynasty }
-					c:HAB ?= { ruler.dynasty = root.ruler.dynasty }
-					c:BOH ?= { ruler.dynasty = root.ruler.dynasty }
+					c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
+					c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
+					c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
+					c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
 				}
 			}
 		}
@@ -302,29 +302,29 @@ flavor_hab_tir.4 = { #The new dynasty takes charge of Tirol
 
 		if = {
 			limit = {
-				c:BAV ?= { ruler.dynasty = root.ruler.dynasty }
+				c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
 			}
-			remove_rival = c:BAV
-			create_alliance = { target = c:BAV }
-			add_opinion = { target = c:BAV modifier = opinion_dynastic_allies }
+			remove_rival = c:DUMMY
+			create_alliance = { target = c:DUMMY }
+			add_opinion = { target = c:DUMMY modifier = opinion_dynastic_allies }
 		}
 		else_if = {
 			limit = {
-				c:UBV ?= { ruler.dynasty = root.ruler.dynasty }
+				c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
 			}
-			remove_rival = c:UBV
-			create_alliance = { target = c:UBV }
-			add_opinion = { target = c:UBV modifier = opinion_dynastic_allies }
+			remove_rival = c:DUMMY
+			create_alliance = { target = c:DUMMY }
+			add_opinion = { target = c:DUMMY modifier = opinion_dynastic_allies }
 		}
-		c:HAB = {
+		c:DUMMY = {
 			add_casus_belli = {
-				target = c:TIR
+				target = c:DUMMY
 				type = casus_belli:cb_claim_throne
 			}
 		}
-		c:BOH = {
+		c:DUMMY = {
 			add_casus_belli = {
-				target = c:TIR
+				target = c:DUMMY
 				type = casus_belli:cb_claim_throne
 			}
 		}
@@ -338,34 +338,34 @@ flavor_hab_tir.4 = { #The new dynasty takes charge of Tirol
 				dynasty = dynasty:habsburg_dynasty
 			}
 		}
-		remove_rival = c:HAB
-		create_alliance = { target = c:HAB }
-		add_opinion = { target = c:HAB modifier = opinion_dynastic_allies }
+		remove_rival = c:DUMMY
+		create_alliance = { target = c:DUMMY }
+		add_opinion = { target = c:DUMMY modifier = opinion_dynastic_allies }
 		if = {
 			limit = {
-				country_exists = c:BAV
+				country_exists = c:DUMMY
 			}
-			c:BAV = {
+			c:DUMMY = {
 				add_casus_belli = {
-					target = c:TIR
+					target = c:DUMMY
 					type = casus_belli:cb_claim_throne
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				country_exists = c:UBV
+				country_exists = c:DUMMY
 			}
-			c:UBV = {
+			c:DUMMY = {
 				add_casus_belli = {
-					target = c:TIR
+					target = c:DUMMY
 					type = casus_belli:cb_claim_throne
 				}
 			}
 		}
-		c:BOH = {
+		c:DUMMY = {
 			add_casus_belli = {
-				target = c:TIR
+				target = c:DUMMY
 				type = casus_belli:cb_claim_throne
 			}
 		}
@@ -379,34 +379,34 @@ flavor_hab_tir.4 = { #The new dynasty takes charge of Tirol
 				dynasty = dynasty:luxembourg_dynasty
 			}
 		}
-		remove_rival = c:BOH
-		create_alliance = { target = c:BOH }
-		add_opinion = { target = c:BOH modifier = opinion_dynastic_allies }
+		remove_rival = c:DUMMY
+		create_alliance = { target = c:DUMMY }
+		add_opinion = { target = c:DUMMY modifier = opinion_dynastic_allies }
 		if = {
 			limit = {
-				country_exists = c:BAV
+				country_exists = c:DUMMY
 			}
-			c:BAV = {
+			c:DUMMY = {
 				add_casus_belli = {
-					target = c:TIR
+					target = c:DUMMY
 					type = casus_belli:cb_claim_throne
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				country_exists = c:UBV
+				country_exists = c:DUMMY
 			}
-			c:UBV = {
+			c:DUMMY = {
 				add_casus_belli = {
-					target = c:TIR
+					target = c:DUMMY
 					type = casus_belli:cb_claim_throne
 				}
 			}
 		}
-		c:HAB = {
+		c:DUMMY = {
 			add_casus_belli = {
-				target = c:TIR
+				target = c:DUMMY
 				type = casus_belli:cb_claim_throne
 			}
 		}
@@ -418,44 +418,44 @@ flavor_hab_tir.4 = { #The new dynasty takes charge of Tirol
 		trigger = {
 			ruler = {
 				NOR = {
-					c:UBV ?= { ruler.dynasty = root.ruler.dynasty }
-					c:BAV ?= { ruler.dynasty = root.ruler.dynasty }
-					c:HAB ?= { ruler.dynasty = root.ruler.dynasty }
-					c:BOH ?= { ruler.dynasty = root.ruler.dynasty }
+					c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
+					c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
+					c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
+					c:DUMMY ?= { ruler.dynasty = root.ruler.dynasty }
 				}
 			}
 		}
 		if = {
 			limit = {
-				country_exists = c:BAV
+				country_exists = c:DUMMY
 			}
-			c:BAV = {
+			c:DUMMY = {
 				add_casus_belli = {
-					target = c:TIR
+					target = c:DUMMY
 					type = casus_belli:cb_claim_throne
 				}
 			}
 		}
 		else_if = {
 			limit = {
-				country_exists = c:UBV
+				country_exists = c:DUMMY
 			}
-			c:UBV = {
+			c:DUMMY = {
 				add_casus_belli = {
-					target = c:TIR
+					target = c:DUMMY
 					type = casus_belli:cb_claim_throne
 				}
 			}
 		}
-		c:HAB = {
+		c:DUMMY = {
 			add_casus_belli = {
-				target = c:TIR
+				target = c:DUMMY
 				type = casus_belli:cb_claim_throne
 			}
 		}
-		c:BOH = {
+		c:DUMMY = {
 			add_casus_belli = {
-				target = c:TIR
+				target = c:DUMMY
 				type = casus_belli:cb_claim_throne
 			}
 		}
@@ -472,7 +472,7 @@ flavor_hab_tir.5 = { #Wittelsbacher contest Tirol!
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = UBV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -486,7 +486,7 @@ flavor_hab_tir.5 = { #Wittelsbacher contest Tirol!
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 
-		c:TIR = {
+		c:DUMMY = {
 			ruler = {
 				save_scope_as = target_ruler
 			}
@@ -495,8 +495,8 @@ flavor_hab_tir.5 = { #Wittelsbacher contest Tirol!
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:TIR
-		c:TIR = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_ruler = yes
 			ruler = {
 				dynasty = dynasty:habsburg_dynasty
@@ -513,7 +513,7 @@ flavor_hab_tir.5 = { #Wittelsbacher contest Tirol!
 
 		change_societal_value = { type = belligerent_vs_conciliatory value = societal_value_move_to_left }
 		add_casus_belli = { 
-			target = c:TIR 
+			target = c:DUMMY 
 			type = casus_belli:cb_claim_throne 
 		}
 	}
@@ -535,7 +535,7 @@ flavor_hab_tir.1000 = { #Tirols Troubled Marriage
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TIR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -569,7 +569,7 @@ flavor_hab_tir.1000 = { #Tirols Troubled Marriage
 		character:tir_jan_jindrich_luxembourg = {
 			is_alive = yes
 		}
-		c:UBV = {
+		c:DUMMY = {
 			is_leader_of_international_organization = international_organization:hre
 		}
 	}
@@ -587,7 +587,7 @@ flavor_hab_tir.1000 = { #Tirols Troubled Marriage
 			}
 		}
 		scope:target_spouse = {
-			move_country = c:BOH
+			move_country = c:DUMMY
 			hidden_effect = {
 				add_fertility = 45
 			}
@@ -597,7 +597,7 @@ flavor_hab_tir.1000 = { #Tirols Troubled Marriage
 		}
 		add_opinion = { target = scope:target_emperor_country modifier = opinion_dynastic_helper }
 
-		c:BOH = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_insulted }
 			trigger_event_non_silently = flavor_hab_tir.1001
 		}
@@ -646,7 +646,7 @@ flavor_hab_tir.1100 = { #Tirol has no Habsburg Heir
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -674,7 +674,7 @@ flavor_hab_tir.1100 = { #Tirol has no Habsburg Heir
 		ruler = {
 			dynasty = dynasty:habsburg_dynasty
 		}
-		c:TIR = {
+		c:DUMMY = {
 			character:tir_margarete_von_tirol = {
 				is_ruler = yes
 			}
@@ -687,7 +687,7 @@ flavor_hab_tir.1100 = { #Tirol has no Habsburg Heir
 		historical_option = yes
 
 		add_prestige = prestige_mild_bonus
-		c:TIR = {
+		c:DUMMY = {
 			trigger_event_non_silently = { id = flavor_hab_tir.1101 }
 		}
 	}
@@ -720,7 +720,7 @@ flavor_hab_tir.1101 = { #Tirol has no Heir
 		name = flavor_hab_tir.1101.a
 		historical_option = yes
 
-		c:HAB = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = flavor_hab_tir.1102
 			}
@@ -730,9 +730,9 @@ flavor_hab_tir.1101 = { #Tirol has no Heir
 	option = {
 		name = flavor_hab_tir.1101.b
 
-		c:HAB = {
+		c:DUMMY = {
 			add_casus_belli = { 
-				target = c:TIR 
+				target = c:DUMMY 
 				type = casus_belli:cb_claim_throne 
 			}
 		}
@@ -763,7 +763,7 @@ flavor_hab_tir.1102 = { #Tirol accepts
 		name = flavor_hab_tir.1102.a
 		historical_option = yes
 
-		c:TIR = {
+		c:DUMMY = {
 			set_new_ruler = scope:target_habsburg_ruler
 		}
 		scope:target_ruler = {
@@ -771,13 +771,13 @@ flavor_hab_tir.1102 = { #Tirol accepts
 		}
 		if = {
 			limit = {
-				c:TIR = {
+				c:DUMMY = {
 					is_human = no
 				}
 			}
-			c:TIR = {
+			c:DUMMY = {
 				make_subject_of = {
-					target = c:HAB
+					target = c:DUMMY
 					type = subject_type:fiefdom
 				}
 			}

@@ -22,10 +22,8 @@ antq_aqua_virgo = {
 	}
 	unique_production_methods = {
 		antq_aqua_virgo_maintenance = {
-			masonry = 0.12
-			tools = 0.04
-			antq_lead_wares = 0.030
-			antq_iron_hardware = 0.020
+			masonry = 0.13
+			tools = 0.06
 			category = building_maintenance
 		}
 	}
@@ -54,9 +52,8 @@ antq_horrea_publica = {
 		antq_horrea_publica_maintenance = {
 			masonry = 0.10
 			wheat = 0.30
-			pottery = 0.05
-			antq_cordage = 0.020
-			antq_iron_hardware = 0.010
+			pottery = 0.07
+			antq_cordage = 0.010
 			category = building_maintenance
 		}
 	}
@@ -85,12 +82,8 @@ antq_forum_romanum = {
 	unique_production_methods = {
 		antq_forum_romanum_maintenance = {
 			masonry = 0.08
-			cloth = 0.04
-			pottery = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.06
+			pottery = 0.04
 			category = building_maintenance
 		}
 	}
@@ -121,10 +114,8 @@ antq_forum_augusti = {
 			masonry = 0.12
 			wine = 0.04
 			marble = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -153,12 +144,8 @@ antq_basilica_aemilia = {
 	unique_production_methods = {
 		antq_basilica_aemilia_maintenance = {
 			masonry = 0.10
-			cloth = 0.04
-			pottery = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.06
+			pottery = 0.03
 			category = building_maintenance
 		}
 	}
@@ -191,10 +178,8 @@ antq_macellum_romanum = {
 			olives = 0.10
 			wine = 0.10
 			salt = 0.05
-			pottery = 0.05
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			pottery = 0.07
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -227,9 +212,8 @@ antq_horrea_galbana = {
 			olives = 0.20
 			fish = 0.10
 			salt = 0.08
-			pottery = 0.08
-			antq_cordage = 0.020
-			antq_iron_hardware = 0.010
+			pottery = 0.1
+			antq_cordage = 0.010
 			category = building_maintenance
 		}
 	}
@@ -257,11 +241,9 @@ antq_thermae_agrippae = {
 	}
 	unique_production_methods = {
 		antq_thermae_agrippae_maintenance = {
-			masonry = 0.12
+			masonry = 0.13
 			lumber = 0.06
-			tools = 0.04
-			antq_lead_wares = 0.030
-			antq_iron_hardware = 0.020
+			tools = 0.06
 			category = building_maintenance
 		}
 	}
@@ -290,12 +272,8 @@ antq_theatrum_marcelli = {
 	unique_production_methods = {
 		antq_theatrum_marcelli_maintenance = {
 			wine = 0.10
-			cloth = 0.05
-			pottery = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.07
+			pottery = 0.04
 			category = building_maintenance
 		}
 	}
@@ -324,12 +302,8 @@ antq_theatrum_balbi = {
 	unique_production_methods = {
 		antq_theatrum_balbi_maintenance = {
 			wine = 0.08
-			cloth = 0.05
-			pottery = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.07
+			pottery = 0.04
 			category = building_maintenance
 		}
 	}
@@ -357,12 +331,11 @@ antq_templum_martis_ultoris = {
 	}
 	unique_production_methods = {
 		antq_templum_martis_ultoris_maintenance = {
-			incense = 0.1
+			incense = 0.08
 			wine = 0.05
 			masonry = 0.05
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -392,10 +365,8 @@ antq_tabularium = {
 			masonry = 0.08
 			paper = 0.04
 			books = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -425,11 +396,8 @@ antq_circus_maximus = {
 		antq_circus_maximus_maintenance = {
 			wine = 0.15
 			fish = 0.05
-			cloth = 0.04
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.06
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -459,10 +427,8 @@ antq_monetarium_roma = {
 			silver = 0.12
 			tools = 0.08
 			coal = 0.04
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -490,15 +456,12 @@ antq_navalia_romae = {
 	}
 	unique_production_methods = {
 		antq_navalia_romae_maintenance = {
-			tar = 0.10
+			tar = 0.12
 			naval_supplies = 0.08
 			tools = 0.10
 			lumber = 0.10
 			cloth = 0.04
 			antq_cordage = 0.040
-			antq_sailcloth = 0.030
-			antq_iron_hardware = 0.020
-			antq_cured_meat = 0.020
 			category = building_maintenance
 		}
 	}
@@ -526,15 +489,12 @@ antq_classis_ravennatis = {
 	}
 	unique_production_methods = {
 		antq_classis_ravennatis_maintenance = {
-			tar = 0.16
+			tar = 0.18
 			naval_supplies = 0.14
 			tools = 0.12
 			lumber = 0.14
 			cloth = 0.06
 			antq_cordage = 0.040
-			antq_sailcloth = 0.030
-			antq_iron_hardware = 0.020
-			antq_cured_meat = 0.020
 			category = building_maintenance
 		}
 	}
@@ -549,6 +509,7 @@ antq_castrum_mogontiacum = {
 	max_levels = 1
 	category = defense_category
 	employment_size = stockade_employment
+	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -563,13 +524,10 @@ antq_castrum_mogontiacum = {
 	unique_production_methods = {
 		antq_castrum_mogontiacum_maintenance = {
 			lumber = 0.16
-			weaponry = 0.06
+			weaponry = 0.08
 			tools = 0.04
 			tar = 0.04
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			leather = 0.020
 			category = building_maintenance
 		}
 	}
@@ -588,6 +546,7 @@ antq_castrum_novaesium = {
 	max_levels = 1
 	category = defense_category
 	employment_size = stockade_employment
+	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -602,13 +561,10 @@ antq_castrum_novaesium = {
 	unique_production_methods = {
 		antq_castrum_novaesium_maintenance = {
 			lumber = 0.15
-			weaponry = 0.05
+			weaponry = 0.07
 			tools = 0.04
 			tar = 0.03
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			leather = 0.020
 			category = building_maintenance
 		}
 	}
@@ -627,6 +583,7 @@ antq_castrum_hunnerberg = {
 	max_levels = 1
 	category = defense_category
 	employment_size = stockade_employment
+	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -641,13 +598,10 @@ antq_castrum_hunnerberg = {
 	unique_production_methods = {
 		antq_castrum_hunnerberg_maintenance = {
 			lumber = 0.15
-			weaponry = 0.05
+			weaponry = 0.07
 			tools = 0.04
 			tar = 0.03
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			leather = 0.020
 			category = building_maintenance
 		}
 	}
@@ -666,6 +620,7 @@ antq_castrum_augusta_raurica = {
 	max_levels = 1
 	category = defense_category
 	employment_size = stockade_employment
+	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -680,13 +635,10 @@ antq_castrum_augusta_raurica = {
 	unique_production_methods = {
 		antq_castrum_augusta_raurica_maintenance = {
 			lumber = 0.14
-			weaponry = 0.04
+			weaponry = 0.06
 			tools = 0.03
 			tar = 0.03
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			leather = 0.020
 			category = building_maintenance
 		}
 	}
@@ -719,9 +671,8 @@ antq_officinae_urbanae = {
 		antq_officinae_urbanae_maintenance = {
 			clay = 0.12
 			lumber = 0.08
-			tools = 0.08
+			tools = 0.09
 			iron = 0.05
-			antq_iron_hardware = 0.010
 			antq_cordage = 0.010
 			category = building_maintenance
 		}
@@ -751,8 +702,7 @@ antq_pistrina_urbana = {
 		antq_pistrina_urbana_maintenance = {
 			wheat = 0.25
 			lumber = 0.06
-			tools = 0.05
-			antq_iron_hardware = 0.010
+			tools = 0.06
 			antq_cordage = 0.010
 			category = building_maintenance
 		}
@@ -785,8 +735,8 @@ antq_villa_liviae = {
 			olives = 0.08
 			wool = 0.05
 			antq_cordage = 0.020
-			antq_leather_goods = 0.020
-			antq_iron_hardware = 0.010
+			leather = 0.015
+			tools = 0.010
 			category = building_maintenance
 		}
 	}
@@ -814,14 +764,13 @@ antq_pantheum_agrippae = {
 	}
 	unique_production_methods = {
 		antq_pantheum_agrippae_maintenance = {
-			incense = 0.12
+			incense = 0.10
 			wine = 0.06
 			masonry = 0.06
 			marble = 0.03
 			tools = 0.02
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -851,13 +800,9 @@ antq_saepta_iulia = {
 		antq_saepta_iulia_maintenance = {
 			masonry = 0.12
 			marble = 0.04
-			cloth = 0.03
-			pottery = 0.02
+			cloth = 0.05
+			pottery = 0.03
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
@@ -888,12 +833,8 @@ antq_diribitorium = {
 			masonry = 0.12
 			tools = 0.08
 			beeswax = 0.06
-			cloth = 0.04
-			pottery = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.06
+			pottery = 0.03
 			category = building_maintenance
 		}
 	}
@@ -921,13 +862,12 @@ antq_templum_apollinis_palatini = {
 	}
 	unique_production_methods = {
 		antq_templum_apollinis_palatini_maintenance = {
-			incense = 0.14
+			incense = 0.12
 			wine = 0.06
 			marble = 0.08
 			tools = 0.03
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -959,10 +899,8 @@ antq_bibliotheca_latina_graecaque = {
 			beeswax = 0.04
 			marble = 0.04
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -991,14 +929,11 @@ antq_curia_iulia = {
 	unique_production_methods = {
 		antq_curia_iulia_maintenance = {
 			marble = 0.08
-			cloth = 0.05
+			cloth = 0.07
 			beeswax = 0.06
 			books = 0.04
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1028,13 +963,9 @@ antq_porticus_octaviae = {
 		antq_porticus_octaviae_maintenance = {
 			masonry = 0.08
 			marble = 0.04
-			cloth = 0.05
-			pottery = 0.03
+			cloth = 0.07
+			pottery = 0.04
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1067,12 +998,10 @@ antq_porticus_aemiliae = {
 			olives = 0.10
 			fish = 0.08
 			salt = 0.06
-			pottery = 0.06
+			pottery = 0.08
 			lumber = 0.05
 			tools = 0.03
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -1100,11 +1029,9 @@ antq_aqua_alsietina = {
 	}
 	unique_production_methods = {
 		antq_aqua_alsietina_maintenance = {
-			masonry = 0.10
-			tools = 0.04
+			masonry = 0.11
+			tools = 0.06
 			pottery = 0.03
-			antq_lead_wares = 0.030
-			antq_iron_hardware = 0.020
 			category = building_maintenance
 		}
 	}
@@ -1134,13 +1061,10 @@ antq_naumachia_augusti = {
 		antq_naumachia_augusti_maintenance = {
 			lumber = 0.10
 			naval_supplies = 0.08
-			cloth = 0.05
+			cloth = 0.07
 			tar = 0.04
 			tools = 0.04
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1171,10 +1095,8 @@ antq_horologium_augusti = {
 			marble = 0.06
 			copper = 0.03
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1203,12 +1125,11 @@ antq_ara_pacis_augustae = {
 	unique_production_methods = {
 		antq_ara_pacis_augustae_maintenance = {
 			marble = 0.05
-			incense = 0.06
+			incense = 0.04
 			wine = 0.03
 			tools = 0.01
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1240,10 +1161,8 @@ antq_mausoleum_augusti = {
 			marble = 0.06
 			lumber = 0.03
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1273,13 +1192,10 @@ antq_amphitheatrum_statilii_tauri = {
 		antq_amphitheatrum_statilii_tauri_maintenance = {
 			lumber = 0.12
 			masonry = 0.08
-			cloth = 0.05
+			cloth = 0.07
 			wine = 0.05
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1310,13 +1226,9 @@ antq_porticus_liviae = {
 			masonry = 0.08
 			marble = 0.04
 			lumber = 0.04
-			cloth = 0.03
-			pottery = 0.03
+			cloth = 0.05
+			pottery = 0.04
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1331,6 +1243,7 @@ antq_castrum_augusta_vindelicum = {
 	max_levels = 1
 	category = defense_category
 	employment_size = stockade_employment
+	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -1345,13 +1258,10 @@ antq_castrum_augusta_vindelicum = {
 	unique_production_methods = {
 		antq_castrum_augusta_vindelicum_maintenance = {
 			lumber = 0.15
-			weaponry = 0.05
+			weaponry = 0.07
 			tools = 0.04
 			tar = 0.03
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			leather = 0.020
 			category = building_maintenance
 		}
 	}
@@ -1370,6 +1280,7 @@ antq_castrum_argentoratum = {
 	max_levels = 1
 	category = defense_category
 	employment_size = stockade_employment
+	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -1384,13 +1295,10 @@ antq_castrum_argentoratum = {
 	unique_production_methods = {
 		antq_castrum_argentoratum_maintenance = {
 			lumber = 0.15
-			weaponry = 0.05
+			weaponry = 0.07
 			tools = 0.04
 			tar = 0.03
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			leather = 0.020
 			category = building_maintenance
 		}
 	}
@@ -1409,6 +1317,7 @@ antq_castrum_aliso = {
 	max_levels = 1
 	category = defense_category
 	employment_size = stockade_employment
+	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -1423,13 +1332,10 @@ antq_castrum_aliso = {
 	unique_production_methods = {
 		antq_castrum_aliso_maintenance = {
 			lumber = 0.16
-			weaponry = 0.05
+			weaponry = 0.07
 			tools = 0.04
 			tar = 0.03
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			leather = 0.020
 			category = building_maintenance
 		}
 	}
@@ -1448,6 +1354,7 @@ antq_castrum_bonna = {
 	max_levels = 1
 	category = defense_category
 	employment_size = stockade_employment
+	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -1462,13 +1369,10 @@ antq_castrum_bonna = {
 	unique_production_methods = {
 		antq_castrum_bonna_maintenance = {
 			lumber = 0.14
-			weaponry = 0.04
+			weaponry = 0.06
 			tools = 0.03
 			tar = 0.02
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			leather = 0.020
 			category = building_maintenance
 		}
 	}
@@ -1503,10 +1407,8 @@ antq_pons_fabricius = {
 			masonry = 0.06
 			tools = 0.02
 			lumber = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1537,10 +1439,8 @@ antq_pons_aemilius = {
 			masonry = 0.07
 			tools = 0.02
 			lumber = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1571,10 +1471,8 @@ antq_fornix_augusti = {
 			marble = 0.04
 			masonry = 0.04
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1606,10 +1504,8 @@ antq_porticus_ad_nationes = {
 			marble = 0.03
 			lumber = 0.02
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1641,10 +1537,8 @@ antq_porticus_octavia = {
 			marble = 0.03
 			lumber = 0.02
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1676,10 +1570,8 @@ antq_hecatostylum = {
 			marble = 0.03
 			lumber = 0.02
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1710,10 +1602,8 @@ antq_tiber_embankment = {
 			masonry = 0.08
 			stone = 0.05
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1743,12 +1633,9 @@ antq_porticus_post_navalia = {
 		antq_porticus_post_navalia_maintenance = {
 			lumber = 0.05
 			naval_supplies = 0.04
-			tar = 0.03
+			tar = 0.05
 			tools = 0.02
 			antq_cordage = 0.040
-			antq_sailcloth = 0.030
-			antq_iron_hardware = 0.020
-			antq_cured_meat = 0.020
 			category = building_maintenance
 		}
 	}
@@ -1777,12 +1664,10 @@ antq_porticus_forum_holitorium = {
 	unique_production_methods = {
 		antq_porticus_forum_holitorium_maintenance = {
 			masonry = 0.05
-			pottery = 0.03
+			pottery = 0.05
 			fruit = 0.04
 			tools = 0.02
-			antq_cordage = 0.020
-			antq_leather_goods = 0.015
-			antq_fine_ceramics = 0.010
+			cloth = 0.015
 			category = building_maintenance
 		}
 	}
@@ -1812,11 +1697,10 @@ antq_aedes_portuni = {
 		antq_aedes_portuni_maintenance = {
 			masonry = 0.04
 			marble = 0.02
-			incense = 0.04
+			incense = 0.02
 			tools = 0.01
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1848,10 +1732,8 @@ antq_regia = {
 			beeswax = 0.02
 			books = 0.02
 			tools = 0.01
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1881,12 +1763,9 @@ antq_circus_flaminius = {
 		antq_circus_flaminius_maintenance = {
 			lumber = 0.04
 			masonry = 0.03
-			cloth = 0.02
+			cloth = 0.04
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1915,12 +1794,11 @@ antq_aedes_vestae = {
 	unique_production_methods = {
 		antq_aedes_vestae_maintenance = {
 			marble = 0.04
-			incense = 0.05
+			incense = 0.03
 			wine = 0.02
 			tools = 0.01
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1952,10 +1830,8 @@ antq_aedes_saturni = {
 			beeswax = 0.02
 			books = 0.02
 			tools = 0.01
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -1986,10 +1862,8 @@ antq_miliarium_aureum = {
 			copper = 0.03
 			marble = 0.02
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2018,12 +1892,11 @@ antq_aedes_penatium = {
 	unique_production_methods = {
 		antq_aedes_penatium_maintenance = {
 			masonry = 0.03
-			incense = 0.045
+			incense = 0.025
 			wine = 0.02
 			tools = 0.01
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2054,10 +1927,8 @@ antq_fornix_fabianus = {
 			marble = 0.04
 			masonry = 0.03
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2086,12 +1957,11 @@ antq_ara_saturni = {
 	unique_production_methods = {
 		antq_ara_saturni_maintenance = {
 			stone = 0.03
-			incense = 0.04
+			incense = 0.02
 			wine = 0.02
 			tools = 0.01
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2123,10 +1993,8 @@ antq_rostra_augusti = {
 			copper = 0.02
 			masonry = 0.03
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2156,12 +2024,9 @@ antq_basilica_iulia = {
 		antq_basilica_iulia_maintenance = {
 			masonry = 0.08
 			marble = 0.04
-			cloth = 0.03
+			cloth = 0.05
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2193,10 +2058,8 @@ antq_porticus_pompeiana = {
 			marble = 0.03
 			lumber = 0.02
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2226,13 +2089,10 @@ antq_theatrum_pompei = {
 		antq_theatrum_pompei_maintenance = {
 			masonry = 0.08
 			lumber = 0.04
-			cloth = 0.03
+			cloth = 0.05
 			wine = 0.03
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2261,12 +2121,11 @@ antq_aedes_iovis_statoris = {
 	unique_production_methods = {
 		antq_aedes_iovis_statoris_maintenance = {
 			masonry = 0.04
-			incense = 0.045
+			incense = 0.025
 			wine = 0.02
 			tools = 0.01
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2298,10 +2157,8 @@ antq_curiae_veteres = {
 			beeswax = 0.02
 			books = 0.01
 			tools = 0.01
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2328,12 +2185,11 @@ antq_aedes_concordiae_augustae = {
 	}
 	unique_production_methods = {
 		antq_aedes_concordiae_augustae_maintenance = {
-			incense = 0.07
+			incense = 0.05
 			wine = 0.03
 			masonry = 0.04
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2360,12 +2216,11 @@ antq_aedes_bellonae = {
 	}
 	unique_production_methods = {
 		antq_aedes_bellonae_maintenance = {
-			incense = 0.07
+			incense = 0.05
 			wine = 0.03
 			masonry = 0.04
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2392,12 +2247,11 @@ antq_aedes_iovis_tonantis = {
 	}
 	unique_production_methods = {
 		antq_aedes_iovis_tonantis_maintenance = {
-			incense = 0.07
+			incense = 0.05
 			wine = 0.03
 			masonry = 0.05
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2424,12 +2278,11 @@ antq_aedes_magnae_matris = {
 	}
 	unique_production_methods = {
 		antq_aedes_magnae_matris_maintenance = {
-			incense = 0.08
+			incense = 0.06
 			wine = 0.04
 			masonry = 0.05
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2460,10 +2313,8 @@ antq_forum_iulium = {
 			masonry = 0.08
 			marble = 0.03
 			tools = 0.03
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2490,12 +2341,11 @@ antq_aedes_divi_iulii = {
 	}
 	unique_production_methods = {
 		antq_aedes_divi_iulii_maintenance = {
-			incense = 0.07
+			incense = 0.05
 			wine = 0.03
 			masonry = 0.04
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2522,12 +2372,11 @@ antq_aedes_fortunae_primigeniae = {
 	}
 	unique_production_methods = {
 		antq_aedes_fortunae_primigeniae_maintenance = {
-			incense = 0.06
+			incense = 0.04
 			wine = 0.02
 			masonry = 0.03
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2556,10 +2405,8 @@ antq_puteal_libonis = {
 		antq_puteal_libonis_maintenance = {
 			masonry = 0.03
 			tools = 0.01
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2587,11 +2434,8 @@ antq_casa_romuli = {
 	unique_production_methods = {
 		antq_casa_romuli_maintenance = {
 			lumber = 0.03
-			cloth = 0.01
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.03
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2619,12 +2463,9 @@ antq_porticus_gai_et_luci = {
 	unique_production_methods = {
 		antq_porticus_gai_et_luci_maintenance = {
 			masonry = 0.04
-			cloth = 0.02
+			cloth = 0.04
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2654,10 +2495,8 @@ antq_chalcidicum_iulium = {
 			masonry = 0.04
 			marble = 0.02
 			tools = 0.02
-			antq_papyrus = 0.020
-			antq_parchment = 0.010
-			antq_wax_goods = 0.010
-			antq_bronze_wares = 0.010
+			cloth = 0.020
+			pottery = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2684,12 +2523,11 @@ antq_aedes_victoriae = {
 	}
 	unique_production_methods = {
 		antq_aedes_victoriae_maintenance = {
-			incense = 0.06
+			incense = 0.04
 			wine = 0.02
 			masonry = 0.03
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -2704,6 +2542,7 @@ antq_castra_vetera = {
 	max_levels = 1
 	category = defense_category
 	employment_size = stockade_employment
+	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -2718,13 +2557,10 @@ antq_castra_vetera = {
 	unique_production_methods = {
 		antq_castra_vetera_maintenance = {
 			lumber = 0.16
-			weaponry = 0.05
+			weaponry = 0.07
 			tools = 0.04
 			tar = 0.03
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			leather = 0.020
 			category = building_maintenance
 		}
 	}
@@ -2743,6 +2579,7 @@ antq_castra_siscia = {
 	max_levels = 1
 	category = defense_category
 	employment_size = stockade_employment
+	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -2757,13 +2594,10 @@ antq_castra_siscia = {
 	unique_production_methods = {
 		antq_castra_siscia_maintenance = {
 			lumber = 0.14
-			weaponry = 0.04
+			weaponry = 0.06
 			tools = 0.03
 			tar = 0.03
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			leather = 0.020
 			category = building_maintenance
 		}
 	}

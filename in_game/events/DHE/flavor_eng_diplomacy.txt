@@ -423,7 +423,7 @@ flavor_eng_diplomacy.1000 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -441,11 +441,11 @@ flavor_eng_diplomacy.1000 = {
 			}
 		}
 		
-		has_trust = { modifier = trust_treaty_of_medina_del_campo target = c:CAS }
-		has_trust = { modifier = trust_treaty_of_medina_del_campo target = c:ARA } 
+		has_trust = { modifier = trust_treaty_of_medina_del_campo target = c:DUMMY }
+		has_trust = { modifier = trust_treaty_of_medina_del_campo target = c:DUMMY } 
 
-		country_exists = c:ARA
-		c:ARA = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			 ruler = {
 				OR  = {
 					AND = {
@@ -470,7 +470,7 @@ flavor_eng_diplomacy.1000 = {
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:ARA = { 
+		c:DUMMY = { 
 			ruler = {
 				save_scope_as = aragon_ruler
 			}
@@ -536,7 +536,7 @@ flavor_eng_diplomacy.1000 = {
 
 		set_variable = { name = dowry_demanded value = 1 }
 
-		c:ARA = { trigger_event_silently = { id = flavor_eng_diplomacy.1001 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.1001 days = 0 } }
 		
 		custom_tooltip = flavor_eng_diplomacy.1000.tt1		
 
@@ -559,7 +559,7 @@ flavor_eng_diplomacy.1000 = {
 
 		set_variable = { name = dowry_foregone value = 1 }
 
-		c:ARA = { trigger_event_silently = { id = flavor_eng_diplomacy.1001 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.1001 days = 0 } }
 
 		custom_tooltip = flavor_eng_diplomacy.1000.tt2
 
@@ -570,12 +570,12 @@ flavor_eng_diplomacy.1000 = {
 
 		remove_trust_equilibrium = { 
 			modifier = trust_treaty_of_medina_del_campo
-			target = c:CAS
+			target = c:DUMMY
 		}
 
 		remove_trust_equilibrium = { 
 			modifier = trust_treaty_of_medina_del_campo
-			target = c:ARA
+			target = c:DUMMY
 		}
 
 		change_societal_value = {
@@ -585,7 +585,7 @@ flavor_eng_diplomacy.1000 = {
 
 		set_variable = { name = wedding_cancelled value = 1 }
 
-		c:ARA = { trigger_event_silently = { id = flavor_eng_diplomacy.1001 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.1001 days = 0 } }
 
 		custom_tooltip = flavor_eng_diplomacy.1000.tt3
 
@@ -604,21 +604,21 @@ flavor_eng_diplomacy.1001 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					NOT = { OR = { root = c:ENG root = c:GBR } }
+					NOT = { OR = { root = c:DUMMY root = c:DUMMY } }
 					scope:target_root_country = { has_variable = dowry_foregone }
 				}
 				desc = flavor_eng_diplomacy.1001.desc_dowry_foregone
 			}
 			triggered_desc = {
 				trigger = {
-					NOT = { OR = { root = c:ENG root = c:GBR } }
+					NOT = { OR = { root = c:DUMMY root = c:DUMMY } }
 					scope:target_root_country = { has_variable = wedding_cancelled }
 				}
 				desc = flavor_eng_diplomacy.1001.desc_marriage_refused
 			}
 			triggered_desc = {
 				trigger = {
-					OR = { root = c:ENG root = c:GBR }
+					OR = { root = c:DUMMY root = c:DUMMY }
 				}
 				desc = flavor_eng_diplomacy.1001.desc_dowry_refused
 			}
@@ -648,7 +648,7 @@ flavor_eng_diplomacy.1001 = {
 		historical_option = yes
 		name = flavor_eng_diplomacy.1001.a
 		trigger = {
-			NOT = { OR = { root = c:ENG root = c:GBR } }
+			NOT = { OR = { root = c:DUMMY root = c:DUMMY } }
 			scope:target_root_country = { has_variable = dowry_demanded }
 		}
 
@@ -657,7 +657,7 @@ flavor_eng_diplomacy.1001 = {
 			target = scope:target_root_country
 		}
 
-		c:CAS = {
+		c:DUMMY = {
 			remove_trust_equilibrium = { 
 				modifier = trust_treaty_of_medina_del_campo
 				target = scope:target_root_country
@@ -673,7 +673,7 @@ flavor_eng_diplomacy.1001 = {
 	option = {
 		name = flavor_eng_diplomacy.1001.b
 		trigger = {
-			NOT = { OR = { root = c:ENG root = c:GBR } }
+			NOT = { OR = { root = c:DUMMY root = c:DUMMY } }
 			scope:target_root_country = { has_variable = dowry_foregone }
 		}
 
@@ -684,7 +684,7 @@ flavor_eng_diplomacy.1001 = {
 	option = {
 		name = flavor_eng_diplomacy.1001.c
 		trigger = {
-			NOT = { OR = { root = c:ENG root = c:GBR } }
+			NOT = { OR = { root = c:DUMMY root = c:DUMMY } }
 			scope:target_root_country = { has_variable = wedding_cancelled }
 		}
 
@@ -705,7 +705,7 @@ flavor_eng_diplomacy.1001 = {
 	option = {
 		name = flavor_eng_diplomacy.1001.d
 		trigger = {
-			NOT = { OR = { root = c:ENG root = c:GBR } }
+			NOT = { OR = { root = c:DUMMY root = c:DUMMY } }
 			scope:target_root_country = { has_variable = dowry_demanded }
 		}
 
@@ -722,16 +722,16 @@ flavor_eng_diplomacy.1001 = {
 
 	option = {
 		name = flavor_eng_diplomacy.1001.e
-		trigger = {	OR = { root = c:ENG root = c:GBR } }
+		trigger = {	OR = { root = c:DUMMY root = c:DUMMY } }
 
 		remove_trust_equilibrium = { 
 			modifier = trust_treaty_of_medina_del_campo
-			target = c:ARA
+			target = c:DUMMY
 		}
 
 		remove_trust_equilibrium = { 
 			modifier = trust_treaty_of_medina_del_campo
-			target = c:CAS
+			target = c:DUMMY
 		}
 		
 
@@ -754,7 +754,7 @@ flavor_eng_diplomacy.1100 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -762,24 +762,24 @@ flavor_eng_diplomacy.1100 = {
 	
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:ARA
-		country_exists = c:CAS
-		country_exists = c:FRA
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 
 		OR = {
-			c:CAS = {
-				in_union_with = c:ARA
+			c:DUMMY = {
+				in_union_with = c:DUMMY
 				is_enemy_of = root
 			}
-			c:ARA = {
-				in_union_with = c:CAS
+			c:DUMMY = {
+				in_union_with = c:DUMMY
 				is_enemy_of = root
 			}
 		}
 
 		OR = {
-			c:CAS = { is_enemy_of = c:FRA }
-			c:ARA = { is_enemy_of = c:FRA }
+			c:DUMMY = { is_enemy_of = c:DUMMY }
+			c:DUMMY = { is_enemy_of = c:DUMMY }
 		}
 
 		at_war = no
@@ -793,22 +793,22 @@ flavor_eng_diplomacy.1100 = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		if = {
 			limit = {
-				c:CAS = {
-					is_subject_of = c:ARA
+				c:DUMMY = {
+					is_subject_of = c:DUMMY
 				}
 			}
-			c:CAS = { save_scope_as = overlord }
-			c:ARA = { save_scope_as = lesser_partner }
+			c:DUMMY = { save_scope_as = overlord }
+			c:DUMMY = { save_scope_as = lesser_partner }
 		}
 
 		if = {
 			limit = {
-				c:ARA = {
-					is_subject_of = c:CAS
+				c:DUMMY = {
+					is_subject_of = c:DUMMY
 				}
 			}
-			c:ARA = { save_scope_as = overlord }
-			c:CAS = { save_scope_as = lesser_partner }
+			c:DUMMY = { save_scope_as = overlord }
+			c:DUMMY = { save_scope_as = lesser_partner }
 		}
 
 		capital = { save_scope_as = target_location }
@@ -840,7 +840,7 @@ flavor_eng_diplomacy.1100 = {
 		custom_tooltip = flavor_eng_diplomacy.1100.tt1
 		custom_tooltip = flavor_eng_diplomacy.1100.tt2
 
-		c:FRA = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = signed_medina_del_campo_treaty
@@ -855,7 +855,7 @@ flavor_eng_diplomacy.1100 = {
 	option = {
 		name = flavor_eng_diplomacy.1100.b
 
-		c:FRA = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = declined_advantageous_treaty
@@ -911,9 +911,9 @@ flavor_eng_diplomacy.1101 = {
 
 		if = {
 			limit = {
-				country_exists = c:FRA
+				country_exists = c:DUMMY
 			}
-			c:FRA = {
+			c:DUMMY = {
 				add_opinion = {
 					target = scope:overlord
 					modifier = signed_medina_del_campo_treaty
@@ -952,9 +952,9 @@ flavor_eng_diplomacy.1101 = {
 
 		if = {
 			limit = {
-				country_exists = c:FRA
+				country_exists = c:DUMMY
 			}
-			c:FRA = {
+			c:DUMMY = {
 				add_opinion = {
 					target = root
 					modifier = declined_advantageous_treaty
@@ -1003,7 +1003,7 @@ flavor_eng_diplomacy.1200 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1027,23 +1027,23 @@ flavor_eng_diplomacy.1200 = {
 
 		OR = {
 			AND = {
-				country_exists = c:ENG
-				c:ENG = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					is_subject = no
 					NOT = { is_at_war_with = root }
 				}
 			}
 			AND = {
-				country_exists = c:GBR
-				c:GBR = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					is_subject = no
 					NOT = { is_at_war_with = root }
 				}
 			}
 		}
 
-		country_exists = c:CAS
-		c:CAS = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_subject = no
 			is_neighbor_of = root
 			NOT = { is_allied_with = { target = root } }
@@ -1051,20 +1051,20 @@ flavor_eng_diplomacy.1200 = {
 		
 		OR = {
 			trigger_if = {
-				limit = { country_exists = c:ENG }
+				limit = { country_exists = c:DUMMY }
 				opinion = {
-					target = c:ENG
+					target = c:DUMMY
 					value >= 100 
 				}
-				has_trust = { modifier = trust_treaty_of_tagilde target = c:ENG }
+				has_trust = { modifier = trust_treaty_of_tagilde target = c:DUMMY }
 			}
 			trigger_if = {
-				limit = { country_exists = c:GBR }
+				limit = { country_exists = c:DUMMY }
 				opinion = {
-					target = c:GBR
+					target = c:DUMMY
 					value >= 100 
 				}
-				has_trust = { modifier = trust_treaty_of_tagilde target = c:GBR }
+				has_trust = { modifier = trust_treaty_of_tagilde target = c:DUMMY }
 			}
 		}
 
@@ -1082,12 +1082,12 @@ flavor_eng_diplomacy.1200 = {
 
 		if = {
 			limit = {
-				country_exists = c:ENG
+				country_exists = c:DUMMY
 			}
-			c:ENG = { save_scope_as = target_root_country }
+			c:DUMMY = { save_scope_as = target_root_country }
 		}
 		else = {
-			c:GBR = { save_scope_as = target_root_country }
+			c:DUMMY = { save_scope_as = target_root_country }
 		}
 
 	}
@@ -1129,7 +1129,7 @@ flavor_eng_diplomacy.1201 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					c:POR = {
+					c:DUMMY = {
 						ruler = { 
 							is_female = no 
 							age_in_years > 30
@@ -1157,9 +1157,9 @@ flavor_eng_diplomacy.1201 = {
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:POR.capital = { save_scope_as = target_location }
+		c:DUMMY.capital = { save_scope_as = target_location }
 
-		c:POR.ruler = { save_scope_as = target_character }
+		c:DUMMY.ruler = { save_scope_as = target_character }
 
 		save_scope_as = sender
 
@@ -1173,10 +1173,10 @@ flavor_eng_diplomacy.1201 = {
 
 		add_trust_equilibrium = {
 			modifier = trust_treaty_of_windsor
-			target = c:POR
+			target = c:DUMMY
 		}
 
-		c:POR = { trigger_event_silently = { id = flavor_eng_diplomacy.1 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.1 days = 0 } }
 
 	}
 
@@ -1185,14 +1185,14 @@ flavor_eng_diplomacy.1201 = {
 
 		set_variable = { name = treaty_declined value = 1 }
 
-		c:POR = {
+		c:DUMMY = {
 			remove_trust_equilibrium = { 
 				modifier = trust_treaty_of_windsor
-				target = c:ENG
+				target = c:DUMMY
 			}
 		}
 
-		c:POR = { trigger_event_silently = { id = flavor_eng_diplomacy.2 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.2 days = 0 } }
 
 	}
 
@@ -1214,7 +1214,7 @@ flavor_eng_diplomacy.1300 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1247,23 +1247,23 @@ flavor_eng_diplomacy.1300 = {
 		
 		OR = {
 			AND = {
-				country_exists = c:ENG
-				c:ENG = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					ruler = { is_married = no }
 					government_type = government_type:monarchy
 					has_regent = no
-					has_trust = { modifier = trust_treaty_of_windsor target = c:POR }
+					has_trust = { modifier = trust_treaty_of_windsor target = c:DUMMY }
 					is_subject = no
 					NOT = { is_allied_with = { target = root } }
 				}
 			}
 			AND = {
-				country_exists = c:GBR
-				c:GBR = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					ruler = { is_married = no }
 					government_type = government_type:monarchy
 					has_regent = no
-					has_trust = { modifier = trust_treaty_of_windsor target = c:POR }
+					has_trust = { modifier = trust_treaty_of_windsor target = c:DUMMY }
 					is_subject = no
 					NOT = { is_allied_with = { target = root } }
 				}
@@ -1280,12 +1280,12 @@ flavor_eng_diplomacy.1300 = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
 		if = {
 			limit = {
-				country_exists = c:ENG
+				country_exists = c:DUMMY
 			}
-			c:ENG = { save_scope_as = target_root_country }
+			c:DUMMY = { save_scope_as = target_root_country }
 		}
 		else = {
-			c:GBR = { save_scope_as = target_root_country }
+			c:DUMMY = { save_scope_as = target_root_country }
 		}
 
 		region:western_india_region = {
@@ -1396,7 +1396,7 @@ flavor_eng_diplomacy.1301 = {
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
-		c:POR = { 
+		c:DUMMY = { 
 			ruler = {
 				save_scope_as = portugal_ruler
 			}
@@ -1415,7 +1415,7 @@ flavor_eng_diplomacy.1301 = {
 					female = yes
 					dynasty = dynasty:braganca_dynasty
 					father = scope:portugal_ruler
-					religion = c:POR.religion
+					religion = c:DUMMY.religion
 					birth_date = 476.9.4
 					birth_location = location:lisbon
 					save_scope_as = suitable_daughter
@@ -1438,7 +1438,7 @@ flavor_eng_diplomacy.1301 = {
 			}
 		}
 
-		c:POR.ruler = { save_scope_as = target_character }
+		c:DUMMY.ruler = { save_scope_as = target_character }
 
 		save_scope_as = sender
 
@@ -1453,13 +1453,13 @@ flavor_eng_diplomacy.1301 = {
 		scope:ceded_location = { change_location_owner = root }
 
 		add_opinion = {
-			target = c:POR
+			target = c:DUMMY
 			modifier = eng_accepted_alliance_with_us
 		}
 
 		set_variable = { name = treaty_of_windsor_renegotiated value = 1 }
 
-		c:POR = { trigger_event_silently = { id = flavor_eng_diplomacy.1 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.1 days = 0 } }
 
 	}
 
@@ -1470,7 +1470,7 @@ flavor_eng_diplomacy.1301 = {
 
 		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_severe_penalty }
 
-		c:POR = { trigger_event_silently = { id = flavor_eng_diplomacy.2 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.2 days = 0 } }
 
 	}
 
@@ -1493,7 +1493,7 @@ flavor_eng_diplomacy.1400 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1504,8 +1504,8 @@ flavor_eng_diplomacy.1400 = {
 
 		manpower >= 5
 
-		country_exists = c:NED
-		c:NED = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			capital = { is_market_center = yes }
 			own_entire_area = area:holland_area
 			is_great_power = no
@@ -1513,8 +1513,8 @@ flavor_eng_diplomacy.1400 = {
 
 		any_country = {
 			is_great_power = yes
-			is_neighbor_of = c:NED
-			is_enemy_of = c:NED
+			is_neighbor_of = c:DUMMY
+			is_enemy_of = c:DUMMY
 		}
 
 		at_war = no
@@ -1526,9 +1526,9 @@ flavor_eng_diplomacy.1400 = {
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
-		c:NED.capital = { save_scope_as = target_location }
+		c:DUMMY.capital = { save_scope_as = target_location }
 
-		c:NED.ruler = { save_scope_as = target_character }
+		c:DUMMY.ruler = { save_scope_as = target_character }
 		
 		root = { save_scope_as = target_root_country }
 
@@ -1540,13 +1540,13 @@ flavor_eng_diplomacy.1400 = {
 
 		add_trust_equilibrium = { 
 			modifier = trust_treaty_of_nonsuch  
-			target = c:NED
+			target = c:DUMMY
 		}
 
 		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_severe_bonus }
 
 		hidden_effect = { 
-			c:NED = { trigger_event_silently = { id = flavor_eng_diplomacy.1401 days = 0 } }
+			c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.1401 days = 0 } }
 		}
 
 		custom_tooltip = flavor_eng_diplomacy.1400.tt1
@@ -1623,7 +1623,7 @@ flavor_eng_diplomacy.1401 = {
 		scope:target_root_country = {
 			remove_trust_equilibrium = { 
 				modifier = trust_treaty_of_nonsuch 
-				target = c:NED 
+				target = c:DUMMY 
 			}
 		}
 
@@ -1647,7 +1647,7 @@ flavor_eng_diplomacy.1500 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1655,12 +1655,12 @@ flavor_eng_diplomacy.1500 = {
 
 	trigger = {
 		current_date > 476.9.4
-		NOT = { is_at_war_with = c:CAS }
-		c:POR ?= {
-			is_neighbor_of = c:CAS
+		NOT = { is_at_war_with = c:DUMMY }
+		c:DUMMY ?= {
+			is_neighbor_of = c:DUMMY
 			OR = {
-				is_at_war_with = c:CAS
-				has_truce_with = c:CAS
+				is_at_war_with = c:DUMMY
+				has_truce_with = c:DUMMY
 			}
 			NOT = { is_allied_with = { target = root } }
 			opinion = {
@@ -1670,7 +1670,7 @@ flavor_eng_diplomacy.1500 = {
 		}
 		root = {
 			opinion = {
-				target = c:POR
+				target = c:DUMMY
 				value >= 50 
 			}
 		}
@@ -1695,10 +1695,10 @@ flavor_eng_diplomacy.1500 = {
 
 		add_trust_equilibrium = { 
 			modifier = trust_treaty_of_tagilde  
-			target = c:POR
+			target = c:DUMMY
 		}
 
-		c:CAS = {	
+		c:DUMMY = {	
 			add_opinion = { 
 				target = root 
 				modifier = signed_tagilde_treaty 
@@ -1706,7 +1706,7 @@ flavor_eng_diplomacy.1500 = {
 		}
 
 		hidden_effect = { 
-			c:POR = { trigger_event_silently = { id = flavor_eng_diplomacy.1501 days = 0 } }
+			c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.1501 days = 0 } }
 		}
 
 		custom_tooltip = flavor_eng_diplomacy.1500.tt
@@ -1716,7 +1716,7 @@ flavor_eng_diplomacy.1500 = {
 	option = {
 		name = flavor_eng_diplomacy.1500.b
 
-		c:CAS = { 
+		c:DUMMY = { 
 			add_opinion = { 
 				target = root 
 				modifier = declined_advantageous_treaty
@@ -1763,7 +1763,7 @@ flavor_eng_diplomacy.1501 = {
 			target = scope:target_root_country
 		}
 
-		c:CAS = { add_opinion = { target = root modifier = signed_tagilde_treaty } }
+		c:DUMMY = { add_opinion = { target = root modifier = signed_tagilde_treaty } }
 
 		scope:target_root_country = { trigger_event_silently = { id = flavor_eng_diplomacy.1 days = 0 } }
 
@@ -1777,11 +1777,11 @@ flavor_eng_diplomacy.1501 = {
 		scope:target_root_country = {
 			remove_trust_equilibrium = { 
 				modifier = trust_treaty_of_tagilde 
-				target = c:POR 
+				target = c:DUMMY 
 			}
 		}
 
-		c:CAS = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = declined_advantageous_treaty
@@ -1808,7 +1808,7 @@ flavor_eng_diplomacy.1600 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1817,20 +1817,20 @@ flavor_eng_diplomacy.1600 = {
 	trigger = {
 		current_date > 476.9.4
 
-		country_exists = c:IRA
-		c:IRA = {
-			 is_neighbor_of = c:TUR
-			 NOT = { is_allied_with = { target = c:TUR } }
+		country_exists = c:DUMMY
+		c:DUMMY = {
+			 is_neighbor_of = c:DUMMY
+			 NOT = { is_allied_with = { target = c:DUMMY } }
 		}
 
 		region:persia_region = {
 			any_location_in_region = {
 				is_coastal = yes
-				owner = c:IRA
+				owner = c:DUMMY
 			}
 		}
 
-		c:TUR = { is_great_power = yes }
+		c:DUMMY = { is_great_power = yes }
 
 		religion.group = religion_group:christian
 
@@ -1855,7 +1855,7 @@ flavor_eng_diplomacy.1600 = {
 			save_scope_as = robert_shirley
 		}
 
-		c:IRA.capital = { save_scope_as = target_location }
+		c:DUMMY.capital = { save_scope_as = target_location }
 
 		root = { save_scope_as = target_root_country }
 
@@ -1867,10 +1867,10 @@ flavor_eng_diplomacy.1600 = {
 
 		add_trust_equilibrium = {
 			modifier = trust_treaty_of_stjames
-			target = c:IRA
+			target = c:DUMMY
 		}
 
-		c:IRA = { trigger_event_silently = { id = flavor_eng_diplomacy.1601 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.1601 } }
 
 		custom_tooltip = flavor_eng_diplomacy.1600.tt1
 		custom_tooltip = flavor_eng_diplomacy.1600.tt2
@@ -1913,7 +1913,7 @@ flavor_eng_diplomacy.1601 = {
 			random_location_in_region = {
 				limit = {
 					is_coastal = yes
-					owner = c:IRA
+					owner = c:DUMMY
 				}
 				save_scope_as = target_location
 			}
@@ -1932,7 +1932,7 @@ flavor_eng_diplomacy.1601 = {
 		set_variable = { name = treaty_of_stjames value = 1 }
 
 		scope:robert_shirley = {
-			move_country = c:IRA
+			move_country = c:DUMMY
 			add_character_modifier = {
 				modifier = modernizer
 				months = -1
@@ -1968,7 +1968,7 @@ flavor_eng_diplomacy.1601 = {
 		scope:target_root_country = {
 			remove_trust_equilibrium = { 
 				modifier = trust_treaty_of_stjames 
-				target = c:IRA 
+				target = c:DUMMY 
 			}
 			trigger_event_silently = { id = flavor_eng_diplomacy.2 days = 0 }
 		}

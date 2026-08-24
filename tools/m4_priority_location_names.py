@@ -100,6 +100,7 @@ LARGE_IMPERIAL_TAGS = {"ROM", "HAN", "PAR"}
 POP_RE = re.compile(
     r"(?m)^\t(?P<location>[a-z0-9_]+) = \{\r?\n"
     r"\t\tdefine_pop = \{[^\r\n]*\bsize = (?P<size>[0-9.]+)"
+    r"[^\r\n]*\bculture = (?P<culture>[a-z0-9_]+)"
 )
 ALGORITHMIC_DIRECTIONAL = re.compile(
     r"^(?:Core|Inner|Middle|Outer|Far)\b.*\bLands$|"
@@ -200,6 +201,14 @@ def effective_entries() -> dict[str, dict[str, str]]:
 def population() -> dict[str, float]:
     return {
         match.group("location"): float(match.group("size"))
+        for match in POP_RE.finditer(POPS.read_text(encoding="utf-8-sig"))
+    }
+
+
+def population_cultures() -> dict[str, str]:
+    """Use the rendered opening population as the last-resort local adapter."""
+    return {
+        match.group("location"): match.group("culture")
         for match in POP_RE.finditer(POPS.read_text(encoding="utf-8-sig"))
     }
 
@@ -351,6 +360,10 @@ def generated_overrides() -> tuple[
     hierarchy = json.loads(HIERARCHY.read_text(encoding="utf-8-sig"))
     coords = coordinates()
     effective = effective_entries()
+    local_cultures = population_cultures()
+    for location, entry in effective.items():
+        if not entry.get("culture") and location in local_cultures:
+            entry["culture"] = local_cultures[location]
     categories = priority_locations(polities, owner, pop, hierarchy)
     direct = intended_direct_names(polities)
     by_tag = {row["tag"]: row for row in polities}

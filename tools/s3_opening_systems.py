@@ -164,7 +164,7 @@ def report() -> str:
         ("processed_food_order", f"flour={flour:g};wheat={wheat['food']:g}", "pass" if flour > wheat["food"] else "fail"),
         ("processed_food_price", f"flour={flour_row['price']};wheat={wheat['price']:g}", "pass"),
         ("processed_food_demand", f"flour={flour_row['all']};wheat={wheat['all']:g}", "pass"),
-        ("processed_food_recipe", "1 wheat + 0.15 lumber + 0.05 tools -> 1.10", "pass"),
+        ("processed_food_recipe", "1 wheat + 0.25 lumber -> 1.10", "pass"),
         ("opening_market_workshops", f"{market_rows} direct placements", "pass"),
         ("opening_rgo_capacity", "global_max_rgo_size_modifier=0.10", "pass"),
         ("opening_profile_laws", "463 tags x 14 profile-native opening policies", "pass"),
@@ -207,11 +207,10 @@ def validate() -> list[str]:
         "antq_reg_grain_mill",
     )
     recipe_literals = (
-        "wheat = 1.00",
-        "lumber = 0.15",
-        "tools = 0.05",
+        "wheat = 1.0000",
+        "lumber = 0.2500",
         "produced = antq_grain_products",
-        "output = 1.10",
+        "output = 1.1000",
     )
     for literal in recipe_literals:
         if literal not in grain_mill:

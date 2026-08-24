@@ -304,7 +304,7 @@ free_cities.6 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:PAP.ruler_or_regent = {
+		c:DUMMY.ruler_or_regent = {
 			save_scope_as = pope_ruler
 		}
 		international_organization:hre = {

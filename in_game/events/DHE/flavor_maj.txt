@@ -8,7 +8,7 @@ flavor_maj.1 = {  #The Book of Kings
 	historical_info = flavor_maj.1.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -67,7 +67,7 @@ flavor_maj.2 = {  #Gajah Mada's Sumpah Palapa
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -106,7 +106,7 @@ flavor_maj.3 = {  #The Nagarakṛtāgama
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -182,7 +182,7 @@ flavor_maj.4 = {  #Gajah Mada's Sumpah Palapa
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -248,20 +248,20 @@ flavor_maj.5 = {  #Securing the Western Borders
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
 	}
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:SUN
+		country_exists = c:DUMMY
 		has_ruler = yes
 		ruler = {
 			is_married = no
 			is_female = no
 		}
-		c:SUN = {
+		c:DUMMY = {
 			has_ruler = yes
 			is_subject = no
 			at_war = no
@@ -280,7 +280,7 @@ flavor_maj.5 = {  #Securing the Western Borders
 
 	immediate = {
 		save_scope_as = target_country
-		c:SUN = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 			random_character = {
 				limit = {
@@ -305,7 +305,7 @@ flavor_maj.5 = {  #Securing the Western Borders
 	option = {
 		name = flavor_maj.5.a
 
-		c:SUN = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_maj.6
 		}
 
@@ -322,7 +322,7 @@ flavor_maj.5 = {  #Securing the Western Borders
 	option = {
 		name = flavor_maj.5.b
 
-		c:SUN = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_maj.6
 		}
 
@@ -369,7 +369,7 @@ flavor_maj.6 = {  #Peace Through Marriage?
 	}
 
 	after = {
-		c:MAJ = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_maj.7
 		}
 	}
@@ -392,7 +392,7 @@ flavor_maj.7 = {  #Sunda's Response
 			has_variable = pressed_for_subjugation_variable
 		}
 
-		c:SUN = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = flavor_maj.8
 				days = { 15 45 }
@@ -477,7 +477,7 @@ flavor_maj.9 = {  #History of the [GetCountry('SUN').GetAdjectiveWithNoTooltip] 
 	historical_info = flavor_maj.9.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -486,7 +486,7 @@ flavor_maj.9 = {  #History of the [GetCountry('SUN').GetAdjectiveWithNoTooltip] 
 		current_date > 476.9.4
 		at_war = no
 		is_during_bankruptcy = no
-		NOT = { country_exists = c:SUN }
+		NOT = { country_exists = c:DUMMY }
 		any_character = {
 			artist_type = writer
 			has_art_in_progress = no
@@ -537,7 +537,7 @@ flavor_maj.10 = {  #Popularization of the Kakawin Poems
 	historical_info = flavor_maj.10.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -586,7 +586,7 @@ flavor_maj.11 = {  #The Dream of Nusantara
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -659,7 +659,7 @@ flavor_maj.12 = {  #New Temples
 	historical_info = flavor_maj.12.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -719,7 +719,7 @@ flavor_maj.13 = {  #Tikus Temple
 	historical_info = flavor_maj.13.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -798,7 +798,7 @@ flavor_maj.14 = {  #Candi Surawana
 	historical_info = flavor_maj.14.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -814,7 +814,7 @@ flavor_maj.14 = {  #Candi Surawana
 		has_ruler = yes
 		location:daha = {
 			has_building = building_type:temple
-			owner = c:MAJ
+			owner = c:DUMMY
 		}
 	}
 
@@ -877,7 +877,7 @@ flavor_maj.15 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -886,8 +886,8 @@ flavor_maj.15 = {
 	trigger = {
 		current_date > 476.9.4
 		sumpah_palapa_trigger = yes
-		country_exists = c:BLI
-		c:BLI ?= {
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
 			NOT = { is_at_war_with = ROOT }
 			is_subject = no
 		}
@@ -895,7 +895,7 @@ flavor_maj.15 = {
 
 	immediate = {
 		set_sumpah_palapa_scopes = yes
-		c:BLI = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 	}
@@ -971,7 +971,7 @@ flavor_maj.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1075,7 +1075,7 @@ flavor_maj.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1349,7 +1349,7 @@ flavor_maj.20 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1453,7 +1453,7 @@ flavor_maj.22 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1469,7 +1469,7 @@ flavor_maj.22 = {
 				culture = culture:malay_culture
 			}
 		}
-		c:SNG ?= {
+		c:DUMMY ?= {
 			has_ruler = yes
 		}
 	}
@@ -1485,11 +1485,11 @@ flavor_maj.22 = {
 			}
 		}
 
-		c:SNG = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 
-		c:SNG.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = target_character
 		}
 	}
@@ -1798,7 +1798,7 @@ flavor_maj.26 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1812,7 +1812,7 @@ flavor_maj.26 = {
 				OR = {
 					AND = {
 						this = ROOT
-						c:JMB ?= {
+						c:DUMMY ?= {
 							is_ai = yes
 						}
 					}
@@ -1823,8 +1823,8 @@ flavor_maj.26 = {
 				}
 			}
 		}
-		country_exists = c:SGT
-		c:SGT = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_ai = yes
 		}
 
@@ -1848,12 +1848,12 @@ flavor_maj.26 = {
 			}
 		}
 		else = {
-			c:JMB = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}
 
-		c:SGT = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 		}
 
@@ -1964,7 +1964,7 @@ flavor_maj.28 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2012,7 +2012,7 @@ flavor_maj.29 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAJ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10

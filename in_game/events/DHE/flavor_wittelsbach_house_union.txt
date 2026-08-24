@@ -9,7 +9,7 @@ flavor_wittelsbach_house_union.1 = { #Treaty of Pavia Follow Up
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = UBV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 6
@@ -26,7 +26,7 @@ flavor_wittelsbach_house_union.1 = { #Treaty of Pavia Follow Up
 		ruler ?= {
 			save_scope_as = target_ruler
 		}
-		c:PAL.ruler ?= {
+		c:DUMMY.ruler ?= {
 			save_scope_as = target_character
 		}
 		set_global_variable = wittelsbach_treaty_pavia_undecided
@@ -37,7 +37,7 @@ flavor_wittelsbach_house_union.1 = { #Treaty of Pavia Follow Up
 		has_ruler = yes
 		ruler.dynasty ?= dynasty:wittelsbach_dynasty
 		is_leader_of_international_organization = international_organization:hre
-		c:PAL = {
+		c:DUMMY = {
 			has_ruler = yes
 			ruler.dynasty ?= dynasty:wittelsbach_dynasty
 		}
@@ -49,7 +49,7 @@ flavor_wittelsbach_house_union.1 = { #Treaty of Pavia Follow Up
 
 		custom_tooltip = flavor_wittelsbach_house_union.1.a.tt
 		add_opinion = {
-			target = c:PAL
+			target = c:DUMMY
 			modifier = careful_diplomatic_manouvering
 		}
 		set_global_variable = wittelsbach_treaty_pavia_yes
@@ -60,12 +60,12 @@ flavor_wittelsbach_house_union.1 = { #Treaty of Pavia Follow Up
 
 		add_stability = stability_severe_penalty
 		drop_antagonism_bomb = {
-			target = c:PAL.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_pressed_claim
 			value = 15
 		}
 		add_legitimacy = legitimacy_severe_penalty
-		add_casus_belli =  { type = casus_belli:cb_annex target = c:PAL }
+		add_casus_belli =  { type = casus_belli:cb_annex target = c:DUMMY }
 		remove_global_variable = wittelsbach_treaty_pavia_undecided
 	}
 }
@@ -80,7 +80,7 @@ flavor_wittelsbach_house_union.2 = { #Palatinate Event for Treaty of Pavia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -97,7 +97,7 @@ flavor_wittelsbach_house_union.2 = { #Palatinate Event for Treaty of Pavia
 		ruler ?= {
 			save_scope_as = target_ruler
 		}
-		c:UBV.ruler ?= {
+		c:DUMMY.ruler ?= {
 			save_scope_as = target_character
 		}
 	}
@@ -105,7 +105,7 @@ flavor_wittelsbach_house_union.2 = { #Palatinate Event for Treaty of Pavia
 	trigger = {
 		current_date > 476.9.4
 		ruler.dynasty ?= dynasty:wittelsbach_dynasty
-		c:PAL = {
+		c:DUMMY = {
 			ruler.dynasty ?= dynasty:wittelsbach_dynasty
 		}
 		has_global_variable = wittelsbach_treaty_pavia_undecided
@@ -117,7 +117,7 @@ flavor_wittelsbach_house_union.2 = { #Palatinate Event for Treaty of Pavia
 
 		custom_tooltip = flavor_wittelsbach_house_union.1.a.tt
 		add_opinion = {
-			target = c:UBV
+			target = c:DUMMY
 			modifier = careful_diplomatic_manouvering
 		}
 		remove_global_variable = wittelsbach_treaty_pavia_undecided
@@ -128,12 +128,12 @@ flavor_wittelsbach_house_union.2 = { #Palatinate Event for Treaty of Pavia
 
 		add_stability = stability_severe_penalty
 		drop_antagonism_bomb = {
-			target = c:UBV.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_pressed_claim
 			value = 15
 		}
 		add_legitimacy = legitimacy_severe_penalty
-		add_casus_belli =  { type = casus_belli:cb_annex target = c:UBV }
+		add_casus_belli =  { type = casus_belli:cb_annex target = c:DUMMY }
 		remove_global_variable = wittelsbach_treaty_pavia_undecided
 		remove_global_variable = wittelsbach_treaty_pavia_yes
 	}
@@ -148,7 +148,7 @@ flavor_wittelsbach_house_union.3 = { #Palatinate Line dies out
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -165,7 +165,7 @@ flavor_wittelsbach_house_union.3 = { #Palatinate Line dies out
 		ruler ?= {
 			save_scope_as = target_ruler
 		}
-		c:PAL = {
+		c:DUMMY = {
 			previous_ruler = {
 				save_scope_as = target_character
 			}
@@ -176,7 +176,7 @@ flavor_wittelsbach_house_union.3 = { #Palatinate Line dies out
 		current_date > 476.9.4
 		has_ruler = yes
 		ruler.dynasty ?= dynasty:wittelsbach_dynasty
-		c:PAL = {
+		c:DUMMY = {
 			has_regent = yes
 			NOT = {
 				regency_type = regency_type:consort_regency
@@ -192,13 +192,13 @@ flavor_wittelsbach_house_union.3 = { #Palatinate Line dies out
 
 		if = {
 			limit = {
-				c:PAL = {
+				c:DUMMY = {
 					has_special_status_in_international_organization = {
 						type = special_status:elector
 						international_organization = international_organization:hre
 					}
 				}
-				c:BAV = {
+				c:DUMMY = {
 					NOT = {
 						has_special_status_in_international_organization = {
 							type = special_status:elector
@@ -210,7 +210,7 @@ flavor_wittelsbach_house_union.3 = { #Palatinate Line dies out
 			international_organization:hre = {
 				international_organization_add_special_status = {
 					type = special_status:elector
-					country = c:BAV
+					country = c:DUMMY
 				}
 			}
 			add_opinion = {
@@ -218,12 +218,12 @@ flavor_wittelsbach_house_union.3 = { #Palatinate Line dies out
 				modifier = opinion_granted_electorship
 			}
 		}
-		c:PAL = {
+		c:DUMMY = {
 			every_core_location = {
-				add_core = c:BAV
+				add_core = c:DUMMY
 			}
 		}
-		annex_country = { country = c:PAL }
+		annex_country = { country = c:DUMMY }
 	}
 }
 
@@ -237,7 +237,7 @@ flavor_wittelsbach_house_union.4 = { #Bavarian Line dies out
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -254,7 +254,7 @@ flavor_wittelsbach_house_union.4 = { #Bavarian Line dies out
 		ruler ?= {
 			save_scope_as = target_ruler
 		}
-		c:BAV = {
+		c:DUMMY = {
 			previous_ruler = {
 				save_scope_as = target_character
 			}
@@ -265,7 +265,7 @@ flavor_wittelsbach_house_union.4 = { #Bavarian Line dies out
 		current_date > 476.9.4
 		has_ruler = yes
 		ruler.dynasty ?= dynasty:wittelsbach_dynasty
-		c:BAV ?= {
+		c:DUMMY ?= {
 			has_regent = yes
 			NOT = {
 				regency_type = regency_type:consort_regency
@@ -281,13 +281,13 @@ flavor_wittelsbach_house_union.4 = { #Bavarian Line dies out
 
 		if = {
 			limit = {
-				c:BAV = {
+				c:DUMMY = {
 					has_special_status_in_international_organization = {
 						type = special_status:elector
 						international_organization = international_organization:hre
 					}
 				}
-				c:PAL = {
+				c:DUMMY = {
 					NOT = {
 						has_special_status_in_international_organization = {
 							type = special_status:elector
@@ -299,7 +299,7 @@ flavor_wittelsbach_house_union.4 = { #Bavarian Line dies out
 			international_organization:hre = {
 				international_organization_add_special_status = {
 					type = special_status:elector
-					country = c:PAL
+					country = c:DUMMY
 				}
 			}
 			add_opinion = {
@@ -307,12 +307,12 @@ flavor_wittelsbach_house_union.4 = { #Bavarian Line dies out
 				modifier = opinion_granted_electorship
 			}
 		}
-		c:BAV = {
+		c:DUMMY = {
 			every_core_location = {
-				add_core = c:PAL
+				add_core = c:DUMMY
 			}
 		}
-		annex_country = { country = c:BAV }
+		annex_country = { country = c:DUMMY }
 
 	}
 }
@@ -327,7 +327,7 @@ flavor_wittelsbach_house_union.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2.5
@@ -348,7 +348,7 @@ flavor_wittelsbach_house_union.5 = {
 				international_organization = international_organization:hre
 			}
 		}
-		c:PAL = {
+		c:DUMMY = {
 			is_subject_of = root
 			has_special_status_in_international_organization = {
 				type = special_status:elector
@@ -363,7 +363,7 @@ flavor_wittelsbach_house_union.5 = {
 
 		save_scope_as = bavaria_country
 		ruler ?= { save_scope_as = bavaria_ruler }
-		c:PAL = {
+		c:DUMMY = {
 			save_scope_as = palatine_country
 			ruler ?= { save_scope_as = palatine_ruler }
 		}
@@ -375,13 +375,13 @@ flavor_wittelsbach_house_union.5 = {
 		international_organization:hre = {
 			international_organization_remove_special_status = {
 				type = special_status:elector
-				country = c:PAL
+				country = c:DUMMY
 			}
 		}
 		international_organization:hre = {
 			international_organization_add_special_status = {
 				type = special_status:elector
-				country = c:BAV
+				country = c:DUMMY
 			}
 		}
 		add_opinion = {
@@ -401,7 +401,7 @@ flavor_wittelsbach_house_union.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2.5
@@ -422,7 +422,7 @@ flavor_wittelsbach_house_union.6 = {
 				international_organization = international_organization:hre
 			}
 		}
-		c:BAV = {
+		c:DUMMY = {
 			is_subject_of = root
 			has_special_status_in_international_organization = {
 				type = special_status:elector
@@ -437,7 +437,7 @@ flavor_wittelsbach_house_union.6 = {
 
 		save_scope_as = palatine_country
 		ruler ?= { save_scope_as = palatine_ruler }
-		c:BAV = {
+		c:DUMMY = {
 			save_scope_as = bavaria_country
 			ruler ?= { save_scope_as = bavaria_ruler }
 		}
@@ -449,13 +449,13 @@ flavor_wittelsbach_house_union.6 = {
 		international_organization:hre = {
 			international_organization_remove_special_status = {
 				type = special_status:elector
-				country = c:BAV
+				country = c:DUMMY
 			}
 		}
 		international_organization:hre = {
 			international_organization_add_special_status = {
 				type = special_status:elector
-				country = c:PAL
+				country = c:DUMMY
 			}
 		}
 		add_opinion = {

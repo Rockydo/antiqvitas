@@ -99,15 +99,15 @@ flavor_swe_nov.2 = {
 	desc = flavor_swe_nov.2.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
 	}
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:NOV
-		c:NOV = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			NOT = { religion = root.religion }
 			religion.group = root.religion.group
 		}
@@ -119,7 +119,7 @@ flavor_swe_nov.2 = {
     }
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:NOV = {
+		c:DUMMY = {
 			save_scope_as = novgorod_country
 		}
 		save_scope_as = sweden_country
@@ -168,9 +168,9 @@ flavor_swe_nov.3 = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
 		if = {
 			limit = {
-				country_exists = c:BYZ
+				country_exists = c:DUMMY
 			}
-			c:BYZ = {
+			c:DUMMY = {
 				save_scope_as = byzantium_country
 			}
 		}
@@ -179,7 +179,7 @@ flavor_swe_nov.3 = {
 	option = {
 		name = flavor_swe_nov.3.a
 		trigger = {
-			country_exists = c:BYZ
+			country_exists = c:DUMMY
 		}
 		historical_option = yes
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_bonus }
@@ -201,7 +201,7 @@ flavor_swe_nov.3 = {
 	option = {
 		name = flavor_swe_nov.3.b
 		trigger = {
-			NOT = { country_exists = c:BYZ }
+			NOT = { country_exists = c:DUMMY }
 		}
 		historical_option = yes
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_bonus }
@@ -256,13 +256,13 @@ flavor_swe_nov.4 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					country_exists = c:BYZ
+					country_exists = c:DUMMY
 				}
 				desc = flavor_swe_nov.4.desc
 			}
 			triggered_desc = {
 				trigger = {
-					country_exists = c:BYZ
+					country_exists = c:DUMMY
 				}
 				desc = flavor_swe_nov.4.desc.no_byz
 			}
@@ -301,7 +301,7 @@ flavor_swe_nov.4 = {
 	option = {
 		name = flavor_swe_nov.4.b
 		trigger = {
-			country_exists = c:BYZ
+			country_exists = c:DUMMY
 		}
 		add_religious_influence = religious_influence_mild_bonus
 		custom_tooltip = {
@@ -413,9 +413,9 @@ flavor_swe_nov.6 = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
 		if = {
 			limit = {
-				country_exists = c:NOV
+				country_exists = c:DUMMY
 			}
-			c:NOV = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}

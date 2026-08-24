@@ -1,0 +1,15 @@
+pdxmesh = {
+	name = "unit_shield_legionary_scutum_mesh"
+	file = "unit_shield_legionary_scutum.mesh"
+
+	meshsettings = {
+		name = "unit_shield_legionary_scutumShape"
+		index = 0
+		texture_diffuse = "unit_shield_legionary_scutum_diffuse.dds"
+		texture_normal = "unit_shield_legionary_scutum_normal.dds"
+		#texture_specular = "unit_shield_legionary_scutum_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_shield_legionary_scutum_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}

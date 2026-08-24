@@ -123,7 +123,11 @@ def main() -> int:
 
     generated = supply.generated_rows()
     totals = supply.coverage(generated)
-    for market, minimum in (("rome", 3), *((peer, 2) for peer in PEER_MARKETS)):
+    # Keep the regression gate aligned with the bounded one-circuit policy.
+    # Staffing and realized throughput remain runtime checks; multiplying inert
+    # bookmark workshops is neither proof of supply nor a safe crash fix.
+    for market in ("rome", *PEER_MARKETS):
+        minimum = supply.target(market)
         for output in supply.OUTPUT_ORDER:
             if totals[market][output] < minimum:
                 failures.append(
@@ -138,8 +142,8 @@ def main() -> int:
     print(
         "s4_principate_economy: PASS "
         f"({reserve_count} bounded small-polity reserves; "
-        f"50% opening province food stores; Rome 3x and "
-        f"{len(PEER_MARKETS)} peer markets 2x supplied)"
+        f"50% opening province food stores; Rome and "
+        f"{len(PEER_MARKETS)} peer markets have bounded complete circuits)"
     )
     return 0
 

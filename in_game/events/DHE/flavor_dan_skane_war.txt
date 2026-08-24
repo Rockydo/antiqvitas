@@ -8,7 +8,7 @@ flavor_dan_skane_war.1 = { #The Rebellion of Johan Offesson
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SKE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -42,16 +42,16 @@ flavor_dan_skane_war.1 = { #The Rebellion of Johan Offesson
 
 	trigger = {
 		current_date > 476.9.4
-		is_subject_of = c:SWE
+		is_subject_of = c:DUMMY
 		government_type = government_type:monarchy
 		opinion = {
-			target = c:SWE
+			target = c:DUMMY
 			value <= 150
 		}
-		c:SWE = {
+		c:DUMMY = {
 			has_ruler = yes
 		}
-		c:DAN = {
+		c:DUMMY = {
 			has_ruler = yes
 		}
 		has_ruler = yes
@@ -65,9 +65,9 @@ flavor_dan_skane_war.1 = { #The Rebellion of Johan Offesson
 		add_stability = stability_severe_penalty
 		add_legitimacy = legitimacy_mild_penalty
 		scope:target_character = {
-			move_country = c:DAN
+			move_country = c:DUMMY
 		}
-		c:DAN = {
+		c:DUMMY = {
 			trigger_event_silently = flavor_dan_skane_war.2
 		}
 	}
@@ -75,7 +75,7 @@ flavor_dan_skane_war.1 = { #The Rebellion of Johan Offesson
 	option = {
 		name = flavor_dan_skane_war.1.b
 		custom_tooltip = flavor_dan_skane_war.1.b.tt
-		c:DAN = {
+		c:DUMMY = {
 			trigger_event_silently = flavor_dan_skane_war.3
 		}
 	}
@@ -109,7 +109,7 @@ flavor_dan_skane_war.2 = { #Johan Offesson arrives in Denmark
 		historical_option = yes
 		custom_tooltip = flavor_dan_skane_war.2.a.tt
 
-		c:DAN = {
+		c:DUMMY = {
 			trigger_event_silently = {
 				id = flavor_dan_skane_war.5
 				years = 10
@@ -157,23 +157,23 @@ flavor_dan_skane_war.3 = { #Scania elects the danish King - Denmark
 		add_prestige = prestige_severe_bonus
 		if = {
 			limit = {
-				c:SKE = {
+				c:DUMMY = {
 					is_human = no
 				}
 			}
-			c:SKE = {
+			c:DUMMY = {
 				every_core_location = {
-					add_core = c:DAN
+					add_core = c:DUMMY
 				}
 			}
-			annex_country = { country = c:SKE }
+			annex_country = { country = c:DUMMY }
 		}
 		else = {
-			c:SWE = {
-				cancel_subject = c:SKE
+			c:DUMMY = {
+				cancel_subject = c:DUMMY
 			}
 		}
-		c:SWE = {
+		c:DUMMY = {
 			trigger_event_silently = flavor_dan_skane_war.4
 		}
 	}
@@ -183,7 +183,7 @@ flavor_dan_skane_war.3 = { #Scania elects the danish King - Denmark
 
 		add_prestige = prestige_severe_penalty
 		add_opinion = {
-			target = c:SWE
+			target = c:DUMMY
 			modifier = opinion_decline_crown_of_vassal
 		}
 	}
@@ -244,8 +244,8 @@ flavor_dan_skane_war.5 = { #Offer to purchase Scania - Denmark
 
 	trigger = {
 		current_date > 476.9.4
-		c:SKE = {
-			is_subject_of = c:SWE
+		c:DUMMY = {
+			is_subject_of = c:DUMMY
 			government_type = government_type:monarchy
 		}
 	}
@@ -253,7 +253,7 @@ flavor_dan_skane_war.5 = { #Offer to purchase Scania - Denmark
 	option = {
 		name = flavor_dan_skane_war.5.a
 		custom_tooltip = flavor_dan_skane_war.5.a.tt
-		c:SWE = {
+		c:DUMMY = {
 			trigger_event_silently = flavor_dan_skane_war.6
 		}
 	}
@@ -282,7 +282,7 @@ flavor_dan_skane_war.6 = { #Offer to purchase Scania - Sweden
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:DAN = {
+		c:DUMMY = {
 			ruler ?= { save_scope_as = danish_king }
 		}
 	}
@@ -290,23 +290,23 @@ flavor_dan_skane_war.6 = { #Offer to purchase Scania - Sweden
 	option = {
 		name = flavor_dan_skane_war.6.a
 
-		c:DAN = {
+		c:DUMMY = {
 			transfer_yearly_gold = {
 				value = 0.5
-				target = c:SWE
+				target = c:DUMMY
 			}
 		}
-		c:SWE = {
-			cancel_subject = c:SKE
+		c:DUMMY = {
+			cancel_subject = c:DUMMY
 		}
-		c:SKE = {
+		c:DUMMY = {
 			make_subject_of = {
-				target = c:DAN
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 			set_new_ruler = scope:danish_king
 		}
-		c:DAN = {
+		c:DUMMY = {
 			trigger_event_silently = flavor_dan_skane_war.7
 		}
 	}
@@ -339,7 +339,7 @@ flavor_dan_skane_war.7 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:DAN = {
+		c:DUMMY = {
 			ruler ?= { save_scope_as = danish_king }
 		}
 	}

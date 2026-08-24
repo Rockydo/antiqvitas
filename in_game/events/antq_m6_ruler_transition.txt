@@ -1,0 +1,130 @@
+﻿namespace = antq_m6
+
+antq_m6.1 = {
+	type = country_event
+	hidden = yes
+	title = empty_text
+	immediate = {
+		if = {
+			limit = { has_variable = antq_m6_opening_ruler }
+			ruler ?= { save_scope_as = antq_m6_departing_ruler }
+			var:antq_m6_opening_ruler ?= {
+				save_scope_as = antq_m6_opening_ruler_scope
+			}
+			if = {
+				limit = { tag = XAA }
+				var:antq_m6_opening_ruler = {
+					set_first_name = antq_augustus
+				}
+				var:antq_m6_opening_consort ?= {
+					save_scope_as = antq_m6_handoff_consort
+				}
+			}
+			if = {
+				limit = { exists = scope:antq_m6_opening_ruler_scope }
+				set_new_ruler_no_update = scope:antq_m6_opening_ruler_scope
+			}
+			if = {
+				limit = { exists = scope:antq_m6_departing_ruler }
+				kill_character_silently = scope:antq_m6_departing_ruler
+			}
+			if = {
+				limit = {
+					tag = XAA
+					has_variable = antq_m6_opening_consort
+				}
+				var:antq_m6_opening_ruler = {
+					marry_character_ignore_blocks = scope:antq_m6_handoff_consort
+				}
+			}
+			if = {
+				limit = { tag = XAA }
+				set_variable = { name = antq_m6_roman_augustus value = var:antq_m6_opening_ruler }
+				remove_variable = antq_m6_opening_consort
+			}
+			remove_variable = antq_m6_opening_ruler
+		}
+	}
+}
+
+# Gaius Caesar died in AD 4; Tiberius then became Augustus's heir.
+antq_m6.2 = {
+	type = country_event
+	hidden = yes
+	title = empty_text
+	fire_only_once = yes
+	dynamic_historical_event = {
+		tag = XAA
+		from = 4.2.21
+		to = 4.3.21
+		monthly_chance = 100
+	}
+	immediate = {
+		if = {
+			limit = { has_variable = antq_m6_roman_gaius_caesar }
+			var:antq_m6_roman_gaius_caesar = {
+				remove_character_modifier = antq_m6_historical_lifespan_guard
+				save_scope_as = antq_m6_departing_gaius_caesar
+			}
+			kill_character_silently = scope:antq_m6_departing_gaius_caesar
+			remove_variable = antq_m6_roman_gaius_caesar
+		}
+		if = {
+			limit = { has_variable = antq_m6_roman_tiberius }
+			var:antq_m6_roman_tiberius = { save_scope_as = antq_m6_tiberius_heir_scope }
+			set_as_designated_heir = scope:antq_m6_tiberius_heir_scope
+		}
+	}
+}
+
+# Augustus died on 19 August AD 14; Tiberius succeeds without a regency.
+antq_m6.3 = {
+	type = country_event
+	hidden = yes
+	title = empty_text
+	fire_only_once = yes
+	dynamic_historical_event = {
+		tag = XAA
+		from = 14.8.19
+		to = 14.9.19
+		monthly_chance = 100
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_variable = antq_m6_roman_augustus
+				has_variable = antq_m6_roman_tiberius
+			}
+			var:antq_m6_roman_augustus = {
+				remove_character_modifier = antq_m6_historical_lifespan_guard
+				save_scope_as = antq_m6_departing_augustus
+			}
+			var:antq_m6_roman_tiberius = {
+				save_scope_as = antq_m6_succeeding_tiberius
+			}
+			set_new_ruler_no_update = scope:antq_m6_succeeding_tiberius
+			kill_character_silently = scope:antq_m6_departing_augustus
+			remove_variable = antq_m6_roman_augustus
+			create_character = {
+				culture = culture:antq_latin
+				religion = religion:antq_religio_romana
+				dynasty = dynasty:antq_julio_claudian_dynasty
+				estate = estate_type:nobles_estate
+				age = { 20 30 }
+				save_scope_as = antq_m6_roman_succession_reserve_scope
+			}
+			scope:antq_m6_roman_succession_reserve_scope = {
+				add_character_modifier = { modifier = antq_m6_historical_lifespan_guard years = -1 mode = add_and_extend }
+			}
+			set_variable = { name = antq_m6_roman_succession_reserve value = scope:antq_m6_roman_succession_reserve_scope }
+			set_as_designated_heir = scope:antq_m6_roman_succession_reserve_scope
+		}
+		if = {
+			limit = { has_variable = antq_m6_roman_livia }
+			var:antq_m6_roman_livia = {
+				remove_character_modifier = antq_m6_historical_lifespan_guard
+			}
+			remove_variable = antq_m6_roman_livia
+		}
+	}
+}

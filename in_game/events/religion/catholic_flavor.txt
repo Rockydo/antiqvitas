@@ -14,8 +14,8 @@ catholic_flavor.1 = { #Influential Preacher
 	trigger = {
 		current_date > 476.9.4
 		religion = religion:catholic
-		country_exists = c:PAP
-		c:PAP ?= {
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
 			NOT = { this = ROOT }
 		}
 	}
@@ -31,7 +31,7 @@ catholic_flavor.1 = { #Influential Preacher
 			save_scope_as = target_character
 			create_in_limbo = yes
 		}
-		c:PAP.capital = {
+		c:DUMMY.capital = {
 			save_scope_as = pope_capital_scope
 		}
 	}
@@ -39,7 +39,7 @@ catholic_flavor.1 = { #Influential Preacher
 	option = {
 		name = catholic_flavor.1.a
 		add_religious_influence = religious_influence_mild_bonus
-		scope:target_character = { move_country = c:PAP }
+		scope:target_character = { move_country = c:DUMMY }
 	}
 	option = {
 		name = catholic_flavor.1.b
@@ -199,7 +199,7 @@ catholic_flavor.4 = { #Simony?
 		name = catholic_flavor.4.b
 		add_religious_influence = religious_influence_mild_bonus
 		add_government_power = government_power_mild_bonus
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_pleased }
 		}
 
@@ -255,7 +255,7 @@ catholic_flavor.5 = { #Selling of Indulgences repetetive Event
 
 		add_religious_influence = religious_influence_mild_penalty
 		add_estate_satisfaction = { type = estate_type:peasants_estate value = estate_satisfaction_weak_bonus }
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = catholic_obstructing_church }
 		}
 	}
@@ -360,7 +360,7 @@ catholic_flavor.7 = { #Veneration of the Virgin Mary
 		name = catholic_flavor.7.b
 
 		add_stability = stability_weak_bonus
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_denying_the_holy_mother }
 		}
 	}
@@ -635,7 +635,7 @@ catholic_flavor.12 = { #Sublimis Deus
 	trigger = {
 		current_date > 476.9.4
 		religion = religion:catholic
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 		NOT = {
 			tag = PAP
 		}
@@ -667,7 +667,7 @@ catholic_flavor.12 = { #Sublimis Deus
 		name = catholic_flavor.12.a
 
 		add_religious_influence = religious_influence_extreme_bonus
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_sublimis_deus }
 		}
 		if = {
@@ -754,8 +754,8 @@ catholic_flavor.14 = { #The [target_country.GetLongNameWithNoTooltip] Heals The 
 	trigger = {
 		current_date > 476.9.4
 		religion = religion:orthodox
-		country_exists = c:PAP
-		c:PAP = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			religion = religion:catholic
 			has_ruler = yes
 		}
@@ -773,7 +773,7 @@ catholic_flavor.14 = { #The [target_country.GetLongNameWithNoTooltip] Heals The 
 	immediate = {
 		event_illustration_estate_background_effect = { background = estate_type:clergy_estate }
 		hidden_effect = {
-			c:PAP = {
+			c:DUMMY = {
 				save_scope_as = target_country
 				ruler ?= {
 					save_scope_as = target_character
@@ -1074,7 +1074,7 @@ catholic_flavor.101 = {
 
 	immediate = {
 		event_illustration_estate_background_effect = { background = estate_type:clergy_estate }
-		c:PAP.ruler ?= {
+		c:DUMMY.ruler ?= {
 			save_scope_as = target_character
 		}
 	}
@@ -1087,7 +1087,7 @@ catholic_flavor.101 = {
 		add_religious_influence = religious_influence_extreme_bonus
 		add_prestige = prestige_mild_penalty
 
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_cardinal_nephew }
 			reverse_add_opinion = { target = root modifier = opinion_cardinal_nephew }
 			trigger_event_silently = { id = catholic_flavor.102 }
@@ -1104,7 +1104,7 @@ catholic_flavor.101 = {
 	option = {
 		name = catholic_flavor.101.b
 		add_prestige = prestige_weak_bonus
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_silently = { id = catholic_flavor.103 }
 		}
 	}
@@ -1162,116 +1162,8 @@ catholic_flavor.103 = {
 	}
 }
 
-catholic_flavor.1000 = {
-	type = country_event
-	title = catholic_flavor.1000.title
-	desc = catholic_flavor.1000.desc
-	outcome = neutral
 
-	illustration_tags = {
-		10 = interior
-	}
-	immediate = {
-		event_illustration_estate_background_effect = { background = estate_type:clergy_estate }
 
-		
-	}
-
-	option = {
-		name = catholic_flavor.1000.a
-
-		scope:actor = {
-			trigger_event_non_silently = catholic_flavor.1001
-		}
-
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 0
-				"c:PAP.opinion(scope:actor)" < -50
-			}
-		}
-	}
-
-	option = {
-		name = catholic_flavor.1000.b
-
-		trigger = {
-			NOT = {
-				scope:actor = c:PAP
-			}
-		}
-
-		scope:actor = {
-			trigger_event_non_silently = catholic_flavor.1002
-		}
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 0
-				"c:PAP.opinion(scope:actor)" > 50
-			}
-		}
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
-
-catholic_flavor.1001 = {
-	type = country_event
-	title = catholic_flavor.1000.title
-	desc = catholic_flavor.1001.desc
-	outcome = neutral
-
-	illustration_tags = {
-		10 = interior
-	}
-	immediate = {
-		event_illustration_estate_background_effect = { background = estate_type:clergy_estate }
-	}
-
-	option = {
-		name = catholic_flavor.1001.a
-
-		scope:target_location = {
-			construct_building = {
-				building_type = building_type:seat_of_cardinal
-			}
-		}
-		remove_variable = cost_of_cardinal
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
-
-catholic_flavor.1002 = {
-	type = country_event
-	title = catholic_flavor.1000.title
-	desc = catholic_flavor.1002.desc
-	outcome = neutral
-
-	illustration_tags = {
-		10 = interior
-	}
-	immediate = {
-		event_illustration_estate_background_effect = { background = estate_type:clergy_estate }
-	}
-
-	option = {
-		name = catholic_flavor.1002.a
-
-		add_religious_influence = {
-			value = var:cost_of_cardinal
-		}
-
-		remove_variable = cost_of_cardinal
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 catholic_flavor.9000 = {
 	type = country_event

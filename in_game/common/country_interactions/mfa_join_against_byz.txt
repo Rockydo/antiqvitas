@@ -10,7 +10,7 @@ mfa_join_against_byz = {
 		scope:actor = {
 			has_variable = mfa_gathering_for_fight_with_byz
 		}
-		country_exists = c:BYZ
+		country_exists = c:DUMMY
 	}
 
 	allow = {

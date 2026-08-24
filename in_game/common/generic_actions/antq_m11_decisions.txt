@@ -5,8 +5,12 @@
 antq_endow_public_games = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 6
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -49,8 +53,12 @@ antq_endow_public_games = {
 antq_fund_the_annona = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 7
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -108,8 +116,12 @@ antq_fund_the_annona = {
 antq_consult_the_senate = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 4
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -152,8 +164,12 @@ antq_consult_the_senate = {
 antq_audit_provincial_governors = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 3
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -196,8 +212,12 @@ antq_audit_provincial_governors = {
 antq_repair_consular_roads = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 10
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -240,8 +260,12 @@ antq_repair_consular_roads = {
 antq_renew_auxiliary_compacts = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 9
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -284,8 +308,12 @@ antq_renew_auxiliary_compacts = {
 antq_receive_foreign_embassy = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 8
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -328,8 +356,12 @@ antq_receive_foreign_embassy = {
 antq_dedicate_a_votive_offering = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 5
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -372,8 +404,12 @@ antq_dedicate_a_votive_offering = {
 antq_review_the_classics = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 8
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -416,8 +452,12 @@ antq_review_the_classics = {
 antq_inspect_the_commanderies = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 5
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -460,8 +500,12 @@ antq_inspect_the_commanderies = {
 antq_open_granary_reserves = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 6
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -519,8 +563,12 @@ antq_open_granary_reserves = {
 antq_dispatch_a_frontier_envoy = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 3
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -563,8 +611,12 @@ antq_dispatch_a_frontier_envoy = {
 antq_sponsor_irrigation_works = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 10
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -622,8 +674,12 @@ antq_sponsor_irrigation_works = {
 antq_scrutinize_the_registers = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 9
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -666,8 +722,12 @@ antq_scrutinize_the_registers = {
 antq_honor_filial_service = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 4
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -710,8 +770,12 @@ antq_honor_filial_service = {
 antq_remit_local_corvee = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 7
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -754,8 +818,12 @@ antq_remit_local_corvee = {
 antq_convene_the_great_houses = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 3
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -798,8 +866,12 @@ antq_convene_the_great_houses = {
 antq_safeguard_caravan_routes = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 8
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -860,8 +932,12 @@ antq_safeguard_caravan_routes = {
 antq_mint_silver_drachms = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 6
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -907,8 +983,12 @@ antq_mint_silver_drachms = {
 antq_hold_a_royal_hunt = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 5
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -951,8 +1031,12 @@ antq_hold_a_royal_hunt = {
 antq_endow_a_fire_temple = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 4
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1012,8 +1096,12 @@ antq_endow_a_fire_temple = {
 antq_renew_dynastic_marriages = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 7
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1059,8 +1147,12 @@ antq_renew_dynastic_marriages = {
 antq_endow_a_water_tank = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 3
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1107,8 +1199,12 @@ antq_endow_a_water_tank = {
 antq_invite_a_learned_teacher = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 6
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1155,8 +1251,12 @@ antq_invite_a_learned_teacher = {
 antq_patronize_sangam_poetry = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 9
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1201,8 +1301,12 @@ antq_patronize_sangam_poetry = {
 antq_maintain_a_monsoon_port = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 4
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1265,8 +1369,12 @@ antq_maintain_a_monsoon_port = {
 antq_receive_an_overseas_trader = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 7
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1329,8 +1437,12 @@ antq_receive_an_overseas_trader = {
 antq_sponsor_a_pilgrimage = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 8
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1393,8 +1505,12 @@ antq_sponsor_a_pilgrimage = {
 antq_recognize_a_local_cult = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 2
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1443,8 +1559,12 @@ antq_recognize_a_local_cult = {
 antq_convene_a_doctrinal_assembly = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 1
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1493,8 +1613,12 @@ antq_convene_a_doctrinal_assembly = {
 antq_patronize_a_meditation_house = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 5
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1544,8 +1668,12 @@ antq_patronize_a_meditation_house = {
 antq_protect_a_sacred_grove = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 6
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1594,8 +1722,12 @@ antq_protect_a_sacred_grove = {
 antq_renew_warband_oaths = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 3
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1649,8 +1781,12 @@ antq_renew_warband_oaths = {
 antq_hold_a_tribal_assembly = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 2
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1704,8 +1840,12 @@ antq_hold_a_tribal_assembly = {
 antq_give_hall_gifts = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 1
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1759,8 +1899,12 @@ antq_give_hall_gifts = {
 antq_settle_a_blood_feud = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 4
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1814,8 +1958,12 @@ antq_settle_a_blood_feud = {
 antq_convene_a_desert_caravan = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 1
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1876,8 +2024,12 @@ antq_convene_a_desert_caravan = {
 antq_honor_a_royal_copartnership = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 1
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1920,8 +2072,12 @@ antq_honor_a_royal_copartnership = {
 antq_fund_an_exchange_feast = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 1
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {
@@ -1973,8 +2129,12 @@ antq_fund_an_exchange_feast = {
 antq_support_ocean_wayfinding = {
 	type = owncountry
 
-	ai_tick = monthly
-	automation_tick = monthly
+	ai_tick = never
+	ai_prerequisite = {
+		current_month = 1
+		gold >= 80
+	}
+	automation_tick = never
 	automation_tick_frequency = 12
 
 	potential = {

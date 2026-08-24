@@ -1,0 +1,169 @@
+{
+  "save": "G:\\antiqvitas_user_data\\save games\\economy_probe_ai_capital_v6_ad1.eu5",
+  "date": "1.1.1",
+  "real_polities": 463,
+  "stability": {
+    "minimum": 30.05,
+    "p10": 30.05,
+    "median": 30.05,
+    "p90": 30.05,
+    "maximum": 30.05,
+    "negative_count": 0,
+    "severe_count": 0
+  },
+  "solvency": {
+    "bankrupt_count": 0,
+    "bankrupt_polities": [],
+    "major_bankrupt_count": 0,
+    "major_bankrupt_polities": [],
+    "indebted_count": 0,
+    "largest_debts": [],
+    "major_economies": [
+      {
+        "id": 3,
+        "tag": "XAA",
+        "name": "XAA",
+        "province_count": 399,
+        "great_power": true,
+        "population_thousands": 47500.0,
+        "gold": 10898.5654,
+        "debt": 0.0,
+        "loan_capacity": 147155.966,
+        "monthly_income": 243.02804,
+        "monthly_expense": 45.2644,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      },
+      {
+        "id": 28,
+        "tag": "XAR",
+        "name": "XAR",
+        "province_count": 382,
+        "great_power": true,
+        "population_thousands": 57805.693,
+        "gold": 12233.17373,
+        "debt": 0.0,
+        "loan_capacity": 115848.443,
+        "monthly_income": 261.36158,
+        "monthly_expense": 21.67343,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      },
+      {
+        "id": 14,
+        "tag": "XAH",
+        "name": "XAH",
+        "province_count": 89,
+        "great_power": true,
+        "population_thousands": 6951.965,
+        "gold": 1600.49971,
+        "debt": 0.0,
+        "loan_capacity": 23690.182,
+        "monthly_income": 45.34649,
+        "monthly_expense": 15.38411,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      },
+      {
+        "id": 173,
+        "tag": "ROX",
+        "name": "ROX",
+        "province_count": 38,
+        "great_power": false,
+        "population_thousands": 450.251,
+        "gold": 406.86005,
+        "debt": 0.0,
+        "loan_capacity": 3352.784,
+        "monthly_income": 15.94281,
+        "monthly_expense": 0.10793,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      },
+      {
+        "id": 41,
+        "tag": "SAT",
+        "name": "SAT",
+        "province_count": 31,
+        "great_power": true,
+        "population_thousands": 8167.66,
+        "gold": 1722.4959,
+        "debt": 0.0,
+        "loan_capacity": 17419.822,
+        "monthly_income": 38.7143,
+        "monthly_expense": 4.34091,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      },
+      {
+        "id": 29,
+        "tag": "XIO",
+        "name": "XIO",
+        "province_count": 30,
+        "great_power": false,
+        "population_thousands": 440.136,
+        "gold": 360.44263,
+        "debt": 0.0,
+        "loan_capacity": 1663.687,
+        "monthly_income": 13.8099,
+        "monthly_expense": 3.05036,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      },
+      {
+        "id": 188,
+        "tag": "XCM",
+        "name": "XCM",
+        "province_count": 29,
+        "great_power": false,
+        "population_thousands": 706.143,
+        "gold": 173.72007,
+        "debt": 0.0,
+        "loan_capacity": 3760.904,
+        "monthly_income": 7.57029,
+        "monthly_expense": 0.25773,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      }
+    ]
+  },
+  "construction": {
+    "active_projects": 0,
+    "active_payers": 0,
+    "busiest_payers": [],
+    "all_payers": []
+  },
+  "estates": {
+    "records": 2539,
+    "minimum": 0.5,
+    "p10": 0.5,
+    "median": 0.54644,
+    "polity_mean_p10": 0.6004383333333333,
+    "below_10_percent": 0,
+    "below_25_percent": 0
+  },
+  "wars": {
+    "distinct_civil_wars": 0,
+    "active_wars": 0,
+    "active_civil_wars": 0,
+    "elapsed_years": 1.0,
+    "civil_wars_per_polity_year": 0.0
+  },
+  "epidemics": {
+    "non_endemic_outbreaks": 0,
+    "outbreaks": []
+  },
+  "log": {
+    "path": null,
+    "script_errors": 0,
+    "ai_command_errors": 0,
+    "locations": {}
+  },
+  "failures": []
+}

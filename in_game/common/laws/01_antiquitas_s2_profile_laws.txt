@@ -374,7 +374,7 @@ antq_s2_roman_household_law = {
 	antq_s2_roman_household_mediated = {
 		country_modifier = {
 			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_monthly_control = -0.005
+			monthly_towards_decentralization = societal_value_minor_monthly_move
 			global_nobles_estate_power = 0.03
 			global_nobles_estate_power = 0.02
 		}
@@ -455,6 +455,8 @@ antq_s2_roman_coinage_law = {
 			minting_income_factor = 0.10
 			minting_inflation_threshold = -0.01
 			monthly_towards_centralization = societal_value_minor_monthly_move
+			goods_gold_used_for_minting = yes
+			silver_used_for_minting = yes
 			global_crown_estate_power = 0.02
 		}
 		years = 2
@@ -467,6 +469,8 @@ antq_s2_roman_coinage_law = {
 			minting_income_factor = 0.06
 			global_burghers_estate_power = 0.04
 			global_nobles_estate_power = 0.03
+			goods_gold_used_for_minting = yes
+			silver_used_for_minting = yes
 			global_nobles_estate_power = 0.02
 		}
 		years = 2
@@ -480,6 +484,8 @@ antq_s2_roman_coinage_law = {
 			minting_income_factor = 0.025
 			stability_cost_efficiency = 0.02
 			global_pop_assimilation_speed_modifier = 0.01
+			goods_gold_used_for_minting = yes
+			silver_used_for_minting = yes
 			global_burghers_estate_power = 0.02
 		}
 		years = 2
@@ -1061,7 +1067,7 @@ antq_s2_han_household_law = {
 	antq_s2_han_household_mediated = {
 		country_modifier = {
 			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_monthly_control = -0.005
+			monthly_towards_decentralization = societal_value_minor_monthly_move
 			country_cabinet_efficiency = 0.02
 			global_nobles_estate_power = 0.02
 		}
@@ -1755,7 +1761,7 @@ antq_s2_iranian_household_law = {
 	antq_s2_iranian_household_mediated = {
 		country_modifier = {
 			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_monthly_control = -0.005
+			monthly_towards_decentralization = societal_value_minor_monthly_move
 			global_nobles_estate_power = 0.03
 			global_nobles_estate_power = 0.02
 		}
@@ -2412,7 +2418,7 @@ antq_s2_hellenistic_household_law = {
 	antq_s2_hellenistic_household_mediated = {
 		country_modifier = {
 			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_monthly_control = -0.005
+			monthly_towards_decentralization = societal_value_minor_monthly_move
 			global_burghers_estate_power = 0.03
 			global_burghers_estate_power = 0.02
 		}
@@ -3112,7 +3118,7 @@ antq_s2_indic_household_law = {
 	antq_s2_indic_household_mediated = {
 		country_modifier = {
 			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_monthly_control = -0.005
+			monthly_towards_decentralization = societal_value_minor_monthly_move
 			global_nobles_estate_power = 0.03
 			global_nobles_estate_power = 0.02
 		}
@@ -3189,6 +3195,7 @@ antq_s2_indic_commerce_law = {
 			global_production_efficiency = 0.034
 			global_burghers_estate_power = 0.052
 			global_pepper_output_modifier = 0.05
+			global_steel_output_modifier = 0.05
 			global_antq_coconut_products_output_modifier = 0.05
 		}
 		years = 2
@@ -3796,7 +3803,7 @@ antq_s2_steppe_household_law = {
 	antq_s2_steppe_household_mediated = {
 		country_modifier = {
 			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_monthly_control = -0.005
+			monthly_towards_decentralization = societal_value_minor_monthly_move
 			global_nobles_estate_power = 0.03
 			global_nobles_estate_power = 0.02
 		}
@@ -4488,7 +4495,7 @@ antq_s2_germanic_household_law = {
 	antq_s2_germanic_household_mediated = {
 		country_modifier = {
 			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_monthly_control = -0.005
+			monthly_towards_decentralization = societal_value_minor_monthly_move
 			global_tribes_estate_power = 0.03
 			global_tribes_estate_power = 0.02
 		}
@@ -5192,7 +5199,7 @@ antq_s2_celtic_household_law = {
 	antq_s2_celtic_household_mediated = {
 		country_modifier = {
 			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_monthly_control = -0.005
+			monthly_towards_decentralization = societal_value_minor_monthly_move
 			global_tribes_estate_power = 0.03
 			global_tribes_estate_power = 0.02
 		}
@@ -5885,7 +5892,7 @@ antq_s2_arabian_household_law = {
 	antq_s2_arabian_household_mediated = {
 		country_modifier = {
 			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_monthly_control = -0.005
+			monthly_towards_decentralization = societal_value_minor_monthly_move
 			global_burghers_estate_power = 0.03
 			global_burghers_estate_power = 0.02
 		}
@@ -6556,7 +6563,7 @@ antq_s2_northern_household_law = {
 	antq_s2_northern_household_mediated = {
 		country_modifier = {
 			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_monthly_control = -0.005
+			monthly_towards_decentralization = societal_value_minor_monthly_move
 			global_tribes_estate_power = 0.03
 			global_tribes_estate_power = 0.02
 		}
@@ -7238,7 +7245,7 @@ antq_s2_african_household_law = {
 	antq_s2_african_household_mediated = {
 		country_modifier = {
 			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_monthly_control = -0.005
+			monthly_towards_decentralization = societal_value_minor_monthly_move
 			global_burghers_estate_power = 0.03
 			global_burghers_estate_power = 0.02
 		}
@@ -7940,7 +7947,7 @@ antq_s2_eastern_household_law = {
 	antq_s2_eastern_household_mediated = {
 		country_modifier = {
 			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_monthly_control = -0.005
+			monthly_towards_decentralization = societal_value_minor_monthly_move
 			global_nobles_estate_power = 0.03
 			global_nobles_estate_power = 0.02
 		}
@@ -8621,7 +8628,7 @@ antq_s2_transoceanic_household_law = {
 	antq_s2_transoceanic_household_mediated = {
 		country_modifier = {
 			nobles_estate_target_satisfaction = tiny_permanent_target_satisfaction
-			global_monthly_control = -0.005
+			monthly_towards_decentralization = societal_value_minor_monthly_move
 			global_tribes_estate_power = 0.03
 			global_tribes_estate_power = 0.02
 		}

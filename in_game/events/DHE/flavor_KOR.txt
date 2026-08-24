@@ -8,16 +8,16 @@ flavor_kor.1 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
 	}
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:CHI
-		is_subject_of = c:CHI
-		c:CHI = { culture.language = language:mongolian_language }	#Making sure it is Yuán who is currently at the power
+		country_exists = c:DUMMY
+		is_subject_of = c:DUMMY
+		c:DUMMY = { culture.language = language:mongolian_language }	#Making sure it is Yuán who is currently at the power
 	}
 	
 	illustration_tags = {
@@ -75,7 +75,7 @@ flavor_kor.1 = {
 			set_variable = { name = kor_is_influenced_by_mongols value = -2 }
 			add_opinion_mutual_effect = {
 				modifier = kor_hostile_attitude
-				target = c:CHI
+				target = c:DUMMY
 			}
 		}
 		custom_tooltip = flavor_kor.1.a.tt
@@ -89,7 +89,7 @@ flavor_kor.1 = {
 			set_variable = { name = kor_is_influenced_by_mongols value = 0 }
 			add_opinion_mutual_effect = {
 				modifier = kor_friendly_attitude
-				target = c:CHI
+				target = c:DUMMY
 			}
 		}
 		custom_tooltip = flavor_kor.1.b.tt
@@ -273,10 +273,10 @@ flavor_kor.2 = {
 		}
 		if = {
 			limit = {
-				country_exists = c:CHI
-				c:CHI = { culture = culture:mongolian_culture }
+				country_exists = c:DUMMY
+				c:DUMMY = { culture = culture:mongolian_culture }
 			}
-			c:CHI = { save_scope_as = target_country }
+			c:DUMMY = { save_scope_as = target_country }
 		}
 		kor_get_mongol_aristocrat_count = yes
 		random_list = {
@@ -346,7 +346,7 @@ flavor_kor.3 = {
 					min_mil = 0
 				}
 			}
-			c:CHI = { save_scope_as = target_country }
+			c:DUMMY = { save_scope_as = target_country }
 		}
 	}
 	option = {
@@ -373,7 +373,7 @@ flavor_kor.4 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100	#Should always happen
@@ -408,8 +408,8 @@ flavor_kor.4 = {
 		add_prestige = prestige_extreme_bonus
 		add_government_power = government_power_extreme_bonus
 		add_stability = stability_extreme_bonus
-		remove_opinion_mutual_effect = { target = c:CHI modifier = kor_hostile_attitude }
-		remove_opinion_mutual_effect = { target = c:CHI modifier = kor_friendly_attitude }
+		remove_opinion_mutual_effect = { target = c:DUMMY modifier = kor_hostile_attitude }
+		remove_opinion_mutual_effect = { target = c:DUMMY modifier = kor_friendly_attitude }
 	}
 }
 
@@ -421,7 +421,7 @@ flavor_kor.5 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -441,7 +441,7 @@ flavor_kor.5 = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		remove_variable = kor_is_influenced_by_mongols
 		if = { limit = { has_variable = kor_mongol_aristocrats } remove_variable = kor_mongol_aristocrats }
-		c:CHI = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 	}
 	after = {
 		kor_mongol_clean_up_variables = yes
@@ -477,15 +477,15 @@ flavor_kor.6 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
 	}
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:CHI
-		c:CHI = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			culture = culture:mongolian_culture
 			OR = {
 				regent ?= { this = character:yua_gi }
@@ -499,7 +499,7 @@ flavor_kor.6 = {
     }
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:CHI = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 		character:yua_gi = { save_scope_as = target_character }
 		save_scope_as = from_country
 	}
@@ -520,7 +520,7 @@ flavor_kor.6 = {
 #The Korean homeland
 scripted_effect kor_setup_potential_gifts = {
 	set_variable = { name = kor_chi_gold_gift value = -3 }
-	change_variable = { name = kor_chi_gold_gift multiply = c:KOR.monthly_income_trade_and_tax }
+	change_variable = { name = kor_chi_gold_gift multiply = c:DUMMY.monthly_income_trade_and_tax }
 	set_variable = { name = kor_chi_prestige_gift value = -20 }
 	set_variable = { name = kor_chi_diplomats_gift value = -5 }
 }
@@ -656,7 +656,7 @@ flavor_kor.10 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -664,8 +664,8 @@ flavor_kor.10 = {
 	trigger = {
 		current_date > 476.9.4
 		NOT = { own_entire_province = province_definition:hwaju_province }
-		country_exists = c:SSG
-		c:SSG = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			owns = location:hwaju
 			OR = {
 				at_war = no
@@ -673,7 +673,7 @@ flavor_kor.10 = {
 					any_war_participant = {
 						OR = {
 							NOT = { this = ROOT }
-							is_at_war_with = c:SSG
+							is_at_war_with = c:DUMMY
 						}
 						count = all
 					}
@@ -687,7 +687,7 @@ flavor_kor.10 = {
     }
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:SSG = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 	}
 	option = {
 		name = flavor_kor.10.a
@@ -726,7 +726,7 @@ flavor_kor.11 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -741,7 +741,7 @@ flavor_kor.11 = {
 	trigger = {
 		current_date > 476.9.4
 		own_entire_province = province_definition:hwaju_province
-		NOT = { country_exists = c:SSG }
+		NOT = { country_exists = c:DUMMY }
 	}
 	option = {
 		name = flavor_kor.11.a
@@ -778,7 +778,7 @@ flavor_kor.12 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -862,7 +862,7 @@ flavor_kor.12 = {
 	}
 	option = {
 		name = flavor_kor.12.b
-		c:CHI ?= { add_opinion = { target = root modifier = turned_away_inventor } }
+		c:DUMMY ?= { add_opinion = { target = root modifier = turned_away_inventor } }
 		scope:choe_scope = {
 			banish_character = yes
 		}
@@ -877,7 +877,7 @@ flavor_kor.13 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -916,7 +916,7 @@ flavor_kor.14 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -970,7 +970,7 @@ flavor_kor.15 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -1093,7 +1093,7 @@ flavor_kor.16 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1134,7 +1134,7 @@ flavor_kor.17 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1260,7 +1260,7 @@ flavor_kor.19 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1268,7 +1268,7 @@ flavor_kor.19 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:CHI
+		country_exists = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -1278,7 +1278,7 @@ flavor_kor.19 = {
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:burghers   background = pop_type:burghers }
-		c:CHI = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		create_character = {
@@ -1495,7 +1495,7 @@ flavor_kor.21 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1542,7 +1542,7 @@ flavor_kor.22 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4 # Coup of https://en.wikipedia.org/wiki/Sejo_of_Joseon
 		to = 476.9.4
 		monthly_chance = 25
@@ -1566,7 +1566,7 @@ flavor_kor.23 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1732,7 +1732,7 @@ flavor_kor.25 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1800,7 +1800,7 @@ flavor_kor.26 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1862,7 +1862,7 @@ flavor_kor.27 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1898,7 +1898,7 @@ flavor_kor.27 = {
 
 		trigger = {
 			opinion = {
-				target = c:CHI
+				target = c:DUMMY
 				value >= 0
 			}
 		}
@@ -1938,7 +1938,7 @@ flavor_kor.28 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1997,7 +1997,7 @@ flavor_kor.29 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2083,7 +2083,7 @@ flavor_kor.30 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2149,7 +2149,7 @@ flavor_kor.31 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2286,7 +2286,7 @@ flavor_kor.32 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2309,7 +2309,7 @@ flavor_kor.33 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2378,7 +2378,7 @@ flavor_kor.34 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2500,7 +2500,7 @@ flavor_kor.35 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2577,7 +2577,7 @@ flavor_kor.36 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2646,7 +2646,7 @@ flavor_kor.37 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2727,7 +2727,7 @@ flavor_kor.38 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2845,7 +2845,7 @@ flavor_kor.39 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2898,7 +2898,7 @@ flavor_kor.40 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2966,7 +2966,7 @@ flavor_kor.41 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -3052,7 +3052,7 @@ flavor_kor.100 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3122,7 +3122,7 @@ flavor_kor.101 = {
 		}
 	}
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3196,7 +3196,7 @@ flavor_kor.102 = {
 		}
 	}
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3250,7 +3250,7 @@ flavor_kor.103 = {
 		}
 	}
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3297,7 +3297,7 @@ flavor_kor.104 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -3352,7 +3352,7 @@ flavor_kor.200 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3414,7 +3414,7 @@ flavor_kor.201 = { #The Goryeosa
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10

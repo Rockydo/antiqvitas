@@ -20,7 +20,7 @@ force_convert = {
 				value = 10
 			}
 			if = {
-				limit = { scope:loser = c:BOH }
+				limit = { scope:loser = c:DUMMY }
 				add = {
 					desc = "[loser.GetAdjective] [ShowReligionName('hussite')] [population|e]"
 					value = {

@@ -772,216 +772,36 @@ sold_core_territory = {
 	monthly_rebel_growth = 0.005 # Scaled by code by number of cores sold
 }
 
-societal_value_push_centralization = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_centralization = societal_value_huge_monthly_move
-}
-societal_value_push_decentralization = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_decentralization = societal_value_huge_monthly_move
-}
-societal_value_push_traditionalist = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_traditionalist = societal_value_huge_monthly_move
-}
-societal_value_push_innovative = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_innovative = societal_value_huge_monthly_move
-}
-societal_value_push_spiritualist = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_spiritualist = societal_value_huge_monthly_move
-}
-societal_value_push_humanist = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_humanist = societal_value_huge_monthly_move
-}
-societal_value_push_aristocracy = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_aristocracy = societal_value_huge_monthly_move
-}
-societal_value_push_plutocracy = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_plutocracy = societal_value_huge_monthly_move
-}
-societal_value_push_serfdom = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_serfdom = societal_value_huge_monthly_move
-}
-societal_value_push_free_subjects = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_free_subjects = societal_value_huge_monthly_move
-}
-societal_value_push_mercantilism = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_mercantilism = societal_value_huge_monthly_move
-}
-societal_value_push_free_trade = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_free_trade = societal_value_huge_monthly_move
-}
-societal_value_push_belligerent = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_belligerent = societal_value_huge_monthly_move
-}
-societal_value_push_conciliatory = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_conciliatory = societal_value_huge_monthly_move
-}
-societal_value_push_quality = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_quality = societal_value_huge_monthly_move
-}
-societal_value_push_quantity = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_quantity = societal_value_huge_monthly_move
-}
-societal_value_push_offensive = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_offensive = societal_value_huge_monthly_move
-}
-societal_value_push_defensive = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_defensive = societal_value_huge_monthly_move
-}
-societal_value_push_land = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_land = societal_value_huge_monthly_move
-}
-societal_value_push_naval = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_naval = societal_value_huge_monthly_move
-}
-societal_value_push_capital_economy = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_capital_economy = societal_value_huge_monthly_move
-}
-societal_value_push_traditional_economy = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_traditional_economy = societal_value_huge_monthly_move
-}
-societal_value_push_individualism = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_individualism = societal_value_huge_monthly_move
-}
-societal_value_push_communalism = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_communalism = societal_value_huge_monthly_move
-}
-societal_value_push_outward = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_outward = societal_value_huge_monthly_move
-}
-societal_value_push_inward = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_inward = societal_value_huge_monthly_move
-}
-societal_value_push_sinicized = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_sinicized = societal_value_huge_monthly_move
-}
-societal_value_push_unsinicized = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_unsinicized = societal_value_huge_monthly_move
-}
-societal_value_push_absolutism = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_absolutism = societal_value_huge_monthly_move
-}
-societal_value_push_liberalism = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	monthly_towards_liberalism = societal_value_huge_monthly_move
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ###################################
 # Scripted Diplomacy
@@ -1228,11 +1048,7 @@ parliament_approved_extra_levies = {
 	global_levy_size_modifier = 0.25
 }
 
-parliament_approved_militarization = {
-	game_data = { category = country decaying = yes }
 
-	global_manpower_modifier = 0.2
-}
 
 parliament_approved_law_changes = {
 	game_data = {
@@ -1248,13 +1064,7 @@ recently_negotiated_succession_law = {
 	blocked_from_changing_heir_selection = yes
 }
 
-parliament_declared_holidays = {
-	game_data = {
-		category = country
-	}
-	pop_leave_rebels_threshold = -0.05
-	pop_join_rebel_threshold = -0.05
-}
+
 
 # Estate emergency interactions — extraordinary taxes (per-estate type)
 estate_emergency_taxes_nobles = {
@@ -4354,12 +4164,7 @@ significant_christian_presence = {
 	global_monthly_literacy = 0.01
 }
 
-sengoku_incrementing_recruitment = {
-	game_data = {
-		category = country
-	}
-	global_manpower_modifier = 0.2
-}
+
 
 major_discovery = {
 	game_data = {
@@ -6244,122 +6049,31 @@ bohemian_aggression_modifier = {
 	global_integration_speed_modifier = 0.25
 }
 
-orthodox_clerical_proceedings_modifier = {	
-	game_data = {
-		category = country	
-	}
-	
-	tolerance_own = 1 
-	clergy_estate_target_satisfaction = medium_permanent_target_satisfaction
-}
 
-orthodox_clerical_taxation_modifier = { 
-	game_data = {
-		category = country
-	}
 
-	clergy_estate_max_tax = 0.1
-	tax_income_efficiency = medium_tax_income_efficiency_bonus
-}
 
-orthodox_conversion_efforts_modifier = { 
-	game_data = {
-		category = country
-	}
 
-	global_pop_conversion_speed_modifier = 0.2
-	cultural_influence_modifier = 0.2
-}
 
-orthodox_spiritual_literature_and_understanding_modifier = {
-	game_data = {
-		category = country
-	}
 
-	tolerance_heretic = 1
-	tolerance_heathen = 1
-}
 
-orthodox_cabinet_examinations_modifier = { 
-	game_data = {
-		category = country
-	}
 
-	monthly_towards_centralization = societal_value_large_monthly_move
-	change_policy_cost_modifier = -0.2
-	set_cabinet_member_cost_modifier = -0.25
-}
 
-orthodox_cabinet_eff_modifier = { 
-	game_data = {
-		category = country
-	}
 
-	country_cabinet_efficiency = 0.05
-	set_cabinet_member_cost_modifier = -0.25
-	replace_cabinet_member_cost_modifier = -0.5
-}
 
-orthodox_protect_the_faith_modifier = { 
-	game_data = {
-		category = country
-	}
 
-	war_score_vs_other_religion_efficiency = -0.1
-	global_integration_speed_modifier = 0.1
-}
 
-patriarch_increase_baptism_modifier = { 
-	game_data = {
-		category = country
-	}
 
-	global_pop_conversion_speed_modifier = 0.25
-	monthly_religious_influence = 0.05
-}
 
-patriarch_sponsors_monasteries_modifier = { 
-	game_data = {
-		category = country
-	}
 
-	orthodox_monastery_building_cost_modifier = -0.5
-}
 
-patriarch_improved_relations_modifier = { 
-	game_data = {
-		category = country
-	}
 
-	diplomatic_reputation = diplomatic_reputation_mild_bonus
-	improve_relation_impact = 0.2
-}
 
-patriarch_rally_population_modifier = { 
-	game_data = {
-		category = country
-	}
 
-	global_manpower_modifier = 0.10
-}
 
-patriarch_peace_modifier = { 
-	game_data = {
-		category = country
-	}
 
-	monthly_war_exhaustion = -0.05
-	stability_investment = standard_stability_investment
-}
 
-pious_prosperity_modifier = { 
-	game_data = {
-		category = country
-	}
 
-	global_monthly_prosperity = 0.001
-	global_monthly_control = 0.0025
-}
+
 
 cornish_rebellion = { 
 	game_data = {
@@ -7408,19 +7122,9 @@ chi_factional_strife = {
 	mercenary_maintenance_efficiency = -0.75
 }
 
-chi_administration_in_disarray = {
-	game_data = {
-		category = country
-	}
-	blocked_from_creating_subjects = yes
-}
 
-chi_yuan_religious_stability = {
-	game_data = {
-		category = country
-	}
-	monthly_religious_rebel_growth = -0.15
-}
+
+
 
 
 vij_astadiggajas_modifier = {
@@ -7724,33 +7428,11 @@ dlh_iqta_holder_appeasement = {
 	global_nobles_estate_power = 0.25
 }
 
-delhi_embassies_modifier = {
-	game_data = {
-		category = country 
-	}
 
-	diplomatic_reputation = 3
-	monthly_diplomats = 0.25
-}
 
-delhi_loyal_governors_modifier = {
-	game_data = {
-		category = country 
-	}
 
-	monthly_rebel_growth = -0.001
-	global_monthly_control = 0.01
-	global_distance_from_capital_speed_propagation = 0.2
-}
 
-delhi_reaffirm_vassal_relations_modifier = {
-	game_data = {
-		category = country 
-	}
 
-	subject_pays_vassal_cost_modifier = 0.2
-	subject_loyalty = 25
-}
 
 delhi_appeased_the_nobles_modifier = {
 	game_data = {
@@ -8415,13 +8097,7 @@ rtr_red_turban_rebellions = {
 	global_mercenaries_modifier = -0.75
 }
 
-rtr_appeased_the_court = {
-	game_data = {
-		category = country 
-	}
-	global_estate_max_tax = -0.25
-	global_estate_target_satisfaction = large_permanent_target_satisfaction
-}
+
 
 peranakan_trading_rights_restriction = {
 	game_data = {
@@ -8632,14 +8308,7 @@ cuspinian_diplomacy = {
 	monthly_diplomats = 0.1
 }
 
-sovereign_of_anatolia = {
-	game_data = {
-		category = country 
-	}
 
-	global_integration_speed_modifier = 0.1
-	monthly_legitimacy = 0.1
-}
 
 rebellious_subjects_modifier = {
 	game_data = {
@@ -8835,15 +8504,7 @@ restoration_of_the_mongol_empire = {
 	army_reinforce_efficiency = 0.66
 }
 
-reformation_of_the_horde = {
-	game_data = {
-		category = country
-	}
-	monthly_horde_unity = -0.05
-	land_morale_recovery = -0.01
-	army_reinforce_efficiency = -0.25
-	subject_loyalty = -20
-}
+
 
 ser_novo_brdo_code = {
 	game_data = {
@@ -9456,52 +9117,17 @@ ottoman_artillery_reform =  {
 	army_artillery_power = 0.1
 }
 
-noble_concessions_modifier = {
-	game_data = {
-		category = country
-	}
-	nobles_estate_max_tax = -0.2
-}
 
-clergy_concessions_modifier = {
-	game_data = {
-		category = country
-	}
-	clergy_estate_max_tax = -0.2
-}
 
-burghers_concessions_modifier = {
-	game_data = {
-		category = country
-	}
-	burghers_estate_max_tax = -0.2
-}
 
-peasants_concessions_modifier = {
-	game_data = {
-		category = country
-	}
 
-	peasants_estate_max_tax = -0.2
-}
 
-dhimmi_concessions_modifier = {
-	game_data = {
-		category = country 
-	}
 
-	dhimmi_estate_max_tax = -0.2
-}
 
-religious_concessions_modifier = {
-	game_data = {
-		category = country
-	}
 
-	tolerance_own = -2
-	clergy_estate_target_satisfaction = large_permanent_target_satisfaction_penalty
-	global_clergy_estate_power = -0.5
-}
+
+
+
 
 chi_disaster_reform_taxation_modifier = {
 	game_data = {
@@ -9555,88 +9181,19 @@ supreme_authority_modifier = {
 	global_estate_target_satisfaction = medium_permanent_target_satisfaction_penalty
 }
 
-no_nobles_parliament_modifier = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
 
 
-	nobles_estate_blocked_from_parliament = yes
-	parliament_base_support = 0.15
-	monthly_towards_absolutism = societal_value_minor_monthly_move
-}
-
-curbed_noble_power_modifier = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
 
 
-	global_nobles_estate_power = -0.25
-	nobles_estate_target_satisfaction = small_permanent_target_satisfaction_penalty
-	monthly_towards_absolutism = societal_value_minor_monthly_move
-}
-
-curbed_burghers_power_modifier = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
 
 
-	global_burghers_estate_power = -0.2
-	burghers_estate_target_satisfaction = small_permanent_target_satisfaction_penalty
-	monthly_towards_absolutism = societal_value_minor_monthly_move
-}
-
-no_burghers_parliament_modifier = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
 
 
-	burghers_estate_blocked_from_parliament = yes
-	parliament_base_support = 0.15
-	monthly_towards_absolutism = societal_value_minor_monthly_move
-}
-
-curbed_clergy_power_modifier = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
 
 
-	global_clergy_estate_power = -0.2
-	clergy_estate_target_satisfaction = small_permanent_target_satisfaction_penalty
-	monthly_towards_absolutism = societal_value_minor_monthly_move
-}
-
-no_clergy_parliament_modifier = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
 
 
-	clergy_estate_blocked_from_parliament = yes
-	parliament_base_support = 0.15
-	monthly_towards_absolutism = societal_value_minor_monthly_move
-}
 
-curbed_peasants_power_modifier = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-
-	global_peasants_estate_power = -0.2
-	peasants_estate_target_satisfaction = small_permanent_target_satisfaction_penalty
-	monthly_towards_absolutism = societal_value_minor_monthly_move
-}
 
 reinstated_the_parliament_modifier = {
 	game_data = {
@@ -9912,15 +9469,7 @@ pi_hre_increased_imperial_tax_modifier = {
 }
 
 #
-prepare_for_katun = {
-	game_data = {
-		category = country
-	}
-	global_estate_max_tax = -0.1
-	monthly_prestige = 0.05
-	monthly_religious_influence = 0.03
-	tolerance_own = 0.25
-}
+
 
 katun_celebration = {
 	game_data = {
@@ -10095,28 +9644,9 @@ cas_spanish_dollar_not_adopted = {
 	minting_income_factor = 0.05
 }
 
-promoted_moderates_modifier = {
-	game_data = {
-		category = country
-	}
 
-	diplomatic_reputation = diplomatic_reputation_mild_bonus
-	tolerance_heretic = 3
-	tolerance_own = -1
-	clergy_estate_target_satisfaction = medium_permanent_target_satisfaction_penalty
-	monthly_towards_conciliatory = societal_value_huge_monthly_move
-}
 
-promoted_radicals_modifier = {
-	game_data = {
-		category = country
-	}
 
-	diplomatic_reputation = diplomatic_reputation_extreme_penalty
-	damage_done_versus_heretics_modifier = 0.1
-	global_pop_conversion_speed_modifier = 0.05
-	monthly_towards_belligerent = societal_value_huge_monthly_move
-}
 
 in_defense_of_hussitism_modifier = {
 	game_data = {
@@ -10264,63 +9794,17 @@ usa_postal_roads_expansion = {
 	build_modern_road_cost_modifier = -0.1
 }
 
-diplomatic_betrayal_modifier = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
 
-	french_subject_prevented_from_call_to_war = yes
-	loyalty_to_overlord = -25
-}
 
-strong_diplomacy_modifier = {
-	game_data = {
-		category = country
-	}
-	loyalty_to_overlord = 15
-}
 
-aggressive_planning = {
-	game_data = {
-		category = country
-	}
-	aggressiveness_modifier = 0.1
-}
 
-reduced_payment_obligations = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
 
-	payment_to_overlord_modifier = -0.5
-}
 
-invest_in_members_economy_modifier = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	global_build_buildings_efficiency = 1.0
-	global_rgo_build_time = -0.5
-}
-invest_in_members_administration_modifier = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	stability_investment = large_stability_investment
-	global_integration_speed_modifier = 0.20
-}
-invest_in_members_military_modifier = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	army_maintenance_efficiency = 0.5
-	navy_maintenance_efficiency = 0.5
-}
+
+
+
+
+
 
 courting_dervishes_modifier = {
 	game_data = {
@@ -10344,13 +9828,7 @@ influx_of_anatolian_scholars_modifier = {
 	research_speed_modifier = 0.05
 }
 
-reshaped_bureaucracy = {
-	game_data = {
-		category = country
-	}
-	government_size = 1
-	country_cabinet_efficiency = 0.15
-}
+
 
 strengthened_ministry_of_rites = { #If changed, change too the modifier in the policy in six_ministries law
 	game_data = {
@@ -10360,13 +9838,7 @@ strengthened_ministry_of_rites = { #If changed, change too the modifier in the p
 	global_pop_conversion_speed_modifier = 0.1
 }
 
-strengthened_ministry_of_personnel = { #If changed, change too the modifier in the policy in six_ministries law
-	game_data = {
-		category = country
-	}
-	government_size = 1
-	country_cabinet_efficiency = 0.2
-}
+
 
 strengthened_ministry_of_revenue = { #If changed, change too the modifier in the policy in six_ministries law
 	game_data = {
@@ -10406,52 +9878,17 @@ strengthened_ministry_of_works = { #If changed, change too the modifier in the p
 	global_build_buildings_efficiency = 0.2
 }
 
-expanded_palace_bureaucracy = { #If changed, change too the modifier in the policy in middle_kingdom_decrees law
-	game_data = {
-		category = country
-	}
-	country_cabinet_efficiency = 0.15
-}
 
-conducted_population_census = { #If changed, change too the modifier in the policy in middle_kingdom_decrees law
-	game_data = {
-		category = country
-	}
-	tax_income_efficiency = large_tax_income_efficiency_bonus
-	global_monthly_control = 0.001
-}
 
-increased_tariff_control = { #If changed, change too the modifier in the policy in middle_kingdom_decrees law
-	game_data = {
-		category = country
-	}
-	selling_efficiency = small_trade_efficiency_bonus
-}
 
-issued_great_warnings = { #If changed, change too the modifier in the policy in middle_kingdom_decrees law
-	game_data = {
-		category = country
-	}
-	revoke_privilege_cost_modifier = -0.1
-	global_estate_target_satisfaction = medium_permanent_target_satisfaction
-}
 
-commenced_infrastructure_works = { #If changed, change too the modifier in the policy in middle_kingdom_decrees law
-	game_data = {
-		category = country
-	}
-	global_road_building_time = -0.05
-	build_gravel_road_cost_modifier = -0.15
-	build_paved_road_cost_modifier = -0.15
-	build_modern_road_cost_modifier = -0.15
-}
 
-reinforced_fortifications = { #If changed, change too the modifier in the policy in middle_kingdom_decrees law
-	game_data = {
-		category = country
-	}
-	global_fort_build_buildings_efficiency = 0.2
-}
+
+
+
+
+
+
 
 divergence_in_traditional_norms_modifier = {
 	game_data = {
@@ -10475,32 +9912,11 @@ open_trade_markets_modifier = {
 	trade_sea_efficiency = medium_trade_sea_efficiency_bonus
 }
 
-wave_of_spiritualism_modifier = {
-	game_data = {
-		category = country 
-		decaying = yes
-	}
 
-	monthly_towards_spiritualist = societal_value_significant_monthly_move
-}
 
-wave_of_humanism_modifier = {
-	game_data = {
-		category = country 
-		decaying = yes
-	}
 
-	monthly_towards_humanist = societal_value_significant_monthly_move
-}
 
-conversion_efforts_modifier = {
-	game_data = {
-		category = country 
-		decaying = yes
-	}
 
-	global_pop_conversion_speed_modifier = 0.2
-}
 
 great_pirate_state_modifier = {
 	game_data = {
@@ -11211,25 +10627,9 @@ matters_of_the_crown_modifier = {
 	global_crown_estate_power = 0.15
 }
 
-fervor_of_the_faithful_modifier = {
-	game_data = {
-		category = country
-	}
 
-	global_manpower_modifier = 0.15
-	damage_done_versus_heathens_modifier = 0.05
-	monthly_towards_belligerent = societal_value_monthly_move
-}
 
-studying_jurisprudence_modifier = {
-	game_data = {
-		category = country
-	}
 
-	tolerance_own = 1
-	stability_investment = large_stability_investment
-	monthly_towards_traditionalist = societal_value_monthly_move
-}
 
 buildings_sabotaged = {
 	game_data = {
@@ -11621,14 +11021,7 @@ mended_schism = {
 	global_heretic_pop_conversion_speed_modifier = 0.10
 }
 
-bureaucratic_spending_reform_modifier = {
-	game_data = {
-		category = country
-		decaying = yes
-	}
-	global_bureaucracy_maintenance_efficiency = 0.2
-	global_bureaucracy_removal_efficiency = 0.1
-}
+
 
 
 # Frankokratia
@@ -12224,14 +11617,7 @@ italian_culture_translation_works_of_guarino = {
 	monthly_towards_humanist = societal_value_monthly_move
 }
 
-affirmation_of_biljno_polje = {
-	game_data = { 
-		category = country 
-	}
-	
-	antagonism_religion_influence = -0.1
-	monthly_diplomats = 0.1	
-}
+
 
 promoted_hesychastic_influences_modifier = {
 	game_data = {
@@ -12785,12 +12171,7 @@ rebel_country_estate = {
 	global_garrison_size_modifier = -0.7
 }
 
-bul_diplomatic_reintegration = {
-	game_data = { category = country }
 
-	annexation_speed_modifier = 0.2
-	monthly_towards_centralization = societal_value_monthly_move
-}
 
 bul_mutineers_in_the_army = {
 	game_data = { category = country }
@@ -12834,21 +12215,11 @@ received_imperial_circle_grant = {
 	monthly_prestige = monthly_prestige_weak_bonus
 }
 
-distributed_imperial_circle_grant = {
-	game_data = { category = country }
-	diplomatic_reputation = diplomatic_reputation_weak_bonus
-}
 
-pressured_circle_loyalty = {
-	game_data = { category = country }
-	monthly_prestige = monthly_prestige_weak_penalty
-}
 
-imposed_circle_authority = {
-	game_data = { category = country }
-	monthly_prestige = monthly_prestige_mild_bonus
-	diplomatic_reputation = 1
-}
+
+
+
 
 granted_circle_privilege = {
 	game_data = { category = country }
@@ -12882,23 +12253,11 @@ granted_new_circle_titles = {
 	court_spending_efficiency = 0.1
 }
 
-reformed_circle_coinage_leader = {
-	game_data = { category = country }
-	minting_income_factor = -0.2
-	monthly_inflation = -0.0025
-}
 
-reformed_circle_coinage_member = {
-	game_data = { category = country }
-	monthly_inflation = -0.0025
-	bank_interest = -0.01
-}
 
-reduction_of_circle_titles = {
-	game_data = { category = country }
-	court_spending_efficiency = 0.2
-	legislative_efficiency = 0.2
-}
+
+
+
 
 #
 

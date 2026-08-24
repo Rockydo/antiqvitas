@@ -16,7 +16,7 @@ flavor_bos.1 = { #Aspiration for Independence
 	historical_info = flavor_bos.1.historical_info
 
 	dynamic_historical_event = {
-		tag = BOS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -25,12 +25,12 @@ flavor_bos.1 = { #Aspiration for Independence
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:HUN
-		is_subject_of = c:HUN
+		country_exists = c:DUMMY
+		is_subject_of = c:DUMMY
 		character:hun_karoly_robert ?= {
 			is_alive = no
 		}
-		c:HUN ?= {
+		c:DUMMY ?= {
 			has_ruler = yes
 		}
 	}
@@ -59,8 +59,8 @@ flavor_bos.1 = { #Aspiration for Independence
 		every_country = {
 			limit = {
 				OR = {
-					is_rival_of = c:HUN
-					is_enemy_of = c:HUN
+					is_rival_of = c:DUMMY
+					is_enemy_of = c:DUMMY
 				}
 			}
 			add_opinion = { target = root modifier = opinion_bos_aspirations_of_liberty }
@@ -90,7 +90,7 @@ flavor_bos.2 = { #The Decline of Serbia
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -101,20 +101,20 @@ flavor_bos.2 = { #The Decline of Serbia
 		has_ruler = yes
 		is_independent_or_autonomous_subject = yes
 		any_neighbor_country = {
-			country_economical_base < c:BOS.country_economical_base
+			country_economical_base < c:DUMMY.country_economical_base
 			NOT = { is_allied_with = { target = root } }
 			culture = culture:serbian
 		}
 		OR = {
 			AND = {
-				country_exists = c:SER
-				country_economical_base > c:SER.country_economical_base
-				c:SER ?= {
+				country_exists = c:DUMMY
+				country_economical_base > c:DUMMY.country_economical_base
+				c:DUMMY ?= {
 					num_locations < 30
 				}
 			}
 			NOT = {
-				country_exists = c:SER
+				country_exists = c:DUMMY
 			}
 		}
 		character:ser_stefan_dusan ?= {
@@ -138,7 +138,7 @@ flavor_bos.2 = { #The Decline of Serbia
 		change_societal_value = { type = belligerent_vs_conciliatory value = societal_value_move_to_left }
 		every_neighbor_country = {
 			limit = {
-				country_economical_base < c:BOS.country_economical_base
+				country_economical_base < c:DUMMY.country_economical_base
 				NOT = { is_allied_with = { target = root } }
 				culture = culture:serbian
 			}
@@ -183,7 +183,7 @@ flavor_bos.3 = { #The First King of Bosnia
 	}
 
 	dynamic_historical_event = {
-		tag = BOS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -249,57 +249,6 @@ flavor_bos.3 = { #The First King of Bosnia
 	}
 }
 
-flavor_bos.4 = { #Council of Strojnici
-	title = flavor_bos.4.title
-	desc = flavor_bos.4.desc
-	outcome = neutral
-
-	illustration_tags = {
-		10 = regular
-		10 = interior
-	}
-
-	immediate = {
-		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		random_owned_location = {
-			limit = { 
-				has_building = building_type:monastery
-			}
-			save_scope_as = target_location
-		}
-	}
-	
-	option = {
-		name = flavor_bos.4.a
-		add_stability = stability_mild_bonus
-	}
-	
-	option = {
-		name = flavor_bos.4.b
-		change_societal_value = { type = spiritualist_vs_humanist value = societal_value_move_to_left }
-	}
-	
-	option = {
-		name = flavor_bos.4.c
-		add_estate_satisfaction = { 
-			type = estate_type:clergy_estate 
-			value = estate_satisfaction_mild_bonus
-		}
-	}
-	
-	option = {
-		name = flavor_bos.4.d
-		trigger = {
-			exists = scope:target_location
-		}
-		scope:target_location = {
-			change_development = development_mild_bonus
-		}
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 flavor_bos.5 = { #Fate of the Bosnian Church
 	title = flavor_bos.5.title
@@ -309,7 +258,7 @@ flavor_bos.5 = { #Fate of the Bosnian Church
 	historical_info = flavor_bos.5.historical_info
 	
 	dynamic_historical_event = {
-		tag = BOS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -317,8 +266,8 @@ flavor_bos.5 = { #Fate of the Bosnian Church
 	
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:BYZ
-		c:BYZ = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			religion = religion:orthodox
 			owns = location:constantinople
 		}
@@ -441,7 +390,7 @@ flavor_bos.5 = { #Fate of the Bosnian Church
 		name = flavor_bos.5.c
 		change_religion = religion:orthodox
 		change_religion_for_ruler_and_family = { country = ROOT religion = religion:orthodox }
-		c:BYZ = {
+		c:DUMMY = {
 			add_opinion = {
 				modifier = opinion_bos_became_orthodox
 				target = root

@@ -101,8 +101,8 @@ papal_conclave_events.2 = { #Influencing the Vote
 			add_prestige = prestige_mild_bonus
 			add_stability = stability_mild_bonus
 			scope:target_country = {
-				add_opinion = { target = c:PAP modifier = accepted_diplomatic_offer }
-				reverse_add_opinion = { target = c:PAP modifier = accepted_diplomatic_offer }
+				add_opinion = { target = c:DUMMY modifier = accepted_diplomatic_offer }
+				reverse_add_opinion = { target = c:DUMMY modifier = accepted_diplomatic_offer }
 			}
 		}
 	}
@@ -124,21 +124,21 @@ papal_conclave_events.3 = { #A Proposal from the Conclave
 
 	option = { #Accept the proposal
 		name = papal_conclave_events.3.a
-		add_gold = { value = c:PAP.monthly_income_trade_and_tax multiply = 2 }
-		add_opinion = { target = c:PAP modifier = accepted_diplomatic_offer }
-		reverse_add_opinion = { target = c:PAP modifier = accepted_diplomatic_offer }
+		add_gold = { value = c:DUMMY.monthly_income_trade_and_tax multiply = 2 }
+		add_opinion = { target = c:DUMMY modifier = accepted_diplomatic_offer }
+		reverse_add_opinion = { target = c:DUMMY modifier = accepted_diplomatic_offer }
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_extreme_penalty }
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_silently = { id = papal_conclave_events.4 }
 		}
 	}
 
 	option = { #We will not interfere in the Holy See
 		name = papal_conclave_events.3.b
-		reverse_add_opinion = { target = c:PAP modifier = refused_diplomatic_offer }
+		reverse_add_opinion = { target = c:DUMMY modifier = refused_diplomatic_offer }
 		add_religious_influence = religious_influence_extreme_penalty
 		add_prestige = prestige_mild_bonus
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_silently = { id = papal_conclave_events.5 }
 		}
 

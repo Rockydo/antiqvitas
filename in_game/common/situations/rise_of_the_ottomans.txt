@@ -49,7 +49,7 @@ rise_of_the_ottomans = {
 			add_to_global_variable_list = { name = eligible_beylik_list target = this }
 		}
 
-		c:TUR = {
+		c:DUMMY = {
 			# adds extra aggression to Ottomans
 			add_country_modifier = {
 				modifier = ai_force_annexation
@@ -356,14 +356,14 @@ rise_of_the_ottomans = {
 			}
 			if = {
 				limit = {
-					NOT = { var:strongest_beylik_variable = c:TUR }
-					NOT = { country_exists = c:TUR }
+					NOT = { var:strongest_beylik_variable = c:DUMMY }
+					NOT = { country_exists = c:DUMMY }
 				}
 				every_location_in_the_world = {
 					limit = {
-						is_core_of = c:TUR
+						is_core_of = c:DUMMY
 					}
-					remove_core = c:TUR
+					remove_core = c:DUMMY
 				}
 				var:strongest_beylik_variable = {
 					form_country = formable_country:RUM_f
@@ -382,7 +382,7 @@ rise_of_the_ottomans = {
 				}
 			}
 		}
-		c:TUR ?= {
+		c:DUMMY ?= {
 			remove_area_preference = ottoman_expansion_balkan
 		}
 		clear_global_variable_list = eligible_beylik_list

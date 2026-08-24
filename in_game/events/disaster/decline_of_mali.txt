@@ -499,7 +499,7 @@ decline_of_mali.8 = {
 	outcome = neutral
 	image = "gfx/interface/illustrations/disaster/decline_of_mali_disaster.dds"
 	immediate = {
-		c:MAL = {
+		c:DUMMY = {
 			random_owned_location = {
 				limit = {
 					any_neighbor_location = { owner ?= root }
@@ -573,7 +573,7 @@ decline_of_mali.10 = {
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/disaster/decline_of_mali_disaster.dds"
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -668,7 +668,7 @@ decline_of_mali.11 = {
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/disaster/decline_of_mali_disaster.dds"
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -755,7 +755,7 @@ decline_of_mali.12 = {
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/disaster/decline_of_mali_disaster.dds"
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -874,7 +874,7 @@ decline_of_mali.13 = {
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/disaster/decline_of_mali_disaster.dds"
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -893,9 +893,9 @@ decline_of_mali.13 = {
 	immediate = {
 		if = {
 			limit = {
-				country_exists = c:TRG
+				country_exists = c:DUMMY
 			}
-			c:TRG = { save_scope_as = tuareg_invaders }
+			c:DUMMY = { save_scope_as = tuareg_invaders }
 			random_owned_location = {
 				limit = {
 					dominant_culture = culture:tuareg
@@ -952,14 +952,14 @@ decline_of_mali.14 = {
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/disaster/decline_of_mali_disaster.dds"
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
 	}
 	trigger = {
 		current_date > 476.9.4
-		NOT = { country_exists = c:FUL }
+		NOT = { country_exists = c:DUMMY }
 		any_active_disaster = {
 			disaster_type = disaster_type:decline_of_empire
 		}
@@ -1035,12 +1035,12 @@ decline_of_mali.14 = {
 		name = decline_of_mali.14.b
 		add_prestige = prestige_extreme_penalty
 		scope:fulo_capital = {
-			add_core = c:FUL
+			add_core = c:DUMMY
 		}
-		create_country_from_cores_in_our_locations = c:FUL
+		create_country_from_cores_in_our_locations = c:DUMMY
 		custom_tooltip = {
 			text = decline_of_mali.14.b.tt
-			c:FUL = { save_scope_as = fulo_country }
+			c:DUMMY = { save_scope_as = fulo_country }
 			every_owned_location = {
 				limit = {
 					decline_of_mali_14_location_trigger = yes
@@ -1080,7 +1080,7 @@ decline_of_mali.15 = {
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/disaster/decline_of_mali_disaster.dds"
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1208,12 +1208,12 @@ decline_of_mali.15 = {
 		name = decline_of_mali.15.b
 		add_prestige = prestige_extreme_penalty
 		scope:kaabu_capital = {
-			add_core = c:KAB
+			add_core = c:DUMMY
 		}
 		custom_tooltip = {
 			text = decline_of_mali.15.b.tt
-			create_country_from_cores_in_our_locations = c:KAB
-			c:KAB = { save_scope_as = kaabu_country }
+			create_country_from_cores_in_our_locations = c:DUMMY
+			c:DUMMY = { save_scope_as = kaabu_country }
 			every_owned_location = {
 				limit = {
 					decline_of_mali_15_location_trigger = yes
@@ -1243,14 +1243,14 @@ decline_of_mali.16 = {
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/disaster/decline_of_mali_disaster.dds"
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
 	}
 	trigger = {
 		current_date > 476.9.4
-		NOT = { country_exists = c:KAB }
+		NOT = { country_exists = c:DUMMY }
 		any_active_disaster = {
 			disaster_type = disaster_type:decline_of_empire
 		}
@@ -1362,11 +1362,11 @@ decline_of_mali.17 = {
 		custom_tooltip = decline_of_mali.17.a.tt
 		show_as_tooltip = {
 			reverse_add_opinion = {
-				target = c:MAL
+				target = c:DUMMY
 				modifier = mal_accepted_alliance
 			}
 		}
-		c:MAL = {
+		c:DUMMY = {
 			trigger_event_silently = {
 				id = decline_of_mali.18
 				days = 60
@@ -1379,11 +1379,11 @@ decline_of_mali.17 = {
 		custom_tooltip = decline_of_mali.17.b.tt
 		show_as_tooltip = {
 			reverse_add_opinion = {
-				target = c:MAL
+				target = c:DUMMY
 				modifier = mal_rejected_alliance
 			}
 		}
-		c:MAL = {
+		c:DUMMY = {
 			trigger_event_silently = {
 				id = decline_of_mali.19
 				days = 60
@@ -1450,7 +1450,7 @@ decline_of_mali.20 = {
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/disaster/decline_of_mali_disaster.dds"
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 33
@@ -1468,7 +1468,7 @@ decline_of_mali.20 = {
 		}
 		stability < 20
 		NOT = { has_accepted_culture = culture:songhai }
-		NOT = { country_exists = c:SON }
+		NOT = { country_exists = c:DUMMY }
 	}
 	immediate = {
 		create_rebel = {

@@ -9,7 +9,7 @@ flavor_hun_ser.1000 = { #An Offer For Belgrade - Serbia
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -17,10 +17,10 @@ flavor_hun_ser.1000 = { #An Offer For Belgrade - Serbia
 	
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:HUN
-		is_allied_with = { target = c:HUN }
+		country_exists = c:DUMMY
+		is_allied_with = { target = c:DUMMY }
 		location:belgrad = {
-			owner = c:HUN
+			owner = c:DUMMY
 		}
 	}
 	
@@ -32,7 +32,7 @@ flavor_hun_ser.1000 = { #An Offer For Belgrade - Serbia
     immediate = {
         event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
         save_scope_as = from_country
-        c:HUN = { save_scope_as = target_country }
+        c:DUMMY = { save_scope_as = target_country }
         location:belgrad = { save_scope_as = target_location }
     }
 	

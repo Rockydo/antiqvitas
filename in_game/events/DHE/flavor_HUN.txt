@@ -7,7 +7,7 @@ flavor_hun.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -61,7 +61,7 @@ flavor_hun.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -119,7 +119,7 @@ flavor_hun.110 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -166,7 +166,7 @@ flavor_hun.120 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -210,7 +210,7 @@ flavor_hun.130 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -261,7 +261,7 @@ flavor_hun.140 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -326,7 +326,7 @@ flavor_hun.150 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -334,17 +334,17 @@ flavor_hun.150 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:HAB
-		has_truce_with = c:TUR
-		international_organization:hre.leader_country = c:HAB
+		country_exists = c:DUMMY
+		has_truce_with = c:DUMMY
+		international_organization:hre.leader_country = c:DUMMY
 
-		c:HAB.num_of_non_rural > num_of_non_rural
+		c:DUMMY.num_of_non_rural > num_of_non_rural
 
 		num_of_non_rural < 5
 
-		c:TUR = {
+		c:DUMMY = {
 			any_owned_location = {
-				previous_owner = c:HUN
+				previous_owner = c:DUMMY
 				region = region:carpathia_region
 			}
 		}
@@ -357,7 +357,7 @@ flavor_hun.150 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:TUR = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 	}
 
 	option = {
@@ -365,9 +365,9 @@ flavor_hun.150 = {
 
 		every_owned_location = {
 			limit = {
-				NOT = { is_core_of = c:HAB }
+				NOT = { is_core_of = c:DUMMY }
 			}
-			add_core = c:HAB
+			add_core = c:DUMMY
 		}
 	}
 }
@@ -380,7 +380,7 @@ flavor_hun.160 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -422,7 +422,7 @@ flavor_hun.170 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -430,7 +430,7 @@ flavor_hun.170 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:HAB
+		country_exists = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -445,8 +445,8 @@ flavor_hun.170 = {
 	option = {
 		name = flavor_hun.170.a
 		add_government_power = government_power_extreme_bonus
-		c:HAB = { add_opinion = { target = root modifier = hun_bakocz_foreign_policy }	}
-		add_opinion = { target = c:HAB modifier = hun_bakocz_foreign_policy }
+		c:DUMMY = { add_opinion = { target = root modifier = hun_bakocz_foreign_policy }	}
+		add_opinion = { target = c:DUMMY modifier = hun_bakocz_foreign_policy }
 	}
 }
 
@@ -475,43 +475,43 @@ flavor_hun.180 = {
 
 	option = {
 		name = flavor_hun.180.a
-		add_opinion = { target = c:BOH modifier = hun_crowned_by_rebels }
+		add_opinion = { target = c:DUMMY modifier = hun_crowned_by_rebels }
 		add_prestige = prestige_mild_bonus
 
 		if = {
 			limit = {
-				c:BOH = { own_entire_province = location:znojmo.province_definition }
+				c:DUMMY = { own_entire_province = location:znojmo.province_definition }
 			}
-			add_casus_belli = { target = c:BOH type = casus_belli:cb_conquer_province province = location:znojmo.province }
+			add_casus_belli = { target = c:DUMMY type = casus_belli:cb_conquer_province province = location:znojmo.province }
 		}
 		if = {
 			limit = {
-				c:BOH = { own_entire_province = location:brno.province_definition }
+				c:DUMMY = { own_entire_province = location:brno.province_definition }
 			}
-			add_casus_belli = { target = c:BOH type = casus_belli:cb_conquer_province province = location:brno.province }
+			add_casus_belli = { target = c:DUMMY type = casus_belli:cb_conquer_province province = location:brno.province }
 		}
 		if = {
 			limit = {
-				c:BOH = { own_entire_province = location:olomouc.province_definition }
+				c:DUMMY = { own_entire_province = location:olomouc.province_definition }
 			}
-			add_casus_belli = { target = c:BOH type = casus_belli:cb_conquer_province province = location:olomouc.province }
+			add_casus_belli = { target = c:DUMMY type = casus_belli:cb_conquer_province province = location:olomouc.province }
 		}
 
 		if = {
 			limit = {
-				c:BOH = { own_entire_province = location:hradiste.province_definition }
+				c:DUMMY = { own_entire_province = location:hradiste.province_definition }
 			}
-			add_casus_belli = { target = c:BOH type = casus_belli:cb_conquer_province province = location:hradiste.province }
+			add_casus_belli = { target = c:DUMMY type = casus_belli:cb_conquer_province province = location:hradiste.province }
 		}
 
-		c:BOH = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_hun.181 }
 		}
 	}
 	option = {
 		name = flavor_hun.180.b
 		add_prestige = prestige_mild_penalty
-		reverse_add_opinion = { target = c:BOH modifier = hun_refused_to_help_rebels }
+		reverse_add_opinion = { target = c:DUMMY modifier = hun_refused_to_help_rebels }
 	}
 }
 
@@ -532,7 +532,7 @@ flavor_hun.181 = {
 
 	option = {
 		name = flavor_hun.181.a
-		add_opinion = { target = c:HUN modifier = hun_crowned_by_rebels }
+		add_opinion = { target = c:DUMMY modifier = hun_crowned_by_rebels }
 	}
 	trigger = {
 		current_date > 476.9.4
@@ -547,7 +547,7 @@ flavor_hun.190 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -652,7 +652,7 @@ flavor_hun.200 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -689,7 +689,7 @@ flavor_hun.210 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -698,8 +698,8 @@ flavor_hun.210 = {
 	trigger = {
 		current_date > 476.9.4
 		owns = location:belgrad
-		is_neighbor_of = c:TUR
-		num_of_non_rural < c:TUR.num_of_non_rural
+		is_neighbor_of = c:DUMMY
+		num_of_non_rural < c:DUMMY.num_of_non_rural
 		location:belgrad = {
 			modifier:fort_level > 0
 		}
@@ -722,7 +722,7 @@ flavor_hun.210 = {
 				}
 
 			}
-			c:TUR = {
+			c:DUMMY = {
 					save_scope_as = threat_to_hungary
 			}
 			location:belgrad = {
@@ -751,7 +751,7 @@ flavor_hun.220 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -761,12 +761,12 @@ flavor_hun.220 = {
 		current_date > 476.9.4
 		religion.group = religion_group:christian
 		owns = location:belgrad
-		NOT = {	country_exists = c:SER }
-		NOT = {	is_allied_with = { target = c:TUR } }
+		NOT = {	country_exists = c:DUMMY }
+		NOT = {	is_allied_with = { target = c:DUMMY } }
 		location:belgrad = {
 			dominant_culture = culture:serbian
 		}
-		c:TUR = {
+		c:DUMMY = {
 			any_owned_location = {
 				dominant_culture = culture:serbian
 			}
@@ -783,7 +783,7 @@ flavor_hun.220 = {
 		location:belgrad = {
 			save_scope_as = belgrade_localized
 		}
-		c:TUR = {
+		c:DUMMY = {
 			ordered_owned_location = {
 				limit = {
 					dominant_culture = culture:serbian
@@ -819,7 +819,7 @@ flavor_hun.230 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 8
@@ -851,10 +851,10 @@ flavor_hun.230 = {
 		add_religious_influence = religious_influence_mild_bonus
 		if = {
 			limit = {
-				country_exists = c:PAP
+				country_exists = c:DUMMY
 			}
-			add_opinion = { target = c:PAP modifier = hun_invited_jesuits }
-			c:PAP = {
+			add_opinion = { target = c:DUMMY modifier = hun_invited_jesuits }
+			c:DUMMY = {
 				add_opinion = { target = root modifier = hun_invited_jesuits }
 			}
 		}
@@ -897,7 +897,7 @@ flavor_hun.240 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -942,7 +942,7 @@ flavor_hun.250 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -950,12 +950,12 @@ flavor_hun.250 = {
 
 	trigger = {
 		current_date > 476.9.4
-		is_neighbor_of = c:TUR
-		country_exists = c:TUR
-		NOT = {	is_subject_of = c:TUR }
-		num_of_non_rural < c:TUR.num_of_non_rural
-		NOT = {	is_allied_with = { target = c:TUR } }
-		c:TUR = {
+		is_neighbor_of = c:DUMMY
+		country_exists = c:DUMMY
+		NOT = {	is_subject_of = c:DUMMY }
+		num_of_non_rural < c:DUMMY.num_of_non_rural
+		NOT = {	is_allied_with = { target = c:DUMMY } }
+		c:DUMMY = {
 			OR = {
 				own_entire_area = area:wallachia_area
 				own_entire_area = area:moldavia_area
@@ -971,7 +971,7 @@ flavor_hun.250 = {
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
-		c:TUR = {
+		c:DUMMY = {
 			ordered_owned_location = {
 				limit = {
 					dominant_religion.group = religion_group:christian
@@ -1018,7 +1018,7 @@ flavor_hun.260 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1072,7 +1072,7 @@ flavor_hun.270 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1120,7 +1120,7 @@ flavor_hun.280 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1190,7 +1190,7 @@ flavor_hun.290 = { #https://en.wikipedia.org/wiki/Janus_Pannonius
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1245,7 +1245,7 @@ flavor_hun.300 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1295,7 +1295,7 @@ flavor_hun.310 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1338,7 +1338,7 @@ flavor_hun.320 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -1378,17 +1378,17 @@ flavor_hun.330 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 75
 	}
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:POL
+		country_exists = c:DUMMY
 		exists = ruler
 		ruler ?= character:hun_karoly_robert
-		c:POL = { ruler = character:pol_casimir_iii_piast }
+		c:DUMMY = { ruler = character:pol_casimir_iii_piast }
 	}
 	illustration_tags = {
         10 = regular
@@ -1396,7 +1396,7 @@ flavor_hun.330 = {
     }
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:POL = { ruler = { save_scope_as = casimir_scope } }
+		c:DUMMY = { ruler = { save_scope_as = casimir_scope } }
 		ruler = { save_scope_as = karoly_ruler }
 	}
 	option = {
@@ -1404,7 +1404,7 @@ flavor_hun.330 = {
 		historical_option = yes
 		custom_tooltip = {
 			text = flavor_hun.330.a.at
-			c:POL = { trigger_event_silently = { id = flavor_hun.331 days = 5 } }
+			c:DUMMY = { trigger_event_silently = { id = flavor_hun.331 days = 5 } }
 		}
 		custom_tooltip = flavor_hun.330.a.bt
 	}
@@ -1431,7 +1431,7 @@ flavor_hun.331 = {
 		historical_option = yes
 		custom_tooltip = {
 			text = flavor_hun.331.a.tt
-			c:HUN = {
+			c:DUMMY = {
 				trigger_event_silently = {
 					id = flavor_hun.332
 					days = 5
@@ -1440,15 +1440,15 @@ flavor_hun.331 = {
 		}
 		show_as_tooltip = {
 			change_heir_selection = heir_selection:union_of_crowns_succession
-			c:HUN = {
+			c:DUMMY = {
 				create_relation = {
 					first = this
-					second = c:POL
+					second = c:DUMMY
 					type = relation_type:union_of_crowns_pact
 				}
 				change_heir_selection = heir_selection:union_of_crowns_succession
-				add_opinion = { target = c:POL modifier = agreed_second_congress_of_visegrad }
-				reverse_add_opinion = { target = c:POL modifier = agreed_second_congress_of_visegrad }
+				add_opinion = { target = c:DUMMY modifier = agreed_second_congress_of_visegrad }
+				reverse_add_opinion = { target = c:DUMMY modifier = agreed_second_congress_of_visegrad }
 			}
 		}
 	}
@@ -1456,7 +1456,7 @@ flavor_hun.331 = {
 		name = flavor_hun.331.b
 		custom_tooltip = {
 			text = flavor_hun.331.b.tt
-			c:HUN = {
+			c:DUMMY = {
 				trigger_event_silently = {
 					id = flavor_hun.18
 					days = 5
@@ -1464,9 +1464,9 @@ flavor_hun.331 = {
 			}
 		}
 		show_as_tooltip = {
-			c:HUN = {
-				add_opinion = { target = c:POL modifier = failed_second_congress_of_visegrad }
-				reverse_add_opinion = { target = c:POL modifier = failed_second_congress_of_visegrad }
+			c:DUMMY = {
+				add_opinion = { target = c:DUMMY modifier = failed_second_congress_of_visegrad }
+				reverse_add_opinion = { target = c:DUMMY modifier = failed_second_congress_of_visegrad }
 			}
 		}
 	}
@@ -1492,11 +1492,11 @@ flavor_hun.332 = {
 		historical_option = yes
 		create_relation = {
 			first = this
-			second = c:POL
+			second = c:DUMMY
 			type = relation_type:union_of_crowns_pact
 		}
-		add_opinion = { target = c:POL modifier = agreed_second_congress_of_visegrad }
-		reverse_add_opinion = { target = c:POL modifier = agreed_second_congress_of_visegrad }
+		add_opinion = { target = c:DUMMY modifier = agreed_second_congress_of_visegrad }
+		reverse_add_opinion = { target = c:DUMMY modifier = agreed_second_congress_of_visegrad }
 	}
 	trigger = {
 		current_date > 476.9.4
@@ -1517,8 +1517,8 @@ flavor_hun.18 = {
 	}
 	option = {
 		name = flavor_hun.18.a
-		add_opinion = { target = c:POL modifier = failed_second_congress_of_visegrad }
-		reverse_add_opinion = { target = c:POL modifier = failed_second_congress_of_visegrad }
+		add_opinion = { target = c:DUMMY modifier = failed_second_congress_of_visegrad }
+		reverse_add_opinion = { target = c:DUMMY modifier = failed_second_congress_of_visegrad }
 	}
 	trigger = {
 		current_date > 476.9.4
@@ -1532,7 +1532,7 @@ flavor_hun.340 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -1589,7 +1589,7 @@ flavor_hun.350 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1638,7 +1638,7 @@ flavor_hun.360 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1735,7 +1735,7 @@ flavor_hun.370 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1780,7 +1780,7 @@ flavor_hun.380 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1824,7 +1824,7 @@ flavor_hun.390 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1888,7 +1888,7 @@ flavor_hun.400 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1944,7 +1944,7 @@ flavor_hun.410 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2225,7 +2225,7 @@ flavor_hun.421 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2488,7 +2488,7 @@ flavor_hun.450 = { #Expanding the Buda Castle
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2553,7 +2553,7 @@ flavor_hun.460 = { # Illuminated Chronicle
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2626,7 +2626,7 @@ flavor_hun.470 = { #Privilegium Pro Slavis
 	historical_info = flavor_hun.470.historical_info
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2730,7 +2730,7 @@ flavor_hun.480 = { #Austrian Noble Revolt
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2743,7 +2743,7 @@ flavor_hun.480 = { #Austrian Noble Revolt
 
 	trigger = {
 		current_date > 476.9.4
-		NOT = { country_exists = c:HAB }
+		NOT = { country_exists = c:DUMMY }
 		area:austria_area = {
 			any_location_in_area = {
 				owner = root
@@ -2788,8 +2788,8 @@ flavor_hun.480 = { #Austrian Noble Revolt
 		name = flavor_hun.480.b
 		change_societal_value = { type = centralization_vs_decentralization	value = societal_value_move_to_right }
 		destroy_rebel = scope:austrian_nobles
-		create_country_from_cores_in_our_locations = c:HAB
-		c:HAB = {
+		create_country_from_cores_in_our_locations = c:DUMMY
+		c:DUMMY = {
 			make_subject_of = { target = root type = subject_type:vassal }
 		}
 		add_government_power = government_power_severe_penalty
@@ -2806,7 +2806,7 @@ flavor_hun.490 = { #Balázs Magyar
 	historical_info = flavor_hun.490.historical_info
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2870,7 +2870,7 @@ flavor_hun.500 = { #Pál Kinizsi
 	historical_info = flavor_hun.500.historical_info
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2934,7 +2934,7 @@ flavor_hun.510 = { #Bibliotheca Corviniana
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2982,7 +2982,7 @@ flavor_hun.520 = { #Bran Castle
 	historical_info = flavor_hun.520.historical_info
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3039,7 +3039,7 @@ flavor_hun.530 = { #Slovak National Awakening
 	historical_info = flavor_hun.530.historical_info
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3125,7 +3125,7 @@ flavor_hun.540 = { #Transylvanian Germans Convert to Protestantism
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3202,7 +3202,7 @@ flavor_hun.550 = { #Vienna - A New Capital
 	historical_info = flavor_hun.550.historical_info
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3259,7 +3259,7 @@ flavor_hun.560 = { #Tripartitum
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3308,7 +3308,7 @@ flavor_hun.570 = { #Adam František Kollár
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3378,7 +3378,7 @@ flavor_hun.580 = { #Evacuation of the Capital
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3394,7 +3394,7 @@ flavor_hun.580 = { #Evacuation of the Capital
 		}
 		location:buda = {
 			any_neighbor_location = {
-				owner = c:TUR
+				owner = c:DUMMY
 			}
 		}
 		location:bratislava = {
@@ -3452,7 +3452,7 @@ flavor_hun.590 = { #The Origin of the Hussars
 	historical_info = flavor_hun.590.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3460,8 +3460,8 @@ flavor_hun.590 = { #The Origin of the Hussars
 
 	trigger = {
 		current_date > 476.9.4
-		c:TUR = {
-			is_neighbor_of = c:HUN
+		c:DUMMY = {
+			is_neighbor_of = c:DUMMY
 		}
 		has_advance = hun_composite_light_cavalry
 		area:transylvania_area = {
@@ -3505,7 +3505,7 @@ flavor_hun.600 = { #The Bosnian Question
 	historical_info = flavor_hun.600.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3513,15 +3513,15 @@ flavor_hun.600 = { #The Bosnian Question
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:BOS
-		c:BOS = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_ruler = yes
 			ruler = { has_character_modifier = bos_devils_student }
 			is_subject_of = root
 			subject_loyalty < 25
 		}
 		any_rival = {
-			opinion = { target = c:BOS value > 100 }
+			opinion = { target = c:DUMMY value > 100 }
 		}
 	}
 	
@@ -3538,7 +3538,7 @@ flavor_hun.600 = { #The Bosnian Question
 		ruler = {
 			save_scope_as = target_ruler
 		}
-		c:BOS = {
+		c:DUMMY = {
 			ruler = {
 				save_scope_as = bosnian_ruler
 			}
@@ -3549,7 +3549,7 @@ flavor_hun.600 = { #The Bosnian Question
 		name = flavor_hun.600.a
 		historical_option = yes
 		add_legitimacy = legitimacy_severe_penalty
-		cancel_subject = c:BOS
+		cancel_subject = c:DUMMY
 		change_societal_value = {
 			type = belligerent_vs_conciliatory
 			value = societal_value_move_to_right
@@ -3559,12 +3559,12 @@ flavor_hun.600 = { #The Bosnian Question
 	option = {
 		name = flavor_hun.600.b
 		add_legitimacy = legitimacy_mild_bonus
-		c:BOS = {
+		c:DUMMY = {
 			add_liberty_desire = liberty_desire_severe_plus
 		}
-		c:BOS = {
+		c:DUMMY = {
 			add_casus_belli = {
-				target = c:HUN
+				target = c:DUMMY
 				type = casus_belli:cb_independence_war
 			}
 		}

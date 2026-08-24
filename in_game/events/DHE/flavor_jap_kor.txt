@@ -8,7 +8,7 @@ flavor_jap_kor.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -16,15 +16,15 @@ flavor_jap_kor.1 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:KOR
+		country_exists = c:DUMMY
 		exists = international_organization:middle_kingdom.leader_country
-		c:KOR != international_organization:middle_kingdom.leader_country
+		c:DUMMY != international_organization:middle_kingdom.leader_country
 		is_leader_of_international_organization = international_organization:japanese_shogunate
 		NOR = {
 			is_situation_active = situation:sengoku
 			is_situation_active = situation:nanbokuchou
 		}
-		can_declare_legal_war_on = { target = c:KOR }
+		can_declare_legal_war_on = { target = c:DUMMY }
 	}
 
 	illustration_tags = {
@@ -34,7 +34,7 @@ flavor_jap_kor.1 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:KOR = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		international_organization:middle_kingdom.leader_country = {

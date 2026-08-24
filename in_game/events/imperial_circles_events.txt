@@ -108,7 +108,6 @@ imperial_circles.2 = { #Missing Funds - Imperial Bribe is not distributed in tim
 	}
 
 	after = {
-		remove_variable = has_received_imperial_bribe
 	}
 
 	trigger = {
@@ -161,31 +160,6 @@ imperial_circles.12 = { #The Princes Demand Change - Satisfaction below 15
 	}
 }
 
-imperial_circles.20 = { #Our Vote Has Been Bought - Non-leader circle member notification
-	type = country_event
-	title = imperial_circles.20.title
-	desc = imperial_circles.20.desc
-	outcome = neutral
-	category = international_organization_event
-	image = "gfx/interface/illustrations/international_organization_types/hre.dds"
-
-	immediate = {
-		save_scope_value_as = {
-			name = received_bribe
-			value = {
-				value = bribe_circle_leader_cost
-				multiply = 0.25
-			}
-		}
-	}
-
-	option = {
-		name = imperial_circles.20.a
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 imperial_circles.50 = { #Challenge for Circle Leadership
 	type = country_event

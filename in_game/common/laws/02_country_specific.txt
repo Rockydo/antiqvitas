@@ -41,7 +41,7 @@ eng_order_of_the_garter_law = {
 	unique = yes
 	law_category = administrative
 
-	law_country_group = ENG
+	law_country_group = DUMMY
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
@@ -667,7 +667,7 @@ nav_adaptability = {
 	unique = yes
 	law_category = administrative
 
-	law_country_group = NAV
+	law_country_group = DUMMY
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
@@ -929,13 +929,13 @@ kor_currency = {
 	}
 	kor_chinese_currency = {
 		potential = {
-			country_exists = c:CHI
+			country_exists = c:DUMMY
 		}
 		country_modifier = {
 			scale = {
 				add = {
 					desc = "kor_scale_chinese_currency"
-					value = "c:CHI.opinion(root)"
+					value = "c:DUMMY.opinion(root)"
 					multiply = 0.01
 				}
 			}

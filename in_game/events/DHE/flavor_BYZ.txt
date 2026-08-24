@@ -7,7 +7,7 @@ flavor_byz.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -102,7 +102,7 @@ flavor_byz.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -181,7 +181,7 @@ flavor_byz.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -238,7 +238,7 @@ flavor_byz.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -316,7 +316,7 @@ flavor_byz.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -395,7 +395,7 @@ flavor_byz.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -471,7 +471,7 @@ flavor_byz.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -541,7 +541,7 @@ flavor_byz.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -603,7 +603,7 @@ flavor_byz.9 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -612,10 +612,10 @@ flavor_byz.9 = {
 	trigger = {
 		current_date > 476.9.4
 		has_or_had_tag = BYZ
-		location:constantinople = { any_neighbor_location = { owner ?= c:TUR  } }
+		location:constantinople = { any_neighbor_location = { owner ?= c:DUMMY  } }
 		owns = location:constantinople
-		OR = { has_truce_with = c:TUR is_at_war_with = c:TUR }
-		country_economical_base < c:TUR.country_economical_base
+		OR = { has_truce_with = c:DUMMY is_at_war_with = c:DUMMY }
+		country_economical_base < c:DUMMY.country_economical_base
 	}
 
 	illustration_tags = {
@@ -713,8 +713,8 @@ flavor_byz.11 = { #https://en.wikipedia.org/wiki/Cretan_School
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
-		tag = VEN
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -725,8 +725,8 @@ flavor_byz.11 = { #https://en.wikipedia.org/wiki/Cretan_School
 		current_date > 476.9.4
 		at_war = no
 		trigger_if = {
-			limit = { this = c:VEN }
-			NOT = { country_exists = c:BYZ }
+			limit = { this = c:DUMMY }
+			NOT = { country_exists = c:DUMMY }
 		}
 		trigger_else = {
 			has_or_had_tag = BYZ
@@ -826,8 +826,8 @@ flavor_byz.12 = { #https://en.wikipedia.org/wiki/El_Greco
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
-		tag = VEN
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -836,8 +836,8 @@ flavor_byz.12 = { #https://en.wikipedia.org/wiki/El_Greco
 	trigger = {
 		current_date > 476.9.4
 		trigger_if = {
-			limit = { this = c:VEN }
-			NOT = { country_exists = c:BYZ }
+			limit = { this = c:DUMMY }
+			NOT = { country_exists = c:DUMMY }
 		}
 		trigger_else = {
 			has_or_had_tag = BYZ
@@ -902,7 +902,7 @@ flavor_byz.13 = { #https://en.wikipedia.org/wiki/Mystras#Centre_of_learning_and_
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1033,7 +1033,7 @@ flavor_byz.14 = { #
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1119,7 +1119,7 @@ flavor_byz.15 = { # [ROOT.GetCountry.GetGovernment.GetRulerOrRegent.GetNameWithN
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1255,7 +1255,7 @@ flavor_byz.16 = { #Konstantinos Armenopoulos
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1325,7 +1325,7 @@ flavor_byz.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1359,7 +1359,7 @@ flavor_byz.17 = {
 		name = flavor_byz.17.a
 		historical_option = yes
 		scope:john_koukouzelis ?= {
-			make_saint = c:BYZ
+			make_saint = c:DUMMY
 		}
 		add_prestige = prestige_severe_bonus
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_severe_bonus }
@@ -1453,7 +1453,7 @@ flavor_byz.19 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1462,7 +1462,7 @@ flavor_byz.19 = {
 	trigger = {
 		current_date > 476.9.4
 		has_or_had_tag = BYZ
-		c:ACH ?= {
+		c:DUMMY ?= {
 			is_subject = no
 			has_presence_in = region:balkan_region
 		}
@@ -1470,7 +1470,7 @@ flavor_byz.19 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:peasants_estate }
-		c:ACH = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			capital = {
 				save_scope_as = target_location
@@ -1504,7 +1504,7 @@ flavor_byz.20 = { #https://en.wikipedia.org/wiki/Andronikos_III_Palaiologos#Dome
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1566,7 +1566,7 @@ flavor_byz.21 = { #https://en.wikipedia.org/wiki/Acritic_songs
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1626,7 +1626,7 @@ flavor_byz.22 = { #https://en.wikipedia.org/wiki/Song_of_Armouris
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1700,7 +1700,7 @@ flavor_byz.23 = { #https://en.wikipedia.org/wiki/Constantine_XI_Palaiologos#The_
 		current_date > 476.9.4
 		culture = culture:greek_culture
 		NOT = {
-			country_exists = c:BYZ
+			country_exists = c:DUMMY
 		}
 		global_var:marbled_emperor ?= {
 			is_alive = no
@@ -1761,7 +1761,7 @@ flavor_byz.24 = { #https://en.wikipedia.org/wiki/Stavraton
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1820,7 +1820,7 @@ flavor_byz.25 = { #https://en.wikipedia.org/wiki/Gemistos_Plethon May God have m
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1911,7 +1911,7 @@ flavor_byz.26 = { #Alt-History, Byzantium never really reclaimed the Asia Minor 
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1921,8 +1921,8 @@ flavor_byz.26 = { #Alt-History, Byzantium never really reclaimed the Asia Minor 
 	trigger = {
 		current_date > 476.9.4
 		has_or_had_tag = BYZ
-		country_exists = c:BYZ
-		c:BYZ = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			owns = location:smyrna
 		}
 	}
@@ -2006,7 +2006,7 @@ flavor_byz.27 = { #https://en.wikipedia.org/wiki/Palaeologan_Renaissance
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2122,7 +2122,7 @@ flavor_byz.28 = { #New Sparta https://en.wikipedia.org/wiki/Constantine_XI_Palai
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2233,7 +2233,7 @@ flavor_byz.29 = { #There isn't a wikipedia link about the Katholikon Mouseion sa
 	historical_info = flavor_byz.29.historical_info
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2313,7 +2313,7 @@ flavor_byz.30 = { #Orthodox Church and Lutherans allying against Catholics
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2430,7 +2430,7 @@ flavor_byz.31 = { #Alt-history. Byzantium never really reformed their army since
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2553,7 +2553,7 @@ flavor_byz.32 = { #The Grand Domestic - Trouble on the Horizon
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -2619,7 +2619,7 @@ flavor_byz.33 = { #Question of Nationality
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2704,7 +2704,7 @@ flavor_byz.34 = { #Constantinople, the Decaying City
 	#}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2777,7 +2777,7 @@ flavor_byz.35 = { #Giovanni Giustiniani
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2847,7 +2847,7 @@ flavor_byz.36 = { #Restoring Control in Anatolia
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -2944,7 +2944,7 @@ flavor_byz.37 = { #Landing in Italy
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 30
@@ -3032,7 +3032,7 @@ flavor_byz.38 = { #Hexamilion Wall
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3113,7 +3113,7 @@ flavor_byz.39 = { #A New Capital
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3206,7 +3206,7 @@ flavor_byz.40 = { #Nomoi
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3299,7 +3299,7 @@ flavor_byz.41 = { #History of the Palaiologoi
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -3406,8 +3406,8 @@ flavor_byz.42 = { #https://el.wikipedia.org/wiki/Αλέξανδρος_Μαυρο
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
-		tag = TUR
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -3416,8 +3416,8 @@ flavor_byz.42 = { #https://el.wikipedia.org/wiki/Αλέξανδρος_Μαυρο
 	trigger = {
 		current_date > 476.9.4
 		trigger_if = {
-			limit = { this = c:TUR }
-			NOT = { country_exists = c:BYZ }
+			limit = { this = c:DUMMY }
+			NOT = { country_exists = c:DUMMY }
 		}
 		trigger_else = {
 			has_or_had_tag = BYZ
@@ -3530,8 +3530,8 @@ flavor_byz.43 = { #hhttps://en.wikipedia.org/wiki/Heptanese_school_(painting)
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
-		tag = VEN
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -3540,8 +3540,8 @@ flavor_byz.43 = { #hhttps://en.wikipedia.org/wiki/Heptanese_school_(painting)
 	trigger = {
 		current_date > 476.9.4
 		trigger_if = {
-			limit = { this = c:VEN }
-			NOT = { country_exists = c:BYZ }
+			limit = { this = c:DUMMY }
+			NOT = { country_exists = c:DUMMY }
 		}
 		trigger_else = {
 			has_or_had_tag = BYZ
@@ -3628,8 +3628,8 @@ flavor_byz.44 = { #https://en.wikipedia.org/wiki/Philotheos_Skoufos
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
-		tag = VEN
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -3638,8 +3638,8 @@ flavor_byz.44 = { #https://en.wikipedia.org/wiki/Philotheos_Skoufos
 	trigger = {
 		current_date > 476.9.4
 		trigger_if = {
-			limit = { this = c:VEN }
-			NOT = { country_exists = c:BYZ }
+			limit = { this = c:DUMMY }
+			NOT = { country_exists = c:DUMMY }
 		}
 		trigger_else = {
 			has_or_had_tag = BYZ
@@ -3723,7 +3723,7 @@ flavor_byz.45 = { # Reforming the Pronoiai. Could possibly be made into a missio
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4752,7 +4752,7 @@ flavor_byz.52 = { #Reforming the Justinian Code. Getting rid of the court influe
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4851,7 +4851,7 @@ flavor_byz.53 = { #Re-fortifying Theodosian Walls
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4926,7 +4926,7 @@ flavor_byz.54 = { #Dealing with Italian Influence
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5017,9 +5017,9 @@ flavor_byz.54 = { #Dealing with Italian Influence
 
 		if = {
 			limit = {
-				country_exists = c:GEN
+				country_exists = c:DUMMY
 			}
-			c:GEN = {
+			c:DUMMY = {
 				add_opinion = {
 					modifier = opinion_kicked_out_italians
 					target = root
@@ -5028,9 +5028,9 @@ flavor_byz.54 = { #Dealing with Italian Influence
 		}
 		if = {
 			limit = {
-				country_exists = c:VEN
+				country_exists = c:DUMMY
 			}
-			c:VEN = {
+			c:DUMMY = {
 				add_opinion = {
 					modifier = opinion_kicked_out_italians
 					target = root
@@ -5045,9 +5045,9 @@ flavor_byz.54 = { #Dealing with Italian Influence
 
 		if = {
 			limit = {
-				country_exists = c:GEN
+				country_exists = c:DUMMY
 			}
-			c:GEN = {
+			c:DUMMY = {
 				add_opinion = {
 					modifier = opinion_allowed_italian_influence_in_constantinople
 					target = root
@@ -5056,9 +5056,9 @@ flavor_byz.54 = { #Dealing with Italian Influence
 		}
 		if = {
 			limit = {
-				country_exists = c:VEN
+				country_exists = c:DUMMY
 			}
-			c:VEN = {
+			c:DUMMY = {
 				add_opinion = {
 					modifier = opinion_allowed_italian_influence_in_constantinople
 					target = root
@@ -5086,7 +5086,7 @@ flavor_byz.55 = { #Become, *shudders*, Catholic
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5172,7 +5172,7 @@ flavor_byz.57 = {
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5379,7 +5379,7 @@ flavor_byz.60 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -5470,7 +5470,7 @@ flavor_byz.61 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -5562,13 +5562,13 @@ flavor_byz.62 = {
 		current_date > 476.9.4
 		has_or_had_tag = BYZ
 		john_kantakouzenos_is_co_emperor = yes
-		country_exists = c:EPI
-		country_exists = c:ACH
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 	}
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 7
@@ -5585,7 +5585,7 @@ flavor_byz.62 = {
 		character:byz_john_kantakouzenos = {
 			save_scope_as = target_character
 		}
-		c:ACH = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 	}
@@ -5668,7 +5668,7 @@ flavor_byz.63 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 40
@@ -5753,7 +5753,7 @@ flavor_byz.64 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -5834,7 +5834,7 @@ flavor_byz.65 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -5917,7 +5917,7 @@ flavor_byz.66 = {
 	}
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ 
+		tag = DUMMY 
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -6024,7 +6024,7 @@ flavor_byz.1000 = { #The Guns of Orbán - Be mindful - connected to flavor_byz.1
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -6127,7 +6127,7 @@ flavor_byz.1001 = { #The Bane of Babylon - # This event is triggered by flavor_b
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:BYZ #just to prevent bugs
+		country_exists = c:DUMMY #just to prevent bugs
 	}
 
 	immediate = {
@@ -6136,7 +6136,7 @@ flavor_byz.1001 = { #The Bane of Babylon - # This event is triggered by flavor_b
 			save_scope_as = target_location
 		}
 
-		c:BYZ = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 
@@ -6189,7 +6189,7 @@ flavor_byz.1100 = { #
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -6471,7 +6471,7 @@ flavor_byz.1101 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		capital = { save_scope_as = target_location }
-		c:BYZ = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			ruler_or_regent ?= { save_scope_as = target_character3 }
 		}
@@ -6494,7 +6494,7 @@ flavor_byz.1102 = { #
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -6600,7 +6600,7 @@ flavor_byz.1200 = { #A hand for peace
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -6615,15 +6615,15 @@ flavor_byz.1200 = { #A hand for peace
 				is_female = yes
 			}
 		}
-		c:TUR.ruler_or_regent ?= {
+		c:DUMMY.ruler_or_regent ?= {
 			character_can_marry_trigger = yes
 		}
-		NOT = { is_at_war_with = c:TUR }
+		NOT = { is_at_war_with = c:DUMMY }
 		is_subject = no
-		c:TUR = { is_subject = no }
+		c:DUMMY = { is_subject = no }
 		NOR = {
-			is_rival_of = c:TUR
-			is_enemy_of = c:TUR
+			is_rival_of = c:DUMMY
+			is_enemy_of = c:DUMMY
 		}
 	}
 
@@ -6643,7 +6643,7 @@ flavor_byz.1200 = { #A hand for peace
 				save_scope_as = theodora_scope
 			}
 		}
-		c:TUR.ruler_or_regent ?= {
+		c:DUMMY.ruler_or_regent ?= {
 			save_scope_as = orhan_scope
 		}
 	}
@@ -6652,14 +6652,14 @@ flavor_byz.1200 = { #A hand for peace
 		name = flavor_byz.1200.a
 		historical_option = yes
 
-		c:TUR = {
+		c:DUMMY = {
 			trigger_event_non_silently = { id = flavor_byz.1201 }
 		}
 	}
 
 	option = {
 		name = flavor_byz.1200.b
-		add_opinion = { target = c:TUR modifier = opinion_irritated }
+		add_opinion = { target = c:DUMMY modifier = opinion_irritated }
 	}
 }
 
@@ -6687,22 +6687,22 @@ flavor_byz.1201 = { #
 		scope:orhan_scope = {
 			marry_character = scope:theodora_scope
 		}
-		c:BYZ = {
-			remove_rival = c:TUR
+		c:DUMMY = {
+			remove_rival = c:DUMMY
 			trigger_event_non_silently = { id = flavor_byz.1202 }
 		}
-		remove_rival = c:BYZ
-		create_alliance = { target = c:BYZ }
+		remove_rival = c:DUMMY
+		create_alliance = { target = c:DUMMY }
 		add_opinion_mutual_effect = {
-			target = c:BYZ
+			target = c:DUMMY
 			modifier = opinion_dynastic_allies
 		}
 	}
 
 	option = {
 		name = flavor_byz.1201.b
-		add_opinion = { target = c:BYZ modifier = opinion_irritated }
-		c:BYZ = {
+		add_opinion = { target = c:DUMMY modifier = opinion_irritated }
+		c:DUMMY = {
 			trigger_event_non_silently = { id = flavor_byz.1203 }
 		}
 	}
@@ -6781,7 +6781,7 @@ flavor_byz.1300 = { #Inviting Merchants to Populate Constantinople
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -6790,11 +6790,11 @@ flavor_byz.1300 = { #Inviting Merchants to Populate Constantinople
 	trigger = {
 		current_date > 476.9.4
 		has_or_had_tag = BYZ
-		country_exists = c:BYZ
+		country_exists = c:DUMMY
 		had_situation_trigger = { situation = black_death }
 		OR = {
-			country_exists = c:VEN
-			country_exists = c:GEN
+			country_exists = c:DUMMY
+			country_exists = c:DUMMY
 		}
 	}
 
@@ -6814,11 +6814,11 @@ flavor_byz.1300 = { #Inviting Merchants to Populate Constantinople
 	option = {
 		name = flavor_byz.1300.a
 
-		c:VEN ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = { id = flavor_byz.1301 days = 1 }
 		}
 
-		c:GEN ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = { id = flavor_byz.1301 days = 1 }
 		}
 
@@ -6909,7 +6909,7 @@ flavor_byz.1301 = { #Invitation event for the Italian Republics
 
 		if = {
 			limit = {
-				this = c:VEN
+				this = c:DUMMY
 			}
 			scope:target_location = {
 				change_building_level_in_location = {
@@ -6921,7 +6921,7 @@ flavor_byz.1301 = { #Invitation event for the Italian Republics
 		}
 		else_if = {
 			limit = {
-				this = c:GEN
+				this = c:DUMMY
 			}
 			scope:target_location = {
 				change_building_level_in_location = {
@@ -6932,7 +6932,7 @@ flavor_byz.1301 = { #Invitation event for the Italian Republics
 			}
 		}
 
-		c:BYZ ?= {
+		c:DUMMY ?= {
 			trigger_event_silently = { id = flavor_byz.1302 days = 1 }
 		}
 	}
@@ -6940,7 +6940,7 @@ flavor_byz.1301 = { #Invitation event for the Italian Republics
 	option = {
 		name = flavor_byz.1301.b
 
-		c:BYZ ?= {
+		c:DUMMY ?= {
 			trigger_event_silently = { id = flavor_byz.1303 days = 1 }
 		}
 	}
@@ -7031,7 +7031,7 @@ flavor_byz.1400 = { #Inviting the Northmen
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -7262,7 +7262,7 @@ flavor_byz.1500 = { #Thessaloniki Commune
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -7402,7 +7402,7 @@ flavor_byz.1501 = { #Thessaloniki Commune - Outcomes
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -7544,7 +7544,7 @@ flavor_byz.1502 = { #Greek Pagan Larper Spreads his Heresy!
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -7725,7 +7725,7 @@ flavor_byz.1503 = {
 	}
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -7735,11 +7735,11 @@ flavor_byz.1503 = {
 		current_date > 476.9.4
 		has_or_had_tag = BYZ
 		is_situation_active = situation:rise_of_the_ottomans
-		country_exists = c:TUR
-		situation:rise_of_the_ottomans.var:strongest_beylik_variable ?= c:TUR
-		c:AYD ?= {
+		country_exists = c:DUMMY
+		situation:rise_of_the_ottomans.var:strongest_beylik_variable ?= c:DUMMY
+		c:DUMMY ?= {
 			opinion = {
-				target = c:BYZ
+				target = c:DUMMY
 				value > -100
 			}
 			at_war = no
@@ -7749,19 +7749,19 @@ flavor_byz.1503 = {
 					country_exists = situation:rise_of_the_ottomans.var:third_strongest_strongest_beylik_variable
 				}
 				OR = {
-					situation:rise_of_the_ottomans.var:second_strongest_strongest_beylik_variable ?= c:AYD
-					situation:rise_of_the_ottomans.var:third_strongest_strongest_beylik_variable ?= c:AYD
+					situation:rise_of_the_ottomans.var:second_strongest_strongest_beylik_variable ?= c:DUMMY
+					situation:rise_of_the_ottomans.var:third_strongest_strongest_beylik_variable ?= c:DUMMY
 				}
 			}
 			trigger_else = { is_situation_active = situation:rise_of_the_ottomans }
 			NOR = {
-				is_subject_of = c:TUR
-				c:TUR = { is_subject_of = prev }
+				is_subject_of = c:DUMMY
+				c:DUMMY = { is_subject_of = prev }
 				has_mutual_scripted_relation = {
 					type = relation_type:alliance
-					target = c:TUR
+					target = c:DUMMY
 				}
-				has_truce_with = c:TUR
+				has_truce_with = c:DUMMY
 			}
 		}
 		at_war = no
@@ -7770,7 +7770,7 @@ flavor_byz.1503 = {
 	immediate = {
 		#event_illustration_estate_background_effect = { background = estate_type:crown_estate AYD}
 		ruler_or_regent = { save_scope_as = target_character1 }
-		c:AYD.ruler_or_regent = { save_scope_as = target_character2 }
+		c:DUMMY.ruler_or_regent = { save_scope_as = target_character2 }
 	}
 
 	option = {
@@ -7778,11 +7778,11 @@ flavor_byz.1503 = {
 
 		add_opinion_mutual_effect = {
 			modifier = ayd_byz_cooperation
-			target = c:AYD
+			target = c:DUMMY
 		}
 		add_trust_equilibrium_mutual_effect = {
 			modifier = trust_common_enemy
-			target = c:AYD
+			target = c:DUMMY
 		}
 	}
 

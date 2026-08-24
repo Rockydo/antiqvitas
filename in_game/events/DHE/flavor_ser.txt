@@ -17,7 +17,7 @@ flavor_ser.10 = { #The Weakness of [ROOT.GetRuler.GetName]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -210,7 +210,7 @@ flavor_ser.11 = { #The Nobility's Bid for Power
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -407,7 +407,7 @@ flavor_ser.12 = { #The Fleeting Control of the Crown
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -544,7 +544,7 @@ flavor_ser.30 = { #The Dreams of [GetCharacter('ser_stefan_dusan').GetNameWithNo
 	historical_info = flavor_ser.30.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -635,7 +635,7 @@ flavor_ser.31 = { #The Dawn of a New Empire
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -786,7 +786,7 @@ flavor_ser.40 = { #The Flight of [target_character.GetNameWithNoTooltip]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -794,13 +794,13 @@ flavor_ser.40 = { #The Flight of [target_character.GetNameWithNoTooltip]
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:BYZ
-		is_at_war_with = c:BYZ
+		country_exists = c:DUMMY
+		is_at_war_with = c:DUMMY
 		character:byz_john_kantakouzenos = {
 			is_alive = yes
 			is_ruler = no
 			is_regent = no
-			owner = c:BYZ
+			owner = c:DUMMY
 		}
 	}
 
@@ -820,12 +820,12 @@ flavor_ser.40 = { #The Flight of [target_character.GetNameWithNoTooltip]
 		character:byz_john_kantakouzenos = { move_country = ROOT }
 		change_gold_effect = { scale = -4 }
 		add_spy_network = {
-			target = c:BYZ
+			target = c:DUMMY
 			value = 100
 		}
 		add_army_tradition = army_tradition_extreme_bonus
 		custom_tooltip = flavor_ser.40_for_byz_tt
-		c:BYZ = { trigger_event_silently = flavor_ser.41 }
+		c:DUMMY = { trigger_event_silently = flavor_ser.41 }
 	}
 
 	option = {
@@ -869,7 +869,7 @@ flavor_ser.50 = { #[target_character.GetNameWithNoTooltip]'s Code
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -961,7 +961,7 @@ flavor_ser.60 = { #Growth of Vlasi & Meropsi
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1126,7 +1126,7 @@ flavor_ser.70 = { #A Capital Befitting an Empire
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1191,7 +1191,7 @@ flavor_ser.80 = { #Shield of the Balkans
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1201,10 +1201,10 @@ flavor_ser.80 = { #Shield of the Balkans
 		current_date > 476.9.4
 		country_rank = country_rank:rank_empire
 		war_score_versus = {
-			target = c:TUR
+			target = c:DUMMY
 			value <= -0.25
 		}
-		c:TUR = { is_great_power = yes }
+		c:DUMMY = { is_great_power = yes }
 		religion = religion:orthodox
 	}
 
@@ -1237,7 +1237,7 @@ flavor_ser.80 = { #Shield of the Balkans
 		name = flavor_ser.80.a
 	
 		trigger = {
-			c:PAP = {
+			c:DUMMY = {
 				is_subject = no
 				is_during_bankruptcy = no
 				at_war = no
@@ -1250,7 +1250,7 @@ flavor_ser.80 = { #Shield of the Balkans
 			type = estate_type:clergy_estate
 			value = estate_satisfaction_radical_penalty
 		}
-		c:PAP = { trigger_event_non_silently = flavor_ser.81 }
+		c:DUMMY = { trigger_event_non_silently = flavor_ser.81 }
 	}
 
 	option = {
@@ -1298,13 +1298,13 @@ flavor_ser.81 = {
 
 		create_relation = {
 			first = this
-			second = c:SER
+			second = c:DUMMY
 			type = relation_type:alliance
 		}
 		change_gold_effect = { scale = -12 }
-		c:SER = {
+		c:DUMMY = {
 			add_gold = {
-				value = c:PAP.monthly_income_total
+				value = c:DUMMY.monthly_income_total
 				multiply = 12
 			}
 			set_variable = received_cash_and_alliance_variable
@@ -1316,23 +1316,23 @@ flavor_ser.81 = {
 		name = flavor_ser.81.b
 
 		add_army_tradition = army_tradition_ultimate_penalty
-		c:SER = { set_variable = ser_men_variable }
+		c:DUMMY = { set_variable = ser_men_variable }
 	}
 
 	option = { #Send Coin
 		name = flavor_ser.81.c
 
 		change_gold_effect = { scale = -12 }
-		c:SER = { set_variable = ser_coin_variable }
+		c:DUMMY = { set_variable = ser_coin_variable }
 	}
 
 	option = { #Send Nothing
 		name = flavor_ser.81.d
 
-		c:SER = { set_variable = ser_nothing_variable }	
+		c:DUMMY = { set_variable = ser_nothing_variable }	
 	}
 	after = {
-		c:SER = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_ser.83
 		}
 	}
@@ -1353,10 +1353,10 @@ flavor_ser.82 = {
 
 		create_relation = {
 			first = this
-			second = c:SER
+			second = c:DUMMY
 			type = relation_type:alliance
 		}
-		c:SER = { set_variable = ser_alliance_variable }
+		c:DUMMY = { set_variable = ser_alliance_variable }
 	
 	}
 
@@ -1364,23 +1364,23 @@ flavor_ser.82 = {
 		name = flavor_ser.82.b
 
 		add_army_tradition = army_tradition_ultimate_penalty
-		c:SER = { set_variable = ser_men_variable }
+		c:DUMMY = { set_variable = ser_men_variable }
 	}
 
 	option = { #Send Coin
 		name = flavor_ser.82.c
 	
 		change_gold_effect = { scale = -12	}
-		c:SER = { set_variable = ser_coin_variable }
+		c:DUMMY = { set_variable = ser_coin_variable }
 	}
 
 	option = { #Send Nothing
 		name = flavor_ser.82.d
 
-		c:SER = { set_variable = ser_nothing_variable }	
+		c:DUMMY = { set_variable = ser_nothing_variable }	
 	}
 	after = {
-		c:SER = {
+		c:DUMMY = {
 			trigger_event_silently = flavor_ser.84
 		}
 	}
@@ -1407,12 +1407,12 @@ flavor_ser.83 = {
 
 		show_as_tooltip = {
 			create_relation = {
-				first = c:PAP
+				first = c:DUMMY
 				second = root
 				type = relation_type:alliance
 			}
 			add_gold = {
-				value = c:PAP.monthly_income_total
+				value = c:DUMMY.monthly_income_total
 				multiply = 12
 			}
 		}
@@ -1445,7 +1445,7 @@ flavor_ser.83 = {
 		}
 
 		add_gold = {
-			value = c:PAP.monthly_income_trade_and_tax
+			value = c:DUMMY.monthly_income_trade_and_tax
 			multiply = 12
 		}
 		remove_variable = ser_coin_variable
@@ -1542,7 +1542,7 @@ flavor_ser.90 = { #The Monastery of Manasija
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1613,7 +1613,7 @@ flavor_ser.91 = { #The Resava School
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1737,7 +1737,7 @@ flavor_ser.110 = { #Novo Brdo grows
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1791,7 +1791,7 @@ flavor_ser.120 = { #Gold found in Lece
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1856,7 +1856,7 @@ flavor_ser.130 = { #The Fortress of Smederevo
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1942,7 +1942,7 @@ flavor_ser.140 = { #The Father of Modern Serbian Literature
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2023,7 +2023,7 @@ flavor_ser.150 = { #The Recapture of Belgrade
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2073,7 +2073,7 @@ flavor_ser.160 = { #Battle of Kosovo
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2085,7 +2085,7 @@ flavor_ser.160 = { #Battle of Kosovo
 			text = variable_battle_of_kosovo_var_tt
 			has_variable = battle_of_kosovo_var
 		}
-		is_at_war_with = c:TUR
+		is_at_war_with = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -2117,7 +2117,7 @@ flavor_ser.170 = { # Belgrade - the White Phoenix
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2164,7 +2164,7 @@ flavor_ser.180 = { # Revising the Zakonopravilo
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2212,7 +2212,7 @@ flavor_ser.190 = { # Hilandar Monastery
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2261,7 +2261,7 @@ flavor_ser.200 = { #Vidovdan
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2310,7 +2310,7 @@ flavor_ser.210 = { # The Novo Brdo Code
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2369,7 +2369,7 @@ flavor_ser.220 = { #Palman Bracht
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2424,7 +2424,7 @@ flavor_ser.230 = { #The Golubac Fortress
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2472,7 +2472,7 @@ flavor_ser.240 = { #The Illyrian Movement
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2514,7 +2514,7 @@ flavor_ser.250 = { #Makarije Sokolovic
 	image = "gfx/interface/illustrations/international_organization_types/autocephalous_patriarchate.dds"
 
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2567,7 +2567,7 @@ flavor_ser.260 = { #The Secession of Zeta
 	historical_info = flavor_ser.260.historical_info
 
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2575,9 +2575,9 @@ flavor_ser.260 = { #The Secession of Zeta
 
 	trigger = {
 		current_date > 476.9.4
-		NOT = { country_exists = c:ZTA }
+		NOT = { country_exists = c:DUMMY }
 		any_owned_location = {
-			is_core_of = c:ZTA
+			is_core_of = c:DUMMY
 			count > 4
 		}
 		"estate_power(estate_type:nobles_estate)" > 0.50
@@ -2618,8 +2618,8 @@ flavor_ser.260 = { #The Secession of Zeta
 			script = ser_durad
 			create_in_limbo = yes
 		}
-		create_country_from_cores_in_our_locations = c:ZTA
-		c:ZTA = {
+		create_country_from_cores_in_our_locations = c:DUMMY
+		c:DUMMY = {
 			set_new_ruler = scope:target_character
 		}
 	}
@@ -2639,15 +2639,15 @@ flavor_ser.260 = { #The Secession of Zeta
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_severe_penalty }
 		change_societal_value = { type = centralization_vs_decentralization value = societal_value_move_to_left }
 		add_casus_belli = {
-			target = c:ZTA
+			target = c:DUMMY
 			type = casus_belli:cb_annex
 		}
 		if = {
 			limit = {
-				can_declare_legal_war_on = { target = c:ZTA }
+				can_declare_legal_war_on = { target = c:DUMMY }
 			}
 			declare_war_with_cb = {
-				target = c:ZTA
+				target = c:DUMMY
 				type = casus_belli:cb_annex
 			}
 		}
@@ -2659,6 +2659,6 @@ flavor_ser.260 = { #The Secession of Zeta
 		add_stability = stability_severe_penalty
 		add_legitimacy = legitimacy_severe_penalty
 		change_societal_value = { type = centralization_vs_decentralization value = societal_value_move_to_right }
-		change_player = c:ZTA
+		change_player = c:DUMMY
 	}
 }

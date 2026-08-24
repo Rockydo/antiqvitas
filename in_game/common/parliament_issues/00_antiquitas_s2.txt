@@ -9,7 +9,17 @@ antq_issue_roman_census_review = {
 	allow = {
 		parliament_type = parliament_type:antq_roman_senate
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_roman_senate
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_roman_census_review_outcome years = 10 mode = add_and_extend }
 	}
@@ -24,7 +34,17 @@ antq_issue_roman_annona_commission = {
 	allow = {
 		parliament_type = parliament_type:antq_roman_senate
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_roman_senate
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_roman_annona_commission_outcome years = 10 mode = add_and_extend }
 	}
@@ -39,7 +59,17 @@ antq_issue_roman_legionary_settlement = {
 	allow = {
 		parliament_type = parliament_type:antq_roman_senate
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_roman_senate
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_roman_legionary_settlement_outcome years = 10 mode = add_and_extend }
 	}
@@ -54,7 +84,17 @@ antq_issue_roman_provincial_appeals = {
 	allow = {
 		parliament_type = parliament_type:antq_roman_senate
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_roman_senate
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_roman_provincial_appeals_outcome years = 10 mode = add_and_extend }
 	}
@@ -69,7 +109,17 @@ antq_issue_roman_public_works_appropriation = {
 	allow = {
 		parliament_type = parliament_type:antq_roman_senate
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_roman_senate
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_roman_public_works_appropriation_outcome years = 10 mode = add_and_extend }
 	}
@@ -84,7 +134,17 @@ antq_issue_roman_mint_standard = {
 	allow = {
 		parliament_type = parliament_type:antq_roman_senate
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_roman_senate
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_roman_mint_standard_outcome years = 10 mode = add_and_extend }
 	}
@@ -99,7 +159,17 @@ antq_issue_roman_client_king_settlement = {
 	allow = {
 		parliament_type = parliament_type:antq_roman_senate
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_roman_senate
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_roman_client_king_settlement_outcome years = 10 mode = add_and_extend }
 	}
@@ -114,7 +184,17 @@ antq_issue_roman_fleet_supply_contract = {
 	allow = {
 		parliament_type = parliament_type:antq_roman_senate
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_roman_senate
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_roman_fleet_supply_contract_outcome years = 10 mode = add_and_extend }
 	}
@@ -129,7 +209,17 @@ antq_issue_roman_pontifical_calendar_review = {
 	allow = {
 		parliament_type = parliament_type:antq_roman_senate
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_roman_senate
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_roman_pontifical_calendar_review_outcome years = 10 mode = add_and_extend }
 	}
@@ -144,7 +234,17 @@ antq_issue_late_roman_prefectural_assessment = {
 	allow = {
 		parliament_type = parliament_type:antq_imperial_consistory
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_imperial_consistory
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_late_roman_prefectural_assessment_outcome years = 10 mode = add_and_extend }
 	}
@@ -159,7 +259,17 @@ antq_issue_late_roman_imperial_appeals = {
 	allow = {
 		parliament_type = parliament_type:antq_imperial_consistory
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_imperial_consistory
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_late_roman_imperial_appeals_outcome years = 10 mode = add_and_extend }
 	}
@@ -174,7 +284,17 @@ antq_issue_late_roman_military_supply_allocation = {
 	allow = {
 		parliament_type = parliament_type:antq_imperial_consistory
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_imperial_consistory
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_late_roman_military_supply_allocation_outcome years = 10 mode = add_and_extend }
 	}
@@ -189,7 +309,17 @@ antq_issue_han_commandery_audit = {
 	allow = {
 		parliament_type = parliament_type:antq_han_court_conference
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_han_court_conference
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_han_commandery_audit_outcome years = 10 mode = add_and_extend }
 	}
@@ -204,7 +334,17 @@ antq_issue_han_granary_allocation = {
 	allow = {
 		parliament_type = parliament_type:antq_han_court_conference
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_han_court_conference
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_han_granary_allocation_outcome years = 10 mode = add_and_extend }
 	}
@@ -219,7 +359,17 @@ antq_issue_han_frontier_dispatch = {
 	allow = {
 		parliament_type = parliament_type:antq_han_court_conference
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_han_court_conference
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_han_frontier_dispatch_outcome years = 10 mode = add_and_extend }
 	}
@@ -234,7 +384,17 @@ antq_issue_han_official_recommendations = {
 	allow = {
 		parliament_type = parliament_type:antq_han_court_conference
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_han_court_conference
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_han_official_recommendations_outcome years = 10 mode = add_and_extend }
 	}
@@ -249,7 +409,17 @@ antq_issue_han_justice_docket = {
 	allow = {
 		parliament_type = parliament_type:antq_han_court_conference
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_han_court_conference
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_han_justice_docket_outcome years = 10 mode = add_and_extend }
 	}
@@ -264,7 +434,17 @@ antq_issue_han_household_register_revision = {
 	allow = {
 		parliament_type = parliament_type:antq_han_court_conference
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_han_court_conference
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_han_household_register_revision_outcome years = 10 mode = add_and_extend }
 	}
@@ -279,7 +459,17 @@ antq_issue_han_salt_iron_supply = {
 	allow = {
 		parliament_type = parliament_type:antq_han_court_conference
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_han_court_conference
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_han_salt_iron_supply_outcome years = 10 mode = add_and_extend }
 	}
@@ -294,7 +484,17 @@ antq_issue_han_western_regions_audience = {
 	allow = {
 		parliament_type = parliament_type:antq_han_court_conference
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_han_court_conference
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_han_western_regions_audience_outcome years = 10 mode = add_and_extend }
 	}
@@ -309,7 +509,17 @@ antq_issue_han_ritual_calendar = {
 	allow = {
 		parliament_type = parliament_type:antq_han_court_conference
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_han_court_conference
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_han_ritual_calendar_outcome years = 10 mode = add_and_extend }
 	}
@@ -324,7 +534,17 @@ antq_issue_late_han_secretariat_authority = {
 	allow = {
 		parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_late_han_secretariat_authority_outcome years = 10 mode = add_and_extend }
 	}
@@ -339,7 +559,17 @@ antq_issue_late_han_provincial_emergency_command = {
 	allow = {
 		parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_late_han_provincial_emergency_command_outcome years = 10 mode = add_and_extend }
 	}
@@ -354,7 +584,17 @@ antq_issue_late_han_classics_recommendation = {
 	allow = {
 		parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_eastern_han_imperial_secretariat
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_late_han_classics_recommendation_outcome years = 10 mode = add_and_extend }
 	}
@@ -369,7 +609,17 @@ antq_issue_iranian_host_contribution = {
 	allow = {
 		parliament_type = parliament_type:antq_iranian_great_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_iranian_great_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_iranian_host_contribution_outcome years = 10 mode = add_and_extend }
 	}
@@ -384,7 +634,17 @@ antq_issue_iranian_road_protection = {
 	allow = {
 		parliament_type = parliament_type:antq_iranian_great_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_iranian_great_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_iranian_road_protection_outcome years = 10 mode = add_and_extend }
 	}
@@ -399,7 +659,17 @@ antq_issue_iranian_silver_reckoning = {
 	allow = {
 		parliament_type = parliament_type:antq_iranian_great_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_iranian_great_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_iranian_silver_reckoning_outcome years = 10 mode = add_and_extend }
 	}
@@ -414,7 +684,17 @@ antq_issue_iranian_succession_acclamation = {
 	allow = {
 		parliament_type = parliament_type:antq_iranian_great_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_iranian_great_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_iranian_succession_acclamation_outcome years = 10 mode = add_and_extend }
 	}
@@ -429,7 +709,17 @@ antq_issue_iranian_subking_tribute = {
 	allow = {
 		parliament_type = parliament_type:antq_iranian_great_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_iranian_great_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_iranian_subking_tribute_outcome years = 10 mode = add_and_extend }
 	}
@@ -444,7 +734,17 @@ antq_issue_iranian_royal_domain_assessment = {
 	allow = {
 		parliament_type = parliament_type:antq_iranian_great_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_iranian_great_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_iranian_royal_domain_assessment_outcome years = 10 mode = add_and_extend }
 	}
@@ -459,7 +759,17 @@ antq_issue_iranian_mounted_host_quota = {
 	allow = {
 		parliament_type = parliament_type:antq_iranian_great_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_iranian_great_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_iranian_mounted_host_quota_outcome years = 10 mode = add_and_extend }
 	}
@@ -474,7 +784,17 @@ antq_issue_iranian_river_caravan_customs = {
 	allow = {
 		parliament_type = parliament_type:antq_iranian_great_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_iranian_great_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_iranian_river_caravan_customs_outcome years = 10 mode = add_and_extend }
 	}
@@ -489,7 +809,17 @@ antq_issue_iranian_hostage_oath_settlement = {
 	allow = {
 		parliament_type = parliament_type:antq_iranian_great_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_iranian_great_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_iranian_hostage_oath_settlement_outcome years = 10 mode = add_and_extend }
 	}
@@ -504,7 +834,17 @@ antq_issue_sasanian_provincial_assessment = {
 	allow = {
 		parliament_type = parliament_type:antq_sasanian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_sasanian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_sasanian_provincial_assessment_outcome years = 10 mode = add_and_extend }
 	}
@@ -519,7 +859,17 @@ antq_issue_sasanian_frontier_command = {
 	allow = {
 		parliament_type = parliament_type:antq_sasanian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_sasanian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_sasanian_frontier_command_outcome years = 10 mode = add_and_extend }
 	}
@@ -534,7 +884,17 @@ antq_issue_sasanian_judicial_religious_settlement = {
 	allow = {
 		parliament_type = parliament_type:antq_sasanian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_sasanian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_sasanian_judicial_religious_settlement_outcome years = 10 mode = add_and_extend }
 	}
@@ -549,7 +909,17 @@ antq_issue_civic_harbor_revision = {
 	allow = {
 		parliament_type = parliament_type:antq_civic_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_civic_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_civic_harbor_revision_outcome years = 10 mode = add_and_extend }
 	}
@@ -564,7 +934,17 @@ antq_issue_civic_muster_roll = {
 	allow = {
 		parliament_type = parliament_type:antq_civic_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_civic_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_civic_muster_roll_outcome years = 10 mode = add_and_extend }
 	}
@@ -579,7 +959,17 @@ antq_issue_civic_sanctuary_embassy = {
 	allow = {
 		parliament_type = parliament_type:antq_civic_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_civic_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_civic_sanctuary_embassy_outcome years = 10 mode = add_and_extend }
 	}
@@ -594,7 +984,17 @@ antq_issue_gana_delegate_apportionment = {
 	allow = {
 		parliament_type = parliament_type:antq_gana_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_gana_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_gana_delegate_apportionment_outcome years = 10 mode = add_and_extend }
 	}
@@ -609,7 +1009,17 @@ antq_issue_gana_confederate_muster = {
 	allow = {
 		parliament_type = parliament_type:antq_gana_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_gana_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_gana_confederate_muster_outcome years = 10 mode = add_and_extend }
 	}
@@ -624,7 +1034,17 @@ antq_issue_gana_shared_granary = {
 	allow = {
 		parliament_type = parliament_type:antq_gana_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_gana_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_gana_shared_granary_outcome years = 10 mode = add_and_extend }
 	}
@@ -639,7 +1059,17 @@ antq_issue_steppe_pasture_circuit = {
 	allow = {
 		parliament_type = parliament_type:antq_confederation_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_confederation_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_steppe_pasture_circuit_outcome years = 10 mode = add_and_extend }
 	}
@@ -654,7 +1084,17 @@ antq_issue_steppe_wing_muster = {
 	allow = {
 		parliament_type = parliament_type:antq_confederation_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_confederation_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_steppe_wing_muster_outcome years = 10 mode = add_and_extend }
 	}
@@ -669,7 +1109,17 @@ antq_issue_steppe_envoy_passage = {
 	allow = {
 		parliament_type = parliament_type:antq_confederation_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_confederation_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_steppe_envoy_passage_outcome years = 10 mode = add_and_extend }
 	}
@@ -684,7 +1134,17 @@ antq_issue_tribal_moot_calendar = {
 	allow = {
 		parliament_type = parliament_type:antq_tribal_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_tribal_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_tribal_moot_calendar_outcome years = 10 mode = add_and_extend }
 	}
@@ -699,7 +1159,17 @@ antq_issue_tribal_host_muster = {
 	allow = {
 		parliament_type = parliament_type:antq_tribal_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_tribal_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_tribal_host_muster_outcome years = 10 mode = add_and_extend }
 	}
@@ -714,7 +1184,17 @@ antq_issue_tribal_river_peace = {
 	allow = {
 		parliament_type = parliament_type:antq_tribal_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_tribal_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_tribal_river_peace_outcome years = 10 mode = add_and_extend }
 	}
@@ -729,7 +1209,17 @@ antq_issue_sacral_storehouse_audit = {
 	allow = {
 		parliament_type = parliament_type:antq_sacral_court
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_sacral_court
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_sacral_storehouse_audit_outcome years = 10 mode = add_and_extend }
 	}
@@ -744,7 +1234,17 @@ antq_issue_sacral_canal_labor = {
 	allow = {
 		parliament_type = parliament_type:antq_sacral_court
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_sacral_court
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_sacral_canal_labor_outcome years = 10 mode = add_and_extend }
 	}
@@ -759,7 +1259,17 @@ antq_issue_sacral_seed_reserve = {
 	allow = {
 		parliament_type = parliament_type:antq_sacral_court
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_sacral_court
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_sacral_seed_reserve_outcome years = 10 mode = add_and_extend }
 	}
@@ -774,7 +1284,17 @@ antq_issue_royal_tribute_review = {
 	allow = {
 		parliament_type = parliament_type:antq_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_royal_tribute_review_outcome years = 10 mode = add_and_extend }
 	}
@@ -789,7 +1309,17 @@ antq_issue_royal_embassy_fund = {
 	allow = {
 		parliament_type = parliament_type:antq_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_royal_embassy_fund_outcome years = 10 mode = add_and_extend }
 	}
@@ -804,7 +1334,17 @@ antq_issue_royal_fortress_stores = {
 	allow = {
 		parliament_type = parliament_type:antq_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_royal_fortress_stores_outcome years = 10 mode = add_and_extend }
 	}
@@ -819,7 +1359,17 @@ antq_issue_xiongnu_wing_contribution = {
 	allow = {
 		parliament_type = parliament_type:antq_xiongnu_wing_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_xiongnu_wing_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_xiongnu_wing_contribution_outcome years = 10 mode = add_and_extend }
 	}
@@ -834,7 +1384,17 @@ antq_issue_xiongnu_pasture_compact = {
 	allow = {
 		parliament_type = parliament_type:antq_xiongnu_wing_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_xiongnu_wing_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_xiongnu_pasture_compact_outcome years = 10 mode = add_and_extend }
 	}
@@ -849,7 +1409,17 @@ antq_issue_xiongnu_frontier_exchange = {
 	allow = {
 		parliament_type = parliament_type:antq_xiongnu_wing_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_xiongnu_wing_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_xiongnu_frontier_exchange_outcome years = 10 mode = add_and_extend }
 	}
@@ -864,7 +1434,17 @@ antq_issue_xiongnu_chanyu_succession = {
 	allow = {
 		parliament_type = parliament_type:antq_xiongnu_wing_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_xiongnu_wing_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_xiongnu_chanyu_succession_outcome years = 10 mode = add_and_extend }
 	}
@@ -879,7 +1459,17 @@ antq_issue_xiongnu_wing_appointments = {
 	allow = {
 		parliament_type = parliament_type:antq_xiongnu_wing_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_xiongnu_wing_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_xiongnu_wing_appointments_outcome years = 10 mode = add_and_extend }
 	}
@@ -894,7 +1484,17 @@ antq_issue_xiongnu_han_treaty = {
 	allow = {
 		parliament_type = parliament_type:antq_xiongnu_wing_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_xiongnu_wing_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_xiongnu_han_treaty_outcome years = 10 mode = add_and_extend }
 	}
@@ -909,7 +1509,17 @@ antq_issue_xiongnu_western_tribute = {
 	allow = {
 		parliament_type = parliament_type:antq_xiongnu_wing_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_xiongnu_wing_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_xiongnu_western_tribute_outcome years = 10 mode = add_and_extend }
 	}
@@ -924,7 +1534,17 @@ antq_issue_xiongnu_dependent_households = {
 	allow = {
 		parliament_type = parliament_type:antq_xiongnu_wing_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_xiongnu_wing_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_xiongnu_dependent_households_outcome years = 10 mode = add_and_extend }
 	}
@@ -939,7 +1559,17 @@ antq_issue_xiongnu_seasonal_assembly = {
 	allow = {
 		parliament_type = parliament_type:antq_xiongnu_wing_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_xiongnu_wing_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_xiongnu_seasonal_assembly_outcome years = 10 mode = add_and_extend }
 	}
@@ -954,7 +1584,17 @@ antq_issue_xianbei_lineage_federation = {
 	allow = {
 		parliament_type = parliament_type:antq_xianbei_chiefly_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_xianbei_lineage_federation_outcome years = 10 mode = add_and_extend }
 	}
@@ -969,7 +1609,17 @@ antq_issue_xianbei_pasture_hunt = {
 	allow = {
 		parliament_type = parliament_type:antq_xianbei_chiefly_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_xianbei_pasture_hunt_outcome years = 10 mode = add_and_extend }
 	}
@@ -984,7 +1634,17 @@ antq_issue_xianbei_frontier_exchange = {
 	allow = {
 		parliament_type = parliament_type:antq_xianbei_chiefly_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_xianbei_chiefly_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_xianbei_frontier_exchange_outcome years = 10 mode = add_and_extend }
 	}
@@ -999,7 +1659,17 @@ antq_issue_goguryeo_fortress_rotation = {
 	allow = {
 		parliament_type = parliament_type:antq_goguryeo_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_goguryeo_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_goguryeo_fortress_rotation_outcome years = 10 mode = add_and_extend }
 	}
@@ -1014,7 +1684,17 @@ antq_issue_goguryeo_grain_reserve = {
 	allow = {
 		parliament_type = parliament_type:antq_goguryeo_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_goguryeo_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_goguryeo_grain_reserve_outcome years = 10 mode = add_and_extend }
 	}
@@ -1029,7 +1709,17 @@ antq_issue_goguryeo_craft_supply = {
 	allow = {
 		parliament_type = parliament_type:antq_goguryeo_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_goguryeo_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_goguryeo_craft_supply_outcome years = 10 mode = add_and_extend }
 	}
@@ -1044,7 +1734,17 @@ antq_issue_kushite_provincial_measure = {
 	allow = {
 		parliament_type = parliament_type:antq_meroitic_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_meroitic_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_kushite_provincial_measure_outcome years = 10 mode = add_and_extend }
 	}
@@ -1059,7 +1759,17 @@ antq_issue_kushite_temple_inventory = {
 	allow = {
 		parliament_type = parliament_type:antq_meroitic_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_meroitic_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_kushite_temple_inventory_outcome years = 10 mode = add_and_extend }
 	}
@@ -1074,7 +1784,17 @@ antq_issue_kushite_workshop_terms = {
 	allow = {
 		parliament_type = parliament_type:antq_meroitic_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_meroitic_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_kushite_workshop_terms_outcome years = 10 mode = add_and_extend }
 	}
@@ -1089,7 +1809,17 @@ antq_issue_lankan_tank_repairs = {
 	allow = {
 		parliament_type = parliament_type:antq_anuradhapura_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_anuradhapura_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_lankan_tank_repairs_outcome years = 10 mode = add_and_extend }
 	}
@@ -1104,7 +1834,17 @@ antq_issue_lankan_endowment_review = {
 	allow = {
 		parliament_type = parliament_type:antq_anuradhapura_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_anuradhapura_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_lankan_endowment_review_outcome years = 10 mode = add_and_extend }
 	}
@@ -1119,7 +1859,17 @@ antq_issue_lankan_regional_hearing = {
 	allow = {
 		parliament_type = parliament_type:antq_anuradhapura_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_anuradhapura_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_lankan_regional_hearing_outcome years = 10 mode = add_and_extend }
 	}
@@ -1134,7 +1884,17 @@ antq_issue_armenian_fortress_service = {
 	allow = {
 		parliament_type = parliament_type:antq_armenian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_armenian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_armenian_fortress_service_outcome years = 10 mode = add_and_extend }
 	}
@@ -1149,7 +1909,17 @@ antq_issue_armenian_sanctuary_review = {
 	allow = {
 		parliament_type = parliament_type:antq_armenian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_armenian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_armenian_sanctuary_review_outcome years = 10 mode = add_and_extend }
 	}
@@ -1164,7 +1934,17 @@ antq_issue_armenian_pass_guarantees = {
 	allow = {
 		parliament_type = parliament_type:antq_armenian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_armenian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_armenian_pass_guarantees_outcome years = 10 mode = add_and_extend }
 	}
@@ -1179,7 +1959,17 @@ antq_issue_nabataean_water_rotation = {
 	allow = {
 		parliament_type = parliament_type:antq_nabataean_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_nabataean_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_nabataean_water_rotation_outcome years = 10 mode = add_and_extend }
 	}
@@ -1194,7 +1984,17 @@ antq_issue_nabataean_sanctuary_inventory = {
 	allow = {
 		parliament_type = parliament_type:antq_nabataean_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_nabataean_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_nabataean_sanctuary_inventory_outcome years = 10 mode = add_and_extend }
 	}
@@ -1209,7 +2009,17 @@ antq_issue_nabataean_customs_revision = {
 	allow = {
 		parliament_type = parliament_type:antq_nabataean_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_nabataean_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_nabataean_customs_revision_outcome years = 10 mode = add_and_extend }
 	}
@@ -1224,7 +2034,17 @@ antq_issue_himyarite_terrace_repairs = {
 	allow = {
 		parliament_type = parliament_type:antq_himyarite_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_himyarite_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_himyarite_terrace_repairs_outcome years = 10 mode = add_and_extend }
 	}
@@ -1239,7 +2059,17 @@ antq_issue_himyarite_sanctuary_stores = {
 	allow = {
 		parliament_type = parliament_type:antq_himyarite_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_himyarite_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_himyarite_sanctuary_stores_outcome years = 10 mode = add_and_extend }
 	}
@@ -1254,7 +2084,17 @@ antq_issue_himyarite_incense_passage = {
 	allow = {
 		parliament_type = parliament_type:antq_himyarite_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_himyarite_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_himyarite_incense_passage_outcome years = 10 mode = add_and_extend }
 	}
@@ -1269,7 +2109,17 @@ antq_issue_satavahana_regional_service = {
 	allow = {
 		parliament_type = parliament_type:antq_satavahana_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_satavahana_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_satavahana_regional_service_outcome years = 10 mode = add_and_extend }
 	}
@@ -1284,7 +2134,17 @@ antq_issue_satavahana_donation_inventory = {
 	allow = {
 		parliament_type = parliament_type:antq_satavahana_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_satavahana_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_satavahana_donation_inventory_outcome years = 10 mode = add_and_extend }
 	}
@@ -1299,7 +2159,17 @@ antq_issue_satavahana_guild_passage = {
 	allow = {
 		parliament_type = parliament_type:antq_satavahana_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_satavahana_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_satavahana_guild_passage_outcome years = 10 mode = add_and_extend }
 	}
@@ -1314,7 +2184,17 @@ antq_issue_catuvellaunian_oppidum_contributions = {
 	allow = {
 		parliament_type = parliament_type:antq_catuvellaunian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_catuvellaunian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_catuvellaunian_oppidum_contributions_outcome years = 10 mode = add_and_extend }
 	}
@@ -1329,7 +2209,17 @@ antq_issue_catuvellaunian_sacred_place_review = {
 	allow = {
 		parliament_type = parliament_type:antq_catuvellaunian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_catuvellaunian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_catuvellaunian_sacred_place_review_outcome years = 10 mode = add_and_extend }
 	}
@@ -1344,7 +2234,17 @@ antq_issue_catuvellaunian_channel_measures = {
 	allow = {
 		parliament_type = parliament_type:antq_catuvellaunian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_catuvellaunian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_catuvellaunian_channel_measures_outcome years = 10 mode = add_and_extend }
 	}
@@ -1359,7 +2259,17 @@ antq_issue_trinovantian_coin_issue = {
 	allow = {
 		parliament_type = parliament_type:antq_trinovantian_camulodunon_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_trinovantian_camulodunon_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_trinovantian_coin_issue_outcome years = 10 mode = add_and_extend }
 	}
@@ -1374,7 +2284,17 @@ antq_issue_trinovantian_oppidum_contributions = {
 	allow = {
 		parliament_type = parliament_type:antq_trinovantian_camulodunon_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_trinovantian_camulodunon_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_trinovantian_oppidum_contributions_outcome years = 10 mode = add_and_extend }
 	}
@@ -1389,7 +2309,17 @@ antq_issue_trinovantian_channel_exchange = {
 	allow = {
 		parliament_type = parliament_type:antq_trinovantian_camulodunon_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_trinovantian_camulodunon_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_trinovantian_channel_exchange_outcome years = 10 mode = add_and_extend }
 	}
@@ -1404,7 +2334,17 @@ antq_issue_brigantian_northern_muster = {
 	allow = {
 		parliament_type = parliament_type:antq_brigantian_northern_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_brigantian_northern_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_brigantian_northern_muster_outcome years = 10 mode = add_and_extend }
 	}
@@ -1419,7 +2359,17 @@ antq_issue_brigantian_pasture_peace = {
 	allow = {
 		parliament_type = parliament_type:antq_brigantian_northern_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_brigantian_northern_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_brigantian_pasture_peace_outcome years = 10 mode = add_and_extend }
 	}
@@ -1434,7 +2384,17 @@ antq_issue_brigantian_hillfort_stores = {
 	allow = {
 		parliament_type = parliament_type:antq_brigantian_northern_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_brigantian_northern_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_brigantian_hillfort_stores_outcome years = 10 mode = add_and_extend }
 	}
@@ -1449,7 +2409,17 @@ antq_issue_durotrigian_coin_standard = {
 	allow = {
 		parliament_type = parliament_type:antq_durotrigian_hillfort_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_durotrigian_hillfort_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_durotrigian_coin_standard_outcome years = 10 mode = add_and_extend }
 	}
@@ -1464,7 +2434,17 @@ antq_issue_durotrigian_hillfort_contributions = {
 	allow = {
 		parliament_type = parliament_type:antq_durotrigian_hillfort_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_durotrigian_hillfort_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_durotrigian_hillfort_contributions_outcome years = 10 mode = add_and_extend }
 	}
@@ -1479,7 +2459,17 @@ antq_issue_durotrigian_field_settlement = {
 	allow = {
 		parliament_type = parliament_type:antq_durotrigian_hillfort_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_durotrigian_hillfort_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_durotrigian_field_settlement_outcome years = 10 mode = add_and_extend }
 	}
@@ -1494,7 +2484,17 @@ antq_issue_ivernian_cattle_gifts = {
 	allow = {
 		parliament_type = parliament_type:antq_ivernian_regional_gathering
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_ivernian_regional_gathering
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_ivernian_cattle_gifts_outcome years = 10 mode = add_and_extend }
 	}
@@ -1509,7 +2509,17 @@ antq_issue_ivernian_seaway_passage = {
 	allow = {
 		parliament_type = parliament_type:antq_ivernian_regional_gathering
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_ivernian_regional_gathering
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_ivernian_seaway_passage_outcome years = 10 mode = add_and_extend }
 	}
@@ -1524,7 +2534,17 @@ antq_issue_ivernian_offering_custody = {
 	allow = {
 		parliament_type = parliament_type:antq_ivernian_regional_gathering
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_ivernian_regional_gathering
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_ivernian_offering_custody_outcome years = 10 mode = add_and_extend }
 	}
@@ -1539,7 +2559,17 @@ antq_issue_aestian_amber_measure = {
 	allow = {
 		parliament_type = parliament_type:antq_aestian_amber_coast_gathering
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_aestian_amber_coast_gathering
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_aestian_amber_measure_outcome years = 10 mode = add_and_extend }
 	}
@@ -1554,7 +2584,17 @@ antq_issue_aestian_shore_passage = {
 	allow = {
 		parliament_type = parliament_type:antq_aestian_amber_coast_gathering
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_aestian_amber_coast_gathering
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_aestian_shore_passage_outcome years = 10 mode = add_and_extend }
 	}
@@ -1569,7 +2609,17 @@ antq_issue_aestian_offering_custody = {
 	allow = {
 		parliament_type = parliament_type:antq_aestian_amber_coast_gathering
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_aestian_amber_coast_gathering
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_aestian_offering_custody_outcome years = 10 mode = add_and_extend }
 	}
@@ -1584,7 +2634,17 @@ antq_issue_frisian_terp_maintenance = {
 	allow = {
 		parliament_type = parliament_type:antq_frisian_terp_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_frisian_terp_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_frisian_terp_maintenance_outcome years = 10 mode = add_and_extend }
 	}
@@ -1599,7 +2659,17 @@ antq_issue_frisian_hide_tribute = {
 	allow = {
 		parliament_type = parliament_type:antq_frisian_terp_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_frisian_terp_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_frisian_hide_tribute_outcome years = 10 mode = add_and_extend }
 	}
@@ -1614,7 +2684,17 @@ antq_issue_frisian_frontier_posture = {
 	allow = {
 		parliament_type = parliament_type:antq_frisian_terp_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_frisian_terp_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_frisian_frontier_posture_outcome years = 10 mode = add_and_extend }
 	}
@@ -1629,7 +2709,17 @@ antq_issue_dacian_rulers_compact = {
 	allow = {
 		parliament_type = parliament_type:antq_dacian_hillfort_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_dacian_hillfort_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_dacian_rulers_compact_outcome years = 10 mode = add_and_extend }
 	}
@@ -1644,7 +2734,17 @@ antq_issue_dacian_workshop_contributions = {
 	allow = {
 		parliament_type = parliament_type:antq_dacian_hillfort_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_dacian_hillfort_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_dacian_workshop_contributions_outcome years = 10 mode = add_and_extend }
 	}
@@ -1659,7 +2759,17 @@ antq_issue_dacian_pass_muster = {
 	allow = {
 		parliament_type = parliament_type:antq_dacian_hillfort_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_dacian_hillfort_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_dacian_pass_muster_outcome years = 10 mode = add_and_extend }
 	}
@@ -1674,7 +2784,17 @@ antq_issue_garamantian_water_rotation = {
 	allow = {
 		parliament_type = parliament_type:antq_garamantian_oasis_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_garamantian_oasis_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_garamantian_water_rotation_outcome years = 10 mode = add_and_extend }
 	}
@@ -1689,7 +2809,17 @@ antq_issue_garamantian_caravan_passage = {
 	allow = {
 		parliament_type = parliament_type:antq_garamantian_oasis_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_garamantian_oasis_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_garamantian_caravan_passage_outcome years = 10 mode = add_and_extend }
 	}
@@ -1704,7 +2834,17 @@ antq_issue_garamantian_oasis_contributions = {
 	allow = {
 		parliament_type = parliament_type:antq_garamantian_oasis_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_garamantian_oasis_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_garamantian_oasis_contributions_outcome years = 10 mode = add_and_extend }
 	}
@@ -1719,7 +2859,17 @@ antq_issue_marcomannic_retinue_service = {
 	allow = {
 		parliament_type = parliament_type:antq_marcomannic_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_marcomannic_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_marcomannic_retinue_service_outcome years = 10 mode = add_and_extend }
 	}
@@ -1734,7 +2884,17 @@ antq_issue_marcomannic_allied_host_terms = {
 	allow = {
 		parliament_type = parliament_type:antq_marcomannic_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_marcomannic_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_marcomannic_allied_host_terms_outcome years = 10 mode = add_and_extend }
 	}
@@ -1749,7 +2909,17 @@ antq_issue_marcomannic_sacred_oath_review = {
 	allow = {
 		parliament_type = parliament_type:antq_marcomannic_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_marcomannic_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_marcomannic_sacred_oath_review_outcome years = 10 mode = add_and_extend }
 	}
@@ -1764,7 +2934,17 @@ antq_issue_cheruscan_coalition_leadership = {
 	allow = {
 		parliament_type = parliament_type:antq_cheruscan_coalition_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_cheruscan_coalition_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_cheruscan_coalition_leadership_outcome years = 10 mode = add_and_extend }
 	}
@@ -1779,7 +2959,17 @@ antq_issue_cheruscan_compensation_peace = {
 	allow = {
 		parliament_type = parliament_type:antq_cheruscan_coalition_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_cheruscan_coalition_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_cheruscan_compensation_peace_outcome years = 10 mode = add_and_extend }
 	}
@@ -1794,7 +2984,17 @@ antq_issue_cheruscan_frontier_posture = {
 	allow = {
 		parliament_type = parliament_type:antq_cheruscan_coalition_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_cheruscan_coalition_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_cheruscan_frontier_posture_outcome years = 10 mode = add_and_extend }
 	}
@@ -1809,7 +3009,17 @@ antq_issue_chattian_host_levy = {
 	allow = {
 		parliament_type = parliament_type:antq_chattian_host_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_chattian_host_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_chattian_host_levy_outcome years = 10 mode = add_and_extend }
 	}
@@ -1824,7 +3034,17 @@ antq_issue_chattian_warrior_vow = {
 	allow = {
 		parliament_type = parliament_type:antq_chattian_host_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_chattian_host_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_chattian_warrior_vow_outcome years = 10 mode = add_and_extend }
 	}
@@ -1839,7 +3059,17 @@ antq_issue_chattian_forest_campaign = {
 	allow = {
 		parliament_type = parliament_type:antq_chattian_host_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_chattian_host_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_chattian_forest_campaign_outcome years = 10 mode = add_and_extend }
 	}
@@ -1854,7 +3084,17 @@ antq_issue_batavian_treaty_levy = {
 	allow = {
 		parliament_type = parliament_type:antq_batavian_island_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_batavian_island_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_batavian_treaty_levy_outcome years = 10 mode = add_and_extend }
 	}
@@ -1869,7 +3109,17 @@ antq_issue_batavian_river_passage = {
 	allow = {
 		parliament_type = parliament_type:antq_batavian_island_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_batavian_island_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_batavian_river_passage_outcome years = 10 mode = add_and_extend }
 	}
@@ -1884,7 +3134,17 @@ antq_issue_batavian_island_labor = {
 	allow = {
 		parliament_type = parliament_type:antq_batavian_island_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_batavian_island_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_batavian_island_labor_outcome years = 10 mode = add_and_extend }
 	}
@@ -1899,7 +3159,17 @@ antq_issue_semnonian_grove_assembly = {
 	allow = {
 		parliament_type = parliament_type:antq_semnonian_grove_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_semnonian_grove_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_semnonian_grove_assembly_outcome years = 10 mode = add_and_extend }
 	}
@@ -1914,7 +3184,17 @@ antq_issue_semnonian_district_muster = {
 	allow = {
 		parliament_type = parliament_type:antq_semnonian_grove_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_semnonian_grove_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_semnonian_district_muster_outcome years = 10 mode = add_and_extend }
 	}
@@ -1929,7 +3209,17 @@ antq_issue_semnonian_affiliate_guarantees = {
 	allow = {
 		parliament_type = parliament_type:antq_semnonian_grove_assembly
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_semnonian_grove_assembly
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_semnonian_affiliate_guarantees_outcome years = 10 mode = add_and_extend }
 	}
@@ -1944,7 +3234,17 @@ antq_issue_sabaean_waterwork_rotation = {
 	allow = {
 		parliament_type = parliament_type:antq_sabaean_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_sabaean_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_sabaean_waterwork_rotation_outcome years = 10 mode = add_and_extend }
 	}
@@ -1959,7 +3259,17 @@ antq_issue_sabaean_sanctuary_stores = {
 	allow = {
 		parliament_type = parliament_type:antq_sabaean_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_sabaean_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_sabaean_sanctuary_stores_outcome years = 10 mode = add_and_extend }
 	}
@@ -1974,7 +3284,17 @@ antq_issue_sabaean_incense_routes = {
 	allow = {
 		parliament_type = parliament_type:antq_sabaean_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_sabaean_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_sabaean_incense_routes_outcome years = 10 mode = add_and_extend }
 	}
@@ -1989,7 +3309,17 @@ antq_issue_mauretanian_royal_domain_review = {
 	allow = {
 		parliament_type = parliament_type:antq_mauretanian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_mauretanian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_mauretanian_royal_domain_review_outcome years = 10 mode = add_and_extend }
 	}
@@ -2004,7 +3334,17 @@ antq_issue_mauretanian_port_craft_measures = {
 	allow = {
 		parliament_type = parliament_type:antq_mauretanian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_mauretanian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_mauretanian_port_craft_measures_outcome years = 10 mode = add_and_extend }
 	}
@@ -2019,7 +3359,17 @@ antq_issue_mauretanian_frontier_watch_terms = {
 	allow = {
 		parliament_type = parliament_type:antq_mauretanian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_mauretanian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_mauretanian_frontier_watch_terms_outcome years = 10 mode = add_and_extend }
 	}
@@ -2034,7 +3384,17 @@ antq_issue_judean_temple_store_review = {
 	allow = {
 		parliament_type = parliament_type:antq_judean_ethnarchic_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_judean_ethnarchic_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_judean_temple_store_review_outcome years = 10 mode = add_and_extend }
 	}
@@ -2049,7 +3409,17 @@ antq_issue_judean_toparchy_assessment = {
 	allow = {
 		parliament_type = parliament_type:antq_judean_ethnarchic_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_judean_ethnarchic_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_judean_toparchy_assessment_outcome years = 10 mode = add_and_extend }
 	}
@@ -2064,7 +3434,17 @@ antq_issue_judean_pilgrim_market_order = {
 	allow = {
 		parliament_type = parliament_type:antq_judean_ethnarchic_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_judean_ethnarchic_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_judean_pilgrim_market_order_outcome years = 10 mode = add_and_extend }
 	}
@@ -2079,7 +3459,17 @@ antq_issue_cappadocian_domain_assessment = {
 	allow = {
 		parliament_type = parliament_type:antq_cappadocian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_cappadocian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_cappadocian_domain_assessment_outcome years = 10 mode = add_and_extend }
 	}
@@ -2094,7 +3484,17 @@ antq_issue_cappadocian_sanctuary_inventory = {
 	allow = {
 		parliament_type = parliament_type:antq_cappadocian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_cappadocian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_cappadocian_sanctuary_inventory_outcome years = 10 mode = add_and_extend }
 	}
@@ -2109,7 +3509,17 @@ antq_issue_cappadocian_pass_safe_conduct = {
 	allow = {
 		parliament_type = parliament_type:antq_cappadocian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_cappadocian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_cappadocian_pass_safe_conduct_outcome years = 10 mode = add_and_extend }
 	}
@@ -2124,7 +3534,17 @@ antq_issue_thracian_dynastic_hearing = {
 	allow = {
 		parliament_type = parliament_type:antq_thracian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_thracian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_thracian_dynastic_hearing_outcome years = 10 mode = add_and_extend }
 	}
@@ -2139,7 +3559,17 @@ antq_issue_thracian_city_measure_review = {
 	allow = {
 		parliament_type = parliament_type:antq_thracian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_thracian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_thracian_city_measure_review_outcome years = 10 mode = add_and_extend }
 	}
@@ -2154,7 +3584,17 @@ antq_issue_thracian_mountain_watch_rotation = {
 	allow = {
 		parliament_type = parliament_type:antq_thracian_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_thracian_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_thracian_mountain_watch_rotation_outcome years = 10 mode = add_and_extend }
 	}
@@ -2169,7 +3609,17 @@ antq_issue_bosporan_royal_seal_hearing = {
 	allow = {
 		parliament_type = parliament_type:antq_bosporan_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_bosporan_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_bosporan_royal_seal_hearing_outcome years = 10 mode = add_and_extend }
 	}
@@ -2184,7 +3634,17 @@ antq_issue_bosporan_grain_harbor_measure = {
 	allow = {
 		parliament_type = parliament_type:antq_bosporan_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_bosporan_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_bosporan_grain_harbor_measure_outcome years = 10 mode = add_and_extend }
 	}
@@ -2199,7 +3659,17 @@ antq_issue_bosporan_steppe_frontier_terms = {
 	allow = {
 		parliament_type = parliament_type:antq_bosporan_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_bosporan_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_bosporan_steppe_frontier_terms_outcome years = 10 mode = add_and_extend }
 	}
@@ -2214,7 +3684,17 @@ antq_issue_galilean_domain_assessment = {
 	allow = {
 		parliament_type = parliament_type:antq_galilean_tetrarchic_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_galilean_tetrarchic_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_galilean_domain_assessment_outcome years = 10 mode = add_and_extend }
 	}
@@ -2229,7 +3709,17 @@ antq_issue_galilean_ritual_store_review = {
 	allow = {
 		parliament_type = parliament_type:antq_galilean_tetrarchic_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_galilean_tetrarchic_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_galilean_ritual_store_review_outcome years = 10 mode = add_and_extend }
 	}
@@ -2244,7 +3734,17 @@ antq_issue_galilean_lake_market_measure = {
 	allow = {
 		parliament_type = parliament_type:antq_galilean_tetrarchic_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_galilean_tetrarchic_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_galilean_lake_market_measure_outcome years = 10 mode = add_and_extend }
 	}
@@ -2259,7 +3759,17 @@ antq_issue_batanean_highland_house_service = {
 	allow = {
 		parliament_type = parliament_type:antq_batanean_tetrarchic_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_batanean_tetrarchic_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_batanean_highland_house_service_outcome years = 10 mode = add_and_extend }
 	}
@@ -2274,7 +3784,17 @@ antq_issue_batanean_sanctuary_inventory = {
 	allow = {
 		parliament_type = parliament_type:antq_batanean_tetrarchic_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_batanean_tetrarchic_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_batanean_sanctuary_inventory_outcome years = 10 mode = add_and_extend }
 	}
@@ -2289,7 +3809,17 @@ antq_issue_batanean_frontier_rotation = {
 	allow = {
 		parliament_type = parliament_type:antq_batanean_tetrarchic_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_batanean_tetrarchic_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_batanean_frontier_rotation_outcome years = 10 mode = add_and_extend }
 	}
@@ -2304,7 +3834,17 @@ antq_issue_commagenean_dynastic_domain_hearing = {
 	allow = {
 		parliament_type = parliament_type:antq_commagenean_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_commagenean_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_commagenean_dynastic_domain_hearing_outcome years = 10 mode = add_and_extend }
 	}
@@ -2319,7 +3859,17 @@ antq_issue_commagenean_sanctuary_inventory = {
 	allow = {
 		parliament_type = parliament_type:antq_commagenean_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_commagenean_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_commagenean_sanctuary_inventory_outcome years = 10 mode = add_and_extend }
 	}
@@ -2334,7 +3884,17 @@ antq_issue_commagenean_euphrates_passage = {
 	allow = {
 		parliament_type = parliament_type:antq_commagenean_royal_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_commagenean_royal_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_commagenean_euphrates_passage_outcome years = 10 mode = add_and_extend }
 	}
@@ -2349,7 +3909,17 @@ antq_issue_emesan_dynastic_house_hearing = {
 	allow = {
 		parliament_type = parliament_type:antq_emesan_dynastic_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_emesan_dynastic_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_emesan_dynastic_house_hearing_outcome years = 10 mode = add_and_extend }
 	}
@@ -2364,7 +3934,17 @@ antq_issue_emesan_sanctuary_stores = {
 	allow = {
 		parliament_type = parliament_type:antq_emesan_dynastic_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_emesan_dynastic_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_emesan_sanctuary_stores_outcome years = 10 mode = add_and_extend }
 	}
@@ -2379,7 +3959,17 @@ antq_issue_emesan_caravan_city_measures = {
 	allow = {
 		parliament_type = parliament_type:antq_emesan_dynastic_council
 	}
-	chance = { add = 1 }
+	chance = {
+		add = {
+			if = {
+				limit = {
+					parliament_type = parliament_type:antq_emesan_dynastic_council
+				}
+				value = 1
+			}
+			else = { value = 0 }
+		}
+	}
 	on_debate_passed = {
 		add_country_modifier = { modifier = antq_issue_emesan_caravan_city_measures_outcome years = 10 mode = add_and_extend }
 	}

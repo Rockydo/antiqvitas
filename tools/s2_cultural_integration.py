@@ -261,7 +261,7 @@ def audit_rows() -> tuple[list[dict[str, str]], list[str], list[str]]:
         if overlap:
             failures.append(f"{tag}: accepted/tolerated overlap {sorted(overlap)}")
         unrecognized = resident - accepted - tolerated - {profile.primary_culture}
-        if unrecognized:
+        if unrecognized and profile.tolerated_mode != "explicit":
             failures.append(
                 f"{tag}: resident cultures lack a status: {', '.join(sorted(unrecognized))}"
             )
@@ -295,6 +295,7 @@ def audit_rows() -> tuple[list[dict[str, str]], list[str], list[str]]:
                 "resident_cultures": "|".join(sorted(resident)),
                 "accepted_cultures": "|".join(sorted(accepted)),
                 "tolerated_cultures": "|".join(sorted(tolerated)),
+                "unrecognized_resident_cultures": "|".join(sorted(unrecognized)),
                 "future_path_cultures": "|".join(sorted(future)),
                 "source": profile.source,
                 "confidence": profile.confidence,
@@ -335,6 +336,7 @@ def csv_payload(audit: list[dict[str, str]]) -> str:
         "resident_cultures",
         "accepted_cultures",
         "tolerated_cultures",
+        "unrecognized_resident_cultures",
         "future_path_cultures",
         "source",
         "confidence",
@@ -358,15 +360,17 @@ def md_payload(
         + json.loads(LOCAL_PATHS.read_text(encoding="utf-8"))["game_build_id"]
         + ".",
         "",
-        "| Tag | Path | Residents | Accepted | Tolerated | Future paths |",
-        "|---|---|---:|---:|---:|---:|",
+        "| Tag | Path | Residents | Accepted | Tolerated | Unrecognized | Future paths |",
+        "|---|---|---:|---:|---:|---:|---:|",
     ]
     for row in audit:
         count = lambda field: len([item for item in row[field].split("|") if item])
         lines.append(
             f"| {row['design_tag']} | {row['path']} | "
             f"{count('resident_cultures')} | {count('accepted_cultures')} | "
-            f"{count('tolerated_cultures')} | {count('future_path_cultures')} |"
+            f"{count('tolerated_cultures')} | "
+            f"{count('unrecognized_resident_cultures')} | "
+            f"{count('future_path_cultures')} |"
         )
     lines.extend(
         (

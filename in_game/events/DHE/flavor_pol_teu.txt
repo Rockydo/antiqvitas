@@ -17,7 +17,7 @@ flavor_pol_teu.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 40
@@ -30,9 +30,9 @@ flavor_pol_teu.1 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:TEU
-		NOT = { is_at_war_with = c:TEU }
-		c:TEU = {
+		country_exists = c:DUMMY
+		NOT = { is_at_war_with = c:DUMMY }
+		c:DUMMY = {
 			any_owned_location = {
 				is_core_of = ROOT
 			}
@@ -41,7 +41,7 @@ flavor_pol_teu.1 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:TEU = {
+		c:DUMMY = {
 			random_province = {
 				limit = {
 					any_location_in_province = {
@@ -55,7 +55,7 @@ flavor_pol_teu.1 = {
 				save_scope_as = teutonic_ruler_or_regent
 			}
 		}
-		c:POL = {
+		c:DUMMY = {
 			save_scope_as = pol_polish_side
 			ruler_or_regent = {
 				save_scope_as = polish_ruler_or_regent
@@ -98,10 +98,10 @@ flavor_pol_teu.2 = {
 		
 		historical_option = yes
 		trigger = {
-			country_exists = c:PAP
+			country_exists = c:DUMMY
 		}
 		
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = flavor_pol_teu.3
 				months = { 1 3 }

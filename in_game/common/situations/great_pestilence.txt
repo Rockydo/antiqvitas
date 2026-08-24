@@ -54,7 +54,6 @@ great_pestilence = {
 	}
 
 	on_start = {
-		set_variable = { name = original_outbreak value = no }
 		#Keep track of the most important regions
 		set_variable = { name = var_carib_was_infected value = no }
 		set_variable = { name = var_mesoamerica_was_infected value = no }

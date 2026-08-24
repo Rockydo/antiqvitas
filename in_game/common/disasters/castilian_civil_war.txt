@@ -138,8 +138,8 @@ castilian_civil_war = {
 							trigger = has_variable
 							ccw_sided_with_legal_heir = {
 								if = {
-									limit = { country_exists = c:FRA }
-									c:FRA = {
+									limit = { country_exists = c:DUMMY }
+									c:DUMMY = {
 										save_scope_as = pretender_ally_nation
 									}
 								}
@@ -152,8 +152,8 @@ castilian_civil_war = {
 							}
 							ccw_sided_with_bastard_heir = {
 								if = {
-									limit = { country_exists = c:ENG }
-									c:ENG = {
+									limit = { country_exists = c:DUMMY }
+									c:DUMMY = {
 										save_scope_as = pretender_ally_nation
 									}
 								}
@@ -183,8 +183,8 @@ castilian_civil_war = {
 							trigger = has_variable
 							ccw_sided_with_legal_heir = {
 								if = {
-									limit = { country_exists = c:ARA }
-									c:ARA = { save_scope_as = iberian_pretender_ally_nation }
+									limit = { country_exists = c:DUMMY }
+									c:DUMMY = { save_scope_as = iberian_pretender_ally_nation }
 								}
 								else = {
 									random_known_country = {
@@ -195,8 +195,8 @@ castilian_civil_war = {
 							}
 							ccw_sided_with_bastard_heir = {
 								if = {
-									limit = { country_exists = c:POR }
-									c:POR = { save_scope_as = iberian_pretender_ally_nation }
+									limit = { country_exists = c:DUMMY }
+									c:DUMMY = { save_scope_as = iberian_pretender_ally_nation }
 								}
 								else = {
 									random_known_country = {

@@ -23,6 +23,7 @@ CUSTOM_SOURCES = {
     "00_antiquitas_regional_buildings.txt",
     "00_antiquitas_roman_buildings.txt",
 }
+HARD_REMOVED_FILES = {"hre_buildings.txt"}
 DEFINITION = re.compile(r"^([A-Za-z][A-Za-z0-9_]*)\s*=\s*\{\s*(?:#.*)?$")
 DIRECT_SETUP = re.compile(
     r"(?m)^\s*([A-Za-z][A-Za-z0-9_]*)\s*=\s*\{\s*tag\s*="
@@ -32,6 +33,10 @@ TOWN_SETUP = re.compile(
 )
 UNLOCK = re.compile(r"(?m)^\s*unlock_building\s*=\s*([A-Za-z0-9_]+)")
 GATE = re.compile(r"^\s*(country_potential|location_potential|allow)\s*=\s*\{")
+INERT_CAPACITY_MODIFIER = re.compile(
+    r"^\s*(?:local_(?:manpower|sailors)|"
+    r"(?:manpower|sailors)_to_building_owner)\s*="
+)
 HAS_VARIABLE = re.compile(
     r"\bhas_variable\s*=\s*(?!\{)([A-Za-z][A-Za-z0-9_]*)"
 )
@@ -180,6 +185,18 @@ def strip_top_level_gate(
 
 
 def quarantine(source: Path, adapters: set[str]) -> tuple[bytes, list[str]]:
+    if source.name in HARD_REMOVED_FILES:
+        keys = definition_keys(source)
+        retained = sorted(set(keys).intersection(adapters))
+        if retained:
+            raise ValueError(
+                f"hard-removed building source contains active adapters: {retained}"
+            )
+        rendered = (
+            "# Exact-name ANTIQVITAS mirror. Medieval HRE-owned buildings are "
+            "absent because the AD 1 HRE sentinel cannot own buildings.\n"
+        )
+        return b"\xef\xbb\xbf" + rendered.encode("utf-8"), keys
     lines = source.read_text(encoding="utf-8-sig").splitlines(keepends=True)
     compatibility = definition_compatibility(lines)
     output: list[str] = []
@@ -202,6 +219,14 @@ def quarantine(source: Path, adapters: set[str]) -> tuple[bytes, list[str]]:
             continue
         if not active and depth == 1 and GATE.match(line):
             index, depth = strip_top_level_gate(lines, index, depth)
+            continue
+        if not active and INERT_CAPACITY_MODIFIER.match(line):
+            # New-game initialization validates output per employee even for
+            # definitions whose availability is permanently false.  These
+            # inherited capacity modifiers have no AD 1 consumer, but retaining
+            # them produces stock manpower/sailor efficiency diagnostics.  Strip
+            # the inert output while preserving every engine/script reference.
+            index += 1
             continue
         output.append(line)
         depth += line.count("{") - line.count("}")
@@ -292,7 +317,10 @@ def check() -> bool:
             continue
         text = target.read_text(encoding="utf-8-sig")
         expected_markers = len(set(keys) - adapters)
-        if text.count("ANTIQVITAS installed-building quarantine") != expected_markers:
+        if source.name in HARD_REMOVED_FILES:
+            if "Medieval HRE-owned buildings are absent" not in text:
+                failures.append(f"incomplete hard-removal mirror: {target}")
+        elif text.count("ANTIQVITAS installed-building quarantine") != expected_markers:
             failures.append(f"incomplete quarantine markers: {target}")
     if failures:
         print("m5_building_quarantine: FAIL")

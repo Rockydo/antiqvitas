@@ -8,7 +8,7 @@ flavor_lat.1 = { # The New Latin Bureaucracy
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 5
@@ -104,7 +104,7 @@ flavor_lat.2 = { # The Rising Turkish Threat in Anatolia
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 40
@@ -181,7 +181,7 @@ flavor_lat.3 = { # Old Enemies of Bulgaria and Serbia
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 12
@@ -193,8 +193,8 @@ flavor_lat.3 = { # Old Enemies of Bulgaria and Serbia
         at_war = no
         has_ruler = yes
         owns = location:constantinople
-        country_exists = c:SER
-        country_exists = c:BUL
+        country_exists = c:DUMMY
+        country_exists = c:DUMMY
     }
 
     illustration_tags = {
@@ -210,10 +210,10 @@ flavor_lat.3 = { # Old Enemies of Bulgaria and Serbia
         location:constantinople = {
             save_scope_as = constantinople_location
         } 
-        c:SER ?= {
+        c:DUMMY ?= {
             save_scope_as = serbia_country
         }
-        c:BUL ?= {
+        c:DUMMY ?= {
             save_scope_as = bul_country
         }
     }
@@ -251,7 +251,7 @@ flavor_lat.4 = { # Restoration of the Holy Patriarchate of Constantinople
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 8
@@ -264,7 +264,7 @@ flavor_lat.4 = { # Restoration of the Holy Patriarchate of Constantinople
         has_ruler = yes
         owns = location:constantinople
         religion = religion:catholic
-        country_exists = c:PAP
+        country_exists = c:DUMMY
     }
 
     illustration_tags = {
@@ -277,7 +277,7 @@ flavor_lat.4 = { # Restoration of the Holy Patriarchate of Constantinople
         ruler ?= {
             save_scope_as = scope_ruler
         }
-        c:PAP ?= {
+        c:DUMMY ?= {
             save_scope_as = pap_country
         }
         location:constantinople = {
@@ -301,9 +301,9 @@ flavor_lat.4 = { # Restoration of the Holy Patriarchate of Constantinople
                 mode = add
             }
         }
-        add_opinion = { target = c:PAP modifier = lat_patriarchate_of_constantinople_restored }
-        c:PAP = {
-            add_opinion = { target = c:LAT modifier = lat_patriarchate_of_constantinople_restored }
+        add_opinion = { target = c:DUMMY modifier = lat_patriarchate_of_constantinople_restored }
+        c:DUMMY = {
+            add_opinion = { target = c:DUMMY modifier = lat_patriarchate_of_constantinople_restored }
         } 
     }
 
@@ -319,9 +319,9 @@ flavor_lat.4 = { # Restoration of the Holy Patriarchate of Constantinople
                 mode = add
             }
         }
-        add_opinion = { target = c:PAP modifier = lat_patriarchate_of_constantinople_restored }
-        c:PAP = {
-            add_opinion = { target = c:LAT modifier = lat_patriarchate_of_constantinople_restored }
+        add_opinion = { target = c:DUMMY modifier = lat_patriarchate_of_constantinople_restored }
+        c:DUMMY = {
+            add_opinion = { target = c:DUMMY modifier = lat_patriarchate_of_constantinople_restored }
         }  
         grant_estate_privilege = estate_privilege:lat_protector_of_the_constantinople_patriarchate       
     } 
@@ -338,9 +338,9 @@ flavor_lat.4 = { # Restoration of the Holy Patriarchate of Constantinople
                 mode = add
             }
         }
-        add_opinion = { target = c:PAP modifier = lat_patriarchate_of_constantinople_restored }
-        c:PAP = {
-            add_opinion = { target = c:LAT modifier = lat_patriarchate_of_constantinople_restored }
+        add_opinion = { target = c:DUMMY modifier = lat_patriarchate_of_constantinople_restored }
+        c:DUMMY = {
+            add_opinion = { target = c:DUMMY modifier = lat_patriarchate_of_constantinople_restored }
         }
         add_country_modifier = { modifier = lat_leveraged_patriarchate_for_estate_gain years = 10 mode = add }         
     } 
@@ -360,7 +360,7 @@ flavor_lat.5 = { # Control of Anatolia Reasserted
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 18
@@ -421,7 +421,7 @@ flavor_lat.6 = { # Bulgaria Crushed
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 18
@@ -434,21 +434,21 @@ flavor_lat.6 = { # Bulgaria Crushed
         region:balkan_region = {
             any_location_in_region = {
                 owner ?= {
-                    top_overlord_or_this ?= c:BUL
+                    top_overlord_or_this ?= c:DUMMY
                 }
                 count < 20
             }
         }
         region:balkan_region = {
             any_location_in_region = {
-                is_core_of = c:BUL
+                is_core_of = c:DUMMY
                 owner ?= {
                     top_overlord_or_this ?= ROOT
                 }
                 count > 15
             }
         }
-        country_exists = c:BUL
+        country_exists = c:DUMMY
     }
 
     illustration_tags = {
@@ -461,7 +461,7 @@ flavor_lat.6 = { # Bulgaria Crushed
         ruler ?= {
             save_scope_as = scope_ruler
         }
-        c:BUL ?= {
+        c:DUMMY ?= {
             save_scope_as = target_country
         }
     }
@@ -496,7 +496,7 @@ flavor_lat.7 = { # Serbia Ambitions Defeated
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 18
@@ -509,21 +509,21 @@ flavor_lat.7 = { # Serbia Ambitions Defeated
         region:balkan_region = {
             any_location_in_region = {
                 owner ?= {
-                    top_overlord_or_this ?= c:SER
+                    top_overlord_or_this ?= c:DUMMY
                 }
                 count < 18
             }
         }
         region:balkan_region = {
             any_location_in_region = {
-                is_core_of = c:SER
+                is_core_of = c:DUMMY
                 owner ?= {
                     top_overlord_or_this ?= ROOT
                 }
                 count > 12
             }
         }
-        country_exists = c:SER
+        country_exists = c:DUMMY
     }
 
     illustration_tags = {
@@ -536,7 +536,7 @@ flavor_lat.7 = { # Serbia Ambitions Defeated
         ruler ?= {
             save_scope_as = scope_ruler
         }
-        c:SER ?= {
+        c:DUMMY ?= {
             save_scope_as = target_country
         }
     }
@@ -571,7 +571,7 @@ flavor_lat.8 = { # Old Byzantine Elite
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 5
@@ -626,7 +626,7 @@ flavor_lat.9 = { # Papal Request Conversion of Byzantine Lands
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = LAT
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 6
@@ -639,12 +639,12 @@ flavor_lat.9 = { # Papal Request Conversion of Byzantine Lands
         has_ruler = yes
         owns = location:constantinople
         religion = religion:catholic
-        country_exists = c:PAP
+        country_exists = c:DUMMY
         custom_tooltip = {
             text = lat_accepted_pope_latin_empire_proposal_tt
             has_variable = lat_accepted_pope_latin_empire_proposal
         }
-        c:PAP ?= {
+        c:DUMMY ?= {
             has_ruler = yes
         }
     }
@@ -665,7 +665,7 @@ flavor_lat.9 = { # Papal Request Conversion of Byzantine Lands
         location:constantinople = {
             save_scope_as = constantinople_location
         }
-        c:PAP ?= {
+        c:DUMMY ?= {
             save_scope_as = pap_country
             ruler ?= {
                 save_scope_as = scope_pope_ruler

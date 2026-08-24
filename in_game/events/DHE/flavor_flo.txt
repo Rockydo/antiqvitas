@@ -9,7 +9,7 @@ flavor_flo.1 = { #Michelangelo
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -57,7 +57,7 @@ flavor_flo.2 = { #The Emperor Condemns [ROOT.GetCountry.GetNameWithNoTooltip]'s 
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -69,7 +69,7 @@ flavor_flo.2 = { #The Emperor Condemns [ROOT.GetCountry.GetNameWithNoTooltip]'s 
 		NOT = { international_organization:hre ?= { leader_country = root } }
 		OR = {
 			AND = {
-				c:PAP = { opinion = { target = prev value > 50 } }
+				c:DUMMY = { opinion = { target = prev value > 50 } }
 				international_organization:hre ?= { leader_country = { opinion = { target = root value < 70 } } }
 				government_type = government_type:monarchy
 				num_of_non_rural < 6
@@ -97,10 +97,10 @@ flavor_flo.2 = { #The Emperor Condemns [ROOT.GetCountry.GetNameWithNoTooltip]'s 
 	option = {
 		name = flavor_flo.2.a
 		international_organization:hre.leader_country = {
-			add_opinion = { target = c:FLO modifier = opinion_emperor_tus_refused }
+			add_opinion = { target = c:DUMMY modifier = opinion_emperor_tus_refused }
 		}
-		c:PAP = {
-			add_opinion = { target = c:FLO modifier = opinion_papal_tus_refused }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_papal_tus_refused }
 		}
 		if = {
 			limit = { government_type = government_type:republic }
@@ -115,10 +115,10 @@ flavor_flo.2 = { #The Emperor Condemns [ROOT.GetCountry.GetNameWithNoTooltip]'s 
 		add_prestige = prestige_mild_penalty
 
 		international_organization:hre.leader_country = {
-			add_opinion = { target = c:FLO modifier = opinion_emperor_tus_yielded }
+			add_opinion = { target = c:DUMMY modifier = opinion_emperor_tus_yielded }
 		}
-		c:PAP = {
-			add_opinion = { target = c:FLO modifier = opinion_papal_tus_yielded }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_papal_tus_yielded }
 		}
 	}
 }
@@ -171,7 +171,7 @@ flavor_flo.4 = { #The Construction Projects of [ROOT.GetCountry.GetGovernment.Ge
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -213,7 +213,7 @@ flavor_flo.5 = { #The [ROOT.GetCountry.GetGovernment.GetRulerTitle]'s Treasury
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -258,7 +258,7 @@ flavor_flo.6 = { #The Reforms of [ROOT.GetCountry.GetGovernment.GetRuler.GetName
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -314,7 +314,7 @@ flavor_flo.8 = { #The Medici Oriental Press
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -343,7 +343,7 @@ flavor_flo.20 = { #The Pazzi Conspiracy
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -399,7 +399,7 @@ flavor_flo.27 = { #The Clock Tower of the Palazzo della Signoria
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -461,7 +461,7 @@ flavor_flo.28 = { # The Florence Cathedral
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -536,7 +536,7 @@ flavor_flo.29 = { # The First Modern Engineer
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -612,7 +612,7 @@ flavor_flo.30 = { # A Great Italian Painter
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -688,7 +688,7 @@ flavor_flo.31 = { #"[target_artist.GetNameWithNoTooltip]"
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -811,7 +811,7 @@ flavor_flo.33 = { # Sandro Botticelli
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -885,7 +885,7 @@ flavor_flo.34 = { # Gian Francesco Poggio Braccioloni
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -958,7 +958,7 @@ flavor_flo.35 = { # Manuel Chrysoloras
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -1034,7 +1034,7 @@ flavor_flo.36 = { # Niccolo Niccoli
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -1114,7 +1114,7 @@ flavor_flo.37 = { # Donatello
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -1192,7 +1192,7 @@ flavor_flo.38 = { # Nuova Cronica
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1237,8 +1237,8 @@ flavor_flo.38 = { # Nuova Cronica
 		name = flavor_flo.38.b
 
 		trigger = {
-			country_exists = c:PAP
-			c:PAP = {
+			country_exists = c:DUMMY
+			c:DUMMY = {
 				owns = location:rome
 			}
 		}
@@ -1257,7 +1257,7 @@ flavor_flo.38 = { # Nuova Cronica
 		}
 		add_prestige = prestige_mild_bonus
 		add_legitimacy = legitimacy_weak_bonus
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = opinion_pleased
@@ -1284,7 +1284,7 @@ flavor_flo.39 = { #The First Modern Historian
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1360,7 +1360,7 @@ flavor_flo.40 = { # The History of Florence by Leonardo Bruni
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1425,7 +1425,7 @@ flavor_flo.42 = { #Societas Aluminum
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1568,7 +1568,7 @@ flavor_flo.43 = { #The Alum Mine of Volterra
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1624,7 +1624,7 @@ flavor_flo.44 = { #The New Urban Planning Registration System
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1691,7 +1691,7 @@ flavor_flo.45 = { #Leonardo da Vinci Paints the Mona Lisa
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1748,7 +1748,7 @@ flavor_flo.46 = { #Machiavelli
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 30
@@ -1829,9 +1829,9 @@ flavor_flo.4601 = {
 
 		if = {
 			limit = {
-				country_exists = c:MLO
+				country_exists = c:DUMMY
 			}
-			c:MLO = { trigger_event_silently = { id = flavor_flo.4602  } }
+			c:DUMMY = { trigger_event_silently = { id = flavor_flo.4602  } }
 		}
 	}
 }
@@ -1869,7 +1869,7 @@ flavor_flo.47 = { #The Age of [target_character.GetNameWithNoTooltip] (Event for
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -1976,7 +1976,7 @@ flavor_flo.48 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2035,7 +2035,7 @@ flavor_flo.49 = { # The Consolidation of Power
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2112,7 +2112,7 @@ flavor_flo.50 = { # The Office of the Night
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2171,7 +2171,7 @@ flavor_flo.51 = { # Medici Giraffe
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2181,7 +2181,7 @@ flavor_flo.51 = { # Medici Giraffe
 		current_date > 476.9.4
 		has_ruler = yes
 		OR = {
-			country_exists = c:MAM
+			country_exists = c:DUMMY
 			region:egypt_region = {
 				any_location_in_region = {
 					is_capital = yes
@@ -2200,9 +2200,9 @@ flavor_flo.51 = { # Medici Giraffe
 		ruler = { save_scope_as = country_ruler }
 		if = {
 			limit = {
-				country_exists = c:MAM
+				country_exists = c:DUMMY
 			}
-			c:MAM = { save_scope_as = egyptian_tag }
+			c:DUMMY = { save_scope_as = egyptian_tag }
 		}
 		else = {
 			region:egypt_region = {
@@ -2216,7 +2216,7 @@ flavor_flo.51 = { # Medici Giraffe
 				}
 			}
 		}
-		c:PAP ?= {
+		c:DUMMY ?= {
 			save_scope_as = papal_tag
 		}
 	}
@@ -2321,7 +2321,7 @@ flavor_flo.53 = { # Financial Troubles of Bardi and Peruzzi
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2330,14 +2330,14 @@ flavor_flo.53 = { # Financial Troubles of Bardi and Peruzzi
 	trigger = {
 		current_date > 476.9.4
 		OR = {
-			country_exists = c:PRZ
-			country_exists = c:BRD
+			country_exists = c:DUMMY
+			country_exists = c:DUMMY
 		}
 		OR = {
-			c:PRZ ?= {
+			c:DUMMY ?= {
 				is_ai = yes
 			}
-			c:BRD ?= {
+			c:DUMMY ?= {
 				is_ai = yes
 			}
 		}
@@ -2350,7 +2350,7 @@ flavor_flo.53 = { # Financial Troubles of Bardi and Peruzzi
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
-		c:PRZ ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = {
 					is_ai = yes
@@ -2358,7 +2358,7 @@ flavor_flo.53 = { # Financial Troubles of Bardi and Peruzzi
 				add_to_list = banking_country_list
 			}
 		}
-		c:BRD ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = {
 					is_ai = yes
@@ -2611,7 +2611,7 @@ flavor_flo.55 = { # Fall of the Banks - loans are transferred to florence
 					is_in_list = banking_country_list
 				}
 			}
-			change_loan_owner = c:FLO
+			change_loan_owner = c:DUMMY
 		}
 	}
 	trigger = {
@@ -2663,7 +2663,7 @@ flavor_flo.57 = { # Formation of the Medici Bank https://en.wikipedia.org/wiki/M
 
 	major = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2966,7 +2966,7 @@ flavor_flo.60 = {# Walter VI de Brienne on Florentine Throne
 	major = yes
 	
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -3090,7 +3090,7 @@ flavor_flo.62 = {
 	}
 
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3156,7 +3156,7 @@ flavor_flo.63 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10

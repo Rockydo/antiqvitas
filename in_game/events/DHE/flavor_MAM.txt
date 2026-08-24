@@ -10,7 +10,7 @@ flavor_mam.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -20,23 +20,23 @@ flavor_mam.1 = {
 	trigger = {
 		current_date > 476.9.4
 		NOR = {
-			is_rival_of = c:TUR
-			is_enemy_of = c:TUR
+			is_rival_of = c:DUMMY
+			is_enemy_of = c:DUMMY
 		}
-		c:TUR = {
+		c:DUMMY = {
 			owns = location:constantinople
 		}
 	}
 
 	immediate = {
 		ruler_or_regent ?= { save_scope_as = target_character }
-		c:TUR = { ruler_or_regent ?= { save_scope_as = target_character2 } }
+		c:DUMMY = { ruler_or_regent ?= { save_scope_as = target_character2 } }
 	}
 
 	option = {
 		name = flavor_mam.1.a
 		historical_option = yes
-		c:TUR = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = mam_poem_recieved }
 		}
 	}
@@ -55,7 +55,7 @@ flavor_mam.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -86,7 +86,7 @@ flavor_mam.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -95,9 +95,9 @@ flavor_mam.3 = {
 	trigger = {
 		current_date > 476.9.4
 		at_war = no
-		country_exists = c:CYP
+		country_exists = c:DUMMY
 
-		c:CYP = {
+		c:DUMMY = {
 			is_subject = no
 			at_war = no
 			religion.group = religion_group:christian
@@ -113,7 +113,7 @@ flavor_mam.3 = {
 	option = {
 		name = flavor_mam.3.a
 		historical_option = yes
-		c:CYP = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_mam.4 }
 		}
 		add_prestige = prestige_mild_penalty
@@ -149,7 +149,7 @@ flavor_mam.4 = {
 	option = {
 		name = flavor_mam.4.a
 		historical_option = yes
-		c:MAM = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_mam.5 }
 		}
 		add_prestige = prestige_mild_penalty
@@ -159,14 +159,14 @@ flavor_mam.4 = {
 	option = {
 		name = flavor_mam.4.b
 		change_gold_effect = { scale = -12 }
-		c:MAM = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_mam.6 }
 		}
 	}
 	option = {
 		name = flavor_mam.4.c
 		add_prestige = prestige_mild_penalty
-		c:MAM = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_mam.7 }
 			add_opinion = { target = root modifier = mam_refused_james }
 		}
@@ -193,9 +193,9 @@ flavor_mam.5 = {
 
 	option = {
 		name = flavor_mam.5.a
-		c:CYP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = mam_installed_ruler }
-			make_subject_of = {  target = c:MAM type = subject_type:vassal }
+			make_subject_of = {  target = c:DUMMY type = subject_type:vassal }
 		}
 		add_prestige = prestige_extreme_bonus
 	}
@@ -246,7 +246,7 @@ flavor_mam.7 = {
 
 	option = {
 		name = flavor_mam.7.a
-		add_casus_belli =  { type = casus_belli:cb_conquer_province target = c:CYP province = location:nicosia_cyp.province }
+		add_casus_belli =  { type = casus_belli:cb_conquer_province target = c:DUMMY province = location:nicosia_cyp.province }
 	}
 	trigger = {
 		current_date > 476.9.4
@@ -261,7 +261,7 @@ flavor_mam.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -326,7 +326,7 @@ flavor_mam.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -382,7 +382,7 @@ flavor_mam.11 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -395,9 +395,9 @@ flavor_mam.11 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:TUR
-		c:TUR.expected_army_size > expected_army_size
-		c:TUR = {
+		country_exists = c:DUMMY
+		c:DUMMY.expected_army_size > expected_army_size
+		c:DUMMY = {
 			owns = location:constantinople
 		}
 		any_known_country = {
@@ -455,7 +455,7 @@ flavor_mam.12 = {
 
 	option = {
 		name = flavor_mam.12.a
-		c:MAM = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = mam_anti_ottoman_friends }
 		}
 	}
@@ -472,7 +472,7 @@ flavor_mam.15 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -487,7 +487,7 @@ flavor_mam.15 = {
 		current_date > 476.9.4
 		owns = location:suez
 		owns = location:alexandria
-		c:POR ?= {
+		c:DUMMY ?= {
 			any_market_with_merchants = {
 				location = {
 					OR = {
@@ -498,11 +498,11 @@ flavor_mam.15 = {
 				}
 			}
 		}
-		country_exists = c:POR
+		country_exists = c:DUMMY
 		manpower_percentage >= 0.50
 	}
 	immediate = {
-		c:POR ?= {
+		c:DUMMY ?= {
 			random_market_with_merchants = {
 				limit = {
 					location = {
@@ -523,7 +523,7 @@ flavor_mam.15 = {
 		name = flavor_mam.15.a
 		historical_option = yes
 		set_variable = MAM_POR_conflict
-		c:POR = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = mam_por_confronted }
 			trigger_event_silently = { id = flavor_mam.16 }
 		}
@@ -559,148 +559,13 @@ flavor_mam.16 = {
 
 	option = {
 		name = flavor_mam.16.a
-		add_casus_belli = {	target = c:MAM	type = casus_belli:cb_trade_war_triggered	}
+		add_casus_belli = {	target = c:DUMMY	type = casus_belli:cb_trade_war_triggered	}
 	}
 	trigger = {
 		current_date > 476.9.4
 	}
 }
 
-flavor_mam.17 = {
-	type = country_event
-	title = flavor_mam.17.title
-	desc = flavor_mam.17.desc
-	outcome = neutral
-
-	immediate = {
-		random_owned_location = {
-			limit = {
-				OR = {
-					location_rank = location_rank:city
-					location_rank = location_rank:town
-					location_rank = location_rank:rural_settlement
-					location_rank = location_rank:megalopolis
-				}
-			}
-			save_scope_as = target_location
-		}
-		capital = { save_scope_as = target_capital }
-		random_list = {
-			1 = { culture:circassian_culture = { save_scope_as = target_culture } }
-			1 = { culture:abkhazian_culture = { save_scope_as = target_culture } }
-			1 = { culture:georgian_culture = { save_scope_as = target_culture } }
-			1 = { culture:armenian_culture = { save_scope_as = target_culture } }
-			1 = { culture:crimean = { save_scope_as = target_culture } }
-			1 = { culture:halychian_culture = { save_scope_as = target_culture } }
-			1 = { culture:ruthenian = { save_scope_as = target_culture } }
-			1 = { culture:muscovite = { save_scope_as = target_culture } }
-			1 = { culture:novgorodian = { save_scope_as = target_culture } }
-			1 = { culture:turkish_culture = { save_scope_as = target_culture } }
-			1 = { culture:turkoman_culture = { save_scope_as = target_culture } }
-			1 = { culture:turkmen_culture = { save_scope_as = target_culture } }
-			1 = { culture:khorasani_culture = { save_scope_as = target_culture } }
-		}
-
-		save_scope_as = target_country
-		create_character = {
-			adm = {
-				value = { 25 75 }
-				add = {
-					value = root.army_tradition
-					divide = 4
-				}
-			}
-			dip = {
-				value = { 25 75 }
-				add = {
-					value = root.army_tradition
-					divide = 4
-				}
-			}
-			mil = {
-				value = { 25 75 }
-				add = {
-					value = root.army_tradition
-					divide = 4
-				}
-			}
-			save_scope_as = target_character
-			culture = scope:target_culture
-			create_in_limbo = yes
-			add_trait = trait:mamluk
-		}
-		create_character = {
-			adm = {
-				value = { 25 75 }
-				add = {
-					value = root.army_tradition
-					divide = 4
-				}
-			}
-			dip = {
-				value = { 25 75 }
-				add = {
-					value = root.army_tradition
-					divide = 4
-				}
-			}
-			mil = {
-				value = { 25 75 }
-				add = {
-					value = root.army_tradition
-					divide = 4
-				}
-			}
-			save_scope_as = target_character2
-			culture = scope:target_culture
-			create_in_limbo = yes
-			add_trait = trait:mamluk
-		}
-	}
-	option = {
-		name = flavor_mam.17.a
-
-		scope:target_character = {
-			move_country = root
-			change_character_estate = estate_type:nobles_estate
-			if = {
-				limit  = { has_dynasty = no }
-				custom_tooltip = found_dynasty_target_location_tt
-				hidden_effect = {
-					scope:target_location = {
-						create_dynasty_from_location = random
-						last_dynasty_in_location = { save_scope_as = target_dynasty }
-					}
-					change_dynasty = scope:target_dynasty
-				}
-			}
-		}
-   		kill_character_silently = scope:target_character2
-	}
-
-	option = {
-		name = flavor_mam.17.b
-		scope:target_character2 = {
-			move_country = root
-			change_character_estate = estate_type:nobles_estate
-			if = {
-				limit  = { has_dynasty = no }
-				custom_tooltip = found_dynasty_target_location_tt
-				hidden_effect = {
-					scope:target_location = {
-						create_dynasty_from_location = random
-						last_dynasty_in_location = { save_scope_as = target_dynasty }
-					}
-					change_dynasty = scope:target_dynasty
-				}
-			}
-		}
-   		kill_character_silently = scope:target_character
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 flavor_mam.18 = {
 	type = country_event
@@ -1241,7 +1106,7 @@ flavor_mam.23 = {
 	historical_info = flavor_mam.23.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1287,7 +1152,7 @@ flavor_mam.24 = { #GRAVEYARD
 	fire_only_once = yes
 	historical_info = flavor_mam.24.historical_info
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1331,7 +1196,7 @@ flavor_mam.25 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -1369,7 +1234,7 @@ flavor_mam.26 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1425,7 +1290,7 @@ flavor_mam.27 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1487,7 +1352,7 @@ flavor_mam.28 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1548,7 +1413,7 @@ flavor_mam.29 = { #Mamluk Administration - The Offices of the Court
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1780,7 +1645,7 @@ flavor_mam.30 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1827,7 +1692,7 @@ flavor_mam.31 = {
 	fire_only_once = yes
 	historical_info = flavor_mam.31.historical_info
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1916,7 +1781,7 @@ flavor_mam.32 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1955,7 +1820,7 @@ flavor_mam.33 = {
 	historical_info = flavor_mam.33.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2013,7 +1878,7 @@ flavor_mam.34 = { #Ibn Khaldun's Family Tragedy  #GRAVEYARD
 	historical_info = flavor_mam.34.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2032,7 +1897,7 @@ flavor_mam.34 = { #Ibn Khaldun's Family Tragedy  #GRAVEYARD
 		}
 		owns = location:alexandria
 		owns = location:cairo
-		country_exists = c:TUN
+		country_exists = c:DUMMY
 	}
 
 	immediate = {
@@ -2068,7 +1933,7 @@ flavor_mam.35 = { #Ibn Khaldun Requests Funding
 	}
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2118,7 +1983,7 @@ flavor_mam.36 = { #Ibn Khaldun Finishes the Kitāb al-ʻIbar
 	}
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2177,7 +2042,7 @@ flavor_mam.37 = { #al-Maqrizi
 	}
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2231,7 +2096,7 @@ flavor_mam.38 = { #Bedouin Warfare Disrupts Trade
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2302,7 +2167,7 @@ flavor_mam.39 = { #Relocating the Bedouins
 	historical_info = flavor_mam.39.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2386,7 +2251,7 @@ flavor_mam.40 = { #The Pride of Alexandria
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2431,7 +2296,7 @@ flavor_mam.41 = { #The Al Azhar Madrasa
 	historical_info = flavor_mam.41.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2484,7 +2349,7 @@ flavor_mam.42 = { #Conquest of Cyprus
 	historical_info = flavor_mam.42.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2499,7 +2364,7 @@ flavor_mam.42 = { #Conquest of Cyprus
 		current_date > 476.9.4
 		own_entire_province = province_definition:cyprus_province
 		NOT = {
-			country_exists = c:CYP
+			country_exists = c:DUMMY
 		}
 	}
 
@@ -2515,14 +2380,14 @@ flavor_mam.42 = { #Conquest of Cyprus
 			province_definition:cyprus_province = {
 				every_location_in_province_definition = {
 					remove_core = root
-					add_core = c:CYP
+					add_core = c:DUMMY
 				}
 			}
-			create_country_from_cores_in_our_locations = c:CYP
-			c:CYP = {
+			create_country_from_cores_in_our_locations = c:DUMMY
+			c:DUMMY = {
 				make_subject_of = { target = root type = subject_type:vassal }
 				change_religion = religion:catholic
-				change_religion_for_ruler_and_family = { country = c:CYP religion = religion:catholic }
+				change_religion_for_ruler_and_family = { country = c:DUMMY religion = religion:catholic }
 				change_country_color = map_cyprus
 				change_government_type = government_type:monarchy
 				add_all_estate_satisfaction = { value = estate_satisfaction_ultimate_bonus }
@@ -2559,7 +2424,7 @@ flavor_mam.43 = { #Uprooting Christianity
 	historical_info = flavor_mam.43.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2579,7 +2444,7 @@ flavor_mam.43 = { #Uprooting Christianity
 		area:levant_area = {
 			any_location_in_area = {
 				count > 20
-				owner ?= c:MAM
+				owner ?= c:DUMMY
 			}
 		}
 	}
@@ -2670,7 +2535,7 @@ flavor_mam.44 = { #Converting the Copts
 	historical_info = flavor_mam.44.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2689,7 +2554,7 @@ flavor_mam.44 = { #Converting the Copts
 			any_location_in_area = {
 				count > 15
 				exists = owner
-				owner = c:MAM
+				owner = c:DUMMY
 			}
 		}
 	}
@@ -2837,7 +2702,7 @@ flavor_mam.46 = { #The Muhtasib Inspectors
 	historical_info = flavor_mam.46.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2889,7 +2754,7 @@ flavor_mam.47 = { #Royal Mamluks
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2929,7 +2794,7 @@ flavor_mam.48 = { #Printing Press
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3022,7 +2887,7 @@ flavor_mam.49 = { #Europeans Circumnavigate Africa
 	historical_info = flavor_mam.49.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3078,7 +2943,7 @@ flavor_mam.50 = { #Rising Demand of Ship Supplies
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3138,7 +3003,7 @@ flavor_mam.51 = { #Eclipsing Portugal
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3153,7 +3018,7 @@ flavor_mam.51 = { #Eclipsing Portugal
 		ruler = {
 			save_scope_as = target_ruler
 		}
-		c:POR ?= {
+		c:DUMMY ?= {
 			ruler = {
 				save_scope_as = target_ruler2
 			}
@@ -3168,8 +3033,8 @@ flavor_mam.51 = { #Eclipsing Portugal
 			text = variable_mam_enable_exploration_events_tt
 			has_variable = mam_enable_exploration_events
 		}
-		country_exists = c:POR
-		c:POR ?= {
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
 			is_rival_of = root
             navy_size < ROOT.navy_size
         }
@@ -3191,7 +3056,7 @@ flavor_mam.52 = { #Amir Husain Al-Kurdi
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3272,7 +3137,7 @@ flavor_mam.53 = { #The Red Sea Fleet
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3334,7 +3199,7 @@ flavor_mam.54 = { #The Rise of Barquq
 	historical_info = flavor_mam.54.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3439,7 +3304,7 @@ flavor_mam.55 = { #The Great Naval Reform
 	historical_info = flavor_mam.55.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3520,7 +3385,7 @@ flavor_mam.56 = { #Administrative Reform
 	historical_info = flavor_mam.56.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3649,7 +3514,7 @@ flavor_mam.58 = {
 	historical_info = flavor_mam.58.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3740,7 +3605,7 @@ flavor_mam.59 = {
 	historical_info = flavor_mam.59.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3810,7 +3675,7 @@ flavor_mam.60 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3854,7 +3719,7 @@ flavor_mam.61 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5116,7 +4981,7 @@ flavor_mam.77 = {
 	historical_info = flavor_mam.77.historical_info
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5160,7 +5025,7 @@ flavor_mam.78 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5223,7 +5088,7 @@ flavor_mam.79 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5282,7 +5147,7 @@ flavor_mam.100 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 80

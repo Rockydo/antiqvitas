@@ -13,7 +13,7 @@ flavor_pap.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -21,8 +21,8 @@ flavor_pap.1 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:CAS
-		c:CAS = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_policy = local_courts
 		}
 	}
@@ -69,7 +69,7 @@ flavor_pap.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -124,7 +124,7 @@ flavor_pap.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -194,7 +194,7 @@ flavor_pap.5 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -233,7 +233,7 @@ flavor_pap.6 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -289,7 +289,7 @@ flavor_pap.7 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -321,10 +321,10 @@ flavor_pap.7 = {
 		religion:catholic = { add_reform_desire = reform_desire_mild_decrease }
 		if = {
 			limit = {
-				country_exists = c:NAV
+				country_exists = c:DUMMY
 			}
 			scope:caesar_borgia_scope ?= {
-				move_country = c:NAV
+				move_country = c:DUMMY
 			}
 		}
 	}
@@ -341,7 +341,7 @@ flavor_pap.8 = { #Heinrich Kramer Summis desiderantes
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -380,7 +380,7 @@ flavor_pap.8 = { #Heinrich Kramer Summis desiderantes
 					save_scope_as = target_country
 				}
 				else = {
-					c:PAP = {
+					c:DUMMY = {
 						save_scope_as = target_country
 					}
 				}
@@ -424,70 +424,6 @@ flavor_pap.8 = { #Heinrich Kramer Summis desiderantes
 }
 
 #The [GetCountry('PAP').GetGovernment.GetRulerTitle] Calls for an Apostolic Tax
-flavor_pap.9 = {
-	hide_portraits = yes
-	type = country_event
-	title = flavor_pap.9.title
-	desc = flavor_pap.9.desc
-	outcome = neutral
-
-	illustration_tags = {
-        10 = regular
-        10 = interior
-    }
-
-	immediate = {
-		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		save_scope_as = target_country
-		ruler_or_regent ?= {
-			save_scope_as = target_character
-		}
-	}
-
-	option = {
-		name = flavor_pap.9.a
-
-		add_gold = { value = scope:target_country.monthly_income_trade_and_tax multiply = -2 }
-		c:PAP = {
-			add_gold = {
-				value = scope:target_country.monthly_income_trade_and_tax
-				multiply = 2
-				multiply = "c:PAP.estate_power(estate_type:crown_estate)"
-			}
-		}
-		add_estate_satisfaction = { 
-			type = estate_type:clergy_estate
-			value = estate_satisfaction_weak_bonus
-		}
-	}
-	option = {
-		name = flavor_pap.9.b
-		add_estate_satisfaction = { type = estate_type:clergy_estate
-			value = estate_satisfaction_extreme_penalty
-		}
-		add_religious_influence_if_valid = { VALUE = -10 }
-
-		custom_tooltip = every_catholic_upset_tt
-		hidden_effect = {
-			religion:catholic = {
-				every_country_in_religion = {
-					limit = {
-						NOT = {
-							this = ROOT
-						}
-					}
-					add_opinion = {
-						target = ROOT
-						modifier = opinion_refused_to_pay_apostolic_tax
-					}
-				}
-			}
-		}
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 #The Swiss Guard
 flavor_pap.10 = {
@@ -499,7 +435,7 @@ flavor_pap.10 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -574,7 +510,7 @@ flavor_pap.11 = {
 		tag = PAP
 		scope:target = {
 			location_key = rome
-			NOT = { controller = c:PAP }
+			NOT = { controller = c:DUMMY }
 			is_capital = yes
 		}
 		NOT = { has_country_modifier = pap_passetto_di_borgo_timer }
@@ -636,8 +572,8 @@ flavor_pap.12 = {
 		war_exhaustion >= 2.00
 		scope:target = {
 			location_key = rome
-			owner = c:PAP
-			controller = c:PAP
+			owner = c:DUMMY
+			controller = c:DUMMY
 			is_looted = yes
 		}
 		NOT = { has_country_modifier = pap_rome_loot_timer }
@@ -680,7 +616,7 @@ flavor_pap.13 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -746,7 +682,7 @@ flavor_pap.14 = {
 	outcome = neutral
 	
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -928,7 +864,7 @@ flavor_pap.15 = {
 	desc = flavor_pap.15.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1101,7 +1037,7 @@ flavor_pap.17 = {
 	outcome = neutral
 	
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1165,7 +1101,7 @@ flavor_pap.18 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1225,7 +1161,7 @@ flavor_pap.19 = {
 	outcome = neutral
 	
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1291,7 +1227,7 @@ flavor_pap.20 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -1378,7 +1314,7 @@ flavor_pap.21 = {
 	historical_info = flavor_pap.21.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1434,7 +1370,7 @@ flavor_pap.22 = {
 	historical_info = flavor_pap.22.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1488,7 +1424,7 @@ flavor_pap.23 = { #Domenico Fontana
 	historical_info = flavor_pap.23.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1548,7 +1484,7 @@ flavor_pap.24 = {
 	historical_info = flavor_pap.24.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1612,7 +1548,7 @@ flavor_pap.25 = { #Fortifying Castel Sant'Angelo
 	historical_info = flavor_pap.25.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1665,7 +1601,7 @@ flavor_pap.26 = {
 	historical_info = flavor_pap.26.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1721,7 +1657,7 @@ flavor_pap.27 = { #Ignazio Danti
 	historical_info = flavor_pap.27.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1789,7 +1725,7 @@ flavor_pap.28 = { #Errors of the Julian Calendar
 	historical_info = flavor_pap.28.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1849,7 +1785,7 @@ flavor_pap.29 = { #Inter Gravissimas – The New Calendar
 	historical_info = flavor_pap.29.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1888,7 +1824,7 @@ flavor_pap.30 = { #Constitutiones Sanctæ Matris Ecclesiæ
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1954,7 +1890,7 @@ flavor_pap.31 = { #Raffaello Sanzio da Urbino
 	historical_info = flavor_pap.31.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2014,7 +1950,7 @@ flavor_pap.32 = { #Humanism and the Church Teachings
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2064,7 +2000,7 @@ flavor_pap.33 = {
 	historical_info = flavor_pap.33.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -2115,7 +2051,7 @@ flavor_pap.34 = {
 	historical_info = flavor_pap.34.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2187,7 +2123,7 @@ flavor_pap.35 = {
 	historical_info = flavor_pap.35.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2242,7 +2178,7 @@ flavor_pap.36 = { #The Greed of Cardinal Borghese
 	historical_info = flavor_pap.36.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2314,7 +2250,7 @@ flavor_pap.37 = {
 	historical_info = flavor_pap.37.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -2366,7 +2302,7 @@ flavor_pap.38 = {
 	historical_info = flavor_pap.38.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2425,7 +2361,7 @@ flavor_pap.39 = {
 	historical_info = flavor_pap.39.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2496,7 +2432,7 @@ flavor_pap.40 = { #Strengthening the Papal Navy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2603,7 +2539,7 @@ flavor_pap.41 = { #Patronage of Bernini
 	historical_info = flavor_pap.41.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2664,7 +2600,7 @@ flavor_pap.42 = {
 	historical_info = flavor_pap.42.historical_info
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2748,7 +2684,7 @@ flavor_pap.101 = {
 	outcome = neutral
 	
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2825,7 +2761,7 @@ flavor_pap.1000 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2915,7 +2851,7 @@ flavor_pap.1200 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2975,7 +2911,7 @@ flavor_pap.1201 = {
 				is_ai = no
 			}
 			event_illustration_estate_background_effect = { background = estate_type:clergy_estate }
-			c:PAP = {
+			c:DUMMY = {
 				event_illustration_estate_foreground_effect = { foreground = estate_type:clergy_estate }
 			}
 		}
@@ -3038,7 +2974,7 @@ flavor_pap.1300 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3099,7 +3035,7 @@ flavor_pap.1301 = {
 				is_ai = no
 			}
 			event_illustration_estate_background_effect = { background = estate_type:clergy_estate }
-			c:PAP = {
+			c:DUMMY = {
 				event_illustration_estate_foreground_effect = { foreground = estate_type:clergy_estate }
 			}
 		}
@@ -3181,7 +3117,7 @@ flavor_pap.1400 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3260,7 +3196,7 @@ flavor_pap.1500 = {
 	historical_info = flavor_pap.1500.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3469,8 +3405,8 @@ flavor_pap.1502 = {
 		location:rome = { 
 			NOT = { controller ?= root } 
 		}
-		country_exists = c:PAP
-		c:PAP = { #The Basilica is still being built
+		country_exists = c:DUMMY
+		c:DUMMY = { #The Basilica is still being built
 			OR = {
 				has_country_modifier = saint_peter_basilica_being_built
 				has_country_modifier = saint_peter_basilica_being_built_with_own_money
@@ -3524,7 +3460,7 @@ flavor_pap.1700 = { #Bishops claim papal authority to sell indulgences
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3593,7 +3529,7 @@ flavor_pap.1701 = { #Johann Tetzel starts selling in Saxony
 	desc = flavor_pap.1701.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3808,7 +3744,7 @@ flavor_pap.1800 = { #The Ottomans and the Crown of Rome
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3818,8 +3754,8 @@ flavor_pap.1800 = { #The Ottomans and the Crown of Rome
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:TUR
-		c:TUR = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			owns = location:constantinople
 			has_ruler = yes
 			NOT = {
@@ -3829,7 +3765,7 @@ flavor_pap.1800 = { #The Ottomans and the Crown of Rome
 		exists = international_organization:hre
 		exists = international_organization:hre.leader_country
 		NOT = {
-			country_exists = c:BYZ
+			country_exists = c:DUMMY
 		}
 	}
 
@@ -3841,7 +3777,7 @@ flavor_pap.1800 = { #The Ottomans and the Crown of Rome
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		root.ruler = { save_scope_as = ruler }
-		c:TUR = {
+		c:DUMMY = {
 			ruler = {
 				save_scope_as = ottoman_ruler
 			}
@@ -3865,7 +3801,7 @@ flavor_pap.1800 = { #The Ottomans and the Crown of Rome
 		scope:target_emperor = {
 			add_opinion = { target = root modifier = opinion_pap_compromising_legitimacy  }
 		}
-		c:TUR ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = flavor_pap.1801
 		}
 	}
@@ -3889,7 +3825,7 @@ flavor_pap.1801 = { #The Ottomans and the Crown of Rome - Ottoman event
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:PAP = {
+		c:DUMMY = {
 			ruler = {
 				save_scope_as = pope_ruler
 			}
@@ -3901,7 +3837,7 @@ flavor_pap.1801 = { #The Ottomans and the Crown of Rome - Ottoman event
 		ai_chance = { factor = 99 }
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
-		c:PAP ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = flavor_pap.1802
 		}
 	}
@@ -3939,7 +3875,7 @@ flavor_pap.1801 = { #The Ottomans and the Crown of Rome - Ottoman event
 				}
 			}
 		}
-		c:PAP ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = flavor_pap.1803
 		}
 	}
@@ -3991,11 +3927,11 @@ flavor_pap.1803 = { #Ottomans Accept the Conversion
 		name = flavor_pap.1803.a
 		add_devotion = devotion_severe_bonus
 		show_as_tooltip = {
-			c:TUR = {
+			c:DUMMY = {
 				add_prestige = prestige_extreme_penalty
 				add_stability = stability_extreme_penalty
 				change_religion = religion:catholic
-				change_religion_for_ruler_and_family = { country = c:TUR religion = religion:catholic }
+				change_religion_for_ruler_and_family = { country = c:DUMMY religion = religion:catholic }
 				custom_tooltip = {
 					text = suffer_100_opinion_with_every_muslim_in_range_tt
 					every_known_country = {
@@ -4044,12 +3980,12 @@ flavor_pap.9000 = {
 			owner ?= root
 		}
 		religion = religion:catholic
-		exists = c:PAP 
+		exists = c:DUMMY 
 		NOT = { tag = ITA }
 		is_real_country = yes	#rebels and revolutionaries should not trigger it just yet..
 		is_rebel_country = no
 		NOT = { tag = ROM }
-		NOT = { country_exists = c:PAP }
+		NOT = { country_exists = c:DUMMY }
 		NOT = { var:no_support ?= yes }
 	}
 
@@ -4121,7 +4057,7 @@ flavor_pap.9000 = {
 		}
 		add_prestige = prestige_extreme_bonus
 		international_organization:catholic_church = {
-			set_leader_country = c:PAP
+			set_leader_country = c:DUMMY
 		}
 	}
 }
@@ -4136,9 +4072,9 @@ flavor_pap.9001 = {
 	trigger = {
 		current_date > 476.9.4
 		exists = international_organization:catholic_church
-		exists = c:PAP 
-		NOT = { country_exists = c:PAP }
-		NOT = { country_exists = c:ITA }
+		exists = c:DUMMY 
+		NOT = { country_exists = c:DUMMY }
+		NOT = { country_exists = c:DUMMY }
 		can_give_land_to_pope_trigger = yes
 		location:rome = {
 			owner ?= {
@@ -4179,7 +4115,7 @@ flavor_pap.9001 = {
 		ai_chance = { factor = 100 }
 		if = {
 			limit = {
-				NOT = { country_exists = c:PAP }
+				NOT = { country_exists = c:DUMMY }
 			}
 			reinstate_the_pope = {
 				target_province = scope:papal_province
@@ -4187,7 +4123,7 @@ flavor_pap.9001 = {
 			add_religious_influence = religious_influence_extreme_bonus
 			add_prestige = prestige_extreme_bonus
 			international_organization:catholic_church = {
-				set_leader_country = c:PAP
+				set_leader_country = c:DUMMY
 			}
 		}
 	}
@@ -4211,7 +4147,7 @@ flavor_pap.9002 = {
 	trigger = {
 		current_date > 476.9.4
 		exists = international_organization:catholic_church
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -4246,10 +4182,10 @@ flavor_pap.9002 = {
 		}
 
 		if = {
-			limit = { country_exists = c:PAP }
+			limit = { country_exists = c:DUMMY }
 		}
 		location:rome = {
-			change_location_owner = c:PAP
+			change_location_owner = c:DUMMY
 		}
 
 		custom_tooltip = {

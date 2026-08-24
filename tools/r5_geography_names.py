@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs/r5"
 OUTPUT = DOCS / "geography_names.csv"
 COVERAGE = DOCS / "geography_name_coverage.json"
+NORTH_AFRICA_CORRECTIONS = DOCS / "north_africa_name_corrections.csv"
 CONFIG = ROOT / "config/local_paths.json"
 SYMBOLS = ROOT / "docs/vanilla_symbols"
 LOC_ROOT = ROOT / "main_menu/localization"
@@ -29,6 +30,13 @@ FIELDS = (
     "granularity", "key", "parent", "kind", "ad1_name", "language",
     "method", "source", "confidence", "note", "unchanged_verified",
 )
+NORTH_AFRICA_CORRECTION_FIELDS = ("granularity", "key", "ad1_name", "note")
+NORTH_AFRICA_ANACHRONISM = re.compile(
+    r"(?i)(?:^|[ \u2013-])(?:al|ar|el)[ -]|"
+    r"\b(?:oued|chott|jebel|djebel|sahara|wadi|oum|erg|hamada|sebkha|"
+    r"shatt|adrar|djouf|righ)\b|\ber\b"
+)
+NORTH_AFRICA_ROOTS = {"maghreb_region", "egypt_region", "nubia_region"}
 LEVELS = (
     ("continent", "continents.json"),
     ("subcontinent", "subcontinents.json"),
@@ -328,6 +336,15 @@ def canonical_rows() -> tuple[list[dict[str, str]], dict[str, object]]:
     source_catalog = (ROOT / "docs/world_1ad/SOURCES.md").read_text(encoding="utf-8-sig")
     level_order = {level: index for index, (level, _filename) in enumerate(LEVELS)}
     rows_by_token: dict[tuple[str, str], dict[str, str]] = {}
+    with NORTH_AFRICA_CORRECTIONS.open(encoding="utf-8-sig", newline="") as handle:
+        correction_reader = csv.DictReader(handle)
+        if tuple(correction_reader.fieldnames or ()) != NORTH_AFRICA_CORRECTION_FIELDS:
+            raise ValueError("north_africa_name_corrections.csv has an unexpected schema")
+        corrections = {
+            (row["granularity"].strip(), row["key"].strip()): row
+            for row in correction_reader
+        }
+    applied_corrections: set[tuple[str, str]] = set()
     failures: list[str] = []
     shard_files = sorted(
         path for path in DOCS.glob("names_*.csv")
@@ -350,6 +367,11 @@ def canonical_rows() -> tuple[list[dict[str, str]], dict[str, object]]:
             failures.append(f"{path.name}: rows are not in exact canonical key order")
         for row in rows:
             token = (row["granularity"], row["key"])
+            correction = corrections.get(token)
+            if correction:
+                row["ad1_name"] = correction["ad1_name"].strip()
+                row["note"] = f"{row['note']} {correction['note'].strip()}"
+                applied_corrections.add(token)
             if token in rows_by_token:
                 failures.append(f"duplicate researched token {token} in {path.name}")
                 continue
@@ -477,6 +499,26 @@ def canonical_rows() -> tuple[list[dict[str, str]], dict[str, object]]:
             row["parent"] = canonical_parent
             row["unchanged_verified"] = "true" if unchanged else "false"
             rows_by_token[token] = row
+
+    unapplied_corrections = sorted(set(corrections) - applied_corrections)
+    if unapplied_corrections:
+        failures.append(
+            f"unapplied North-African name corrections: {unapplied_corrections}"
+        )
+    north_african_keys = set(NORTH_AFRICA_ROOTS)
+    while True:
+        descendants = {
+            key for (_level, key), row in rows_by_token.items()
+            if row["parent"] in north_african_keys
+        } - north_african_keys
+        if not descendants:
+            break
+        north_african_keys.update(descendants)
+    for (level, key), row in rows_by_token.items():
+        if key in north_african_keys and NORTH_AFRICA_ANACHRONISM.search(row["ad1_name"]):
+            failures.append(
+                f"North-African anachronistic lexeme in {level}/{key}: {row['ad1_name']}"
+            )
 
     siblings: dict[tuple[str, str, str], list[str]] = defaultdict(list)
     for (level, key), row in rows_by_token.items():

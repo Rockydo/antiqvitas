@@ -146,7 +146,6 @@ hanseatic_shipwright_guild = {
 	construction_demand = port_building_construction
 	modifier = {
 		max_ships_built_at_same_time = 1
-		sailors_to_building_owner = 0.01
 		can_build_ships_in_this_location = yes
 		harbor_suitability = 0.1
 		local_repair_speed = 0.01
@@ -268,7 +267,6 @@ venetian_arsenal = {
 	build_time = huge_port_building_time
 	modifier = {
 		max_ships_built_at_same_time = 4
-		local_sailors = 0.025
 		local_ship_build_speed = 0.33
 		can_build_ships_in_this_location = yes
 		harbor_suitability = 0.2
@@ -331,7 +329,6 @@ kurultai = {
 	build_time = soldier_building
 
 	modifier = {
-		local_manpower = 0.05
 		can_recruit_regiment_in_this_location = yes
 	}
 
@@ -419,7 +416,6 @@ order_stronghold = {
 		local_clergy_estate_power = 1.0
 		local_defensive = 0.25
 
-		local_manpower = 0.005
 
 
 		can_recruit_regiment_in_this_location = yes
@@ -495,7 +491,6 @@ order_commandery = {
 
 	modifier = {
 		gold_to_building_owner = 0.1
-		manpower_to_building_owner = 0.005
 	}
 	construction_demand = order_commandery_construction
 	possible_production_methods = {
@@ -621,7 +616,6 @@ copenhagen_dockyard = {
 
 	modifier = {
 		max_ships_built_at_same_time = 2
-		local_sailors = 0.03
 		local_ship_build_speed = 0.33
 		can_build_ships_in_this_location = yes
 		harbor_suitability = 0.2
@@ -772,7 +766,6 @@ cinque_port = {  # ESTATE BUILDING
 
 	modifier = {
 		local_navy_levy_size_modifier = 1.0
-		local_sailors = 0.002
 		local_burghers_estate_power = 1.0
 	}
 }
@@ -912,7 +905,6 @@ north_sea_shipyards = {
 
 	modifier = {
 		max_ships_built_at_same_time = 1
-		local_sailors = 0.08
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.01
 	}
@@ -958,7 +950,6 @@ galley_barracks = {
 	always_add_demands = yes
 
 	modifier = {
-		local_sailors = 0.02
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.01
 	}
@@ -997,7 +988,6 @@ janissary_barracks = {
 	always_add_demands = yes
 
 	modifier = {
-		local_manpower = 0.025
 		can_recruit_regiment_in_this_location = yes
 	}
 
@@ -1028,7 +1018,6 @@ safaviyya_order_hall = {
 	build_time = soldier_building
 	always_add_demands = yes
 	modifier = {
-		local_manpower = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
 	possible_production_methods = {
@@ -1061,7 +1050,6 @@ warrior_lodge = {
 
 
 	modifier = {
-		local_manpower = 0.009
 		can_recruit_regiment_in_this_location = yes
 	}
 
@@ -1095,7 +1083,6 @@ ghilman_barracks = {
 	build_time = soldier_building
 	always_add_demands = yes
 	modifier = {
-		local_manpower = 0.025
 		can_recruit_regiment_in_this_location = yes
 	}
 	possible_production_methods = {
@@ -1248,7 +1235,6 @@ barcelona_royal_shipyard = {
 	modifier = {
 		max_ships_built_at_same_time = 2
 		local_ship_build_speed = 0.33
-		local_sailors = 0.02
 		can_build_ships_in_this_location = yes
 		harbor_suitability = 0.2
 		local_repair_speed = 0.025
@@ -1423,7 +1409,6 @@ brethren_marsh = {
 
 	modifier = {
 		max_ships_built_at_same_time = 1
-		local_sailors = 0.01
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.01
 	}
@@ -1468,7 +1453,6 @@ sofa_barracks = {
 
 
 	modifier = {
-		local_manpower = 0.005
 		can_recruit_regiment_in_this_location = yes
 		may_build_sofa_units = yes
 	}
@@ -1506,7 +1490,6 @@ cawa_barracks = {
 	always_add_demands = yes
 
 	modifier = {
-		local_manpower = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
 
@@ -1643,7 +1626,6 @@ telpochcalli = {
 
 
 	modifier = {
-		local_manpower = 0.03
 	}
 	capital_country_modifier = {
 		army_reinforce_efficiency = 0.10
@@ -2117,7 +2099,6 @@ kokufu = {
 
 
 	modifier = {
-		manpower_to_building_owner = 0.001
 		can_recruit_regiment_in_this_location = yes
 		gold_to_building_owner = 0.3
 		merchant_power_from_building = 0.3
@@ -2164,7 +2145,6 @@ gosho = {
 
 
 	modifier = {
-		manpower_to_building_owner = 0.001
 		can_recruit_regiment_in_this_location = yes
 		gold_to_building_owner = 0.05
 	}
@@ -2208,7 +2188,6 @@ yamashiro = {
 
 
 	modifier = {
-		manpower_to_building_owner = 0.002
 		can_recruit_regiment_in_this_location = yes
 		gold_to_building_owner = 0.05
 	}
@@ -2300,7 +2279,6 @@ shoen = {
 		gold_to_building_owner = 0.1
 		merchant_power_from_building = 0.1
 		merchant_capacity_from_building = 0.1
-		manpower_to_building_owner = 0.001
 	}
 
 	unique_production_methods = {
@@ -2437,7 +2415,6 @@ clan_shipyards = {
 	modifier = {
 		building_owner_maritime_presence = 0.5
 		max_ships_built_at_same_time = 1
-		sailors_to_building_owner = 0.001
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.01
 	}
@@ -2482,7 +2459,6 @@ clan_family_shrine = {
 
 	modifier = {
 		gold_to_building_owner = 0.01
-		manpower_to_building_owner = 0.001
 	}
 
 	construction_demand = japanese_clan_building_construction
@@ -2920,7 +2896,6 @@ kalari = {
 	remove_if = { NOT = { owner = { has_primary_or_accepted_culture = prev.location.dominant_culture } } }
 	modifier = {
 		local_levy_size_modifier = 0.33
-		local_manpower = 0.0005
 		can_recruit_regiment_in_this_location = yes
 	}
 	possible_production_methods = { early_soldier_building_maintenance }
@@ -3106,7 +3081,6 @@ sukharev_tower = {
 
 
 	modifier = {
-		local_sailors = 0.01
 	}
 
 	capital_country_modifier = {
@@ -3475,7 +3449,6 @@ royal_atarazanas_seville = {
 
 	modifier = {
 		max_ships_built_at_same_time = 2
-		local_sailors = 0.02
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.02
 	}
@@ -3642,7 +3615,6 @@ bey_fortress = {
 
 	modifier = {
 		local_crown_estate_power = 0.25
-		local_manpower = 0.012
 		local_defensive = 0.25
 
 		can_recruit_regiment_in_this_location = yes
@@ -3736,7 +3708,6 @@ mamluk_barracks = {
 	always_add_demands = yes
 
 	modifier = {
-		local_manpower = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
 
@@ -3831,7 +3802,6 @@ kurmina_headquarter = {
 	always_add_demands = yes
 
 	modifier = {
-		local_manpower = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
 
@@ -4933,6 +4903,5 @@ hsa_burgtor = {
 	modifier = {
 		local_garrison_size = 0.1
 		local_defensive = 0.1
-		manpower_to_building_owner = 0.005
 	}
 }

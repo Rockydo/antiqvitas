@@ -5896,8 +5896,8 @@ antq_regprog_germanic_wergild_staff_tallies = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_germanic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_baltic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_germanic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_baltic_group }
 		}
 	}
 	allow_multiple = no
@@ -6023,8 +6023,8 @@ antq_regprog_germanic_grove_boundary_marks = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_germanic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_baltic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_germanic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_baltic_group }
 		}
 	}
 	allow_multiple = no
@@ -6150,8 +6150,8 @@ antq_regprog_germanic_cattle_tribute_counts = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_germanic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_baltic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_germanic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_baltic_group }
 		}
 	}
 	allow_multiple = no
@@ -6278,8 +6278,8 @@ antq_regprog_germanic_host_shield_stacks = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_germanic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_baltic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_germanic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_baltic_group }
 		}
 	}
 	allow_multiple = no
@@ -6406,7 +6406,7 @@ antq_regprog_celtic_oppidum_grain_pits = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_celtic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_celtic_group }
 		}
 	}
 	allow_multiple = no
@@ -6533,7 +6533,7 @@ antq_regprog_celtic_cattle_bridewealth_rings = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_celtic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_celtic_group }
 		}
 	}
 	allow_multiple = no
@@ -6660,7 +6660,7 @@ antq_regprog_celtic_chariot_fitting_stores = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_celtic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_celtic_group }
 		}
 	}
 	allow_multiple = no
@@ -6787,7 +6787,7 @@ antq_regprog_celtic_oenach_assembly_posts = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_celtic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_celtic_group }
 		}
 	}
 	allow_multiple = no
@@ -6914,8 +6914,8 @@ antq_regprog_uralic_fur_bundle_accounts = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_uralic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_slavic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_uralic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_slavic_group }
 		}
 	}
 	allow_multiple = no
@@ -7042,8 +7042,8 @@ antq_regprog_uralic_river_boat_relays = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_uralic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_slavic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_uralic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_slavic_group }
 		}
 	}
 	allow_multiple = no
@@ -7170,8 +7170,8 @@ antq_regprog_uralic_winter_store_pits = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_uralic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_slavic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_uralic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_slavic_group }
 		}
 	}
 	allow_multiple = no
@@ -7298,8 +7298,8 @@ antq_regprog_uralic_forest_grove_gifts = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_uralic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_slavic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_uralic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_slavic_group }
 		}
 	}
 	allow_multiple = no
@@ -7426,8 +7426,8 @@ antq_regprog_african_compound_granary_seals = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_subsaharan_group }
-			dominant_culture = { has_culture_group = culture_group:antq_nile_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_subsaharan_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_nile_group }
 		}
 	}
 	allow_multiple = no
@@ -7554,8 +7554,8 @@ antq_regprog_african_bloomery_iron_shares = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_subsaharan_group }
-			dominant_culture = { has_culture_group = culture_group:antq_nile_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_subsaharan_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_nile_group }
 		}
 	}
 	allow_multiple = no
@@ -7682,8 +7682,8 @@ antq_regprog_african_cattle_kraal_counts = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_subsaharan_group }
-			dominant_culture = { has_culture_group = culture_group:antq_nile_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_subsaharan_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_nile_group }
 		}
 	}
 	allow_multiple = no
@@ -7810,8 +7810,8 @@ antq_regprog_african_shrine_offering_jars = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_subsaharan_group }
-			dominant_culture = { has_culture_group = culture_group:antq_nile_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_subsaharan_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_nile_group }
 		}
 	}
 	allow_multiple = no
@@ -7938,7 +7938,7 @@ antq_regprog_indic_tank_sluice_turns = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_indian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_indian_group }
 		}
 	}
 	allow_multiple = no
@@ -8065,7 +8065,7 @@ antq_regprog_indic_village_share_cords = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_indian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_indian_group }
 		}
 	}
 	allow_multiple = no
@@ -8192,7 +8192,7 @@ antq_regprog_indic_monsoon_seed_jars = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_indian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_indian_group }
 		}
 	}
 	allow_multiple = no
@@ -8319,7 +8319,7 @@ antq_regprog_indic_guild_weight_stones = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_indian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_indian_group }
 		}
 	}
 	allow_multiple = no
@@ -8446,12 +8446,12 @@ antq_regprog_nanyang_outrigger_cordage_stores = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_austronesian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_southeast_asian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_oceanic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_japonic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_korean_group }
-			dominant_culture = { has_culture_group = culture_group:antq_north_maluku_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_austronesian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_southeast_asian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_oceanic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_japonic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_korean_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	allow_multiple = no
@@ -8578,12 +8578,12 @@ antq_regprog_nanyang_monsoon_bead_chests = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_austronesian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_southeast_asian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_oceanic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_japonic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_korean_group }
-			dominant_culture = { has_culture_group = culture_group:antq_north_maluku_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_austronesian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_southeast_asian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_oceanic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_japonic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_korean_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	allow_multiple = no
@@ -8710,12 +8710,12 @@ antq_regprog_nanyang_reef_fish_weirs = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_austronesian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_southeast_asian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_oceanic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_japonic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_korean_group }
-			dominant_culture = { has_culture_group = culture_group:antq_north_maluku_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_austronesian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_southeast_asian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_oceanic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_japonic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_korean_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	allow_multiple = no
@@ -8842,12 +8842,12 @@ antq_regprog_nanyang_ancestor_jar_watches = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_austronesian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_southeast_asian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_oceanic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_japonic_group }
-			dominant_culture = { has_culture_group = culture_group:antq_korean_group }
-			dominant_culture = { has_culture_group = culture_group:antq_north_maluku_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_austronesian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_southeast_asian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_oceanic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_japonic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_korean_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_north_maluku_group }
 		}
 	}
 	allow_multiple = no
@@ -8974,7 +8974,7 @@ antq_regprog_mesoamerican_milpa_seed_gourds = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_mesoamerican_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_mesoamerican_group }
 		}
 	}
 	allow_multiple = no
@@ -9101,7 +9101,7 @@ antq_regprog_mesoamerican_obsidian_core_shares = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_mesoamerican_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_mesoamerican_group }
 		}
 	}
 	allow_multiple = no
@@ -9228,7 +9228,7 @@ antq_regprog_mesoamerican_cacao_tribute_bundles = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_mesoamerican_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_mesoamerican_group }
 		}
 	}
 	allow_multiple = no
@@ -9355,7 +9355,7 @@ antq_regprog_mesoamerican_incensario_calendar_watches = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_mesoamerican_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_mesoamerican_group }
 		}
 	}
 	allow_multiple = no
@@ -9482,7 +9482,7 @@ antq_regprog_andean_terrace_water_turns = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_andean_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
 	allow_multiple = no
@@ -9609,7 +9609,7 @@ antq_regprog_andean_llama_caravan_packs = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_andean_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
 	allow_multiple = no
@@ -9736,7 +9736,7 @@ antq_regprog_andean_chuno_store_courts = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_andean_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
 	allow_multiple = no
@@ -9863,7 +9863,7 @@ antq_regprog_andean_spondylus_huaca_gifts = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_andean_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_andean_group }
 		}
 	}
 	allow_multiple = no
@@ -9990,7 +9990,7 @@ antq_regprog_woodland_copper_mica_exchanges = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_american_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_american_group }
 		}
 	}
 	allow_multiple = no
@@ -10117,7 +10117,7 @@ antq_regprog_woodland_canoe_portage_marks = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_american_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_american_group }
 		}
 	}
 	allow_multiple = no
@@ -10244,7 +10244,7 @@ antq_regprog_woodland_hunt_cache_pits = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_american_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_american_group }
 		}
 	}
 	allow_multiple = no
@@ -10371,7 +10371,7 @@ antq_regprog_woodland_earthwork_labor_cords = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_american_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_american_group }
 		}
 	}
 	allow_multiple = no
@@ -10498,7 +10498,7 @@ antq_regprog_highland_barley_threshing_floors = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_tibetan_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_tibetan_group }
 		}
 	}
 	allow_multiple = no
@@ -10625,7 +10625,7 @@ antq_regprog_highland_yak_salt_caravans = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_tibetan_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_tibetan_group }
 		}
 	}
 	allow_multiple = no
@@ -10752,7 +10752,7 @@ antq_regprog_highland_pass_cairn_watches = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_tibetan_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_tibetan_group }
 		}
 	}
 	allow_multiple = no
@@ -10879,7 +10879,7 @@ antq_regprog_highland_hearth_sanctuary_stores = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_tibetan_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_tibetan_group }
 		}
 	}
 	allow_multiple = no
@@ -11006,7 +11006,7 @@ antq_regprog_semitic_well_right_stones = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_semitic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_semitic_group }
 		}
 	}
 	allow_multiple = no
@@ -11133,7 +11133,7 @@ antq_regprog_semitic_incense_caravan_seals = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_semitic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_semitic_group }
 		}
 	}
 	allow_multiple = no
@@ -11260,7 +11260,7 @@ antq_regprog_semitic_date_grove_shares = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_semitic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_semitic_group }
 		}
 	}
 	allow_multiple = no
@@ -11387,7 +11387,7 @@ antq_regprog_semitic_high_place_incense = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_semitic_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_semitic_group }
 		}
 	}
 	allow_multiple = no
@@ -11514,7 +11514,7 @@ antq_regprog_berber_transhumance_cairns = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_berber_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_berber_group }
 		}
 	}
 	allow_multiple = no
@@ -11641,7 +11641,7 @@ antq_regprog_berber_foggara_water_turns = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_berber_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_berber_group }
 		}
 	}
 	allow_multiple = no
@@ -11768,7 +11768,7 @@ antq_regprog_berber_salt_slab_caravans = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_berber_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_berber_group }
 		}
 	}
 	allow_multiple = no
@@ -11895,7 +11895,7 @@ antq_regprog_berber_tumulus_ancestor_gifts = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_berber_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_berber_group }
 		}
 	}
 	allow_multiple = no
@@ -12022,8 +12022,8 @@ antq_regprog_inner_oasis_canal_turns = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_iranian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_steppe_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_iranian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_steppe_group }
 		}
 	}
 	allow_multiple = no
@@ -12150,8 +12150,8 @@ antq_regprog_inner_caravan_seal_packets = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_iranian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_steppe_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_iranian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_steppe_group }
 		}
 	}
 	allow_multiple = no
@@ -12278,8 +12278,8 @@ antq_regprog_inner_remount_bit_stores = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_iranian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_steppe_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_iranian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_steppe_group }
 		}
 	}
 	allow_multiple = no
@@ -12406,8 +12406,8 @@ antq_regprog_inner_fire_and_gift_plaques = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_iranian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_steppe_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_iranian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_steppe_group }
 		}
 	}
 	allow_multiple = no
@@ -12534,8 +12534,8 @@ antq_regprog_caucasian_pass_tower_watches = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_caucasian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_balkan_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_caucasian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_balkan_group }
 		}
 	}
 	allow_multiple = no
@@ -12662,8 +12662,8 @@ antq_regprog_caucasian_wine_amphora_shares = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_caucasian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_balkan_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_caucasian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_balkan_group }
 		}
 	}
 	allow_multiple = no
@@ -12790,8 +12790,8 @@ antq_regprog_caucasian_hillfort_grain_bins = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_caucasian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_balkan_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_caucasian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_balkan_group }
 		}
 	}
 	allow_multiple = no
@@ -12918,8 +12918,8 @@ antq_regprog_caucasian_hostage_surety_tokens = {
 			has_reform = government_reform:antq_frontier_muster_monarchy
 		}
 		OR = {
-			dominant_culture = { has_culture_group = culture_group:antq_caucasian_group }
-			dominant_culture = { has_culture_group = culture_group:antq_balkan_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_caucasian_group }
+			dominant_culture ?= { has_culture_group = culture_group:antq_balkan_group }
 		}
 	}
 	allow_multiple = no

@@ -91,30 +91,18 @@ dissolve_league_peace_deal = {
 				limit = { is_leader_of_international_organization = international_organization:italian_league_1 }
 				destroy_international_organization = { target = international_organization:italian_league_1 }
 				hidden_effect = {
-					set_global_variable = {
-						name = recently_destroyed_a_league_variable
-						years = 5
-					}
 				}
 			}
 			else_if = {
 				limit = { is_leader_of_international_organization = international_organization:italian_league_2 }
 				destroy_international_organization = { target = international_organization:italian_league_2 }
 				hidden_effect = {
-					set_global_variable = {
-						name = recently_destroyed_a_league_variable
-						years = 5
-					}
 				}
 			}
 			else_if = {
 				limit = { is_leader_of_international_organization = international_organization:italian_league_3 }
 				destroy_international_organization = { target = international_organization:italian_league_3 }
 				hidden_effect = {
-					set_global_variable = {
-						name = recently_destroyed_a_league_variable
-						years = 5
-					}
 				}
 			}
 			else_if = {

@@ -41,11 +41,14 @@ VALIDATE_COMMANDS = (
     Command("tools/pdxlint.py"),
     Command("tools/s4_structural_audit.py"),
     Command("tools/s4_annona_route.py"),
+    Command("tools/s4_roman_mint_supply.py"),
     Command("tools/s4_principate_economy.py"),
     Command("tools/s4_opening_capacity.py"),
     Command("tools/s4_epidemic_trajectories.py"),
     Command("tools/m6_power.py", ("--check",)),
     Command("tools/s2_ancient_politics.py", ("--check",)),
+    Command("tools/s7_administrative_depth.py", ("--check",)),
+    Command("tools/s7_crown_power.py", ("--check",)),
     Command("tools/s2_roman_politics_depth.py"),
     Command("tools/s2_han_politics_depth.py"),
     Command("tools/s2_iranian_politics_depth.py"),
@@ -107,10 +110,12 @@ VALIDATE_COMMANDS = (
       Command("tools/m5_ancient_goods_expansion.py", ("--check",)),
       Command("tools/m5_food_goods_expansion.py", ("--check",)),
       Command("tools/m5_trade_good_cutouts.py", ("--check",)),
+      Command("tools/s7_late_goods_building_art.py", ("--check",)),
       Command("tools/m5_building_circle_reart.py", ("--check",)),
     Command("tools/m5_building_icon_audit.py", ("--check",)),
     Command("tools/generate_ancient_goods.py", ("--check",)),
     Command("tools/m5_goods_system_audit.py", ("--check",)),
+    Command("tools/s7_goods_reachability.py", ("--check",)),
     Command("tools/m5_landscape.py", ("--check",)),
     Command("tools/generate_rgo_remap.py", ("--check",)),
     Command("tools/m5_roman_buildings.py", ("--check",)),
@@ -130,6 +135,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m7_war.py", ("--check",)),
     Command("tools/m7_levy_scope_guard.py", ("--check",)),
     Command("tools/m8_knowledge.py", ("--check",)),
+    Command("tools/s7_research_pacing.py", ("--check",)),
     Command("tools/m8_age1_expansion_art.py", ("--check",)),
     Command("tools/m8_later_expansion_art.py", ("--check",)),
     Command("tools/m8_shared_depth_art.py", ("--check",)),
@@ -138,6 +144,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m9_diplomacy.py", ("--check",)),
     Command("tools/s3_diplomacy_union.py", ("--check",)),
     Command("tools/m10_history.py", ("--check",)),
+    Command("tools/s7_teutoburg_scenarios.py", ("--check",)),
     Command("tools/m10_second_century.py", ("--check",)),
     Command("tools/m10_third_century.py", ("--check",)),
     Command("tools/m10_fourth_century.py", ("--check",)),
@@ -174,6 +181,10 @@ VALIDATE_COMMANDS = (
     Command("tools/m11_decisions.py", ("--check", "--scope", "all")),
     Command("tools/m11_message_overlay.py", ("--check", "--scope", "all")),
     Command("tools/m11_localization.py", ("--check",)),
+    Command("tools/m12_engine_loc_workarounds.py", ("--check",)),
+    Command("tools/m12_ancient_expansion_loc.py", ("--check",)),
+    Command("tools/m12_ancient_marriage_loc.py", ("--check",)),
+    Command("tools/m12_construction_gui_guard.py", ("--check",)),
     Command("tools/m12_disable_missions.py", ("--check",)),
     Command("tools/m12_game_rules.py", ("--check",)),
     Command("tools/m12_hardcoded_startup.py", ("--check",)),
@@ -193,6 +204,7 @@ VALIDATE_COMMANDS = (
     Command("tools/m12_anachronism_audit.py", ("--check",)),
     Command("tools/m12_disable_historical_hints.py", ("--check",)),
     Command("tools/m12_event_quarantine.py", ("--check",)),
+    Command("tools/m12_country_registry.py", ("--check",)),
     Command("tools/m12_culture_presence.py", ("--check",)),
     Command("tools/p4_manual_regression.py", ("--check",)),
     Command("tools/m11_coa_audit.py", ("--check",)),
@@ -201,6 +213,7 @@ VALIDATE_COMMANDS = (
     Command("tools/extract_map_coordinates.py", ("--check",)),
     Command("tools/capital_geography.py", ("--check",)),
     Command("tools/ownership_map.py", ("--check",)),
+    Command("tools/m5_road_topology.py", ("--check",)),
     Command("tools/territory_coverage.py"),
     Command("tools/generate_start_mirror.py", ("--check",)),
     Command("tools/m3_political_map.py"),
@@ -215,7 +228,29 @@ ART_REVIEW_COMMANDS = (
 )
 
 
-def run_commands(label: str, commands: tuple[Command, ...], *, dry_run: bool) -> int:
+def run_commands(
+    label: str,
+    commands: tuple[Command, ...],
+    *,
+    dry_run: bool,
+    start_index: int = 1,
+    end_index: int | None = None,
+) -> int:
+    """Run one contiguous, one-based slice of a canonical command sequence.
+
+    Long Windows validation unions can outlive an automation transport's single
+    command timeout.  Slicing the immutable registry lets the caller retain the
+    exact canonical order and exit semantics while collecting bounded reports.
+    """
+    final_index = len(commands) if end_index is None else end_index
+    if not 1 <= start_index <= final_index <= len(commands):
+        print(
+            f"{label}: FAIL (invalid command range {start_index}..{final_index} "
+            f"for {len(commands)} commands)",
+            file=sys.stderr,
+        )
+        return 2
+    selected = commands[start_index - 1:final_index]
     if not dry_run:
         missing = [command.script for command in commands if not command.path.is_file()]
         if missing:
@@ -224,8 +259,11 @@ def run_commands(label: str, commands: tuple[Command, ...], *, dry_run: bool) ->
                 print(f"  - missing check script {script}", file=sys.stderr)
             return 2
 
-    print(f"{label}: {len(commands)} command(s)")
-    for index, command in enumerate(commands, start=1):
+    print(
+        f"{label}: {len(selected)} command(s), canonical range "
+        f"{start_index}..{final_index} of {len(commands)}"
+    )
+    for index, command in enumerate(selected, start=start_index):
         print(f"[{index}/{len(commands)}] {command.display()}")
         if dry_run:
             continue
@@ -255,15 +293,28 @@ def main() -> int:
         action="store_true",
         help="print the canonical command sequence without executing it",
     )
+    parser.add_argument(
+        "--start-index", type=int, default=1,
+        help="one-based first canonical command to run",
+    )
+    parser.add_argument(
+        "--end-index", type=int,
+        help="one-based last canonical command to run (inclusive)",
+    )
     args = parser.parse_args()
 
     if args.target == "validate":
-        return run_commands("validate", VALIDATE_COMMANDS, dry_run=args.dry_run)
+        return run_commands(
+            "validate", VALIDATE_COMMANDS, dry_run=args.dry_run,
+            start_index=args.start_index, end_index=args.end_index,
+        )
     if args.target == "smoke":
         return run_commands("smoke", SMOKE_COMMANDS, dry_run=args.dry_run)
     if args.target == "art-review":
         return run_commands("art-review", ART_REVIEW_COMMANDS, dry_run=args.dry_run)
 
+    if args.start_index != 1 or args.end_index is not None:
+        parser.error("--start-index/--end-index are valid only with target validate")
     result = run_commands("validate", VALIDATE_COMMANDS, dry_run=args.dry_run)
     if result:
         return result

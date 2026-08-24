@@ -1,5 +1,41 @@
 # ANTIQVITAS BLOCKERS
 
+## 2026-08-06 - Round 6 device-loss/commit crash regression
+
+Status: former failure windows crossed; extended telemetry and AD 100 gate open.
+
+The 23:25 market-panel and 00:05 AD 4 crash folders remain preserved. Their
+renderer/device-loss path coincided with an opening union of 6,706 buildings and
+the latter run reached roughly 5 MB remaining system commit. The new union has
+2,950 bounded placements. A fresh 1920x1080 Rome campaign opened Roma's market
+detail while paused on 1 January and the same process survived through all of AD
+4 to 1 January AD 5 without a new crash folder. This is strong regression
+evidence but does not replace the still-open run past AD 5 with RAM/commit/VRAM,
+widget, driver-event, and dump telemetry or the continuous AD 100 gate. Evidence:
+`docs/playtests/ROUND6_REMEDIATION_20260806.md`.
+
+## 2026-08-05 - Rome April native crash
+
+Status: resolved by R34.
+
+WinDbg resolves the final reproduction to a null market-like object inside
+`CBuildingAi::HandleProximityBuildings` on a parallel simulation worker. It is
+not a renderer, display-resolution, driver, RGO, Annona, bilateral-action, or
+generic market-action failure. At R34 ANTIQVITAS had no active local-governor or
+`local_proximity_source` building chain, so it set only
+`NAI.AI_PROXIMITY_CANDIDATE_UPDATE_CHANCE = 0`. A fresh non-debug Rome campaign
+then ran at speed 5 from 1 January, year 1 to 1 January, year 2 without a new
+crash directory, and all 172 validation checks passed. Evidence:
+`docs/playtests/R16_R17_RUNTIME_CRASH_ISOLATION_20260805.md`.
+
+Round 6 adds bounded authored proximity-control centers but retains this narrow
+AI-search quarantine; see the 2026-08-06 decision and playtest report.
+
+The historical RGO ledger remains generated but live reassignment stays
+quarantined until it receives a separate clean runtime proof. Earlier RGO
+controls were confounded by this now-identified building-AI crash and are not
+evidence that RGO mutation caused the April failure.
+
 ## 2026-08-03 - Save-to-Observer recovery resets the campaign date
 
 Status: bounded engine/renderer limitation; no further retry without a new

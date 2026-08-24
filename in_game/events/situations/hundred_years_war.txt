@@ -29,7 +29,7 @@ hundred_years_war.1 = {
 				OR = {
 					is_subject_type = vassal
 					is_subject_type = appanage
-					is_subject_of = c:FRA
+					is_subject_of = c:DUMMY
 				}
 			}
 			custom_tooltip = explain_subject_interactions_tt
@@ -63,12 +63,12 @@ hundred_years_war.2 = {
 	
 	option = {
 		name = hundred_years_war.2.a
-		add_casus_belli = { target = c:FRA type = casus_belli:cb_hundred_years_war }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_hundred_years_war }
 		
 		if = {
 			limit = {
 				NOT = {
-					is_rival_of = c:FRA
+					is_rival_of = c:DUMMY
 				}
 			}
 			
@@ -79,10 +79,10 @@ hundred_years_war.2 = {
 					}
 				}
 				random_rival = {
-					c:ENG = { remove_rival = prev }
+					c:DUMMY = { remove_rival = prev }
 				}
 			}
-			add_rival = c:FRA
+			add_rival = c:DUMMY
 			
 		}
 
@@ -115,7 +115,7 @@ hundred_years_war.3 = {
 			save_scope_as = target_char_2
 		}
 
-		c:ENG.ruler_or_regent ?= { save_scope_as = target_eng_ruler }
+		c:DUMMY.ruler_or_regent ?= { save_scope_as = target_eng_ruler }
 	}
 	
 	
@@ -123,13 +123,13 @@ hundred_years_war.3 = {
 	option = {
 		name = hundred_years_war.3.a
 		show_as_tooltip = {
-			c:ENG = { add_casus_belli = { target = root type = casus_belli:cb_hundred_years_war } }
+			c:DUMMY = { add_casus_belli = { target = root type = casus_belli:cb_hundred_years_war } }
 		}
 		
 		if = {
 			limit = {
 				NOT = {
-					is_rival_of = c:ENG
+					is_rival_of = c:DUMMY
 				}
 			}
 			
@@ -140,10 +140,10 @@ hundred_years_war.3 = {
 					}
 				}
 				random_rival = {
-					c:FRA = { remove_rival = prev }
+					c:DUMMY = { remove_rival = prev }
 				}
 			}
-			add_rival = c:ENG
+			add_rival = c:DUMMY
 			
 		}
 		custom_tooltip = explain_fra_interactions_tt
@@ -173,7 +173,7 @@ hundred_years_war.10 = {
 	
 	option = {
 		name = hundred_years_war.10.a
-		add_casus_belli = { target = c:FRA type = casus_belli:cb_hundred_years_war }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_hundred_years_war }
 	}
 
 	trigger = {
@@ -196,7 +196,7 @@ hundred_years_war.11 = {
 	
 	option = {
 		name = hundred_years_war.11.a
-		add_casus_belli = { target = c:ENG type = casus_belli:cb_hundred_years_war_fra }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_hundred_years_war_fra }
 	}
 
 	trigger = {
@@ -229,7 +229,7 @@ hundred_years_war.20 = {
 			}
 			add = {
 				value = 100
-				multiply = "relative_strength(c:FRA)"
+				multiply = "relative_strength(c:DUMMY)"
 				divide = 5
 				desc = "RELATIVE_STRENGTH"
 			}
@@ -252,18 +252,18 @@ hundred_years_war.20 = {
 
 		if = {
 			limit = {
-				NOT = { is_at_war_with = c:FRA }
+				NOT = { is_at_war_with = c:DUMMY }
 			}
-			leave_all_wars_with = c:FRA
+			leave_all_wars_with = c:DUMMY
 			if = {
 				limit = {
-					can_declare_legal_war_on = { target = c:FRA }
+					can_declare_legal_war_on = { target = c:DUMMY }
 				}
-				declare_war_with_cb = {  target = c:FRA type = casus_belli:cb_hundred_years_war }
+				declare_war_with_cb = {  target = c:DUMMY type = casus_belli:cb_hundred_years_war }
 			}
 			else = {
 				add_casus_belli = {
-					target = c:FRA
+					target = c:DUMMY
 					type = casus_belli:cb_hundred_years_war
 				}
 			}
@@ -280,7 +280,7 @@ hundred_years_war.20 = {
 			}
 			subtract = {
 				value = 100
-				multiply = "relative_strength(c:FRA)"
+				multiply = "relative_strength(c:DUMMY)"
 				divide = 5
 				desc = "RELATIVE_STRENGTH"
 			}
@@ -295,7 +295,7 @@ hundred_years_war.20 = {
 		add_prestige = prestige_mild_penalty
 		
 		
-		add_truce_with = { target = c:FRA years = 2 }
+		add_truce_with = { target = c:DUMMY years = 2 }
 		
 	}
 	trigger = {
@@ -322,17 +322,17 @@ hundred_years_war.21 = {
 		historical_option = yes
 		if = {
 			limit = {
-				NOT = { is_at_war_with = c:ENG }
+				NOT = { is_at_war_with = c:DUMMY }
 			}
 			if = {
 				limit = {
-					can_declare_legal_war_on = { target = c:ENG }
+					can_declare_legal_war_on = { target = c:DUMMY }
 				}
-				declare_war_with_cb = {  target = c:ENG type = casus_belli:cb_hundred_years_war_fra }
+				declare_war_with_cb = {  target = c:DUMMY type = casus_belli:cb_hundred_years_war_fra }
 			}
 			else = {
 				add_casus_belli = {
-					target = c:ENG
+					target = c:DUMMY
 					type = casus_belli:cb_hundred_years_war_fra
 				}
 			}
@@ -343,7 +343,7 @@ hundred_years_war.21 = {
 		name = hundred_years_war.21.b
 		add_prestige = prestige_mild_penalty
 
-		add_truce_with = { target = c:ENG years = 2 }
+		add_truce_with = { target = c:DUMMY years = 2 }
 		
 	}
 
@@ -370,7 +370,7 @@ hundred_years_war.100 = {
 
 
 	immediate = {
-		c:ENG.ruler_or_regent ?= {
+		c:DUMMY.ruler_or_regent ?= {
 			save_scope_as = target_char
 		}
 	}
@@ -419,7 +419,7 @@ hundred_years_war.101 = {
 	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
 
 	immediate = {
-		c:FRA.ruler_or_regent ?= {
+		c:DUMMY.ruler_or_regent ?= {
 			save_scope_as = target_char
 		}
 	}
@@ -477,7 +477,7 @@ hundred_years_war.200 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -488,7 +488,7 @@ hundred_years_war.200 = {
 		current_date > 476.9.4
 		character:eng_robert_iii_artois ?= {
 			is_alive = yes	
-			owner = c:ENG
+			owner = c:DUMMY
 		}			
 	}
 	
@@ -503,9 +503,9 @@ hundred_years_war.200 = {
 		historical_option = yes
 		custom_tooltip = hundred_years_war.200.tt.a
 		add_prestige = prestige_mild_bonus
-		c:ENG = { trigger_event_silently = {  id = hundred_years_war.201 days = { 3 5 } } }			
+		c:DUMMY = { trigger_event_silently = {  id = hundred_years_war.201 days = { 3 5 } } }			
 		hidden_effect = {
-			c:ENG = { 
+			c:DUMMY = { 
 				set_variable = {
 					name = robert_the_fugitive_flag
 					years = 30
@@ -523,7 +523,7 @@ hundred_years_war.200 = {
 		add_prestige = prestige_mild_penalty
 		custom_tooltip = hundred_years_war.200.tt.b		
 		hidden_effect = {
-			c:ENG = { 
+			c:DUMMY = { 
 				set_variable = {
 					name = france_no_robert_interest
 					years = 30 
@@ -550,7 +550,7 @@ hundred_years_war.201 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -584,39 +584,39 @@ hundred_years_war.201 = {
 		}		
 		add_country_modifier = { modifier = eng_hyw_invasion_preparation months = 11 mode = add_and_extend }  		
 		add_army_tradition = army_tradition_ultimate_bonus
-		add_casus_belli = { target = c:FRA type = casus_belli:cb_hundred_years_war }
-		c:FRA = { trigger_event_silently = {  id = hundred_years_war.202 days = { 3 5 } } }	
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_hundred_years_war }
+		c:DUMMY = { trigger_event_silently = {  id = hundred_years_war.202 days = { 3 5 } } }	
 		hidden_effect = {
-			c:FRA = { set_variable = robert_the_fugitive_not_returned }
+			c:DUMMY = { set_variable = robert_the_fugitive_not_returned }
 		}		
 		hidden_effect = {
 			location:calais = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}	
 			location:boulogne_sur_mer = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			location:saint_omer = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			location:saint_pol = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			location:lens = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			location:arras = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			# Province of Amiens
 			location:amiens = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			location:saint_quentin = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			location:clermont_en_beauvaisis = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 		}
 		ai_chance = {
@@ -630,15 +630,15 @@ hundred_years_war.201 = {
 		add_stability = stability_mild_bonus
 		add_prestige = prestige_severe_penalty
 		scope:fugitive_robert_de_artois = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
-		c:FRA = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_hyw_surrendered_robert }
 			reverse_add_opinion = { target = root modifier = opinion_hyw_surrendered_robert }
 		}		
-		c:FRA = { trigger_event_silently = {  id = hundred_years_war.203 days = { 3 5 } } }	
+		c:DUMMY = { trigger_event_silently = {  id = hundred_years_war.203 days = { 3 5 } } }	
 		hidden_effect = {
-			c:FRA = {
+			c:DUMMY = {
 				set_variable = { name = robert_returned_flag value = 1 }
 			}
 		}	
@@ -660,7 +660,7 @@ hundred_years_war.202 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -677,7 +677,7 @@ hundred_years_war.202 = {
 		has_variable = robert_the_fugitive_not_returned	
 		character:eng_robert_iii_artois ?= {
 			is_alive = yes	
-			owner = c:ENG
+			owner = c:DUMMY
 		}		
 	}
 
@@ -691,10 +691,10 @@ hundred_years_war.202 = {
 			type = offensive_vs_defensive
 			value = societal_value_move_to_left
 		}		
-		add_casus_belli = { target = c:ENG type = casus_belli:cb_hundred_years_war_fra }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_hundred_years_war_fra }
 		show_as_tooltip = {
-			c:ENG = {
-				add_casus_belli = { target = c:FRA type = casus_belli:cb_hundred_years_war }
+			c:DUMMY = {
+				add_casus_belli = { target = c:DUMMY type = casus_belli:cb_hundred_years_war }
 			}	
 		}	
 		set_variable = { name = demanded_aquitaine_returned value = 1 }		
@@ -724,13 +724,13 @@ hundred_years_war.202 = {
 				limit = {
 					has_variable = demanded_aquitaine_returned	
 				}				
-				c:AQN = {
+				c:DUMMY = {
 					every_owned_location = {
 						limit = {
-							owner = c:AQN
-							NOT = { previous_owner = c:FRA }
+							owner = c:DUMMY
+							NOT = { previous_owner = c:DUMMY }
 						}
-						add_core = c:FRA
+						add_core = c:DUMMY
 					}	
 				}
 			}
@@ -752,7 +752,7 @@ hundred_years_war.203 = { # England Returns Robert
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -771,7 +771,7 @@ hundred_years_war.203 = { # England Returns Robert
 	
 	immediate = {
 		character:eng_robert_iii_artois = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 			save_scope_as = fugitive_robert_de_artois
 		}		
 	}	
@@ -822,7 +822,7 @@ hundred_years_war.203 = { # England Returns Robert
 	option = { # Grant him Artois instead
 		name = hundred_years_war.203.d
 		trigger = {
-			c:ARS = { is_subject_of = ROOT }
+			c:DUMMY = { is_subject_of = ROOT }
 		}
 		custom_tooltip = hundred_years_war.203.tt.d # Artois
 		add_stability = stability_mild_penalty
@@ -830,9 +830,9 @@ hundred_years_war.203 = { # England Returns Robert
 		add_legitimacy = legitimacy_mild_penalty
 		hidden_effect = {
 			character:eng_robert_iii_artois = {
-				move_country = c:ARS
+				move_country = c:DUMMY
 			}
-			c:ARS = {
+			c:DUMMY = {
 				set_new_ruler = character:eng_robert_iii_artois
 				make_subject_of = {
 					target = ROOT
@@ -860,7 +860,7 @@ hundred_years_war.204 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 80
@@ -898,36 +898,36 @@ hundred_years_war.204 = {
 		}		
 		add_country_modifier = { modifier = eng_hyw_invasion_preparation months = 11 mode = add_and_extend } 		
 		add_army_tradition = army_tradition_extreme_bonus
-		add_casus_belli = { target = c:FRA type = casus_belli:cb_hundred_years_war }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_hundred_years_war }
 		set_variable = { name = robert_provoked_war_flag value = 1 }
 		hidden_effect = {
 			location:calais = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}	
 			location:boulogne_sur_mer = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			location:saint_omer = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			location:saint_pol = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			location:lens = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			location:arras = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			# Province of Amiens
 			location:amiens = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			location:saint_quentin = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 			location:clermont_en_beauvaisis = {
-				add_core = c:ENG
+				add_core = c:DUMMY
 			}
 		}	
 	}
@@ -973,7 +973,7 @@ hundred_years_war.205 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -989,7 +989,7 @@ hundred_years_war.205 = {
 			owner = ROOT
 		}		
 		any_owned_location = {
-			is_core_of = c:ARS	
+			is_core_of = c:DUMMY	
 		}		
 	}
 	
@@ -1005,14 +1005,14 @@ hundred_years_war.205 = {
 	option = { # It is his birthright
 		name = hundred_years_war.205.a
 		add_legitimacy = legitimacy_mild_bonus
-		create_country_from_cores_in_our_locations = c:ARS
+		create_country_from_cores_in_our_locations = c:DUMMY
 		character:eng_robert_iii_artois = {
-			move_country = c:ARS
+			move_country = c:DUMMY
 		}
-		c:ARS = {
+		c:DUMMY = {
 			set_new_ruler = character:eng_robert_iii_artois
 			make_subject_of = {
-				target = c:ENG
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 		}
@@ -1026,26 +1026,26 @@ hundred_years_war.205 = {
 		trigger = {
 			location:calais = { owner = ROOT }
 			any_owned_location = {
-				is_core_of = c:ARS
+				is_core_of = c:DUMMY
 				NOT = { this = location:calais }
 			}
 		}	
 		add_prestige = prestige_mild_bonus
-		create_country_from_cores_in_our_locations = c:ARS
+		create_country_from_cores_in_our_locations = c:DUMMY
 		character:eng_robert_iii_artois = {
-			move_country = c:ARS
+			move_country = c:DUMMY
 		}
-		c:ARS = {
+		c:DUMMY = {
 			set_new_ruler = character:eng_robert_iii_artois
 			make_subject_of = {
-				target = c:ENG
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 		}	
 		location:calais = {
-			remove_core = c:ARS
-			change_location_owner = c:ENG
-			add_core = c:ENG
+			remove_core = c:DUMMY
+			change_location_owner = c:DUMMY
+			add_core = c:DUMMY
 		}
 		ai_chance = {
 			base = 50
@@ -1065,615 +1065,10 @@ hundred_years_war.205 = {
 	}	
 }
 
-hundred_years_war.206 = {
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.206.title
-	desc = hundred_years_war.206.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
-
-	
-	immediate = {
-		ruler_or_regent ?= { save_scope_as = target_character1 }
-		c:FRA.ruler_or_regent ?= { save_scope_as = target_character2 }
-	}		
-	
-	
-	option = {	#payment_to_overlord_modifier + Gift
-		name = hundred_years_war.206.a
-
-		trigger = {
-			NOT = { has_country_modifier = reduced_payment_obligations }
-		}
-		ai_chance = {
-			base = 30
-		}
-
-		c:FRA = { trigger_event_silently = hundred_years_war.208 }
-		
-		custom_tooltip = IF_THEY_ACCEPT
-		show_as_tooltip = {
-			add_country_modifier = {
-				modifier = reduced_payment_obligations
-				years = 10
-				mode = replace
-			}
-			add_opinion = {
-				target = c:FRA
-				modifier = accepted_demands_modifier
-			}
-			add_gold = {
-				value = c:FRA.monthly_income_total
-				multiply = 2.5
-			}
-		}
-		hidden_effect = {
-			set_variable = { 
-				name = demanded_payment_variable
-				months = 4
-			}
-		}
-	}
-
-	option = {
-		name = hundred_years_war.206.b
-
-		trigger = {
-			is_subject_type = appanage
-			NOT = { has_country_modifier = granted_autonomy_to_expand_modifier }
-		}
-		ai_chance = {
-			base = 50
-		}
-
-		c:FRA = { 
-			trigger_event_silently = hundred_years_war.208 
-		}
-
-		custom_tooltip = IF_THEY_ACCEPT
-		show_as_tooltip = {
-			custom_tooltip = scope_actor_allowed_to_attack_other_subjects_of_fra_tt
-			add_country_modifier = {
-				modifier = granted_autonomy_to_expand_modifier
-				mode = replace
-				years = 20
-			}
-			add_opinion = {
-				target = c:FRA
-				modifier = accepted_demands_modifier
-			}
-		}
-		
-		
-		hidden_effect = {
-			set_variable = { 
-				name = demanded_autonomy_variable
-				months = 4
-			}
-		}
-	}
-	option = {
-		name = hundred_years_war.206.c
-
-		trigger = {
-			NOT = { has_variable = demanded_exemption_longterm_variable }
-		}
-		ai_chance = {
-			base = 20
-		}
-
-		custom_tooltip = IF_THEY_ACCEPT
-		custom_tooltip = scope_actor_exempted_from_offensive_wars_tt
-
-		c:FRA = { trigger_event_silently = hundred_years_war.208 }
-		hidden_effect = {
-			set_variable = { 
-				name = demanded_exemption_variable
-				months = 4
-			}
-		}
-		
-	}	
-
-	option = {
-		name = hundred_years_war.206.d
-		ai_chance = {
-			base = 20
-		}
-
-	}	
-	trigger = {
-		current_date > 476.9.4
-	}
-}
-
-hundred_years_war.207 = {
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.207.title
-	desc = hundred_years_war.207.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
-	major = yes
-	major_trigger = {
-		OR = {
-			tag = ENG
-			tag = FRA
-			is_subject_of = c:FRA
-			is_subject_of = c:ENG
-			has_mutual_scripted_relation = {
-				type = relation_type:alliance
-				target = c:ENG
-			}
-			has_mutual_scripted_relation = {
-				type = relation_type:alliance
-				target = c:FRA
-			}
-		}
-	}
-	
-	immediate = {
-		c:FRA.ruler_or_regent ?= { save_scope_as = target_character1 }
-		c:ENG.ruler_or_regent ?= { save_scope_as = target_character2 }
-		scope:actor = { save_scope_as = target_asker }
-	}		
-	
-	
-	option = {
-		name = hundred_years_war.207.a
-		ai_will_select = { value = 180 }	
-		add_government_power = government_power_extreme_bonus
-		add_prestige = prestige_extreme_bonus
-
-		if = {
-			limit = { scope:target_asker = c:FRA }
-			c:ENG = { trigger_event_non_silently = hundred_years_war.212 }
-		}
-		else = {
-			c:FRA = { trigger_event_non_silently = hundred_years_war.212 }
-		}		
-	}	
-
-	option = {
-		name = hundred_years_war.207.b
-		ai_will_select = {
-			value = -60
-			add = root.stability
-		}	
-		
-		add_stability = stability_ultimate_penalty
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
-
-hundred_years_war.208 = {
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.206.title
-	desc = hundred_years_war.208.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
-	major = yes
-	major_trigger = {
-		OR = {
-			this = scope:actor
-			is_subject_of = ROOT
-			is_rival_of = scope:actor
-			is_enemy_of = scope:actor
-		}
-	}
-	
-	immediate = {
-		scope:actor.ruler_or_regent ?= { save_scope_as = target_character1 }
-		ruler_or_regent ?= { save_scope_as = target_character2 }
-	}		
-	
-	
-	option = {
-		name = hundred_years_war.208.a
-
-		trigger = {
-			scope:actor = { has_variable = demanded_payment_variable }
-		}
-		ai_chance = {
-			base = 50
-			modifier = {
-				factor = 10
-				OR = {
-					gold >= {
-						value = monthly_income_total
-						multiply = 12
-					}
-					monthly_balance > {
-						value = monthly_income_total
-						divide = 2
-					}
-				}
-			}
-			modifier = {
-				factor = 0.25
-				OR = {
-					is_during_bankruptcy = yes
-					monthly_balance < -10 
-					num_loans > 5
-				}
-			}
-		}	
-		add_gold = {
-			value = root.monthly_income_total
-			multiply = -2.5
-		}
-		scope:actor = {
-			hidden_effect = { remove_variable = demanded_payment_variable }
-			
-			add_gold = {
-				value = root.monthly_income_total
-				multiply = 2.5
-			}
-			add_country_modifier = {
-				modifier = reduced_payment_obligations
-				years = 10
-				mode = replace
-			}
-			add_opinion = {
-				target = c:FRA
-				modifier = accepted_demands_modifier
-			}
-		}
-		add_government_power = government_power_mild_penalty
-	}
-
-	option = {
-		name = hundred_years_war.208.b
-		trigger = {
-			scope:actor = { has_variable = demanded_autonomy_variable }
-		}
-		ai_chance = {
-			base = 50
-		}
-
-		add_government_power = government_power_mild_penalty	
-
-		scope:actor = {
-			add_country_modifier = {
-				modifier = granted_autonomy_to_expand_modifier
-				mode = replace
-				years = 20
-			}
-			custom_tooltip = {
-				text = scope_actor_allowed_to_attack_other_subjects_of_fra_tt
-				remove_variable = demanded_autonomy_variable
-			}
-			add_opinion = {
-				target = c:FRA
-				modifier = accepted_demands_modifier
-			}
-		}	
-	}
-
-	option = {
-		name = hundred_years_war.208.c
-		trigger = {
-			scope:actor = { has_variable = demanded_exemption_variable }
-		}
-		ai_chance = {
-			base = 50
-			modifier = {
-				factor = 3
-				c:FRA = {
-					relative_strength = {
-						target = c:ENG
-						value > 0.8
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				c:FRA = {
-					relative_strength = {
-						target = c:ENG
-						value < 0.51
-					}
-				}
-			}
-		}	
-		scope:actor = {
-			custom_tooltip = {
-				text = scope_actor_exempted_from_offensive_wars_tt
-				remove_variable = demanded_exemption_variable
-				set_variable = {
-					name = demanded_exemption_longterm_variable
-					years = 20
-				}
-			}
-			add_opinion = {
-				target = c:FRA
-				modifier = accepted_demands_modifier
-			}
-		}
-		add_government_power = government_power_mild_penalty		
-	}
-
-	option = {
-		name = hundred_years_war.208.d
-		ai_chance = {
-			base = 10
-		}
-		
-		scope:actor = {
-			add_opinion = {
-				target = c:FRA
-				modifier = declined_demands_modifier
-			}
-		}
-		add_government_power = government_power_mild_bonus
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
-
-hundred_years_war.209 = {
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.209.title
-	desc = hundred_years_war.209.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
-	major = yes
-	major_trigger = {
-		OR = {
-			this = scope:actor
-			tag = ENG
-			tag = FRA
-		}
-	}
-	
-	immediate = {
-		scope:actor.ruler_or_regent ?= { save_scope_as = target_character1 }
-		ruler_or_regent ?= { save_scope_as = target_character2 }
-	}		
-	
-	
-	option = {
-		name = hundred_years_war.209.a
-		ai_will_select = {
-			value = 300
-			if = {
-				limit = { subject_loyalty >= 50 }
-				subtract = subject_loyalty
-			}
-			else = {
-				add = {
-					value = 100
-					subtract = subject_loyalty
-				}
-			}
-			if = {
-				limit = { num_loans > 0 }
-				add = {
-					value = num_loans
-					multiply = 10
-				}
-			}
-			add = {
-				value = {
-					add = "root.opinion(c:ENG)"
-					subtract = "root.opinion(c:FRA)"
-					multiply = 0.25
-				}
-
-				desc = "target subject ENG opinion minus FRA opinion"
-			}
-		}
-
-		scope:actor = {
-			transfer_yearly_gold = {
-				# Cost scales with subject loyalty: cheaper when disloyal (full price 0.20 at loyalty 100, minimum 0.05 at loyalty 0)
-				value = {
-					add = 0.05
-					add = {
-						value = root.subject_loyalty
-						multiply = 0.0015
-					}
-				}
-				target = root
-			}
-		}
-
-		add_country_modifier = {
-			modifier = diplomatic_betrayal_modifier
-			years = 5
-			mode = replace
-		}
-
-		scope:actor = {
-			if = {
-				limit = { is_ai = yes }
-				add_country_modifier = {
-					modifier = aggressive_planning
-					years = 3
-					mode = replace
-					size = {
-						value = 1
-						c:FRA = {
-							every_subject = {
-								limit = { has_country_modifier = diplomatic_betrayal_modifier }
-								add = 0.1
-							}
-						}
-					}
-				}
-			}
-		}
-		
-
-		if = {
-			limit = { is_at_war_with = scope:actor }
-			random_current_war = {
-				limit = {
-					any_war_participant = { this = root }
-					any_war_participant = { this = scope:actor }
-				}
-				root = {
-					leave_war = {
-						war = prev 
-						actor = scope:actor
-					}
-				}
-			}
-		}
-
-		add_opinion_mutual_effect = {
-			target = c:FRA
-			modifier = belligerent_diplomacy
-		}
-	}
-
-	option = {
-		name = hundred_years_war.209.b
-		ai_will_select = {
-			value = -175 # baseline: mildly inclined to not select this option
-
-			# Loyalty: loyal subjects are much more likely to decline England's offer
-			if = {
-				limit = { subject_loyalty >= 50 }
-				add = subject_loyalty
-			}
-			else = {
-				# Below 50 loyalty = penalty; the lower it is, the less they want to decline
-				subtract = {
-					value = 50
-					subtract = subject_loyalty
-				}
-			}
-
-			# Debt makes them more desperate, so debt *reduces* the chance of declining
-			if = {
-				limit = { num_loans > 0 }
-				subtract = {
-					value = num_loans
-					multiply = 10
-				}
-			}
-
-			# Opinion comparison: prefers FRA over ENG = more likely to decline
-			add = {
-				value = {
-					add = "root.opinion(c:FRA)"
-					subtract = "root.opinion(c:ENG)"
-				}
-
-				desc = "target subject FRA opinion minus ENG opinion"
-			}
-		}
-
-		custom_tooltip = {
-			text = england_wont_request_for_at_least_x_years_tt
-			set_variable = {
-				name = recently_declined_backstab_variable
-				years = 3
-			}
-		}
-		
-		add_opinion_mutual_effect = {
-			target = c:FRA
-			modifier = successful_diplomacy
-		}
-
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
-
-hundred_years_war.210 = {
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.210.title
-	desc = hundred_years_war.210.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
-	major = yes
-	major_trigger = {
-		this = scope:actor
-	}
-
-	immediate = {
-		scope:actor.ruler_or_regent ?= { save_scope_as = target_character1 }
-		ruler_or_regent ?= { save_scope_as = target_character2 }
-		scope:target_character3 = { save_scope_as = target_character3 }
-	}		
 
 
-	option = {
-		name = hundred_years_war.210.a
-		ai_will_select = {
-			value = 20
-			every_subject = {
-				limit = { is_disloyal_subject = yes }
-				add = 5
-			}
-			add = {
-				value = 100
-				multiply = "scope:actor.relative_strength(root)"
-			}
 
-			if = {
-				limit = { at_war = yes }
-				add = 10
-			}
-		}
 
-		if = {
-			limit = { exists = scope:target_character3 }
-			scope:target_character3 = {
-				move_country = scope:actor
-			}
-	
-			scope:actor = {
-				set_as_designated_heir_with_reason_effect = {
-					target = scope:target_character3
-					reason = designated_as_appanage
-				}
-			}
-		}
-
-		scope:actor = {
-			make_subject_of = {  target = root type = subject_type:appanage }
-			add_opinion = {
-				target = c:FRA
-				modifier = recent_appanage_opinion
-			}
-			add_liberty_desire = liberty_desire_mild_minus
-		}
-
-		custom_tooltip = inherit_in_case_of_no_heir_tt
-	}
-
-	option = {
-		name = hundred_years_war.210.b
-		ai_will_select = { value = 10 }
-		
-		add_opinion_mutual_effect = {
-			target = scope:actor
-			modifier = belligerent_diplomacy
-		}
-
-		scope:actor = { add_liberty_desire = liberty_desire_severe_plus }
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 hundred_years_war.211 = {
 	type = country_event
@@ -1688,11 +1083,11 @@ hundred_years_war.211 = {
 		current_date > 476.9.4
 		trigger_if = {
 			limit = { tag = ENG }
-			is_at_war_with = c:FRA
+			is_at_war_with = c:DUMMY
 		}
 		trigger_else = {
 			tag = FRA
-			is_at_war_with = c:ENG
+			is_at_war_with = c:DUMMY
 		}
 		NOT = { has_variable = recently_had_merc_event_variable }
 	}
@@ -1837,790 +1232,12 @@ hundred_years_war.211 = {
 	}
 }
 
-hundred_years_war.212 = {
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.212.title
-	desc = hundred_years_war.212.desc
-	outcome = neutral
 
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
 
-	major = yes
-	major_trigger = {
-		OR = {
-			is_subject_of = c:FRA
-			is_subject_of = c:ENG
-			has_mutual_scripted_relation = {
-				type = relation_type:alliance
-				target = c:ENG
-			}
-			has_mutual_scripted_relation = {
-				type = relation_type:alliance
-				target = c:FRA
-			}
-		}
-		
-	}
 
-	trigger = {
-		current_date > 476.9.4
-		trigger_if = {
-			limit = { tag = FRA }
-			any_current_war = {
-				OR = {
-					AND = {
- 						attacker_leader = c:FRA
-						defender_leader = c:ENG
-					}
-					AND = {
-						attacker_leader = c:ENG
-					    defender_leader = c:FRA
-				    }
-				}
-			}
-		}
-		trigger_else = {
-			any_current_war = {
-				OR = {
-					AND = {
- 						attacker_leader = c:FRA
-						defender_leader = c:ENG
-					}
-					AND = {
-						attacker_leader = c:ENG
-					    defender_leader = c:FRA
-				    }
-				}
-			}
-		}
-	}
-	
-	immediate = {
-		if = {
-			limit = { tag = FRA }
-			random_current_war = {
-				limit = {
-					OR = {
-						AND = {
-							attacker_leader = c:FRA
-							defender_leader = c:ENG
-						}
-						AND = {
-							attacker_leader = c:ENG
-							defender_leader = c:FRA
-						}
-					}
-				}
-				save_scope_as = target_war
-			}
-		}
-		else = {
-			random_current_war = {
-				limit = {
-					OR = {
-						AND = {
-							attacker_leader = c:FRA
-							defender_leader = c:ENG
-						}
-						AND = {
-							attacker_leader = c:ENG
-							defender_leader = c:FRA
-						}
-					}
-				}
-				save_scope_as = target_war
-			}
-		}
-	}
-	
-	option = {
-		name = hundred_years_war.212.a
 
-		ai_chance = {
-			factor = 1
-		}
-		
-		white_peace = scope:target_war
-	}
 
-	option = {
-		name = hundred_years_war.212.b
 
-		ai_chance = {
-			factor = 0
-		}
-		
-		add_war_exhaustion = war_exhaustion_ultimate_penalty
-		drop_antagonism_bomb = {
-			target = root.capital
-			modifier = antagonism_refused_to_end_war
-		}
-		custom_tooltip = {
-			text = armies_demoralized_tt
-			every_army = {
-				add_morale = { -0.5 -1 }
-			}
-		}
-
-		add_religious_influence = religious_influence_radical_penalty	
-	}
-}
-
-hundred_years_war.213 = {
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.213.title
-	desc = hundred_years_war.213.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
-
-	major = yes
-	major_trigger = {
-		is_subject_of = c:FRA
-	}
-	
-	immediate = {
-		scope:actor.ruler_or_regent = { save_scope_as = target_character1 }
-		ruler_or_regent = { save_scope_as = target_character2 }
-		scope:target_location.owner = { save_scope_as = target_loser_country }
-	}
-	
-	option = {
-		name = hundred_years_war.213.a
-		
-
-		scope:target_location = { 
-			remove_core = owner 
-			change_location_owner = scope:actor 
-		}
-	}
-
-	option = {
-		name = hundred_years_war.213.b
-
-		add_legitimacy = legitimacy_mild_penalty
-		c:FRA = { trigger_event_non_silently = hundred_years_war.214 }
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
-
-hundred_years_war.214 = {
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.214.title
-	desc = hundred_years_war.214.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
-
-	major = yes
-	major_trigger = {
-		is_subject_of = c:FRA
-	}
-
-	immediate = {
-	}
-	
-	option = {
-		name = hundred_years_war.214.a
-
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 2
-				scope:target_location.owner = {
-					relative_strength = {
-						target = scope:actor
-						value <= 0.5
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				scope:actor = { subject_loyalty < 50 }
-			}
-			modifier = {
-				factor = 5
-				scope:actor = { num_locations < 10 }
-			}
-		}
-		
-		scope:target_location.owner = {
-			add_opinion = {
-				target = c:FRA
-				modifier = declined_demands_modifier
-			}
-		}
-		scope:actor = {
-			add_opinion = {
-				target = c:FRA
-				modifier = accepted_demands_modifier
-			}
-		}
-		scope:target_location = { 
-			remove_core = scope:target_loser_country
-			change_location_owner = scope:actor 
-		}
-	}
-
-	option = {
-		name = hundred_years_war.214.b
-
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 5
-				scope:target_location.owner = {
-					relative_strength = {
-						target = scope:actor
-						value > 0.5
-					}
-				}
-			}
-			modifier = {
-				factor = 5
-				scope:target_location.owner = { subject_loyalty < 50 }
-			}
-			modifier = {
-				factor = 5
-				scope:target_location.owner = { num_locations < 10 }
-			}
-		}
-
-		scope:target_location.owner = {
-			add_opinion = {
-				target = c:FRA
-				modifier = accepted_demands_modifier
-			}
-		}
-		scope:actor = {
-			add_opinion = {
-				target = c:FRA
-				modifier = declined_demands_modifier
-			}
-		}
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
-
-hundred_years_war.215 = {
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.215.title
-	desc = hundred_years_war.215.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
-
-	major = yes
-	major_trigger = {
-		OR = {
-			is_subject_of = scope:scuffed_side_country	#The betrayed country
-			is_subject_of = scope:wormtongue_country	#The country doing the betraying
-			has_mutual_scripted_relation = {
-				type = relation_type:alliance
-				target = scope:wormtongue_country		#The country doing the betraying
-			}
-		}
-	}
-
-	immediate = {
-		save_scope_as = wormtongue_country
-		random_current_war = {
-			limit = {
-				OR = {
-					AND = {
-						attacker_leader = c:ENG
-						defender_leader = c:FRA
-					}
-					AND = {
-						attacker_leader = c:FRA
-						defender_leader = c:ENG
-					}
-				}
-			}
-			save_scope_as = target_war
-			if = {
-				limit = {
-					root = {
-						any_country_together_in_war_with = { this = c:FRA }
-					}
-				}
-				c:FRA = { save_scope_as = scuffed_side_country }
-				c:ENG = { save_scope_as = potential_new_ally }				#The country we eventually might align with, against scope:scuffed_side_country
-			}
-			else = { 
-				c:ENG = { save_scope_as = scuffed_side_country }
-				c:FRA = { save_scope_as = potential_new_ally }
-			}
-		}
-	}
-	
-	option = {	#This option reaches out
-		name = hundred_years_war.215.a
-
-		ai_chance = {
-			factor = 1
-			
-		}
-
-		scope:potential_new_ally ?= { trigger_event_non_silently = hundred_years_war.216 }
-
-		add_stability = stability_mild_penalty
-
-		if = {
-			limit = { is_subject = yes }
-			custom_tooltip = subject_100_yw_215_effect_tt
-		}
-		else = { custom_tooltip = sovereign_100_yw_215_effect_tt }
-	}
-
-	option = {	#Better not
-		name = hundred_years_war.215.b
-
-		ai_chance = {
-			factor = 0
-		}
-
-		custom_tooltip = {
-			text = hundred_years_war.215.b.tt
-			add_cooldown = {
-				type = betray_our_allegiance
-				years = 2
-			}
-		}
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
-
-hundred_years_war.216 = {	#Informative Event for scope:potential_new_ally to decide whether or not to accept you on their side
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.216.title
-	desc = hundred_years_war.216.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
-
-	major = yes
-	major_trigger = {
-		OR = {
-			this = scope:wormtongue_country
-			this = scope:scuffed_side_country
-			is_subject_of = scope:wormtongue_country	#The country doing the betraying
-			
-		}
-	}
-
-	immediate = {
-		scope:wormtongue_country.ruler_or_regent = { save_scope_as = target_character1 }
-		ruler_or_regent = { save_scope_as = target_character2 }
-
-		
-	}
-	
-	option = {	#This option accepts 
-		name = hundred_years_war.216.a
-
-		ai_chance = {
-			factor = 25
-			
-		}
-
-		scope:wormtongue_country = {
-			if = {
-				limit = { 
-					has_mutual_scripted_relation = {
-						type = relation_type:alliance
-						target = scope:scuffed_side_country		#The country doing the betraying
-					}
-				}
-				remove_relation = {	
-					type = relation_type:alliance
-					first = this
-					second = scope:scuffed_side_country
-				}
-			}
-			else_if = {
-				limit = { is_subject_of = scope:scuffed_side_country }
-				add_liberty_desire = liberty_desire_severe_plus
-			}
-			leave_war = {
-				war = scope:target_war
-				actor = scope:potential_new_ally
-			}
-
-			every_subject = {
-				limit = {
-					at_war = yes
-					any_current_war = { this = scope:target_war }
-				}
-
-				leave_war = {
-					war = scope:target_war
-					actor = scope:potential_new_ally
-				}
-			}
-		}
-		if = {
-			limit = { 
-				scope:target_war.attacker_leader = root 
-				scope:wormtongue_country = { is_subject = no }
-			} 
-			scope:wormtongue_country = {
-				join_war_as_attacker = { war = scope:target_war }
-				if = {
-					limit = {
-						any_subject = {
-							any_current_war = { this = scope:target_war }
-						}
-					}
-					every_subject = {
-						limit = {
-							any_current_war = { this = scope:target_war }
-						}
-
-						hidden_effect = {
-							leave_war = {
-								war = scope:target_war
-								actor = scope:potential_new_ally
-							}
-						}
-						join_war_as_attacker = { war = scope:target_war }
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				scope:target_war.defender_leader = root 
-				scope:wormtongue_country = { is_subject = no }
-			}
-			scope:wormtongue_country = {
-				join_war_as_defender = { war = scope:target_war }
-				if = {
-					limit = {
-						any_subject = {
-							any_current_war = { this = scope:target_war }
-						}
-					}
-					every_subject = {
-						limit = {
-							any_current_war = { this = scope:target_war }
-						}
-
-						hidden_effect = {
-							leave_war = {
-								war = scope:target_war
-								actor = scope:potential_new_ally
-							}
-						}
-						join_war_as_defender = { war = scope:target_war }
-					}
-				}
-			}
-		}
-
-		add_opinion = {	#We like that they changed side
-			modifier = opinion_changed_sides_during_hyw_modifier
-			target = scope:wormtongue_country
-		}
-
-		scope:scuffed_side_country = {
-			add_opinion = {	#scope:scuffed_side_country does NOT like it that they changed side
-				modifier = opinion_changed_sides_during_hyw_modifier
-				target = scope:wormtongue_country
-				scale = -1
-			}
-		}
-	}
-
-	option = { 
-		name = hundred_years_war.216.b 
-		
-		custom_tooltip = hundred_years_war.216.b.tt
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
-
-hundred_years_war.217 = {
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.217.title
-	desc = hundred_years_war.217.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
-
-	major = yes
-	major_trigger = {
-		OR = {
-			tag = ENG
-			tag = FRA
-			is_subject_of = c:FRA
-			is_subject_of = c:ENG
-			has_mutual_scripted_relation = {
-				type = relation_type:alliance
-				target = c:ENG
-			}
-			has_mutual_scripted_relation = {
-				type = relation_type:alliance
-				target = c:FRA
-			}
-		}
-	}
-
-	immediate = {
-		ruler_or_regent = { save_scope_as = target_character1 }
-		scope:actor = {
-			ruler_or_regent = { save_scope_as = target_character2 }
-
-			random_current_war = {
-				limit = {
-					OR = {
-						AND = {
-							attacker_leader = c:ENG
-							defender_leader = c:FRA
-						}
-						AND = {
-							attacker_leader = c:FRA
-							defender_leader = c:ENG
-						}
-					}
-				}
-				save_scope_as = target_war
-			}
-
-			if = {
-				limit = { tag = ENG }
-				c:FRA = { save_scope_as = target_opponent }
-			}
-			else = { 
-				c:ENG = { save_scope_as = target_opponent }
-			}
-		}
-	}
-
-	option = {
-		name = hundred_years_war.217.a
-
-		ai_will_select = {
-			subtract = 40
-			add = {
-				value = 100
-				multiply = "root.relative_strength(scope:target_opponent)"
-			}
-			if = {
-				limit = {
-					scope:actor = { is_in_losing_war = yes }
-				}
-				subtract = 10
-			}
-			if = {
-				limit = { manpower_percentage > 0 }
-				add = {
-					value = 10
-					multiply = manpower_percentage
-				}
-			}
-			else = { subtract = 5}
-			if = {
-				limit = {
-					OR = {
-						is_rival_of = scope:target_opponent
-						is_enemy_of = scope:target_opponent
-					}
-				}
-				add = 15
-			}
-			subtract = {
-				value = war_exhaustion
-				multiply = 2
-			}
-		}
-
-		add_gold = {
-			value = scope:actor.monthly_income_trade_and_tax
-			multiply = 6
-		}
-
-		scope:actor = {
-			add_gold = {
-				value = monthly_income_trade_and_tax
-				multiply = -6
-			}
-		}
-
-		join_war_with = { 
-			war = scope:target_war 
-			target = scope:actor 
-			call_in_subjects = yes 
-		}
-	}
-
-	option = {
-		name = hundred_years_war.217.b
-
-		ai_chance = {
-			factor = 5
-		}
-
-		custom_tooltip = {
-			text = they_will_be_notified_of_our_rejection_tt
-			set_variable = {
-				name = request_war_entry_variable
-				years = 10
-			}
-		}
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
-
-hundred_years_war.218 = {
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.218.title
-	desc = hundred_years_war.218.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
-
-	major = yes
-	major_trigger = {
-		OR = {
-			tag = ENG
-			tag = FRA
-			is_subject_of = c:FRA
-			is_subject_of = c:ENG
-			has_mutual_scripted_relation = {
-				type = relation_type:alliance
-				target = c:ENG
-			}
-			has_mutual_scripted_relation = {
-				type = relation_type:alliance
-				target = c:FRA
-			}
-		}
-	}
-
-	immediate = {
-		scope:actor = {
-			save_scope_as = target_asker
-			ruler_or_regent = { save_scope_as = target_character1 }
-		}
-
-		save_scope_as = target_giver
-		ruler_or_regent = { save_scope_as = target_character2 }
-	}
-
-	option = {
-		name = hundred_years_war.218.a
-
-		ai_will_select = {
-			subtract = 30	# Slight deterrent — AI generally favors flexibility
-
-			# More likely to accept if opponent is strong
-			add = {
-				value = 100
-				multiply = "scope:target_asker.relative_strength(root)"
-			}
-
-			# Less likely to accept if currently losing a war — they might want to keep options open for future gains
-			if = {
-				limit = { 
-					scope:target_asker = { is_in_losing_war = yes }
-				}
-				subtract = 15
-			}
-
-			# More willing if manpower is low! risk-averse
-			if = {
-				limit = { root.manpower_percentage < 0.3 }
-				add = 5
-			}
-
-			# Less inclined to accept if manpower is high — confident in ability to fight
-			if = {
-				limit = { root.manpower_percentage > 0.7 }
-				subtract = 5
-			}
-
-			# If the proposer is a rival or enemy, we may not trust them
-			if = {
-				limit = {
-					OR = {
-						is_rival_of = scope:target_asker
-						is_enemy_of = scope:target_asker
-					}
-				}
-				subtract = 50
-			}
-
-			# High war exhaustion makes peace more attractive
-			add = {
-				value = war_exhaustion
-				multiply = 10
-			}
-
-			# Slight bonus if we are at war elsewhere — less appetite for additional fronts
-			if = {
-				limit = {
-					any_current_war = { count > 0 }
-				}
-				every_current_war = {
-					add = 25
-				}
-			}
-		}
-
-		add_truce_with = { 
-			target = scope:target_asker
-			years = 5
-		}
-
-		scope:target_asker = {
-			add_truce_with = { 
-				target = root
-				years = 5
-			}
-		}
-
-		add_gold = {
-			value = scope:target_asker.monthly_income_trade_and_tax
-			multiply = 3
-		}
-
-		scope:target_asker = {
-			add_gold = {
-				value = monthly_income_trade_and_tax
-				multiply = -3
-			}
-		}
-	}
-
-	option = {
-		name = hundred_years_war.218.b
-
-		ai_will_select = { value = 30 }
-
-		custom_tooltip = they_will_be_notified_of_our_rejection_tt
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 hundred_years_war.219 = { #The Status of Normandy
 	type = country_event
@@ -2633,7 +1250,7 @@ hundred_years_war.219 = { #The Status of Normandy
 	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NRM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -2649,7 +1266,7 @@ hundred_years_war.219 = { #The Status of Normandy
 
 	trigger = {
 		current_date > 476.9.4
-		ruler ?= c:FRA.heir
+		ruler ?= c:DUMMY.heir
 		situation:hundred_years_war = { situation_is_active = yes }
 	}
 
@@ -2676,7 +1293,7 @@ hundred_years_war.219 = { #The Status of Normandy
 
 		add_opinion_mutual_effect = {
 			modifier = opinion_professed_mutual_loyalty
-			target = c:ENG
+			target = c:DUMMY
 		}
 
 		add_government_power = government_power_extreme_penalty
@@ -2702,7 +1319,7 @@ hundred_years_war.220 = { #The Brewer of Ghent
 	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -2719,10 +1336,10 @@ hundred_years_war.220 = { #The Brewer of Ghent
 	trigger = {
 		current_date > 476.9.4
 		situation:hundred_years_war = { situation_is_active = yes }
-		is_subject_of = c:FRA
+		is_subject_of = c:DUMMY
 		at_war = no
 		opinion = {
-			target = c:ENG
+			target = c:DUMMY
 			value > 0
 		} 
 		character:fla_jacob_van_artevelde = {
@@ -2754,9 +1371,9 @@ hundred_years_war.220 = { #The Brewer of Ghent
 			years = modifier_duration_years_long
 		}
 
-		c:ENG = {
+		c:DUMMY = {
 			create_relation = {
-				first = c:ENG
+				first = c:DUMMY
 				second = root
 				type = relation_type:embargo_nation
 			}
@@ -2769,143 +1386,7 @@ hundred_years_war.220 = { #The Brewer of Ghent
 	}
 }
 
-hundred_years_war.230 = { #Subject Defects!
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.230.title
-	desc = hundred_years_war.230.desc
-	outcome = neutral
 
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
-
-	major = yes
-	major_trigger = {
-		OR = {
-			tag = ENG
-			tag = FRA
-			this = scope:actor
-		}
-	}
-
-	immediate = {
-		scope:actor.overlord = { save_scope_as = target_enemy }
-	}
-
-	option = {	#Side with England
-		name = hundred_years_war.230.a
-
-		ai_will_select = {
-			value = 150
-		}
-		
-
-		scope:actor = {
-			make_subject_of = {
-				target = root
-				type = subject_type:vassal
-			}
-
-			add_liberty_desire = liberty_desire_severe_plus
-			add_truce_with = { target = root }
-			add_cooldown = {
-				type = hyw_defect_action
-				years = 10
-			}
-
-			if = {
-				limit = { has_country_modifier = diplomatic_betrayal_modifier }
-				remove_country_modifier = diplomatic_betrayal_modifier
-			}
-		}
-
-	}
-
-	option = {
-		name = hundred_years_war.230.b
-
-		ai_will_select = {
-			value = 10
-		}
-
-		custom_tooltip = slightly_discourage_existing_subjects_from_defecting_tt
-		add_prestige = prestige_weak_bonus
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
-
-hundred_years_war.240 = { #Other Side Crowns a New Ruler!
-	type = country_event
-	category = situation_event
-	title = hundred_years_war.240.title
-	desc = hundred_years_war.240.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/hundred_years_war.dds"
-
-	major = yes
-	major_trigger = {
-		OR = {
-			tag = ENG
-			tag = FRA
-			is_subject_of = c:FRA
-			is_subject_of = c:ENG
-			has_mutual_scripted_relation = {
-				type = relation_type:alliance
-				target = c:ENG
-			}
-			has_mutual_scripted_relation = {
-				type = relation_type:alliance
-				target = c:FRA
-			}
-		}
-	}
-
-	immediate = {
-		scope:actor.capital = { save_scope_as = target_location }
-
-		ruler_or_regent = { save_scope_as = target_character2 }
-	}
-
-	option = {	#Let them go
-		name = hundred_years_war.240.a
-
-		ai_will_select = {
-			add = "scope:actor.relative_military_strength(root)"
-		}
-
-		scope:actor = { 
-			add_truce_with = { target = root }
-		}
-		add_truce_with = { target = scope:actor }
-	}
-
-	option = {	#Attack
-		name = hundred_years_war.240.b
-
-		ai_will_select = {
-			add = "root.relative_military_strength(scope:actor)"
-		}
-
-		if = {
-			limit = { root = c:FRA }
-			declare_war_with_cb = {	
-				target = scope:actor
-				type = casus_belli:cb_hundred_years_war_fra	
-			}
-		}
-		else = {
-			declare_war_with_cb = {	
-				target = scope:actor
-				type = casus_belli:cb_hundred_years_war	
-			}
-		}
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 #Stalemate Event
 hundred_years_war.1537 = {
@@ -2921,10 +1402,10 @@ hundred_years_war.1537 = {
 
 
 	immediate = {
-		c:ENG.ruler_or_regent ?= {
+		c:DUMMY.ruler_or_regent ?= {
 			save_scope_as = target_character1
 		}
-		c:FRA.ruler_or_regent ?= {
+		c:DUMMY.ruler_or_regent ?= {
 			save_scope_as = target_character2
 		}
 	}
@@ -2937,7 +1418,7 @@ hundred_years_war.1537 = {
 			}
 			custom_tooltip = based_on_current_relative_strength_with_our_opponent_in_hyw_tt
 			add_prestige = {
-				value = "relative_strength(c:ENG)"
+				value = "relative_strength(c:DUMMY)"
 				multiply = -100
 				floor = yes
 			}
@@ -2948,7 +1429,7 @@ hundred_years_war.1537 = {
 			}
 			custom_tooltip = based_on_current_relative_strength_with_our_opponent_in_hyw_tt
 			add_prestige = {
-				value = "relative_strength(c:FRA)"
+				value = "relative_strength(c:DUMMY)"
 				multiply = -100
 				floor = yes
 			}

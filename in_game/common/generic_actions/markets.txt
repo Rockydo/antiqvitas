@@ -325,13 +325,19 @@ create_trade = {
 						market = root
 					}
 				}
-				scope:actor = {
-					not = { is_embargoed_by = root.owner }
+				AND = {
+					owner != scope:actor
+					scope:actor = {
+						not = { is_embargoed_by = root.owner }
+					}
 				}
-				root.owner = {
-					or = {
-						modifier:trade_isolation = no
-						gives_isolation_exemption_to = scope:actor
+				AND = {
+					owner != scope:actor
+					root.owner = {
+						or = {
+							modifier:trade_isolation = no
+							gives_isolation_exemption_to = scope:actor
+						}
 					}
 				}
 			}
@@ -371,8 +377,11 @@ create_trade = {
 						market = root
 					}
 				}
-				scope:actor = {
-					not = { is_embargoed_by = root.owner }
+				AND = {
+					owner != scope:actor
+					scope:actor = {
+						not = { is_embargoed_by = root.owner }
+					}
 				}
 			}
 			trigger_if = {

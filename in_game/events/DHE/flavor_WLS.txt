@@ -98,7 +98,7 @@ flavor_wls.11 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					is_subject_of = c:ENG
+					is_subject_of = c:DUMMY
 					culture = culture:english
 				}
 				desc = flavor_wls.11.desc_subject
@@ -112,7 +112,7 @@ flavor_wls.11 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = WLS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -200,7 +200,7 @@ flavor_wls.12 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = WLS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -209,7 +209,7 @@ flavor_wls.12 = {
 	trigger = {
 		current_date > 476.9.4
 		character:wls_owain_glyndwr ?= { is_alive = yes }
-		is_subject_of = c:ENG
+		is_subject_of = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -228,7 +228,7 @@ flavor_wls.12 = {
 
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_bonus }
 
-		c:ENG = { trigger_event_silently = flavor_eng.89 }
+		c:DUMMY = { trigger_event_silently = flavor_eng.89 }
 
 		custom_tooltip = flavor_wls.12.tt
 
@@ -435,7 +435,7 @@ flavor_wls.14 = {
 		add_liberty_desire = liberty_desire_severe_minus
 
 		add_opinion = {
-			target = c:ENG
+			target = c:DUMMY
 			modifier = opinion_pleased
 		}
 
@@ -457,7 +457,7 @@ flavor_wls.15 = {
 	desc = {
 		first_valid = {
 			triggered_desc = {
-				trigger = {	c:ENG = { has_variable = ransom_paid_edmund_mortimer } }
+				trigger = {	c:DUMMY = { has_variable = ransom_paid_edmund_mortimer } }
 				desc = flavor_wls.15.desc_ransom_paid
 			}
 			triggered_desc = {
@@ -469,7 +469,7 @@ flavor_wls.15 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = WLS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -482,7 +482,7 @@ flavor_wls.15 = {
 
 		character:wls_edmund_mortimer_1376 ?= { is_alive = yes }
 
-		c:ENG = {
+		c:DUMMY = {
 			OR = {
 				custom_tooltip = {
 					text = tripartite_indenture_tt
@@ -510,7 +510,7 @@ flavor_wls.15 = {
 
 		dynasty:mortimer_dynasty = { save_scope_as = mortimer_dynasty }
 
-		c:ENG = { save_scope_as = england }
+		c:DUMMY = { save_scope_as = england }
 
 		character:wls_edmund_mortimer_1376 ?= { save_scope_as = edmund_mortimer }
 
@@ -523,13 +523,13 @@ flavor_wls.15 = {
 	option = {
 		historical_option = yes
 		name = flavor_wls.15.a
-		trigger = { c:ENG = { has_variable = tripartite_indenture } }
+		trigger = { c:DUMMY = { has_variable = tripartite_indenture } }
 
 		set_variable = { name = tripartite_indenture }
 
 		if = {
 			limit = {
-				NOT = { is_at_war_with = c:ENG }
+				NOT = { is_at_war_with = c:DUMMY }
 			}
 			custom_tooltip = flavor_wls.15.tt1
 		}
@@ -543,7 +543,7 @@ flavor_wls.15 = {
 
 	option = {
 		name = flavor_wls.15.b
-		trigger = { c:ENG = { has_variable = tripartite_indenture } }
+		trigger = { c:DUMMY = { has_variable = tripartite_indenture } }
 
 		set_variable = { name = tripartite_indenture }
 
@@ -553,7 +553,7 @@ flavor_wls.15 = {
 
 		if = {
 			limit = {
-				NOT = { is_at_war_with = c:ENG }
+				NOT = { is_at_war_with = c:DUMMY }
 			}
 			custom_tooltip = flavor_wls.15.tt3
 		}
@@ -565,7 +565,7 @@ flavor_wls.15 = {
 
 	option = {
 		name = flavor_wls.15.c
-		trigger = { c:ENG = { has_variable = tripartite_indenture } }
+		trigger = { c:DUMMY = { has_variable = tripartite_indenture } }
 
 		custom_tooltip = flavor_wls.15.tt5
 
@@ -574,7 +574,7 @@ flavor_wls.15 = {
 
 	option = {
 		name = flavor_wls.15.d
-		trigger = { c:ENG = { has_variable = ransom_paid_edmund_mortimer } }
+		trigger = { c:DUMMY = { has_variable = ransom_paid_edmund_mortimer } }
 
 		add_gold = {
 			value = scope:england.monthly_income_trade_and_tax
@@ -625,7 +625,7 @@ flavor_wls.16 = {
 
 	option = {
 		name = flavor_wls.16.a
-		trigger = { root = c:WLS }
+		trigger = { root = c:DUMMY }
 
 		custom_tooltip = flavor_wls.16.tt1
 

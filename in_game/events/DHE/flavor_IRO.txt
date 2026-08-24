@@ -8,11 +8,11 @@ flavor_iro.1 = { # The Legacy of the Great Peacemaker
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -41,38 +41,38 @@ flavor_iro.1 = { # The Legacy of the Great Peacemaker
 		hidden_effect = {
 			if = {
 				limit = { 
-					country_exists = c:ONO
-					this != c:ONO
+					country_exists = c:DUMMY
+					this != c:DUMMY
 				}
-				c:ONO = { trigger_event_silently = { id = flavor_iro.100 days = 1 } }
+				c:DUMMY = { trigger_event_silently = { id = flavor_iro.100 days = 1 } }
 			}
 			if = {
 				limit = { 
-					country_exists = c:KKA
-					this != c:KKA
+					country_exists = c:DUMMY
+					this != c:DUMMY
 				}
-				c:KKA = { trigger_event_silently = { id = flavor_iro.100 days = 1 } }
+				c:DUMMY = { trigger_event_silently = { id = flavor_iro.100 days = 1 } }
 			}
 			if = {
 				limit = { 
-					country_exists = c:ONY
-					this != c:ONY
+					country_exists = c:DUMMY
+					this != c:DUMMY
 				}
-				c:ONY = { trigger_event_silently = { id = flavor_iro.100 days = 1 } }
+				c:DUMMY = { trigger_event_silently = { id = flavor_iro.100 days = 1 } }
 			}
 			if = {
 				limit = { 
-					country_exists = c:GYO
-					this != c:GYO
+					country_exists = c:DUMMY
+					this != c:DUMMY
 				}
-				c:GYO = { trigger_event_silently = { id = flavor_iro.100 days = 1 } }
+				c:DUMMY = { trigger_event_silently = { id = flavor_iro.100 days = 1 } }
 			}
 			if = {
 				limit = { 
-					country_exists = c:ONN
-					this != c:ONN
+					country_exists = c:DUMMY
+					this != c:DUMMY
 				}
-				c:ONN = { trigger_event_silently = { id = flavor_iro.100 days = 1 } }
+				c:DUMMY = { trigger_event_silently = { id = flavor_iro.100 days = 1 } }
 			}			
 		}		
 	}
@@ -110,11 +110,11 @@ flavor_iro.2 = { # A chance for leadership
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -159,11 +159,11 @@ flavor_iro.3 = { # Sense of Betrayal
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -207,11 +207,11 @@ flavor_iro.10 = { # Tale of Jigonsaseh, Mother of Nations
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 8
@@ -271,11 +271,11 @@ flavor_iro.13 = { # The Legend of Hiawatha
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -332,11 +332,11 @@ flavor_iro.15 = { # The Cleansing of Tadodaho
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -393,7 +393,7 @@ flavor_iro.20 = { # Reforging of the Great Law of Peace
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100 # Should trigger the moment conditions are met
@@ -437,7 +437,7 @@ flavor_iro.30 = { # Shikellamy and Pennsylvania
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -519,7 +519,7 @@ flavor_iro.31 = { # Shikellamy and the Walking Purchase
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -619,7 +619,7 @@ flavor_iro.32 = { # Arrival of the Moravian Missionaries
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -724,7 +724,7 @@ flavor_iro.33 = { # <Character> converts to Christianity from Missionaries
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -796,7 +796,7 @@ flavor_iro.40 = { # Strong Tribal Unity
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -838,7 +838,7 @@ flavor_iro.41 = { # Trading in Firearms
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -897,7 +897,7 @@ flavor_iro.42 = { # Colonists Impressed with <culture_name> Unity
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -963,7 +963,7 @@ flavor_iro.43 = { # Adoption of Prisoners
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1022,7 +1022,7 @@ flavor_iro.44 = { # Shared Brotherhood # Unlocks Advance
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1060,7 +1060,7 @@ flavor_iro.45 = { # Welcoming of the Skarure # Tuscarora
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1109,11 +1109,11 @@ flavor_iro.46 = { # Benefits of the Three Sisters
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -1161,11 +1161,11 @@ flavor_iro.47 = { # Matriarchal Agriculture
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KKA
-		tag = ONY
-		tag = ONO
-		tag = GYO
-		tag = ONN
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -1207,7 +1207,7 @@ flavor_iro.50 = { # Exchange of Fur
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1275,7 +1275,7 @@ flavor_iro.51 = { # Beaver Wars
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1342,7 +1342,7 @@ flavor_iro.52 = { # Depletion of the beaver population
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1404,7 +1404,7 @@ flavor_iro.60 = { # Grand Council of the Iroquois # Reform Unlock
 		
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1453,7 +1453,7 @@ flavor_iro.61 = { # Council of the Fifty Intervenes in Colonial Diplomacy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1517,7 +1517,7 @@ flavor_iro.62 = { # Champlain aids the Hurons
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1529,10 +1529,10 @@ flavor_iro.62 = { # Champlain aids the Hurons
 		has_global_variable = iro_champlain_huron_contact
 		character:samuel_de_champlain ?= { is_alive = yes }
 		OR = { # One of these tribes should exist in case wiped out in between Champlain expedition
-			country_exists = c:ARN
-			country_exists = c:ATG
-			country_exists = c:AGW
-			country_exists = c:TRT
+			country_exists = c:DUMMY
+			country_exists = c:DUMMY
+			country_exists = c:DUMMY
+			country_exists = c:DUMMY
 		}
 	}
 	
@@ -1556,53 +1556,53 @@ flavor_iro.62 = { # Champlain aids the Hurons
 		historical_option = yes	
 		if = {
 			limit = { 
-				country_exists = c:ARN
-				c:ARN ?= {
+				country_exists = c:DUMMY
+				c:DUMMY ?= {
 					capital = {
-						is_discovered_by = c:FRA
+						is_discovered_by = c:DUMMY
 					}
 				}
 			}
-			c:ARN ?= {
+			c:DUMMY ?= {
 				add_country_modifier = { modifier = iro_champlain_aided_the_hurons years = 10 mode = add } 
 			}
 		}	
 		if = {
 			limit = { 
-				country_exists = c:ATG
-				c:ATG ?= {
+				country_exists = c:DUMMY
+				c:DUMMY ?= {
 					capital = {
-						is_discovered_by = c:FRA
+						is_discovered_by = c:DUMMY
 					}
 				}
 			}
-			c:ATG ?= {
+			c:DUMMY ?= {
 				add_country_modifier = { modifier = iro_champlain_aided_the_hurons years = 10 mode = add } 
 			}
 		}
 		if = {
 			limit = { 
-				country_exists = c:AGW
-				c:AGW ?= {
+				country_exists = c:DUMMY
+				c:DUMMY ?= {
 					capital = {
-						is_discovered_by = c:FRA
+						is_discovered_by = c:DUMMY
 					}
 				}
 			}
-			c:AGW ?= {
+			c:DUMMY ?= {
 				add_country_modifier = { modifier = iro_champlain_aided_the_hurons years = 10 mode = add } 
 			}
 		}
 		if = {
 			limit = { 
-				country_exists = c:TRT
-				c:TRT ?= {
+				country_exists = c:DUMMY
+				c:DUMMY ?= {
 					capital = {
-						is_discovered_by = c:FRA
+						is_discovered_by = c:DUMMY
 					}
 				}
 			}
-			c:TRT ?= {
+			c:DUMMY ?= {
 				add_country_modifier = { modifier = iro_champlain_aided_the_hurons years = 10 mode = add } 
 			}
 		}										
@@ -1620,7 +1620,7 @@ flavor_iro.63 = { # Destruction of Wendake
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1690,7 +1690,7 @@ flavor_iro.64 = { # Growth of Villages Along Lake Ontario
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1745,7 +1745,7 @@ flavor_iro.65 = { # Expedition of Simon Le Moyne and Sainte Marie de Ganentaa
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1754,7 +1754,7 @@ flavor_iro.65 = { # Expedition of Simon Le Moyne and Sainte Marie de Ganentaa
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:FRA
+		country_exists = c:DUMMY
 	}
 	
 	immediate = {
@@ -1822,7 +1822,7 @@ flavor_iro.66 = { # Outbreak of Smallpox due to Simon le moyne
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 8
@@ -1836,7 +1836,7 @@ flavor_iro.66 = { # Outbreak of Smallpox due to Simon le moyne
 			is_alive = yes
 			owner = ROOT
 		}	
-		country_exists = c:FRA	
+		country_exists = c:DUMMY	
 	}
 	
 	immediate = {
@@ -1866,7 +1866,7 @@ flavor_iro.66 = { # Outbreak of Smallpox due to Simon le moyne
 			remove_location_modifier = sainte_marie_de_gannentaha		
 		}
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}		
 	}
 	option = { # Perhaps he can treat those affected by smallpox
@@ -1894,7 +1894,7 @@ flavor_iro.70 = { # Forming of a New Delegation
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = IRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 8

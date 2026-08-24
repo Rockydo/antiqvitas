@@ -37,6 +37,14 @@ ARABIAN_ROUTE_ACTIONS = (
 )
 SILENT_OTHER_ACTION_MESSAGES = (
     "OTHER_PERFORMS_create_market_ACTION",
+    "CREATE_MARKET_OTHERS",
+)
+SILENT_MISSING_AUDIO_MESSAGES = (
+    "RULER_FAMILY_CHAR_COMES_OF_AGE",
+    # Installed 1.3.11 registers this message with sound=yes but ships no
+    # same-named Wwise event.  Large multicultural countries can emit several
+    # changes on one tick, polluting error.log once per otherwise valid popup.
+    "ESTATE_CULTURE_CHANGED_OTHER",
 )
 
 
@@ -111,6 +119,15 @@ def installed_source(message_types: tuple[str, ...]) -> bytes:
         if block.count("popup=yes") != 1:
             raise ValueError(f"installed message type {message_type} popup contract changed")
         text = text[:match.start()] + block.replace("popup=yes", "popup=no", 1) + text[match.end():]
+    for message_type in SILENT_MISSING_AUDIO_MESSAGES:
+        pattern = re.compile(rf"(?ms)^{re.escape(message_type)}=\{{.*?^\}}")
+        match = pattern.search(text)
+        if match is None:
+            raise ValueError(f"installed message type {message_type} is missing or changed")
+        block = match.group(0)
+        if block.count("sound=yes") != 1:
+            raise ValueError(f"installed message type {message_type} sound contract changed")
+        text = text[:match.start()] + block.replace("sound=yes", "sound=no", 1) + text[match.end():]
     return text.encode("utf-8-sig")
 
 

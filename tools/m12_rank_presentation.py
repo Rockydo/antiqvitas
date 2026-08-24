@@ -63,9 +63,6 @@ STYLES = {
     "han_dynasty": RankStyle(
         "han_dynasty", "Dynasty", "imperial", "Emperor", "Empress",
     ),
-    "client_kingdom": RankStyle(
-        "client_kingdom", "Client Kingdom", "client-royal", "King", "Queen",
-    ),
     "kingdom": RankStyle("kingdom", "Kingdom", "royal", "King", "Queen"),
     "realm": RankStyle("realm", "Realm", "realm", "Ruler", "Ruler"),
     "confederation": RankStyle(
@@ -121,8 +118,13 @@ def presentation_class(row: dict[str, str]) -> str:
         return "arsacid_kingdom"
     if tag == "HAN":
         return "han_dynasty"
+    # Dependency is a diplomatic relationship, not a constitutional rank.
+    # Most opening dependants retain local kingship; the Batavian client is a
+    # tribal community.  Keeping "Client" out of the country flavor also
+    # prevents relationship UIs from composing labels such as
+    # "Client Kingdom Client Kingdom of Mauretania".
     if kind == "subject":
-        return "client_kingdom"
+        return "people" if tag == "BTV" else "kingdom"
     if "Confederation" in name:
         return "confederation"
     if kind == "sop":
@@ -296,7 +298,7 @@ def render_custom(rows: list[dict[str, str]]) -> str:
 def rank_localization_entries() -> list[str]:
     lines: list[str] = []
     used = (
-        "roman_imperium", "arsacid_kingdom", "han_dynasty", "client_kingdom",
+        "roman_imperium", "arsacid_kingdom", "han_dynasty",
         "kingdom", "realm", "confederation", "city_state", "league", "people",
         "communities", "polities", "empire", "great_realm", "regional_polity",
         "local_polity", "successor",
@@ -478,6 +480,18 @@ def validate() -> bool:
             failures.append("rank ledger engine tags are not unique")
         if sum(row["technical_rank"] == "rank_empire" for row in rows) != len(EMPIRES):
             failures.append("technical empire rank must remain limited to Rome Parthia and Han")
+        subject_rows = [row for row in rows if row["kind"] == "subject"]
+        invalid_subject_styles = [
+            f"{row['design_tag']}={row['presentation_class']}"
+            for row in subject_rows
+            if row["presentation_class"]
+            != ("people" if row["design_tag"] == "BTV" else "kingdom")
+        ]
+        if invalid_subject_styles:
+            failures.append(
+                "dependency relationship leaked into country rank presentation: "
+                + ", ".join(invalid_subject_styles)
+            )
         expected_ledger = rows
         if not LEDGER.is_file():
             failures.append(f"missing {LEDGER.relative_to(ROOT)}")

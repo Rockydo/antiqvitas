@@ -64,7 +64,6 @@ korean_barracks = {
 	build_time = soldier_building
 	remove_if = { NOT = { owner = { has_primary_or_accepted_culture = prev.location.dominant_culture } } }
 	modifier = {
-		local_manpower = 0.005
 		can_recruit_regiment_in_this_location = yes
 	}
 	possible_production_methods = { early_soldier_building_maintenance }
@@ -98,7 +97,6 @@ provincial_garrison = {
 	construction_demand = soldier_building_construction
 
 	modifier = {
-		local_manpower = 0.0025
 		can_recruit_regiment_in_this_location = yes
 	}
 }

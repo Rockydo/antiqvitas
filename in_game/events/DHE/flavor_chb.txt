@@ -8,7 +8,7 @@ flavor_chb.1 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = JAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -22,7 +22,7 @@ flavor_chb.1 = {
 	trigger = {
 		current_date > 476.9.4
 		character:chb_hasan_kuchak ?= { is_alive = yes }
-		NOT = { country_exists = c:CHB }
+		NOT = { country_exists = c:DUMMY }
 		owns = location:tabriz
 	}
 
@@ -34,7 +34,7 @@ flavor_chb.1 = {
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
 		character:chb_hasan_kuchak = { save_scope_as = target_character }
-		c:CHB = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 		location:tabriz = {
 			save_scope_as = target_location
 			area = {
@@ -147,7 +147,7 @@ flavor_chb.2 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = CHB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5

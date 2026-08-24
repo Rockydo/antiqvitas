@@ -18,10 +18,6 @@ scripted_effect change_amount_of_treasure_voyage = {
 		text = change_amount_of_treasure_voyage_tt
 		value = $value$
 		scope:expedition_initiator = {
-			change_variable = {
-				name = chinese_treasure_voyage_cargo
-				add = $value$
-			}
 		}
 	}
 }
@@ -32,29 +28,11 @@ scripted_effect give_gold_to_expedition = {
 		text = give_gold_to_expedition
 		value = $value$
 		scope:expedition_initiator = {
-			change_variable = {
-				name = gifts_received
-				add = $value$
-			}
 		}
 	}
 }
 
 # Turns the character into the Expedition Leader
-scripted_effect make_into_expedition_leader = {
-	set_variable = {
-		name = chinese_expedition_expedition_leader
-		value = $target$
-	}
-
-	$target$ = {
-		set_variable = is_chinese_expedition_expedition_leader
-		add_character_modifier = {
-			modifier = chi_leading_expedition
-			years = -1
-		}
-	}
-}
 
 # Changes the current state of the treasure voyage
 # Supported states:
@@ -87,7 +65,6 @@ scripted_trigger expedition_status = {
 
 # Scripted effect that determines the checks and behavior of the movement tick based on the current state
 scripted_effect chinese_expedition_status_change = {
-	global_var:chinese_treasure_voyage_running = { save_scope_as = expedition_initiator } #Reset the first country's scope in case it's been lost
 	if = {
 		limit = {
 			expedition_status = { status = travel_to }
@@ -183,7 +160,6 @@ scripted_effect chinese_expedition_set_expedition_to_return = {
 	find_route = {
 		start = scope:expedition_initiator.var:chinese_treasure_fleet_location
 		end = {
-			this = scope:expedition_initiator.var:chinese_treasure_start_location
 		}
 		limit = {
 			is_land = no
@@ -296,7 +272,6 @@ scripted_effect set_visiting_variables = {
 scripted_effect chinese_expedition_status_travel_to = {
 	if = {
 		limit = {
-			var:chinese_treasure_voyage_cargo ?= 0
 		}
 		chinese_expedition_set_expedition_to_return = yes
 		scope:expedition_initiator = {
@@ -307,13 +282,11 @@ scripted_effect chinese_expedition_status_travel_to = {
 	}
 	else_if = {
 		limit = {
-			scope:expedition_initiator.var:chinese_treasure_fleet_location ?= var:chinese_treasure_target_location
 		}
 		chinese_expedition_set_expedition_to_return = yes
 	}
 	else_if = {
 		limit = {
-			scope:expedition_initiator.var:chinese_treasure_voyage_cargo ?= { this > 0 }
 			scope:expedition_initiator.var:chinese_treasure_fleet_location ?= {
 				NOT =  { has_variable = visited_a_port }
 				any_neighbor_location = {
@@ -370,8 +343,6 @@ scripted_effect chinese_expedition_status_travel_from = {
 	if = {
 		limit = {
 			scope:expedition_initiator ?= {
-				exists = var:chinese_treasure_start_location
-				var:chinese_treasure_fleet_location ?= var:chinese_treasure_start_location
 			}
 		}
 		trigger_event_non_silently = {
@@ -690,12 +661,6 @@ scripted_effect give_exceptional_gift = {
 #######
 # Fired at the start of every event about the expedition
 scripted_effect set_chinese_expedition_scopes = {
-	global_var:chinese_treasure_voyage_running = {
-		save_scope_as = expedition_initiator
-		var:chinese_expedition_expedition_leader ?= {
-			save_scope_as = character_expedition_leader_target
-		}
-	}
 }
 
 # Start of Voyaging Era
@@ -707,7 +672,7 @@ flavor_chi.2000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -789,142 +754,6 @@ flavor_chi.2001 = {
 }
 
 # Start of a Voyage - calculate route
-flavor_chi.2002 = {
-	hide_portraits = yes
-	type = country_event
-	title = flavor_chi.2002.title
-	desc = flavor_chi.2002.desc
-	outcome = neutral
-
-	illustration_tags = {
-		10 = exterior
-		10 = regular
-	}
-
-	major = yes
-	major_trigger = {
-		possibly_impacted_by_treasure_voyages = yes
-	}
-
-	immediate = {
-		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
-
-		set_global_variable = {
-			name = chinese_treasure_voyage_running
-			value = ROOT
-		}
-		random_port_in_country = {
-			limit = {
-				OR = {
-					integration_level = core
-					integration_level = integrated
-					dominant_culture ?= { is_primary_or_accepted_in = root }
-				}
-			}
-			save_scope_as = start_location
-		}
-		set_variable = {
-			name = chinese_treasure_voyage_cargo
-			value = scope:target_value
-		}
-		set_variable = {
-			name = chinese_treasure_target_area
-			value = scope:target_area
-		}
-		set_variable = {
-			name = chinese_treasure_fleet_location
-			value = scope:start_location
-		}
-		set_variable = {
-			name = chinese_treasure_start_location
-			value = scope:start_location
-		}
-		set_variable = {
-			name = gifts_received
-			value = 0
-		}
-		set_variable = {
-			name = remaining_locations
-			value = 0
-		}
-
-		make_into_expedition_leader = { target = scope:target_character }
-
-		save_scope_as = expedition_initiator
-
-		set_chinese_expedition_scopes = yes
-
-		var:chinese_treasure_target_area = {
-			random_location_in_area = {
-				limit = { is_coastal = yes }
-				ROOT = {
-					set_variable = {
-						name = chinese_treasure_target_location
-						value = PREV
-					}
-				}
-			}
-		}
-
-		find_route = {
-			start = var:chinese_treasure_fleet_location
-			end = {
-				this = scope:expedition_initiator.var:chinese_treasure_target_location
-			}
-			limit = {
-				is_land = no
-			}
-			weight = {
-				value = scope:distance
-				if = {
-					limit = {
-						is_coastal = yes
-					}
-					multiply = 0.75
-				}
-			}
-			movement_cost = yes
-			effect = {
-				save_route_to_the_target_effect = {
-					variable_name = chinese_treasure_next_location
-				}
-				scope:expedition_initiator = {
-					add_to_variable_list = {
-						name = route_to_target_expedition_list
-						target = PREV
-					}
-					change_variable = {
-						name = remaining_locations
-						add = 1
-					}					
-				}
-			}
-		}
-
-		change_expedition_state = { status = travel_to }
-	}
-
-	option = {
-		name = flavor_chi.2002.a
-		
-		custom_tooltip = chinese_treasure_expeditions_send_tooltip
-		add_gold = {
-			value = var:chinese_treasure_voyage_cargo
-			multiply = -1
-		}
-	}
-
-	after = {
-		hidden_effect = {
-			chinese_treasure_sail_to = {
-				to = var:chinese_treasure_fleet_location.var:chinese_treasure_next_location
-			}
-		}
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 # Process tick for the expedition - try to do a stop over at a random port
 flavor_chi.2003 = {
@@ -1010,21 +839,15 @@ flavor_chi.2004 = {
 		name = flavor_chi.2004.a
 		
 		add_gold = {
-			value = var:gift_value
 		}
 
 		scope:expedition_initiator = {
-			change_variable = {
-				name = chinese_treasure_voyage_cargo
-				subtract = root.var:gift_value
-			}
 		}
 
 		custom_tooltip = chinese_expedition_resolution_tt
 	}
 
 	after = {
-		remove_variable = gift_value
 		trigger_event_non_silently = {
 			id = flavor_chi.2005
 			days = 7
@@ -1277,9 +1100,6 @@ flavor_chi.2008 = {
 	option = {
 		name = flavor_chi.2008.a
 		
-		var:chinese_expedition_expedition_leader = {
-			remove_character_modifier = chi_leading_expedition
-		}
 	}
 
 	after = {
@@ -1295,8 +1115,6 @@ flavor_chi.2008 = {
 		}
 		if = {
 			limit = {
-				exists = var:gifts_received
-				var:gifts_received > 0
 			}
 			set_variable = gift_event
 		}
@@ -1392,10 +1210,8 @@ flavor_chi.2010 = {
 		add_prestige = prestige_mild_bonus
 		if = {
 			limit = {
-				var:chinese_treasure_voyage_cargo > 0
 			}
 			add_gold = {
-				value = var:chinese_treasure_voyage_cargo
 			}
 		}
 	}
@@ -1417,15 +1233,8 @@ flavor_chi.2010 = {
 				}
 			}
 		}
-		remove_global_variable = chinese_treasure_voyage_running
-		remove_variable = chinese_treasure_voyage_cargo
-		remove_variable = chinese_treasure_target_area
 		remove_variable = chinese_treasure_fleet_location
-		remove_variable = chinese_expedition_expedition_leader
 		remove_variable = return_journey
-		remove_variable = chinese_treasure_target_location
-		remove_variable = chinese_treasure_start_location
-		remove_variable = gifts_received
 		remove_variable = remaining_locations
 		clear_variable_list = route_to_target_expedition_list
 		clear_variable_list = visited_ports
@@ -1899,7 +1708,6 @@ flavor_chi.2020 = {
 		
 		custom_tooltip = chi_gift_received_count
 		add_prestige = {
-			value = var:gifts_received
 			divide = 100
 		}
 	}
@@ -1913,39 +1721,6 @@ flavor_chi.2020 = {
 }
 
 # Expedition Leader Death, Character Replaced
-flavor_chi.2021 = {
-	type = country_event
-	title = flavor_chi.2021.title
-	desc = flavor_chi.2021.desc
-	outcome = neutral
-
-	
-
-	immediate = {
-		set_chinese_expedition_scopes = yes
-
-		create_character = {
-			estate = estate_type:burghers_estate
-			age = { 35 50 }
-			female = no
-			adm = { 0 50 }
-			dip = { 0 50 }
-			mil = { 0 50 }
-			save_scope_as = new_leader
-		}
-
-		make_into_expedition_leader = { target = scope:new_leader }
-	}
-
-	option = {
-		name = flavor_chi.2021.a
-		
-		custom_tooltip = chi_new_expedition_leader
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 # Expeditions Runs out of Cargo
 flavor_chi.2022 = {
@@ -2003,22 +1778,6 @@ flavor_chi.2100 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		set_chinese_expedition_scopes = yes
-		set_local_variable = {
-			name = cargo_lost
-			value = {
-				value = var:chinese_treasure_voyage_cargo
-				multiply = { 0.05 0.25 }
-				multiply = -1
-				multiply = {
-					value = 1
-					subtract = {
-						value = scope:expedition_initiator.var:chinese_expedition_expedition_leader.mil
-						divide = 100
-						multiply = 0.5
-					}
-				}
-			}
-		}
 
 		scope:expedition_initiator.var:chinese_treasure_fleet_location ?= {
 			save_scope_as = target_location
@@ -2028,9 +1787,6 @@ flavor_chi.2100 = {
 	option = {
 		name = flavor_chi.2100.a
 		
-		change_amount_of_treasure_voyage = {
-			value = local_var:cargo_lost
-		}
 	}
 }
 
@@ -2056,22 +1812,6 @@ flavor_chi.2101 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		set_chinese_expedition_scopes = yes
-		set_local_variable = {
-			name = cargo_lost
-			value = {
-				value = var:chinese_treasure_voyage_cargo
-				multiply = { 0.1 0.2 }
-				multiply = -1
-				multiply = {
-					value = 1
-					subtract = {
-						value = scope:expedition_initiator.var:chinese_expedition_expedition_leader.mil
-						divide = 100
-						multiply = 0.5
-					}
-				}
-			}
-		}
 
 		scope:expedition_initiator.var:chinese_treasure_fleet_location ?= {
 			save_scope_as = target_location
@@ -2097,9 +1837,6 @@ flavor_chi.2101 = {
 	option = {
 		name = flavor_chi.2101.a
 		
-		change_amount_of_treasure_voyage = {
-			value = local_var:cargo_lost
-		}
 		add_prestige = prestige_mild_bonus
 
 		ordered_in_list = {
@@ -2414,7 +2151,6 @@ flavor_chi.2204 = {
 	trigger = {
 		current_date > 476.9.4
 		scope:expedition_initiator.religion != root.religion
-		scope:expedition_initiator.var:chinese_expedition_expedition_leader.religion != root.religion
 	}
 
 	illustration_tags = {
@@ -2841,7 +2577,6 @@ flavor_chi.2209 = {
 
 	trigger = {
 		current_date > 476.9.4
-		scope:expedition_initiator.var:chinese_expedition_expedition_leader.religion = religion:sunni
 	}
 
 	illustration_tags = {
@@ -2861,9 +2596,6 @@ flavor_chi.2209 = {
 			}
 		}
 		
-		var:chinese_expedition_expedition_leader.religion = {
-			save_scope_as = target_religion
-		}
 	}
 
 	option = {
@@ -3038,19 +2770,10 @@ flavor_chi.2211 = {
 				exists = scope:expedition_initiator
 				scope:expedition_initiator = {
 					has_variable = chinese_treasure_fleet_location
-					has_variable = chinese_treasure_start_location
+					always = no
 					NOT = {
-						var:chinese_treasure_fleet_location.province_definition = var:chinese_treasure_start_location.province_definition
 					}
 				}
-			}
-			add_migration = {
-				owner = ROOT
-				from = scope:expedition_initiator.var:chinese_treasure_start_location.province_definition
-				to = scope:expedition_initiator.var:chinese_treasure_fleet_location.province_definition
-				type = pop_type:burghers
-				amount = { 0.001 0.005 }
-				months = 12
 			}
 		}
 		else_if = {
@@ -3231,13 +2954,6 @@ flavor_chi.2214 = {
 			}
 		}
 		
-		set_local_variable = {
-			name = bribe_amount
-			value = {
-				value = monthly_income_trade_and_tax
-				multiply = 3
-			}
-		}
 	}
 
 	option = {
@@ -3253,9 +2969,6 @@ flavor_chi.2214 = {
 			}
 		}
 		
-		give_gold_to_expedition = {
-			value = local_var:bribe_amount
-		}
 
 		increase_opinion_of_expedition = yes
 	}
@@ -3409,13 +3122,6 @@ flavor_chi.2216 = {
 			}
 		}		
 		
-		set_local_variable = {
-			name = tribute_cost
-			value = {
-				value = monthly_income_trade_and_tax
-				multiply = { 3 6 }
-			}
-		}
 	}
 
 	option = {
@@ -3431,9 +3137,6 @@ flavor_chi.2216 = {
 			}
 		}
 		
-		give_gold_to_expedition = {
-			value = local_var:tribute_cost
-		}
 	}
 
 	option = {
@@ -3489,13 +3192,6 @@ flavor_chi.2217 = {
 			}
 		}
 		set_chinese_expedition_scopes = yes
-		set_local_variable = {
-			name = tribute_cost
-			value = {
-				value = monthly_income_trade_and_tax
-				multiply = { 1 2 }
-			}
-		}
 	}
 
 	option = {
@@ -3529,9 +3225,6 @@ flavor_chi.2217 = {
 		
 		add_government_power = government_power_extreme_penalty
 		add_prestige = prestige_mild_penalty
-		give_gold_to_expedition = {
-			value = local_var:tribute_cost
-		}
 		increase_opinion_of_expedition = yes
 	}
 

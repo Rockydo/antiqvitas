@@ -8,7 +8,7 @@ flavor_ven_papal_interdicts.1000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -16,7 +16,7 @@ flavor_ven_papal_interdicts.1000 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 		has_policy = venetian_first
 		
 		any_owned_location = {
@@ -43,7 +43,7 @@ flavor_ven_papal_interdicts.1000 = {
 		name = flavor_ven_papal_interdicts.1000.a
 		historical_option = yes
 		add_prestige = prestige_extreme_penalty
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_ven_papal_interdicts.1001 }
 		}
 	}
@@ -66,7 +66,7 @@ flavor_ven_papal_interdicts.1001 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:VEN = {
+		c:DUMMY = {
 			ordered_owned_location = {
 				limit = {
 					OR = {
@@ -87,7 +87,7 @@ flavor_ven_papal_interdicts.1001 = {
 
 	option = {
 		name = flavor_ven_papal_interdicts.1001.a
-		add_casus_belli =  { type = casus_belli:cb_conquer_province target = c:VEN province = scope:venice_target.province }
+		add_casus_belli =  { type = casus_belli:cb_conquer_province target = c:DUMMY province = scope:venice_target.province }
 	}
 	trigger = {
 		current_date > 476.9.4

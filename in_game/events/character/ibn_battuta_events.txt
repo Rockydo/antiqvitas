@@ -66,14 +66,14 @@ scripted_effect ibn_battuta_second_round_travels_effect = {
 		}
 		if = {
 			limit = {
-				c:CHI ?= {
+				c:DUMMY ?= {
 					any_institutions_embraced = {
 						NOT = { root = { has_embraced_institution = prev } }
 					}
 				}
 				NOT = { tag = MOR }
 			}
-			c:CHI ?= {
+			c:DUMMY ?= {
 				random_institutions_embraced = {
 					limit = {
 						NOT = { root = { has_embraced_institution = prev } }
@@ -89,7 +89,7 @@ scripted_effect ibn_battuta_second_round_travels_effect = {
 		}
 		else_if = {
 			limit = {
-				c:CHI ?= {
+				c:DUMMY ?= {
 					any_institutions_embraced = {
 						NOT = { root = { has_embraced_institution = prev } }
 					}
@@ -97,7 +97,7 @@ scripted_effect ibn_battuta_second_round_travels_effect = {
 				exists = scope:target_location_8
 				tag = MOR
 			}
-			c:CHI ?= {
+			c:DUMMY ?= {
 				random_institutions_embraced = {
 					limit = {
 						NOT = { root = { has_embraced_institution = prev } }
@@ -138,7 +138,7 @@ ibn_battuta_events.1 = {	#Ibn Battuta departs for China	~1338
 	}	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -259,7 +259,7 @@ ibn_battuta_events.1 = {	#Ibn Battuta departs for China	~1338
 
 		custom_tooltip = {
 			text = next_stop_is_china_tt
-			c:CHI ?= {
+			c:DUMMY ?= {
 				trigger_event_silently = {
 					id = ibn_battuta_events.3
 					months = { 12 24 }
@@ -287,8 +287,8 @@ ibn_battuta_events.2 = {	#Ibn Battuta reaches designated location on his way to 
 	major = yes
 	major_trigger = {
 		AND = {
-			country_exists = c:DLH
-			this = c:DLH
+			country_exists = c:DUMMY
+			this = c:DUMMY
 		}
 	}
 
@@ -325,10 +325,10 @@ ibn_battuta_events.2 = {	#Ibn Battuta reaches designated location on his way to 
 	after = {
 		if = {
 			limit = { 
-				country_exists = c:DLH 
-				root != c:DLH
+				country_exists = c:DUMMY 
+				root != c:DUMMY
 			}
-			c:DLH ?= {
+			c:DUMMY ?= {
 				add_opinion_mutual_effect = {
 					modifier = travels_of_ibn_battuta_modifier
 					target = root
@@ -337,7 +337,7 @@ ibn_battuta_events.2 = {	#Ibn Battuta reaches designated location on his way to 
 		}
 		custom_tooltip = {
 			text = next_stop_is_china_tt
-			c:CHI ?= {
+			c:DUMMY ?= {
 				trigger_event_non_silently = {
 					id = ibn_battuta_events.3
 					months = { 12 16 }
@@ -365,8 +365,8 @@ ibn_battuta_events.3 = { #1341 - 1343	He comes to China
 	major_trigger = {
 		OR = {
 			AND = {
-				country_exists = c:DLH
-				this = c:DLH
+				country_exists = c:DUMMY
+				this = c:DUMMY
 			}
 			this = location:pasai.owner
 			this = location:martaban.owner
@@ -514,12 +514,12 @@ ibn_battuta_events.4 = {	#From China to Indian Port ~ 1342
 	major_trigger = {
 		OR = {
 			AND = {
-				country_exists = c:DLH
-				this = c:DLH
+				country_exists = c:DUMMY
+				this = c:DUMMY
 			}
 			AND = {
-				country_exists = c:CHI
-				this = c:CHI
+				country_exists = c:DUMMY
+				this = c:DUMMY
 			}
 			this = location:pasai.owner
 			this = location:martaban.owner
@@ -642,12 +642,12 @@ ibn_battuta_events.5 = {	#From Indian Port to Arabian Port	~1343
 	major_trigger = {
 		OR = {
 			AND = {
-				country_exists = c:DLH
-				this = c:DLH
+				country_exists = c:DUMMY
+				this = c:DUMMY
 			}
 			AND = {
-				country_exists = c:CHI
-				this = c:CHI
+				country_exists = c:DUMMY
+				this = c:DUMMY
 			}
 			this = location:pasai.owner
 			this = location:martaban.owner
@@ -773,12 +773,12 @@ ibn_battuta_events.6 = {	#Arabian Port to Andalusia ~1350
 	major_trigger = {
 		OR = {
 			AND = {
-				country_exists = c:DLH
-				this = c:DLH
+				country_exists = c:DUMMY
+				this = c:DUMMY
 			}
 			AND = {
-				country_exists = c:CHI
-				this = c:CHI
+				country_exists = c:DUMMY
+				this = c:DUMMY
 			}
 			this = location:pasai.owner
 			this = location:martaban.owner
@@ -893,12 +893,12 @@ ibn_battuta_events.7 = {	#From Andalusia to Mali	~1352
 	major_trigger = {
 		OR = {
 			AND = {
-				country_exists = c:DLH
-				this = c:DLH
+				country_exists = c:DUMMY
+				this = c:DUMMY
 			}
 			AND = {
-				country_exists = c:CHI
-				this = c:CHI
+				country_exists = c:DUMMY
+				this = c:DUMMY
 			}
 			this = location:pasai.owner
 			this = location:martaban.owner
@@ -928,8 +928,8 @@ ibn_battuta_events.7 = {	#From Andalusia to Mali	~1352
 		}
 
 		if = {
-			limit = { country_exists = c:MOR }
-			c:MOR = {
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = {
 				save_scope_as = target_country_5
 				capital = { save_scope_as = target_location_8 }
 			}

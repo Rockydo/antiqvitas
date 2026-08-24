@@ -3,13 +3,13 @@
 scripted_effect chi_scopes = {
 	if = {
 		limit = {
-			country_exists = c:CHI
+			country_exists = c:DUMMY
 			OR = {
 				NOT = { exists = international_organization:middle_kingdom }
-				c:CHI = { is_leader_of_international_organization = international_organization:middle_kingdom }
+				c:DUMMY = { is_leader_of_international_organization = international_organization:middle_kingdom }
 			}
 		}
-		c:CHI = {
+		c:DUMMY = {
 			culture = { save_scope_as = chi_culture_scope }
 			court_language = { save_scope_as = chi_language_scope }
 			save_scope_as = target_emperor_scope
@@ -601,18 +601,18 @@ sinicization_disaster.100 = {
 				trigger = {
 					OR = {
 						country_economical_base > {
-							value = c:CHI.country_economical_base
+							value = c:DUMMY.country_economical_base
 							multiply = 0.75
 						}
 						societal_value:sinicized_vs_unsinicized > 0
-						NOT = { country_exists = c:CHI }
+						NOT = { country_exists = c:DUMMY }
 					}
 				}
 			}
 			triggered_desc = {
 				desc = sinicization_disaster.100.desc.d	#We are a subject of China
 				trigger = {
-					is_subject_or_below_of = c:CHI
+					is_subject_or_below_of = c:DUMMY
 				}
 			}
 			triggered_desc = {
@@ -630,7 +630,7 @@ sinicization_disaster.100 = {
 	major = yes
 	major_trigger = {
 		OR = {
-			this = c:CHI
+			this = c:DUMMY
 			AND = {
 				exists = scope:shafted_overlord
 				this = scope:shafted_overlord
@@ -645,7 +645,7 @@ sinicization_disaster.100 = {
 		if = {
 			limit = { 
 				is_subject = yes
-				NOT = { is_subject_or_below_of = c:CHI }
+				NOT = { is_subject_or_below_of = c:DUMMY }
 			}
 			overlord = { save_scope_as = shafted_overlord }
 		}
@@ -662,7 +662,7 @@ sinicization_disaster.100 = {
 		}
 
 		make_subject_of = {
-			target = c:CHI
+			target = c:DUMMY
 			type = subject_type:tributary
 		}
 	}
@@ -672,7 +672,7 @@ sinicization_disaster.100 = {
 
 		trigger = { var:china_side >= 30 }
 
-		c:CHI = {
+		c:DUMMY = {
 			add_casus_belli =  { 
 				target = root
 				type = casus_belli:cb_subject_broke_free	
@@ -706,11 +706,11 @@ sinicization_disaster.100 = {
 		trigger = {
 			OR = {
 				country_economical_base > {
-					value = c:CHI.country_economical_base
+					value = c:DUMMY.country_economical_base
 					multiply = 0.75
 				}
 				societal_value:sinicized_vs_unsinicized > 0
-				NOT = { country_exists = c:CHI }
+				NOT = { country_exists = c:DUMMY }
 			}
 		}
 
@@ -729,9 +729,9 @@ sinicization_disaster.100 = {
 	option = {
 		name = sinicization_disaster.100.d
 
-		trigger = { is_subject_or_below_of = c:CHI }
+		trigger = { is_subject_or_below_of = c:DUMMY }
 
-		c:CHI = {
+		c:DUMMY = {
 			add_stability = stability_mild_bonus
 			change_celestial_authority = { value = celestial_authority_mild_bonus }
 		}

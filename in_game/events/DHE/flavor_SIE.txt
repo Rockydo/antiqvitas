@@ -10,7 +10,7 @@ flavor_sie.1 = { # Banca Monte dei Paschi di Siena https://en.wikipedia.org/wiki
 
 	major = yes
 	dynamic_historical_event = {
-		tag = SIE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -155,7 +155,7 @@ flavor_sie.3 = {
 	outcome = positive
 
 	dynamic_historical_event = {
-		tag = SIE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 75
@@ -211,7 +211,7 @@ flavor_sie.4 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SIE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -293,7 +293,7 @@ flavor_sie.5 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SIE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -371,7 +371,7 @@ flavor_sie.6 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SIE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -449,7 +449,7 @@ flavor_sie.7 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SIE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -528,7 +528,7 @@ flavor_sie.8 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SIE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -624,7 +624,7 @@ flavor_sie.9 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SIE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20 #Trigger is the main restriction here
@@ -680,7 +680,7 @@ flavor_sie.10 = {
 	outcome = positive
 
 	dynamic_historical_event = {
-		tag = SIE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20 #Trigger is the main restriction here
@@ -756,7 +756,7 @@ flavor_sie.11 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SIE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -831,7 +831,7 @@ flavor_sie.12 = {
 	outcome = positive
 
 	dynamic_historical_event = {
-		tag = SIE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3

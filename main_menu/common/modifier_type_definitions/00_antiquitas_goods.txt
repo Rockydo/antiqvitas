@@ -112,6 +112,62 @@ antq_barley_used_for_minting={
 	}
 }
 
+can_extract_antq_bound_codices={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+ban_exports_of_antq_bound_codices={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+ban_imports_of_antq_bound_codices={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+local_antq_bound_codices_output_modifier={
+	percent=yes
+	game_data={
+		category=location
+	}
+}
+
+global_antq_bound_codices_output_modifier={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+global_antq_bound_codices_pop_demand={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+antq_bound_codices_impacts_inflation={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+antq_bound_codices_used_for_minting={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
 can_extract_antq_bronze_wares={
 	boolean=yes
 	game_data={
@@ -162,6 +218,62 @@ antq_bronze_wares_impacts_inflation={
 }
 
 antq_bronze_wares_used_for_minting={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+can_extract_antq_cage_glass={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+ban_exports_of_antq_cage_glass={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+ban_imports_of_antq_cage_glass={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+local_antq_cage_glass_output_modifier={
+	percent=yes
+	game_data={
+		category=location
+	}
+}
+
+global_antq_cage_glass_output_modifier={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+global_antq_cage_glass_pop_demand={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+antq_cage_glass_impacts_inflation={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+antq_cage_glass_used_for_minting={
 	boolean=yes
 	game_data={
 		category=country
@@ -778,6 +890,62 @@ antq_fine_ceramics_impacts_inflation={
 }
 
 antq_fine_ceramics_used_for_minting={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+can_extract_antq_garnet_cloisonne={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+ban_exports_of_antq_garnet_cloisonne={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+ban_imports_of_antq_garnet_cloisonne={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+local_antq_garnet_cloisonne_output_modifier={
+	percent=yes
+	game_data={
+		category=location
+	}
+}
+
+global_antq_garnet_cloisonne_output_modifier={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+global_antq_garnet_cloisonne_pop_demand={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+antq_garnet_cloisonne_impacts_inflation={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+antq_garnet_cloisonne_used_for_minting={
 	boolean=yes
 	game_data={
 		category=country
@@ -2122,6 +2290,62 @@ antq_wax_goods_impacts_inflation={
 }
 
 antq_wax_goods_used_for_minting={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+can_extract_antq_yue_celadon={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+ban_exports_of_antq_yue_celadon={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+ban_imports_of_antq_yue_celadon={
+	boolean=yes
+	game_data={
+		category=country
+	}
+}
+
+local_antq_yue_celadon_output_modifier={
+	percent=yes
+	game_data={
+		category=location
+	}
+}
+
+global_antq_yue_celadon_output_modifier={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+global_antq_yue_celadon_pop_demand={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+antq_yue_celadon_impacts_inflation={
+	percent=yes
+	game_data={
+		category=country
+	}
+}
+
+antq_yue_celadon_used_for_minting={
 	boolean=yes
 	game_data={
 		category=country

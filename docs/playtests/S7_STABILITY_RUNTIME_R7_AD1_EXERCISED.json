@@ -1,0 +1,211 @@
+{
+  "save": "G:\\antiqvitas_user_data\\save games\\r7_current_rome_ad1_exercised.eu5",
+  "date": "1.1.1",
+  "real_polities": 463,
+  "stability": {
+    "minimum": 29.85,
+    "p10": 29.93028,
+    "median": 29.9486,
+    "p90": 29.9498,
+    "maximum": 30.05,
+    "negative_count": 0,
+    "severe_count": 0
+  },
+  "solvency": {
+    "bankrupt_count": 0,
+    "bankrupt_polities": [],
+    "historical_bankrupt_count": 0,
+    "historical_bankrupt_polities": [],
+    "major_bankrupt_count": 0,
+    "major_bankrupt_polities": [],
+    "indebted_count": 0,
+    "largest_debts": [],
+    "major_economies": [
+      {
+        "id": 3,
+        "tag": "XAA",
+        "name": "XAA",
+        "province_count": 399,
+        "great_power": true,
+        "population_thousands": 47500.0,
+        "gold": 10915.34282,
+        "debt": 0.0,
+        "loan_capacity": 149072.416,
+        "monthly_income": 243.28035,
+        "monthly_expense": 41.98086,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 28,
+        "tag": "XAR",
+        "name": "XAR",
+        "province_count": 382,
+        "great_power": true,
+        "population_thousands": 57805.693,
+        "gold": 12250.05833,
+        "debt": 0.0,
+        "loan_capacity": 116556.682,
+        "monthly_income": 260.54983,
+        "monthly_expense": 17.42298,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 14,
+        "tag": "XAH",
+        "name": "XAH",
+        "province_count": 89,
+        "great_power": true,
+        "population_thousands": 6951.965,
+        "gold": 1596.65249,
+        "debt": 0.0,
+        "loan_capacity": 23893.134,
+        "monthly_income": 45.80195,
+        "monthly_expense": 14.73036,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 173,
+        "tag": "ROX",
+        "name": "ROX",
+        "province_count": 38,
+        "great_power": false,
+        "population_thousands": 450.251,
+        "gold": 405.96251,
+        "debt": 0.0,
+        "loan_capacity": 3326.373,
+        "monthly_income": 15.92281,
+        "monthly_expense": 0.06305,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 41,
+        "tag": "SAT",
+        "name": "SAT",
+        "province_count": 31,
+        "great_power": true,
+        "population_thousands": 8167.66,
+        "gold": 1725.53401,
+        "debt": 0.0,
+        "loan_capacity": 17613.202,
+        "monthly_income": 38.49974,
+        "monthly_expense": 3.68249,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 29,
+        "tag": "XIO",
+        "name": "XIO",
+        "province_count": 30,
+        "great_power": false,
+        "population_thousands": 440.136,
+        "gold": 360.48823,
+        "debt": 0.0,
+        "loan_capacity": 1665.534,
+        "monthly_income": 13.76241,
+        "monthly_expense": 3.01558,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 188,
+        "tag": "XCM",
+        "name": "XCM",
+        "province_count": 29,
+        "great_power": false,
+        "population_thousands": 706.143,
+        "gold": 174.23898,
+        "debt": 0.0,
+        "loan_capacity": 3920.584,
+        "monthly_income": 7.53467,
+        "monthly_expense": 0.19629,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      }
+    ]
+  },
+  "construction": {
+    "active_projects": 1,
+    "active_payers": 1,
+    "busiest_payers": [
+      {
+        "id": 3,
+        "tag": "XAA",
+        "name": "XAA",
+        "province_count": 399,
+        "great_power": true,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 30.7339,
+        "project_types": {
+          "antq_reg_ropewalk": 1
+        }
+      }
+    ],
+    "all_payers": [
+      {
+        "id": 3,
+        "tag": "XAA",
+        "name": "XAA",
+        "province_count": 399,
+        "great_power": true,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 30.7339,
+        "project_types": {
+          "antq_reg_ropewalk": 1
+        }
+      }
+    ]
+  },
+  "estates": {
+    "records": 2532,
+    "minimum": 0.56803,
+    "p10": 0.790082,
+    "median": 0.897165,
+    "polity_mean_p10": 0.8602755,
+    "below_10_percent": 0,
+    "below_25_percent": 0
+  },
+  "wars": {
+    "distinct_civil_wars": 0,
+    "active_wars": 0,
+    "active_civil_wars": 0,
+    "elapsed_years": 1.0,
+    "civil_wars_per_polity_year": 0.0
+  },
+  "epidemics": {
+    "non_endemic_outbreaks": 0,
+    "outbreaks": []
+  },
+  "log": {
+    "path": "G:\\antiqvitas_user_data\\logs\\error.log",
+    "ai_path": "G:\\antiqvitas_user_data\\logs\\ai.log",
+    "missing_logs": [],
+    "script_errors": 0,
+    "ai_command_errors": 0,
+    "invalid_ai_commands": {},
+    "locations": {}
+  },
+  "failures": []
+}

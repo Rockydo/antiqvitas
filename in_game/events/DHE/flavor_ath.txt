@@ -16,7 +16,7 @@ flavor_ath.1 = {
 			foreground = estate_type:peasants_estate
 			background = estate_type:peasants_estate
 		}
-		c:AYD = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		character:ayd_muhammad = {
@@ -31,13 +31,13 @@ flavor_ath.1 = {
 		name = flavor_ath.1.a
 		
 		add_casus_belli = {
-			target = c:AYD
+			target = c:DUMMY
 			type = casus_belli:cb_anti_piracy
 		}
 
 		add_opinion = {
 			modifier = opinion_raided_our_borders
-			target = c:AYD
+			target = c:DUMMY
 		}
 	}
 	trigger = {
@@ -52,7 +52,7 @@ flavor_ath.2 = { # Sudden Death of the Duke Guillem II
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 60
@@ -64,14 +64,14 @@ flavor_ath.2 = { # Sudden Death of the Duke Guillem II
         has_ruler = yes
         is_subject = yes
         has_heir = yes
-        country_exists = c:ARG
-        country_exists = c:SIC
-        overlord = c:SIC
+        country_exists = c:DUMMY
+        country_exists = c:DUMMY
+        overlord = c:DUMMY
         character:ath_william = {
             is_alive = yes
             is_ruler = yes
         }
-        c:ARG = {
+        c:DUMMY = {
             has_ruler = yes
         }
     }
@@ -137,12 +137,12 @@ flavor_ath.2 = { # Sudden Death of the Duke Guillem II
             }
         }         
         scope:scope_heir = {
-            move_country = c:SIC
+            move_country = c:DUMMY
         }
-        c:SIC ?= {
+        c:DUMMY ?= {
             save_scope_as = sic_country
         }
-        c:ARG ?= {
+        c:DUMMY ?= {
             save_scope_as = arg_country
             ruler ?= {
                 save_scope_as = arg_ruler
@@ -221,14 +221,14 @@ flavor_ath.3 = { # Argos Receives Athens Nobles Proposal
         character:ath_william = {
             save_scope_as = scope_ath_william
         }
-        c:ATH ?= {
+        c:DUMMY ?= {
             random_character = {
                 limit = { has_variable = ath_regent_of_athens }
                 save_scope_as = regent_of_athens
             }
             save_scope_as = scope_athens
         }
-        c:SIC ?= {
+        c:DUMMY ?= {
             save_scope_as = scope_sic_country
         }
     }
@@ -245,15 +245,15 @@ flavor_ath.3 = { # Argos Receives Athens Nobles Proposal
                 limit = {
                     is_core_of = root
                 }
-                add_core = c:ATH
+                add_core = c:DUMMY
             }       
-            c:ATH ?= {
+            c:DUMMY ?= {
                 annex_country_diplomatically = {
                     country = root
                 } 
             }              
         } 
-        c:ATH ?= {
+        c:DUMMY ?= {
             trigger_event_non_silently = { id = flavor_ath.4 days = 1 } 
         }
         ai_chance = {
@@ -270,7 +270,7 @@ flavor_ath.3 = { # Argos Receives Athens Nobles Proposal
         ai_chance = {
             base = 25
         } 
-        c:ATH ?= {
+        c:DUMMY ?= {
             trigger_event_non_silently = { id = flavor_ath.7 days = 1 } 
         }             
     }    
@@ -283,19 +283,19 @@ flavor_ath.3 = { # Argos Receives Athens Nobles Proposal
         custom_tooltip = {
             text = flavor_ath.3_become_athens
             annex_country_diplomatically = {
-                country = c:ATH
+                country = c:DUMMY
             }
             change_country_name = ATH
             change_country_adjective = ATH_ADJ
             change_country_flag = ATH
-            c:ATH ?= {
+            c:DUMMY ?= {
                 every_owned_location = {
                     limit = {
-                        is_core_of = c:ATH
-                        NOT = { is_core_of = c:ARG }
+                        is_core_of = c:DUMMY
+                        NOT = { is_core_of = c:DUMMY }
                     }
                     add_core = root
-                    remove_core = c:ATH
+                    remove_core = c:DUMMY
                 } 
             } 
         }
@@ -330,7 +330,7 @@ flavor_ath.3 = { # Argos Receives Athens Nobles Proposal
         trigger = {
             is_human = yes
         } 
-        c:ATH ?= {
+        c:DUMMY ?= {
             trigger_event_non_silently = { id = flavor_ath.7 days = 1 } 
         }         
     }    
@@ -363,13 +363,13 @@ flavor_ath.4 = { # Count of Argos Accepts
         character:ath_william = {
             save_scope_as = scope_ath_william
         }
-        c:ARG ?= {
+        c:DUMMY ?= {
             save_scope_as = arg_country_scope
             ruler ?= {
                 save_scope_as = arg_ruler
             }
         }
-        c:SIC ?= {
+        c:DUMMY ?= {
             save_scope_as = sic_country_scope
         }
         character:ath_gautier_v_brienne = {
@@ -393,16 +393,16 @@ flavor_ath.4 = { # Count of Argos Accepts
         name = flavor_ath.4.a
         scope:sic_country_scope = { trigger_event_non_silently = { id = flavor_ath.6 days = 3 } } 
         change_culture = culture:champenais
-        c:ARG ?= {
+        c:DUMMY ?= {
               every_owned_location = {
                 limit = {
                     is_core_of = root
                 }
-                add_core = c:ATH
+                add_core = c:DUMMY
             }           
         }      
         annex_country_diplomatically = {
-            country = c:ARG
+            country = c:DUMMY
         }   
         scope:arg_ruler = {
             move_country = root
@@ -440,7 +440,7 @@ flavor_ath.5 = { # Appeasement of the Catalan Company
         ruler ?= {
             save_scope_as = scope_ruler
         }
-        c:SIC ?= {
+        c:DUMMY ?= {
             save_scope_as = sic_country_scope
         }
         character:ath_william = {
@@ -531,7 +531,7 @@ flavor_ath.6 = { # For Sicily ## Athens becomes independent
         ruler ?= {
             save_scope_as = scope_ruler
         }   
-        c:ARG ?= {
+        c:DUMMY ?= {
             ruler ?= {
                 save_scope_as = arg_ruler
             }
@@ -542,13 +542,13 @@ flavor_ath.6 = { # For Sicily ## Athens becomes independent
         if = {
             limit = { 
                 AND = {
-                   c:ARG = {
+                   c:DUMMY = {
                         has_variable = de_brienne_rule_of_athens
                     }
-                    NOT = { country_exists = c:ATH } 
+                    NOT = { country_exists = c:DUMMY } 
                 }
             }
-            c:ARG ?= {
+            c:DUMMY ?= {
                 save_scope_as = scope_athens
                 ruler ?= {
                     save_scope_as = arg_ruler
@@ -557,9 +557,9 @@ flavor_ath.6 = { # For Sicily ## Athens becomes independent
         }
         if = {
             limit = { 
-                country_exists = c:ATH  
+                country_exists = c:DUMMY  
             }
-            c:ATH ?= {
+            c:DUMMY ?= {
                 save_scope_as = scope_athens
                 ruler ?= {
                     save_scope_as = arg_ruler
@@ -573,14 +573,14 @@ flavor_ath.6 = { # For Sicily ## Athens becomes independent
         name = flavor_ath.6.a 
         trigger = {
             AND = {
-                c:ARG = {
+                c:DUMMY = {
                     has_variable = de_brienne_rule_of_athens
                 }
-                NOT = { country_exists = c:ATH }
+                NOT = { country_exists = c:DUMMY }
             }            
         }
         add_casus_belli =  { 
-            target = c:ARG
+            target = c:DUMMY
             type = casus_belli:cb_subject_broke_free	
         }        
     }
@@ -588,10 +588,10 @@ flavor_ath.6 = { # For Sicily ## Athens becomes independent
     option = { # Damn them! ## If Athens 'tag' exists
         name = flavor_ath.6.a  
         trigger = {
-            country_exists = c:ATH           
+            country_exists = c:DUMMY           
         }
         add_casus_belli =  { 
-            target = c:ATH
+            target = c:DUMMY
             type = casus_belli:cb_subject_broke_free	
         }        
     }    
@@ -622,7 +622,7 @@ flavor_ath.7 = { # Duke of Argos declines
             limit = { has_variable = ath_regent_of_athens }
             save_scope_as = regent_of_athens
         }
-        c:ARG ?= {
+        c:DUMMY ?= {
             save_scope_as = arg_country
             ruler ?= {
                 save_scope_as = arg_ruler
@@ -661,7 +661,7 @@ flavor_ath.8 = { # Rule of the Catalan Company
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 100
@@ -683,10 +683,10 @@ flavor_ath.8 = { # Rule of the Catalan Company
         ruler ?= {
             save_scope_as = scope_ruler
         }
-        c:SIC ?= {
+        c:DUMMY ?= {
             save_scope_as = sic_country
         }
-        c:ARG ?= {
+        c:DUMMY ?= {
             ruler ?= {
                 save_scope_as = arg_ruler
             }
@@ -723,8 +723,8 @@ flavor_ath.9 = { # Byzantium Internal Strife
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
+        tag = DUMMY
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 18
@@ -734,8 +734,8 @@ flavor_ath.9 = { # Byzantium Internal Strife
     trigger = {
     	current_date > 476.9.4
         at_war = no
-        country_exists = c:BYZ 
-        c:BYZ ?= {
+        country_exists = c:DUMMY 
+        c:DUMMY ?= {
             in_civil_war = no
             stability < -15
         }
@@ -748,7 +748,7 @@ flavor_ath.9 = { # Byzantium Internal Strife
                 	has_variable = de_brienne_rule_of_athens
                 }
             }
-            NOT = { country_exists = c:ATH }
+            NOT = { country_exists = c:DUMMY }
         }
     }
 
@@ -762,7 +762,7 @@ flavor_ath.9 = { # Byzantium Internal Strife
         ruler ?= {
             save_scope_as = scope_ruler
         }
-        c:BYZ ?= {
+        c:DUMMY ?= {
             save_scope_as = byz_country
         }
     }
@@ -772,7 +772,7 @@ flavor_ath.9 = { # Byzantium Internal Strife
         name = flavor_ath.9.a  
         add_country_modifier = { modifier = ath_strike_into_thessaly years = 5 mode = add }  
         add_casus_belli = {
-            target = c:BYZ
+            target = c:DUMMY
             type = casus_belli:cb_lat_reconquest
         }   
         ai_chance = {
@@ -793,19 +793,19 @@ flavor_ath.9 = { # Byzantium Internal Strife
             modifier = antagonism_pushed_towards_belligerent
             value = 2
         }
-        reverse_add_opinion = { target = c:BYZ modifier = ath_byz_raided_our_greek_holdings }
-        c:BYZ ?= {
+        reverse_add_opinion = { target = c:DUMMY modifier = ath_byz_raided_our_greek_holdings }
+        c:DUMMY ?= {
             area:northern_greece_area = {
                 every_province_in_area = {
                     limit = {
-                        owner = c:BYZ
+                        owner = c:DUMMY
                     }
                     change_province_food_percentage = -0.33
 
                 }
                 every_location_in_area = {
                     limit = {
-                        owner = c:BYZ
+                        owner = c:DUMMY
                     }
                     change_prosperity = prosperity_severe_penalty
                 }    
@@ -839,8 +839,8 @@ flavor_ath.10 = { # Rule in Greece ## Relations with the local populace
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
+        tag = DUMMY
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 10
@@ -858,7 +858,7 @@ flavor_ath.10 = { # Rule in Greece ## Relations with the local populace
                 	has_variable = de_brienne_rule_of_athens
                 }
             }
-            NOT = { country_exists = c:ATH }
+            NOT = { country_exists = c:DUMMY }
         }        
     }
 
@@ -872,7 +872,7 @@ flavor_ath.10 = { # Rule in Greece ## Relations with the local populace
         ruler ?= {
             save_scope_as = scope_ruler
         }
-        c:LAT ?= {
+        c:DUMMY ?= {
             save_scope_as = latin_country
         }
     }
@@ -979,8 +979,8 @@ flavor_ath.11 = { # Conflict between the Catalan Company and Greeks in <location
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
+        tag = DUMMY
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 2
@@ -999,7 +999,7 @@ flavor_ath.11 = { # Conflict between the Catalan Company and Greeks in <location
                 	has_variable = de_brienne_rule_of_athens
                 }
             }
-            NOT = { country_exists = c:ATH }
+            NOT = { country_exists = c:DUMMY }
         }
         any_owned_rural_location = {
             any_pop = {
@@ -1122,8 +1122,8 @@ flavor_ath.12 = { # The Shifting Capitals ## Catalan Company shifting base of op
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
+        tag = DUMMY
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 6
@@ -1141,7 +1141,7 @@ flavor_ath.12 = { # The Shifting Capitals ## Catalan Company shifting base of op
                 	has_variable = de_brienne_rule_of_athens
                 }
             }
-            NOT = { country_exists = c:ATH }
+            NOT = { country_exists = c:DUMMY }
         }  
         owns = location:athens
         owns = location:thebes      
@@ -1247,8 +1247,8 @@ flavor_ath.13 = { # Secession in Epirus ## Chance to strike Epirus
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
+        tag = DUMMY
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 30
@@ -1258,7 +1258,7 @@ flavor_ath.13 = { # Secession in Epirus ## Chance to strike Epirus
     trigger = {
     	current_date > 476.9.4
         at_war = no
-        country_exists = c:BYZ
+        country_exists = c:DUMMY
         trigger_if = {
             limit = {
                 tag = ARG 
@@ -1267,13 +1267,13 @@ flavor_ath.13 = { # Secession in Epirus ## Chance to strike Epirus
                 	has_variable = de_brienne_rule_of_athens
                 }
             }
-            NOT = { country_exists = c:ATH }
+            NOT = { country_exists = c:DUMMY }
         }  
-        country_exists = c:EPI
+        country_exists = c:DUMMY
         character:epi_nikephoros_ii_orsini ?= {
             is_alive = yes
         }        
-        c:EPI ?= {
+        c:DUMMY ?= {
             is_subject = no
             ruler ?= character:epi_nikephoros_ii_orsini
         }             
@@ -1292,13 +1292,13 @@ flavor_ath.13 = { # Secession in Epirus ## Chance to strike Epirus
         character:epi_theodoros_synadenos = {
             save_scope_as = scope_epi_governor
         }
-        c:EPI ?= {
+        c:DUMMY ?= {
             save_scope_as = epi_country
             ruler ?= {
                 save_scope_as = scope_epi_ruler
             }
         }
-        c:BYZ ?= {
+        c:DUMMY ?= {
             save_scope_as = byz_country
         }
     }
@@ -1311,7 +1311,7 @@ flavor_ath.13 = { # Secession in Epirus ## Chance to strike Epirus
             base = 95
         }    
         add_casus_belli = {
-            target = c:EPI
+            target = c:DUMMY
             type = casus_belli:cb_lat_reconquest
         }          
     }
@@ -1321,8 +1321,8 @@ flavor_ath.13 = { # Secession in Epirus ## Chance to strike Epirus
         ai_chance = {
             base = 5
         }   
-        add_opinion = { target = c:EPI modifier = ath_befriend_epirus }
-        reverse_add_opinion = { target = c:EPI modifier = ath_befriend_epirus }       
+        add_opinion = { target = c:DUMMY modifier = ath_befriend_epirus }
+        reverse_add_opinion = { target = c:DUMMY modifier = ath_befriend_epirus }       
     }
     option = { # Epirus affairs are not our concern.
         name = flavor_ath.13.c
@@ -1342,8 +1342,8 @@ flavor_ath.14 = { # The Titular Emperor in Achaea
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
+        tag = DUMMY
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 8
@@ -1353,9 +1353,9 @@ flavor_ath.14 = { # The Titular Emperor in Achaea
     trigger = {
     	current_date > 476.9.4
         at_war = no
-        country_exists = c:ACH
-        country_exists = c:NAP
-        c:ACH ?= {
+        country_exists = c:DUMMY
+        country_exists = c:DUMMY
+        c:DUMMY ?= {
             has_reform = government_reform:ach_heirs_of_the_latin_empire
             has_ruler = yes
         }
@@ -1368,7 +1368,7 @@ flavor_ath.14 = { # The Titular Emperor in Achaea
                 }
             }
         }      
-        NOT = { country_exists = c:LAT }  
+        NOT = { country_exists = c:DUMMY }  
     }
 
     illustration_tags = {
@@ -1381,13 +1381,13 @@ flavor_ath.14 = { # The Titular Emperor in Achaea
         ruler ?= {
             save_scope_as = scope_ruler
         }
-        c:ACH ?= {
+        c:DUMMY ?= {
             save_scope_as = scope_ach_country
             ruler ?= {
                 save_scope_as = scope_ach_ruler
             }
         }
-        c:NAP ?= {
+        c:DUMMY ?= {
             save_scope_as = scope_nap_country
         }
     }
@@ -1402,7 +1402,7 @@ flavor_ath.14 = { # The Titular Emperor in Achaea
             value = 0.5
         } 
         add_casus_belli = {
-            target = c:ACH
+            target = c:DUMMY
             type = casus_belli:cb_lat_reconquest
         }       
         ai_chance = {
@@ -1413,8 +1413,8 @@ flavor_ath.14 = { # The Titular Emperor in Achaea
     option = { # We should instead seek to curry relations with the <ach_ruler>
         name = flavor_ath.14.b
         add_legitimacy = legitimacy_mild_bonus
-        add_opinion = { target = c:ACH modifier = ath_acknowledged_the_latin_claim }
-        c:ACH = {
+        add_opinion = { target = c:DUMMY modifier = ath_acknowledged_the_latin_claim }
+        c:DUMMY = {
             add_opinion = { target = ROOT modifier = ath_acknowledged_the_latin_claim }
         }          
         ai_chance = {
@@ -1438,8 +1438,8 @@ flavor_ath.15 = { # Pope Proposes Restoring the Latin empire ## Athens/Argos Res
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
+        tag = DUMMY
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 50
@@ -1457,7 +1457,7 @@ flavor_ath.15 = { # Pope Proposes Restoring the Latin empire ## Athens/Argos Res
                 	has_variable = de_brienne_rule_of_athens
                 }
             }
-            NOT = { country_exists = c:ATH }
+            NOT = { country_exists = c:DUMMY }
         } 
         scripted_geography:frankokratia_geography= { # Retool to be for Frankokratia region
             any_location_in_scripted_geography = {
@@ -1465,12 +1465,12 @@ flavor_ath.15 = { # Pope Proposes Restoring the Latin empire ## Athens/Argos Res
                 count > 32
             }
         }  
-        country_exists = c:PAP
-        country_exists = c:BYZ
-        c:PAP ?= {
+        country_exists = c:DUMMY
+        country_exists = c:DUMMY
+        c:DUMMY ?= {
             has_ruler = yes
         }   
-        NOT = { country_exists = c:LAT } 
+        NOT = { country_exists = c:DUMMY } 
         religion = religion:catholic
         NOT = { num_locations >= 70 }
         NOT = { owns = location:constantinople }
@@ -1486,13 +1486,13 @@ flavor_ath.15 = { # Pope Proposes Restoring the Latin empire ## Athens/Argos Res
         ruler ?= {
             save_scope_as = scope_ruler
         }
-        c:PAP ?= {
+        c:DUMMY ?= {
           save_scope_as = scope_papal_states
           ruler ?= {
                 save_scope_as = the_pope
             }  
         }
-        c:BYZ ?= {
+        c:DUMMY ?= {
           save_scope_as = scope_byz
         }
         location:constantinople = {
@@ -1508,7 +1508,7 @@ flavor_ath.15 = { # Pope Proposes Restoring the Latin empire ## Athens/Argos Res
         add_reform = government_reform:lat_papal_restoration_claimant
         add_country_modifier = { modifier = lat_support_from_the_papacy years = 25 mode = add } 
         add_gold = {
-            value = c:PAP.monthly_income_trade_and_tax
+            value = c:DUMMY.monthly_income_trade_and_tax
             multiply = 4
             min = 250
             max = 1200
@@ -1518,9 +1518,9 @@ flavor_ath.15 = { # Pope Proposes Restoring the Latin empire ## Athens/Argos Res
             value = 1
             years = 100
         }  
-        add_opinion = { target = c:PAP modifier = ath_papal_latin_restoration }
-        c:PAP = {
-            add_opinion = { target = c:ATH modifier = ath_papal_latin_restoration }
+        add_opinion = { target = c:DUMMY modifier = ath_papal_latin_restoration }
+        c:DUMMY = {
+            add_opinion = { target = c:DUMMY modifier = ath_papal_latin_restoration }
         } 
     }
   
@@ -1528,8 +1528,8 @@ flavor_ath.15 = { # Pope Proposes Restoring the Latin empire ## Athens/Argos Res
         name = flavor_ath.15.b
         add_prestige = prestige_severe_bonus
         add_legitimacy = legitimacy_mild_penalty
-        c:PAP = {
-            add_opinion = { target = c:ATH modifier = ath_declined_papal_latin_restoration }
+        c:DUMMY = {
+            add_opinion = { target = c:DUMMY modifier = ath_declined_papal_latin_restoration }
         }        
     }
 }
@@ -1543,18 +1543,18 @@ flavor_ath.16 = { # Reclamation of Thessalonican lands
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
-        tag = ALB 
-        tag = BOD
-        tag = CEP
-        tag = CRT
-        tag = KNI  
-        tag = NAX
-        tag = NEG
-        tag = NEO
-        tag = PAT
-        tag = SAO           
+        tag = DUMMY
+        tag = DUMMY
+        tag = DUMMY 
+        tag = DUMMY
+        tag = DUMMY
+        tag = DUMMY
+        tag = DUMMY  
+        tag = DUMMY
+        tag = DUMMY
+        tag = DUMMY
+        tag = DUMMY
+        tag = DUMMY           
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 33
@@ -1570,9 +1570,9 @@ flavor_ath.16 = { # Reclamation of Thessalonican lands
                 count > 10
             }
         }  
-        NOT = { country_exists = c:THE }
-        NOT = { country_exists = c:LAT }
-        country_exists = c:ACH
+        NOT = { country_exists = c:DUMMY }
+        NOT = { country_exists = c:DUMMY }
+        country_exists = c:DUMMY
         is_frankokratia_state = yes  
     }
 
@@ -1589,7 +1589,7 @@ flavor_ath.16 = { # Reclamation of Thessalonican lands
         character:the_theodoros_komnenos_doukas = {
             save_scope_as = scope_theodoros_doukas
         }
-        c:ACH ?= {
+        c:DUMMY ?= {
             save_scope_as = achaea_country
         }
     }
@@ -1605,8 +1605,8 @@ flavor_ath.16 = { # Reclamation of Thessalonican lands
             value = 1
             years = 300
         }
-        c:ACH = {
-            add_opinion = { target = c:ATH modifier = ath_claimed_thessalonica }
+        c:DUMMY = {
+            add_opinion = { target = c:DUMMY modifier = ath_claimed_thessalonica }
         }
         if = {
             limit = {
@@ -1627,8 +1627,8 @@ flavor_ath.16 = { # Reclamation of Thessalonican lands
             limit = { country_rank_level < 3 }
             set_country_rank_effect = { rank = country_rank:rank_kingdom }
         }
-        c:ACH = {
-            add_opinion = { target = c:ATH modifier = ath_proclaimed_rival_thessalonica_kingdom }
+        c:DUMMY = {
+            add_opinion = { target = c:DUMMY modifier = ath_proclaimed_rival_thessalonica_kingdom }
         }  
         ai_chance = {
             base = 5
@@ -1651,8 +1651,8 @@ flavor_ath.17 = { # Constantinople Conquered!
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = ATH
-        tag = ARG
+        tag = DUMMY
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 100
@@ -1673,9 +1673,9 @@ flavor_ath.17 = { # Constantinople Conquered!
                 	has_variable = de_brienne_rule_of_athens
                 }
             }
-            NOT = { country_exists = c:ATH }
+            NOT = { country_exists = c:DUMMY }
         }  
-        NOT = { country_exists = c:LAT }
+        NOT = { country_exists = c:DUMMY }
     }
 
     illustration_tags = {
@@ -1688,13 +1688,13 @@ flavor_ath.17 = { # Constantinople Conquered!
         ruler ?= {
             save_scope_as = scope_ruler
         }
-        c:PAP ?= {
+        c:DUMMY ?= {
           save_scope_as = scope_papal_states
           ruler ?= {
                 save_scope_as = the_pope
             }  
         }
-        c:BYZ ?= {
+        c:DUMMY ?= {
           save_scope_as = scope_byz
         }
         location:constantinople = {

@@ -1,0 +1,12 @@
+﻿# ANTIQVITAS ancient public-finance scale.
+# Palace and diplomatic service is embedded in aristocratic, municipal,
+# temple, and household obligations rather than an early-modern salaried
+# apparatus.  The one-percent fractions retain material operating budgets.
+# Native RGO upgrades also contain a cash purchase independent of their
+# material demand; both terms use the same one-twentieth ancient capital scale.
+NEconomy = {
+	COURT_SPENDING_FRACTON = 0.01
+	DIPLOMATIC_SPENDING_FRACTION = 0.01
+	GOODS_RGO_BASE_COST = 0.025
+	GOODS_RGO_PRICE_SCALE = 0.0125
+}

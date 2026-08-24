@@ -1,0 +1,91 @@
+{
+  "status": "FAIL",
+  "baseline_save": "G:\\antiqvitas_runtime\\state\\save_melts\\autosave_56468a22-817e-4057-ba54-2192620cfbbc_1-8b227158fe0f2db46030.eu5",
+  "sample_save": "G:\\antiqvitas_user_data\\save games\\autosave_56468a22-817e-4057-ba54-2192620cfbbc.eu5",
+  "start_date": "2.1.1",
+  "end_date": "43.1.1",
+  "elapsed_months": 492.0,
+  "minimum_months": 36.0,
+  "countries": [
+    {
+      "tag": "ROM",
+      "role": "large Mediterranean imperial/literate",
+      "engine_tag": "XAA",
+      "opening_population_thousands": 47235.46959,
+      "sample_population_thousands": 48738.70019,
+      "starting_technology_level": 3,
+      "opening_researched_count": 29,
+      "sample_researched_count": 30,
+      "completed_count": 1,
+      "completed_advances": [
+        "antq_shared_field_boundary_witnesses"
+      ],
+      "completed_known_point_cost": 125.0,
+      "removed_advances": [],
+      "sample_active_slots": [],
+      "sample_active_progress": 8.18772,
+      "status": "fail"
+    },
+    {
+      "tag": "HAN",
+      "role": "large East-Asian imperial/literate",
+      "engine_tag": "XAR",
+      "opening_population_thousands": 57492.6794,
+      "sample_population_thousands": 68275.88387,
+      "starting_technology_level": 3,
+      "opening_researched_count": 24,
+      "sample_researched_count": 30,
+      "completed_count": 6,
+      "completed_advances": [
+        "antq_calendrical_offices",
+        "antq_court_classics_recensions",
+        "antq_hydraulic_administration_manuals",
+        "antq_salt_iron_bureau_exchange",
+        "antq_shared_craft_apprentice_households",
+        "antq_shared_river_crossing_guides"
+      ],
+      "completed_known_point_cost": 712.5,
+      "removed_advances": [],
+      "sample_active_slots": [
+        147,
+        145,
+        48,
+        39
+      ],
+      "sample_active_progress": 9.27024,
+      "status": "pass"
+    },
+    {
+      "tag": "CHL",
+      "role": "regional settled/literate",
+      "engine_tag": "XBC",
+      "opening_population_thousands": 452.7176,
+      "sample_population_thousands": 526.26683,
+      "starting_technology_level": 3,
+      "opening_researched_count": 20,
+      "sample_researched_count": 27,
+      "completed_count": 7,
+      "completed_advances": [
+        "antq_astronomical_reckoning",
+        "antq_ayurvedic_compendia",
+        "antq_frontier_gana_musters",
+        "antq_monastic_text_collections",
+        "antq_monsoon_campaign_stores",
+        "antq_shared_muster_ground_markers",
+        "antq_shared_river_crossing_guides"
+      ],
+      "completed_known_point_cost": 837.5,
+      "removed_advances": [],
+      "sample_active_slots": [
+        48,
+        39,
+        102
+      ],
+      "sample_active_progress": 21.41469,
+      "status": "pass"
+    }
+  ],
+  "failures": [
+    "ROM has no valid active research at sample date"
+  ]
+}

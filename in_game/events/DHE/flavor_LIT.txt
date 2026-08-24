@@ -8,7 +8,7 @@ flavor_lit.1 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -124,7 +124,7 @@ flavor_lit.2 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -417,7 +417,7 @@ flavor_lit.5 = {
 	historical_info = flavor_lit.5.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -430,7 +430,7 @@ flavor_lit.5 = {
 		ruler = { has_available_marriage_slot = yes }
 		is_subject = no
 		at_war = no
-		c:POL = {
+		c:DUMMY = {
 			has_ruler = yes
 			ruler = {
 				OR = {
@@ -438,11 +438,11 @@ flavor_lit.5 = {
 						is_alive = yes
 						is_adult = yes
 						has_available_marriage_slot = yes
-						NOT = { is_same_gender = c:LIT.ruler }
-						NOT = { is_close_relative = c:LIT.ruler }
+						NOT = { is_same_gender = c:DUMMY.ruler }
+						NOT = { is_close_relative = c:DUMMY.ruler }
 						modifier:blocked_from_marriage = no
 						NOT = {
-							c:LIT.ruler = {
+							c:DUMMY.ruler = {
 								is_same_gender = PREV
 							}
 						}
@@ -462,7 +462,7 @@ flavor_lit.5 = {
 		ruler = {
 			save_scope_as = target_character
 		}
-		c:POL = {
+		c:DUMMY = {
 			ruler = {
 				save_scope_as = target_character2
 				if = {
@@ -471,8 +471,8 @@ flavor_lit.5 = {
 							is_alive = yes
 							is_adult = yes
 							has_available_marriage_slot = yes
-							NOT = { is_same_gender = c:LIT.ruler }
-							NOT = { is_close_relative = c:LIT.ruler }
+							NOT = { is_same_gender = c:DUMMY.ruler }
+							NOT = { is_close_relative = c:DUMMY.ruler }
 							modifier:blocked_from_marriage = no
 							NOT = {
 								root.ruler = {
@@ -486,8 +486,8 @@ flavor_lit.5 = {
 							is_alive = yes
 							is_adult = yes
 							has_available_marriage_slot = yes
-							NOT = { is_same_gender = c:LIT.ruler }
-							NOT = { is_close_relative = c:LIT.ruler }
+							NOT = { is_same_gender = c:DUMMY.ruler }
+							NOT = { is_close_relative = c:DUMMY.ruler }
 							modifier:blocked_from_marriage = no
 							NOT = {
 								root.ruler = {
@@ -549,7 +549,7 @@ flavor_lit.5 = {
 		name = flavor_lit.5.b
 
 		add_government_power = government_power_extreme_penalty
-		c:POL = {
+		c:DUMMY = {
 			add_casus_belli = {
 				target = ROOT
 				type = casus_belli:cb_claim_throne
@@ -558,7 +558,7 @@ flavor_lit.5 = {
 	}
 
 	after = {
-		c:POL = { trigger_event_non_silently = flavor_lit.11 }
+		c:DUMMY = { trigger_event_non_silently = flavor_lit.11 }
 	}
 }
 
@@ -572,7 +572,7 @@ flavor_lit.6 = {
 	historical_info = flavor_lit.6.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -583,7 +583,7 @@ flavor_lit.6 = {
 		at_war = no
 		is_subject = no
 		NOT = { religion.group = religion_group:christian }
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -594,7 +594,7 @@ flavor_lit.6 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
 		ruler_or_regent ?= { save_scope_as = target_character1 }
-		c:PAP = { ruler_or_regent ?= { save_scope_as = target_character2 } }
+		c:DUMMY = { ruler_or_regent ?= { save_scope_as = target_character2 } }
 	}
 
 	option = {
@@ -651,7 +651,7 @@ flavor_lit.6 = {
 	}
 
 	after = {
-		c:PAP = { trigger_event_non_silently = flavor_lit.7 }
+		c:DUMMY = { trigger_event_non_silently = flavor_lit.7 }
 	}
 }
 
@@ -663,7 +663,7 @@ flavor_lit.7 = {	#Pope Informed about Conversion - Legitimate or Otherwise
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					c:LIT = { has_variable = lit_stayed_pagan_variable }
+					c:DUMMY = { has_variable = lit_stayed_pagan_variable }
 				}
 				desc = flavor_lit.7.desc.a
 			}
@@ -704,7 +704,7 @@ flavor_lit.8 = {
 	historical_info = flavor_lit.8.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -844,7 +844,7 @@ flavor_lit.8 = {
 			}
 		}
 
-		#c:PAP = { set_variable = lit_refused_conversion }
+		#c:DUMMY = { set_variable = lit_refused_conversion }
 	}
 }
 
@@ -869,7 +869,7 @@ flavor_lit.9 = {
 		name = flavor_lit.9.a
 
 		add_casus_belli = {
-			target = c:LIT
+			target = c:DUMMY
 			type = casus_belli:cb_crusade
 		}
 	}
@@ -888,7 +888,7 @@ flavor_lit.10 = {
 	historical_info = flavor_lit.10.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -896,7 +896,7 @@ flavor_lit.10 = {
 
 	trigger = {
 		current_date > 476.9.4
-		c:LIT = {
+		c:DUMMY = {
 			custom_tooltip = {
 				text = variable_lit_pretending_to_convert_variable_tt
 				has_variable = lit_pretending_to_convert_variable
@@ -914,7 +914,7 @@ flavor_lit.10 = {
 				modifier:blocked_from_marriage = no
 			}
 		}
-		c:MOS = {
+		c:DUMMY = {
 			NOR = {
 				is_enemy_of = root
 				is_rival_of = root
@@ -926,8 +926,8 @@ flavor_lit.10 = {
 					is_alive = yes
 					is_adult = yes
 					has_available_marriage_slot = yes
-					NOT = { is_same_gender = c:LIT.ruler }
-					NOT = { is_close_relative = c:LIT.ruler }
+					NOT = { is_same_gender = c:DUMMY.ruler }
+					NOT = { is_close_relative = c:DUMMY.ruler }
 					modifier:blocked_from_marriage = no
 				}
 			}
@@ -944,7 +944,7 @@ flavor_lit.10 = {
 		ruler = {
 			save_scope_as = target_character1
 		}
-		c:MOS = {
+		c:DUMMY = {
 			ruler = {
 				save_scope_as = target_character2
 				random_child = {
@@ -952,8 +952,8 @@ flavor_lit.10 = {
 						is_alive = yes
 						is_adult = yes
 						has_available_marriage_slot = yes
-						NOT = { is_same_gender = c:LIT.ruler }
-						NOT = { is_close_relative = c:LIT.ruler }
+						NOT = { is_same_gender = c:DUMMY.ruler }
+						NOT = { is_close_relative = c:DUMMY.ruler }
 						modifier:blocked_from_marriage = no
 					}
 					save_scope_as = target_character4
@@ -988,7 +988,7 @@ flavor_lit.10 = {
 	option = {
 		name = flavor_lit.10.b
 
-		c:MOS = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_lit.13
 		}
 	}
@@ -1002,7 +1002,7 @@ flavor_lit.11 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					c:LIT = {
+					c:DUMMY = {
 						has_variable = accepted_marriage_variable
 					}
 				}
@@ -1025,8 +1025,8 @@ flavor_lit.11 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:POL.capital = { save_scope_as = target_location }
-		c:LIT.capital = { save_scope_as = target_location2 }
+		c:DUMMY.capital = { save_scope_as = target_location }
+		c:DUMMY.capital = { save_scope_as = target_location2 }
 	}
 
 	option = {
@@ -1035,22 +1035,22 @@ flavor_lit.11 = {
 		historical_option = yes
 
 		trigger = {
-			c:LIT = {
+			c:DUMMY = {
 				has_variable = accepted_marriage_variable
 			}
 		}
 
 		if = {
 			limit = {
-				is_enemy_of = c:LIT
+				is_enemy_of = c:DUMMY
 			}
-			c:LIT = { remove_rival = root }
+			c:DUMMY = { remove_rival = root }
 		}
 		if = {
 			limit = {
-				c:LIT = { is_rival_of = root }
+				c:DUMMY = { is_rival_of = root }
 			}
-			remove_rival = c:LIT
+			remove_rival = c:DUMMY
 		}
 
 		scope:target_character = {
@@ -1058,11 +1058,11 @@ flavor_lit.11 = {
 		}
 		add_opinion_mutual_effect = {
 			modifier = opinion_dynastic_ties
-			target = c:LIT
+			target = c:DUMMY
 		}
 		custom_tooltip = may_lead_to_peaceful_union
 
-		c:LIT = {
+		c:DUMMY = {
 			hidden_effect = {
 				remove_variable = accepted_marriage_variable
 			}
@@ -1080,27 +1080,27 @@ flavor_lit.11 = {
 
 		if = {
 			limit = { 
-				c:POL = {
+				c:DUMMY = {
 					NOT = {
 						has_casus_belli_of_type_on = { 
 							type = casus_belli:cb_claim_throne 
-							target = c:LIT 
+							target = c:DUMMY 
 						}
 					}
 				}
 			}
-			c:POL = {
+			c:DUMMY = {
 				add_casus_belli = {
-					target = c:LIT
+					target = c:DUMMY
 					type = casus_belli:cb_claim_throne
 				}
 			}
 		}
 		else = {
 			show_as_tooltip = {
-				c:POL = {
+				c:DUMMY = {
 					add_casus_belli = {
-						target = c:LIT
+						target = c:DUMMY
 						type = casus_belli:cb_claim_throne
 					}
 				}
@@ -1139,7 +1139,7 @@ flavor_lit.12 = {
 			}
 			add_opinion_mutual_effect = {
 				modifier = opinion_dynastic_ties
-				target = c:POL
+				target = c:DUMMY
 			}
 		}
 	}
@@ -1165,7 +1165,7 @@ flavor_lit.13 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:LIT = {
+		c:DUMMY = {
 			ruler_or_regent = { save_scope_as = target_character }
 		}
 		ruler_or_regent = {
@@ -1175,8 +1175,8 @@ flavor_lit.13 = {
 					is_alive = yes
 					is_adult = yes
 					has_available_marriage_slot = yes
-					NOT = { is_same_gender = c:LIT.ruler }
-					NOT = { is_close_relative = c:LIT.ruler }
+					NOT = { is_same_gender = c:DUMMY.ruler }
+					NOT = { is_close_relative = c:DUMMY.ruler }
 					modifier:blocked_from_marriage = no
 				}
 				save_scope_as = target_character3
@@ -1201,12 +1201,12 @@ flavor_lit.13 = {
 			}
 			add_opinion_mutual_effect = {
 				modifier = opinion_dynastic_ties
-				target = c:LIT
+				target = c:DUMMY
 			}
 			custom_tooltip = may_lead_to_peaceful_union
 		}
 
-		c:LIT = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_lit.14
 		}
 	}
@@ -1242,7 +1242,7 @@ flavor_lit.14 = {
 		name = flavor_lit.14.a
 
 		trigger = {
-			c:MOS = { has_variable = accepted_mos_marriage_offer_variable }
+			c:DUMMY = { has_variable = accepted_mos_marriage_offer_variable }
 		}
 
 		scope:target_character = {
@@ -1250,7 +1250,7 @@ flavor_lit.14 = {
 		}
 		add_opinion_mutual_effect = {
 			modifier = opinion_dynastic_ties
-			target = c:LIT
+			target = c:DUMMY
 		}
 	}
 
@@ -1274,7 +1274,7 @@ flavor_lit.15 = {
 	historical_info = flavor_lit.15.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1285,16 +1285,16 @@ flavor_lit.15 = {
 		at_war = no
 		is_subject = no
 		is_during_bankruptcy = no
-		country_exists = c:MOS
+		country_exists = c:DUMMY
 		religion:orthodox = {
 			any_country_in_religion = {
-				NOT = { this = c:MOS }
+				NOT = { this = c:DUMMY }
 				is_subject = no
 				has_presence_in = region:russian_region
 				NOT = {
 					has_mutual_scripted_relation = {
 						type = relation_type:alliance
-						target = c:MOS
+						target = c:DUMMY
 					}
 				}
 				NOT = { country_type = pop }
@@ -1315,7 +1315,7 @@ flavor_lit.15 = {
 		religion:orthodox = {
 			ordered_country_in_religion = {
 				limit = {
-					NOT = { this = c:MOS }
+					NOT = { this = c:DUMMY }
 					is_subject = no
 					has_presence_in = region:russian_region
 				}
@@ -1327,7 +1327,7 @@ flavor_lit.15 = {
 			}
 			ordered_country_in_religion = {
 				limit = {
-					NOT = { this = c:MOS }
+					NOT = { this = c:DUMMY }
 					is_subject = no
 					has_presence_in = region:russian_region
 				}
@@ -1339,7 +1339,7 @@ flavor_lit.15 = {
 			}
 			ordered_country_in_religion = {
 				limit = {
-					NOT = { this = c:MOS }
+					NOT = { this = c:DUMMY }
 					is_subject = no
 					has_presence_in = region:russian_region
 				}
@@ -1415,7 +1415,7 @@ flavor_lit.16 = {
 	immediate = {
 		ruler_or_regent = { save_scope_as = target_character }
 		capital = { save_scope_as = target_location }
-		c:LIT.ruler_or_regent = { save_scope_as = target_character2 }
+		c:DUMMY.ruler_or_regent = { save_scope_as = target_character2 }
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 	}
 
@@ -1424,7 +1424,7 @@ flavor_lit.16 = {
 
 		add_opinion_mutual_effect = {
 			modifier = opinion_diplomatic_gifts
-			target = c:LIT
+			target = c:DUMMY
 		}
 
 		change_gold_effect = { scale = 2 }
@@ -1446,7 +1446,7 @@ flavor_lit.17 = { #https://en.wikipedia.org/wiki/Vilnius_Cathedral
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1489,7 +1489,7 @@ flavor_lit.17 = { #https://en.wikipedia.org/wiki/Vilnius_Cathedral
 
 		add_prestige = prestige_weak_bonus
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_severe_bonus }
-		c:PAP ?= {
+		c:DUMMY ?= {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 		}
 	}
@@ -1498,7 +1498,7 @@ flavor_lit.17 = { #https://en.wikipedia.org/wiki/Vilnius_Cathedral
 
 		add_prestige = prestige_weak_penalty
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_weak_penalty }
-		c:PAP ?= {
+		c:DUMMY ?= {
 			add_opinion = { target = root modifier = opinion_ignorant_monarch }
 		}
 	}
@@ -1513,7 +1513,7 @@ flavor_lit.18 = {#Centralization reforms
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1576,7 +1576,7 @@ flavor_lit.19 = {#Fancy New Dishes
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1667,7 +1667,7 @@ flavor_lit.20 = {
 	historical_info = flavor_lit.20.historical_info
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1730,7 +1730,7 @@ flavor_lit.21 = {
 	historical_info = flavor_lit.21.historical_info
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1816,7 +1816,7 @@ flavor_lit.22 = {
 	historical_info = flavor_lit.22.historical_info
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1895,7 +1895,7 @@ flavor_lit.23 = {
 	historical_info = flavor_lit.23.historical_info
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1970,7 +1970,7 @@ flavor_lit.24 = {
 	historical_info = flavor_lit.24.historical_info
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2053,7 +2053,7 @@ flavor_lit.25 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2127,7 +2127,7 @@ flavor_lit.26 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2208,7 +2208,7 @@ flavor_lit.27 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2268,7 +2268,7 @@ flavor_lit.28 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2377,7 +2377,7 @@ flavor_lit.29 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_fine_cloth.dds"
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2436,7 +2436,7 @@ flavor_lit.30 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2554,7 +2554,7 @@ flavor_lit.31 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2649,7 +2649,7 @@ flavor_lit.32 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2659,11 +2659,11 @@ flavor_lit.32 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:POL
+		country_exists = c:DUMMY
 		OR = {
-			is_subject_of = c:POL
+			is_subject_of = c:DUMMY
 			junior_union_with = {
-				target = c:POL
+				target = c:DUMMY
 			}
 		}
 	}
@@ -2679,7 +2679,7 @@ flavor_lit.32 = {
 			save_scope_as = target_character
 		}
 
-		c:POL ?= {
+		c:DUMMY ?= {
 			save_scope_as = target_country
 		}
 	}
@@ -2733,7 +2733,7 @@ flavor_lit.33 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2797,7 +2797,7 @@ flavor_lit.34 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2854,7 +2854,7 @@ flavor_lit.35 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2929,7 +2929,7 @@ flavor_lit.36 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2939,11 +2939,11 @@ flavor_lit.36 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:POL
+		country_exists = c:DUMMY
 		OR = {
-			is_subject_of = c:POL
+			is_subject_of = c:DUMMY
 			junior_union_with = {
-				target = c:POL
+				target = c:DUMMY
 			}
 		}
 	}
@@ -2955,7 +2955,7 @@ flavor_lit.36 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
-		c:POL = {
+		c:DUMMY = {
 			ordered_owned_location = {
 				order_by = population
 				max = 1
@@ -3010,7 +3010,7 @@ flavor_lit.37 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -3075,7 +3075,7 @@ flavor_lit.38 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_wheat.dds"
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3138,7 +3138,7 @@ flavor_lit.39 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -3440,7 +3440,7 @@ flavor_lit.43 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -3512,7 +3512,7 @@ flavor_lit.44 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -3579,7 +3579,7 @@ flavor_lit.45 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -3638,7 +3638,7 @@ flavor_lit.1000 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -3648,8 +3648,8 @@ flavor_lit.1000 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:HSA
-		c:HSA = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_subject = no
 			has_reform = government_reform:hanseatic_merchant_federation
 		}
@@ -3675,7 +3675,7 @@ flavor_lit.1000 = {
 			save_scope_as = target_character
 		}
 
-		c:HSA = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 		ruler_or_regent ?= {
 			save_scope_as = target_character2
@@ -3765,7 +3765,7 @@ flavor_lit.46 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5

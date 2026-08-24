@@ -1,0 +1,26 @@
+﻿
+
+
+
+
+
+destroying_another_autocephalous_patriarchate = {
+	game_data = {
+		category = internationalorganization
+	}
+	monthly_religious_influence = 0.05
+}
+
+autocephalous_patriarchate_seat_under_heretic_or_heathen_control = {
+	game_data = {
+		category = internationalorganization
+	}
+	monthly_religious_influence = -0.05
+}
+
+enforced_internal_peace = {
+	game_data = {
+		category = internationalorganization
+	}
+	enforced_internal_peace = yes
+}

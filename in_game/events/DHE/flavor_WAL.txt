@@ -7,7 +7,7 @@ flavor_wal.1 = {
 	desc = flavor_wal.1.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = WAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -50,7 +50,7 @@ flavor_wal.1 = {
 		historical_option = yes
 		set_new_ruler_with_union_if_senior = { character = scope:vlad_tepes }
 		add_government_power = government_power_extreme_bonus
-		c:TUR = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_angry }
 		}
 	}
@@ -59,9 +59,9 @@ flavor_wal.1 = {
 		kill_character = {
 			target = scope:vlad_tepes
 			reason = execution
-			killer = c:TUR.ruler
+			killer = c:DUMMY.ruler
 		}
-		c:TUR = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_good_relations }
 		}
 	}

@@ -820,17 +820,17 @@ culture_japan.16 = { #Wakō
 		}
 		if = {
 			limit = {
-				country_exists = c:KOR
+				country_exists = c:DUMMY
 			}
-			c:KOR = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = opinion_displeased }
 			}
 		}
 		if = {
 			limit = {
-				country_exists = c:CHI
+				country_exists = c:DUMMY
 			}
-			c:CHI = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = opinion_displeased }
 			}
 		}
@@ -868,17 +868,17 @@ culture_japan.16 = { #Wakō
 		name = culture_japan.16.b
 		if = {
 			limit = {
-				country_exists = c:KOR
+				country_exists = c:DUMMY
 			}
-			c:KOR = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = opinion_pleased }
 			}
 		}
 		if = {
 			limit = {
-				country_exists = c:CHI
+				country_exists = c:DUMMY
 			}
-			c:CHI = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = opinion_pleased }
 			}
 		}

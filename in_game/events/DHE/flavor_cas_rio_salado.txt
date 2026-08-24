@@ -10,7 +10,7 @@ flavor_cas_rio_salado.1 = { #Río Salado Prelude
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CAS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -30,7 +30,7 @@ flavor_cas_rio_salado.1 = { #Río Salado Prelude
 		ruler = {
 			save_scope_as = target_character
 		}
-		c:CAS = {
+		c:DUMMY = {
 			save_scope_as = target_ally
 		}
 	}
@@ -39,18 +39,18 @@ flavor_cas_rio_salado.1 = { #Río Salado Prelude
 		current_date > 476.9.4
 		religion = religion:catholic
 		has_ruler = yes
-		c:MOR = {
+		c:DUMMY = {
 			owns = location:algeciras
 		}
-		c:POR = {
+		c:DUMMY = {
 			NOR = {
-				is_rival_of = c:CAS
-				is_enemy_of = c:CAS
+				is_rival_of = c:DUMMY
+				is_enemy_of = c:DUMMY
 			}
 		}
 		NOT = {
-			is_at_war_with = c:POR
-			is_at_war_with = c:MOR
+			is_at_war_with = c:DUMMY
+			is_at_war_with = c:DUMMY
 		}
 	}
 
@@ -58,12 +58,12 @@ flavor_cas_rio_salado.1 = { #Río Salado Prelude
 		name = flavor_cas_rio_salado.1.a
 		historical_option = yes
 
-		c:MOR = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = claimed_our_land }
 			trigger_event_non_silently = flavor_cas_rio_salado.2
 		}
-		add_casus_belli =  { type = casus_belli:cb_conquer_province province = location:algeciras.province target = c:MOR }
-		c:POR = {
+		add_casus_belli =  { type = casus_belli:cb_conquer_province province = location:algeciras.province target = c:DUMMY }
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_cas_rio_salado.4
 		}
 	}
@@ -71,7 +71,7 @@ flavor_cas_rio_salado.1 = { #Río Salado Prelude
 		name = flavor_cas_rio_salado.1.b
 		
 		add_prestige = prestige_severe_penalty
-		c:MOR = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = refused_claim }
 		}
 	}
@@ -97,7 +97,7 @@ flavor_cas_rio_salado.2 = { #Moroccos response
 		ruler = {
 			save_scope_as = target_ruler
 		}
-		c:MOR = {
+		c:DUMMY = {
 			save_scope_as = target_ally
 		}#show the portrair of the MOR ally
 	}
@@ -105,11 +105,11 @@ flavor_cas_rio_salado.2 = { #Moroccos response
 	option = {
 		name = flavor_cas_rio_salado.2.a
 
-		c:CAS = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = claimed_our_land }
 		}
-		add_casus_belli =  { type = casus_belli:cb_insulted_us target = c:CAS }
-		c:GRA = {
+		add_casus_belli =  { type = casus_belli:cb_insulted_us target = c:DUMMY }
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_cas_rio_salado.3
 		}
 	}
@@ -135,10 +135,10 @@ flavor_cas_rio_salado.3 = { #Granadas response
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		#event_illustration_estate_background_effect = { background = type:army }
 
-		c:MOR = {
+		c:DUMMY = {
 			save_scope_as = target_ally
 		}
-		c:CAS = {
+		c:DUMMY = {
 			save_scope_as = target_enemy
 		}
 	}
@@ -149,20 +149,20 @@ flavor_cas_rio_salado.3 = { #Granadas response
 		if = {
 			limit = {
 				NOT = {
-					is_allied_with = { target = c:MOR }
+					is_allied_with = { target = c:DUMMY }
 				}
 			}
 			create_relation = {
 				first = this
-				second = c:MOR
+				second = c:DUMMY
 				type = relation_type:alliance
 			}
 		}
 		else_if = {
 			limit = {
-				is_allied_with = { target = c:MOR }
+				is_allied_with = { target = c:DUMMY }
 			}
-			add_opinion = { target = c:MOR modifier = opinion_diplomatic_move }
+			add_opinion = { target = c:DUMMY modifier = opinion_diplomatic_move }
 		}
 	}
 
@@ -194,10 +194,10 @@ flavor_cas_rio_salado.4 = { #Portugals response
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 
-		c:CAS = {
+		c:DUMMY = {
 			save_scope_as = target_ally
 		}
-		c:MOR = {
+		c:DUMMY = {
 			save_scope_as = target_enemy
 		}
 	}
@@ -208,20 +208,20 @@ flavor_cas_rio_salado.4 = { #Portugals response
 		if = {
 			limit = {
 				NOT = {
-					is_allied_with = { target = c:CAS }
+					is_allied_with = { target = c:DUMMY }
 				}
 			}
 			create_relation = {
 				first = this
-				second = c:CAS
+				second = c:DUMMY
 				type = relation_type:alliance
 			}
 		}
 		else_if = {
 			limit = {
-				is_allied_with = { target = c:CAS }
+				is_allied_with = { target = c:DUMMY }
 			}
-			add_opinion = { target = c:CAS modifier = opinion_diplomatic_move }
+			add_opinion = { target = c:DUMMY modifier = opinion_diplomatic_move }
 		}
 	}
 
@@ -246,7 +246,7 @@ flavor_cas_rio_salado.5 = { #Battle of Río Salado Morocco driven out of Iberia
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CAS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -269,7 +269,7 @@ flavor_cas_rio_salado.5 = { #Battle of Río Salado Morocco driven out of Iberia
 		current_date > 476.9.4
 		has_ruler = yes
 		owns = location:algeciras
-		c:MOR = {
+		c:DUMMY = {
 			NOT = {
 				has_presence_in = region:iberia_region
 			}
@@ -294,7 +294,7 @@ flavor_cas_rio_salado.6 = { #Monastery Guadalupe
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CAS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -363,7 +363,7 @@ flavor_cas_rio_salado.7 = { #Monastery Tordesillas
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CAS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20

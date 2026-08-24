@@ -11,7 +11,7 @@ flavor_bul.1 = { #Principality of Dobruja
 	historical_info = flavor_bul.1.historical_info
 
 	dynamic_historical_event = {
-		tag = BUL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -20,7 +20,7 @@ flavor_bul.1 = { #Principality of Dobruja
 	trigger = {
 		current_date > 476.9.4
 		any_active_disaster = { disaster_type = disaster_type:twilight_of_the_tsardom }
-		NOT = { country_exists = c:KVN }
+		NOT = { country_exists = c:DUMMY }
 	}
 	
 	illustration_tags = {
@@ -64,7 +64,7 @@ flavor_bul.1 = { #Principality of Dobruja
 					this = location:varna
 				}
 			}
-			add_core = c:KVN
+			add_core = c:DUMMY
 		}
 	}
 
@@ -75,8 +75,8 @@ flavor_bul.1 = { #Principality of Dobruja
 		add_legitimacy = legitimacy_severe_penalty
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_bonus }
 		change_societal_value = { type = centralization_vs_decentralization value = societal_value_move_to_right }
-        create_country_from_cores_in_our_locations = c:KVN
-		c:KVN = {
+        create_country_from_cores_in_our_locations = c:DUMMY
+		c:DUMMY = {
 			set_new_ruler = scope:target_character
 			make_subject_of = {
 				target = root
@@ -102,7 +102,7 @@ flavor_bul.1 = { #Principality of Dobruja
 			text = flavor_bul.1.b.tt
 			every_owned_location = {
 				limit = {
-					is_core_of = c:KVN
+					is_core_of = c:DUMMY
 				}
 				every_pop = {
 					limit = {
@@ -122,15 +122,15 @@ flavor_bul.1 = { #Principality of Dobruja
 		add_legitimacy = legitimacy_severe_penalty
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_bonus }
 		change_societal_value = { type = centralization_vs_decentralization value = societal_value_move_to_right }
-        create_country_from_cores_in_our_locations = c:KVN
-		c:KVN = {
+        create_country_from_cores_in_our_locations = c:DUMMY
+		c:DUMMY = {
 			set_new_ruler = scope:target_character
 			make_subject_of = {
 				target = root
 				type = subject_type:vassal
 			}
 		}
-		change_player = c:KVN
+		change_player = c:DUMMY
 	}	
 }
 
@@ -145,7 +145,7 @@ flavor_bul.2 = { #Tsardom of Vidin
 	historical_info = flavor_bul.2.historical_info
 
 	dynamic_historical_event = {
-		tag = BUL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -170,9 +170,9 @@ flavor_bul.2 = { #Tsardom of Vidin
   			is_heir = no
   			age_in_years >= 15
 		}
-		NOT = { country_exists = c:VID }
+		NOT = { country_exists = c:DUMMY }
 		any_owned_location = {
-			is_core_of = c:VID
+			is_core_of = c:DUMMY
 			count > 6
 		}
 		owns = location:vidin
@@ -209,8 +209,8 @@ flavor_bul.2 = { #Tsardom of Vidin
 		historical_option = yes
 		add_stability = stability_mild_bonus
 		change_societal_value = { type = centralization_vs_decentralization value = societal_value_move_to_right }
-        create_country_from_cores_in_our_locations = c:VID
-		c:VID = {
+        create_country_from_cores_in_our_locations = c:DUMMY
+		c:DUMMY = {
 			set_new_ruler = scope:targer_brother
 			make_subject_of = {
 				target = root
@@ -230,15 +230,15 @@ flavor_bul.2 = { #Tsardom of Vidin
 		high_risk_option = yes
 		add_stability = stability_mild_bonus
 		change_societal_value = { type = centralization_vs_decentralization value = societal_value_move_to_right }
-        create_country_from_cores_in_our_locations = c:VID
-		c:VID = {
+        create_country_from_cores_in_our_locations = c:DUMMY
+		c:DUMMY = {
 			set_new_ruler = scope:targer_brother
 			make_subject_of = {
 				target = root
 				type = subject_type:vassal
 			}
 		}
-		change_player = c:VID
+		change_player = c:DUMMY
 	}
 }
 
@@ -253,7 +253,7 @@ flavor_bul.3 = { #The Second Golden Age of Bulgaria
 	historical_info = flavor_bul.3.historical_info
 
 	dynamic_historical_event = {
-		tag = BUL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -315,7 +315,7 @@ flavor_bul.4 = { #Gospels of Tsar Ivan Alexander
 	historical_info = flavor_bul.4.historical_info
 
 	dynamic_historical_event = {
-		tag = BUL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -407,8 +407,8 @@ flavor_bul.5 = { #Bulgarian-Ottoman Wars
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:TUR
-		c:TUR = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_ruler = yes
 			any_owned_location = {
 				region = region:balkan_region
@@ -426,7 +426,7 @@ flavor_bul.5 = { #Bulgarian-Ottoman Wars
 		ruler = {
 			save_scope_as = target_ruler
 		}
-		c:TUR = {
+		c:DUMMY = {
 			ruler = {
 				save_scope_as = ottoman_ruler
 			}
@@ -455,7 +455,7 @@ flavor_bul.6 = { #A Royal Divorce
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BUL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -514,9 +514,9 @@ flavor_bul.6 = { #A Royal Divorce
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_severe_penalty }
 		if = {
 			limit = {
-				country_exists = c:WAL
+				country_exists = c:DUMMY
 			}
-			c:WAL = {
+			c:DUMMY = {
 				add_opinion = {
 					target = ROOT
 					modifier = opinion_insulted
@@ -591,7 +591,7 @@ flavor_bul.8 = { #A Crumbling Empire
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BUL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -602,7 +602,7 @@ flavor_bul.8 = { #A Crumbling Empire
 		has_ruler = yes
 		at_war = no
 		has_any_active_disaster = no
-		c:BYZ = {
+		c:DUMMY = {
 			has_any_active_disaster = yes
 			owns = location:constantinople
 		}
@@ -617,7 +617,7 @@ flavor_bul.8 = { #A Crumbling Empire
 		ruler ?= {
 			save_scope_as = target_ruler
 		}
-		c:BYZ = {
+		c:DUMMY = {
 			ruler ?= {
 				save_scope_as = byzantine_ruler
 			}
@@ -630,7 +630,7 @@ flavor_bul.8 = { #A Crumbling Empire
 			type = belligerent_vs_conciliatory
 			value = societal_value_move_to_left
 		}
-		add_casus_belli = { target = c:BYZ type = casus_belli:cb_conquer_province province = location:constantinople.province }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_conquer_province province = location:constantinople.province }
 	}
 	
 	option = {
@@ -651,7 +651,7 @@ flavor_bul.9 = { #A Recognized Great Power
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BUL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -694,7 +694,7 @@ flavor_bul.1000 = { #Fall of Constantinople - Event for the modifier removal if 
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BUL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10

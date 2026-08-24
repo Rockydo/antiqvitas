@@ -11,7 +11,7 @@ flavor_kni_pap.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -23,7 +23,7 @@ flavor_kni_pap.1 = {
 			owner.religion.group != ROOT.religion.group
 		}
 		religion = religion:catholic
-		country_exists = c:KNI
+		country_exists = c:DUMMY
 		crusade_potential_trigger = yes
 		crusade_allow_trigger = yes
 	}
@@ -38,25 +38,25 @@ flavor_kni_pap.1 = {
 		location:smyrna.owner = {
 			save_scope_as = crusade_target
 		}
-		c:KNI = {
+		c:DUMMY = {
 			if = {
 				limit = { religion = religion:catholic }
 				add_to_list = list_of_nations_to_invite_to_crusade
 			}
 		}
-		c:VEN ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = { religion = religion:catholic }
 				add_to_list = list_of_nations_to_invite_to_crusade
 			}
 		}
-		c:DAU ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = { religion = religion:catholic }
 				add_to_list = list_of_nations_to_invite_to_crusade
 			}
 		}
-		c:CYP ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = { religion = religion:catholic }
 				add_to_list = list_of_nations_to_invite_to_crusade
@@ -74,7 +74,7 @@ flavor_kni_pap.1 = {
 		}
 		crusade_effect = { target = scope:crusade_target }
 
-		c:KNI = {
+		c:DUMMY = {
 			set_variable = receive_additional_benefits
 		}
 
@@ -182,12 +182,12 @@ flavor_kni_pap.2 = {
 			years = 5
 		}
 		add_opinion_mutual_effect = {
-			target = c:PAP
+			target = c:DUMMY
 			modifier = kni_joined_crusade
 		}
 		if = {
 			limit = {
-				this = c:KNI
+				this = c:DUMMY
 			}
 			set_variable = participated_in_smyrniote_crusade
 		}
@@ -253,7 +253,7 @@ flavor_kni_pap.4 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
 		set_variable = flavor_kni_pap_4_lock
-		c:KNI = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		save_scope_as = the_from
@@ -262,7 +262,7 @@ flavor_kni_pap.4 = {
 	trigger = {
 		current_date > 476.9.4
 		NOT = { has_variable = flavor_kni_pap_4_lock }
-		c:KNI = {
+		c:DUMMY = {
 			has_variable = participated_in_smyrniote_crusade
 		}
 	}

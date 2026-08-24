@@ -565,7 +565,7 @@ anglican_events.13 = {
 	
 	option = {
 		name = anglican_events.13.a
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_angry }
 		}
 		every_neighbor_country = {
@@ -581,7 +581,7 @@ anglican_events.13 = {
 				religion = religion:catholic
 			}
 		}
-		c:PAP ?= {
+		c:DUMMY ?= {
 			add_opinion = { target = root modifier = opinion_angry }
 		}
 		every_neighbor_country = {

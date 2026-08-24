@@ -55,6 +55,15 @@ FLAGSHIPS = {
     "tunis",
 }
 FAMILY_POOLS = {
+    # Cordage is not an opening circuit unless its high-volume tar input is
+    # present in the same market.  The previous report counted a seeded
+    # ropewalk as coverage even when the live building operated at 0% for lack
+    # of tar.  Give every covered Old World hub an opening wood-tar producer;
+    # constructibility remains independently enforced by the raw-material
+    # bootstrap package and the goods-reachability audit.
+    "tar": (
+        "antq_reg_charcoal_hearth",
+    ),
     "antq_iron_hardware": (
         "antq_reg_ironmongery",
         "antq_reg_locksmith",
@@ -170,10 +179,8 @@ def selected_markets() -> list[dict[str, str]]:
 
 
 def target(location: str) -> int:
-    if location == "rome":
-        return 3
-    if location in FLAGSHIPS:
-        return 2
+    # One functional circuit is the opening guarantee. Extra workshops should
+    # be created by market demand, not multiplied merely because a hub is large.
     return 1
 
 
@@ -252,17 +259,18 @@ def report_text(generated: list[dict[str, str]]) -> str:
         f"- Covered Tier 1-2 Old World markets: {len(selected)}",
         f"- Added opening workshops: {len(generated)}",
         f"- Covered opening polities: {len(tags)}",
-        "- Guaranteed outputs: Iron Hardware, Cordage, Masonry, Tools, Flour and Bread",
-        "- Minimum: 1 producer/output; reviewed flagships: 2; Roma: 3",
+        "- Guaranteed outputs: Tar, Iron Hardware, Cordage, Masonry, Tools, Flour and Bread",
+        "- Minimum: 1 producer/output in every covered market",
         "",
-        "| Market | Owner | Target | Hardware | Cordage | Masonry | Tools | Food |",
-        "|---|---|---:|---:|---:|---:|---:|---:|",
+        "| Market | Owner | Target | Tar | Hardware | Cordage | Masonry | Tools | Food |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for market in selected:
         location = market["location"]
         count = totals[location]
         lines.append(
             f"| {market['name']} | {market['polity']} | {target(location)} | "
+            f"{count['tar']} | "
             f"{count['antq_iron_hardware']} | {count['antq_cordage']} | "
             f"{count['masonry']} | {count['tools']} | "
             f"{count['antq_grain_products']} |"

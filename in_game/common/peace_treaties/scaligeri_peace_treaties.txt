@@ -100,12 +100,12 @@ ver_milanese_demands = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		country_exists = c:MLO
+		country_exists = c:DUMMY
 		scope:war ?= {
 			casus_belli ?= { this = casus_belli:cb_scaligeri_war }
 			allows_scaligeri_peace_treaty_for_country = { country = MLO }
 			is_an_attacker = scope:winner
-			is_an_attacker = c:MLO
+			is_an_attacker = c:DUMMY
 		}
 		exists = scope:loser.province:brescia_province
 	}
@@ -122,7 +122,7 @@ ver_milanese_demands = {
 			}
 			scope:loser = {
 				province:brescia_province = {
-					change_province_owner = c:MLO
+					change_province_owner = c:DUMMY
 				}
 			}
 		}
@@ -140,7 +140,7 @@ ver_milanese_demands = {
 							}
 						}
 					}
-					change_location_owner = c:MLO
+					change_location_owner = c:DUMMY
 				}
 			}
 		}
@@ -181,12 +181,12 @@ ver_florentine_demands = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		country_exists = c:FLO
+		country_exists = c:DUMMY
 		scope:war ?= {
 			casus_belli ?= { this = casus_belli:cb_scaligeri_war }
 			allows_scaligeri_peace_treaty_for_country = { country = FLO }
 			is_an_attacker = scope:winner
-			is_an_attacker = c:FLO
+			is_an_attacker = c:DUMMY
 		}
 	}
 
@@ -201,7 +201,7 @@ ver_florentine_demands = {
 				scope:war.var:FLO_demands = flag:pescia_demand
 			}
 			location:pescia = {
-				change_location_owner = c:FLO
+				change_location_owner = c:DUMMY
 			}
 		}
 		else_if = {
@@ -218,7 +218,7 @@ ver_florentine_demands = {
 							}
 						}
 					}
-					change_location_owner = c:FLO
+					change_location_owner = c:DUMMY
 				}
 			}
 		}
@@ -259,12 +259,12 @@ ver_venetian_demands = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		country_exists = c:VEN
+		country_exists = c:DUMMY
 		scope:war ?= {
 			casus_belli ?= { this = casus_belli:cb_scaligeri_war }
 			allows_scaligeri_peace_treaty_for_country = { country = VEN }
 			is_an_attacker = scope:winner
-			is_an_attacker = c:VEN
+			is_an_attacker = c:DUMMY
 		}
 	}
 
@@ -280,7 +280,7 @@ ver_venetian_demands = {
 				scope:war.var:VEN_demands = flag:mestre_demand
 			}
 			location:mestre = {
-				change_location_owner = c:VEN
+				change_location_owner = c:DUMMY
 			}
 		}
 		else_if = {
@@ -296,7 +296,7 @@ ver_venetian_demands = {
 							}
 						}
 					}
-					change_location_owner = c:VEN
+					change_location_owner = c:DUMMY
 				}
 			}
 		}

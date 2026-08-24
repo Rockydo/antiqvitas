@@ -8,7 +8,7 @@ flavor_boh.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -87,7 +87,7 @@ flavor_boh.1 = {
 		set_new_ruler = scope:jiri_z_podebrad
 		add_religious_influence = religious_influence_radical_penalty
 		scope:jiri_z_podebrad = { add_character_modifier = { modifier = boh_hussite_king months = -1 mode = add_and_extend } }
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_boh.9 }
 		}
 	}
@@ -111,7 +111,7 @@ flavor_boh.2 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -122,7 +122,7 @@ flavor_boh.2 = {
 		religion = religion:catholic
 		has_ruler = yes
 		ruler = { religion = religion:hussite }
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 		religion:lutheran = { is_religion_enabled = no }
 	}
 
@@ -140,7 +140,7 @@ flavor_boh.2 = {
 		name = flavor_boh.2.a
 		historical_option = yes
 		add_religious_influence = religious_influence_weak_bonus
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = boh_papal_reconciled }
 		}
 		ruler = { change_character_religion = religion:catholic 	}
@@ -161,7 +161,7 @@ flavor_boh.2 = {
 				value = enemy
 			}
 		}
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_boh.9 }
 		}
 	}
@@ -177,7 +177,7 @@ flavor_boh.3 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -217,13 +217,13 @@ flavor_boh.3 = {
 
 		if = {
 			limit = {
-				is_neighbor_of = c:HUN
-				c:HUN = {
+				is_neighbor_of = c:DUMMY
+				c:DUMMY = {
 					religion = religion:catholic
 					has_regent = no
 				}
 			}
-			c:HUN = {
+			c:DUMMY = {
 				trigger_event_silently = flavor_hun.180
 			}
 		}
@@ -238,7 +238,7 @@ flavor_boh.4 = {
 	historical_info = flavor_boh.4.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -307,7 +307,7 @@ flavor_boh.6 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -396,7 +396,7 @@ flavor_boh.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -470,7 +470,7 @@ flavor_boh.8 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -507,8 +507,8 @@ flavor_boh.8 = {
 				limit = {
 					num_of_non_rural > 8
 				}
-				add_casus_belli = {	target = c:BOH	type = casus_belli:cb_religious_conformance	}
-				add_opinion = { target =  c:BOH modifier = boh_lutheran_king }
+				add_casus_belli = {	target = c:DUMMY	type = casus_belli:cb_religious_conformance	}
+				add_opinion = { target =  c:DUMMY modifier = boh_lutheran_king }
 			}
 		}
 
@@ -545,7 +545,7 @@ flavor_boh.9 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:BOH = {
+		c:DUMMY = {
 			ruler ?= { save_scope_as = target_character }
 		}
 	}
@@ -554,7 +554,7 @@ flavor_boh.9 = {
 		name = flavor_boh.9.a
 		historical_option = yes
 		add_government_power = government_power_extreme_bonus
-		c:BOH = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_boh.10 }
 			add_opinion = { target = root modifier = boh_heretic_hussite }
 		}
@@ -562,7 +562,7 @@ flavor_boh.9 = {
 	option = {
 		name = flavor_boh.9.b
 		add_government_power = government_power_extreme_penalty
-		c:BOH = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_boh.11 }
 			add_opinion = { target = root modifier = boh_papal_reconciled }
 		}
@@ -615,7 +615,7 @@ flavor_boh.11 = {
 
 	option = {
 		name = flavor_boh.11.a
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = boh_papal_reconciled }
 		}
 	}
@@ -706,7 +706,7 @@ flavor_boh.14 = {
 			}
 		}
 
-		c:BOH = {
+		c:DUMMY = {
 			trigger_event_silently = flavor_boh.15
 			capital = {
 				random_pop = {
@@ -719,18 +719,18 @@ flavor_boh.14 = {
 			}
 		}
 
-		reverse_add_opinion = { target = c:BOH modifier = jan_hus_executed_boh }
-		reverse_add_opinion = { target = c:PAP modifier = jan_hus_executed_pap }
+		reverse_add_opinion = { target = c:DUMMY modifier = jan_hus_executed_boh }
+		reverse_add_opinion = { target = c:DUMMY modifier = jan_hus_executed_pap }
 	}
 	option = {
 		name = flavor_boh.14.b
 
-		character:boh_jan_hus = { move_country = c:BOH }
+		character:boh_jan_hus = { move_country = c:DUMMY }
 
-		reverse_add_opinion = { target = c:BOH modifier = jan_hus_free_boh }
-		reverse_add_opinion = { target = c:PAP modifier = jan_hus_free_pap }
+		reverse_add_opinion = { target = c:DUMMY modifier = jan_hus_free_boh }
+		reverse_add_opinion = { target = c:DUMMY modifier = jan_hus_free_pap }
 
-		c:BOH = {
+		c:DUMMY = {
 			trigger_event_silently = flavor_boh.16
 		}
 
@@ -801,7 +801,7 @@ flavor_boh.17 = { #The First Congress of Visegrad
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -809,8 +809,8 @@ flavor_boh.17 = { #The First Congress of Visegrad
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:POL
-		NOT = { is_at_war_with = c:POL }
+		country_exists = c:DUMMY
+		NOT = { is_at_war_with = c:DUMMY }
 	}
 
 	illustration_tags = {
@@ -829,39 +829,39 @@ flavor_boh.17 = { #The First Congress of Visegrad
 		change_gold_effect = { scale = 12 }
 		if = {
 			limit = {
-				c:POL = { is_rival_of = root }
+				c:DUMMY = { is_rival_of = root }
 			}
-			remove_rival = c:POL
+			remove_rival = c:DUMMY
 		}
 		if = {
 			limit = {
-				is_rival_of = c:POL
+				is_rival_of = c:DUMMY
 			}
-			c:POL = { remove_rival = root }
+			c:DUMMY = { remove_rival = root }
 		}
 
 		if = {
 			limit = {
-				c:HUN = { is_rival_of = root }
+				c:DUMMY = { is_rival_of = root }
 			}
-			remove_rival = c:HUN
+			remove_rival = c:DUMMY
 		}
 		if = {
 			limit = {
-				is_rival_of = c:HUN
+				is_rival_of = c:DUMMY
 			}
-			c:HUN = { remove_rival = root }
+			c:DUMMY = { remove_rival = root }
 		}
 
 
-		c:POL = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = honored_congress_of_visegrad_modifier
 			}
 		}
 
-		c:HUN = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = honored_congress_of_visegrad_modifier
@@ -869,11 +869,11 @@ flavor_boh.17 = { #The First Congress of Visegrad
 		}
 
 		add_opinion = {
-			target = c:POL
+			target = c:DUMMY
 			modifier = honored_congress_of_visegrad_modifier
 		}
 		add_opinion = {
-			target = c:HUN
+			target = c:DUMMY
 			modifier = honored_congress_of_visegrad_modifier
 		}
 		change_societal_value = {
@@ -886,7 +886,7 @@ flavor_boh.17 = { #The First Congress of Visegrad
 		name = flavor_boh.17.b
 
 		add_casus_belli = {
-			target = c:POL
+			target = c:DUMMY
 			type = casus_belli:cb_claim_throne
 		}
 		custom_tooltip = boh_every_neighboring_country_tt
@@ -942,7 +942,7 @@ flavor_boh.18 = { #Staroměstská Radnice - The Old Town Hall
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1013,7 +1013,7 @@ flavor_boh.19 = { #The Districts' Taxation Rights
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1069,7 +1069,7 @@ flavor_boh.20 = { #The University of [ShowLocationName('prague')]
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1136,7 +1136,7 @@ flavor_boh.21 = { #Nové Město - The New Town
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1198,7 +1198,7 @@ flavor_boh.22 = { #A Joint General Assembly
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1261,7 +1261,7 @@ flavor_boh.23 = { #The Land Court of [target_area.GetNameWithNoTooltip] (Moravia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1333,7 +1333,7 @@ flavor_boh.24 = { #Maiestas Carolina
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1396,7 +1396,7 @@ flavor_boh.25 = { #Master of Vyšší Brod
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1487,7 +1487,7 @@ flavor_boh.26 = { #The Crown of Saint Wenceslas
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1582,7 +1582,7 @@ flavor_boh.27 = { #The Cathedral of Saint Vitus
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1658,7 +1658,7 @@ flavor_boh.28 = { #Liquid Delight
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1738,7 +1738,7 @@ flavor_boh.29 = { #Greatness from Humble Beginnings
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1808,7 +1808,7 @@ flavor_boh.30 = { #Silver Found in [target_location.GetNameWithNoTooltip]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1928,7 +1928,7 @@ flavor_boh.32 = { #The Fate of [GetCountry('LUX').GetNameWithNoTooltip]
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1937,8 +1937,8 @@ flavor_boh.32 = { #The Fate of [GetCountry('LUX').GetNameWithNoTooltip]
 	trigger = {
 		current_date > 476.9.4
 		exists = ruler
-		country_exists = c:LUX
-		in_union_with = c:LUX
+		country_exists = c:DUMMY
+		in_union_with = c:DUMMY
 		international_organization:hre.leader_country ?= root
 		OR = {
 			root.ruler = {
@@ -1985,14 +1985,14 @@ flavor_boh.32 = { #The Fate of [GetCountry('LUX').GetNameWithNoTooltip]
 	option = {
 		name = flavor_boh.32.a
 		add_stability = stability_weak_bonus
-		c:LUX = { set_new_ruler = scope:target_heir }
+		c:DUMMY = { set_new_ruler = scope:target_heir }
 	}
 
 	#It is all ours!
 	option = {
 		name = flavor_boh.32.b
 		drop_antagonism_bomb = {
-			target = c:LUX.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_maintained_subjugation
 		}
 	}
@@ -2006,7 +2006,7 @@ flavor_boh.33 = { #The Purchase of the [GetCountry('BRA').GetLongNameWithNoToolt
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2020,16 +2020,16 @@ flavor_boh.33 = { #The Purchase of the [GetCountry('BRA').GetLongNameWithNoToolt
 	trigger = {
 		current_date > 476.9.4
 		has_heir = yes
-		country_exists = c:BRA
+		country_exists = c:DUMMY
 		ruler_or_heir_if_regent = { has_dynasty = yes }
 		international_organization:hre ?= {
 			leader_country ?= root
 			country_has_special_status = {
 				type = special_status:elector
-				country = c:BRA
+				country = c:DUMMY
 			}
 		}
-		c:BRA = {
+		c:DUMMY = {
 			ruler_or_heir_if_regent = { has_dynasty = yes }
 		}
 	}
@@ -2038,7 +2038,7 @@ flavor_boh.33 = { #The Purchase of the [GetCountry('BRA').GetLongNameWithNoToolt
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		heir ?= { save_scope_as = target_character }
 		ruler_or_heir_if_regent = { save_scope_as = target_ruler }
-		c:BRA = {
+		c:DUMMY = {
 			ruler_or_heir_if_regent = { save_scope_as = target_bra_ruler }
 		}
 	}
@@ -2048,7 +2048,7 @@ flavor_boh.33 = { #The Purchase of the [GetCountry('BRA').GetLongNameWithNoToolt
 		historical_option = yes
 		custom_tooltip = {
 			text = flavor_boh.33.tt
-			c:BRA = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_boh.34  days = { 5 10 } }
 			}
 		}
@@ -2084,7 +2084,7 @@ flavor_boh.34 = { #The [GetCountry('BOH').GetLongNameWithNoTitle] wants to purch
 		historical_option = yes
 		custom_tooltip = {
 			text = flavor_boh.34.tt
-			c:BOH = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_boh.35 days = { 5 10 } }
 			}
 		}
@@ -2092,7 +2092,7 @@ flavor_boh.34 = { #The [GetCountry('BOH').GetLongNameWithNoTitle] wants to purch
 
 	option = {
 		name = flavor_boh.34.b
-		reverse_add_opinion = { target = c:BOH modifier = boh_refused_purchase }
+		reverse_add_opinion = { target = c:DUMMY modifier = boh_refused_purchase }
 	}
 	historical_info = flavor_boh.33.historical_info
 	trigger = {
@@ -2132,10 +2132,10 @@ flavor_boh.35 = { #The [GetCountry('BRA').GetLongNameWithNoTooltip] Answer
 		trigger = { has_heir = yes }
 		name = flavor_boh.35.a
 		add_gold = {
-			value = c:BRA.monthly_income_trade_and_tax
+			value = c:DUMMY.monthly_income_trade_and_tax
 			multiply = -20
 		}
-		c:BRA = {
+		c:DUMMY = {
 			if = {
 				limit = {
 					scope:target_character = { is_adult = yes }
@@ -2152,7 +2152,7 @@ flavor_boh.35 = { #The [GetCountry('BRA').GetLongNameWithNoTooltip] Answer
 					limit = { is_ruler = yes }
 					owner = {
 						add_gold = {
-							value = c:BRA.monthly_income_trade_and_tax
+							value = c:DUMMY.monthly_income_trade_and_tax
 							multiply = 20
 						}
 					}
@@ -2164,7 +2164,7 @@ flavor_boh.35 = { #The [GetCountry('BRA').GetLongNameWithNoTooltip] Answer
 	option = {
 		name = flavor_boh.35.b
 		add_prestige = prestige_extreme_penalty
-		reverse_add_opinion = { target = c:BRA modifier = boh_refused_purchase }
+		reverse_add_opinion = { target = c:DUMMY modifier = boh_refused_purchase }
 	}
 	trigger = {
 		current_date > 476.9.4
@@ -2215,7 +2215,7 @@ flavor_boh.36 = { #The Four Articles of [target_location.GetNameWithNoTooltip]
 						NOT = { tag = BOH }
 					}
 					add_opinion = {
-						target = c:BOH
+						target = c:DUMMY
 						modifier = opinion_hussite_aggression_modifier
 					}
 				}
@@ -2239,7 +2239,7 @@ flavor_boh.37 = { #The Unity of Brethren
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2289,7 +2289,7 @@ flavor_boh.38 = { # The Unification of Prague
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2341,7 +2341,7 @@ flavor_boh.39 = { # The Bohemian Commonwealth
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2386,7 +2386,7 @@ flavor_boh.40 = { # Expanding Kutná Hora
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2436,7 +2436,7 @@ flavor_boh.41 = { # The Flooding of Kutná Hora
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2481,7 +2481,7 @@ flavor_boh.42 = { # The Pan-Slavic Congress
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2522,7 +2522,7 @@ flavor_boh.43 = { # Jan Amos Komensky
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 7
@@ -2583,7 +2583,7 @@ flavor_boh.44 = { # Prague - The Golden City
     }
 
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2627,7 +2627,7 @@ flavor_boh.45 = { # Discovery of the Voynich Manuscript
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2678,7 +2678,7 @@ flavor_boh.46 = { # Jan Rokycana
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 7
@@ -2735,7 +2735,7 @@ flavor_boh.47 = { # Jiri Melantrich z Aventina
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 7
@@ -2796,7 +2796,7 @@ flavor_boh.48 = { # Kilián Ignác Dientzenhofer
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 7
@@ -2851,7 +2851,7 @@ flavor_boh.49 = { # Josef Dobrovský
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 7
@@ -2910,7 +2910,7 @@ flavor_boh.50 = { # Bohemian Crystal
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2959,7 +2959,7 @@ flavor_boh.51 = { # Bohemian Brewing Traditions
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3008,7 +3008,7 @@ flavor_boh.52 = { # The Swamp Monster of Vizovice
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1

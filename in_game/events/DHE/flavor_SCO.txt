@@ -9,7 +9,7 @@ flavor_sco.1 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -82,7 +82,7 @@ flavor_sco.2 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 40
@@ -93,8 +93,8 @@ flavor_sco.2 = {
 	trigger = {
 		current_date > 476.9.4
 		at_war = no
-		country_exists = c:FRA
-		country_exists = c:ENG
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 	}
 
 	immediate = {
@@ -111,30 +111,30 @@ flavor_sco.2 = {
 		historical_option = yes
 		add_trust_equilibrium = {
 			modifier = trust_sco_fra_renaissance_auld_alliance
-			target = c:FRA
+			target = c:DUMMY
 		}
-		c:FRA = {
+		c:DUMMY = {
 			add_trust_equilibrium = {
 				modifier = trust_sco_fra_renaissance_auld_alliance
-				target = c:SCO
+				target = c:DUMMY
 			}
 		}
-		c:FRA = {
-			add_opinion = { target = c:SCO modifier = opinion_good_relations }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_good_relations }
 		}
-		add_opinion = { target = c:FRA modifier = opinion_good_relations }
-		c:ENG = {
-			add_opinion = { target = c:SCO modifier = opinion_irritated }
+		add_opinion = { target = c:DUMMY modifier = opinion_good_relations }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_irritated }
 		}
 	}
 	option = {
 		name = flavor_sco.2.b
 		add_prestige = prestige_severe_bonus
-		c:ENG = {
-			add_opinion = { target = c:SCO modifier = opinion_pleased }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_pleased }
 		}
-		c:FRA = {
-			add_opinion = { target = c:SCO modifier = opinion_mildly_displeased }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_mildly_displeased }
 		}
 	}
 }
@@ -149,7 +149,7 @@ flavor_sco.3 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -159,8 +159,8 @@ flavor_sco.3 = {
 		current_date > 476.9.4
 		religion = religion:catholic
 		religion:calvinist = { is_religion_enabled = yes}
-		country_exists = c:FRA
-		NOT = {	is_at_war_with = c:FRA	}
+		country_exists = c:DUMMY
+		NOT = {	is_at_war_with = c:DUMMY	}
 		any_owned_location = {
 			has_building = building_type:calvinist_preachers
 		}
@@ -224,7 +224,7 @@ flavor_sco.4 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -319,7 +319,7 @@ flavor_sco.5 = { # The First Congregation
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -370,7 +370,7 @@ flavor_sco.6 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 8
@@ -423,7 +423,7 @@ flavor_sco.7 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -487,7 +487,7 @@ flavor_sco.8 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -541,7 +541,7 @@ flavor_sco.9 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -578,7 +578,7 @@ flavor_sco.10 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -625,7 +625,7 @@ flavor_sco.11 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -682,7 +682,7 @@ flavor_sco.12 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 80
@@ -715,7 +715,7 @@ flavor_sco.12 = {
 		character:sco_david_ii = {
 			save_scope_as = young_king_david
 		}
-		c:ENG = { save_scope_as = england }
+		c:DUMMY = { save_scope_as = england }
 	}
 
 	option = {
@@ -752,7 +752,7 @@ flavor_sco.12 = {
 			has_regent = yes
 		}
 		set_new_ruler = scope:guardian_of_scotland
-		c:FRA = {
+		c:DUMMY = {
 			set_variable = { name = scotland_did_not_extend_regency value = 1 }
 		}
 	}
@@ -867,7 +867,7 @@ flavor_sco.14 = { # raising David II
 	}
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -887,7 +887,7 @@ flavor_sco.14 = { # raising David II
 
 	immediate = {
 		character:sco_david_ii = { save_scope_as = young_king_david }
-		c:FRA = { save_scope_as = france }
+		c:DUMMY = { save_scope_as = france }
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 	}
 
@@ -1023,7 +1023,7 @@ flavor_sco.16 = { # Mons Meg bombard
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_cannons.dds"
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1135,7 +1135,7 @@ flavor_sco.17 = { # Robert Burns
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1296,7 +1296,7 @@ flavor_sco.18 = { # Wolf of Badenoch
 	}
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1376,7 +1376,7 @@ flavor_sco.19 = { # John Fordun - Chronica Gentis Scotorum
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_paper.dds"
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1386,8 +1386,8 @@ flavor_sco.19 = { # John Fordun - Chronica Gentis Scotorum
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:SCO
-		c:SCO = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			in_civil_war = no
 		}
 	}
@@ -1438,7 +1438,7 @@ flavor_sco.20 = { # Wild Haggis
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_fur.dds"
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1483,7 +1483,7 @@ flavor_sco.100 = { # Aftermath of Halidon Hill
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -1491,11 +1491,11 @@ flavor_sco.100 = { # Aftermath of Halidon Hill
 
  	trigger = {
  		current_date > 476.9.4
-		country_exists = c:SBL
-		is_at_war_with = c:SBL
+		country_exists = c:DUMMY
+		is_at_war_with = c:DUMMY
 		has_regent = yes
 		has_heir = yes
-		c:SBL = {
+		c:DUMMY = {
 			has_ruler = yes
 		}
  	}
@@ -1513,7 +1513,7 @@ flavor_sco.100 = { # Aftermath of Halidon Hill
 		heir ?= {
 			save_scope_as = sco_heir
 		}
-		c:SBL = {
+		c:DUMMY = {
 			ruler ?= {
            		save_scope_as = sbl_ruler
         	}
@@ -1552,7 +1552,7 @@ flavor_sco.101 = { # The Balliol Claim
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SBL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -1561,9 +1561,9 @@ flavor_sco.101 = { # The Balliol Claim
  	trigger = {
  		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:SCO
-		is_at_war_with = c:SCO
-		c:SCO = {
+		country_exists = c:DUMMY
+		is_at_war_with = c:DUMMY
+		c:DUMMY = {
 			has_regent = yes
 			has_heir = yes
 		}
@@ -1576,7 +1576,7 @@ flavor_sco.101 = { # The Balliol Claim
 
     immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:SCO = {
+		c:DUMMY = {
 			regent ?= {
           		save_scope_as = sco_regent
        		}
@@ -1584,7 +1584,7 @@ flavor_sco.101 = { # The Balliol Claim
 		ruler ?= {
 			save_scope_as = sbl_ruler
 		}
-		c:SCO = {
+		c:DUMMY = {
 			heir ?= {
            		save_scope_as = sco_heir
         	}
@@ -1608,7 +1608,7 @@ flavor_sco.102 = { # Resurgence Against the Rebels
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -1618,9 +1618,9 @@ flavor_sco.102 = { # Resurgence Against the Rebels
  		current_date > 476.9.4
 		has_regent = yes
 		has_heir = yes
-		country_exists = c:SBL
-		is_at_war_with = c:SBL
-		c:SBL = {
+		country_exists = c:DUMMY
+		is_at_war_with = c:DUMMY
+		c:DUMMY = {
 			num_locations < 4
 			is_ai = yes
 			has_ruler = yes
@@ -1640,7 +1640,7 @@ flavor_sco.102 = { # Resurgence Against the Rebels
 		heir ?= {
 			save_scope_as = sco_heir
 		}
-		c:SBL = {
+		c:DUMMY = {
 			ruler ?= {
            		save_scope_as = sbl_ruler
         	}
@@ -1649,7 +1649,7 @@ flavor_sco.102 = { # Resurgence Against the Rebels
 
  	option = { #We will drive out this puppet for good!
 		name = flavor_sco.102.a
-		c:SBL = {
+		c:DUMMY = {
 			add_country_modifier = { modifier = sco_desertion_among_balliol years = 12 mode = add_and_extend }
 		}
 		add_legitimacy = legitimacy_extreme_bonus
@@ -1665,7 +1665,7 @@ flavor_sco.103 = { # Honoring the Auld Alliance
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 33
@@ -1674,14 +1674,14 @@ flavor_sco.103 = { # Honoring the Auld Alliance
  	trigger = {
  		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:FRA
-		country_exists = c:ENG
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 		in_civil_war = no
 		at_war = no
-		NOT = {	is_at_war_with = c:ENG }
-		NOT = {	has_truce_with = c:ENG }
-		c:FRA = {
-			is_at_war_with = c:ENG
+		NOT = {	is_at_war_with = c:DUMMY }
+		NOT = {	has_truce_with = c:DUMMY }
+		c:DUMMY = {
+			is_at_war_with = c:DUMMY
 		}
  	}
 
@@ -1702,19 +1702,19 @@ flavor_sco.103 = { # Honoring the Auld Alliance
 		historical_option = yes
 		add_stability = stability_mild_penalty
 		create_relation = {
-			first = c:FRA
-			second = c:SCO
+			first = c:DUMMY
+			second = c:DUMMY
 			type = relation_type:guarantee
 		}
 		add_casus_belli = {
-			target = c:ENG
+			target = c:DUMMY
 			type = casus_belli:cb_sco_invade_england
 		}
 		add_country_modifier = { modifier = sco_advance_into_england years = 5 mode = add_and_extend }
-		c:FRA = {
-			add_opinion = { target = c:SCO modifier = opinion_sco_hyw_auld_alliance }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_sco_hyw_auld_alliance }
 		}
-		add_opinion = { target = c:FRA modifier = opinion_sco_hyw_auld_alliance }
+		add_opinion = { target = c:DUMMY modifier = opinion_sco_hyw_auld_alliance }
 		ai_chance = {
 			factor = 0.7
 			modifier = {
@@ -1727,18 +1727,18 @@ flavor_sco.103 = { # Honoring the Auld Alliance
  	option = { # We cannot afford a war with England, but we can aid France by other means
 		name = flavor_sco.103.b
 		create_relation = {
-			first = c:FRA
-			second = c:SCO
+			first = c:DUMMY
+			second = c:DUMMY
 			type = relation_type:guarantee
 		}
 		add_country_modifier = { modifier = sco_auld_alliance_funding_fra years = 5 mode = add_and_extend }
-		c:FRA = {
+		c:DUMMY = {
 			add_country_modifier = { modifier = sco_fra_receiving_auld_funding years = 5 mode = add_and_extend }
 		}
-		c:FRA = {
-			add_opinion = { target = c:SCO modifier = opinion_sco_hyw_monetary_auld_alliance }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_sco_hyw_monetary_auld_alliance }
 		}
-		add_opinion = { target = c:FRA modifier = opinion_sco_hyw_monetary_auld_alliance }
+		add_opinion = { target = c:DUMMY modifier = opinion_sco_hyw_monetary_auld_alliance }
 		ai_chance = {
 			factor = 0.2
 		}
@@ -1747,8 +1747,8 @@ flavor_sco.103 = { # Honoring the Auld Alliance
  	option = { # Avoid involving ourselves for now
 		name = flavor_sco.103.c
 		add_country_modifier = { modifier = sco_fortifying_against_england years = 5 mode = add_and_extend }
-		c:FRA = {
-			add_opinion = { target = c:SCO modifier = opinion_sco_dishonored_hyw_auld_alliance }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_sco_dishonored_hyw_auld_alliance }
 		}
 		ai_chance = {
 			factor = 0.1
@@ -1764,7 +1764,7 @@ flavor_sco.104 = { # A Free and Independent Kingdom
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1821,7 +1821,7 @@ flavor_sco.105 = { # Rise of the Stewarts (Stuart)
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1895,7 +1895,7 @@ flavor_sco.106 = { # Ascension of the Stewarts
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1962,7 +1962,7 @@ flavor_sco.107 = { # Scottish Clans Rebuke Stewart Rule
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2017,7 +2017,7 @@ flavor_sco.108 = { # Consolidation of Clan Holdings
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2073,7 +2073,7 @@ flavor_sco.109 = { # The Brus Work of Art
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2171,7 +2171,7 @@ flavor_sco.110 = { # Flourishing Reign of Robert III (Strong Wool and Cloth prod
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_cloth.dds"
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2224,7 +2224,7 @@ flavor_sco.111 = { # English Border Enclaves
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2234,12 +2234,12 @@ flavor_sco.111 = { # English Border Enclaves
  		current_date > 476.9.4
 		has_ruler = yes
 		at_war = no
-		country_exists = c:ENG
-		NOT = { is_at_war_with = c:ENG }
+		country_exists = c:DUMMY
+		NOT = { is_at_war_with = c:DUMMY }
 		any_political_border_location = {
-			is_neighbor_of = c:ENG
+			is_neighbor_of = c:DUMMY
 		}
-		c:ENG ?= {
+		c:DUMMY ?= {
 			has_ruler = yes
 		}
  	}
@@ -2254,7 +2254,7 @@ flavor_sco.111 = { # English Border Enclaves
 		ruler ?= {
             save_scope_as = sco_ruler
         }
-		c:ENG = {
+		c:DUMMY = {
 			save_scope_as = eng_country
         	ruler ?= {
             	save_scope_as = eng_ruler
@@ -2267,8 +2267,8 @@ flavor_sco.111 = { # English Border Enclaves
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
 		add_stability = stability_weak_penalty
-		c:ENG = {
-			add_opinion = { target = c:SCO modifier = opinion_sco_attacking_enclaves }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_sco_attacking_enclaves }
 		}
 		add_country_modifier = { modifier = sco_purging_enclaves years = 10 mode = add_and_extend }
 		change_societal_value = {
@@ -2280,7 +2280,7 @@ flavor_sco.111 = { # English Border Enclaves
 			value = societal_value_large_move_to_left
 		}
 		every_political_border_location = {
-			limit = { is_neighbor_of = c:ENG }
+			limit = { is_neighbor_of = c:DUMMY }
 			add_location_modifier = {
  				modifier = sco_english_enclave
  				years = 5
@@ -2305,7 +2305,7 @@ flavor_sco.111 = { # English Border Enclaves
 			value = societal_value_move_to_right
 		}
 		every_political_border_location = {
-			limit = { is_neighbor_of = c:ENG }
+			limit = { is_neighbor_of = c:DUMMY }
 			add_location_modifier = {
  				modifier = sco_english_enclave
  				years = 10
@@ -2326,7 +2326,7 @@ flavor_sco.112 = { # Introduction of Modern Artillery
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2381,7 +2381,7 @@ flavor_sco.200 = { # Asserting Authority over the Clergy
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -2391,8 +2391,8 @@ flavor_sco.200 = { # Asserting Authority over the Clergy
  		current_date > 476.9.4
 		has_ruler = yes
 		stability > 25
-		country_exists = c:PAP
-		c:PAP ?= {
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
 			has_ruler = yes
 		}
  	}
@@ -2410,7 +2410,7 @@ flavor_sco.200 = { # Asserting Authority over the Clergy
 		unlock_law_effect = {
 			type = sco_authority_over_the_clergy
 		}
-		c:PAP = {
+		c:DUMMY = {
         	ruler ?= {
             	save_scope_as = pap_ruler
         	}
@@ -2465,7 +2465,7 @@ flavor_sco.201 = { # Pope Requests Reconciliation With <Ruler>
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -2474,8 +2474,8 @@ flavor_sco.201 = { # Pope Requests Reconciliation With <Ruler>
  	trigger = {
  		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:PAP
-		c:PAP ?= {
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
 			has_ruler = yes
 		}
 		has_law = sco_authority_over_the_clergy
@@ -2491,7 +2491,7 @@ flavor_sco.201 = { # Pope Requests Reconciliation With <Ruler>
 		ruler ?= {
             save_scope_as = sco_ruler
         }
-		c:PAP = {
+		c:DUMMY = {
         	ruler ?= {
             	save_scope_as = pap_ruler
         	}
@@ -2528,7 +2528,7 @@ flavor_sco.202 = { # Expedition into the Highlands
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2583,7 +2583,7 @@ flavor_sco.203 = { # Renewal of the Auld Alliance
 	historical_info = flavor_sco.203.historical_info
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2592,7 +2592,7 @@ flavor_sco.203 = { # Renewal of the Auld Alliance
  	trigger = {
  		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:FRA
+		country_exists = c:DUMMY
  	}
 
 	illustration_tags = {
@@ -2611,16 +2611,16 @@ flavor_sco.203 = { # Renewal of the Auld Alliance
 		name = flavor_sco.203.a
 		historical_option = yes
 		add_legitimacy = legitimacy_mild_bonus
-		add_opinion = { target = c:FRA modifier = opinion_sco_renewed_auld_alliance }
+		add_opinion = { target = c:DUMMY modifier = opinion_sco_renewed_auld_alliance }
 		add_trust_equilibrium = {
 			modifier = trust_sco_fra_auld_alliance
-			target = c:FRA
+			target = c:DUMMY
 		}
-		c:FRA = {
-			add_opinion = { target = c:SCO modifier = opinion_sco_renewed_auld_alliance }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_sco_renewed_auld_alliance }
 			add_trust_equilibrium = {
 				modifier = trust_sco_fra_auld_alliance
-				target = c:SCO
+				target = c:DUMMY
 			}
 		}
 		ai_chance = {
@@ -2630,7 +2630,7 @@ flavor_sco.203 = { # Renewal of the Auld Alliance
 
  	option = { # It is time we sough other European allies
 		name = flavor_sco.203.b
-		add_opinion = { target = c:FRA modifier = opinion_sco_abandon_auld_alliance }
+		add_opinion = { target = c:DUMMY modifier = opinion_sco_abandon_auld_alliance }
 		add_country_modifier = { modifier = sco_seeking_new_alliances years = 10 mode = add_and_extend }
 		ai_chance = {
 			factor = 0.2
@@ -2646,7 +2646,7 @@ flavor_sco.204 = { # Founding of Aberdeen University
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2660,8 +2660,8 @@ flavor_sco.204 = { # Founding of Aberdeen University
 			has_building = building_type:university
 		}
 		NOT = { location:aberdeen = { has_building = building_type:university } }
-		country_exists = c:PAP
-		c:PAP ?= {
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
 			has_ruler = yes
 		}
  	}
@@ -2676,7 +2676,7 @@ flavor_sco.204 = { # Founding of Aberdeen University
 		ruler ?= {
             save_scope_as = sco_ruler
         }
-		c:PAP = {
+		c:DUMMY = {
         	ruler ?= {
             	save_scope_as = pap_ruler
         	}
@@ -2719,7 +2719,7 @@ flavor_sco.205 = { # Expansion of the Scottish Royal Navy
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2769,7 +2769,7 @@ flavor_sco.206 = { # The Decline of the Scottish Parliament
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2823,7 +2823,7 @@ flavor_sco.207 = { # Palace of Holyroodhouse
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2889,7 +2889,7 @@ flavor_sco.209 = { # <ruler> and the Religious Transformation of Scotland
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 30
@@ -2960,7 +2960,7 @@ flavor_sco.210 = { # The Rough Wooing
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -2969,17 +2969,17 @@ flavor_sco.210 = { # The Rough Wooing
  	trigger = {
  		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:ENG
-		country_exists = c:FRA
-		NOT = { is_at_war_with = c:ENG }
-		NOT = { has_truce_with = c:ENG }
-		NOT = { is_subject_of = c:ENG }
-		NOT = { in_union_with = c:ENG }
-		is_allied_with = { target = c:FRA }
-		c:ENG = {
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		NOT = { is_at_war_with = c:DUMMY }
+		NOT = { has_truce_with = c:DUMMY }
+		NOT = { is_subject_of = c:DUMMY }
+		NOT = { in_union_with = c:DUMMY }
+		is_allied_with = { target = c:DUMMY }
+		c:DUMMY = {
 			has_ruler = yes
-			NOT = { is_subject_of = c:SCO }
-			NOT = { in_union_with = c:SCO }
+			NOT = { is_subject_of = c:DUMMY }
+			NOT = { in_union_with = c:DUMMY }
 		}
  	}
 
@@ -2993,7 +2993,7 @@ flavor_sco.210 = { # The Rough Wooing
 		ruler ?= {
             save_scope_as = sco_ruler
         }
-		c:ENG = {
+		c:DUMMY = {
 			ruler ?= {
             	save_scope_as = eng_ruler
         	}
@@ -3003,17 +3003,17 @@ flavor_sco.210 = { # The Rough Wooing
  	option = { # Prepare for a defense against England
 		name = flavor_sco.210.a
 		historical_option = yes
-		c:ENG = {
+		c:DUMMY = {
 			add_casus_belli = {
 				type = casus_belli:cb_annex
-				target = c:SCO
+				target = c:DUMMY
 			}
 		}
 		add_country_modifier = { modifier = sco_on_the_defensive years = 8 mode = add_and_extend }
-		c:FRA = {
-			add_opinion = { target = c:SCO modifier = opinion_sco_hyw_auld_alliance }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = opinion_sco_hyw_auld_alliance }
 		}
-		add_opinion = { target = c:FRA modifier = opinion_sco_hyw_auld_alliance }
+		add_opinion = { target = c:DUMMY modifier = opinion_sco_hyw_auld_alliance }
 		ai_chance = {
 			factor = 0.90
 		}
@@ -3021,18 +3021,18 @@ flavor_sco.210 = { # The Rough Wooing
 
  	option = { # Appease England and breakdown relations with France
 		name = flavor_sco.210.b
-		add_truce_with = { target = c:ENG mutual = yes }
+		add_truce_with = { target = c:DUMMY mutual = yes }
 		remove_relation = {
-			first = c:SCO
-			second = c:FRA
+			first = c:DUMMY
+			second = c:DUMMY
 			type = relation_type:alliance
 		}
 		add_prestige = prestige_severe_penalty
-		c:ENG = {
-			add_opinion = { target = c:SCO modifier = sco_appease_great_wooing }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = sco_appease_great_wooing }
 		}
-		c:FRA = {
-			add_opinion = { target = c:SCO modifier = sco_broke_auld_alliance_great_wooing }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = sco_broke_auld_alliance_great_wooing }
 		}
 		ai_chance = {
 			factor = 0.10
@@ -3048,7 +3048,7 @@ flavor_sco.301 = { # Internal Division, Old Enemies
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3060,8 +3060,8 @@ flavor_sco.301 = { # Internal Division, Old Enemies
 		government_type = government_type:monarchy
 		exists = character:script_john_knox
 		religion:calvinist = { is_religion_enabled = yes }
-		country_exists = c:ENG
-		NOT = { is_at_war_with = c:ENG }
+		country_exists = c:DUMMY
+		NOT = { is_at_war_with = c:DUMMY }
  	}
 
 	illustration_tags = {
@@ -3105,7 +3105,7 @@ flavor_sco.302 = { # True Law and Basilikon
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3171,7 +3171,7 @@ flavor_sco.303 = { # The Statutes of Iona
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -3246,7 +3246,7 @@ flavor_sco.304 = { # Divine Art of Poesie
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -3305,7 +3305,7 @@ flavor_sco.400 = { # Expedition to the New World
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 8
@@ -3357,8 +3357,8 @@ flavor_sco.401 = { # David Hume, Treatise of Human Nature
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
-		tag = ENG
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -3442,7 +3442,7 @@ flavor_sco.1000 = {
 			triggered_desc = {
 				trigger = {
 					character:sco_edward_balliol ?= {
-						c:SCO.ruler != this
+						c:DUMMY.ruler != this
 					}
 				}
 				desc = flavor_sco.1000.desc_no_balliol
@@ -3458,7 +3458,7 @@ flavor_sco.1000 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -3467,8 +3467,8 @@ flavor_sco.1000 = {
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:SCO
-		c:SCO = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			in_civil_war = no
 			at_war = no
 			has_ruler = yes
@@ -3476,10 +3476,10 @@ flavor_sco.1000 = {
 			is_neighbor_of = root
 		}
 		province_definition:lothian_province = {
-			any_location_in_province_definition = { owner ?= c:SCO }
+			any_location_in_province_definition = { owner ?= c:DUMMY }
 		}
 		province_definition:teviotdale_province = {
-			any_location_in_province_definition = { owner ?= c:SCO }
+			any_location_in_province_definition = { owner ?= c:DUMMY }
 		}
 		at_war = no
 	}
@@ -3495,7 +3495,7 @@ flavor_sco.1000 = {
 			save_scope_as = balliol
 		}
 
-		c:SCO.ruler = {
+		c:DUMMY.ruler = {
 			if = {
 				limit = { this != character:sco_edward_balliol }
 				save_scope_as = target_character
@@ -3515,7 +3515,7 @@ flavor_sco.1000 = {
 		historical_option = yes
 
 		hidden_effect = {
-			c:SCO = { trigger_event_silently = flavor_sco.1001 }
+			c:DUMMY = { trigger_event_silently = flavor_sco.1001 }
 		}
 
 		custom_tooltip = flavor_sco.1000.tt
@@ -3525,7 +3525,7 @@ flavor_sco.1000 = {
 	option = {
 		name = flavor_sco.1000.b
 
-		c:SCO = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = opinion_pleased
@@ -3571,7 +3571,7 @@ flavor_sco.1001 = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		save_scope_as = sender
 
-		c:ENG = {
+		c:DUMMY = {
 			ruler ?= { save_scope_as = target_character }
 			save_scope_as = england
 		}
@@ -3609,12 +3609,12 @@ flavor_sco.1001 = {
 				province_definition = province_definition:teviotdale_province
 				}
 			}
-			change_location_owner = c:ENG
+			change_location_owner = c:DUMMY
 		}
 
-		make_subject_of = { target = c:ENG  type = subject_type:vassal }
+		make_subject_of = { target = c:DUMMY  type = subject_type:vassal }
 
-		c:ENG = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_pleased }
 		}
 
@@ -3625,7 +3625,7 @@ flavor_sco.1001 = {
 
 		set_variable = { name = treaty_of_newcastle_declined value = 1 }
 
-		c:ENG = { trigger_event_silently = { id = flavor_eng_diplomacy.2 days = 5 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.2 days = 5 } }
 
 		custom_tooltip = flavor_sco.1001.tt
 
@@ -3647,7 +3647,7 @@ flavor_sco.1100 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3655,22 +3655,22 @@ flavor_sco.1100 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:SCO
+		country_exists = c:DUMMY
 		root = {
 			opinion = {
-				target = c:SCO
+				target = c:DUMMY
 				value <= 50
 			}
 		}
 
-		c:SCO = {
+		c:DUMMY = {
 			opinion = {
 				target = root
 				value <= 50
 			}
 		}
 
-		has_truce_with = c:SCO
+		has_truce_with = c:DUMMY
 
 	}
 
@@ -3686,7 +3686,7 @@ flavor_sco.1100 = {
 				region = region:great_britain_region
 				any_neighbor_location = {
 					has_owner = yes
-					owner ?= c:SCO
+					owner ?= c:DUMMY
 				}
 			}
 			save_scope_as = target_location
@@ -3694,7 +3694,7 @@ flavor_sco.1100 = {
 
 		set_variable = { name = border_reivers_enabled value = 1 }
 
-		c:SCO = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_sco.1101 }
 		}
 
@@ -3744,7 +3744,7 @@ flavor_sco.1101 = {
 			limit = {
 				region = region:great_britain_region
 				any_neighbor_location = {
-					owner ?= c:ENG
+					owner ?= c:DUMMY
 				}
 			}
 			save_scope_as = target_location
@@ -3788,11 +3788,11 @@ flavor_sco.1102 = {
 	trigger = {
 		current_date > 476.9.4
 		tag = ENG
-		has_truce_with = c:SCO
+		has_truce_with = c:DUMMY
 		has_variable = border_reivers_enabled
 		any_owned_location = {
 			region = region:great_britain_region
-			any_neighbor_location = { owner ?= c:SCO }
+			any_neighbor_location = { owner ?= c:DUMMY }
 			prosperity <= 0.5
 			local_control <= 0.5
 		}
@@ -3811,7 +3811,7 @@ flavor_sco.1102 = {
 		 		region = region:great_britain_region
 		 		any_neighbor_location = {
 					has_owner = yes
-					owner ?= c:SCO
+					owner ?= c:DUMMY
 				}
 		 		prosperity <= 0.5
 		 		local_control <= 0.5
@@ -3820,7 +3820,7 @@ flavor_sco.1102 = {
 		 	random_neighbor_location = {
 		 		limit = {
 		 			region = region:great_britain_region
-		 			owner ?= c:SCO
+		 			owner ?= c:DUMMY
 		 		}
 		 		save_scope_as = raided_location
 		 	}
@@ -3832,7 +3832,7 @@ flavor_sco.1102 = {
 		name = flavor_sco.1102.a
 
 
-		c:SCO = { trigger_event_silently = { id = flavor_sco.1104 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_sco.1104 } }
 
 		if = {
 			limit = {
@@ -3864,13 +3864,13 @@ flavor_sco.1103 = {
 		current_date > 476.9.4
 
 		tag = SCO
-		has_truce_with = c:ENG
+		has_truce_with = c:DUMMY
 		has_variable = border_reivers_enabled
 		any_owned_location = {
 			region = region:great_britain_region
 			any_neighbor_location = {
 				has_owner = yes
-				owner ?= c:ENG
+				owner ?= c:DUMMY
 			}
 			prosperity <= 0.5
 			local_control <= 0.5
@@ -3888,7 +3888,7 @@ flavor_sco.1103 = {
 		random_owned_location = {
 		 	limit = {
 		 		region = region:great_britain_region
-		 		any_neighbor_location = { owner ?= c:ENG }
+		 		any_neighbor_location = { owner ?= c:DUMMY }
 		 		prosperity <= 0.5
 		 		local_control <= 0.5
 		 	}
@@ -3896,7 +3896,7 @@ flavor_sco.1103 = {
 		 	random_neighbor_location = {
 		 		limit = {
 		 			region = region:great_britain_region
-		 			owner ?= c:ENG
+		 			owner ?= c:DUMMY
 		 		}
 		 		save_scope_as = raided_location
 		 	}
@@ -3908,7 +3908,7 @@ flavor_sco.1103 = {
 		name = flavor_sco.1103.a
 
 
-		c:ENG = { trigger_event_silently = { id = flavor_sco.1104 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_sco.1104 } }
 
 		if = {
 			limit = {
@@ -3953,14 +3953,14 @@ flavor_sco.1104 = {
 		if = {
 			limit = { tag = SCO }
 			add_opinion = {
-				target = c:ENG
+				target = c:DUMMY
 				modifier = opinion_irritated
 			}
 		}
 		if = {
 			limit = { tag = ENG }
 			add_opinion = {
-				target = c:SCO
+				target = c:DUMMY
 				modifier = opinion_irritated
 			}
 		}
@@ -3978,14 +3978,14 @@ flavor_sco.1104 = {
 		if = {
 			limit = { tag = SCO }
 			add_opinion = {
-				target = c:ENG
+				target = c:DUMMY
 				modifier = opinion_irritated
 			}
 		}
 		if = {
 			limit = { tag = ENG }
 			add_opinion = {
-				target = c:SCO
+				target = c:DUMMY
 				modifier = opinion_irritated
 			}
 		}
@@ -4006,7 +4006,7 @@ flavor_sco.1200 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4023,8 +4023,8 @@ flavor_sco.1200 = {
 			ruler = { dip >= 50 }
 		}
 
-		country_exists = c:SCO
-		c:SCO = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_neighbor_of = root
 			NOT = { is_allied_with = { target = root } }
 			has_regent = no
@@ -4041,11 +4041,11 @@ flavor_sco.1200 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:SCO = { save_scope_as = scotland }
+		c:DUMMY = { save_scope_as = scotland }
 
 		capital = { save_scope_as = target_location }
 
-		c:SCO.ruler = { save_scope_as = target_character }
+		c:DUMMY.ruler = { save_scope_as = target_character }
 
 		root = { save_scope_as = target_root_country }
 
@@ -4061,7 +4061,7 @@ flavor_sco.1200 = {
 		}
 
 		hidden_effect = {
-			c:SCO = { trigger_event_silently = flavor_sco.1201 }
+			c:DUMMY = { trigger_event_silently = flavor_sco.1201 }
 		}
 
 		custom_tooltip = flavor_sco.1200.tt1
@@ -4103,7 +4103,7 @@ flavor_sco.1201 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:ENG.ruler = { save_scope_as = target_character }
+		c:DUMMY.ruler = { save_scope_as = target_character }
 
 		capital = { save_scope_as = target_location }
 
@@ -4119,10 +4119,10 @@ flavor_sco.1201 = {
 
 		add_trust_equilibrium = {
 			modifier = trust_treaty_of_perpetual_peace
-			target = c:ENG
+			target = c:DUMMY
 		}
 
-		c:ENG = { trigger_event_silently = { id = flavor_eng_diplomacy.1 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.1 days = 0 } }
 
 		custom_tooltip = flavor_sco.1201.tt1
 		custom_tooltip = flavor_sco.1201.tt2
@@ -4134,14 +4134,14 @@ flavor_sco.1201 = {
 
 		set_variable = { name = treaty_declined value = 1 }
 
-		c:ENG = {
+		c:DUMMY = {
 			remove_trust_equilibrium = {
 				modifier = trust_treaty_of_perpetual_peace
-				target = c:SCO
+				target = c:DUMMY
 			}
 		}
 
-		c:ENG = { trigger_event_silently = { id = flavor_eng_diplomacy.2 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.2 days = 0 } }
 
 		custom_tooltip = flavor_sco.1201.tt3
 
@@ -4163,7 +4163,7 @@ flavor_sco.1202 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4174,20 +4174,20 @@ flavor_sco.1202 = {
 		has_ruler = yes
 		trigger_if = {
 			limit = {
-				exists = c:ENG.ruler
+				exists = c:DUMMY.ruler
 			}
 			any_character = {
-				is_sibling_of = c:ENG.ruler
+				is_sibling_of = c:DUMMY.ruler
 				is_female = yes
 				is_married = no
 			}
 		}
 		
 
-		has_trust = { modifier = trust_treaty_of_perpetual_peace target = c:SCO }
+		has_trust = { modifier = trust_treaty_of_perpetual_peace target = c:DUMMY }
 
-		country_exists = c:SCO
-		c:SCO = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_ruler = yes
 			ruler = {
 				is_female = no
@@ -4208,7 +4208,7 @@ flavor_sco.1202 = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		random_character = {
 			limit = {
-				is_sibling_of = c:ENG.ruler
+				is_sibling_of = c:DUMMY.ruler
 				is_female = yes
 				is_married = no
 			}
@@ -4220,7 +4220,7 @@ flavor_sco.1202 = {
 	option = {
 		name = flavor_sco.1202.a
 
-		c:SCO = { trigger_event_silently = { id = flavor_sco.1203 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_sco.1203 days = 0 } }
 
 		custom_tooltip = flavor_sco.1202.tt1
 		custom_tooltip = flavor_sco.1202.tt2
@@ -4232,12 +4232,12 @@ flavor_sco.1202 = {
 
 		remove_trust_equilibrium = {
 			modifier = trust_treaty_of_perpetual_peace
-			target = c:SCO
+			target = c:DUMMY
 		}
 
 		set_variable = { name = wedding_cancelled value = 1 }
 
-		c:SCO = { trigger_event_silently = { id = flavor_sco.1203 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_sco.1203 days = 0 } }
 
 		custom_tooltip = flavor_sco.1202.tt3
 
@@ -4257,14 +4257,14 @@ flavor_sco.1203 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					NOT = { root = c:ENG }
-					c:ENG = { has_variable = wedding_cancelled }
+					NOT = { root = c:DUMMY }
+					c:DUMMY = { has_variable = wedding_cancelled }
 				}
 				desc = flavor_sco.1203.desc_marriage_refused
 			}
 			triggered_desc = {
 				trigger = {
-					root = c:ENG
+					root = c:DUMMY
 				}
 				desc = flavor_sco.1203.desc_marriage_refused
 			}
@@ -4293,17 +4293,17 @@ flavor_sco.1203 = {
 		historical_option = yes
 		name = flavor_sco.1203.a
 		trigger = {
-			NOT = { root = c:ENG }
-			NOT = { c:ENG = { has_variable = wedding_cancelled } }
+			NOT = { root = c:DUMMY }
+			NOT = { c:DUMMY = { has_variable = wedding_cancelled } }
 		}
 
 		set_variable = { name = treaty_of_perpetual_peace_marriage value = 1 }
 
 		scope:suitable_sister = {
-			marry_character = c:SCO.ruler
+			marry_character = c:DUMMY.ruler
 		}
 
-		c:ENG = { trigger_event_silently = { id = flavor_eng_diplomacy.1 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.1 days = 0 } }
 
 		custom_tooltip = flavor_sco.1203.tt1
 
@@ -4312,32 +4312,32 @@ flavor_sco.1203 = {
 	option = {
 		name = flavor_sco.1203.b
 		trigger = {
-			NOT = { root = c:ENG }
-			NOT = { c:ENG = { has_variable = wedding_cancelled } }
+			NOT = { root = c:DUMMY }
+			NOT = { c:DUMMY = { has_variable = wedding_cancelled } }
 		}
 
 		remove_trust_equilibrium = {
 			modifier = trust_treaty_of_perpetual_peace
-			target = c:ENG
+			target = c:DUMMY
 		}
 
-		c:ENG = { trigger_event_silently = { id = flavor_sco.1203 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_sco.1203 days = 0 } }
 
 	}
 
 	option = {
 		name = flavor_sco.1203.c
 		trigger = {
-			NOT = { root = c:ENG }
-			c:ENG = { has_variable = wedding_cancelled }
+			NOT = { root = c:DUMMY }
+			c:DUMMY = { has_variable = wedding_cancelled }
 		}
 
 		remove_trust_equilibrium = {
 			modifier = trust_treaty_of_perpetual_peace
-			target = c:ENG
+			target = c:DUMMY
 		}
 
-		c:ENG = {
+		c:DUMMY = {
 			remove_variable = wedding_cancelled
 		}
 
@@ -4347,11 +4347,11 @@ flavor_sco.1203 = {
 
 	option = {
 		name = flavor_sco.1203.d
-		trigger = {	root = c:ENG }
+		trigger = {	root = c:DUMMY }
 
 		remove_trust_equilibrium = {
 			modifier = trust_treaty_of_perpetual_peace
-			target = c:SCO
+			target = c:DUMMY
 		}
 
 		custom_tooltip = flavor_sco.1203.tt2
@@ -4384,7 +4384,7 @@ flavor_sco.1300 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					c:SCO = { flavor_sco_1300_valid_inheritance_trigger = yes }
+					c:DUMMY = { flavor_sco_1300_valid_inheritance_trigger = yes }
 				}
 				desc = flavor_sco.1300.desc_england_inherit
 			}
@@ -4398,7 +4398,7 @@ flavor_sco.1300 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -4406,26 +4406,26 @@ flavor_sco.1300 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:SCO
-		c:SCO = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_ruler = yes
 		}
-		ruler ?= { is_close_relative = c:SCO.ruler }
+		ruler ?= { is_close_relative = c:DUMMY.ruler }
 
 		government_type = government_type:monarchy
 
 		OR = {
-			c:SCO = { has_heir = yes }
+			c:DUMMY = { has_heir = yes }
 			root = { has_heir = yes }
 		}
 
 		OR = {
-			c:SCO = { flavor_sco_1300_valid_inheritance_trigger = yes }
+			c:DUMMY = { flavor_sco_1300_valid_inheritance_trigger = yes }
 			root = { flavor_sco_1300_valid_inheritance_trigger = yes }
 		}
 
 		at_war = no
-		c:SCO = { at_war = no }
+		c:DUMMY = { at_war = no }
 
 	}
 
@@ -4437,12 +4437,12 @@ flavor_sco.1300 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		if = {
-			limit = { c:SCO = { flavor_sco_1300_valid_inheritance_trigger = yes } }
-			c:SCO.ruler = { save_scope_as = dying_monarch }
+			limit = { c:DUMMY = { flavor_sco_1300_valid_inheritance_trigger = yes } }
+			c:DUMMY.ruler = { save_scope_as = dying_monarch }
 			ruler = { save_scope_as = target_character }
 		}
 		else = {
-			c:SCO.ruler = { save_scope_as = target_character }
+			c:DUMMY.ruler = { save_scope_as = target_character }
 			ruler = { save_scope_as = dying_monarch }
 		}
 
@@ -4456,7 +4456,7 @@ flavor_sco.1300 = {
 
 		if = {
 			limit = {
-				c:SCO = { flavor_sco_1300_valid_inheritance_trigger = yes }
+				c:DUMMY = { flavor_sco_1300_valid_inheritance_trigger = yes }
 			}
 			set_variable = { name = england_inherit value = 1 }
 			custom_tooltip = flavor_sco.1300.tt1
@@ -4468,7 +4468,7 @@ flavor_sco.1300 = {
 			custom_tooltip = flavor_sco.1300.tt4
 		}
 
-		c:SCO = { trigger_event_silently = { id = flavor_sco.1301 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_sco.1301 days = 0 } }
 
 	}
 
@@ -4505,7 +4505,7 @@ flavor_sco.1301 = {
 
 		if = {
 			limit = {
-				c:ENG = { has_variable = england_inherit }
+				c:DUMMY = { has_variable = england_inherit }
 			}
 			root.ruler = {
 				save_scope_as = dying_monarch
@@ -4514,7 +4514,7 @@ flavor_sco.1301 = {
 					value = 1
 				}
 			}
-			c:ENG.ruler = {
+			c:DUMMY.ruler = {
 				save_scope_as = target_character
 				set_variable = {
 					name = inheriting_monarch
@@ -4523,7 +4523,7 @@ flavor_sco.1301 = {
 			}
 		}
 		else = {
-			c:ENG.ruler = {
+			c:DUMMY.ruler = {
 				save_scope_as = dying_monarch
 				set_variable = {
 					name = dying_monarch
@@ -4547,13 +4547,13 @@ flavor_sco.1301 = {
 
 		set_variable = { name = union_of_the_crowns value = 1 }
 
-		c:ENG = { trigger_event_silently = { id = flavor_eng_diplomacy.1 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.1 days = 0 } }
 
 		custom_tooltip = flavor_sco.1301.tt1
 
 		if = {
 			limit = {
-				c:ENG = { has_variable = england_inherit }
+				c:DUMMY = { has_variable = england_inherit }
 			}
 			add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
 			custom_tooltip = flavor_sco.1301.tt2
@@ -4571,7 +4571,7 @@ flavor_sco.1301 = {
 
 		custom_tooltip = flavor_sco.1301.tt4
 
-		c:ENG = { trigger_event_silently = { id = flavor_eng_diplomacy.2 days = 0 } }
+		c:DUMMY = { trigger_event_silently = { id = flavor_eng_diplomacy.2 days = 0 } }
 
 	}
 
@@ -4587,7 +4587,7 @@ flavor_sco.1400 = { #Dunbar Castle
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SBL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -4617,7 +4617,7 @@ flavor_sco.1400 = { #Dunbar Castle
 
 	option = {
 		name = flavor_sco.1400.a
-		c:SCO = { trigger_event_silently = flavor_sco.1401 }
+		c:DUMMY = { trigger_event_silently = flavor_sco.1401 }
 		trigger_event_silently = { id = flavor_sco.1402 days = { 90 120 } }
 		add_country_modifier = { modifier = sco_hostile_dunbar_castle years = -1 mode = add_and_extend }
 		add_prestige = prestige_weak_penalty
@@ -4713,7 +4713,7 @@ flavor_sco.1403 = { #Agnes the Black
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = SCO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -4829,7 +4829,7 @@ flavor_sco.1404 = { #The Fall of Dunbar Castle
 				limit = { has_country_modifier = sco_hostile_dunbar_castle }
 				remove_country_modifier = sco_hostile_dunbar_castle
 			}
-			c:SCO = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_sco.1402 days = { 90 120 } }
 			}
 		}
@@ -4855,13 +4855,13 @@ flavor_sco.1404 = { #The Fall of Dunbar Castle
 #		add_legitimacy = legitimacy_severe_bonus
 #		add_prestige = prestige_severe_bonus
 #		show_as_tooltip = {
-#			c:ENG = {
+#			c:DUMMY = {
 #				add_legitimacy = legitimacy_severe_penalty
 #				add_prestige = prestige_severe_penalty
 #			}
 #		}
 #		hidden_effect = {
-#			c:ENG = { trigger_event_silently = flavor_sco.1501 }
+#			c:DUMMY = { trigger_event_silently = flavor_sco.1501 }
 #		}
 #	}
 #}

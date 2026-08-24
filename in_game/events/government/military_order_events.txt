@@ -27,7 +27,7 @@ military_order_events.1 = {
 		name = military_order_events.1.a #Ask for Infrastructure help
 		
 		set_variable = mil_order_requests_infrastructure
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_non_silently = military_order_events.2 
 		}
 		custom_tooltip = gain_a_tt
@@ -36,7 +36,7 @@ military_order_events.1 = {
 		name = military_order_events.1.b #Ask for Levies or troops
 
 		set_variable = mil_order_requests_warriors_of_faith
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_non_silently = military_order_events.2 
 		}
 		custom_tooltip = gain_b_tt
@@ -45,7 +45,7 @@ military_order_events.1 = {
 		name = military_order_events.1.c #Ask for monetary donations
 
 		set_variable = mil_order_requests_donations
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_non_silently = military_order_events.2 
 		}
 		custom_tooltip = gain_c_tt
@@ -137,7 +137,7 @@ military_order_events.3 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:PAP = {
+		c:DUMMY = {
 			ruler ?= { save_scope_as = target_character_portrait }
 		}
 	}
@@ -164,7 +164,7 @@ military_order_events.3 = {
 			remove_variable = mil_order_requests_warriors_of_faith
 		}
 		else = {
-			add_gold = { value = c:PAP.monthly_income_trade_and_tax multiply = 1 }
+			add_gold = { value = c:DUMMY.monthly_income_trade_and_tax multiply = 1 }
 			add_country_modifier = {
 				modifier = foreign_donations_modifier
 				years = 10
@@ -191,7 +191,7 @@ military_order_events.4 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:PAP = {
+		c:DUMMY = {
 			ruler ?= { save_scope_as = target_character_portrait }
 		}
 	}
@@ -200,7 +200,7 @@ military_order_events.4 = {
 		name = military_order_events.4.a
 
 		add_opinion_mutual_effect = {
-			target = c:PAP
+			target = c:DUMMY
 			modifier = opinion_refused_call_for_help_modifier
 		}
 	}
@@ -424,7 +424,7 @@ military_order_events.9 = { #The Banners of KOJremer
 		owns = location:damascus
 		religion = religion:catholic
 		has_reform = government_reform:military_order_reform
-		NOT = { country_exists = c:KOJ }
+		NOT = { country_exists = c:DUMMY }
 	}
 
 	illustration_tags = {
@@ -461,8 +461,8 @@ military_order_events.9 = { #The Banners of KOJremer
 		name = military_order_events.9.c 
 
 		trigger = {
-			country_exists = c:NAP
-			c:NAP = {
+			country_exists = c:DUMMY
+			c:DUMMY = {
 				at_war = no 
 				is_subject = no
 				government_type = government_type:monarchy
@@ -475,17 +475,17 @@ military_order_events.9 = { #The Banners of KOJremer
 			limit = {
 				province_definition = province_definition:filastin_province
 			}
-			change_location_owner = c:NAP
+			change_location_owner = c:DUMMY
 		}
 		add_opinion = {
 			modifier = restored_title_of_jerusalem_modifier
-			target = c:NAP
+			target = c:DUMMY
 		}
 
 
 		reverse_add_opinion = {
 			modifier = restored_title_of_jerusalem_modifier
-			target = c:NAP
+			target = c:DUMMY
 		}
 
 		add_religious_influence_if_valid = { VALUE = 25 }

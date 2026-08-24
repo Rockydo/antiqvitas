@@ -42,7 +42,7 @@ reformation = {
 					has_building_with_at_least_one_level = university
 					dominant_religion = religion:catholic
 					NOT = { location_key = rome }
-					NOT = { owner = c:PAP }
+					NOT = { owner = c:DUMMY }
 				}
 				weight = {
 					base = 1

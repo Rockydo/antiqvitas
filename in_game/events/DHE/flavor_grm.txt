@@ -18,12 +18,12 @@ flavor_grm.1 = {
 	
 	major_trigger = {
 		OR = {
-			is_neighbor_of = c:GRM
-			is_rival_of = c:GRM
-			is_enemy_of = c:GRM
+			is_neighbor_of = c:DUMMY
+			is_rival_of = c:DUMMY
+			is_enemy_of = c:DUMMY
 			AND = {	#Because they are very relevant but not a neighbor of GRM
-				country_exists = c:AYD
-				this = c:AYD
+				country_exists = c:DUMMY
+				this = c:DUMMY
 			}
 		}
 	}

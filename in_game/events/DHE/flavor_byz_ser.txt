@@ -3,7 +3,7 @@
 scripted_effect append_info_if_SMC_is_player = {
 	if = {
 		limit = {
-			c:SMC = {
+			c:DUMMY = {
 				is_ai = no
 			}
 		}
@@ -19,7 +19,7 @@ flavor_byz_ser.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -31,8 +31,8 @@ flavor_byz_ser.1 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:BYZ
-		country_exists = c:BUL
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 		character:ser_hrelja = {
 			is_alive = yes
 			owner ?= ROOT
@@ -89,30 +89,30 @@ flavor_byz_ser.1 = {
 					this = location:kocani
 				}
 			}
-			change_location_owner = c:SMC
+			change_location_owner = c:DUMMY
 		}
 
-		c:SMC.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = target_character
 		}
-		c:SER = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
-		c:SMC = {
+		c:DUMMY = {
 			save_scope_as = origin_country
 		}
-		c:BYZ = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 		}
-		c:BUL = {
+		c:DUMMY = {
 			save_scope_as = target_country3
 		}
-		c:BYZ = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = flavor_byz_ser.2
 			}
 		}
-		c:SMC = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = flavor_byz_ser.3
 			}
@@ -224,9 +224,9 @@ flavor_byz_ser.4 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:SER
-		country_exists = c:BYZ
-		is_subject_or_below_of = c:SER
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		is_subject_or_below_of = c:DUMMY
 	}
 
 	immediate = {
@@ -237,13 +237,13 @@ flavor_byz_ser.4 = {
 		ruler_or_regent = {
 			save_scope_as = target_character
 		}
-		c:SER = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			ruler_or_regent ?= {
 				save_scope_as = additional_character_for_portrait
 			}
 		}
-		c:BYZ = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 			ruler_or_regent ?= {
 				save_scope_as = additional_character_for_portrait2
@@ -274,13 +274,13 @@ flavor_byz_ser.4 = {
 			add_stability = stability_severe_penalty
 		}
 
-		c:BYZ ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = {
 				id = flavor_byz_ser.5
 			}
 		}
 
-		c:SER ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = {
 				id = flavor_byz_ser.5
 			}
@@ -310,18 +310,18 @@ flavor_byz_ser.4 = {
 
 		show_as_tooltip = {
 			make_subject_of = {
-				target = c:BYZ
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 		}
 
-		c:BYZ ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = {
 				id = flavor_byz_ser.6
 			}
 		}
 
-		c:SER ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = {
 				id = flavor_byz_ser.6
 			}
@@ -376,7 +376,7 @@ flavor_byz_ser.5 = {
 		ai_will_select = { value = 100 }
 
 		annex_country = {
-			country = c:SMC
+			country = c:DUMMY
 			reason = Diplomatic
 		}
 	}

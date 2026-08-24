@@ -29,10 +29,10 @@ claim_french_throne = {
 			}
 		}
 		scope:winner ?= {
-			this = c:ENG
-			NOT = { in_union_with = c:FRA }
+			this = c:DUMMY
+			NOT = { in_union_with = c:DUMMY }
 		}
-		scope:loser ?= c:FRA
+		scope:loser ?= c:DUMMY
 	}
 	allow = {
 		region:france_region = {
@@ -58,20 +58,20 @@ claim_french_throne = {
 	effect = {
 		if = {
 			limit = {
-				c:ENG ?= {
+				c:DUMMY ?= {
 					union ?= {
 						country_has_special_status = {
 							type = special_status:senior_partner
-							country = c:ENG
+							country = c:DUMMY
 						}
 					}
 				}
 			}
-			c:ENG = { create_union = c:FRA }
+			c:DUMMY = { create_union = c:DUMMY }
 		}
 		else = {
-			c:ENG = {
-				create_union = c:FRA
+			c:DUMMY = {
+				create_union = c:DUMMY
 				set_senior_partner = yes
 
 				hidden_effect = {
@@ -79,14 +79,14 @@ claim_french_throne = {
 						add_policy_to_international_organization = policy:union_establish_seniority_policy
 						international_organization_add_special_status = {
 							type = special_status:senior_partner
-							country = c:ENG
+							country = c:DUMMY
 						}
 					}
 				}
 			}
 		}
 
-		c:FRA = { change_heir_selection = c:ENG.succession_law }
+		c:DUMMY = { change_heir_selection = c:DUMMY.succession_law }
 	}
 
 	ai_desire = {

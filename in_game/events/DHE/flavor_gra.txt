@@ -10,12 +10,12 @@ flavor_gra.1 = {
 		religion.group = religion_group:muslim
 		NOT = {
 			has_variable = received_granada_refugees
-			country_exists = c:GRA
+			country_exists = c:DUMMY
 		}
 		num_of_ports > 5
-		country_exists = c:CAS
+		country_exists = c:DUMMY
 		location:granada = {
-			owner = c:CAS
+			owner = c:DUMMY
 		}
 		current_year < 1550
 		
@@ -68,12 +68,12 @@ flavor_gra.1 = {
 		}
 		
 		add_prestige = prestige_weak_bonus
-		c:CAS = { add_opinion = { target = root  modifier = opinion_mildly_displeased } }
+		c:DUMMY = { add_opinion = { target = root  modifier = opinion_mildly_displeased } }
 	}
 	option = {
 		name = flavor_gra.1.b
 		add_prestige = prestige_severe_penalty
-		c:CAS = { add_opinion = { target = root  modifier = opinion_pleased } }
+		c:DUMMY = { add_opinion = { target = root  modifier = opinion_pleased } }
 	}
 }
 
@@ -85,7 +85,7 @@ flavor_gra.2 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = GRA
+		tag = DUMMY
 		monthly_chance = 5
 	}
 	
@@ -118,7 +118,7 @@ flavor_gra.3 = { #Plea for Ottoman support
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = GRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -128,10 +128,10 @@ flavor_gra.3 = { #Plea for Ottoman support
 	
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:CAS
+		country_exists = c:DUMMY
 		any_current_war = {
 			any_defender = { this = root }
-			any_attacker = { this = c:CAS }
+			any_attacker = { this = c:DUMMY }
 		}
 		ruler_or_heir_if_regent ?= { 
 			exists = dynasty
@@ -157,8 +157,8 @@ flavor_gra.3 = { #Plea for Ottoman support
 			}
 		}
 		trigger_else = {
-			country_exists = c:TUR
-			c:TUR ?= {
+			country_exists = c:DUMMY
+			c:DUMMY ?= {
 				at_war = no
 				OR = {
 					religion = root.religion
@@ -192,7 +192,7 @@ flavor_gra.3 = { #Plea for Ottoman support
 			situation:rise_of_the_ottomans.var:strongest_beylik_variable = { save_scope_as = helper_country }
 		}
 		else = { 
-			c:TUR = { save_scope_as = helper_country }
+			c:DUMMY = { save_scope_as = helper_country }
 		}
 		
 	}
@@ -262,7 +262,7 @@ flavor_gra.5 = {
 	historical_info = flavor_mam.33.historical_info
 	
 	dynamic_historical_event = {
-		tag = GRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10

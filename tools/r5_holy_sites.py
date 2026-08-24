@@ -90,7 +90,12 @@ def installed_site_files() -> set[str]:
 
 def action_bytes() -> bytes:
     source = game_root() / "in_game/common/generic_actions/autocephalous_patriarchates.txt"
-    rendered, definitions = render_quarantine(source, "generic_actions", "potential")
+    rendered, definitions = render_quarantine(
+        source,
+        "generic_actions",
+        "potential",
+        preserve_generic_registry=True,
+    )
     if definitions != 5:
         raise ValueError(f"expected five patriarchate action adapters, found {definitions}")
     return rendered

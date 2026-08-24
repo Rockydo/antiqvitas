@@ -8,7 +8,7 @@ flavor_lub.1 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = LUB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -17,7 +17,7 @@ flavor_lub.1 = {
 	trigger = {
 		current_date > 476.9.4
 		has_advance = castle_advance
-		c:HSA = { has_advance = hsa_hanseatic_fortifications }
+		c:DUMMY = { has_advance = hsa_hanseatic_fortifications }
 		capital = { 
 			has_building = building_type:castle 
 			OR = {
@@ -35,7 +35,7 @@ flavor_lub.1 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
 		capital = { save_scope_as = target_location }
-		c:HSA = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 		save_scope_as = target_country2
 	}
 
@@ -61,17 +61,17 @@ flavor_lub.1 = {
 		name = flavor_lub.1.b
 
 		trigger = { 
-			capital = c:HSA.capital 
+			capital = c:DUMMY.capital 
 			NOR = {
-				is_rival_of = c:HSA
-				is_enemy_of = c:HSA
-				is_at_war_with = c:HSA
+				is_rival_of = c:DUMMY
+				is_enemy_of = c:DUMMY
+				is_at_war_with = c:DUMMY
 			}
 			capital = {
 				NOT = { has_building = building_type:hsa_burgtor }
 			}
 		}
-		c:HSA = { trigger_event_non_silently = flavor_lub.2 }
+		c:DUMMY = { trigger_event_non_silently = flavor_lub.2 }
 	}
 
 	option = {
@@ -102,15 +102,15 @@ flavor_lub.2 = {
 		
 		transfer_yearly_gold = {
 			value = 0.5
-			target = c:LUB
+			target = c:DUMMY
 		}
-		c:LUB.capital = {
+		c:DUMMY.capital = {
 			construct_building = {
 				building_type = building_type:hsa_burgtor
 			}
 			change_prosperity = prosperity_severe_bonus
 		}
-		c:LUB = { 
+		c:DUMMY = { 
 			trigger_event_non_silently = flavor_lub.3
 			set_variable = hsa_accepted_variable
 		}
@@ -130,7 +130,7 @@ flavor_lub.2 = {
 	option = {
 		name = flavor_lub.2.b
 
-		c:LUB = { 
+		c:DUMMY = { 
 			trigger_event_non_silently = flavor_lub.3
 			set_variable = hsa_refused_variable
 		}

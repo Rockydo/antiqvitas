@@ -10,7 +10,7 @@ flavor_fra.1 = { # Birth of a Permanent Taxation System
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -71,7 +71,7 @@ flavor_fra.2 = { # The Anjou Claim to Naples
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -84,8 +84,8 @@ flavor_fra.2 = { # The Anjou Claim to Naples
 			has_ruler = yes
 			has_regent = yes
 		}
-		country_exists = c:NAP
-		c:NAP = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_ruler = yes
 			ruler ?= {
 				OR = {
@@ -108,7 +108,7 @@ flavor_fra.2 = { # The Anjou Claim to Naples
 				NOT = { has_member = root }
 			}
 		}
-		NOT = { in_union_with = c:NAP }
+		NOT = { in_union_with = c:DUMMY }
 	}
 
 	illustration_tags = {
@@ -122,7 +122,7 @@ flavor_fra.2 = { # The Anjou Claim to Naples
         ruler_or_regent ?= {
             save_scope_as = ruler_fra
         }
-        c:NAP = {
+        c:DUMMY = {
             ruler ?= {
                 save_scope_as = ruler_nap
             }
@@ -133,7 +133,7 @@ flavor_fra.2 = { # The Anjou Claim to Naples
 		name = flavor_fra.2.a
 		historical_option = yes
 		add_casus_belli = {
-			target = c:NAP
+			target = c:DUMMY
 			type = casus_belli:cb_claim_throne
 			character = scope:ruler_fra
 		}
@@ -177,7 +177,7 @@ flavor_fra.3 = { # Seizure of the Guilds
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -224,7 +224,7 @@ flavor_fra.4 = { # Protestant Dissatisfaction in Pau
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -284,7 +284,7 @@ flavor_fra.5 = { # Cardinal Richelieu
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -352,7 +352,7 @@ flavor_fra.6 = {  # Invention of the Table Knife
 	}
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -392,7 +392,7 @@ flavor_fra.7 = { # The Fronde in France
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -474,7 +474,7 @@ flavor_fra.8 = { # Academie Française
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_books.dds"
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -524,7 +524,7 @@ flavor_fra.9 = { # Colbertism
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -569,7 +569,7 @@ flavor_fra.9 = { # Colbertism
 		name = flavor_fra.9.a
 		historical_option = yes
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		add_country_modifier = { modifier = fra_colbertism years = 15 mode = add }
 		change_societal_value = { type = land_vs_naval	value = societal_value_large_move_to_right	}
@@ -578,7 +578,7 @@ flavor_fra.9 = { # Colbertism
 	option = {
 		name = flavor_fra.9.b
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		add_country_modifier = { modifier = fra_colbertism_economic_focus years = 15 mode = add }
 		change_societal_value = { type = mercantilism_vs_free_trade value = societal_value_minor_move_to_left }
@@ -608,7 +608,7 @@ flavor_fra.10 = { # The Commissioning of Versailles
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -642,12 +642,12 @@ flavor_fra.10 = { # The Commissioning of Versailles
 
 scripted_trigger valid_french_target_location = {
 	dominant_culture.language = culture:french.language
-	country_exists = c:FRA
+	country_exists = c:DUMMY
 	NOT = {
-		owner ?= c:FRA
+		owner ?= c:DUMMY
 	}
 	any_neighbor_location = {
-		owner ?= c:FRA
+		owner ?= c:DUMMY
 	}
 }
 
@@ -661,7 +661,7 @@ flavor_fra.11 = { # Chambers of Reunion
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -683,7 +683,7 @@ flavor_fra.11 = { # Chambers of Reunion
 		current_date > 476.9.4
 		any_neighbor_country = {
 			NOT = {
-				is_subject_of = c:FRA
+				is_subject_of = c:DUMMY
 			}
 			any_owned_location = {
 				valid_french_target_location = yes
@@ -699,7 +699,7 @@ flavor_fra.11 = { # Chambers of Reunion
 		every_neighbor_country = {
 			limit = {
 				NOT = {
-					is_subject_of = c:FRA
+					is_subject_of = c:DUMMY
 				}
 				any_owned_location = {
 					valid_french_target_location = yes
@@ -713,7 +713,7 @@ flavor_fra.11 = { # Chambers of Reunion
 					}
 					max = 1
 					order_by = population
-					c:FRA = { add_casus_belli =  { type = casus_belli:cb_conquer_province target = prev.owner province = prev.province } }
+					c:DUMMY = { add_casus_belli =  { type = casus_belli:cb_conquer_province target = prev.owner province = prev.province } }
 				}
 			}
 		}
@@ -747,7 +747,7 @@ flavor_fra.12 = { # Plight of the Lutherans
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -846,7 +846,7 @@ flavor_fra.13 = { # Calvinists expelled from France
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -945,7 +945,7 @@ flavor_fra.14 = { # Charles-François de Broglie
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -996,7 +996,7 @@ flavor_fra.14 = { # Charles-François de Broglie
 		historical_option = yes
 		add_country_modifier = { modifier = fra_la_secret_roy_network years = 10 mode = add }
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 	}
 
@@ -1004,7 +1004,7 @@ flavor_fra.14 = { # Charles-François de Broglie
 		name = flavor_fra.14.b
 		add_country_modifier = { modifier = fra_la_secret_roy_network_reduced years = 10 mode = add }
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 	}
 }
@@ -1019,7 +1019,7 @@ flavor_fra.15 = { # André-Hercule de Fleury
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -1059,7 +1059,7 @@ flavor_fra.15 = { # André-Hercule de Fleury
 		name = flavor_fra.15.a
 		historical_option = yes
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		scope:target_character = {
 			add_character_modifier = {
@@ -1084,7 +1084,7 @@ flavor_fra.16 = { # Machault's 5 Percent tax
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 8
@@ -1127,7 +1127,7 @@ flavor_fra.16 = { # Machault's 5 Percent tax
 		custom_tooltip = unlocks_machault_tax_reforms
 		add_policy = policy:no_five_percent_tax
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		add_estate_satisfaction = {
 			type = estate_type:clergy_estate
@@ -1143,7 +1143,7 @@ flavor_fra.16 = { # Machault's 5 Percent tax
 		custom_tooltip = unlocks_machault_tax_reforms
 		add_policy = policy:five_percent_tax
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		add_estate_satisfaction = {
 			type = estate_type:clergy_estate
@@ -1167,7 +1167,7 @@ flavor_fra.17 = { # Turgot's Economic Reforms
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 7
@@ -1211,7 +1211,7 @@ flavor_fra.17 = { # Turgot's Economic Reforms
 		name = flavor_fra.17.a
 		historical_option = yes
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		add_country_modifier = { modifier = turgots_economic_reforms years = 10 mode = add }
 		random_list = {
@@ -1225,7 +1225,7 @@ flavor_fra.17 = { # Turgot's Economic Reforms
 	option = {
 		name = flavor_fra.17.b
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		add_stability = stability_mild_bonus
 	}
@@ -1241,7 +1241,7 @@ flavor_fra.18 = { # Necker announces the Budget Deficit
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1286,7 +1286,7 @@ flavor_fra.18 = { # Necker announces the Budget Deficit
 		name = flavor_fra.18.b
 		historical_option = yes
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		add_country_modifier = { modifier = necker_reforms years = 10 mode = add }
 	}
@@ -1312,7 +1312,7 @@ flavor_fra.19 = { # The Eden Agreement
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1332,22 +1332,22 @@ flavor_fra.19 = { # The Eden Agreement
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:ENG
-		NOT = {	is_at_war_with = c:ENG	}
+		country_exists = c:DUMMY
+		NOT = {	is_at_war_with = c:DUMMY	}
 		character:eng_william_pitt_the_younger ?= { is_alive = yes }
 	}
 
 	option = {
 		name = flavor_fra.19.a
 		historical_option = yes
-		c:ENG = { add_prestige = prestige_mild_bonus add_opinion = { target = root modifier = the_eden_agreement } }
+		c:DUMMY = { add_prestige = prestige_mild_bonus add_opinion = { target = root modifier = the_eden_agreement } }
 		add_country_modifier = { modifier = fra_eden_agreement years = 10 mode = add }
-		c:ENG = { add_country_modifier = { modifier = fra_eden_agreement_eng years = 10 mode = add } }
+		c:DUMMY = { add_country_modifier = { modifier = fra_eden_agreement_eng years = 10 mode = add } }
 	}
 	option = {
 		name = flavor_fra.19.b
 		add_prestige = prestige_extreme_bonus
-		c:ENG = { add_opinion = { target = root modifier = refusal_of_the_eden_agreement }	}
+		c:DUMMY = { add_opinion = { target = root modifier = refusal_of_the_eden_agreement }	}
 	}
 }
 
@@ -1360,7 +1360,7 @@ flavor_fra.20 = { # Rousseau Publishes 'The Social Contract'
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 75
@@ -1424,18 +1424,18 @@ flavor_fra.21 = { # Voltaire 'Philosophical Letters'
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					country_exists = c:ENG
+					country_exists = c:DUMMY
 					NOT = {
-						country_exists = c:GBR
+						country_exists = c:DUMMY
 					}
 				}
 				desc = flavor_fra.21.desc
 			}
 			triggered_desc = {
 				trigger = {
-					country_exists = c:GBR
+					country_exists = c:DUMMY
 					NOT = {
-						country_exists = c:ENG
+						country_exists = c:DUMMY
 					}
 				}
 				desc = flavor_fra.21.desc_GBR
@@ -1443,8 +1443,8 @@ flavor_fra.21 = { # Voltaire 'Philosophical Letters'
 			triggered_desc = { # Fallback if cases such as Scotland forming GBR
 				trigger = {
 					AND = {
-						country_exists = c:GBR
-						country_exists = c:ENG
+						country_exists = c:DUMMY
+						country_exists = c:DUMMY
 					}
 				}
 				desc = flavor_fra.21.desc_GBR
@@ -1457,7 +1457,7 @@ flavor_fra.21 = { # Voltaire 'Philosophical Letters'
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -1467,8 +1467,8 @@ flavor_fra.21 = { # Voltaire 'Philosophical Letters'
 		current_date > 476.9.4
 		owns = location:paris
 		OR = {
-			country_exists = c:ENG
-			country_exists = c:GBR
+			country_exists = c:DUMMY
+			country_exists = c:DUMMY
 		}
 	}
 
@@ -1525,7 +1525,7 @@ flavor_fra.22 = { # Montesquieu publishes 'The spirit of laws'
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -1592,7 +1592,7 @@ flavor_fra.23 = { # René Descartes
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 7
@@ -1627,7 +1627,7 @@ flavor_fra.23 = { # René Descartes
 		name = flavor_fra.23.a
 		add_research_progress = research_progress_extreme_bonus
 		scope:target_character = {
-            move_country = c:FRA
+            move_country = c:DUMMY
         }
 	}
 	trigger = {
@@ -1663,7 +1663,7 @@ flavor_fra.24 = { # Samuel de Champlain and the Hurons
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 8
@@ -1690,14 +1690,14 @@ flavor_fra.24 = { # Samuel de Champlain and the Hurons
 		any_other_country = {
 			is_huron_country = yes
 			capital = {
-				is_discovered_by = c:FRA
+				is_discovered_by = c:DUMMY
 			}
 		}
 
 		any_other_country = {
 			is_iroquois_country = yes
 			capital = {
-				is_discovered_by = c:FRA
+				is_discovered_by = c:DUMMY
 			}
 		}
 
@@ -1712,10 +1712,10 @@ flavor_fra.24 = { # Samuel de Champlain and the Hurons
 			limit = {
 				is_huron_country = yes
 				capital = {
-					is_discovered_by = c:FRA
+					is_discovered_by = c:DUMMY
 				}
 			}
-			add_opinion = { target = c:FRA modifier = samuel_de_champlain }
+			add_opinion = { target = c:DUMMY modifier = samuel_de_champlain }
 		}
 	}
 	option = {
@@ -1724,10 +1724,10 @@ flavor_fra.24 = { # Samuel de Champlain and the Hurons
 			limit = {
 				is_iroquois_country = yes
 				capital = {
-					is_discovered_by = c:FRA
+					is_discovered_by = c:DUMMY
 				}
 			}
-			add_opinion = { target = c:FRA modifier = samuel_de_champlain }
+			add_opinion = { target = c:DUMMY modifier = samuel_de_champlain }
 		}
 	}
 }
@@ -1871,7 +1871,7 @@ flavor_fra.1001 = { # The Reappropriation of Templar Lands
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1939,7 +1939,7 @@ flavor_fra.1002 = { # The Mongoosing of Robert the Third
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -1949,9 +1949,9 @@ flavor_fra.1002 = { # The Mongoosing of Robert the Third
 		current_date > 476.9.4
 		character:eng_robert_iii_artois ?= {
 			is_alive = yes
-			owner = c:ENG
+			owner = c:DUMMY
 		}
-		country_exists = c:ENG
+		country_exists = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -1968,11 +1968,11 @@ flavor_fra.1002 = { # The Mongoosing of Robert the Third
 		name = flavor_fra.1002.b
 		historical_option = yes
 
-		c:ENG = {
+		c:DUMMY = {
 			trigger_event_silently = flavor_fra.1003
 			show_as_tooltip = {
 				add_spy_network = {
-					target = c:FRA
+					target = c:DUMMY
 					value = 25
 				}
 			}
@@ -1989,7 +1989,7 @@ flavor_fra.1002 = { # The Mongoosing of Robert the Third
 			target = scope:robert_d_artois
 			reason = assassination
 		}
-		c:ENG = {
+		c:DUMMY = {
 			trigger_event_silently = flavor_fra.1003
 			show_as_tooltip = {
 				add_opinion = {
@@ -2031,7 +2031,7 @@ flavor_fra.1003 = { # The Mongoosing of Robert the Third - DYNAMIC Notification 
 		trigger = { character:eng_robert_iii_artois ?= { is_alive = no } }
 
 		add_opinion = {
-			target = c:FRA
+			target = c:DUMMY
 			modifier = opinion_angry
 		}
 	}
@@ -2042,7 +2042,7 @@ flavor_fra.1003 = { # The Mongoosing of Robert the Third - DYNAMIC Notification 
 		trigger = { character:eng_robert_iii_artois ?= { is_alive = yes } }
 
 		add_spy_network = {
-			target = c:FRA
+			target = c:DUMMY
 			value = 25
 		}
 	}
@@ -2062,7 +2062,7 @@ flavor_fra.1008 = { # St. Guinefort's Day
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2156,7 +2156,7 @@ flavor_fra.1009 = { # Charivari Against *Anyone*
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2272,7 +2272,7 @@ flavor_fra.1015 = { # Jacquerie
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2448,7 +2448,7 @@ flavor_fra.1016 = { # Ordinance of Normandy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2500,7 +2500,7 @@ flavor_fra.1017 = { # Gabelle
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -2556,7 +2556,7 @@ flavor_fra.1020 = { # Roman Law
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2604,7 +2604,7 @@ flavor_fra.1023 = { # Found the Franc
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2683,7 +2683,7 @@ flavor_fra.1100 = { # Princes of the Blood ### For Appanages
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2721,10 +2721,10 @@ flavor_fra.1100 = { # Princes of the Blood ### For Appanages
 		}
 		every_country = {
 			limit = {
-				is_subject_of = c:FRA
+				is_subject_of = c:DUMMY
 				has_reform = government_reform:french_appanage_reform
 			}
-			add_opinion = { target = c:FRA modifier = opinion_fra_appanage_status_quo }
+			add_opinion = { target = c:DUMMY modifier = opinion_fra_appanage_status_quo }
 		}
 		ai_chance = {
 			base = 60
@@ -2743,10 +2743,10 @@ flavor_fra.1100 = { # Princes of the Blood ### For Appanages
 		}
 		every_country = {
 			limit = {
-				is_subject_of = c:FRA
+				is_subject_of = c:DUMMY
 				has_reform = government_reform:french_appanage_reform
 			}
-			add_opinion = { target = c:FRA modifier = opinion_fra_appanage_lavish_gifts }
+			add_opinion = { target = c:DUMMY modifier = opinion_fra_appanage_lavish_gifts }
 		}
 		ai_chance = {
 			base = 20
@@ -2763,10 +2763,10 @@ flavor_fra.1100 = { # Princes of the Blood ### For Appanages
 		}
 		every_country = {
 			limit = {
-				is_subject_of = c:FRA
+				is_subject_of = c:DUMMY
 				has_reform = government_reform:french_appanage_reform
 			}
-			add_opinion = { target = c:FRA modifier = opinion_fra_rein_in_appanages }
+			add_opinion = { target = c:DUMMY modifier = opinion_fra_rein_in_appanages }
 		}
 		ai_chance = {
 			base = 20
@@ -2952,10 +2952,10 @@ flavor_fra.1102 = { # Annexation of an Appanage
 		}
 		every_country = {
 			limit = {
-				is_subject_of = c:FRA
+				is_subject_of = c:DUMMY
 				has_reform = government_reform:french_appanage_reform
 			}
-			add_opinion = { target = c:FRA modifier = opinion_fra_annexed_appanage }
+			add_opinion = { target = c:DUMMY modifier = opinion_fra_annexed_appanage }
 		}
 		ai_chance = {
 			base = 1
@@ -2971,7 +2971,7 @@ flavor_fra.1103 = { # Consolidation of Appanage Lands
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -2994,7 +2994,7 @@ flavor_fra.1103 = { # Consolidation of Appanage Lands
 		current_date > 476.9.4
 		has_reform = government_reform:french_feudal_nobility
 		has_ruler = yes
-		c:FRA = {
+		c:DUMMY = {
 			any_subject = {
 				is_subject_type = appanage
 				count < 1
@@ -3033,7 +3033,7 @@ flavor_fra.1110 = { # General Estates Halt Support
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3043,8 +3043,8 @@ flavor_fra.1110 = { # General Estates Halt Support
 		current_date > 476.9.4
 		war_exhaustion >= 10.00
 		OR = {
-			has_truce_with = c:ENG
-			is_at_war_with = c:ENG
+			has_truce_with = c:DUMMY
+			is_at_war_with = c:DUMMY
 		}
 	}
 
@@ -3101,7 +3101,7 @@ flavor_fra.1120 = { # Fouage Tax
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -3209,7 +3209,7 @@ flavor_fra.1121 = { # Rumors of Revolt in Tuchin
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3218,7 +3218,7 @@ flavor_fra.1121 = { # Rumors of Revolt in Tuchin
 	trigger = {
 		current_date > 476.9.4
 		owns = location:le_puy
-		is_at_war_with = c:ENG
+		is_at_war_with = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -3274,7 +3274,7 @@ flavor_fra.1122 = { # Harelle and Maillotin Revolts
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -3338,7 +3338,7 @@ flavor_fra.1123 = { # King Abolishes Fouage on Deathbed... but the state ignores
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -3452,7 +3452,7 @@ flavor_fra.1130 = { # Étienne Marcel
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 60
@@ -3486,7 +3486,7 @@ flavor_fra.1130 = { # Étienne Marcel
 			create_in_limbo = yes
 		}
 		scope:etienne_marcel = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 			set_variable = { name = is_etienne_marcel value = 1 }
 			add_character_modifier = {
 				modifier = modifier_etienne_marcel
@@ -3530,7 +3530,7 @@ flavor_fra.1131 = { # The Great Ordinance
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -3621,7 +3621,7 @@ flavor_fra.1132 = { # Marcel Levies power and enacts a Tax Embargo
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -3681,7 +3681,7 @@ flavor_fra.1133 = { # Murder of the Marshals
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = FRA
+        tag = DUMMY
         from = 476.9.4
         to = 476.9.4
         monthly_chance = 75
@@ -3820,7 +3820,7 @@ flavor_fra.1134 = { # Marcel dies
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -3940,7 +3940,7 @@ flavor_fra.1135 = { # A Royal Progress (Tour)
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 33
@@ -4037,7 +4037,7 @@ flavor_fra.1136 = { # Ball of the Burning Men
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -4302,7 +4302,7 @@ flavor_fra.1140 = { # Dream of the Orchard ## Songe du Vergier
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -4374,7 +4374,7 @@ flavor_fra.1150 = { # Western Schism and France
 		ruler_or_regent ?= {
 			save_scope_as = ruler_fra
 		}
-		c:PAP = {
+		c:DUMMY = {
 			ruler_or_regent ?= {
 				save_scope_as = pap_ruler
 			}
@@ -4389,7 +4389,7 @@ flavor_fra.1150 = { # Western Schism and France
 	option = { # Support the Anti=Pope
 		name = flavor_fra.1150.a
 		historical_option = yes
-		add_opinion = { target = c:PAP modifier = opinion_fra_backed_anti_pope }
+		add_opinion = { target = c:DUMMY modifier = opinion_fra_backed_anti_pope }
 		add_country_modifier = { modifier = fra_sided_with_antipope months = 300 mode = add }
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_bonus }
 		ai_chance = {
@@ -4407,7 +4407,7 @@ flavor_fra.1150 = { # Western Schism and France
 			}
 		}
 
-		add_opinion = { target = c:PAP modifier = opinion_fra_accepted_italian_pope }
+		add_opinion = { target = c:DUMMY modifier = opinion_fra_accepted_italian_pope }
 		add_country_modifier = { modifier = fra_accepted_italian_pope months = 300 mode = add }
 		ai_chance = {
 			base = 5
@@ -4436,7 +4436,7 @@ flavor_fra.1160 = { # The Roaming Routiers
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -4450,15 +4450,15 @@ flavor_fra.1160 = { # The Roaming Routiers
 	trigger = {
 		current_date > 476.9.4
 		at_war = no
-		has_truce_with = c:ENG
+		has_truce_with = c:DUMMY
 		can_build_units_of_category = sub_unit_category:army_heavy_infantry #Check that the country can have infantry in the first place for the mercs
 		any_owned_location = {
 			is_capital = no
 			region = region:france_region
 			any_neighbor_location = {
 			   OR = {
-				   owner ?= c:ENG
-				   owner ?= c:AQN
+				   owner ?= c:DUMMY
+				   owner ?= c:DUMMY
 			   }
 			}
 			count > 4
@@ -4479,8 +4479,8 @@ flavor_fra.1160 = { # The Roaming Routiers
 		 		region = region:france_region
 		 		any_neighbor_location = {
 					OR = {
-						owner ?= c:ENG
-						owner ?= c:AQN
+						owner ?= c:DUMMY
+						owner ?= c:DUMMY
 					}
 				}
 		 	}
@@ -4493,8 +4493,8 @@ flavor_fra.1160 = { # The Roaming Routiers
 				this != scope:english_french_flashpoint_1
 		 		any_neighbor_location = {
 					OR = {
-						owner ?= c:ENG
-						owner ?= c:AQN
+						owner ?= c:DUMMY
+						owner ?= c:DUMMY
 					}
 				}
 		 	}
@@ -4508,8 +4508,8 @@ flavor_fra.1160 = { # The Roaming Routiers
 				this != scope:english_french_flashpoint_2
 		 		any_neighbor_location = {
 					OR = {
-						owner ?= c:ENG
-						owner ?= c:AQN
+						owner ?= c:DUMMY
+						owner ?= c:DUMMY
 					}
 				}
 		 	}
@@ -4524,8 +4524,8 @@ flavor_fra.1160 = { # The Roaming Routiers
 				this != scope:english_french_flashpoint_3
 		 		any_neighbor_location = {
 					OR = {
-						owner ?= c:ENG
-						owner ?= c:AQN
+						owner ?= c:DUMMY
+						owner ?= c:DUMMY
 					}
 				}
 		 	}
@@ -4790,7 +4790,7 @@ flavor_fra.1162 = { # Routiers handled
 	}
 	
 	dynamic_historical_event = { # Historically handled by Bertrand du Guesclin 
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -4834,7 +4834,7 @@ flavor_fra.1163 = { # Tard-Venus
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -4844,7 +4844,7 @@ flavor_fra.1163 = { # Tard-Venus
 		current_date > 476.9.4
 		has_ruler = yes
 		is_situation_active = situation:hundred_years_war
-		has_truce_with = c:ENG
+		has_truce_with = c:DUMMY
 		stability < 33
 		area:champagne_area = {
 			any_location_in_area = {
@@ -4959,13 +4959,13 @@ flavor_fra.1170 = { # The Eagle of Brittany
         first_valid = {
             triggered_desc = {
                 trigger = {
-                    country_exists = c:BRI
+                    country_exists = c:DUMMY
                 }
                 desc = flavor_fra.1170.desc
             }
             triggered_desc = {
                 trigger = {
-                    NOT = { country_exists = c:BRI }
+                    NOT = { country_exists = c:DUMMY }
                 }
                 desc = flavor_fra.1170_bri_annexed.desc
             }
@@ -4976,7 +4976,7 @@ flavor_fra.1170 = { # The Eagle of Brittany
 	fire_only_once = yes
    
     dynamic_historical_event = {
-        tag = FRA
+        tag = DUMMY
         from = 476.9.4
         to = 476.9.4
         monthly_chance = 25
@@ -4988,10 +4988,10 @@ flavor_fra.1170 = { # The Eagle of Brittany
     	current_date > 476.9.4
 		has_ruler = yes
 		OR = {
-			NOT = { country_exists = c:BRI }
+			NOT = { country_exists = c:DUMMY }
 			AND = {
-				country_exists = c:BRI
-				c:BRI ?= {
+				country_exists = c:DUMMY
+				c:DUMMY ?= {
 					has_ruler = yes
 				}
 			}
@@ -5020,12 +5020,12 @@ flavor_fra.1170 = { # The Eagle of Brittany
         }
 		if = {
 			limit = {
-				country_exists = c:BRI
-				c:BRI ?= {
+				country_exists = c:DUMMY
+				c:DUMMY ?= {
 					has_ruler = yes
 				}
 			}
-			c:BRI = {
+			c:DUMMY = {
 				ruler_or_regent ?= {
 					save_scope_as = bri_ruler
 				}
@@ -5040,7 +5040,7 @@ flavor_fra.1170 = { # The Eagle of Brittany
         name = flavor_fra.1170.a
         add_army_tradition = army_tradition_extreme_bonus
         scope:bertrand_guesclin = {
-            move_country = c:FRA
+            move_country = c:DUMMY
         }
         scope:bertrand_guesclin = {
             add_character_modifier = {
@@ -5058,9 +5058,9 @@ flavor_fra.1170 = { # The Eagle of Brittany
     option = { # Bertrand is needed more in Brittany
         name = flavor_fra.1170.b
         scope:bertrand_guesclin = {
-            move_country = c:BRI
+            move_country = c:DUMMY
         }
-        add_opinion = { target = c:BRI modifier = opinion_allowed_bertrand_to_remain }
+        add_opinion = { target = c:DUMMY modifier = opinion_allowed_bertrand_to_remain }
         ai_chance = {
             base = 5
         }
@@ -5087,7 +5087,7 @@ flavor_fra.1171 = { ## Guesclin's Fabian Strategy
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -5152,7 +5152,7 @@ flavor_fra.1172 = { # The Title of Constable
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -5223,7 +5223,7 @@ flavor_fra.1173 = { # Guesclin Proposes Naval Raids
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -5240,7 +5240,7 @@ flavor_fra.1173 = { # Guesclin Proposes Naval Raids
 		ruler ?= {
             save_scope_as = fra_ruler
         }
-		c:ENG ?= {
+		c:DUMMY ?= {
 			save_scope_as = english_nation
         }
 		character:bertrand_guesclin ?= {
@@ -5275,7 +5275,7 @@ flavor_fra.1174 = { # Naval raids successful
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 60
@@ -5290,22 +5290,22 @@ flavor_fra.1174 = { # Naval raids successful
 		}
 		character:bertrand_guesclin ?= { is_alive = yes }
 		navy_size_percentage >= 0.75
-		country_exists = c:ENG
-		is_at_war_with = c:ENG
+		country_exists = c:DUMMY
+		is_at_war_with = c:DUMMY
 		is_situation_active = situation:hundred_years_war
-		c:ENG ?= {
+		c:DUMMY ?= {
 			has_ruler = yes
 		}
 		area:home_counties_area = {
 			any_location_in_area = {
-				owner ?= c:ENG
+				owner ?= c:DUMMY
 				is_coastal = yes
 				count > 4
 			}
 		}
 		area:west_country_area = {
 			any_location_in_area = {
-				owner ?= c:ENG
+				owner ?= c:DUMMY
 				is_coastal = yes
 				count > 4
 			}
@@ -5313,7 +5313,7 @@ flavor_fra.1174 = { # Naval raids successful
 	}
 
 	immediate = {
-        c:ENG ?= {
+        c:DUMMY ?= {
 			save_scope_as = english_nation
             ruler ?= {
                 save_scope_as = ruler_eng
@@ -5325,7 +5325,7 @@ flavor_fra.1174 = { # Naval raids successful
 		area:home_counties_area = {
 			ordered_location_in_area = {
 				limit = {
-					owner ?= c:ENG
+					owner ?= c:DUMMY
 					is_coastal = yes
 				}
 				order_by = development
@@ -5334,7 +5334,7 @@ flavor_fra.1174 = { # Naval raids successful
 			}
 			ordered_location_in_area = {
 				limit = {
-					owner ?= c:ENG
+					owner ?= c:DUMMY
 					is_coastal = yes
 				}
 				order_by = development
@@ -5345,7 +5345,7 @@ flavor_fra.1174 = { # Naval raids successful
 		area:west_country_area = {
 			ordered_location_in_area = {
 				limit = {
-					owner ?= c:ENG
+					owner ?= c:DUMMY
 					is_coastal = yes
 				}
 				order_by = development
@@ -5354,7 +5354,7 @@ flavor_fra.1174 = { # Naval raids successful
 			}
 			ordered_location_in_area = {
 				limit = {
-					owner ?= c:ENG
+					owner ?= c:DUMMY
 					is_coastal = yes
 				}
 				order_by = development
@@ -5368,7 +5368,7 @@ flavor_fra.1174 = { # Naval raids successful
 
 	option = { # This shall help stall any further English invasions
 		name = flavor_fra.1174.a
-		c:ENG ?= {
+		c:DUMMY ?= {
 			add_country_modifier = { modifier = fra_raids_against_english_ports_supply_debuff years = 5 mode = add }
 		}
 		custom_tooltip = {
@@ -5422,7 +5422,7 @@ flavor_fra.1175 = { # Disloyalty in Normandy
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -5435,14 +5435,14 @@ flavor_fra.1175 = { # Disloyalty in Normandy
 			text = variable_tt_norman_lords_disloyal
 			has_variable = norman_lords_disloyal
 		}
-		country_exists = c:NRM
-		c:NRM ?= {
-			is_subject_of = c:FRA
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
+			is_subject_of = c:DUMMY
 		}
 		OR = {
-			is_rival_of = c:ENG
-			c:ENG = {
-				is_rival_of = c:FRA
+			is_rival_of = c:DUMMY
+			c:DUMMY = {
+				is_rival_of = c:DUMMY
 				is_independent_or_autonomous_subject = yes
 			}
 		}
@@ -5455,10 +5455,10 @@ flavor_fra.1175 = { # Disloyalty in Normandy
             save_scope_as = fra_ruler
         }
 		set_variable = { name = disloyal_normandy_fired value = 1 }
-		c:NRM ?= {
+		c:DUMMY ?= {
 			save_scope_as = norman_nation
 		}
-		c:ENG ?= {
+		c:DUMMY ?= {
 			save_scope_as = english_nation
 		}
 	}
@@ -5472,7 +5472,7 @@ flavor_fra.1175 = { # Disloyalty in Normandy
 		name = flavor_fra.1175.a
 		historical_option = yes
 		add_stability = stability_mild_bonus
-		c:NRM = {
+		c:DUMMY = {
 			add_country_modifier = { modifier = fra_disloyal_norman_lords years = 10 mode = add }
 		}
 		custom_tooltip = normandy_event_chain_reward
@@ -5482,7 +5482,7 @@ flavor_fra.1175 = { # Disloyalty in Normandy
 		name = flavor_fra.1175.b
 		add_legitimacy = legitimacy_mild_penalty
 		add_country_modifier = { modifier = fra_appeasing_norman_lords years = 10 mode = add }
-		c:NRM = {
+		c:DUMMY = {
 			add_country_modifier = { modifier = fra_disloyal_norman_lords_appeased years = 10 mode = add }
 		}
 		custom_tooltip = normandy_event_chain_reward
@@ -5497,7 +5497,7 @@ flavor_fra.1176 = { # Consolidating the Norman Domain
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -5510,10 +5510,10 @@ flavor_fra.1176 = { # Consolidating the Norman Domain
 			has_variable = disloyal_normandy_fired
 		}
 		has_ruler = yes
-		country_exists = c:NRM
-		c:NRM ?= {
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
 			NOT = { has_country_modifier = fra_nrm_seeking_support_abroad }
-			is_subject_of = c:FRA
+			is_subject_of = c:DUMMY
 			subject_loyalty > 85
 			num_locations < 30
 		}
@@ -5524,7 +5524,7 @@ flavor_fra.1176 = { # Consolidating the Norman Domain
 		ruler ?= {
             save_scope_as = fra_ruler
         }
-		c:NRM ?= {
+		c:DUMMY ?= {
 			save_scope_as = norman_nation
 		}
 	}
@@ -5541,11 +5541,11 @@ flavor_fra.1176 = { # Consolidating the Norman Domain
 			type = centralization_vs_decentralization
 			value = societal_value_minor_move_to_left
 		}
-		annex_country = { country = c:NRM }
+		annex_country = { country = c:DUMMY }
 		hidden_effect = {
-			c:NRM = {
+			c:DUMMY = {
 				every_core_location = {
-					add_core = c:FRA
+					add_core = c:DUMMY
 					change_integration_level = core
 				}
 			}
@@ -5555,7 +5555,7 @@ flavor_fra.1176 = { # Consolidating the Norman Domain
 	option = {
 		name = flavor_fra.1176.b
 		add_legitimacy = legitimacy_mild_bonus
-		c:NRM = {
+		c:DUMMY = {
 			add_country_modifier = { modifier = fra_loyal_nrm_lands years = 25 mode = add }
 		}
 	}
@@ -5574,7 +5574,7 @@ flavor_fra.1177 = { # Norman Lords Swear Fealty to England
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 22
@@ -5587,18 +5587,18 @@ flavor_fra.1177 = { # Norman Lords Swear Fealty to England
 			has_variable = disloyal_normandy_fired
 		}
 		has_ruler = yes
-		country_exists = c:NRM
-		c:NRM ?= {
-			is_subject_of = c:FRA
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
+			is_subject_of = c:DUMMY
 			subject_loyalty < 5
 		}
-		c:ENG ?= {
+		c:DUMMY ?= {
 			has_ruler = yes
 		}
 		OR = {
-			is_rival_of = c:ENG
-			c:ENG = {
-				is_rival_of = c:FRA
+			is_rival_of = c:DUMMY
+			c:DUMMY = {
+				is_rival_of = c:DUMMY
 				is_independent_or_autonomous_subject = yes
 			}
 		}
@@ -5610,7 +5610,7 @@ flavor_fra.1177 = { # Norman Lords Swear Fealty to England
 		root = {
 			save_scope_as = french_nation
 		}
-        c:ENG ?= {
+        c:DUMMY ?= {
 			save_scope_as = english_nation
             ruler ?= {
                 save_scope_as = ruler_eng
@@ -5619,7 +5619,7 @@ flavor_fra.1177 = { # Norman Lords Swear Fealty to England
 		ruler ?= {
             save_scope_as = fra_ruler
         }
-		c:NRM ?= {
+		c:DUMMY ?= {
 			save_scope_as = norman_nation
 			create_character = {
 				adm = { 45 72 }
@@ -5645,29 +5645,29 @@ flavor_fra.1177 = { # Norman Lords Swear Fealty to England
 
 	option = { # We will reclaim Normandy and execute the traitors!
 		name = flavor_fra.1177.a
-		c:NRM = {
+		c:DUMMY = {
 			set_variable = new_norman_duke
 			trigger_event_non_silently = flavor_fra_nrm.2
 			make_subject_of = {
-				target = c:ENG
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 		}
 		add_casus_belli =  {
 			type = casus_belli:cb_annex
-			target = c:NRM
+			target = c:DUMMY
 		}
 		if = {
 			limit = {
-				c:NRM ?= {
+				c:DUMMY ?= {
 					num_locations < 30
 				}
 			}
 			custom_tooltip = {
 				text = cores_on_normandy_fra
-				c:NRM ?= {
+				c:DUMMY ?= {
 					every_core_location = {
-						add_core = c:FRA
+						add_core = c:DUMMY
 						change_integration_level = core
 					}
 				}
@@ -5689,7 +5689,7 @@ flavor_fra.1180 = { # Jeanne d'Arc
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -5697,7 +5697,7 @@ flavor_fra.1180 = { # Jeanne d'Arc
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:ENG
+		country_exists = c:DUMMY
 		OR = {
 			has_ruler = yes
 			has_heir = yes
@@ -5717,13 +5717,13 @@ flavor_fra.1180 = { # Jeanne d'Arc
 					}
 				}
 				OR = {
-					attacker_leader = c:ENG
-					defender_leader = c:ENG
+					attacker_leader = c:DUMMY
+					defender_leader = c:DUMMY
 				}
 			}
 			region:france_region = {
 				any_location_in_region = {
-					owner.top_overlord_or_this ?= c:ENG
+					owner.top_overlord_or_this ?= c:DUMMY
 					count > 45
 				}
 			}
@@ -5774,7 +5774,7 @@ flavor_fra.1180 = { # Jeanne d'Arc
 		}
 		add_army_tradition = army_tradition_extreme_bonus
 		character:joan_of_arc = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 			add_character_modifier = {
 				modifier = maid_of_orleans
 				months = 300
@@ -5813,7 +5813,7 @@ flavor_fra.2000 = { # Resurgence against the English ## Based around Joan of Arc
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -5822,12 +5822,12 @@ flavor_fra.2000 = { # Resurgence against the English ## Based around Joan of Arc
  	trigger = {
  		current_date > 476.9.4
 		has_ruler = yes
-		c:ENG ?= {
+		c:DUMMY ?= {
 			has_ruler = yes
 		}
 		region:france_region = {
 			any_location_in_region = {
-				owner.top_overlord_or_this ?= c:ENG
+				owner.top_overlord_or_this ?= c:DUMMY
 				count < 25
 			}
 		}
@@ -5844,7 +5844,7 @@ flavor_fra.2000 = { # Resurgence against the English ## Based around Joan of Arc
         ruler ?= {
             save_scope_as = ruler_fra
         }
-        c:ENG = {
+        c:DUMMY = {
             ruler ?= {
                 save_scope_as = ruler_eng
             }
@@ -5875,7 +5875,7 @@ flavor_fra.2002 = { # Capture of Joan of Arc
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -5898,10 +5898,10 @@ flavor_fra.2002 = { # Capture of Joan of Arc
  	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		character:joan_of_arc = {
-			move_country = c:ENG
+			move_country = c:DUMMY
 			save_scope_as = joan_of_arc
 		}
-		c:ENG = { set_variable = { name = fra_informed_of_joan_capture value = 1 } }
+		c:DUMMY = { set_variable = { name = fra_informed_of_joan_capture value = 1 } }
  	}
 
  	option = { # Horrible
@@ -5920,7 +5920,7 @@ flavor_fra.2003 = { # The Trial of Joan of Arc
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ENG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -5959,12 +5959,12 @@ flavor_fra.2003 = { # The Trial of Joan of Arc
 			reason = execution
 		}
 		add_prestige = prestige_severe_bonus
-		reverse_add_opinion = { target = c:FRA modifier = opinion_fra_executed_jeanne_d_arc }
+		reverse_add_opinion = { target = c:DUMMY modifier = opinion_fra_executed_jeanne_d_arc }
 		custom_tooltip = jeanne_d_arc_will_trouble_us_no_further # flavor
 		ai_chance = {
 			base = 75
 		}
-		c:FRA = { set_variable = { name = fra_joan_of_arc_executed value = 1 } trigger_event_non_silently = flavor_fra.2004 }
+		c:DUMMY = { set_variable = { name = fra_joan_of_arc_executed value = 1 } trigger_event_non_silently = flavor_fra.2004 }
 	}
 
  	option = { # Ransom her to the French
@@ -5973,7 +5973,7 @@ flavor_fra.2003 = { # The Trial of Joan of Arc
 		ai_chance = {
 			base = 24
 		}
-		c:FRA = { set_variable = { name = fra_joan_ransom value = 1 } trigger_event_non_silently = flavor_fra.2005 }
+		c:DUMMY = { set_variable = { name = fra_joan_ransom value = 1 } trigger_event_non_silently = flavor_fra.2005 }
  	}
 
  	option = { # Return her to France
@@ -5981,7 +5981,7 @@ flavor_fra.2003 = { # The Trial of Joan of Arc
 		ai_chance = {
 			base = 1
 		}
-		c:FRA = { set_variable = { name = fra_joan_peacefully_released value = 1 } trigger_event_non_silently = flavor_fra.2005 }
+		c:DUMMY = { set_variable = { name = fra_joan_peacefully_released value = 1 } trigger_event_non_silently = flavor_fra.2005 }
  	}
 }
 
@@ -5994,7 +5994,7 @@ flavor_fra.2004 = { # Joan of Arc executed by England
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -6025,12 +6025,12 @@ flavor_fra.2004 = { # Joan of Arc executed by England
 		name = flavor_fra.2004.a
 		add_country_modifier = { modifier = fra_avenge_joan_of_arc years = 10 mode = add }
 		show_as_tooltip = {
-			add_opinion = { target = c:ENG modifier = opinion_fra_executed_jeanne_d_arc }
+			add_opinion = { target = c:DUMMY modifier = opinion_fra_executed_jeanne_d_arc }
 		}
  	}
 
 	after = {
-		c:ENG = {
+		c:DUMMY = {
 			remove_variable = fra_informed_of_joan_capture
 			remove_variable = jeanne_d_arc_captured_eng
 		}
@@ -6046,7 +6046,7 @@ flavor_fra.2005 = { # The Return of Joan of Arc
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -6122,13 +6122,13 @@ flavor_fra.2005 = { # The Return of Joan of Arc
         add_gold = {
             value = -500
         }
-		c:ENG = {
+		c:DUMMY = {
        		add_gold = {
            	  value = 500
        		}
 		}
 		scope:joan_of_arc = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
         ai_chance = {
             base = 65
@@ -6140,7 +6140,7 @@ flavor_fra.2005 = { # The Return of Joan of Arc
 		trigger = {
 			has_variable = fra_joan_ransom
 		}
-		c:ENG = {
+		c:DUMMY = {
 			kill_character = {
 				target = scope:joan_of_arc
 				reason = execution
@@ -6164,7 +6164,7 @@ flavor_fra.2005 = { # The Return of Joan of Arc
 			mode = add
 		}
 		scope:joan_of_arc = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
         ai_chance = {
             base = 85
@@ -6182,7 +6182,7 @@ flavor_fra.2005 = { # The Return of Joan of Arc
 			mode = add
 		}
 		scope:joan_of_arc = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 			remove_character_modifier = maid_of_orleans
 		}
         ai_chance = {
@@ -6190,7 +6190,7 @@ flavor_fra.2005 = { # The Return of Joan of Arc
         }
  	}
 	after = {
-		c:ENG = {
+		c:DUMMY = {
 			remove_variable = fra_informed_of_joan_capture
 			remove_variable = jeanne_d_arc_captured_eng
 		}
@@ -6209,7 +6209,7 @@ flavor_fra.2006 = { # A Contested Succession ## Based around Charles VII 'disinh
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -6217,11 +6217,11 @@ flavor_fra.2006 = { # A Contested Succession ## Based around Charles VII 'disinh
 
  	trigger = {
  		current_date > 476.9.4
-		country_exists = c:ENG
+		country_exists = c:DUMMY
 		region:france_region = {
 			any_location_in_region = {
 				owner ?= {
-					top_overlord_or_this ?= c:ENG
+					top_overlord_or_this ?= c:DUMMY
 				}
 				count > 45
 			}
@@ -6240,7 +6240,7 @@ flavor_fra.2006 = { # A Contested Succession ## Based around Charles VII 'disinh
         ruler ?= {
             save_scope_as = ruler_fra
         }
-        c:ENG = {
+        c:DUMMY = {
             ruler ?= {
                 save_scope_as = ruler_eng
             }
@@ -6281,7 +6281,7 @@ flavor_fra.2007 = { # Prince/Dauphin is crowned King of France
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -6289,7 +6289,7 @@ flavor_fra.2007 = { # Prince/Dauphin is crowned King of France
 
  	trigger = {
  		current_date > 476.9.4
-		country_exists = c:ENG
+		country_exists = c:DUMMY
 		custom_tooltip = {
 			text = variable_tt_french_succession_is_contested
 			has_variable = french_succession_is_contested
@@ -6298,7 +6298,7 @@ flavor_fra.2007 = { # Prince/Dauphin is crowned King of France
 		region:france_region = {
 			any_location_in_region = {
 				owner ?= {
-					top_overlord_or_this ?= c:ENG
+					top_overlord_or_this ?= c:DUMMY
 				}
 				count < 20
 			}
@@ -6407,7 +6407,7 @@ flavor_fra.2010 = { # Jean Bureau
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -6478,7 +6478,7 @@ flavor_fra.2011 = { # The Master Gunner of France
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -6542,7 +6542,7 @@ flavor_fra.2012 = { # Jean de Dunois, the Bastard of Orleans
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -6594,7 +6594,7 @@ flavor_fra.2012 = { # Jean de Dunois, the Bastard of Orleans
  	option = { # Employ him in the French Army
 		name = flavor_fra.2012.a
         scope:target_character = {
-            move_country = c:FRA
+            move_country = c:DUMMY
         }
 		add_army_tradition = army_tradition_mild_bonus
         ai_chance = {
@@ -6622,7 +6622,7 @@ flavor_fra.2013 = { # University of Poitiers
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -6632,7 +6632,7 @@ flavor_fra.2013 = { # University of Poitiers
  		current_date > 476.9.4
 		at_war = no
 		has_ruler = yes
-		c:PAP = {
+		c:DUMMY = {
 			has_ruler = yes
 		}
 		owns = location:poitiers
@@ -6653,7 +6653,7 @@ flavor_fra.2013 = { # University of Poitiers
 		ruler ?= {
             save_scope_as = fra_ruler
         }
-		c:PAP = {
+		c:DUMMY = {
         	ruler ?= {
             	save_scope_as = pap_ruler
         	}
@@ -6700,7 +6700,7 @@ flavor_fra.2014 = { # The Praguerie
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -6799,7 +6799,7 @@ flavor_fra.2020 = { # Jacques Coeur, Master of Mint
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -6842,7 +6842,7 @@ flavor_fra.2020 = { # Jacques Coeur, Master of Mint
 		historical_option = yes
 		add_inflation = inflation_mild_bonus
         scope:target_character = {
-            move_country = c:FRA
+            move_country = c:DUMMY
 			add_character_modifier = {
 				modifier = jacques_coeur_master_of_mint
 				years = modifier_duration_years_long
@@ -6869,7 +6869,7 @@ flavor_fra.2021 = { # Couer and the Royal Expenditure
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -6923,7 +6923,7 @@ flavor_fra.2022 = { # Couer Negotiates with Mamluks Sultans
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -6932,12 +6932,12 @@ flavor_fra.2022 = { # Couer Negotiates with Mamluks Sultans
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:MAM
+		country_exists = c:DUMMY
 		exists = character:jacques_coeur
 		character:jacques_coeur ?= {
 			is_alive = yes
 		}
-		c:MAM ?= {
+		c:DUMMY ?= {
 			has_ruler = yes
 			owns = location:cairo
 		}
@@ -6948,7 +6948,7 @@ flavor_fra.2022 = { # Couer Negotiates with Mamluks Sultans
 		character:jacques_coeur ?= {
 			save_scope_as = target_character
 		}
-		c:MAM ?= {
+		c:DUMMY ?= {
 			save_scope_as = mamluk_country
         	ruler ?= {
             	save_scope_as = mam_ruler
@@ -6972,7 +6972,7 @@ flavor_fra.2022 = { # Couer Negotiates with Mamluks Sultans
 				months = 240
 			}
 		}
-		c:MAM ?= {
+		c:DUMMY ?= {
 			capital.market = {
 				add_temporary_demand = {
 					type = demand:mam_trade_with_france
@@ -7007,7 +7007,7 @@ flavor_fra.2023 = { # Château d'Ainay-le-Vieil by Couer
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -7063,7 +7063,7 @@ flavor_fra.2024 = { # Enterprising Nobles
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -7113,7 +7113,7 @@ flavor_fra.2025 = { # Monopolization of Coeur
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -7193,7 +7193,7 @@ flavor_fra.2030 = { # Rise of Burgundy # Burgundy has grown too strong
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -7201,27 +7201,27 @@ flavor_fra.2030 = { # Rise of Burgundy # Burgundy has grown too strong
 
  	trigger = {
  		current_date > 476.9.4
-		country_exists = c:ENG
-		country_exists = c:BUR
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 		OR = {
 			at_war = no
-			has_truce_with = c:ENG
+			has_truce_with = c:DUMMY
 		}
 		has_ruler = yes
-		c:BUR ?= {
-			is_subject_of = c:FRA
+		c:DUMMY ?= {
+			is_subject_of = c:DUMMY
 			has_ruler = yes
 		}
 		OR = {
 			region:france_region = {
 				any_location_in_region = {
 					owner ?= {
-						top_overlord_or_this ?= c:ENG
+						top_overlord_or_this ?= c:DUMMY
 					}
 					count > 30
 				}
 			}
-			c:BUR ?= {
+			c:DUMMY ?= {
 				subject_loyalty < 25
 				is_independent_or_autonomous_subject = no
 			}
@@ -7235,11 +7235,11 @@ flavor_fra.2030 = { # Rise of Burgundy # Burgundy has grown too strong
 
  	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		cancel_subject = c:BUR	
+		cancel_subject = c:DUMMY	
         ruler ?= {
             save_scope_as = ruler_fra
         }
-        c:BUR = {
+        c:DUMMY = {
             ruler ?= {
                 save_scope_as = ruler_bur
             }
@@ -7251,7 +7251,7 @@ flavor_fra.2030 = { # Rise of Burgundy # Burgundy has grown too strong
 		historical_option = yes
 		add_stability = stability_extreme_penalty
 		custom_tooltip = fra_aggression_towards_burgundy
-		c:BUR = {
+		c:DUMMY = {
 			add_stability = stability_extreme_bonus
 			ruler ?= {
 				add_adm = 15
@@ -7261,7 +7261,7 @@ flavor_fra.2030 = { # Rise of Burgundy # Burgundy has grown too strong
 		}
 		add_casus_belli =  {
 			type = casus_belli:cb_annex
-			target = c:BUR
+			target = c:DUMMY
 		}
         ai_chance = {
             base = 75
@@ -7273,7 +7273,7 @@ flavor_fra.2030 = { # Rise of Burgundy # Burgundy has grown too strong
 		custom_tooltip = fra_neutrality_towards_burgundy
 		add_prestige = prestige_mild_penalty
 		add_stability = stability_mild_penalty
-		c:BUR = {
+		c:DUMMY = {
 			add_stability = stability_extreme_bonus
 			ruler ?= {
 				add_adm = 15
@@ -7296,7 +7296,7 @@ flavor_fra.2031 = { # The League of the Public Weal
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -7332,7 +7332,7 @@ flavor_fra.2031 = { # The League of the Public Weal
 				limit = {
 					has_global_variable = league_of_public_weal_enabled
 					is_subject_type = appanage
-					NOT = { in_union_with = c:FRA }
+					NOT = { in_union_with = c:DUMMY }
 				}
 				trigger_event_silently = flavor_fra.2032
 			}
@@ -7356,7 +7356,7 @@ flavor_fra.2032 = { # The League of Public the Public Weal # For Appanges
 
  	immediate = {	
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:FRA = {
+		c:DUMMY = {
         	ruler ?= {
             	save_scope_as = ruler_fra
         	}
@@ -7399,7 +7399,7 @@ flavor_fra.2033 = { # The League Demands Autonomy!
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -7452,9 +7452,9 @@ flavor_fra.2033 = { # The League Demands Autonomy!
         	ruler ?= {
             	save_scope_as = league_leader_ruler
         	}
-			leave_all_wars_with = c:FRA
+			leave_all_wars_with = c:DUMMY
 			declare_war_with_cb = {
-				target = c:FRA
+				target = c:DUMMY
 				type = casus_belli:cb_league_of_public_weal
 			}
 		}
@@ -7479,7 +7479,7 @@ flavor_fra.2033 = { # The League Demands Autonomy!
 			}
 			every_country = {
 				limit = {
-					is_subject_of = c:FRA
+					is_subject_of = c:DUMMY
 					has_reform = government_reform:french_appanage_reform
 				}
 				add_country_modifier = { modifier = appanage_greater_autonomy years = 15 mode = add }
@@ -7508,10 +7508,10 @@ flavor_fra.2035 = { # Called to Arms by the League of Public Weal
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:FRA = {
+		c:DUMMY = {
 			random_current_war = {
 				limit = {
-					defender_leader = c:FRA
+					defender_leader = c:DUMMY
 					any_war_participant = {
 						has_variable = leader_of_league_of_public_weal
 					}
@@ -7576,7 +7576,7 @@ flavor_fra.2034 = { # Triumph of the League or Triumph of the State
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -7650,7 +7650,7 @@ flavor_fra.2040 = { # The Compagnie d'Ordonnance ## First Standing Army in Europ
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -7729,7 +7729,7 @@ flavor_fra.2041 = { #The Fiscal Prudence of Louis XI (Takes current ruler name)
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -7818,7 +7818,7 @@ flavor_fra.2042 = { # Pragmatic Sanction of Bourges
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -7828,7 +7828,7 @@ flavor_fra.2042 = { # Pragmatic Sanction of Bourges
  		current_date > 476.9.4
 		at_war = no
 		has_ruler = yes
-		c:PAP ?= {
+		c:DUMMY ?= {
 			has_ruler = yes
 		}
  	}
@@ -7843,7 +7843,7 @@ flavor_fra.2042 = { # Pragmatic Sanction of Bourges
 		ruler ?= {
             save_scope_as = fra_ruler
         }
-		c:PAP = {
+		c:DUMMY = {
         	ruler ?= {
             	save_scope_as = pap_ruler
         	}
@@ -7855,7 +7855,7 @@ flavor_fra.2042 = { # Pragmatic Sanction of Bourges
 		historical_option = yes
 		custom_tooltip = fra_may_enact_bourges_sanctions
 		unlock_estate_privilege_effect = { type = fra_papacy_pragmatic_sanctions }
-		add_opinion = { target = c:PAP modifier = fra_avoided_pragmatic_sanctions }
+		add_opinion = { target = c:DUMMY modifier = fra_avoided_pragmatic_sanctions }
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_penalty }
         ai_chance = {
             base = 35
@@ -7866,7 +7866,7 @@ flavor_fra.2042 = { # Pragmatic Sanction of Bourges
 		name = flavor_fra.2042.b
 		unlock_estate_privilege_effect = { type = fra_papacy_pragmatic_sanctions }
 		grant_estate_privilege = estate_privilege:fra_papacy_pragmatic_sanctions
-		add_opinion = { target = c:PAP modifier = fra_pragmatic_sanctions }
+		add_opinion = { target = c:DUMMY modifier = fra_pragmatic_sanctions }
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_extreme_bonus }
         ai_chance = {
             base = 65
@@ -7884,7 +7884,7 @@ flavor_fra.2043 = { # Expansion of the Royal Postal roads
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -7957,7 +7957,7 @@ flavor_fra.2044 = { # Coaching Inns # 'Postal' inns created during the reign of 
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -8031,7 +8031,7 @@ flavor_fra.2050 = { # Succession Crisis in Brittany
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -8053,7 +8053,7 @@ flavor_fra.2050 = { # Succession Crisis in Brittany
 				}
 			}
 		}
-		c:BRI ?= {
+		c:DUMMY ?= {
 			has_ruler = yes
 			has_heir = yes
 			heir = {
@@ -8084,12 +8084,12 @@ flavor_fra.2050 = { # Succession Crisis in Brittany
 
  	immediate = {	
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:BRI = {
+		c:DUMMY = {
 			heir = {
 				save_scope_as = breton_heir_for_marriage
 			}
 		}
-		c:BRI = {
+		c:DUMMY = {
 			ruler ?= {
 				save_scope_as = bri_ruler
 			}
@@ -8125,13 +8125,13 @@ flavor_fra.2050 = { # Succession Crisis in Brittany
 			marry_character = scope:breton_heir_for_marriage
 		}
 		international_organization:hre.leader_country = {
-			add_opinion = { target = c:FRA modifier = opinion_dubious_marriage }
+			add_opinion = { target = c:DUMMY modifier = opinion_dubious_marriage }
 		}
-        c:BRI = {
-            set_new_ruler = c:FRA.ruler
+        c:DUMMY = {
+            set_new_ruler = c:DUMMY.ruler
         }
 		drop_antagonism_bomb = {
-			target = c:BRI.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_forcing_ourselves_on_brittany
 		}
         add_stability = stability_weak_bonus
@@ -8155,13 +8155,13 @@ flavor_fra.2050 = { # Succession Crisis in Brittany
 			marry_character = scope:breton_heir_for_marriage
 		}
 		international_organization:hre.leader_country = {
-			add_opinion = { target = c:FRA modifier = opinion_dubious_marriage }
+			add_opinion = { target = c:DUMMY modifier = opinion_dubious_marriage }
 		}
-        c:BRI = {
-            set_new_ruler = c:FRA.ruler
+        c:DUMMY = {
+            set_new_ruler = c:DUMMY.ruler
         }
 		drop_antagonism_bomb = {
-			target = c:BRI.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_forcing_ourselves_on_brittany
 		}
         ai_chance = {
@@ -8175,13 +8175,13 @@ flavor_fra.2050 = { # Succession Crisis in Brittany
 			marry_character = scope:breton_heir_for_marriage
 		}
 		international_organization:hre.leader_country = {
-			add_opinion = { target = c:FRA modifier = opinion_dubious_marriage }
+			add_opinion = { target = c:DUMMY modifier = opinion_dubious_marriage }
 		}
-        c:BRI = {
-            add_opinion = { target = c:FRA modifier = opinion_forced_political_marriage }
+        c:DUMMY = {
+            add_opinion = { target = c:DUMMY modifier = opinion_forced_political_marriage }
         }
 		drop_antagonism_bomb = {
-			target = c:BRI.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_forcing_ourselves_on_brittany
 		}
         ai_chance = {
@@ -8191,9 +8191,9 @@ flavor_fra.2050 = { # Succession Crisis in Brittany
 
  	option = { # This is for Brittany to resolved on its own
 		name = flavor_fra.2050.d
-        c:BRI = {
-            add_opinion = { target = c:FRA modifier = opinion_did_not_influence_succession }
-            add_antagonism = { target = c:FRA modifier = opinion_did_not_influence_succession_antagonism }
+        c:DUMMY = {
+            add_opinion = { target = c:DUMMY modifier = opinion_did_not_influence_succession }
+            add_antagonism = { target = c:DUMMY modifier = opinion_did_not_influence_succession_antagonism }
         }
 		add_legitimacy = legitimacy_mild_penalty
 		add_prestige = prestige_mild_penalty
@@ -8211,7 +8211,7 @@ flavor_fra.2060 = { # A Traveling King/Queen
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -8304,7 +8304,7 @@ flavor_fra.2061 = { # The Shrewd Sibling
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -8375,7 +8375,7 @@ flavor_fra.2062 = { # Legal Reforms of Louis XII
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -8420,7 +8420,7 @@ flavor_fra.2063 = { # Iconography of <current_monarch>
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -8489,7 +8489,7 @@ flavor_fra.2064 = { # Estates-General bestow ruler title 'Father/Mother of the P
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -8558,7 +8558,7 @@ flavor_fra.2100 = { # The Affairs of Italy
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -8610,7 +8610,6 @@ flavor_fra.2100 = { # The Affairs of Italy
  	option = { # These states would be better served under our protection # Domineering
 		name = flavor_fra.2100.c
 		custom_tooltip = lower_cooldown_campaign_in_italy_tt
-		set_variable = { name = lower_cooldown_campaign_in_italy_variable value = yes years = 20 }
 		ai_chance = {
 			factor = 0.33
 		}
@@ -8627,7 +8626,7 @@ flavor_fra.2101 = { # Milanese ruler Extends Friendship
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -8663,7 +8662,7 @@ flavor_fra.2101 = { # Milanese ruler Extends Friendship
         ruler_or_regent ?= {
             save_scope_as = ruler_fra
         }
-        c:MLO = {
+        c:DUMMY = {
             ruler_or_regent ?= {
                 save_scope_as = ruler_mlo
             }
@@ -8674,12 +8673,12 @@ flavor_fra.2101 = { # Milanese ruler Extends Friendship
 		name = flavor_fra.2101.a
 		historical_option = yes
 		add_opinion_mutual_effect = {
-			target = c:MLO
+			target = c:DUMMY
 			modifier = opinion_milanese_close_ties
 		}
 		if = {
 			limit = {
-				c:MLO = {
+				c:DUMMY = {
 					NOR = {
 						is_member_of_international_organization = international_organization:foreign_league_hre
 						is_member_of_international_organization = international_organization:foreign_league_france
@@ -8690,7 +8689,7 @@ flavor_fra.2101 = { # Milanese ruler Extends Friendship
 					}
 				}
 			}
-			international_organization:foreign_league_france = { add_country_to_international_organization = c:MLO }
+			international_organization:foreign_league_france = { add_country_to_international_organization = c:DUMMY }
 		}
 		ai_chance = {
 			factor = 0.7
@@ -8699,12 +8698,12 @@ flavor_fra.2101 = { # Milanese ruler Extends Friendship
 
  	option = { # Agree to a cordial relationship but short of an alliance
 		trigger = {
-			NOT = { is_allied_with = { target = c:MLO } }
+			NOT = { is_allied_with = { target = c:DUMMY } }
 		}
 		name = flavor_fra.2101.b
 		add_stability = stability_mild_bonus
-		add_opinion = { target = c:MLO modifier = opinion_milanese_cordial_ties }
-		reverse_add_opinion = { target = c:MLO modifier = opinion_milanese_cordial_ties }
+		add_opinion = { target = c:DUMMY modifier = opinion_milanese_cordial_ties }
+		reverse_add_opinion = { target = c:DUMMY modifier = opinion_milanese_cordial_ties }
 		ai_chance = {
 			factor = 0.25
 		}
@@ -8712,7 +8711,7 @@ flavor_fra.2101 = { # Milanese ruler Extends Friendship
 
  	option = { # Sforza and Milanese affairs do not align with France
 		name = flavor_fra.2101.c
-		reverse_add_opinion = { target = c:MLO modifier = opinion_milan_scorned }
+		reverse_add_opinion = { target = c:DUMMY modifier = opinion_milan_scorned }
 		add_prestige = prestige_mild_bonus
 		ai_chance = {
 			factor = 0.05
@@ -8729,7 +8728,7 @@ flavor_fra.2102 = { # Milan requests aid against Naples
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -8743,18 +8742,18 @@ flavor_fra.2102 = { # Milan requests aid against Naples
 			text = variable_tt_france_italian_interests
 			has_variable = france_italian_interests
 		}
-		is_allied_with = { target = c:MLO }
+		is_allied_with = { target = c:DUMMY }
 		custom_tooltip = {
 			text = variable_tt_nap_fra_event_fired
 			NOT = { has_variable = nap_fra_event_fired }
 		}
-		c:MLO ?= {
+		c:DUMMY ?= {
 			OR = {
 				has_ruler = yes
 				has_regent = yes
 			}
 		}
-		c:NAP ?= {
+		c:DUMMY ?= {
 			OR = {
 				has_ruler = yes
 				has_regent = yes
@@ -8768,7 +8767,7 @@ flavor_fra.2102 = { # Milan requests aid against Naples
 					this = international_organization:italian_league_2
 					this = international_organization:italian_league_1
 				}
-				NOT = { has_member = c:MLO }
+				NOT = { has_member = c:DUMMY }
 			}
 		}
  	}
@@ -8784,12 +8783,12 @@ flavor_fra.2102 = { # Milan requests aid against Naples
         ruler ?= {
             save_scope_as = ruler_fra
         }
-        c:MLO = {
+        c:DUMMY = {
             ruler ?= {
                 save_scope_as = ruler_mlo
             }
         }
-        c:NAP = {
+        c:DUMMY = {
             ruler ?= {
                 save_scope_as = ruler_nap
             }
@@ -8800,17 +8799,17 @@ flavor_fra.2102 = { # Milan requests aid against Naples
 		name = flavor_fra.2102.a
 		historical_option = yes
 		drop_antagonism_bomb = {
-			target = c:NAP.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_pressed_claim
 			value = 15
 		}
 		add_casus_belli = {
-			target = c:NAP
+			target = c:DUMMY
 			type = casus_belli:cb_claim_throne
 			character = scope:ruler_fra
 		}
-		add_opinion = { target = c:NAP modifier = fra_claimed_naples }
-		add_opinion = { target = c:MLO modifier = opinion_came_to_our_aid_mlo }
+		add_opinion = { target = c:DUMMY modifier = fra_claimed_naples }
+		add_opinion = { target = c:DUMMY modifier = opinion_came_to_our_aid_mlo }
 		ai_chance = {
 			factor = 0.65
 		}
@@ -8819,12 +8818,12 @@ flavor_fra.2102 = { # Milan requests aid against Naples
  	option = { # Our pact with Sforza remains purely a defensive one
 		name = flavor_fra.2102.b
 		drop_antagonism_bomb = {
-			target = c:NAP.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_renounced_claim
 			value = -2
 		}
-		add_opinion = { target = c:NAP modifier = opinion_ignored_our_ambitions }
-		add_opinion = { target = c:MLO modifier = opinion_declined_invasion_of_naples }
+		add_opinion = { target = c:DUMMY modifier = opinion_ignored_our_ambitions }
+		add_opinion = { target = c:DUMMY modifier = opinion_declined_invasion_of_naples }
 		ai_chance = {
 			factor = 0.1
 		}
@@ -8834,15 +8833,15 @@ flavor_fra.2102 = { # Milan requests aid against Naples
 		name = flavor_fra.2102.c
 		add_prestige = prestige_mild_penalty
 		add_stability = stability_mild_bonus
-		add_opinion = { target = c:NAP modifier = opinion_ignored_our_ambitions }
-		add_opinion = { target = c:MLO modifier = opinion_abandoned_us_mlo }
+		add_opinion = { target = c:DUMMY modifier = opinion_ignored_our_ambitions }
+		add_opinion = { target = c:DUMMY modifier = opinion_abandoned_us_mlo }
 		if = {
 			limit = {
-				is_allied_with = { target = c:MLO }
+				is_allied_with = { target = c:DUMMY }
 			}
 			remove_relation = {
-				first = c:FRA
-				second = c:MLO
+				first = c:DUMMY
+				second = c:DUMMY
 				type = relation_type:alliance
 			}
 		}
@@ -8862,7 +8861,7 @@ flavor_fra.2103 = { # The Neapolitan Aftermath
 	historical_info = flavor_fra.2103.historical_info
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -8875,11 +8874,11 @@ flavor_fra.2103 = { # The Neapolitan Aftermath
 			text = variable_tt_france_italian_interests
 			has_variable = france_italian_interests
 		}
-		c:NAP ?= {
-			in_union_with = c:FRA
+		c:DUMMY ?= {
+			in_union_with = c:DUMMY
 		}
 		has_ruler = yes
-		c:MLO ?= {
+		c:DUMMY ?= {
 			has_ruler = yes
 			at_war = no
 		}
@@ -8893,10 +8892,10 @@ flavor_fra.2103 = { # The Neapolitan Aftermath
  	immediate = {	
 		event_illustration_estate_background_effect = { background = estate_type:nobles_estate }
 		set_variable = { name = naples_under_france value = 1 }
-		c:NAP = {
+		c:DUMMY = {
 			save_scope_as = naples_treasury
 		}
-        c:MLO = {
+        c:DUMMY = {
             ruler ?= {
                 save_scope_as = ruler_mlo
             }
@@ -8927,38 +8926,38 @@ flavor_fra.2103 = { # The Neapolitan Aftermath
 						NOT = { has_member = root }
 					}
 					capital.region = region:italy_region
-					NOT = { is_subject_of = c:FRA }
-					NOT = { is_allied_with = { target = c:FRA } }
+					NOT = { is_subject_of = c:DUMMY }
+					NOT = { is_allied_with = { target = c:DUMMY } }
 					NOT = { tag = MLO }
 				}
-				add_opinion = { target = c:FRA modifier = opinion_fra_aggressive_entrance_into_italy }
+				add_opinion = { target = c:DUMMY modifier = opinion_fra_aggressive_entrance_into_italy }
 			}
 		}
 		hidden_effect = {
 			every_known_country = {
 				limit = {
 					capital.region = region:italy_region
-					NOT = { is_subject_of = c:FRA }
-					is_allied_with = { target = c:FRA }
+					NOT = { is_subject_of = c:DUMMY }
+					is_allied_with = { target = c:DUMMY }
 					NOT = { tag = MLO }
 				}
-				add_opinion = { target = c:FRA modifier = opinion_fra_allied_aggression_concerns }
+				add_opinion = { target = c:DUMMY modifier = opinion_fra_allied_aggression_concerns }
 			}
 		}
 		if = {
 			limit = {
-				is_allied_with = { target = c:MLO }
-				c:MLO = {
+				is_allied_with = { target = c:DUMMY }
+				c:DUMMY = {
 					is_ai = yes
 				}
 			}
 			remove_relation = {
-				first = c:FRA
-				second = c:MLO
+				first = c:DUMMY
+				second = c:DUMMY
 				type = relation_type:alliance
 			}
-			reverse_add_opinion = { target = c:MLO modifier = opinion_fra_aggressive_entrance_into_italy }
-			add_opinion = { target = c:MLO modifier = opinion_mlo_betrayal }
+			reverse_add_opinion = { target = c:DUMMY modifier = opinion_fra_aggressive_entrance_into_italy }
+			add_opinion = { target = c:DUMMY modifier = opinion_mlo_betrayal }
 		}
 		ai_chance = {
 			factor = 0.7
@@ -8974,7 +8973,7 @@ flavor_fra.2103 = { # The Neapolitan Aftermath
 			value = scope:naples_treasury.monthly_income_trade_and_tax
 			multiply = 12
 		}
-		c:NAP.capital = {
+		c:DUMMY.capital = {
 			change_development = development_mild_penalty
 			change_prosperity = prosperity_radical_penalty
 		}
@@ -8982,51 +8981,51 @@ flavor_fra.2103 = { # The Neapolitan Aftermath
 			every_known_country = {
 				limit = {
 					capital.region = region:italy_region
-					NOT = { is_subject_of = c:FRA }
-					NOT = { is_allied_with = { target = c:FRA } }
+					NOT = { is_subject_of = c:DUMMY }
+					NOT = { is_allied_with = { target = c:DUMMY } }
 					NOT = { tag = MLO }
 				}
-				add_opinion = { target = c:FRA modifier = opinion_fra_aggressive_entrance_into_italy }
+				add_opinion = { target = c:DUMMY modifier = opinion_fra_aggressive_entrance_into_italy }
 			}
 			every_known_country = {
 				limit = {
 					capital.region = region:italy_region
-					NOT = { is_subject_of = c:FRA }
-					is_allied_with = { target = c:FRA }
+					NOT = { is_subject_of = c:DUMMY }
+					is_allied_with = { target = c:DUMMY }
 					NOT = { tag = MLO }
 				}
-				add_opinion = { target = c:FRA modifier = opinion_fra_allied_aggression_concerns }
+				add_opinion = { target = c:DUMMY modifier = opinion_fra_allied_aggression_concerns }
 			}
 		}
 		if = {
 			limit = {
-				is_allied_with = { target = c:MLO }
-				c:MLO = {
+				is_allied_with = { target = c:DUMMY }
+				c:DUMMY = {
 					is_ai = yes
 				}
 			}
 			remove_relation = {
-				first = c:FRA
-				second = c:MLO
+				first = c:DUMMY
+				second = c:DUMMY
 				type = relation_type:alliance
 			}
-			reverse_add_opinion = { target = c:MLO modifier = opinion_fra_aggressive_entrance_into_italy }
-			add_opinion = { target = c:MLO modifier = opinion_mlo_betrayal }
+			reverse_add_opinion = { target = c:DUMMY modifier = opinion_fra_aggressive_entrance_into_italy }
+			add_opinion = { target = c:DUMMY modifier = opinion_mlo_betrayal }
 		}
 		if = {
 			limit = {
 				is_leader_of_international_organization = international_organization:foreign_league_france
-				c:MLO = {
+				c:DUMMY = {
 					is_member_of_international_organization = international_organization:foreign_league_france
 					NOT = {
 						opinion = {
-							target = c:FRA
+							target = c:DUMMY
 							value >= 125
 						}
 					}
 				}
 			}
-			international_organization:foreign_league_france = { remove_country_from_international_organization = c:MLO }
+			international_organization:foreign_league_france = { remove_country_from_international_organization = c:DUMMY }
 		}
 		ai_chance = {
 			factor = 0.25
@@ -9038,11 +9037,11 @@ flavor_fra.2103 = { # The Neapolitan Aftermath
 		custom_tooltip = withdraw_opinion_penalty_increase
 		custom_tooltip = formalize_disabled_tt
 		drop_antagonism_bomb = {
-			target = c:NAP.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_renounced_claim
 			value = -15
 		}
-		c:NAP = {
+		c:DUMMY = {
 			create_character = {
 				estate = estate_type:nobles_estate
 				adm = 50
@@ -9069,27 +9068,27 @@ flavor_fra.2103 = { # The Neapolitan Aftermath
 			every_known_country = {
 				limit = {
 					capital.region = region:italy_region
-					NOT = { is_subject_of = c:FRA }
-					NOT = { is_allied_with = { target = c:FRA } }
+					NOT = { is_subject_of = c:DUMMY }
+					NOT = { is_allied_with = { target = c:DUMMY } }
 					NOT = { tag = MLO }
 				}
-				add_opinion = { target = c:FRA modifier = opinion_fra_aggression_but_withdrew }
+				add_opinion = { target = c:DUMMY modifier = opinion_fra_aggression_but_withdrew }
 			}
 		}
 		if = {
 			limit = {
-				is_allied_with = { target = c:MLO }
-				c:MLO = {
+				is_allied_with = { target = c:DUMMY }
+				c:DUMMY = {
 					is_ai = yes
 				}
 			}
 			remove_relation = {
-				first = c:FRA
-				second = c:MLO
+				first = c:DUMMY
+				second = c:DUMMY
 				type = relation_type:alliance
 			}
-			reverse_add_opinion = { target = c:MLO modifier = opinion_fra_aggression_but_withdrew }
-			add_opinion = { target = c:MLO modifier = opinion_mlo_betrayal }
+			reverse_add_opinion = { target = c:DUMMY modifier = opinion_fra_aggression_but_withdrew }
+			add_opinion = { target = c:DUMMY modifier = opinion_mlo_betrayal }
 		}
 		ai_chance = {
 			factor = 0.05
@@ -9106,7 +9105,7 @@ flavor_fra.2104 = { # The Administration of Naples
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -9120,8 +9119,8 @@ flavor_fra.2104 = { # The Administration of Naples
 		}
 		has_ruler = yes
 		at_war = no
-		c:NAP ?= {
-			in_union_with = c:FRA
+		c:DUMMY ?= {
+			in_union_with = c:DUMMY
 		}
  	}
 
@@ -9142,7 +9141,7 @@ flavor_fra.2104 = { # The Administration of Naples
 		historical_option = yes
 		custom_tooltip = bonuses_will_be_lost_if_broken
 		add_country_modifier = { modifier = fra_aligned_neapolitan_court years = 25 mode = add }
-		c:NAP = { add_country_modifier = { modifier = nap_aligned_neapolitan_court years = 25 mode = add } }
+		c:DUMMY = { add_country_modifier = { modifier = nap_aligned_neapolitan_court years = 25 mode = add } }
 		set_variable = {
 			name = france_naples_union
 			value = 1
@@ -9157,7 +9156,7 @@ flavor_fra.2104 = { # The Administration of Naples
 		name = flavor_fra.2104.b
 		custom_tooltip = bonuses_will_be_lost_if_broken
 		add_country_modifier = { modifier = fra_tight_grip_over_neapolitan_court years = 25 mode = add }
-		c:NAP = { add_country_modifier = { modifier = nap_tight_grip_over_neapolitan_court years = 25 mode = add } }
+		c:DUMMY = { add_country_modifier = { modifier = nap_tight_grip_over_neapolitan_court years = 25 mode = add } }
 		set_variable = {
 			name = france_naples_union
 			value = 1
@@ -9172,7 +9171,7 @@ flavor_fra.2104 = { # The Administration of Naples
 		name = flavor_fra.2104.c
 		custom_tooltip = bonuses_will_be_lost_if_broken
 		add_country_modifier = { modifier = fra_neapolitan_court_autonomy years = 25 mode = add }
-		c:NAP = { add_country_modifier = { modifier = nap_neapolitan_court_autonomy years = 25 mode = add } }
+		c:DUMMY = { add_country_modifier = { modifier = nap_neapolitan_court_autonomy years = 25 mode = add } }
 		set_variable = {
 			name = france_naples_union
 			value = 1
@@ -9193,7 +9192,7 @@ flavor_fra.2105 = { # Campaign for Milan
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -9207,13 +9206,13 @@ flavor_fra.2105 = { # Campaign for Milan
 			has_ruler = yes
 			has_regent = yes
 		}
-		c:MLO ?= {
+		c:DUMMY ?= {
 			OR = {
 				has_ruler = yes
 				has_regent = yes
 			}
 		}
-		c:NAP ?= {
+		c:DUMMY ?= {
 			OR = {
 				in_union_with = root
 				is_subject_of = root
@@ -9235,7 +9234,7 @@ flavor_fra.2105 = { # Campaign for Milan
         ruler_or_regent ?= {
             save_scope_as = ruler_fra
         }
-        c:MLO = {
+        c:DUMMY = {
             ruler_or_regent ?= {
                 save_scope_as = ruler_mlo
             }
@@ -9246,23 +9245,23 @@ flavor_fra.2105 = { # Campaign for Milan
 		name = flavor_fra.2105.a
 		historical_option = yes
 		drop_antagonism_bomb = {
-			target = c:MLO.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_pressed_claim
 			value = 5
 		}
 		add_casus_belli = {
-			target = c:MLO
+			target = c:DUMMY
 			type = casus_belli:cb_claim_throne
 			character = scope:ruler_fra
 		}
 		if = {
 			limit = {
 				is_leader_of_international_organization = international_organization:foreign_league_france
-				c:MLO = {
+				c:DUMMY = {
 					is_member_of_international_organization = international_organization:foreign_league_france
 				}
 			}
-			international_organization:foreign_league_france = { remove_country_from_international_organization = c:MLO }
+			international_organization:foreign_league_france = { remove_country_from_international_organization = c:DUMMY }
 		}
 		ai_chance = {
 			factor = 0.65
@@ -9292,7 +9291,7 @@ flavor_fra.2106 = { # Fate of Milan
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -9300,7 +9299,7 @@ flavor_fra.2106 = { # Fate of Milan
 
  	trigger = {
  		current_date > 476.9.4
-		c:MLO ?= {
+		c:DUMMY ?= {
 			OR = {
 				is_subject_of = root
 				in_union_with = root
@@ -9353,7 +9352,7 @@ flavor_fra.2106 = { # Fate of Milan
 		name = flavor_fra.2106.a
 		historical_option = yes
 		add_legitimacy = legitimacy_mild_bonus
-		c:MLO = {
+		c:DUMMY = {
 			add_trust_equilibrium = {
 				modifier = trust_french_king_duke_of_milan
 				target = root
@@ -9366,15 +9365,15 @@ flavor_fra.2106 = { # Fate of Milan
 
  	option = { # Appoint a close Milanese ally to rule in our favor
 		name = flavor_fra.2106.b
-		c:MLO = { add_country_modifier = { modifier = mlo_french_governance years = 20 mode = add } }
-		c:MLO = {
+		c:DUMMY = { add_country_modifier = { modifier = mlo_french_governance years = 20 mode = add } }
+		c:DUMMY = {
 			add_trust_equilibrium = {
 				modifier = trust_french_mlo_governance
 				target = root
 			}
 		}
 		hidden_effect = {
-			c:MLO = {
+			c:DUMMY = {
 				create_character = {
 					estate = estate_type:nobles_estate
 					adm = { 40 60 }
@@ -9387,15 +9386,15 @@ flavor_fra.2106 = { # Fate of Milan
 		}
 		if = {
 			limit = {
-				c:MLO = {
+				c:DUMMY = {
 					NOT = {
 						is_subject_type  = vassal
 					}
 				}
 			}
-			c:MLO = {
+			c:DUMMY = {
 				make_subject_of = {
-					target = c:FRA
+					target = c:DUMMY
 					type = subject_type:vassal
 				}
 			}
@@ -9412,7 +9411,7 @@ flavor_fra.2106 = { # Fate of Milan
 		name = flavor_fra.2106.c
 		add_legitimacy = legitimacy_mild_bonus
 		add_stability = stability_mild_bonus
-		c:MLO = {
+		c:DUMMY = {
 			create_character = {
 				estate = estate_type:nobles_estate
 				adm = { 32 50 }
@@ -9445,7 +9444,7 @@ flavor_fra.2107 = { # Étienne de Vesc
 	historical_info = flavor_fra.2107.historical_info
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -9495,7 +9494,7 @@ flavor_fra.2107 = { # Étienne de Vesc
  	option = { # Welcome him to the court!
 		name = flavor_fra.2107.a
         scope:target_character = {
-            move_country = c:FRA
+            move_country = c:DUMMY
         }
 		ai_chance = {
 			factor = 0.75
@@ -9524,7 +9523,7 @@ flavor_fra.2108 = { # Gian Giacomo Trivulzio
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -9569,7 +9568,7 @@ flavor_fra.2108 = { # Gian Giacomo Trivulzio
 		name = flavor_fra.2108.a
 		historical_option = yes
         scope:target_character = {
-            move_country = c:FRA
+            move_country = c:DUMMY
         }
 		add_army_tradition = army_tradition_mild_bonus
 		add_gold = -500
@@ -9605,7 +9604,7 @@ flavor_fra.301 = { # [ROOT.GetRuler.GetName] and the Renaissance
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -9678,7 +9677,7 @@ flavor_fra.302 = { # Da Vinci and the Mona Lisa
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -9739,7 +9738,7 @@ flavor_fra.302 = { # Da Vinci and the Mona Lisa
 			add_cultural_influence = cultural_influence_extreme_bonus
 		}
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		scope:mona_lisa_location = {
 			every_work_of_art_in_location = {
@@ -9773,7 +9772,7 @@ flavor_fra.303 = { # François de Moulins de Rochefort and the Education of the 
 	historical_info = flavor_fra.303.historical_info
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -9795,7 +9794,7 @@ flavor_fra.303 = { # François de Moulins de Rochefort and the Education of the 
 
     immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:FRA = {
+		c:DUMMY = {
        		create_character = {
             	first_name = name_francis
             	last_name = de_Rochefort
@@ -9826,7 +9825,7 @@ flavor_fra.303 = { # François de Moulins de Rochefort and the Education of the 
 			add_mil = 5
 		}
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		ai_chance = {
 			factor = 0.25
@@ -9853,7 +9852,7 @@ flavor_fra.304 = { # The Humanist Ideals of Christophe de Longueil
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -9873,7 +9872,7 @@ flavor_fra.304 = { # The Humanist Ideals of Christophe de Longueil
 
     immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:FRA = {
+		c:DUMMY = {
        		create_character = {
             	first_name = name_christopher
             	last_name = de_longueil
@@ -9904,7 +9903,7 @@ flavor_fra.304 = { # The Humanist Ideals of Christophe de Longueil
 			add_trait = trait:tolerant
 		}
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		ai_chance = {
 			factor = 0.9
@@ -9934,7 +9933,7 @@ flavor_fra.305 = { # Renovation of the Louvre Palace
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -10002,7 +10001,7 @@ flavor_fra.306 = { # Expansion of the Fontainebleau Hunting Lodge
 	outcome = neutral
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -10060,7 +10059,7 @@ flavor_fra.307 = { # Guillaume Budé, Humanist Scholar
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -10114,7 +10113,7 @@ flavor_fra.307 = { # Guillaume Budé, Humanist Scholar
 		name = flavor_fra.307.a
 		historical_option = yes
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		show_as_tooltip = {
 			location:paris = {
@@ -10155,7 +10154,7 @@ flavor_fra.308 = { # Heptaméron
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -10258,7 +10257,7 @@ flavor_fra.309 = { # Collège de France
 	image = "gfx/interface/illustrations/institutions/scientific_revolution.dds"
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 33
@@ -10314,7 +10313,7 @@ flavor_fra.310 = { # National Language of France
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 33
@@ -10327,7 +10326,7 @@ flavor_fra.310 = { # National Language of France
 		exists = character:guillaume_bude
 		character:guillaume_bude ?= {
 			is_alive = yes
-			owner ?= c:FRA
+			owner ?= c:DUMMY
 		}
 	}
 
@@ -10377,7 +10376,7 @@ flavor_fra.311 = { # A New World
 	outcome = neutral
 	image = "gfx/interface/illustrations/institutions/new_world.dds"
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -10433,7 +10432,7 @@ flavor_fra.312 = { # Jacques Cartier and the Voyage to the West
 	historical_info = flavor_fra.312.historical_info
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -10513,7 +10512,7 @@ flavor_fra.313 = { # Return of Jacques's Voyage
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -10588,7 +10587,7 @@ flavor_fra.321 = { # The Franco-Turkish Alliance
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -10598,17 +10597,17 @@ flavor_fra.321 = { # The Franco-Turkish Alliance
  		current_date > 476.9.4
 		has_ruler = yes
 		at_war = no
-		NOT = { is_allied_with = { target = c:TUR } }
-		NOT = { is_rival_of = c:TUR	}
+		NOT = { is_allied_with = { target = c:DUMMY } }
+		NOT = { is_rival_of = c:DUMMY	}
 		is_independent_or_autonomous_subject = yes
-		c:TUR = {
+		c:DUMMY = {
 			is_ai = yes
 			AND = {
-				NOT = { is_rival_of = c:FRA	}
+				NOT = { is_rival_of = c:DUMMY	}
 			}
 			is_independent_or_autonomous_subject = yes
 		}
-		country_exists = c:TUR
+		country_exists = c:DUMMY
  	}
 
 	illustration_tags = {
@@ -10621,7 +10620,7 @@ flavor_fra.321 = { # The Franco-Turkish Alliance
         ruler ?= {
             save_scope_as = ruler_fra
         }
-		c:TUR = {
+		c:DUMMY = {
 			ruler ?= {
 				save_scope_as = ruler_tur
 			}
@@ -10632,15 +10631,15 @@ flavor_fra.321 = { # The Franco-Turkish Alliance
 		name = flavor_fra.321.a
 		historical_option = yes
 		add_prestige = prestige_severe_bonus
-		create_alliance = { target = c:TUR }
+		create_alliance = { target = c:DUMMY }
 		custom_tooltip = may_suffer_widespread_condemnation
 		custom_tooltip = fra_may_recieve_benefit_from_alliance # Trade Influence
 		add_opinion = {
-			target = c:TUR
+			target = c:DUMMY
 			modifier = opinion_fra_tur_alliance
 		}
 		reverse_add_opinion = {
-			target = c:TUR
+			target = c:DUMMY
 			modifier = opinion_fra_tur_alliance
 		}
 		ai_chance = {
@@ -10650,11 +10649,11 @@ flavor_fra.321 = { # The Franco-Turkish Alliance
  	option = { # Strive for closer ties, but not a full alliance
 		name = flavor_fra.321.b
 		add_opinion = {
-			target = c:TUR
+			target = c:DUMMY
 			modifier = opinion_fra_tur_relations
 		}
 		reverse_add_opinion = {
-			target = c:TUR
+			target = c:DUMMY
 			modifier = opinion_fra_tur_relations
 		}
 		ai_chance = {
@@ -10679,7 +10678,7 @@ flavor_fra.322 = { # Condemnation across the Catholic World
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -10689,7 +10688,7 @@ flavor_fra.322 = { # Condemnation across the Catholic World
  		current_date > 476.9.4
 		has_ruler = yes
 		at_war = no
-		is_allied_with = { target = c:TUR }
+		is_allied_with = { target = c:DUMMY }
  	}
 
 	illustration_tags = {
@@ -10702,7 +10701,7 @@ flavor_fra.322 = { # Condemnation across the Catholic World
         ruler ?= {
             save_scope_as = ruler_fra
         }
-		c:PAP = {
+		c:DUMMY = {
 			ruler ?= {
 				save_scope_as = ruler_PAP
 			}
@@ -10717,15 +10716,15 @@ flavor_fra.322 = { # Condemnation across the Catholic World
 				religion = religion:catholic
 				is_independent_or_autonomous_subject = yes
 				NOT = {
-					is_subject_of = c:FRA
+					is_subject_of = c:DUMMY
 				}
 				OR = {
 					tag = PAP
-					is_rival_of = c:FRA
-					is_neighbor_of = c:FRA
+					is_rival_of = c:DUMMY
+					is_neighbor_of = c:DUMMY
 				}
 			}
-			add_opinion = { target = c:FRA modifier = opinion_franco_ottoman_alliance }
+			add_opinion = { target = c:DUMMY modifier = opinion_franco_ottoman_alliance }
 		}
  	}
 }
@@ -10739,7 +10738,7 @@ flavor_fra.323 = { # Turkish Alliance yields closer Trade with the Levant
 	outcome = neutral
 	image = "gfx/interface/illustrations/institutions/global_trade.dds"
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -10749,7 +10748,7 @@ flavor_fra.323 = { # Turkish Alliance yields closer Trade with the Levant
  		current_date > 476.9.4
 		has_ruler = yes
 		at_war = no
-		is_allied_with = { target = c:TUR }
+		is_allied_with = { target = c:DUMMY }
  	}
 
 	illustration_tags = {
@@ -10762,7 +10761,7 @@ flavor_fra.323 = { # Turkish Alliance yields closer Trade with the Levant
 
  	option = { # Excellent
 		name = flavor_fra.323.a
-		c:TUR = {
+		c:DUMMY = {
 			capital.market = {
 				add_temporary_demand = {
 					type = demand:tur_trade_with_fra
@@ -10791,7 +10790,7 @@ flavor_fra.330 = { # The Edict of Fontainebleau # Based on Francis I
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -10833,10 +10832,10 @@ flavor_fra.330 = { # The Edict of Fontainebleau # Based on Francis I
 					religion = religion:lutheran
 					is_independent_or_autonomous_subject = yes
 					NOT = {
-						is_subject_of = c:FRA
+						is_subject_of = c:DUMMY
 					}
 				}
-				add_opinion = { target = c:FRA modifier = opinion_protestant_persecution }
+				add_opinion = { target = c:DUMMY modifier = opinion_protestant_persecution }
 			}
 		}
 		ai_chance = {
@@ -10856,10 +10855,10 @@ flavor_fra.330 = { # The Edict of Fontainebleau # Based on Francis I
 					religion = religion:catholic
 					is_independent_or_autonomous_subject = yes
 					NOT = {
-						is_subject_of = c:FRA
+						is_subject_of = c:DUMMY
 					}
 				}
-				add_opinion = { target = c:FRA modifier = opinion_tolerance_to_protestants }
+				add_opinion = { target = c:DUMMY modifier = opinion_tolerance_to_protestants }
 			}
 		}
 		ai_chance = {
@@ -10877,7 +10876,7 @@ flavor_fra.331 = { # The Waldensians of Marindol # Massacre of Merindol #aix-en-
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -10930,7 +10929,7 @@ flavor_fra.332 = { # Rise of the Huguenots (French Calvinists)
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -10971,15 +10970,15 @@ flavor_fra.332 = { # Rise of the Huguenots (French Calvinists)
 				religion = religion:calvinist
 				is_independent_or_autonomous_subject = yes
 				NOT = {
-					is_subject_of = c:FRA
+					is_subject_of = c:DUMMY
 				}
 				OR = {
 					tag = PAP
-					is_rival_of = c:FRA
-					is_neighbor_of = c:FRA
+					is_rival_of = c:DUMMY
+					is_neighbor_of = c:DUMMY
 				}
 			}
-			add_opinion = { target = c:FRA modifier = opinion_fra_persecute_calvinists }
+			add_opinion = { target = c:DUMMY modifier = opinion_fra_persecute_calvinists }
 		}
 		ai_chance = {
 			factor = 0.75
@@ -10997,15 +10996,15 @@ flavor_fra.332 = { # Rise of the Huguenots (French Calvinists)
 				religion = religion:catholic
 				is_independent_or_autonomous_subject = yes
 				NOT = {
-					is_subject_of = c:FRA
+					is_subject_of = c:DUMMY
 				}
 				OR = {
 					tag = PAP
-					is_rival_of = c:FRA
-					is_neighbor_of = c:FRA
+					is_rival_of = c:DUMMY
+					is_neighbor_of = c:DUMMY
 				}
 			}
-			add_opinion = { target = c:FRA modifier = opinion_fra_calvinist_granted_tolerance }
+			add_opinion = { target = c:DUMMY modifier = opinion_fra_calvinist_granted_tolerance }
 		}
 		ai_chance = {
 			factor = 0.25
@@ -11022,7 +11021,7 @@ flavor_fra.333 = { # Edict of Chateaubriant
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11095,7 +11094,7 @@ flavor_fra.340 = { # Rise of the Queen Consort # Catherine de Medici inspired
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11187,7 +11186,7 @@ flavor_fra.341 = { # Declining authority of the Crown
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11252,7 +11251,7 @@ flavor_fra.342 = { # Conspiracy of Amboise
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11293,7 +11292,7 @@ flavor_fra.342 = { # Conspiracy of Amboise
 		every_owned_rural_location = {
 			limit = {
 				region = region:france_region
-				owner ?= c:FRA
+				owner ?= c:DUMMY
 				average_satisfaction < 0.40
 			}
 			every_pop = {
@@ -11345,7 +11344,7 @@ flavor_fra.351 = { # <Ruler> converts to Calvinism
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11442,7 +11441,7 @@ flavor_fra.352 = { # Calvinist Ruler repairs relations with Protestants
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11474,12 +11473,12 @@ flavor_fra.352 = { # Calvinist Ruler repairs relations with Protestants
 			limit = {
 				religion = religion:calvinist
 				is_independent_or_autonomous_subject = yes
-				is_neighbor_of = c:FRA
+				is_neighbor_of = c:DUMMY
 				NOT = {
-					is_subject_of = c:FRA
+					is_subject_of = c:DUMMY
 				}
 			}
-			add_opinion = { target = c:FRA modifier = opinion_fra_calvinist_ruler }
+			add_opinion = { target = c:DUMMY modifier = opinion_fra_calvinist_ruler }
 		}
  	}
 }
@@ -11493,7 +11492,7 @@ flavor_fra.353 = { # Council Demands Conversion # Henry IV reconversion
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11571,7 +11570,7 @@ flavor_fra.354 = { # Maximilen de Bethune # Fianace and Development Minister
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 8
@@ -11617,7 +11616,7 @@ flavor_fra.354 = { # Maximilen de Bethune # Fianace and Development Minister
 		historical_option = yes
 		add_inflation = inflation_mild_bonus
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		ai_chance = {
 			factor = 0.75
@@ -11646,7 +11645,7 @@ flavor_fra.355 = { # Construction of the Pont Neuf # Major bridge for Paris, Boo
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -11730,7 +11729,7 @@ flavor_fra.370 = { # Reapprochment to Colonial Affairs # French Interest in Colo
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -11780,7 +11779,7 @@ flavor_fra.371 = { # Samuel Emerges as a Prominent Explorer
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -11829,7 +11828,7 @@ flavor_fra.371 = { # Samuel Emerges as a Prominent Explorer
 		historical_option = yes
 		add_gold = -250
 		scope:target_character = {
-            move_country = c:FRA
+            move_country = c:DUMMY
 			add_trait = trait:curious_adventurer
         }
 		ai_chance = {
@@ -11841,7 +11840,7 @@ flavor_fra.371 = { # Samuel Emerges as a Prominent Explorer
 		name = flavor_fra.371.b
 		add_prestige = prestige_mild_bonus
 		scope:target_character = {
-            move_country = c:FRA
+            move_country = c:DUMMY
         }
 		ai_chance = {
 			factor = 0.25
@@ -11858,7 +11857,7 @@ flavor_fra.372 = { # The Voyage of François Martin de Vitre # Asian Trade
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -11924,7 +11923,7 @@ flavor_fra.372 = { # The Voyage of François Martin de Vitre # Asian Trade
 			}
 		}
 		scope:target_character = {
-            move_country = c:FRA
+            move_country = c:DUMMY
         }
 		custom_tooltip = fra_ruler_may_become_inspired_french_eoc
 		set_variable = { name = fra_eoc_inspiration value = 1 }
@@ -11955,7 +11954,7 @@ flavor_fra.373 = { # <Monarch> and the East India Company
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -12021,7 +12020,7 @@ flavor_fra.380 = { # Ownership of Inventions # Early Patent laws
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -12079,7 +12078,7 @@ flavor_fra.400 = { # Ballet of the Blackbird Hunt
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -12153,7 +12152,7 @@ flavor_fra.401 = { # Centralization Efforts of Cardinal Richelieu
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -12219,7 +12218,7 @@ flavor_fra.402 = { # Richelieu Supression of the Nobility
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -12295,7 +12294,7 @@ flavor_fra.403 = { # Day of the Dupes # Conflict between Richeliu and the Queen-
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -12404,7 +12403,7 @@ flavor_fra.404 = { # Peace of Alès # Final Hugnuenot peace settlement by Richel
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -12465,7 +12464,7 @@ flavor_fra.405 = { # Richeliu's Military Budget Reforms
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -12533,7 +12532,7 @@ flavor_fra.406 = { # Richelieu Heretic Diplomacy condemned by court officials
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -12594,7 +12593,7 @@ flavor_fra.407 = { # Ordannaces of 1627 # Ingame, this uses the current year ## 
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -12654,7 +12653,7 @@ flavor_fra.408 = { # The Passing of Richelieu
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -12717,7 +12716,7 @@ flavor_fra.410 = { # Divine Right
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -12790,7 +12789,7 @@ flavor_fra.411 = { # The Regency of <Regent_name> and Mazarin
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -12924,7 +12923,7 @@ flavor_fra.412 = { # Suspected Corruption of Nicolas Fouquet
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -13078,7 +13077,7 @@ flavor_fra.413 = { # Taxation of the old Aristocracy
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -13221,7 +13220,7 @@ flavor_fra.414 = { # Michel le Tellier and the Reforming of the French Army
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -13307,7 +13306,7 @@ flavor_fra.415 = { # Grande Ordonnance de Procédure Civil # Code Louis/Unficati
 	image = "gfx/interface/illustrations/government/throne_rooms/throne_room_north_german.dds"
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -13445,7 +13444,7 @@ flavor_fra.416 = { # Grande Ordonnance sur les Colonies of 1685 # Louis attempt 
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -13498,9 +13497,9 @@ scripted_trigger valid_french_lowlands_target_location = {
 		dominant_culture = culture:picard
 		dominant_culture = culture:walloon
 	}
-	country_exists = c:FRA
+	country_exists = c:DUMMY
 	any_neighbor_location = {
-		owner ?= c:FRA
+		owner ?= c:DUMMY
 	}
 }
 
@@ -13512,7 +13511,7 @@ flavor_fra.417 = { # France's Natural Borders # Based on the Wars of Devolution
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -13528,7 +13527,7 @@ flavor_fra.417 = { # France's Natural Borders # Based on the Wars of Devolution
 		}
 		any_neighbor_country = {
 			NOT = {
-				is_subject_of = c:FRA
+				is_subject_of = c:DUMMY
 			}
 			any_owned_location = {
 				valid_french_lowlands_target_location = yes
@@ -13560,7 +13559,7 @@ flavor_fra.417 = { # France's Natural Borders # Based on the Wars of Devolution
 		every_neighbor_country = {
 			limit = {
 				NOT = {
-					is_subject_of = c:FRA
+					is_subject_of = c:DUMMY
 				}
 				any_owned_location = {
 					valid_french_lowlands_target_location = yes
@@ -13574,7 +13573,7 @@ flavor_fra.417 = { # France's Natural Borders # Based on the Wars of Devolution
 					}
 					max = 1
 					order_by = population
-					c:FRA = { add_casus_belli =  { type = casus_belli:cb_conquer_province target = prev.owner province = prev.province } }
+					c:DUMMY = { add_casus_belli =  { type = casus_belli:cb_conquer_province target = prev.owner province = prev.province } }
 				}
 			}
 		}
@@ -13608,7 +13607,7 @@ flavor_fra.418 = { # Reapprochment with the Ottoman Turks
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -13622,11 +13621,11 @@ flavor_fra.418 = { # Reapprochment with the Ottoman Turks
 			text = variable_tt_enable_sun_king_events
 			has_variable = enable_sun_king_events
 		}
-		country_exists = c:TUR
-		c:TUR = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_ai = yes
 		}
-		NOT = { is_allied_with = { target = c:TUR }	}
+		NOT = { is_allied_with = { target = c:DUMMY }	}
  	}
 
 	illustration_tags = {
@@ -13645,11 +13644,11 @@ flavor_fra.418 = { # Reapprochment with the Ottoman Turks
 		name = flavor_fra.418.a
 		historical_option = yes
 		add_opinion = {
-			target = c:TUR
+			target = c:DUMMY
 			modifier = opinion_new_fra_tur_relations
 		}
 		reverse_add_opinion = {
-			target = c:TUR
+			target = c:DUMMY
 			modifier = opinion_new_fra_tur_relations
 		}
 		ai_chance = {
@@ -13674,7 +13673,7 @@ flavor_fra.419 = { # Belligerent Policy of <monarch_name>
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -13751,7 +13750,7 @@ flavor_fra.421 = { # The Nobility and the Palace of Versailies
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -13852,7 +13851,7 @@ flavor_fra.422 = { # Seduction of the Nobility # Permanently weakens the nobilit
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -13916,7 +13915,7 @@ flavor_fra.423 = { # Revoking of Nantes
 	outcome = neutral
 	image = "gfx/interface/illustrations/government/throne_rooms/throne_room_north_german.dds"
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -13982,7 +13981,7 @@ flavor_fra.424 = { # Revocation of Nantes condemed
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -14033,7 +14032,7 @@ flavor_fra.425 = { # Quartering of the Dragoons
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -14097,7 +14096,7 @@ flavor_fra.426 = { # <Monarch> personal patronage of Court Officials
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -14169,7 +14168,7 @@ flavor_fra.427 = { # Revitalization of the Academie Française
 	outcome = neutral
 	image = "gfx/interface/illustrations/institutions/printing_press.dds"
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -14240,7 +14239,7 @@ flavor_fra.428 = { # Academie Royale de Danse and d’Opera # The Opera of Versa
 	outcome = neutral
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -14302,7 +14301,7 @@ flavor_fra.429 = { # A King Without Equal # Gives Sun King/Queen title
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -14393,7 +14392,7 @@ flavor_fra.430 = { # Influence in Indochina # Embassy building
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -14407,7 +14406,7 @@ flavor_fra.430 = { # Influence in Indochina # Embassy building
 			any_present_country = {
 				is_valid_indochina_country = yes
 				capital = {
-					is_discovered_by = c:FRA
+					is_discovered_by = c:DUMMY
 				}
 			}
 		}
@@ -14428,7 +14427,7 @@ flavor_fra.430 = { # Influence in Indochina # Embassy building
 				limit = {
 					is_valid_indochina_country = yes
 					capital = {
-						is_discovered_by = c:FRA
+						is_discovered_by = c:DUMMY
 					}
 				}
 				save_scope_as = indochina_french_sphere
@@ -14446,7 +14445,7 @@ flavor_fra.430 = { # Influence in Indochina # Embassy building
 		historical_option = yes
 		add_opinion = { target = scope:indochina_french_sphere modifier = french_indochina_embassy }
 		scope:indochina_french_sphere = {
-			add_opinion = { target = c:FRA modifier = french_indochina_embassy }
+			add_opinion = { target = c:DUMMY modifier = french_indochina_embassy }
 			add_country_modifier = { modifier = indochina_french_advisors years = 15 mode = add }
 		}
 		ai_chance = {
@@ -14459,7 +14458,7 @@ flavor_fra.430 = { # Influence in Indochina # Embassy building
 		add_opinion = { target = scope:indochina_french_sphere modifier = french_indochina_hostilities }
 		add_casus_belli = {	target = scope:indochina_french_sphere type = casus_belli:cb_annex }
 		scope:indochina_french_sphere = {
-			add_opinion = { target = c:FRA modifier = french_indochina_hostilities }
+			add_opinion = { target = c:DUMMY modifier = french_indochina_hostilities }
 		}
 		ai_chance = {
 			factor = 0.4
@@ -14476,7 +14475,7 @@ flavor_fra.431 = { # Jesuit Missions in China
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -14486,12 +14485,12 @@ flavor_fra.431 = { # Jesuit Missions in China
  		current_date > 476.9.4
 		has_ruler = yes
 		at_war = no
-		country_exists = c:CHI
-		c:CHI = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_ai = yes
 		}
-		has_discovered = c:CHI.capital
-		within_diplomatic_range = c:CHI
+		has_discovered = c:DUMMY.capital
+		within_diplomatic_range = c:DUMMY
  	}
 
 	illustration_tags = {
@@ -14504,7 +14503,7 @@ flavor_fra.431 = { # Jesuit Missions in China
 		ruler ?= {
             save_scope_as = fra_ruler
         }
-		c:CHI = {
+		c:DUMMY = {
 			capital = { save_scope_as = chi_capital_scope }
 		}
 		create_character = {
@@ -14528,7 +14527,7 @@ flavor_fra.431 = { # Jesuit Missions in China
 		name = flavor_fra.431.a
 		historical_option = yes
 		add_religious_influence = religious_influence_mild_bonus
-		scope:target_character = { move_country = c:CHI }
+		scope:target_character = { move_country = c:DUMMY }
 		hidden_effect = {
 			scope:chi_capital_scope = {
 				every_pop = {
@@ -14541,7 +14540,7 @@ flavor_fra.431 = { # Jesuit Missions in China
 		}
 		random_list = {
 			33 = {
-				reverse_add_opinion = { target = c:CHI modifier = french_jesuits_in_our_lands }
+				reverse_add_opinion = { target = c:DUMMY modifier = french_jesuits_in_our_lands }
 			}
 			67 = {
 				custom_tooltip = nothing_happens_with_jesuits
@@ -14573,7 +14572,7 @@ flavor_fra.432 = { # Gift from the Portuguese King # Elephant for Louis XIV
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -14583,8 +14582,8 @@ flavor_fra.432 = { # Gift from the Portuguese King # Elephant for Louis XIV
  		current_date > 476.9.4
 		has_ruler = yes
 		at_war = no
-		country_exists = c:POR
-		c:POR = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_ai = yes
 			has_ruler = yes
 		}
@@ -14600,7 +14599,7 @@ flavor_fra.432 = { # Gift from the Portuguese King # Elephant for Louis XIV
 		ruler ?= {
             save_scope_as = fra_ruler
         }
-		c:POR = {
+		c:DUMMY = {
 			ruler ?= {
             	save_scope_as = por_ruler
         	}
@@ -14614,8 +14613,8 @@ flavor_fra.432 = { # Gift from the Portuguese King # Elephant for Louis XIV
 		culture = {
 			add_cultural_influence = cultural_influence_mild_bonus
 		}
-		add_opinion = { target = c:POR modifier = opinion_portuguese_elephant_gift }
-		reverse_add_opinion = { target = c:POR modifier = opinion_portuguese_elephant_gift }
+		add_opinion = { target = c:DUMMY modifier = opinion_portuguese_elephant_gift }
+		reverse_add_opinion = { target = c:DUMMY modifier = opinion_portuguese_elephant_gift }
 		ai_chance = {
 			factor = 0.8
 		}
@@ -14640,7 +14639,7 @@ flavor_fra.433 = { # Rule by Council
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -14684,7 +14683,7 @@ flavor_fra.440 = { # Vauban ideals
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -14727,7 +14726,7 @@ flavor_fra.440 = { # Vauban ideals
 		name = flavor_fra.440.a
 		historical_option = yes
 		scope:target_character = {
-			move_country = c:FRA
+			move_country = c:DUMMY
             add_character_modifier = {
                 modifier = vauban_engineering
                 years = 25
@@ -14758,7 +14757,7 @@ flavor_fra.441 = { # The Engineering of Vauban
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -14816,7 +14815,7 @@ flavor_fra.460 = { # Introduction of New Court Fasion
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -14871,7 +14870,7 @@ flavor_fra.500 = { # A Return to Form
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -14925,7 +14924,7 @@ flavor_fra.500 = { # A Return to Form
  	option = { # Emulate the Absolutist Ideals of <sun_king>
 		name = flavor_fra.500.b
 		drop_antagonism_bomb = {
-			target = c:FRA.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_more_absolutism
 		}
 		scope:fra_ruler = {
@@ -14950,7 +14949,7 @@ flavor_fra.501 = { # The Absolutist Legacy of <fra_ruler>
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -15042,7 +15041,7 @@ flavor_fra.502 = { # A Visit from the Russian Tsar (Based on historical event)
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -15051,13 +15050,13 @@ flavor_fra.502 = { # A Visit from the Russian Tsar (Based on historical event)
  	trigger = {
  		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:RUS
-		NOT = { is_allied_with = { target = c:RUS } }
-		NOT = { is_rival_of = c:RUS	}
+		country_exists = c:DUMMY
+		NOT = { is_allied_with = { target = c:DUMMY } }
+		NOT = { is_rival_of = c:DUMMY	}
 		is_independent_or_autonomous_subject = yes
-		c:RUS = {
+		c:DUMMY = {
 			has_ruler = yes
-			NOT = { is_rival_of = c:FRA	}
+			NOT = { is_rival_of = c:DUMMY	}
 			is_independent_or_autonomous_subject = yes
 		}
  	}
@@ -15072,7 +15071,7 @@ flavor_fra.502 = { # A Visit from the Russian Tsar (Based on historical event)
 		ruler ?= {
             save_scope_as = fra_ruler
         }
-		c:RUS = {
+		c:DUMMY = {
         	ruler ?= {
             	save_scope_as = rus_ruler
         	}
@@ -15086,9 +15085,9 @@ flavor_fra.502 = { # A Visit from the Russian Tsar (Based on historical event)
 		scope:fra_ruler = {
 			add_dip = 8
         }
-		add_opinion = { target = c:RUS modifier = fra_impressed_russian_tsar }
-		c:RUS = {
-			add_opinion = { target = c:FRA modifier = fra_impressed_russian_tsar }
+		add_opinion = { target = c:DUMMY modifier = fra_impressed_russian_tsar }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = fra_impressed_russian_tsar }
 		}
 		ai_chance = {
 			factor = 0.55
@@ -15102,9 +15101,9 @@ flavor_fra.502 = { # A Visit from the Russian Tsar (Based on historical event)
 		scope:fra_ruler = {
 			add_dip = 8
         }
-		add_opinion = { target = c:RUS modifier = fra_impressed_russian_tsar_quicker_decay }
-		c:RUS = {
-			add_opinion = { target = c:FRA modifier = fra_impressed_russian_tsar_quicker_decay }
+		add_opinion = { target = c:DUMMY modifier = fra_impressed_russian_tsar_quicker_decay }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = fra_impressed_russian_tsar_quicker_decay }
 		}
 		ai_chance = {
 			factor = 0.25
@@ -15117,9 +15116,9 @@ flavor_fra.502 = { # A Visit from the Russian Tsar (Based on historical event)
 			add_mil = 8
 			add_dip = -3
         }
-		c:RUS = {
+		c:DUMMY = {
 			add_casus_belli = {
-				target = c:FRA
+				target = c:DUMMY
 				type = casus_belli:cb_insulted_us
 			}
 		}
@@ -15137,7 +15136,7 @@ flavor_fra.503 = { # Fleury and the King # Advise buff
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -15189,7 +15188,7 @@ flavor_fra.504 = { # The Cartes de Cassini # First Accurate Map of France
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -15237,7 +15236,7 @@ flavor_fra.504 = { # The Cartes de Cassini # First Accurate Map of France
 			add_cultural_influence = cultural_influence_extreme_bonus
 		}
 		scope:target_artist = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 		}
 		location:paris = {
 			create_art = {
@@ -15273,7 +15272,7 @@ flavor_fra.505 = { # <ruler> and the Department of Physics
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -15322,7 +15321,7 @@ flavor_fra.506 = { # <ruler> and the Department of Mechanics
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -15376,7 +15375,7 @@ flavor_fra.507 = { # John Law Stimulation
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -15442,7 +15441,7 @@ flavor_fra.508 = { # General Private Bank # The Banque Generale Privee # John La
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -15452,10 +15451,10 @@ flavor_fra.508 = { # General Private Bank # The Banque Generale Privee # John La
  		current_date > 476.9.4
 		has_ruler = yes
 		exists = character:john_law
-		country_exists = c:FRA
+		country_exists = c:DUMMY
 		character:john_law ?= {
 			is_alive = yes
-			owner ?= c:FRA
+			owner ?= c:DUMMY
 		}
  	}
 
@@ -15509,7 +15508,7 @@ flavor_fra.509 = { # The Banque Generale Invests in the Colonies
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -15530,7 +15529,7 @@ flavor_fra.509 = { # The Banque Generale Invests in the Colonies
 		exists = character:john_law
 		character:john_law ?= {
 			is_alive = yes
-			owner = c:FRA
+			owner = c:DUMMY
 		}
  	}
 
@@ -15582,7 +15581,7 @@ flavor_fra.510 = { # Benefits of the Banque Generale
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -15606,7 +15605,7 @@ flavor_fra.510 = { # Benefits of the Banque Generale
 		exists = character:john_law
 		character:john_law ?= {
 			is_alive = yes
-			owner = c:FRA
+			owner = c:DUMMY
 		}
  	}
 
@@ -15675,7 +15674,7 @@ flavor_fra.511 = { # Collapse of the Banque Royal
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 18
@@ -15781,7 +15780,7 @@ flavor_fra.512 = { # Fallout of John Law
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 75
@@ -15796,7 +15795,7 @@ flavor_fra.512 = { # Fallout of John Law
 		}
 		exists = character:john_law
 		character:john_law ?= {
-			owner = c:FRA
+			owner = c:DUMMY
 			is_alive = yes
 		}
  	}
@@ -15838,7 +15837,7 @@ flavor_fra.520 = { # The Unigenitus and Jansenism
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 40
@@ -15847,8 +15846,8 @@ flavor_fra.520 = { # The Unigenitus and Jansenism
  	trigger = {
  		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:PAP
-		c:PAP = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_ruler = yes
 		}
 		religion = religion:catholic
@@ -15864,7 +15863,7 @@ flavor_fra.520 = { # The Unigenitus and Jansenism
 		ruler ?= {
             save_scope_as = fra_ruler
         }
-		c:PAP = {
+		c:DUMMY = {
         	ruler ?= {
             	save_scope_as = pap_ruler
         	}
@@ -15891,7 +15890,7 @@ flavor_fra.521 = { # Repudition of Jansenism
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -15905,8 +15904,8 @@ flavor_fra.521 = { # Repudition of Jansenism
 			has_variable = janseism_conflict_events
 		}
 		NOT = { has_policy = unigenitus_codified }
-		country_exists = c:PAP
-		c:PAP = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_ruler = yes
 		}
 		religion = religion:catholic
@@ -15922,7 +15921,7 @@ flavor_fra.521 = { # Repudition of Jansenism
 		ruler ?= {
             save_scope_as = fra_ruler
         }
-		c:PAP = {
+		c:DUMMY = {
         	ruler ?= {
             	save_scope_as = pap_ruler
         	}
@@ -15947,7 +15946,7 @@ flavor_fra.521 = { # Repudition of Jansenism
 		add_estate_satisfaction = { type = estate_type:peasants_estate	value = estate_satisfaction_mild_bonus }
 		add_estate_satisfaction = { type = estate_type:burghers_estate	value = estate_satisfaction_mild_bonus }
 		add_estate_satisfaction = { type = estate_type:clergy_estate	value = estate_satisfaction_mild_penalty }
-		c:PAP = { add_opinion = { target = root modifier = fra_weakened_unigenitus_decree }	}
+		c:DUMMY = { add_opinion = { target = root modifier = fra_weakened_unigenitus_decree }	}
 		ai_chance = {
 			factor = 0.3
 		}
@@ -15964,7 +15963,7 @@ flavor_fra.522 = { # Cinquantieme Tax
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -16033,7 +16032,7 @@ flavor_fra.523 = { # Dissent Amongst the Gallicans proponents
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -16047,8 +16046,8 @@ flavor_fra.523 = { # Dissent Amongst the Gallicans proponents
 			has_variable = janseism_conflict_events
 		}
 		NOT = { has_policy = unigenitus_codified }
-		country_exists = c:PAP
-		c:PAP = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_ruler = yes
 		}
 		religion = religion:catholic
@@ -16064,7 +16063,7 @@ flavor_fra.523 = { # Dissent Amongst the Gallicans proponents
 		ruler ?= {
             save_scope_as = fra_ruler
         }
-		c:PAP = {
+		c:DUMMY = {
         	ruler ?= {
             	save_scope_as = pap_ruler
         	}
@@ -16104,7 +16103,7 @@ flavor_fra.524 = { # The Unigenitus Decree
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -16117,8 +16116,8 @@ flavor_fra.524 = { # The Unigenitus Decree
 			text = variable_tt_janseism_conflict_events
 			has_variable = janseism_conflict_events
 		}
-		country_exists = c:PAP
-		c:PAP = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_ruler = yes
 		}
 		religion = religion:catholic
@@ -16134,7 +16133,7 @@ flavor_fra.524 = { # The Unigenitus Decree
 		ruler ?= {
             save_scope_as = fra_ruler
         }
-		c:PAP = {
+		c:DUMMY = {
         	ruler ?= {
             	save_scope_as = pap_ruler
         	}
@@ -16179,7 +16178,7 @@ flavor_fra.524 = { # The Unigenitus Decree
 			remove_country_modifier = fra_gallicans_allies
 		}
 		add_religious_influence = religious_influence_extreme_penalty
-		c:PAP = { add_opinion = { target = root modifier = fra_blocked_unigenitus_implementation }	}
+		c:DUMMY = { add_opinion = { target = root modifier = fra_blocked_unigenitus_implementation }	}
 		if = {
 			limit = {
 				has_variable = no_unigenitus_implementation_will_grant_more_stability
@@ -16210,7 +16209,7 @@ flavor_fra.530 = { # Fleury and the Navy of France
 	outcome = neutral
 	image = "gfx/interface/illustrations/units/navy_light_ship_4.dds"
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -16271,7 +16270,7 @@ flavor_fra.531 = { # Philibert Orry's Balancing of the Budget # Dixieme Tax
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -16351,7 +16350,7 @@ flavor_fra.532 = { # The National Road Network
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -16414,7 +16413,7 @@ flavor_fra.533 = { # Fleury Maritime Growth of France
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -16473,7 +16472,7 @@ flavor_fra.534 = { # End of Fleury Reign # Fleury will be scripted to 'die', alt
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -16554,7 +16553,7 @@ flavor_fra.540 = { # Mézières Royal Engineering School (Founded in Mezieres)
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -16648,7 +16647,7 @@ flavor_fra.541 = { # The École Militaire
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -16702,7 +16701,7 @@ flavor_fra.542 = { # Local Parliaments React to the 5 percent tax # Machault Eve
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -16762,7 +16761,7 @@ flavor_fra.543 = { # Supression of the Jesuits
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -16826,7 +16825,7 @@ flavor_fra.544 = { # Heir Disapproves of the Supression of the Jesuits
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -16889,7 +16888,7 @@ flavor_fra.550 = { # Louvre Museum
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20

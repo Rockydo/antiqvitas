@@ -10,7 +10,7 @@ flavor_nap.3 = { #Renaissance in Naples
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -45,7 +45,7 @@ flavor_nap.4 = { #The Great City of the Baroque
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -91,7 +91,7 @@ flavor_nap.200 = { #The Will of Robert
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -128,7 +128,7 @@ flavor_nap.200 = { #The Will of Robert
 		name = flavor_nap.200.a
 		historical_option = yes
 		change_heir_selection = heir_selection:cognatic_primogeniture
-		c:HUN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
         union ?= {
@@ -140,7 +140,7 @@ flavor_nap.200 = { #The Will of Robert
 	option = {
 		name = flavor_nap.200.b
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_severe_penalty }
-		c:HUN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 		}
 	}
@@ -158,7 +158,7 @@ flavor_nap.201 = { #Neapolitan Laws
 
 	trigger = {
 		current_date > 476.9.4
-		not = { succession_law = c:NAP.succession_law }
+		not = { succession_law = c:DUMMY.succession_law }
 	}
 	
 	illustration_tags = {
@@ -186,7 +186,7 @@ flavor_nap.201 = { #Neapolitan Laws
 		add_prestige = prestige_mild_penalty
 		change_heir_selection = heir_selection:cognatic_primogeniture
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
-		c:NAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 		}
 	}
@@ -194,7 +194,7 @@ flavor_nap.201 = { #Neapolitan Laws
 		name = flavor_nap.201.b
 		add_stability = stability_weak_penalty
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_severe_bonus }
-		c:NAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
 	}
@@ -211,7 +211,7 @@ flavor_nap.210 = { #Charles of Artois
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -279,7 +279,7 @@ flavor_nap.220 = { #The Husband's Crown
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -288,8 +288,8 @@ flavor_nap.220 = { #The Husband's Crown
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:PAP
-		c:PAP = { has_ruler = yes }
+		country_exists = c:DUMMY
+		c:DUMMY = { has_ruler = yes }
 		OR = {
 			and = {
 				ruler ?= character:nap_giovanna_i_anjou
@@ -343,11 +343,11 @@ flavor_nap.220 = { #The Husband's Crown
 		custom_tooltip = flavor_nap.220.a.tt
 
 		add_gold = {
-			value = c:NAP.monthly_income_trade_and_tax
+			value = c:DUMMY.monthly_income_trade_and_tax
 			multiply = -2
 		}
 
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_nap.221  days = 20 }
 		}
 
@@ -355,7 +355,7 @@ flavor_nap.220 = { #The Husband's Crown
 	option = {
 		name = flavor_nap.220.b
 		custom_tooltip = flavor_nap.220.b.tt
-		c:HUN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
 	}
@@ -372,7 +372,7 @@ flavor_nap.221 = { #The Husband's Crown - A Powerless King
 	fire_only_once = yes
 
 	immediate = {
-		c:NAP.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = nap_ruler
 			first_spouse = {
 				save_scope_as = nap_consort
@@ -382,11 +382,11 @@ flavor_nap.221 = { #The Husband's Crown - A Powerless King
 	option = {
 		name = flavor_nap.221.a
 		historical_option = yes
-		c:NAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_jubilee_bad }
 			trigger_event_silently = { id = flavor_nap.223  days = 20 }
 		}
-		c:HUN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
 	}
@@ -394,14 +394,14 @@ flavor_nap.221 = { #The Husband's Crown - A Powerless King
 		name = flavor_nap.221.b
 
 		add_gold = {
-			value = c:NAP.monthly_income_trade_and_tax
+			value = c:DUMMY.monthly_income_trade_and_tax
 			multiply = 2
 		}
-		c:NAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 			trigger_event_silently = { id = flavor_nap.222  days = 20 }
 		}
-		c:HUN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 		}
 	}
@@ -427,7 +427,7 @@ flavor_nap.222 = { #The Wrong is Righted
 	
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:PAP.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = pope_scope
 		}
 	}
@@ -443,7 +443,7 @@ flavor_nap.222 = { #The Wrong is Righted
 		remove_variable = prince_consort_enraged_flag
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_severe_penalty }
 
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 		}
 	}
@@ -469,7 +469,7 @@ flavor_nap.223 = { #The Pope rejects our Request
 	
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:nobles_estate }
-		c:PAP.ruler ?= {
+		c:DUMMY.ruler ?= {
 			save_scope_as = pope_scope
 		}
 	}
@@ -478,7 +478,7 @@ flavor_nap.223 = { #The Pope rejects our Request
 		name = flavor_nap.223.a
 		historical_option = yes
 		add_gold = {
-			value = c:NAP.monthly_income_trade_and_tax
+			value = c:DUMMY.monthly_income_trade_and_tax
 			multiply = 2
 		}
 	}
@@ -500,7 +500,7 @@ flavor_nap.230 = { #The Neapolitan Prince Consort
 	
 	
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -508,14 +508,14 @@ flavor_nap.230 = { #The Neapolitan Prince Consort
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:PAP
-		country_exists = c:NAP
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 
 		ruler ?= {
 			is_close_relative = character:hun_andras
 		}
 
-		c:NAP = {
+		c:DUMMY = {
 			has_ruler = yes
 			OR = {
 				and = {
@@ -542,7 +542,7 @@ flavor_nap.230 = { #The Neapolitan Prince Consort
 				}
 			}
 		}
-		c:PAP = { has_ruler = yes }
+		c:DUMMY = { has_ruler = yes }
 	}
 	
 	illustration_tags = {
@@ -558,7 +558,7 @@ flavor_nap.230 = { #The Neapolitan Prince Consort
 		location:naples = {
 			save_scope_as = target_location
 		}
-		c:PAP = {
+		c:DUMMY = {
 			ruler = { save_scope_as = target_pope }
 		}
 	}
@@ -569,7 +569,7 @@ flavor_nap.230 = { #The Neapolitan Prince Consort
 		custom_tooltip = flavor_nap.230.a.tt
 
 		add_gold = {
-			value = c:HUN.monthly_income_trade_and_tax
+			value = c:DUMMY.monthly_income_trade_and_tax
 			multiply = -2
 		}
 		if = {
@@ -582,7 +582,7 @@ flavor_nap.230 = { #The Neapolitan Prince Consort
 			change_societal_value = { type = outward_vs_inward value = societal_value_move_to_left }
 		}
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_severe_bonus }
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_nap.231  days = 20 }
 		}
 	}	
@@ -628,13 +628,13 @@ flavor_nap.231 = { #The Family of the Powerless King
 		historical_option = yes
 
 		add_gold = {
-			value = c:HUN.monthly_income_trade_and_tax
+			value = c:DUMMY.monthly_income_trade_and_tax
 			multiply = 2
 		}
-		c:HUN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 		}
-		c:NAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 			trigger_event_silently = { id = flavor_nap.232  days = 20 }
 		}
@@ -642,11 +642,11 @@ flavor_nap.231 = { #The Family of the Powerless King
 	}
 	option = {
 		name = flavor_nap.231.b
-		c:NAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_jubilee_good }
 			trigger_event_silently = { id = flavor_nap.233  days = 20 }
 		}
-		c:HUN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 			trigger_event_silently = { id = flavor_nap.234  days = 20 }
 		}
@@ -690,8 +690,8 @@ flavor_nap.232 = { #The Hungarian King
 		set_variable = { name = andras_was_killed_flag value = 1 }
 
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_severe_bonus }
-		c:HUN = {
-			add_casus_belli = { target = c:NAP type = casus_belli:cb_claim_throne}
+		c:DUMMY = {
+			add_casus_belli = { target = c:DUMMY type = casus_belli:cb_claim_throne}
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
 	}
@@ -712,7 +712,7 @@ flavor_nap.232 = { #The Hungarian King
 		random_owned_location = {
 			every_pop = {	add_pop_satisfaction = pop_satisfaction_severe_penalty	}
 		}
-		c:HUN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 		}
 	}
@@ -746,7 +746,7 @@ flavor_nap.233 = { #Hungarian Meddling
 	option = {
 		name = flavor_nap.233.a
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_weak_bonus }
-		c:HUN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
 	}
@@ -781,7 +781,7 @@ flavor_nap.234 = { #The Pope rejects our Request
 		name = flavor_nap.234.a
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_weak_penalty }
 		add_gold = {
-			value = c:HUN.monthly_income_trade_and_tax
+			value = c:DUMMY.monthly_income_trade_and_tax
 			multiply = 2
 		}
 	}
@@ -801,7 +801,7 @@ flavor_nap.240 = { #The Ruler of Avignon
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -823,10 +823,10 @@ flavor_nap.240 = { #The Ruler of Avignon
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:PAP
-		c:PAP = { has_ruler = yes }
+		country_exists = c:DUMMY
+		c:DUMMY = { has_ruler = yes }
 		location:avignon = {
-			controller = c:PAP
+			controller = c:DUMMY
 		}
 		OR = {
 			gold <= 200
@@ -840,7 +840,7 @@ flavor_nap.240 = { #The Ruler of Avignon
 		historical_option = yes
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_bonus }
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_nap.241  days = 20 }
 		}
 	}
@@ -880,11 +880,11 @@ flavor_nap.241 = { #An offer for the City
 		name = flavor_nap.241.a
 		historical_option = yes
 		add_gold = {
-			value = c:PAP.monthly_income_trade_and_tax
+			value = c:DUMMY.monthly_income_trade_and_tax
 			multiply = -4
 		}
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_weak_bonus }
-		c:NAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 			trigger_event_silently = { id = flavor_nap.242  days = 20 }
 		}
@@ -894,7 +894,7 @@ flavor_nap.241 = { #An offer for the City
 		name = flavor_nap.241.b
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_weak_penalty }
 
-		c:NAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 			trigger_event_silently = { id = flavor_nap.243  days = 20 }
 		}
@@ -917,7 +917,7 @@ flavor_nap.242 = { #The Papal City
 
 	trigger = {
 		current_date > 476.9.4
-		c:PAP = { has_ruler = yes }
+		c:DUMMY = { has_ruler = yes }
 	}
 
 	illustration_tags = {
@@ -928,7 +928,7 @@ flavor_nap.242 = { #The Papal City
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		location:avignon = { save_scope_as = target_location }
-		c:PAP.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = pope_scope
 		}
 	}
@@ -937,11 +937,11 @@ flavor_nap.242 = { #The Papal City
 		name = flavor_nap.242.a
 		historical_option = yes
 		add_gold = {
-			value = c:PAP.monthly_income_trade_and_tax
+			value = c:DUMMY.monthly_income_trade_and_tax
 			multiply = 4
 		}
 		scope:target_location = {
-			remove_core = c:PRO
+			remove_core = c:DUMMY
 		}
 	}
 }
@@ -964,7 +964,7 @@ flavor_nap.243 = { #A Stolen City
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		location:avignon = { save_scope_as = target_location }
-		c:PAP.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = pope_scope
 		}
 	}
@@ -990,7 +990,7 @@ flavor_nap.250 = { #The Trial of the Queen
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -998,8 +998,8 @@ flavor_nap.250 = { #The Trial of the Queen
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:PAP
-		c:PAP = { has_ruler = yes }
+		country_exists = c:DUMMY
+		c:DUMMY = { has_ruler = yes }
 		exists = character:nap_giovanna_i_anjou
 		ruler ?= character:nap_giovanna_i_anjou
 		custom_tooltip = {
@@ -1037,10 +1037,10 @@ flavor_nap.250 = { #The Trial of the Queen
 		add_legitimacy = legitimacy_severe_bonus
 		add_prestige = prestige_extreme_penalty
 
-		c:HUN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 		}
 		if = {
@@ -1070,21 +1070,21 @@ flavor_nap.250 = { #The Trial of the Queen
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_weak_bonus }
 		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_weak_bonus }
 		add_estate_satisfaction = { type = estate_type:peasants_estate value = estate_satisfaction_weak_bonus }
-		c:HUN = {
-			add_casus_belli = { target = c:NAP type = casus_belli:cb_claim_throne}
+		c:DUMMY = {
+			add_casus_belli = { target = c:DUMMY type = casus_belli:cb_claim_throne}
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
 	}
 	option = {
 		name = flavor_nap.250.c
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_bonus }
-		c:HUN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 		}
 
@@ -1110,7 +1110,7 @@ flavor_nap.260 = { #Louis, a thorn in our side
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1195,7 +1195,7 @@ flavor_nap.270 = { #The pious Elzéar of Sabran
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1230,7 +1230,7 @@ flavor_nap.270 = { #The pious Elzéar of Sabran
 			religious_influence >= 50
 		}
 		scope:elzear_sabran = {
-			make_saint = c:NAP
+			make_saint = c:DUMMY
 		}
 		add_prestige = prestige_severe_bonus
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_severe_bonus }
@@ -1365,9 +1365,9 @@ flavor_nap.290 = { #The Resentful Prince Consort
 		remove_variable = prince_consort_enraged_flag
 		set_variable = { name = andras_was_killed_flag value = 1 }
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_severe_bonus }
-		c:HUN = {
+		c:DUMMY = {
 			add_casus_belli = {
-				target = c:NAP
+				target = c:DUMMY
 				type = casus_belli:cb_claim_throne
 				character = scope:prince_consort
 			}
@@ -1403,7 +1403,7 @@ flavor_nap.300 = { #The Future of Naples
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1436,7 +1436,7 @@ flavor_nap.300 = { #The Future of Naples
 		location:palermo.owner = {
 			save_scope_as = palermo_owner
 		}
-		c:FRA.ruler ?= {
+		c:DUMMY.ruler ?= {
 			save_scope_as = french_ruler
 		}
 		character:nap_maria_anjou_ii.first_spouse ?= {
@@ -1496,8 +1496,8 @@ flavor_nap.300 = { #The Future of Naples
 		historical_option = yes
 		trigger = {
 			exists = scope:french_ruler
-			country_exists = c:FRA
-			c:FRA = {
+			country_exists = c:DUMMY
+			c:DUMMY = {
 				government_type = government_type:monarchy
 				has_ruler = yes
 			}
@@ -1507,8 +1507,8 @@ flavor_nap.300 = { #The Future of Naples
 				trigger_event_silently = { id = flavor_nap.301 }
 			}
 		}
-		set_new_ruler = c:FRA.ruler
-		c:FRA = {
+		set_new_ruler = c:DUMMY.ruler
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_nap.2 }
 		}
 		add_prestige = prestige_mild_bonus
@@ -1527,11 +1527,11 @@ flavor_nap.301 = { #Neapolitan Decision
 
 	trigger = {
 		current_date > 476.9.4
-		c:NAP ?= {
+		c:DUMMY ?= {
 			government_type = government_type:monarchy
 			has_ruler = yes
 		}
-		not = { ruler = c:NAP.ruler }
+		not = { ruler = c:DUMMY.ruler }
 	}
 
 	illustration_tags = {
@@ -1544,7 +1544,7 @@ flavor_nap.301 = { #Neapolitan Decision
 		location:naples = {
 			save_scope_as = target_location
 		}
-		c:NAP.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = naples_ruler
 		}
 	}
@@ -1552,10 +1552,10 @@ flavor_nap.301 = { #Neapolitan Decision
 
 	option = {
 		name = flavor_nap.301.a
-		set_new_ruler = c:NAP.ruler
+		set_new_ruler = c:DUMMY.ruler
 		add_prestige = prestige_mild_penalty
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
-		c:NAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 		}
 	}
@@ -1563,7 +1563,7 @@ flavor_nap.301 = { #Neapolitan Decision
 		name = flavor_nap.301.b
 		add_stability = stability_weak_penalty
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_severe_bonus }
-		c:NAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
 	}
@@ -1605,7 +1605,7 @@ flavor_nap.101 = { #The Destruction of Amalfi
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1613,7 +1613,7 @@ flavor_nap.101 = { #The Destruction of Amalfi
 
 	trigger = {
 		current_date > 476.9.4
-		c:NAP = {
+		c:DUMMY = {
 			owns = location:salerno
 		}
 	}
@@ -1672,7 +1672,7 @@ flavor_nap.101 = { #The Destruction of Amalfi
 
 		custom_tooltip = flavor_nap.101.b.tt
 
-		c:NAP = {
+		c:DUMMY = {
 			add_gold = { value = location:salerno.owner.monthly_income_trade_and_tax multiply = -1 }
 		}
 		hidden_effect = {
@@ -1725,7 +1725,7 @@ flavor_nap.102 = { #The Treaty of Villeneuve
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1739,16 +1739,16 @@ flavor_nap.102 = { #The Treaty of Villeneuve
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		ruler = { save_scope_as = target_ruler }
-		c:PAP = { ruler = { save_scope_as = target_pope } }
-		c:SIC = { ruler = { save_scope_as = target_sicily_ruler } }
+		c:DUMMY = { ruler = { save_scope_as = target_pope } }
+		c:DUMMY = { ruler = { save_scope_as = target_sicily_ruler } }
 	}
 
 	trigger = {
 		current_date > 476.9.4
 		tag = NAP
 		at_war = no
-		country_exists = c:SIC
-		c:SIC = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_subject = no
 		}
 		area:sicily_area = {
@@ -1757,8 +1757,8 @@ flavor_nap.102 = { #The Treaty of Villeneuve
 			}
 		}
 		has_ruler = yes
-		c:PAP = { has_ruler = yes }
-		c:SIC = { has_ruler = yes }
+		c:DUMMY = { has_ruler = yes }
+		c:DUMMY = { has_ruler = yes }
 	}
 
 	option = {
@@ -1767,7 +1767,7 @@ flavor_nap.102 = { #The Treaty of Villeneuve
 
 		custom_tooltip = flavor_nap.102.a.tt1
 		hidden_effect = {
-			c:SIC = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_nap.103 }
 			}
 		}
@@ -1785,9 +1785,9 @@ flavor_nap.102 = { #The Treaty of Villeneuve
 	option = {
 		name = flavor_nap.102.b
 
-		add_opinion = { target = c:ARA modifier = opinion_insulted }
-		add_opinion = { target = c:PAP modifier = opinion_mildly_displeased }
-		add_opinion = { target = c:SIC modifier = opinion_insulted }
+		add_opinion = { target = c:DUMMY modifier = opinion_insulted }
+		add_opinion = { target = c:DUMMY modifier = opinion_mildly_displeased }
+		add_opinion = { target = c:DUMMY modifier = opinion_insulted }
 	}
 }
 
@@ -1816,10 +1816,10 @@ flavor_nap.103 = { #The Treaty of Villeneuve (Sicily's answer)
 		change_gold_effect = { scale = -2 }
 		custom_tooltip = flavor_nap.103.tt1
 		hidden_effect = {
-			c:NAP = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_nap.106 }
 			}
-			c:SIC = {
+			c:DUMMY = {
 				set_variable = {
 					name = sicily_pays_tribute
 					value = 1
@@ -1829,23 +1829,23 @@ flavor_nap.103 = { #The Treaty of Villeneuve (Sicily's answer)
 	}
 	option = {
 		name = flavor_nap.103.b
-		c:SIC = {
+		c:DUMMY = {
 			make_subject_of = {
-				target = c:NAP
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 		}
-		add_opinion = { target = c:ARA modifier = opinion_insulted }
-		add_opinion = { target = c:NAP modifier = opinion_pleased }
+		add_opinion = { target = c:DUMMY modifier = opinion_insulted }
+		add_opinion = { target = c:DUMMY modifier = opinion_pleased }
 
 
 		custom_tooltip = flavor_nap.103.tt1
 		custom_tooltip = flavor_nap.103.tt2
 		hidden_effect = {
-			c:ARA = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_nap.104 }
 			}
-			c:NAP = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_nap.105 }
 			}
 		}
@@ -1853,11 +1853,11 @@ flavor_nap.103 = { #The Treaty of Villeneuve (Sicily's answer)
 	option = {
 		name = flavor_nap.103.c
 
-		add_opinion = { target = c:NAP modifier = opinion_insulted }
-		add_opinion = { target = c:PAP modifier = opinion_mildly_displeased }
+		add_opinion = { target = c:DUMMY modifier = opinion_insulted }
+		add_opinion = { target = c:DUMMY modifier = opinion_mildly_displeased }
 		custom_tooltip = flavor_nap.103.tt1
 		hidden_effect = {
-			c:NAP = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_nap.107 }
 			}
 		}
@@ -1889,7 +1889,7 @@ flavor_nap.104 = { #The Treaty of Villeneuve (Aragon Reaction)
 
 	option = {
 		name = flavor_nap.104.a
-		add_casus_belli = {	target = c:SIC	type = casus_belli:cb_claim_throne	}
+		add_casus_belli = {	target = c:DUMMY	type = casus_belli:cb_claim_throne	}
 	}
 
 	option = {
@@ -1921,9 +1921,9 @@ flavor_nap.105 = { #The Treaty of Villeneuve (Naples Reaction Vassal)
 
 	option = {
 		name = flavor_nap.105.a
-		c:SIC = {
+		c:DUMMY = {
 			make_subject_of = {
-				target = c:NAP
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 		}
@@ -1953,7 +1953,7 @@ flavor_nap.106 = { #The Treaty of Villeneuve (Naples Reaction Homage)
 	option = {
 		name = flavor_nap.106.a
 		historical_option = yes
-		add_gold = { value = c:SIC.monthly_income_trade_and_tax multiply = 2 }
+		add_gold = { value = c:DUMMY.monthly_income_trade_and_tax multiply = 2 }
 	}
 
 	trigger = {
@@ -1981,7 +1981,7 @@ flavor_nap.107 = { #The Treaty of Villeneuve (Naples Reaction Refusal)
 		name = flavor_nap.107.a
 		area:sicily_area = {
 			every_location_in_area = {
-				add_core = c:NAP
+				add_core = c:DUMMY
 			}
 		}
 	}
@@ -2021,7 +2021,7 @@ flavor_nap.108 = { #The Treaty of Villeneuve (Sicily pays yearly homage)
 		change_gold_effect = { scale = -2 }
 		custom_tooltip = flavor_nap.103.tt1
 		hidden_effect = {
-			c:NAP = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_nap.106 }
 			}
 		}
@@ -2029,21 +2029,21 @@ flavor_nap.108 = { #The Treaty of Villeneuve (Sicily pays yearly homage)
 
 	option = {
 		name = flavor_nap.108.b
-		add_opinion = { target = c:NAP modifier = opinion_insulted }
+		add_opinion = { target = c:DUMMY modifier = opinion_insulted }
 		custom_tooltip = flavor_nap.103.tt1
 		hidden_effect = {
 			if = {
 				limit = { 
 					OR = {
 						NOT = { is_at_war_with = C:NAP } 	
-						NOT = {	has_truce_with = c:NAP }
+						NOT = {	has_truce_with = c:DUMMY }
 					}
 				}
-				c:NAP = {
+				c:DUMMY = {
 					trigger_event_silently = { id = flavor_nap.107 }
 				}
 			}
-			c:SIC = {
+			c:DUMMY = {
 				remove_variable = sicily_pays_tribute
 			}
 		}
@@ -2061,7 +2061,7 @@ flavor_nap.109 = { #The Library of the Angevin Kings
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2123,7 +2123,7 @@ flavor_nap.110 = { #Grand Court of the Vicar
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2169,7 +2169,7 @@ flavor_nap.111 = { #The Basilica of Santa Chiara
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2201,7 +2201,7 @@ flavor_nap.111 = { #The Basilica of Santa Chiara
 
 	option = {
 		name = flavor_nap.111.b
-		add_opinion = { target = c:PAP modifier = opinion_pleased }
+		add_opinion = { target = c:DUMMY modifier = opinion_pleased }
 	}
 
 }
@@ -2219,7 +2219,7 @@ flavor_nap.112 = { #The Destruction of the Scuola Medica Salernitana
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -2268,7 +2268,7 @@ flavor_nap.113 = { #The Palace of Caserta
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2339,7 +2339,7 @@ flavor_nap.114 = { #La Pudizia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2407,7 +2407,7 @@ flavor_nap.115 = { #San Leucio Silk Factory
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2450,7 +2450,7 @@ flavor_nap.116 = { #Accademia Pontaniana's delights the World
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2495,7 +2495,7 @@ flavor_nap.117 = { #Albanians flee
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2531,7 +2531,7 @@ flavor_nap.117 = { #Albanians flee
 					province_definition = province_definition:molise_province
 				}
 
-				c:NAP = {
+				c:DUMMY = {
 					own_entire_province = prev.province_definition
 				}
 
@@ -2554,7 +2554,7 @@ flavor_nap.117 = { #Albanians flee
 	option = {
 		name = flavor_nap.117.b
 
-		add_opinion = { target = c:PAP modifier = opinion_mildly_displeased }
+		add_opinion = { target = c:DUMMY modifier = opinion_mildly_displeased }
 
 	}
 }
@@ -2572,7 +2572,7 @@ flavor_nap.118 = { #Croatians flee
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2584,7 +2584,7 @@ flavor_nap.118 = { #Croatians flee
 			religion.group = religion_group:muslim
 			"culture_percentage_in_country(culture:croatian)" > 0
 		}
-		c:NAP = {
+		c:DUMMY = {
 			own_entire_province = location:trivento.province_definition #molise_province
 		}
 	}
@@ -2634,7 +2634,7 @@ flavor_nap.118 = { #Croatians flee
 	option = {
 		name = flavor_nap.118.b
 
-		add_opinion = { target = c:PAP modifier = opinion_mildly_displeased }
+		add_opinion = { target = c:DUMMY modifier = opinion_mildly_displeased }
 
 	}
 }
@@ -2660,7 +2660,7 @@ flavor_nap.119 = { #Robert and Petrarca
 		}
 		character:pap_francesco_petrarca ?= {
 			is_alive = yes
-			owner = c:PAP
+			owner = c:DUMMY
 		}
 	}
 
@@ -2682,7 +2682,7 @@ flavor_nap.119 = { #Robert and Petrarca
 		change_gold_effect = { scale = -1}
 		custom_tooltip = flavor_nap.119.tt
 		hidden_effect = {
-			c:PAP = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_nap.120 days = 20 }
 			}
 		}
@@ -2720,10 +2720,10 @@ flavor_nap.120 = { #Robert and Petrarca (Answer)
 
 		historical_option = yes
 		character:pap_francesco_petrarca = {
-			move_country = c:NAP
+			move_country = c:DUMMY
 		}
 		hidden_effect = {
-			c:NAP = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_nap.1201 days = 20 }
 			}
 		}
@@ -2732,10 +2732,10 @@ flavor_nap.120 = { #Robert and Petrarca (Answer)
 	option = {
 		name = flavor_nap.120.b
 
-		add_opinion = { target = c:NAP modifier = opinion_mildly_displeased }
+		add_opinion = { target = c:DUMMY modifier = opinion_mildly_displeased }
 
 		hidden_effect = {
-			c:NAP = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_nap.1202 days = 20 }
 			}
 		}
@@ -2818,7 +2818,7 @@ flavor_nap.121 = { #Boccaccio's family's debt
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2831,7 +2831,7 @@ flavor_nap.121 = { #Boccaccio's family's debt
 			is_alive = yes
 			owner = ROOT
 		}
-		country_exists = c:FLO
+		country_exists = c:DUMMY
 	}
 
 	immediate = {
@@ -2845,7 +2845,7 @@ flavor_nap.121 = { #Boccaccio's family's debt
 
 		historical_option = yes
 		character:nap_giovanni_boccaccio = {
-			move_country = c:FLO
+			move_country = c:DUMMY
 		}
 	}
 
@@ -2867,7 +2867,7 @@ flavor_nap.6 = { #Fate of Prato
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		#1351 in our timeline
 		to = 476.9.4
@@ -2876,19 +2876,19 @@ flavor_nap.6 = { #Fate of Prato
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:PRA
-		c:PRA = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_ai = yes
 			in_union_with = ROOT
 			any_province = {
 				count = 1
 			}
 		}
-		country_exists = c:FLO
-		c:FLO = {
-			is_neighbor_of = c:PRA
+		country_exists = c:DUMMY
+		c:DUMMY = {
+			is_neighbor_of = c:DUMMY
 			NOT = { is_at_war_with = ROOT }
-			NOT = { is_at_war_with = c:PRA }
+			NOT = { is_at_war_with = c:DUMMY }
 		}
 	}
 
@@ -2899,10 +2899,10 @@ flavor_nap.6 = { #Fate of Prato
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:FLO = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
-		c:PRA = {
+		c:DUMMY = {
 			save_scope_as = sold_country
 		}
 		save_scope_as = nap_from
@@ -2912,7 +2912,7 @@ flavor_nap.6 = { #Fate of Prato
 
 		set_local_variable = {
 			name = cost_for_prato
-			value = { value = c:PRA.monthly_income_trade_and_tax multiply = 60 }
+			value = { value = c:DUMMY.monthly_income_trade_and_tax multiply = 60 }
 		}
 	}
 
@@ -2965,7 +2965,7 @@ flavor_nap.7 = { #Fate of Prato - Accept or Deny
 
 		add_gold = { value = local_var:cost_for_prato multiply = -1 }
 
-		c:PRA.capital = {
+		c:DUMMY.capital = {
 			change_location_owner = ROOT
 		}
 
@@ -3059,7 +3059,7 @@ flavor_nap.9 = { #Giambattista della Porta
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -3117,7 +3117,7 @@ flavor_nap.10 = { #Magia Naturalis
 	image = "gfx/interface/illustrations/institutions/renaissance.dds"
 
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -3181,7 +3181,7 @@ flavor_nap.11 = { #Fraticelli
     }
 
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3189,8 +3189,8 @@ flavor_nap.11 = { #Fraticelli
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:PAP
-		c:PAP = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_ruler = yes
 		}
 		has_ruler = yes
@@ -3198,7 +3198,7 @@ flavor_nap.11 = { #Fraticelli
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:PAP.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = the_pope
 		}
 		ruler = {
@@ -3237,7 +3237,7 @@ flavor_nap.11 = { #Fraticelli
 			VALUE = religious_influence_severe_bonus
 		}
 
-		c:PAP ?= {
+		c:DUMMY ?= {
 			add_opinion = {
 				target = ROOT
 				modifier = nap_banned_fraticelli
@@ -3271,7 +3271,7 @@ flavor_nap.12 = { #https://en.wikipedia.org/wiki/State_of_the_Presidi
     }
 
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3323,7 +3323,7 @@ flavor_nap.400 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5

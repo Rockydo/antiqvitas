@@ -1,0 +1,286 @@
+{
+  "schema": 1,
+  "installed_definitions": 2340,
+  "active_definitions": 463,
+  "retained_engine_sentinels": [
+    "DUMMY",
+    "MER",
+    "PIR"
+  ],
+  "files": [
+    {
+      "file": "_default.txt",
+      "source_sha256": "6fc4e5c3aaed23c5c49afb0160ab4f2c1e07abffe336c550d7994de23df2a6c6",
+      "definitions": 3,
+      "retained": [
+        "DUMMY",
+        "MER",
+        "PIR"
+      ]
+    },
+    {
+      "file": "_scandinavia.txt",
+      "source_sha256": "b573103a89e13e5cca798304bc379d62046ac9efaac6b6d7b23415504861f691",
+      "definitions": 12,
+      "retained": []
+    },
+    {
+      "file": "anatolia.txt",
+      "source_sha256": "a3fe15941e8c28ad631c31cb88b752dfbed44643fe9f7f44132cff3c43e0e2a6",
+      "definitions": 45,
+      "retained": []
+    },
+    {
+      "file": "andes.txt",
+      "source_sha256": "d42fe7a7296c32f825fbb5d13898cd530b05f54cd6701286d2238ccd76965a7d",
+      "definitions": 74,
+      "retained": []
+    },
+    {
+      "file": "arabia.txt",
+      "source_sha256": "11887e885c45178ddae18b79e57734d21ae5f8c0168df7ca4cb62f62fea3d65e",
+      "definitions": 23,
+      "retained": []
+    },
+    {
+      "file": "aridoamerica.txt",
+      "source_sha256": "b81f93849e17a7451a5a39998c309d1883f1a31e03cfb97885cd3a4b4b09726a",
+      "definitions": 39,
+      "retained": []
+    },
+    {
+      "file": "balkans.txt",
+      "source_sha256": "2c87158a6a501d24fccd69cd68a72759241f9e1420127779d9cab3a73c9edb9d",
+      "definitions": 37,
+      "retained": []
+    },
+    {
+      "file": "baltics.txt",
+      "source_sha256": "2a1278aab92192fd786a422276e9aa4d276cd6d415db6c1216d84e44ef733950",
+      "definitions": 14,
+      "retained": []
+    },
+    {
+      "file": "bengal.txt",
+      "source_sha256": "14841c0cb09a6bf74655dfbf006964e7c890dec0bd17eedb1e2dc056f65192e2",
+      "definitions": 27,
+      "retained": []
+    },
+    {
+      "file": "brasil.txt",
+      "source_sha256": "5688d9844a140512bc8775b5ac0920458ba50710b7ae6f355224407ab0dac83d",
+      "definitions": 15,
+      "retained": []
+    },
+    {
+      "file": "british_isles.txt",
+      "source_sha256": "974801f4fa10af5e441849041680799b83dc5045b3d74397e42f34cb1bb8505c",
+      "definitions": 70,
+      "retained": []
+    },
+    {
+      "file": "canadian.txt",
+      "source_sha256": "647f20edbdeabf9385c53ed98db9bd03ba89d35ace0136eec77d59bf49b77fa4",
+      "definitions": 22,
+      "retained": []
+    },
+    {
+      "file": "carpathia.txt",
+      "source_sha256": "d6ba48738e026606e91182763045a3bba0768dc78898b3a8614de651a0cd2403",
+      "definitions": 10,
+      "retained": []
+    },
+    {
+      "file": "caucasus.txt",
+      "source_sha256": "8b628d455a82fb61a0873a5d9bba1ebc8d2547e07a5b212aa4e016f8e559eb35",
+      "definitions": 27,
+      "retained": []
+    },
+    {
+      "file": "central_north_america.txt",
+      "source_sha256": "99d374ffc35d2112d5c5714816b246ea5dc2d77abd97cb6c8e88a0148dd47982",
+      "definitions": 45,
+      "retained": []
+    },
+    {
+      "file": "centralamerica.txt",
+      "source_sha256": "df6457821a8b3a32f0160f1e09529854333d08a368c7bea06f599716f1271b58",
+      "definitions": 11,
+      "retained": []
+    },
+    {
+      "file": "chaco.txt",
+      "source_sha256": "1da23037d00a815d785c322a49d01f493254d2d771f2891dd98e2efaa0c6f053",
+      "definitions": 3,
+      "retained": []
+    },
+    {
+      "file": "colombia.txt",
+      "source_sha256": "dbe6d36beb9b13149d3cb2b65ac895c88aee8763828b0ebde0a2679e5ff7e6ba",
+      "definitions": 31,
+      "retained": []
+    },
+    {
+      "file": "crescent.txt",
+      "source_sha256": "095d1df90839d3384ddad8615b97873f2f4cdc1ae4d6c1fdec60c404eca91145",
+      "definitions": 26,
+      "retained": []
+    },
+    {
+      "file": "east_africa.txt",
+      "source_sha256": "40e292741ace0645956ed066bd691a6b2bd7c5d21236d578f61d4acb2f3a134c",
+      "definitions": 72,
+      "retained": []
+    },
+    {
+      "file": "east_asia.txt",
+      "source_sha256": "9537a7d61ed1ad68c65c53bfabda8029f1ac8c3a805e3398402ec8966067459a",
+      "definitions": 426,
+      "retained": []
+    },
+    {
+      "file": "eastcoast.txt",
+      "source_sha256": "079a29e5af3ecd84502477e9dc73c885eba5e3a037a7fd5ee1dc70e72b49e83f",
+      "definitions": 102,
+      "retained": []
+    },
+    {
+      "file": "egypt.txt",
+      "source_sha256": "b2915c3677a91af47c22609244463a05038987a36430548b6db35a6e7dae5fb1",
+      "definitions": 6,
+      "retained": []
+    },
+    {
+      "file": "france.txt",
+      "source_sha256": "b72b1bec4797e12f412d539001c20125b4d941aa36f97631153f02868b3372d1",
+      "definitions": 69,
+      "retained": []
+    },
+    {
+      "file": "horn_of_africa.txt",
+      "source_sha256": "1eda24af088a4cbd111cc78990eebfc6fd277ea9c47b3506ae63fc7c2ed0f8bd",
+      "definitions": 41,
+      "retained": []
+    },
+    {
+      "file": "iberia.txt",
+      "source_sha256": "ea02eab927300dfab942afe00cd8c611b5f26b115e719066e79eef1271f3820f",
+      "definitions": 11,
+      "retained": []
+    },
+    {
+      "file": "india.txt",
+      "source_sha256": "fc0eec5be33006b02611be1748500db15ab7800f20eb0bc7f1d06f646453d7a5",
+      "definitions": 104,
+      "retained": []
+    },
+    {
+      "file": "indonesia.txt",
+      "source_sha256": "18992298b61c4735ed847bf01303a2f7286a13317e7390a122ef70ae4c9ad53f",
+      "definitions": 84,
+      "retained": []
+    },
+    {
+      "file": "italy.txt",
+      "source_sha256": "305d8d2cce03e44ac3c5281e0a15823423d8f47c2510cfebb59396b40af6a93d",
+      "definitions": 81,
+      "retained": []
+    },
+    {
+      "file": "kongo.txt",
+      "source_sha256": "40e5921f22594ec78a2cddc2867d7ef1a04206d8383a8329f1ae5696839ba9d0",
+      "definitions": 14,
+      "retained": []
+    },
+    {
+      "file": "lowlands.txt",
+      "source_sha256": "49c8762b6393f1d31a88d2514ba51aa5dde1b9e06a77d78d0c6af426ba2b6422",
+      "definitions": 23,
+      "retained": []
+    },
+    {
+      "file": "maghreb.txt",
+      "source_sha256": "0f55980192947579829d1f6cd7fb2424999b0f96874148932166a8e79389fb98",
+      "definitions": 22,
+      "retained": []
+    },
+    {
+      "file": "mesoamerica.txt",
+      "source_sha256": "054b7a3f728872ef018a1c9a13a81e82b5cd35078d9ba2f4e891b7a4c9f757c8",
+      "definitions": 182,
+      "retained": []
+    },
+    {
+      "file": "north_germany.txt",
+      "source_sha256": "70376fd618ffa5bb0c381622ce85e8662e5b5892ec8ecabedb91ee65fd1cdb20",
+      "definitions": 126,
+      "retained": []
+    },
+    {
+      "file": "persia.txt",
+      "source_sha256": "ae67319f519110fc97cf45d3cb28304613d4bfa23ce15fd000597548b2eeedf6",
+      "definitions": 55,
+      "retained": []
+    },
+    {
+      "file": "poland.txt",
+      "source_sha256": "6937e34e2d1fc89394116d54693a2bd6315b99bb392366aeb53cb2d8c187691d",
+      "definitions": 42,
+      "retained": []
+    },
+    {
+      "file": "polynesia.txt",
+      "source_sha256": "986ef7c69a1735763a1f3c372899f150ddcd7dfc91a25d24dfdd479721a98813",
+      "definitions": 26,
+      "retained": []
+    },
+    {
+      "file": "russia.txt",
+      "source_sha256": "969728b46016a6d3eef4dc05ff9ac0d55e553ec5de489aff0bb74ac4d7c79811",
+      "definitions": 44,
+      "retained": []
+    },
+    {
+      "file": "siberia.txt",
+      "source_sha256": "afb13c8e8ba7eb15137372f041976955c412cc507f0c97cb603c8ea0f18e1527",
+      "definitions": 19,
+      "retained": []
+    },
+    {
+      "file": "south_africa.txt",
+      "source_sha256": "abd3c987dce340c0c5748b0396d6ede594884e84d0e263a17877dec17a775c5a",
+      "definitions": 6,
+      "retained": []
+    },
+    {
+      "file": "south_east_asia.txt",
+      "source_sha256": "001f82b597b86d1bcef054941950c7aa1f427a82b1f37a844a31c98dffd0dae2",
+      "definitions": 57,
+      "retained": []
+    },
+    {
+      "file": "south_germany.txt",
+      "source_sha256": "dae95f4bfbd61a0d3d4b53d613c69821dda53a2236970a1e14633248f02fea92",
+      "definitions": 102,
+      "retained": []
+    },
+    {
+      "file": "steppes.txt",
+      "source_sha256": "8fad3b040f8972f72163843e3bcfd450e53662f5dacac9dba34f7f1d7d7cdd79",
+      "definitions": 8,
+      "retained": []
+    },
+    {
+      "file": "west_africa.txt",
+      "source_sha256": "180c4a365bddc1c9cef43db87a7dda4b9bd9d8597383c86e281eb6dab909b5b2",
+      "definitions": 64,
+      "retained": []
+    },
+    {
+      "file": "westcoast.txt",
+      "source_sha256": "3352424156b42bbfa717eea4477761a2647b7f17a3c15a8a14a9da11609ca1d4",
+      "definitions": 20,
+      "retained": []
+    }
+  ]
+}

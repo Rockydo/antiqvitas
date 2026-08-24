@@ -7,7 +7,7 @@ flavor_nur.1 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = NUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -53,7 +53,7 @@ flavor_nur.1 = {
 			value = societal_value_large_move_to_right
 		}
 		if = {
-			limit = { root = c:NUR }
+			limit = { root = c:DUMMY }
 			capital = {
 				if = {
 					limit = {
@@ -93,11 +93,11 @@ flavor_nur.1 = {
 		name = flavor_nur.1.b
 
 		trigger = {
-			root != c:HSA
+			root != c:DUMMY
 		}
 		if = {
-			limit = { country_exists = c:HSA }
-			c:HSA ?= { trigger_event_non_silently = flavor_nur.1 }
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY ?= { trigger_event_non_silently = flavor_nur.1 }
 		}
 		change_societal_value = {
 			type = traditionalist_vs_innovative
@@ -112,7 +112,7 @@ flavor_nur.1 = {
 		name = flavor_nur.1.c
 
 		trigger = {
-			root != c:NUR
+			root != c:DUMMY
 		}
 		change_societal_value = {
 			type = traditionalist_vs_innovative

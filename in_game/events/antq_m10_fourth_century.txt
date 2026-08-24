@@ -19,6 +19,12 @@ antq_m10_fourth.4000 = {
 	option = {
 		name = antq_m10_fourth.4000.a
 		historical_option = yes
+		set_variable = antq_m10_armenia_conversion_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		# IRAN-ARMCONV: 301 is the plan's traditional-current anchor; chronology is contested.
 		religion:antq_early_christianity = { enable_religion = yes }
 		change_religion = religion:antq_early_christianity
@@ -27,6 +33,29 @@ antq_m10_fourth.4000 = {
 		if = {
 			limit = { has_advance = antq_church_endowments }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4000.b
+		set_variable = antq_m10_armenia_conversion_compact_path
+		add_gold = -18
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4000.c
+		set_variable = antq_m10_armenia_conversion_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -42,11 +71,42 @@ antq_m10_fourth.4001 = {
 	option = {
 		name = antq_m10_fourth.4001.a
 		historical_option = yes
+		set_variable = antq_m10_constantine_civil_wars_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_comitatenses_doctrine }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4001.b
+		set_variable = antq_m10_constantine_civil_wars_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4001.c
+		set_variable = antq_m10_constantine_civil_wars_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -68,11 +128,40 @@ antq_m10_fourth.4002 = {
 	option = {
 		name = antq_m10_fourth.4002.a
 		historical_option = yes
+		set_variable = antq_m10_nicaea_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_prestige = prestige_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_church_endowments }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4002.b
+		set_variable = antq_m10_nicaea_compact_path
+		add_gold = -18
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4002.c
+		set_variable = antq_m10_nicaea_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -88,11 +177,42 @@ antq_m10_fourth.4003 = {
 	option = {
 		name = antq_m10_fourth.4003.a
 		historical_option = yes
+		set_variable = antq_m10_shapur_julian_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_comitatenses_doctrine }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4003.b
+		set_variable = antq_m10_shapur_julian_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4003.c
+		set_variable = antq_m10_shapur_julian_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -108,11 +228,42 @@ antq_m10_fourth.4004 = {
 	option = {
 		name = antq_m10_fourth.4004.a
 		historical_option = yes
+		set_variable = antq_m10_aksum_meroë_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_comitatenses_doctrine }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4004.b
+		set_variable = antq_m10_aksum_meroë_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4004.c
+		set_variable = antq_m10_aksum_meroë_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -128,12 +279,42 @@ antq_m10_fourth.4005 = {
 	option = {
 		name = antq_m10_fourth.4005.a
 		historical_option = yes
+		set_variable = antq_m10_crete_earthquake_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_mild_penalty
 		add_prestige = prestige_mild_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_comitatenses_doctrine }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4005.b
+		set_variable = antq_m10_crete_earthquake_compact_path
+		add_gold = -24
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4005.c
+		set_variable = antq_m10_crete_earthquake_command_path
+		add_manpower = { value = monthly_manpower multiply = -1 }
+		add_stability = stability_weak_penalty
+		add_legitimacy = legitimacy_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -155,6 +336,12 @@ antq_m10_fourth.4006 = {
 	option = {
 		name = antq_m10_fourth.4006.a
 		historical_option = yes
+		set_variable = antq_m10_huns_arrive_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		# CAM-HUN;CAM-ATT; Kazan is the bounded Volga local-mesh entry proxy.
 		location:kazan = {
 			create_country_from_location = {
@@ -182,6 +369,29 @@ antq_m10_fourth.4006 = {
 			add_prestige = prestige_weak_bonus
 		}
 	}
+	option = {
+		name = antq_m10_fourth.4006.b
+		set_variable = antq_m10_huns_arrive_compact_path
+		add_gold = -20
+		add_stability = stability_weak_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4006.c
+		set_variable = antq_m10_huns_arrive_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
+		}
+	}
 }
 
 # Gothic Refugee Crisis; ANTIQVITAS master plan §9; recipient=GUT
@@ -195,11 +405,42 @@ antq_m10_fourth.4007 = {
 	option = {
 		name = antq_m10_fourth.4007.a
 		historical_option = yes
+		set_variable = antq_m10_gothic_refugees_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_federate_musters }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4007.b
+		set_variable = antq_m10_gothic_refugees_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4007.c
+		set_variable = antq_m10_gothic_refugees_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -221,6 +462,12 @@ antq_m10_fourth.4008 = {
 	option = {
 		name = antq_m10_fourth.4008.a
 		historical_option = yes
+		set_variable = antq_m10_thessalonica_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		religion:antq_early_christianity = { enable_religion = yes }
 		change_religion = religion:antq_early_christianity
 		add_legitimacy = legitimacy_mild_bonus
@@ -228,6 +475,29 @@ antq_m10_fourth.4008 = {
 		if = {
 			limit = { has_advance = antq_hospitality_of_barbarians }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4008.b
+		set_variable = antq_m10_thessalonica_compact_path
+		add_gold = -18
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4008.c
+		set_variable = antq_m10_thessalonica_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -243,11 +513,42 @@ antq_m10_fourth.4009 = {
 	option = {
 		name = antq_m10_fourth.4009.a
 		historical_option = yes
+		set_variable = antq_m10_fei_river_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_federate_musters }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4009.b
+		set_variable = antq_m10_fei_river_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4009.c
+		set_variable = antq_m10_fei_river_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -263,11 +564,42 @@ antq_m10_fourth.4010 = {
 	option = {
 		name = antq_m10_fourth.4010.a
 		historical_option = yes
+		set_variable = antq_m10_gwanggaeto_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_federate_musters }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4010.b
+		set_variable = antq_m10_gwanggaeto_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4010.c
+		set_variable = antq_m10_gwanggaeto_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -289,11 +621,40 @@ antq_m10_fourth.4011 = {
 	option = {
 		name = antq_m10_fourth.4011.a
 		historical_option = yes
+		set_variable = antq_m10_olympic_sunset_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_legitimacy = legitimacy_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_hospitality_of_barbarians }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4011.b
+		set_variable = antq_m10_olympic_sunset_compact_path
+		add_gold = -18
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4011.c
+		set_variable = antq_m10_olympic_sunset_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -315,6 +676,12 @@ antq_m10_fourth.4012 = {
 	option = {
 		name = antq_m10_fourth.4012.a
 		historical_option = yes
+		set_variable = antq_m10_east_west_division_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		# OUP-EW;CAM-DYNASTY; bounded regional envelope documented in docs/m10/.
 		change_tag_cosmetic = { tag = WRE }
 		location:constantinople = {
@@ -844,6 +1211,29 @@ antq_m10_fourth.4012 = {
 			add_prestige = prestige_weak_bonus
 		}
 	}
+	option = {
+		name = antq_m10_fourth.4012.b
+		set_variable = antq_m10_east_west_division_compact_path
+		add_gold = -20
+		add_stability = stability_weak_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4012.c
+		set_variable = antq_m10_east_west_division_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
+		}
+	}
 }
 
 # Faxian and Gupta Apogee; ANTIQVITAS master plan §9; recipient=HAN
@@ -857,11 +1247,42 @@ antq_m10_fourth.4013 = {
 	option = {
 		name = antq_m10_fourth.4013.a
 		historical_option = yes
+		set_variable = antq_m10_faxian_gupta_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_regional_militias }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4013.b
+		set_variable = antq_m10_faxian_gupta_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_fourth.4013.c
+		set_variable = antq_m10_faxian_gupta_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }

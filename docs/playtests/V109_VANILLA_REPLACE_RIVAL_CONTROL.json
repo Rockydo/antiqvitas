@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "purpose": "Long matched stock-EU5 control for the R35 replace_rival rejection",
+  "game_version": "1.3.11 (Pavia)",
+  "mode": "vanilla",
+  "resolution": "1920x1080",
+  "session": "docs/screens/V109_VANILLA_REPLACE_RIVAL_CONTROL",
+  "production_mode": true,
+  "start_date": "1337.4.1",
+  "final_date": "1377.6.18",
+  "sample_years": 40.214,
+  "observer_wall_seconds": 2400,
+  "process_exit_during_sample": false,
+  "ai_log_bytes": 3698688,
+  "ai_log_sha256": "08DEEF30B4C9A0D810047F250EAF5E3B83DDB2BF63AFBB32245BD473DF37E316",
+  "error_log_bytes": 5534,
+  "error_log_sha256": "DBA923A2739440D493F034356C0E4764F81C5AB72741AD1361DB6262AAC1F194",
+  "replace_rival_invalid_commands": 0,
+  "combined_stock_control_years": 51.258,
+  "combined_replace_rival_invalid_commands": 0,
+  "evidence": {
+    "final": "docs/screens/V109_VANILLA_REPLACE_RIVAL_CONTROL/v109_final.png",
+    "telemetry": "docs/screens/V109_VANILLA_REPLACE_RIVAL_CONTROL/resource_telemetry.csv",
+    "driver_events": "docs/screens/V109_VANILLA_REPLACE_RIVAL_CONTROL/driver_events.jsonl",
+    "earlier_control": "docs/playtests/V108_VANILLA_WARTIME_COMMAND_BASELINE.json"
+  },
+  "interpretation": "The exact replace_rival warning remained absent over 40.214 years here and 51.258 combined matched stock years. It is not admitted as a native warning family. ANTIQVITAS removes the command's inherited five-stability price to eliminate the mutable-resource planning race, then requires a fresh runtime retest."
+}

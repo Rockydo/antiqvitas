@@ -10,7 +10,9 @@ hre_law_debate = {
 	}
 	allow = {
 	}
-	chance = 0	#Triggered via policy_vote resolution
+	chance = {
+		add = 0 # ANTIQVITAS runtime quarantine
+	}
 	on_debate_passed = {
 		#Only really relevant for the UI, the actual logic happens in the policy_vote resolution
 		show_as_tooltip = {
@@ -47,7 +49,9 @@ hre_request_additional_military_support = {
 	allow = {
 		NOT = { has_cooldown = hre_request_additional_military_support }
 	}
-	chance = 10
+	chance = {
+		add = 0 # ANTIQVITAS runtime quarantine
+	}
 	selectable_for = {
 		is_leader_of_international_organization = scope:recipient
 	}
@@ -130,7 +134,9 @@ hre_roman_month = {
 	allow = {
 		NOT = { has_cooldown = hre_roman_month }
 	}
-	chance = 10
+	chance = {
+		add = 0 # ANTIQVITAS runtime quarantine
+	}
 	selectable_for = {
 		is_leader_of_international_organization = scope:recipient
 	}
@@ -199,7 +205,9 @@ hre_demand_internal_peace = {
 		}
 		NOT = { has_cooldown = hre_demand_internal_peace }
 	}
-	chance = 10
+	chance = {
+		add = 0 # ANTIQVITAS runtime quarantine
+	}
 	selectable_for = {
 		is_leader_of_international_organization = scope:recipient
 	}
@@ -321,7 +329,9 @@ hre_demand_internal_peace = {
 hre_establish_perpetual_diet = {
 	type = international_organization
 	special_status = free_city
-	chance = 100
+	chance = {
+		add = 0 # ANTIQVITAS runtime quarantine
+	}
 	selectable_for = {
 		is_leader_of_international_organization = scope:recipient
 	}
@@ -335,7 +345,6 @@ hre_establish_perpetual_diet = {
 			text = hre_establish_perpetual_diet_tt
 			if = {
 				limit = { exists = parliament_seat }
-				set_variable = { name = hre_diet_location value = parliament_seat }
 				parliament_seat ?= {
 					set_variable = { name = diet_location value = yes }
 					trigger_event_silently = { id = hre.6 }
@@ -389,7 +398,9 @@ hre_establish_perpetual_diet = {
 hre_force_emperor_to_abdicate = {
 	type = international_organization
 	special_status = elector
-	chance = 100
+	chance = {
+		add = 0 # ANTIQVITAS runtime quarantine
+	}
 	selectable_for = {
 		NOT = { is_leader_of_international_organization = scope:recipient }
 		OR = {
@@ -456,7 +467,9 @@ hre_circle_levy_request = {
 	allow = {
 		NOT = { has_cooldown = hre_circle_levy_request }
 	}
-	chance = 10
+	chance = {
+		add = 0 # ANTIQVITAS runtime quarantine
+	}
 	selectable_for = {
 		is_leader_of_international_organization = scope:recipient
 	}
@@ -518,7 +531,9 @@ hre_enforce_circle_landfriede = {
 	allow = {
 		NOT = { has_cooldown = hre_enforce_circle_landfriede }
 	}
-	chance = 8
+	chance = {
+		add = 0 # ANTIQVITAS runtime quarantine
+	}
 	selectable_for = {
 		is_leader_of_international_organization = scope:recipient
 	}

@@ -1,0 +1,14 @@
+﻿scenario,living_varus,eligible_actor_exists,eligible_war,unrelated_war,truce_or_alliance,east_rhine_ownership,conquered_germania,battle_already_resolved,policy_already_resolved,battle_fires,policy_fires,expected_battle,expected_policy,result,note
+Rome at peace,true,true,false,false,false,false,false,false,false,false,true,false,true,PASS,Peace cannot manufacture a battle.
+Eligible Germanic war,true,true,true,false,false,false,false,false,false,true,false,true,false,PASS,The campaign may culminate from 9.8.8.
+War elsewhere,true,true,false,true,false,false,false,false,false,false,true,false,true,PASS,An unrelated war is insufficient.
+Frontier truce or alliance,true,true,false,false,true,false,false,false,false,false,true,false,true,PASS,Diplomatic contact is not combat.
+East-of-Rhine occupation,true,true,false,false,false,true,false,false,false,false,true,false,true,PASS,Ownership alone cannot fire a battle.
+Conquered Germania at peace,true,false,false,false,false,false,true,false,false,false,true,false,true,PASS,Annexation removes the eligible opponent and suppresses the battle.
+Varus dead or missing,false,true,true,false,false,false,false,false,false,false,true,false,true,PASS,Invalid character scope falls back safely.
+Germanic actors missing,true,false,false,false,false,false,false,false,false,false,true,false,true,PASS,No surviving eligible opponent means no battle.
+AI Rome in eligible war,true,true,true,false,false,false,false,false,false,true,false,true,false,PASS,The trigger does not distinguish AI and player.
+Player Rome in eligible war,true,true,true,false,false,false,false,false,false,true,false,true,false,PASS,The player receives the same contingent choices.
+Save reload before battle,true,true,true,false,false,false,false,false,false,true,false,true,false,PASS,Country and character variables persist across saves.
+Save reload after battle,true,true,true,false,false,false,false,true,false,false,false,false,false,PASS,The resolved variable prevents duplicate battle and policy events.
+Save reload after policy,true,true,false,false,false,false,false,false,true,false,false,false,false,PASS,The policy-resolved variable prevents duplicate fallback events.

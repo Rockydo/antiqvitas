@@ -49,17 +49,17 @@ scripted_effect remove_all_timmy_cbs = {
 scripted_effect remove_all_timmy_cbs_tim = {
 	if = {
 		limit = {
-			country_exists = c:TIM
-			c:TIM = {
+			country_exists = c:DUMMY
+			c:DUMMY = {
 				NOT = { has_reform = government_reform:timurid_empire }
 			}
 		}
 		custom_tooltip = {
 			text = remove_all_timmy_cbs_tt
-			c:TIM = {
+			c:DUMMY = {
 				every_casus_belli_target = {
-					limit = { c:TIM = { has_casus_belli_of_type_on = { target = PREV type = casus_belli:cb_timurs_conquests } } }
-					c:TIM = { remove_casus_belli = { target = PREV type = casus_belli:cb_timurs_conquests } }
+					limit = { c:DUMMY = { has_casus_belli_of_type_on = { target = PREV type = casus_belli:cb_timurs_conquests } } }
+					c:DUMMY = { remove_casus_belli = { target = PREV type = casus_belli:cb_timurs_conquests } }
 				}
 			}
 		}
@@ -106,7 +106,7 @@ rise_of_timur.2 = {
 	option = {
 		name = rise_of_timur.2.a
 		show_as_tooltip = {
-			buff_timur_effect = { target = c:TIM }
+			buff_timur_effect = { target = c:DUMMY }
 		}
 	}
 	trigger = {
@@ -142,7 +142,7 @@ rise_of_timur.3 = {
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
-		c:TIM = {
+		c:DUMMY = {
 			save_scope_as = tim_country
 			capital ?= {
 				save_scope_as = target_location
@@ -406,7 +406,7 @@ rise_of_timur.8 = {
 		global_var:timur_character = {
 			save_scope_as = target_character
 		}
-		c:TIM = { save_scope_as = tim_country }
+		c:DUMMY = { save_scope_as = tim_country }
 	}
 	option = {
 		name = rise_of_timur.8.a
@@ -540,7 +540,7 @@ rise_of_timur.12 = {
 			situation = situation:rise_of_timur
 			event = rot_prepare_conquest_of_china
 		}
-		c:CHI ?= { save_scope_as = target_country }
+		c:DUMMY ?= { save_scope_as = target_country }
 	}
 	option = {
 		name = rise_of_timur.12.a
@@ -936,7 +936,7 @@ rise_of_timur.1000 = {
 	immediate = {
 		save_scope_as = from_country
 		ruler ?= { save_scope_as = from_character }
-		c:GLH ?= {
+		c:DUMMY ?= {
 			save_scope_as = target_country
 			ruler_or_regent ?= { save_scope_as = target_character }
 		}
@@ -1069,7 +1069,7 @@ rise_of_timur.1010 = {
 	immediate = {
 		save_scope_as = from_country
 		ruler ?= { save_scope_as = from_character }
-		c:GLH ?= {
+		c:DUMMY ?= {
 			save_scope_as = target_country
 			ruler_or_regent ?= { save_scope_as = target_character }
 		}

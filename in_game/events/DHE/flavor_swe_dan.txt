@@ -1,10 +1,10 @@
 ﻿namespace = flavor_swe_dan
 
 scripted_effect transfer_the_locs = {
-	location:asbo = { change_location_owner = c:SKE }
-	location:laholm = { change_location_owner = c:SKE }
-	c:DAN ?= { add_gold = 250 }
-	c:SWE ?= { add_gold = -250 }
+	location:asbo = { change_location_owner = c:DUMMY }
+	location:laholm = { change_location_owner = c:DUMMY }
+	c:DUMMY ?= { add_gold = 250 }
+	c:DUMMY ?= { add_gold = -250 }
 }
 
 # The Scania Affair
@@ -17,7 +17,7 @@ flavor_swe_dan.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -28,14 +28,14 @@ flavor_swe_dan.1 = {
 	trigger = {
 		current_date > 476.9.4
 		at_war = no
-		c:DAN ?= {
+		c:DUMMY ?= {
 			is_subject = no
 			num_loans > 0
 			owns = location:asbo
 			owns = location:laholm
 		}
-		c:SKE ?= {
-			is_subject_of = c:SWE
+		c:DUMMY ?= {
+			is_subject_of = c:DUMMY
 		}
 	}
 
@@ -43,7 +43,7 @@ flavor_swe_dan.1 = {
 		name = flavor_swe_dan.1.a
 
 		historical_option = yes
-		c:DAN = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_swe_dan.2
 		}
 		custom_tooltip = flavor_swe_dan_offer
@@ -68,7 +68,7 @@ flavor_swe_dan.2 = {
 		name = flavor_swe_dan.2.a
 		historical_option = yes
 
-		c:SWE ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = flavor_swe_dan.3
 		}
 		show_as_tooltip = {
@@ -80,7 +80,7 @@ flavor_swe_dan.2 = {
 		name = flavor_swe_dan.2.b
 		add_stability = stability_severe_penalty
 		
-		c:SWE ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = flavor_swe_dan.4
 			#trigger_event_non_silently = { id = flavor_swe_dan.4 days = 15 }
 		}
@@ -130,7 +130,7 @@ flavor_swe_dan.4 = {
 	option = {
 		name = flavor_swe_dan.4.a
 		add_casus_belli = {	
-			target = c:DAN
+			target = c:DUMMY
 			type = casus_belli:cb_conquer_province
 			province = location:laholm.province
 		}

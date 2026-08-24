@@ -51,7 +51,7 @@ def main() -> int:
             re.S,
         )
     }
-    expected_tiers = set(startup.OPENING_CAPACITY_TIERS)
+    expected_tiers = set(expected.values())
     if set(definitions) != expected_tiers or any(key != value for key, value in definitions.items()):
         failures.append(f"capacity tier definitions drifted: {definitions}")
     forbidden = (

@@ -10,7 +10,7 @@ flavor_sale_of_lusatia.1000 = { #Renew the Lusatian Pledge
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -33,12 +33,12 @@ flavor_sale_of_lusatia.1000 = { #Renew the Lusatian Pledge
 		current_date > 476.9.4
 		has_ruler = yes
 		at_war = no
-		country_exists = c:SOR
-		country_exists = c:MEI
-		c:MEI = {
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_ruler = yes
 		}
-		c:SOR = {
+		c:DUMMY = {
 			is_subject_of = root
 		}
 	}
@@ -49,7 +49,7 @@ flavor_sale_of_lusatia.1000 = { #Renew the Lusatian Pledge
 
 		custom_tooltip = {
 			text = flavor_sale_of_lusatia.1000.a.tt
-			c:MEI = {
+			c:DUMMY = {
 				trigger_event_non_silently = flavor_sale_of_lusatia.1001
 			}
 		}
@@ -59,7 +59,7 @@ flavor_sale_of_lusatia.1000 = { #Renew the Lusatian Pledge
 		name = flavor_sale_of_lusatia.1000.b
 
 		add_stability = stability_mild_penalty
-		c:SOR = {
+		c:DUMMY = {
 			add_liberty_desire = liberty_desire_severe_minus
 		}
 	}
@@ -92,10 +92,10 @@ flavor_sale_of_lusatia.1001 = { #Renew the Lusatian Pledge
 		historical_option = yes
 
 		transfer_yearly_gold = {
-			target = c:BRA
+			target = c:DUMMY
 			value = 0.5
 		}
-		c:BRA = {
+		c:DUMMY = {
 			set_variable = {
 				name = pledge_of_lusatia_accepted
 			}
@@ -104,9 +104,9 @@ flavor_sale_of_lusatia.1001 = { #Renew the Lusatian Pledge
 				years = 10
 			}
 		}
-		c:SOR = {
+		c:DUMMY = {
 			make_subject_of = {
-				target = c:MEI
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 		}
@@ -129,14 +129,14 @@ flavor_sale_of_lusatia.1100 = { #Renew the Lusatian Pledge
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					country_exists = c:SOR
+					country_exists = c:DUMMY
 				}
 				desc = flavor_sale_of_lusatia.1100.desc_normal
 			}
 			triggered_desc = {
 				trigger = {
 					NOT = {
-						country_exists = c:SOR
+						country_exists = c:DUMMY
 					}
 				}
 				desc = flavor_sale_of_lusatia.1100.desc_fallback
@@ -153,7 +153,7 @@ flavor_sale_of_lusatia.1100 = { #Renew the Lusatian Pledge
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -259,9 +259,9 @@ flavor_sale_of_lusatia.1100 = { #Renew the Lusatian Pledge
 		name = flavor_sale_of_lusatia.1100.a
 		historical_option = yes
 		trigger = {
-			country_exists = c:SOR
-			c:SOR = {
-				is_subject_of = c:MEI
+			country_exists = c:DUMMY
+			c:DUMMY = {
+				is_subject_of = c:DUMMY
 			}
 		}
 		
@@ -273,15 +273,15 @@ flavor_sale_of_lusatia.1100 = { #Renew the Lusatian Pledge
 	option = { #We keep it
 		name = flavor_sale_of_lusatia.1100.b
 		trigger = {
-			country_exists = c:SOR
-			c:SOR = {
-				is_subject_of = c:MEI
+			country_exists = c:DUMMY
+			c:DUMMY = {
+				is_subject_of = c:DUMMY
 			}
 		}
 
-		c:SOR = {
+		c:DUMMY = {
 			make_subject_of = {
-				target = c:BRA
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 		}
@@ -290,13 +290,13 @@ flavor_sale_of_lusatia.1100 = { #Renew the Lusatian Pledge
 	option = { #Fallback if SOR is running free without supervision
 		name = flavor_sale_of_lusatia.1100.c
 		trigger = {
-			country_exists = c:SOR
-			c:SOR = {
+			country_exists = c:DUMMY
+			c:DUMMY = {
 				is_subject = no
 			}
 		}
 		add_casus_belli = {
-			target = c:SOR
+			target = c:DUMMY
 			type = casus_belli:cb_subject_broke_free
 		}
 	}
@@ -305,7 +305,7 @@ flavor_sale_of_lusatia.1100 = { #Renew the Lusatian Pledge
 		name = flavor_sale_of_lusatia.1100.d
 		trigger = {
 			NOT = {
-				country_exists = c:SOR
+				country_exists = c:DUMMY
 			}
 		}
 		add_prestige = prestige_mild_penalty
@@ -337,7 +337,7 @@ flavor_sale_of_lusatia.1101 = { #Offer to buy Lusatia
 		historical_option = yes
 
 		transfer_yearly_gold = {
-			target = c:BRA
+			target = c:DUMMY
 			value = 1
 		}
 		if = {
@@ -348,12 +348,12 @@ flavor_sale_of_lusatia.1101 = { #Offer to buy Lusatia
 			}
 			scope:target_buyer = {
 				annex_country = {
-					country = c:SOR
+					country = c:DUMMY
 				}
 			}
 		}
 		else = {
-			c:SOR = {
+			c:DUMMY = {
 				make_subject_of = {
 					target = scope:target_buyer
 					type = subject_type:vassal
@@ -392,7 +392,7 @@ flavor_sale_of_lusatia.1101 = { #Offer to buy Lusatia
 		name = flavor_sale_of_lusatia.1101.b
 
 		add_prestige = prestige_mild_bonus
-		c:BRA = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_sale_of_lusatia.1102
 		}
 
@@ -439,9 +439,9 @@ flavor_sale_of_lusatia.1102 = { #Offer to buy Lusatia
 	option = {
 		name = flavor_sale_of_lusatia.1102.a
 
-		c:SOR = {
+		c:DUMMY = {
 			make_subject_of = {
-				target = c:BRA
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 		}

@@ -66,7 +66,7 @@ cultural_event.3 = {
 	trigger = {
 		current_date > 476.9.4
 		current_age = age_2_renaissance
-		NOT = { country_exists = c:BYZ }
+		NOT = { country_exists = c:DUMMY }
 		ruler ?= { dip >= 66 }
 		religion.group = religion_group:christian
 		has_advance = patron_of_art

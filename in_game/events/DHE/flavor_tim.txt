@@ -77,7 +77,7 @@ flavor_tim.2 = { #Death of Timur (neighbor's response)
 				dynasty = scope:target_timur.dynasty
 			}
 		}
-		add_casus_belli = { target = c:TIM type = casus_belli:cb_timurs_conquests }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_timurs_conquests }
 	}
 	option = { #Long may they splinter
 		name = flavor_tim.2.b
@@ -110,7 +110,7 @@ flavor_tim.3 = { #Ulugh Beg's Observatory
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -192,7 +192,7 @@ flavor_tim.4 = { #Embassy to India
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -258,7 +258,7 @@ flavor_tim.5 = { #Embassy to China
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -275,8 +275,8 @@ flavor_tim.5 = { #Embassy to China
 			artist_type = writer
 			artist_skill >= 0.6
 		}
-		country_exists = c:CHI
-		c:CHI = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			this != root
 			opinion = { target = root value > 0 }
 		}
@@ -291,7 +291,7 @@ flavor_tim.5 = { #Embassy to China
 			}
 			save_scope_as = target_artist
 		}
-		c:CHI = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 	}
 
 	option = { #Send the embassy
@@ -319,18 +319,18 @@ flavor_tim.6 = { #Timur the Lame
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHG
-		tag = NGD
-		tag = QUN
-		tag = BSD
-		tag = ART
-		tag = APD
-		tag = SLD
-		tag = BRL
-		tag = YSU
-		tag = KTT
-		tag = JLY
-		tag = TIM
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -375,18 +375,18 @@ flavor_tim.7 = { #Zafarnama
 	historical_info = flavor_tim.7.historical_info
 
 	dynamic_historical_event = {
-		tag = CHG
-		tag = NGD
-		tag = QUN
-		tag = BSD
-		tag = ART
-		tag = APD
-		tag = SLD
-		tag = BRL
-		tag = YSU
-		tag = KTT
-		tag = JLY
-		tag = TIM
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -483,7 +483,7 @@ flavor_tim.8 = {
 			is_alive = yes
 			is_adult = yes
 		}
-		NOT = { country_exists = c:TIM }
+		NOT = { country_exists = c:DUMMY }
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
@@ -497,8 +497,8 @@ flavor_tim.8 = {
 			name = timur_character
 			value = character:chg_timur_lame_borjigin
 		}
-		c:CHG ?= { save_scope_as = target_chagatai }
-		c:TIM = { save_scope_as = target_country }
+		c:DUMMY ?= { save_scope_as = target_chagatai }
+		c:DUMMY = { save_scope_as = target_country }
 		location:samarkand = {
 			save_scope_as = target_location
 			area = {
@@ -670,7 +670,7 @@ flavor_tim.8 = {
 							is_core_of = scope:target_country
 							count = all
 						}
-						this = c:CHG
+						this = c:DUMMY
 					}
 				}
 				set_variable = { name = had_tim_rise_event value = 1 months = 1 }
@@ -702,7 +702,7 @@ flavor_tim.81 = {
 				scope:target_country = { is_ai = yes }
 			}
 			trigger_if = {
-				limit = { this = c:CHG }
+				limit = { this = c:DUMMY }
 				any_owned_location = {
 					is_core_of = scope:target_country
 					count = all
@@ -754,7 +754,7 @@ flavor_tim.81 = {
 						is_core_of = scope:target_country
 						count = all
 					}
-					this = c:CHG
+					this = c:DUMMY
 				}
 			}
 			set_variable = { name = had_tim_rise_event value = 1 months = 1 }
@@ -775,7 +775,7 @@ flavor_tim.9 = {
 	historical_info = flavor_tim.9.historical_info
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -863,7 +863,7 @@ flavor_tim.10 = {
 	historical_info = flavor_tim.10.historical_info
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -957,7 +957,7 @@ flavor_tim.11 = {
 	historical_info = flavor_tim.11.historical_info
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1042,7 +1042,7 @@ flavor_tim.12 = {
 	historical_info = flavor_tim.12.historical_info
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1091,7 +1091,7 @@ flavor_tim.13 = {
 	historical_info = flavor_tim.13.historical_info
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1146,7 +1146,7 @@ flavor_tim.14 = {
 	historical_info = flavor_tim.14.historical_info
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1226,7 +1226,7 @@ flavor_tim.15 = {
 	historical_info = flavor_tim.15.historical_info
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1309,7 +1309,7 @@ flavor_tim.16 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1436,7 +1436,7 @@ flavor_tim.18 = {
 	}
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1499,7 +1499,7 @@ flavor_tim.19 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1584,7 +1584,7 @@ flavor_tim.20 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1658,17 +1658,17 @@ flavor_tim.1000 = { #A Problematic Individual
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = CHG
-		tag = NGD
-		tag = QUN
-		tag = BSD
-		tag = ART
-		tag = APD
-		tag = SLD
-		tag = BRL
-		tag = YSU
-		tag = KTT
-		tag = JLY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1937,7 +1937,7 @@ flavor_tim.1100 = { #Rise of Astrarabadi Fazlallah
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TIM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2

@@ -16,7 +16,7 @@ flavor_rag.1000 = { #Enemy at the Gates
 	historical_info = flavor_rag.1000.historical_info
 
 	dynamic_historical_event = {
-		tag = RAG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -26,7 +26,7 @@ flavor_rag.1000 = { #Enemy at the Gates
 		ruler ?= {
 			save_scope_as = target_ruler
 		}
-		c:TUR = {
+		c:DUMMY = {
 			ruler ?= {
 				save_scope_as = ottoman_ruler
 			}
@@ -36,14 +36,14 @@ flavor_rag.1000 = { #Enemy at the Gates
 	trigger = {
 		current_date > 476.9.4
 		is_subject = no
-		country_exists = c:TUR
+		country_exists = c:DUMMY
 		any_neighbor_country = {
 			tag = TUR
 		}
-		c:TUR = {
+		c:DUMMY = {
 			NOT = { is_allied_with = { target = root } }
 			is_great_power = yes
-			country_economical_base > c:RAG.country_economical_base
+			country_economical_base > c:DUMMY.country_economical_base
 		}
 	}
 	
@@ -55,7 +55,7 @@ flavor_rag.1000 = { #Enemy at the Gates
 			type = belligerent_vs_conciliatory
 			value = societal_value_minor_move_to_right
 		}
-		c:TUR = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_rag.1001
 		}
 	}
@@ -95,15 +95,15 @@ flavor_rag.1001 = { #An Offer from Ragusa
 			type = belligerent_vs_conciliatory
 			value = societal_value_minor_move_to_right
 		}
-		c:RAG = {
+		c:DUMMY = {
 			make_subject_of = {
-				target = c:TUR
+				target = c:DUMMY
 				type = subject_type:tributary
 			}
 		}
 		add_opinion = {
 			modifier = opinion_rag_ottoman_partnership
-			target = c:RAG
+			target = c:DUMMY
 		}
 	}
 	
@@ -114,7 +114,7 @@ flavor_rag.1001 = { #An Offer from Ragusa
 			value = societal_value_minor_move_to_left
 		}
 		add_casus_belli = {
-			target = c:RAG
+			target = c:DUMMY
 			type = casus_belli:cb_annex
 		}
 	}

@@ -51,6 +51,7 @@ ALLOWED_MODIFIERS = frozenset((
     "global_pop_assimilation_speed_modifier", "global_pop_conversion_speed_modifier",
     "global_pop_food_consumption", "global_production_efficiency",
     "global_trade_through_owned_territory_efficiency", "global_tribes_estate_power",
+    "goods_gold_used_for_minting",
     "land_morale_modifier", "legislative_efficiency", "levy_combat_efficiency_modifier",
     "minting_income_factor", "minting_inflation_threshold",
     "monthly_towards_aristocracy", "monthly_towards_centralization",
@@ -65,7 +66,7 @@ ALLOWED_MODIFIERS = frozenset((
     "replace_cabinet_member_cost_modifier", "set_cabinet_member_cost_modifier",
     "slavery_blocked", "stability_cost_efficiency", "subject_loyalty",
     "tolerance_heathen", "tribes_estate_target_satisfaction",
-    "wrong_culture_levy_size",
+    "silver_used_for_minting", "wrong_culture_levy_size",
 ))
 ALLOWED_MODIFIERS |= frozenset(
     modifier_name(row)
@@ -427,7 +428,7 @@ THEMES = (
         ),
         (
             (("global_integration_speed_modifier", "0.035"), ("monthly_towards_centralization", "societal_value_minor_monthly_move")),
-            (("nobles_estate_target_satisfaction", "tiny_permanent_target_satisfaction"), ("global_monthly_control", "-0.005")),
+            (("nobles_estate_target_satisfaction", "tiny_permanent_target_satisfaction"), ("monthly_towards_decentralization", "societal_value_minor_monthly_move")),
             (("global_pop_assimilation_speed_modifier", "0.01"), ("peasants_estate_max_tax", "-0.015")),
         ),
         (("crown_estate",), ("nobles_estate", "tribes_estate"), ("peasants_estate",)),
@@ -997,6 +998,15 @@ def option_effects(
 ) -> tuple[tuple[str, str], ...]:
     effects = list(theme.effects[stance_index])
     effects.extend(profile.extra_effects[stance_index])
+    # Every live Roman coinage policy governs institutional control of the same
+    # Augustan gold-and-silver standard.  These engine booleans must live on the
+    # profile options actually assigned at startup; a separate hidden law group
+    # cannot create minting demand for Rome.
+    if profile.key == "roman" and theme.key == "coinage":
+        effects.extend((
+            ("goods_gold_used_for_minting", "yes"),
+            ("silver_used_for_minting", "yes"),
+        ))
     power = profile_power_modifier(profile, stance_index)
     if power not in effects:
         effects.append(power)
@@ -1381,6 +1391,18 @@ def validate_content() -> None:
                     failures.append(f"{profile.key}/{theme.key} uses unknown estate")
         if len(packages) != 42:
             failures.append(f"profile {profile.key} contains duplicate policy effect packages")
+    roman = profile_by_key()["roman"]
+    coinage = next(theme for theme in THEMES if theme.key == "coinage")
+    required_roman_bullion = {
+        ("goods_gold_used_for_minting", "yes"),
+        ("silver_used_for_minting", "yes"),
+    }
+    for stance_index, stance in enumerate(STANCE_KEYS):
+        effects = option_effects(roman, coinage, stance_index)
+        if not required_roman_bullion.issubset(effects):
+            failures.append(
+                f"live Roman {stance} coinage policy lacks the Augustan bullion contract"
+            )
     profile_keys = {profile.key for profile in PROFILES}
     theme_keys = {theme.key for theme in THEMES}
     late_keys: set[str] = set()

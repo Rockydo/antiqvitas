@@ -11,7 +11,7 @@ appanage = {
 			scope:actor ?= { is_subject_of = scope:recipient }
 			custom_tooltip = {
 				text = has_not_been_exempted_tt
-				scope:recipient ?= { has_variable = demanded_exemption_longterm_variable }
+				scope:recipient ?= { always = no }
 			}
 			custom_tooltip = {
 				text = french_subject_prevented_from_call_to_war_join_war_tt

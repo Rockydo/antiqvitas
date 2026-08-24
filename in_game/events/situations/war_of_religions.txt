@@ -1281,9 +1281,9 @@ war_of_religions.18 = { #Looting of Heidelberg Library
 		if = {
 			limit = {
 				religion = religion:catholic
-				country_exists = c:PAP
+				country_exists = c:DUMMY
 			}
-			c:PAP.capital = {
+			c:DUMMY.capital = {
 				save_scope_as = target_book_donation
 			}
 		}
@@ -1315,9 +1315,9 @@ war_of_religions.18 = { #Looting of Heidelberg Library
 		if = {
 			limit = {
 				religion = religion:catholic
-				country_exists = c:PAP
+				country_exists = c:DUMMY
 			}
-			c:PAP = {
+			c:DUMMY = {
 				add_opinion = {
 					target = root
 					modifier = opinion_gifted_heidelberg_books

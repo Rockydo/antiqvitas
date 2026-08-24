@@ -24,7 +24,6 @@
 
 
 	modifier = {
-		local_manpower = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
 
@@ -532,7 +531,6 @@ enderun_academy = {
 
 
 	modifier = {
-		local_manpower = 0.02
 		can_recruit_regiment_in_this_location = yes
 	}
 	capital_country_modifier = {
@@ -587,7 +585,6 @@ imperial_halic_shipyards = {
 
 	modifier = {
 		max_ships_built_at_same_time = 2
-		local_sailors = 0.02
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.02
 	}
@@ -631,8 +628,6 @@ rock_of_monaco = {	#Yes, we represent Monaco as a building of Nice
 
 
 	modifier = {
-		manpower_to_building_owner = 0.002
-		sailors_to_building_owner = 0.002
 		building_owner_maritime_presence = 0.025
 	}
 
@@ -966,7 +961,6 @@ ribeira_das_naus = {
 
 	modifier = {
 		max_ships_built_at_same_time = 2
-		local_sailors = 0.02
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.02
 	}
@@ -1339,7 +1333,6 @@ bodrum_castle = {
 	is_foreign = yes
 
 	modifier = {
-		manpower_to_building_owner = 0.005
 		gold_to_building_owner = 3
 	}
 
@@ -1786,7 +1779,6 @@ friesland_admiralty = {
 
 
 	modifier = {
-		local_sailors = 0.01
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.01
 	}
@@ -1825,7 +1817,6 @@ west_friesland_admiralty = {
 
 
 	modifier = {
-		local_sailors = 0.01
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.01
 	}
@@ -1862,7 +1853,6 @@ rotterdam_admiralty = {
 
 
 	modifier = {
-		local_sailors = 0.01
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.01
 	}
@@ -1901,7 +1891,6 @@ zeeland_admiralty = {
 
 
 	modifier = {
-		local_sailors = 0.01
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.01
 	}
@@ -1940,7 +1929,6 @@ amsterdam_admiralty = {
 
 
 	modifier = {
-		local_sailors = 0.01
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.01
 	}
@@ -3588,7 +3576,6 @@ segovia_artillery_academy = {
 
 
 	modifier = {
-		local_manpower = 0.012
 		local_soldiers_max_literacy = 10
 		can_recruit_regiment_in_this_location = yes
 	}

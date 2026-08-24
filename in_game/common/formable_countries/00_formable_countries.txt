@@ -157,57 +157,57 @@ GBR_f = {
 		}
 		trigger_if = {
 			limit = {
-				country_exists = c:ENG
-				this != c:ENG
+				country_exists = c:DUMMY
+				this != c:DUMMY
 			}
 			custom_tooltip = {
 				text = GBR_f_trigger_eng
 				OR = {
 					tag = ENG
-					NOT = { country_exists = c:ENG }
-					c:ENG = { is_subject_or_below_of = root }
+					NOT = { country_exists = c:DUMMY }
+					c:DUMMY = { is_subject_or_below_of = root }
 				}
 			}
 		}
 		trigger_if = {
 			limit = {
-				country_exists = c:SCO
-				this != c:SCO
+				country_exists = c:DUMMY
+				this != c:DUMMY
 			}
 			custom_tooltip = {
 				text = GBR_f_trigger_sco
 				OR = {
 					tag = SCO
-					NOT = { country_exists = c:SCO }
-					c:SCO = { is_subject_or_below_of = root }
+					NOT = { country_exists = c:DUMMY }
+					c:DUMMY = { is_subject_or_below_of = root }
 				}
 			}
 		}
 		trigger_if = {
 			limit = {
-				country_exists = c:WLS
-				this != c:WLS
+				country_exists = c:DUMMY
+				this != c:DUMMY
 			}
 			custom_tooltip = {
 				text = GBR_f_trigger_wls
 				OR = {
 					tag = WLS
-					NOT = { country_exists = c:WLS }
-					c:WLS = { is_subject_or_below_of = root }
+					NOT = { country_exists = c:DUMMY }
+					c:DUMMY = { is_subject_or_below_of = root }
 				}
 			}
 		}
 		trigger_if = {
 			limit = {
-				country_exists = c:SBL
-				this != c:SBL
+				country_exists = c:DUMMY
+				this != c:DUMMY
 			}
 			custom_tooltip = {
 				text = GBR_f_trigger_sbl
 				OR = {
 					tag = SBL
-					NOT = { country_exists = c:SBL }
-					c:SBL = { is_subject_or_below_of = root }
+					NOT = { country_exists = c:DUMMY }
+					c:DUMMY = { is_subject_or_below_of = root }
 				}
 			}
 		}
@@ -816,7 +816,7 @@ LAT_f = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		NOT = { country_exists = c:LAT }
+		NOT = { country_exists = c:DUMMY }
 		NOT = { has_variable = lat_reduced_requirements_to_form }
 		religion = religion:catholic
 		is_frankokratia_state = yes
@@ -824,7 +824,7 @@ LAT_f = {
 	}
 
 	allow = {
-		NOT = { country_exists = c:LAT }
+		NOT = { country_exists = c:DUMMY }
 		owns = location:constantinople
 		religion = religion:catholic
 		OR = {
@@ -914,7 +914,7 @@ LAT_REDUCED_REQUIREMENTS_f = {
 
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		NOT = { country_exists = c:LAT }
+		NOT = { country_exists = c:DUMMY }
 		religion = religion:catholic
 		has_variable = lat_reduced_requirements_to_form
 		is_frankokratia_state = yes
@@ -922,7 +922,7 @@ LAT_REDUCED_REQUIREMENTS_f = {
 	}
 
 	allow = {
-		NOT = { country_exists = c:LAT }
+		NOT = { country_exists = c:DUMMY }
 		owns = location:constantinople
 		religion = religion:catholic
 		OR = {
@@ -1010,7 +1010,7 @@ THE_f = {
 	capital_required = no
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		NOT = { country_exists = c:THE }
+		NOT = { country_exists = c:DUMMY }
 		NOT = { tag = LAT }
 		is_frankokratia_state = yes
 		NOT = { has_variable = halved_cost_to_form_thesslonica }
@@ -1018,7 +1018,7 @@ THE_f = {
 		NOT = { current_age_or_later = { age = age_3_discovery } }
 	}
 	allow = {
-		NOT = { country_exists = c:THE }
+		NOT = { country_exists = c:DUMMY }
 		owns = location:thessaloniki
 		religion = religion:catholic
 		OR = {
@@ -1061,7 +1061,7 @@ THE_REDUCED_REQUIREMENTS_f = {
 	capital_required = no
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		NOT = { country_exists = c:THE }
+		NOT = { country_exists = c:DUMMY }
 		NOT = { tag = LAT }
 		is_frankokratia_state = yes
 		OR = {
@@ -1071,7 +1071,7 @@ THE_REDUCED_REQUIREMENTS_f = {
 		NOT = { current_age_or_later = { age = age_3_discovery } }
 	}
 	allow = {
-		NOT = { country_exists = c:THE }
+		NOT = { country_exists = c:DUMMY }
 		owns = location:thessaloniki
 		religion = religion:catholic
 		OR = {
@@ -1784,15 +1784,15 @@ PLC_f = {
 	allow = {
 		trigger_if = {
 			limit = {
-				country_exists = c:POL
-				this != c:POL
+				country_exists = c:DUMMY
+				this != c:DUMMY
 			}
 			custom_tooltip = {
 				text = PLC_f_trigger_pol
 				OR = {
 					tag = POL
-					NOT = { country_exists = c:POL }
-					c:POL = {
+					NOT = { country_exists = c:DUMMY }
+					c:DUMMY = {
 						OR = {
 							is_subject_or_below_of = root
 							in_union_with = root
@@ -1803,15 +1803,15 @@ PLC_f = {
 		}
 		trigger_if = {
 			limit = {
-				country_exists = c:LIT
-				this != c:LIT
+				country_exists = c:DUMMY
+				this != c:DUMMY
 			}
 			custom_tooltip = {
 				text = PLC_f_trigger_lit
 				OR = {
 					tag = LIT
-					NOT = { country_exists = c:LIT }
-					c:LIT = {
+					NOT = { country_exists = c:DUMMY }
+					c:DUMMY = {
 						OR = {
 							is_subject_or_below_of = root
 							in_union_with = root
@@ -1910,7 +1910,7 @@ ROM_f = {
 		owns = location:constantinople
 		country_rank = country_rank:rank_empire
 		is_hegemon = yes
-		NOT = { country_exists = c:BYZ }
+		NOT = { country_exists = c:DUMMY }
 		OR = {
 			religion.group = religion_group:christian
 			religion = religion:hellenism_religion
@@ -1981,7 +1981,7 @@ ROM_BYZ_f = {
 
 		OR = {
 			has_or_had_tag = BYZ
-			NOT = { country_exists = c:BYZ }
+			NOT = { country_exists = c:DUMMY }
 		}
 	}
 
@@ -2419,25 +2419,25 @@ TWS_f = {
 		trigger_if = {
 			limit = { tag = SIC }
 			OR = {
-				NOT = { country_exists = c:NAP }
-				c:NAP = { NOT = { has_presence_in = region:italy_region } }
+				NOT = { country_exists = c:DUMMY }
+				c:DUMMY = { NOT = { has_presence_in = region:italy_region } }
 			}
 		}
 		trigger_else_if = {
 			limit = { tag = NAP }
 			OR = {
-				NOT = { country_exists = c:SIC }
-				c:SIC = { NOT = { has_presence_in = region:italy_region } }
+				NOT = { country_exists = c:DUMMY }
+				c:DUMMY = { NOT = { has_presence_in = region:italy_region } }
 			}
 		}
 		trigger_else = {
 			OR = {
-				NOT = { country_exists = c:NAP }
-				c:NAP = { NOT = { has_presence_in = region:italy_region } }
+				NOT = { country_exists = c:DUMMY }
+				c:DUMMY = { NOT = { has_presence_in = region:italy_region } }
 			}
 			OR = {
-				NOT = { country_exists = c:SIC }
-				c:SIC = { NOT = { has_presence_in = region:italy_region } }
+				NOT = { country_exists = c:DUMMY }
+				c:DUMMY = { NOT = { has_presence_in = region:italy_region } }
 			}
 		}
 	}
@@ -2501,7 +2501,7 @@ GRE_f = {
 	rule = historical
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		NOT = { country_exists = c:BYZ }
+		NOT = { country_exists = c:DUMMY }
 		NOT = { tag = TUR }
 	}
 	allow = {
@@ -2583,7 +2583,7 @@ BYZ_trebizond_f = {
 	allow = {
 		religion = religion:orthodox
 		owns = location:constantinople
-		NOT = { country_exists = c:BYZ }
+		NOT = { country_exists = c:DUMMY }
 	}
 
 	name = BYZ
@@ -4240,7 +4240,7 @@ WES_f = {
 		}
 		OR = {
 			NOT = {
-				country_exists = c:KOL
+				country_exists = c:DUMMY
 			}
 			current_age_or_later = { age = age_6_revolutions }
 		}

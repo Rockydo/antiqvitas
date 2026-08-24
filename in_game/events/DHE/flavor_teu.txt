@@ -12,7 +12,7 @@ flavor_teu.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -21,11 +21,11 @@ flavor_teu.1 = {
 	trigger = {
 		current_date > 476.9.4
 		is_subject = no
-		country_exists = c:POL
-		is_neighbor_of = c:POL
+		country_exists = c:DUMMY
+		is_neighbor_of = c:DUMMY
 		at_war = no
 
-		c:POL = {
+		c:DUMMY = {
 			num_of_non_rural >= 10
 		}
 		num_of_non_rural >= 5
@@ -82,7 +82,7 @@ flavor_teu.1 = {
 		}
 		historical_option = yes
 		custom_tooltip = flavor_teu.1.tooltip
-		c:POL = { trigger_event_silently = { id = flavor_teu.2 }	}
+		c:DUMMY = { trigger_event_silently = { id = flavor_teu.2 }	}
 	}
 	option = {
 		name = flavor_teu.1.b
@@ -132,7 +132,7 @@ flavor_teu.3 = {
 	historical_info = flavor_teu.3.historical_info
 
 	dynamic_historical_event = {
-		tag = TEU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -184,7 +184,7 @@ flavor_teu.4 = {
 	outcome = neutral
 	historical_info = flavor_teu.4.historical_info
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -198,11 +198,11 @@ flavor_teu.4 = {
 	trigger = {
 		current_date > 476.9.4
 		NOT = {
-			country_exists = c:PRU
+			country_exists = c:DUMMY
 		}
 		OR = {
-			NOT = { country_exists = c:TEU }
-			c:TEU = { is_subject_of = ROOT }
+			NOT = { country_exists = c:DUMMY }
+			c:DUMMY = { is_subject_of = ROOT }
 		}
 		at_war = no
 		area:prussia_area = {
@@ -210,8 +210,8 @@ flavor_teu.4 = {
 				OR = {
 					owner ?= ROOT
 					AND = {
-						country_exists = c:TEU
-						owner ?= c:TEU
+						country_exists = c:DUMMY
+						owner ?= c:DUMMY
 					}
 				}
 				percent >= 0.85
@@ -229,7 +229,7 @@ flavor_teu.4 = {
 				add_to_list = list_of_royal_prussian_locations
 			}
 		}
-		c:TEU = {
+		c:DUMMY = {
 			save_scope_as = ducal_prussia_tag
 		}
 	}
@@ -248,7 +248,7 @@ flavor_teu.4 = {
 					limit = {
 						OR = {
 							owner ?= ROOT
-							owner ?= c:TEU
+							owner ?= c:DUMMY
 						}
 					}
 					change_location_owner = scope:ducal_prussia_tag
@@ -456,7 +456,7 @@ flavor_teu.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -474,7 +474,7 @@ flavor_teu.7 = {
 			exists = market
 		}
 		has_estate_privilege = estate_privilege:kulm_law
-		country_exists = c:HSA
+		country_exists = c:DUMMY
 	}
 
 	immediate = {
@@ -483,7 +483,7 @@ flavor_teu.7 = {
 			save_scope_as = target_location
 		}
 
-		c:HSA = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 	}
@@ -541,7 +541,7 @@ flavor_teu.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -642,7 +642,7 @@ flavor_teu.11 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -722,7 +722,7 @@ flavor_teu.12 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -825,7 +825,7 @@ flavor_teu.13 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -900,7 +900,7 @@ flavor_teu.14 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1044,7 +1044,7 @@ flavor_teu.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1147,8 +1147,8 @@ flavor_teu.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
-		tag = TEU
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1479,7 +1479,7 @@ flavor_teu.300 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1492,10 +1492,10 @@ flavor_teu.300 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:POL
-		NOT = { has_truce_with = c:POL }
-		NOT = { is_at_war_with = c:POL }
-		c:POL = {
+		country_exists = c:DUMMY
+		NOT = { has_truce_with = c:DUMMY }
+		NOT = { is_at_war_with = c:DUMMY }
+		c:DUMMY = {
 			is_neighbor_of = ROOT
 			OR = {
 				is_enemy_of = ROOT
@@ -1506,7 +1506,7 @@ flavor_teu.300 = {
 			has_ruler = yes
 			has_regent = yes
 		}
-		c:POL = {
+		c:DUMMY = {
 			OR = {
 				has_ruler = yes
 				has_regent = yes
@@ -1520,7 +1520,7 @@ flavor_teu.300 = {
 			save_scope_as = teu_ruler
 		}
 		save_scope_as = teu_from
-		c:POL = {
+		c:DUMMY = {
 			ruler_or_regent = {
 				save_scope_as = pol_ruler
 			}
@@ -1538,12 +1538,12 @@ flavor_teu.300 = {
 		}
 
 		show_as_tooltip = {
-			c:POL = {
-				add_casus_belli = { type = casus_belli:cb_insulted_us target = c:TEU }
+			c:DUMMY = {
+				add_casus_belli = { type = casus_belli:cb_insulted_us target = c:DUMMY }
 			}
 		}
 		hidden_effect = {
-			c:POL = {
+			c:DUMMY = {
 				trigger_event_non_silently = flavor_teu.301
 			}
 		}
@@ -1583,7 +1583,7 @@ flavor_teu.301 = {
 	option = {
 		name = flavor_teu.301.a
 
-		add_casus_belli =  { type = casus_belli:cb_insulted_us target = c:TEU }
+		add_casus_belli =  { type = casus_belli:cb_insulted_us target = c:DUMMY }
 
 		set_variable = TEU_received_naked_swords
 		custom_tooltip = POL_after_next_war_is_won

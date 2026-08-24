@@ -6,10 +6,6 @@
 antq_negotiate_route_safe_conduct = {
 	icon = antq_negotiate_route_safe_conduct
 	type = internationalorganization
-	ai_tick = monthly
-	ai_tick_frequency = 12
-	automation_tick = monthly
-	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -52,6 +48,7 @@ antq_negotiate_route_safe_conduct = {
 		exists = scope:target
 		scope:actor = { gold >= 10 }
 		scope:target = {
+			this != scope:actor
 			is_member_of_international_organization = international_organization:antq_arabian_route_exchanges
 		}
 	}
@@ -67,17 +64,13 @@ antq_negotiate_route_safe_conduct = {
 			add_prestige = prestige_weak_bonus
 		}
 		scope:target = {
-			add_opinion = { target = scope:actor modifier = antq_opinion_route_safe_conduct }
+			if = {
+				limit = { this != scope:actor }
+				add_opinion = { target = scope:actor modifier = antq_opinion_route_safe_conduct }
+			}
 		}
 	}
 
-	ai_will_do = {
-		add = { value = 12 }
-		if = {
-			limit = { scope:actor = { gold < 20 } }
-			add = { value = -30 }
-		}
-	}
 }
 
 # STR-ARAB; PTO-ARAB; UNESCO-INCENSE [contested]
@@ -85,10 +78,6 @@ antq_negotiate_route_safe_conduct = {
 antq_coordinate_cistern_repairs = {
 	icon = antq_coordinate_cistern_repairs
 	type = internationalorganization
-	ai_tick = monthly
-	ai_tick_frequency = 12
-	automation_tick = monthly
-	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -131,6 +120,7 @@ antq_coordinate_cistern_repairs = {
 		exists = scope:target
 		scope:actor = { gold >= 15 }
 		scope:target = {
+			this != scope:actor
 			is_member_of_international_organization = international_organization:antq_arabian_route_exchanges
 		}
 	}
@@ -145,18 +135,14 @@ antq_coordinate_cistern_repairs = {
 			add_gold = -15
 		}
 		scope:target = {
-			add_opinion = { target = scope:actor modifier = antq_opinion_cistern_cooperation }
-			add_stability = stability_weak_bonus
+			if = {
+				limit = { this != scope:actor }
+				add_opinion = { target = scope:actor modifier = antq_opinion_cistern_cooperation }
+				add_stability = stability_weak_bonus
+			}
 		}
 	}
 
-	ai_will_do = {
-		add = { value = 12 }
-		if = {
-			limit = { scope:actor = { gold < 30 } }
-			add = { value = -30 }
-		}
-	}
 }
 
 # STR-ARAB; PTO-ARAB; UNESCO-INCENSE [contested]
@@ -164,10 +150,6 @@ antq_coordinate_cistern_repairs = {
 antq_exchange_route_intelligence = {
 	icon = antq_exchange_route_intelligence
 	type = internationalorganization
-	ai_tick = monthly
-	ai_tick_frequency = 12
-	automation_tick = monthly
-	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -210,6 +192,7 @@ antq_exchange_route_intelligence = {
 		exists = scope:target
 		scope:actor = { gold >= 8 }
 		scope:target = {
+			this != scope:actor
 			is_member_of_international_organization = international_organization:antq_arabian_route_exchanges
 		}
 	}
@@ -225,17 +208,13 @@ antq_exchange_route_intelligence = {
 			add_legitimacy = legitimacy_weak_bonus
 		}
 		scope:target = {
-			add_opinion = { target = scope:actor modifier = antq_opinion_route_intelligence }
+			if = {
+				limit = { this != scope:actor }
+				add_opinion = { target = scope:actor modifier = antq_opinion_route_intelligence }
+			}
 		}
 	}
 
-	ai_will_do = {
-		add = { value = 12 }
-		if = {
-			limit = { scope:actor = { gold < 16 } }
-			add = { value = -30 }
-		}
-	}
 }
 
 # STR-ARAB; PTO-ARAB; UNESCO-INCENSE [contested]
@@ -243,10 +222,6 @@ antq_exchange_route_intelligence = {
 antq_settle_transit_incident = {
 	icon = antq_settle_transit_incident
 	type = internationalorganization
-	ai_tick = monthly
-	ai_tick_frequency = 12
-	automation_tick = monthly
-	automation_tick_frequency = 1
 	show_message_to_target = yes
 
 	potential = {
@@ -289,6 +264,7 @@ antq_settle_transit_incident = {
 		exists = scope:target
 		scope:actor = { gold >= 12 }
 		scope:target = {
+			this != scope:actor
 			is_member_of_international_organization = international_organization:antq_arabian_route_exchanges
 		}
 	}
@@ -304,15 +280,11 @@ antq_settle_transit_incident = {
 			add_stability = stability_weak_bonus
 		}
 		scope:target = {
-			add_opinion = { target = scope:actor modifier = antq_opinion_transit_settlement }
+			if = {
+				limit = { this != scope:actor }
+				add_opinion = { target = scope:actor modifier = antq_opinion_transit_settlement }
+			}
 		}
 	}
 
-	ai_will_do = {
-		add = { value = 12 }
-		if = {
-			limit = { scope:actor = { gold < 24 } }
-			add = { value = -30 }
-		}
-	}
 }

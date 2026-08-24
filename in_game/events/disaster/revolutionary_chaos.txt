@@ -121,7 +121,7 @@ revolutionary_chaos.2 = {
 		name = revolutionary_chaos.2.b
 		if = {
 			limit = { religion = religion:catholic }
-			reverse_add_opinion = { target = c:PAP modifier = opinion_too_tolerate }
+			reverse_add_opinion = { target = c:DUMMY modifier = opinion_too_tolerate }
 		}
 		add_country_modifier = { modifier = rev_chaos_religious_tolerance months = -1 mode = add_and_extend }
 		change_societal_value = { type = spiritualist_vs_humanist value = societal_value_move_to_right }

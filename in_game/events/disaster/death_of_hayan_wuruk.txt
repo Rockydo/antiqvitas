@@ -131,19 +131,19 @@ death_of_hayan_wuruk.3 = { #Autonomy Demands in the [target_subject.GetLongNameW
 
 		if = {
 			limit = { liberty_desire > 50 }
-			leave_all_wars_with = c:MAJ
+			leave_all_wars_with = c:DUMMY
 			if = {
 				limit = {
-					can_declare_legal_war_on = { target = c:MAJ }
+					can_declare_legal_war_on = { target = c:DUMMY }
 				}
 				declare_war_with_cb = {
-					target = c:MAJ
+					target = c:DUMMY
 					type = casus_belli:cb_independence_war
 				}
 			}
 			else = {
 				add_casus_belli = {
-					target = c:MAJ
+					target = c:DUMMY
 					type = casus_belli:cb_independence_war
 				}
 			}

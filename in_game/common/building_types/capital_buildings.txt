@@ -152,7 +152,6 @@ order_headquarters = {
 	}
 
 	capital_modifier = {
-		local_manpower = 0.02
 		local_defensive = 0.1
 		can_recruit_regiment_in_this_location = yes
 	}
@@ -204,7 +203,6 @@ admiralty = {
 
 
 	capital_modifier = {
-		local_sailors = 0.2
 	}
 
 	capital_country_modifier = {
@@ -254,7 +252,6 @@ war_college = {
 	}
 
 	capital_modifier = {
-		local_manpower = 0.2
 	}
 
 	capital_country_modifier = {
@@ -592,7 +589,6 @@ pirate_stronghold = { # ESTATE BUILDING
 	}
 
 	modifier = {
-		local_sailors = 0.02
 		local_maritime_presence = 1
 	}
 

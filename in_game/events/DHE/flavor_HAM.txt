@@ -10,7 +10,7 @@ flavor_ham.1 = { # The Berenberg Bank
 
 	major = yes
 	dynamic_historical_event = {
-		tag = HAM
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -148,8 +148,8 @@ flavor_ham.3 = { # The Hamburger Bank
 
 	major = yes
 	dynamic_historical_event = {
-		tag = HAM
-		tag = HSA
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10

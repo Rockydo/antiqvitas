@@ -5603,7 +5603,7 @@ earthquake_events.1100 = { #this will follow earthquake_events.1001, if you have
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 40

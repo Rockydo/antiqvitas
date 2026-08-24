@@ -36,7 +36,7 @@ flavor_ver.1 = {
 			}
 		}
 		save_scope_as = target_ver
-		c:VEN = {
+		c:DUMMY = {
 			save_scope_as = anti_scaligeri_leader
 			trigger_event_non_silently = {
 				id = flavor_ver.2
@@ -85,13 +85,13 @@ flavor_ver.2 = {
 			background = estate_type:burghers_estate
 			foreground = estate_type:nobles_estate
 		}
-		c:MLO = {
+		c:DUMMY = {
 			save_scope_as = mlo_participant
 			random_army = {
 				save_scope_as = mlo_army
 			}
 		}
-		c:FLO = {
+		c:DUMMY = {
 			save_scope_as = flo_participant
 		}
 		character:ven_pietro_rossi = {
@@ -188,7 +188,7 @@ flavor_ver.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -220,7 +220,7 @@ flavor_ver.3 = {
 			save_scope_as = war_leader
 		}
 		save_scope_as = from_country
-		c:VER = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			province:brescia_province = {
 				save_scope_as = target_province
@@ -279,7 +279,7 @@ flavor_ver.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -288,10 +288,10 @@ flavor_ver.4 = {
 	trigger = {
 		current_date > 476.9.4
 		in_scaligeri_war_trigger = yes
-		country_exists = c:LUC
+		country_exists = c:DUMMY
 		root_or_scaligeri_war_participant_controls = { location = location:lucca }
 		scope:target_war = {
-			is_a_defender = c:LUC
+			is_a_defender = c:DUMMY
 		}
 		scope:target_war.attacker_leader = {
 			war_score_in_war = {
@@ -314,7 +314,7 @@ flavor_ver.4 = {
 		location:pescia = {
 			save_scope_as = target_location
 		}
-		c:LUC = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		save_scope_as = from_country
@@ -370,7 +370,7 @@ flavor_ver.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -550,13 +550,13 @@ flavor_ver.8 = {
 }
 
 scripted_trigger padua_incident_is_valid = {
-	country_exists = c:PAD
+	country_exists = c:DUMMY
 	character:pad_marsiglio_carrara = {
 		is_alive = yes
-		owner ?= c:PAD
-		NOT = { c:PAD.ruler ?= this }
+		owner ?= c:DUMMY
+		NOT = { c:DUMMY.ruler ?= this }
 	}
-	c:PAD = {
+	c:DUMMY = {
 		is_subject = yes
 	}
 }
@@ -584,7 +584,7 @@ flavor_ver.1000 = {
 			foreground = estate_type:nobles_estate
 		}
 		set_up_della_scala_targets = yes
-		c:PAD = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			capital = {
 				save_scope_as = target_location
@@ -600,10 +600,10 @@ flavor_ver.1000 = {
 			save_scope_as = target_character3
 		}
 
-		c:VER = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_ver.1001
 		}
-		c:PAD = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_ver.1001
 		}
 	}
@@ -654,7 +654,7 @@ flavor_ver.1002 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VER
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -668,7 +668,7 @@ flavor_ver.1002 = {
 	trigger = {
 		current_date > 476.9.4
 		padua_incident_is_valid = yes
-		c:PAD ?= {
+		c:DUMMY ?= {
 			any_current_war = {
 				casus_belli ?= casus_belli:cb_scaligeri_war
 				is_a_defender = PREV
@@ -685,7 +685,7 @@ flavor_ver.1002 = {
 			foreground = estate_type:nobles_estate
 		}
 
-		c:PAD = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		save_scope_as = target_country2
@@ -713,7 +713,7 @@ flavor_ver.1002 = {
 			}
 		}
 
-		c:VEN = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = flavor_ver.1004
 			}
@@ -766,7 +766,7 @@ flavor_ver.1003 = {
 		location:padova = {
 			save_scope_as = target_location
 		}
-		c:PAD = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		estate_type:burghers_estate = {
@@ -775,7 +775,7 @@ flavor_ver.1003 = {
 		character:pad_marsiglio_carrara = {
 			save_scope_as = target_character
 		}
-		c:PAD.overlord = {
+		c:DUMMY.overlord = {
 			trigger_event_non_silently = {
 				id = flavor_ver.1005
 			}

@@ -8,7 +8,7 @@ flavor_kni.3 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -26,16 +26,16 @@ flavor_kni.3 = {
 	trigger = {
 		current_date > 476.9.4
 		location:alexandria = {
-			owner = c:TUR
+			owner = c:DUMMY
 		}
-		is_at_war_with = c:TUR
-		c:TUR = { expected_navy_size >= 1 }
+		is_at_war_with = c:DUMMY
+		c:DUMMY = { expected_navy_size >= 1 }
 	}
 
 	option = {
 		name = flavor_kni.3.a
 		add_gold = { value = location:alexandria.location_tax_base multiply = 5 }
-		c:TUR = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_captured_alexandria_great_carrack }
 		}
 		add_navy_tradition = navy_tradition_extreme_bonus
@@ -50,7 +50,7 @@ flavor_kni.4 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -100,7 +100,7 @@ flavor_kni.5 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -144,7 +144,7 @@ flavor_kni.7 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -196,7 +196,7 @@ flavor_kni.8 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -253,7 +253,7 @@ flavor_kni.9 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -310,7 +310,7 @@ flavor_kni.10 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -380,7 +380,7 @@ flavor_kni.11 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -442,7 +442,7 @@ flavor_kni.12 = { #The Knights of the New World
 	historical_info = flavor_kni.12.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -513,7 +513,7 @@ flavor_kni.13 = { #Philippe de Longvilliers de Poincy
 	historical_info = flavor_kni.13.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -582,7 +582,7 @@ flavor_kni.14 = { #Giovanni Paolo Lascaris
 	historical_info = flavor_kni.14.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -655,7 +655,7 @@ flavor_kni.15 = { #Natives Attack Our Colonies
 	historical_info = flavor_kni.15.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -756,7 +756,7 @@ flavor_kni.16 = { #The Knights Turn to Piracy
 	historical_info = flavor_kni.16.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -845,7 +845,7 @@ flavor_kni.17 = { #The Capture of Tripoli
 	historical_info = flavor_kni.17.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -921,7 +921,7 @@ flavor_kni.18 = { #The History of the Hospitallers
 	historical_info = flavor_kni.18.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1016,7 +1016,7 @@ flavor_kni.100 = {
 		owns = location:malta
 		religion = religion:catholic
 		NOT = { has_or_had_tag = KNI }
-		NOT = { country_exists = c:KNI }
+		NOT = { country_exists = c:DUMMY }
 		international_organization:hre = {
 			international_organization_has_leader = yes
 			leader_country = {
@@ -1035,7 +1035,7 @@ flavor_kni.100 = {
 		location:rodos = {
 			owner = { save_scope_as = target_rodos_owner }
 		}
-		c:PAP = {
+		c:DUMMY = {
 			ruler ?= {
 				save_scope_as = target_pope
 			}
@@ -1050,20 +1050,20 @@ flavor_kni.100 = {
 		add_stability = stability_extreme_bonus
 		location:malta = {
 			remove_core = root
-			change_location_owner = c:KNI
-			add_core = c:KNI
+			change_location_owner = c:DUMMY
+			add_core = c:DUMMY
 			change_integration_level = core
 		}
-		c:KNI = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = spa_ceded_malta }
 		}
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = spa_ceded_malta_pap }
 		}
 	}
 	option = {
 		name = flavor_kni.100.b
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = spa_refused_ceding_malta }
 		}
 	}
@@ -1079,7 +1079,7 @@ flavor_kni.110 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1105,7 +1105,7 @@ flavor_kni.110 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:PAP = { save_scope_as = target_pope_country }
+		c:DUMMY = { save_scope_as = target_pope_country }
 		ruler ?= { save_scope_as = target_character }
 		location:jerusalem.owner = { save_scope_as = target_country }
 	}
@@ -1115,7 +1115,7 @@ flavor_kni.110 = {
 
 		custom_tooltip = pap_gets_flavor_kni.111_tt
 		hidden_effect = {
-			c:PAP = { trigger_event_non_silently = flavor_kni.111 }
+			c:DUMMY = { trigger_event_non_silently = flavor_kni.111 }
 		}
 
 		add_army_tradition = army_tradition_ultimate_bonus
@@ -1132,11 +1132,11 @@ flavor_kni.110 = {
 		custom_tooltip = lose_100_opinion_with_pope_tt
 		hidden_effect = {
 			add_opinion = {
-				target = c:PAP
+				target = c:DUMMY
 				modifier = secularized_order
 			}
 			reverse_add_opinion = {
-				target = c:PAP
+				target = c:DUMMY
 				modifier = secularized_order
 			}
 		}
@@ -1187,7 +1187,7 @@ flavor_kni.111 = {
 				}
 			}
 			change_gold_effect = { scale = -20 }
-			c:KNI = {
+			c:DUMMY = {
 				add_casus_belli = {
 					target = location:antioch.owner
 					type = casus_belli:cb_conquer_province
@@ -1211,7 +1211,7 @@ flavor_kni.111 = {
 				vote = yes
 			}
 			change_gold_effect = { scale = -20 }
-			c:KNI = {
+			c:DUMMY = {
 				change_gold_effect = { scale = 20 }
 				add_religious_influence_if_valid = {
 					VALUE = 20
@@ -1227,15 +1227,15 @@ flavor_kni.111 = {
 		custom_tooltip = opinion_deteriorates_and_gets_event_tt
 		hidden_effect = {
 			reverse_add_opinion = {
-				target = c:KNI
+				target = c:DUMMY
 				modifier = denied_petition_for_crusade_modifier
 			}
-			c:KNI = {
+			c:DUMMY = {
 				trigger_event_non_silently = flavor_kni.112
 			}
 		}
 		add_opinion = {
-			target = c:KNI
+			target = c:DUMMY
 			modifier = denied_petition_for_crusade_modifier
 		}
 		add_government_power = government_power_extreme_penalty
@@ -1279,7 +1279,7 @@ flavor_kni.120 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1363,7 +1363,7 @@ flavor_kni.121 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1527,7 +1527,7 @@ flavor_kni.130 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 33
@@ -1625,7 +1625,7 @@ flavor_kni.150 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		#1402 in our timeline
 		to = 476.9.4
@@ -1774,7 +1774,7 @@ flavor_kni.1000 = {
 	historical_info = flavor_kni.1000.historical_info
 
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1993,7 +1993,7 @@ flavor_kni.2000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = KNI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1

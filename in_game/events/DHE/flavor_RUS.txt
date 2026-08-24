@@ -9,7 +9,7 @@ flavor_rus.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -23,9 +23,9 @@ flavor_rus.1 = {
 	trigger = {
 		current_date > 476.9.4
 
-		NOT = { country_exists = c:MOS }
+		NOT = { country_exists = c:DUMMY }
 
-		NOT = { country_exists = c:NOV }
+		NOT = { country_exists = c:DUMMY }
 
 		location:novgorod = {
 			num_pop_type:nobles > 0
@@ -129,7 +129,7 @@ flavor_rus.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -216,7 +216,7 @@ flavor_rus.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -323,7 +323,7 @@ flavor_rus.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -339,8 +339,8 @@ flavor_rus.4 = {
 		own_entire_area = area:smolensk_area
 
 		NOT = { own_entire_area = area:white_ruthenia_area }
-		country_exists = c:PLC
-		c:PLC = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_neighbor_of = root
 		}
 	}
@@ -475,7 +475,7 @@ flavor_rus.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -558,7 +558,7 @@ flavor_rus.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -654,7 +654,7 @@ flavor_rus.7 = { #DEVASTATION
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -665,7 +665,7 @@ flavor_rus.7 = { #DEVASTATION
 		location:moscow = {
 			owner = root
 			controller != root
-			controller != c:REB
+			controller != c:DUMMY
 		}
 	}
 
@@ -727,7 +727,7 @@ flavor_rus.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -786,7 +786,7 @@ flavor_rus.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -796,8 +796,8 @@ flavor_rus.9 = {
 		current_date > 476.9.4
 		religion = religion:orthodox
 		OR = {
-			NOT = {	country_exists = c:BYZ }
-			c:BYZ ?= { religion != religion:orthodox }			
+			NOT = {	country_exists = c:DUMMY }
+			c:DUMMY ?= { religion != religion:orthodox }			
 		}
 		location:constantinople.owner = {
 			religion.group = religion_group:muslim
@@ -859,7 +859,7 @@ flavor_rus.10 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -964,7 +964,7 @@ flavor_rus.11 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1004,7 +1004,7 @@ flavor_rus.12 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1097,7 +1097,7 @@ flavor_rus.13 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1163,7 +1163,7 @@ flavor_rus.14 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1268,7 +1268,7 @@ flavor_rus.15 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1388,7 +1388,7 @@ flavor_rus.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1621,7 +1621,7 @@ flavor_rus.18 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1630,10 +1630,10 @@ flavor_rus.18 = {
 	trigger = {
 		current_date > 476.9.4
 
-		is_neighbor_of = c:CHI
+		is_neighbor_of = c:DUMMY
 
 		NOT = {
-			is_allied_with ={ target = c:CHI }
+			is_allied_with ={ target = c:DUMMY }
 		}
 
 		at_war = no
@@ -1662,7 +1662,7 @@ flavor_rus.18 = {
 	option = {
 		name = flavor_rus.18.a
 
-		c:CHI = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = rus_ignored_vassal_demands
@@ -1671,14 +1671,14 @@ flavor_rus.18 = {
 
 		if = {
 			limit = {
-				c:CHI = {
+				c:DUMMY = {
 					opinion = {
 						target = root
 						value <= -50
 					}
 				}
 			}
-			block_treaties = c:CHI
+			block_treaties = c:DUMMY
 			custom_tooltip = flavor_rus.18.tt1
 		}
 
@@ -1689,7 +1689,7 @@ flavor_rus.18 = {
 
 		add_government_power = government_power_severe_penalty
 
-		c:CHI = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = rus_paid_vassal_respect
@@ -1705,7 +1705,7 @@ flavor_rus.18 = {
 
 		change_gold_effect = { scale = -3 }
 
-		c:CHI = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = rus_paid_vassal_tribute }
 		}
 	}
@@ -1724,7 +1724,7 @@ flavor_rus.19 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1858,7 +1858,7 @@ flavor_rus.20 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1867,7 +1867,7 @@ flavor_rus.20 = {
 	trigger = {
 		current_date > 476.9.4
 
-		is_neighbor_of = c:CHI
+		is_neighbor_of = c:DUMMY
 
 		at_war = no
 
@@ -1877,7 +1877,7 @@ flavor_rus.20 = {
 				region = region:east_siberia_region
 			}
 		}
-		c:CHI = {
+		c:DUMMY = {
 			any_owned_location = {
 				region = region:manchuria_region
 			}
@@ -1902,13 +1902,13 @@ flavor_rus.20 = {
 			limit = {
 				region = region:manchuria_region
 			}
-			change_location_owner = c:CHI
+			change_location_owner = c:DUMMY
 			remove_core = root
 		}
 
-		add_truce_with = { target = c:CHI }
+		add_truce_with = { target = c:DUMMY }
 
-		c:CHI = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = rus_treaty_of_nerchinsk
@@ -1937,7 +1937,7 @@ flavor_rus.20 = {
 	option = {
 		name = flavor_rus.20.b
 
-		c:CHI = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = rus_refused_treaty_of_nerchinsk
@@ -1959,7 +1959,7 @@ flavor_rus.21 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1968,25 +1968,25 @@ flavor_rus.21 = {
 	trigger = {
 		current_date > 476.9.4
 
-		is_neighbor_of = c:SWE
+		is_neighbor_of = c:DUMMY
 
-		NOT = {	is_allied_with = { target = c:SWE } }
+		NOT = {	is_allied_with = { target = c:DUMMY } }
 
-		c:SWE = {
+		c:DUMMY = {
 			country_rank = country_rank:rank_empire
 			is_subject = no
 			any_enemy = {
 				NOT = {
 					tag = RUS
-					is_enemy_of = c:RUS
-					is_rival_of = c:RUS
+					is_enemy_of = c:DUMMY
+					is_rival_of = c:DUMMY
 				}
 			}
 		}
 	}
 
 	immediate = {
-		c:SWE.capital = {
+		c:DUMMY.capital = {
 			save_scope_as = target_location
 		}
 	}
@@ -1995,11 +1995,11 @@ flavor_rus.21 = {
 		name = flavor_rus.21.a
 
 		add_opinion = {
-			target = c:SWE
+			target = c:DUMMY
 			modifier = rus_political_aggressions
 		}
 
-		c:SWE = {
+		c:DUMMY = {
 			every_enemy = {
 				limit = {
 					NOT = {
@@ -2042,7 +2042,7 @@ flavor_rus.22 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2117,7 +2117,7 @@ flavor_rus.23 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2209,7 +2209,7 @@ flavor_rus.24 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2333,7 +2333,7 @@ flavor_rus.25 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2395,7 +2395,7 @@ flavor_rus.26 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2461,7 +2461,7 @@ flavor_rus.27 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2589,7 +2589,7 @@ flavor_rus.28 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2649,7 +2649,7 @@ flavor_rus.29 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2732,7 +2732,7 @@ flavor_rus.30 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2801,7 +2801,7 @@ flavor_rus.31 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2810,9 +2810,9 @@ flavor_rus.31 = {
 	trigger = {
 		current_date > 476.9.4
 
-		is_at_war_with = c:SWE
+		is_at_war_with = c:DUMMY
 
-		c:SWE = {
+		c:DUMMY = {
 			government_type = government_type:monarchy
 			own_entire_area = area:finland_area
 		}
@@ -2839,7 +2839,7 @@ flavor_rus.31 = {
 			location:helsinge = { create_dynasty_from_location = jagerhorn_dynasty }
 		}
 
-		c:SWE = {
+		c:DUMMY = {
 
 			create_rebel = {
 				name = anjala_conspirators
@@ -2898,12 +2898,12 @@ flavor_rus.31 = {
 		name = flavor_rus.31.b
 
 		drop_antagonism_bomb = {
-			target = c:SWE.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_renounced_claim
 			value = -2
 		}
 
-		c:SWE = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = rus_rejected_anjala_league
@@ -2926,7 +2926,7 @@ flavor_rus.32 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3029,7 +3029,7 @@ flavor_rus.33 = {
 	
 	fire_only_once = yes	
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3139,7 +3139,7 @@ flavor_rus.34 = {
 	
 	fire_only_once = yes	
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3226,7 +3226,7 @@ flavor_rus.35 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3315,7 +3315,7 @@ flavor_rus.36 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3364,7 +3364,7 @@ flavor_rus.37 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3427,7 +3427,7 @@ flavor_rus.38 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3504,7 +3504,7 @@ flavor_rus.39 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3601,7 +3601,7 @@ flavor_rus.40 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3675,7 +3675,7 @@ flavor_rus.41 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_fur.dds"
 
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3817,7 +3817,7 @@ flavor_rus.42 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3989,7 +3989,7 @@ flavor_rus.43 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4098,7 +4098,7 @@ flavor_rus.44 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4234,7 +4234,7 @@ flavor_rus.45 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4329,7 +4329,7 @@ flavor_rus.46 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4418,7 +4418,7 @@ flavor_rus.47 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4533,7 +4533,7 @@ flavor_rus.48 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4642,7 +4642,7 @@ flavor_rus.49 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4850,7 +4850,7 @@ flavor_rus.50 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4976,7 +4976,7 @@ flavor_rus.51 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -5112,7 +5112,7 @@ flavor_rus.52 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -5144,14 +5144,14 @@ flavor_rus.52 = {
 
 		OR = {
 			AND = {
-				country_exists = c:ENG
-				c:ENG.capital = {
+				country_exists = c:DUMMY
+				c:DUMMY.capital = {
 					#has_building = building_type:royal_society
 				}
 			}
 			AND = {
-				country_exists = c:GBR
-				c:GBR.capital = {
+				country_exists = c:DUMMY
+				c:DUMMY.capital = {
 					#has_building = building_type:royal_society
 				}
 			}
@@ -5170,14 +5170,14 @@ flavor_rus.52 = {
 
 		if = {
 			limit = {
-				country_exists = c:ENG
+				country_exists = c:DUMMY
 			}
-			c:ENG.capital = {
+			c:DUMMY.capital = {
 				save_scope_as = target_location
 			}
 		}
 		else = {
-			c:GBR.capital = {
+			c:DUMMY.capital = {
 				save_scope_as = target_location
 			}
 		}
@@ -5331,7 +5331,7 @@ flavor_rus.53 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5500,7 +5500,7 @@ flavor_rus.54 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5510,13 +5510,13 @@ flavor_rus.54 = {
 		current_date > 476.9.4
 
 		location:stockholm = {
-			owner = c:SWE
-			controller = c:SWE
+			owner = c:DUMMY
+			controller = c:DUMMY
 		}
 
 		OR = {
-			is_neighbor_of = c:SWE
-			is_at_war_with = c:SWE
+			is_neighbor_of = c:DUMMY
+			is_at_war_with = c:DUMMY
 		}
 	}
 
@@ -5615,7 +5615,7 @@ flavor_rus.55 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -5799,7 +5799,7 @@ flavor_rus.56 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5947,7 +5947,7 @@ flavor_rus.57 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -6039,7 +6039,7 @@ flavor_rus.58 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -6162,7 +6162,7 @@ flavor_rus.59 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -6274,7 +6274,7 @@ flavor_rus.60 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -6561,7 +6561,7 @@ flavor_rus.61 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -6665,7 +6665,7 @@ flavor_rus.62 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -6777,7 +6777,7 @@ flavor_rus.63 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -6901,7 +6901,7 @@ flavor_rus.64 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -7069,7 +7069,7 @@ flavor_rus.65 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -7165,7 +7165,7 @@ flavor_rus.66 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -7259,7 +7259,7 @@ flavor_rus.67 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -7361,7 +7361,7 @@ flavor_rus.68 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -7457,7 +7457,7 @@ flavor_rus.69 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -7610,7 +7610,7 @@ flavor_rus.70 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -7757,7 +7757,7 @@ flavor_rus.71 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -7830,7 +7830,7 @@ flavor_rus.72 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -7924,7 +7924,7 @@ flavor_rus.73 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -8019,7 +8019,7 @@ flavor_rus.74 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = RUS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5

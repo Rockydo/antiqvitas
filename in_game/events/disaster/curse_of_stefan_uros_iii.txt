@@ -144,7 +144,7 @@ curse_of_stefan_uros_iii.4 = { #Border Frictions
 			add_casus_belli =  {
 				type = casus_belli:cb_conquer_province
 				province = scope:border_claim_province
-				target = c:SER
+				target = c:DUMMY
 			}
 		}
 	}

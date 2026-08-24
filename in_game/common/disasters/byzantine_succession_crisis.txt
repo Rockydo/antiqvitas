@@ -91,7 +91,7 @@ byzantine_succession_crisis = {
 				2 = { trigger_event_silently = byzantine_succ_crisis.9 }
 				2 = { trigger_event_silently = byzantine_succ_crisis.10 }
 				2 = { trigger_event_silently = byzantine_succ_crisis.11  }
-				2 = { c:TUR = { trigger_event_silently = byzantine_succ_crisis.14 } }
+				2 = { c:DUMMY = { trigger_event_silently = byzantine_succ_crisis.14 } }
 			}
 		}
 	}

@@ -21,6 +21,8 @@ MASTER_DIR = ROOT / "assets_queue/generated"
 ROMAN_MASTER_DIR = MASTER_DIR / "roman_economy"
 CRAFT_MASTER_DIR = MASTER_DIR / "ancient_goods_expansion"
 ICON_DIR = ROOT / "main_menu/gfx/interface/icons/trade_goods"
+ILLUSTRATION_DIR = ICON_DIR / "illustrations"
+LATE_MASTER_DIR = MASTER_DIR / "later_antique_goods"
 GOODS_CSV = ROOT / "docs/m5/custom_goods.csv"
 LEDGER = ROOT / "docs/m5/trade_good_cutouts.csv"
 CONTACT = ROOT / "docs/m5/TRADE_GOOD_CUTOUTS_CONTACT.png"
@@ -60,6 +62,10 @@ SHEETS = {
         "e1d7b32be04c634c2f5940a383a6ef245440d4927b64a72bf2fd98b9df181e32",
         ("antq_sesame_oil", "antq_coconut_products", "antq_rice_wine", "antq_soy_condiments"),
     ),
+    "goods_cutouts_09.png": (
+        "209d7b5e60fe66f6548a6d3154c584b8de7b228a85ec3933b72cf5ba2d9ae5c9",
+        ("antq_bound_codices", "antq_yue_celadon", "antq_garnet_cloisonne", "antq_cage_glass"),
+    ),
 }
 
 PRESERVED_DIRECT = {
@@ -78,6 +84,10 @@ CRAFT_KEYS = (
     | set(SHEETS["goods_cutouts_05.png"][1])
     | {"antq_barley"}
 )
+LATE_KEYS = {
+    "antq_bound_codices", "antq_yue_celadon",
+    "antq_garnet_cloisonne", "antq_cage_glass",
+}
 
 
 def records() -> list[tuple[str, str, str]]:
@@ -123,7 +133,7 @@ def fit_rgba(source: Image.Image, alpha: np.ndarray, extent: int = 116) -> Image
     return canvas
 
 
-def magenta_cutout(source: Image.Image) -> Image.Image:
+def magenta_foreground(source: Image.Image) -> tuple[Image.Image, np.ndarray]:
     rgb = np.asarray(source.convert("RGB"), dtype=np.float32)
     distance = np.maximum.reduce((np.abs(rgb[:, :, 0] - 255), rgb[:, :, 1], np.abs(rgb[:, :, 2] - 255)))
     distance_alpha = np.clip((distance - 3) * (255 / 42), 0, 255)
@@ -142,7 +152,24 @@ def magenta_cutout(source: Image.Image) -> Image.Image:
     rgb[:, :, 0][edge] = np.maximum(rgb[:, :, 1][edge], rgb[:, :, 0][edge] - correction[edge])
     rgb[:, :, 2][edge] = np.maximum(rgb[:, :, 1][edge], rgb[:, :, 2][edge] - correction[edge])
     rgba = Image.fromarray(np.dstack((rgb.astype(np.uint8), alpha)), "RGBA")
+    return rgba, alpha
+
+
+def magenta_cutout(source: Image.Image) -> Image.Image:
+    rgba, alpha = magenta_foreground(source)
     return fit_rgba(rgba, alpha)
+
+
+def wide_illustration(source: Image.Image) -> Image.Image:
+    rgba, alpha = magenta_foreground(source)
+    bounds = Image.fromarray(alpha, "L").point(lambda value: 255 if value > 12 else 0).getbbox()
+    if bounds is None:
+        raise ValueError("late-good illustration has no foreground")
+    crop = rgba.crop(bounds)
+    crop.thumbnail((430, 410), Image.Resampling.LANCZOS)
+    canvas = Image.new("RGBA", (1080, 440), (16, 25, 43, 255))
+    canvas.alpha_composite(crop, ((1080 - crop.width) // 2, (440 - crop.height) // 2))
+    return canvas
 
 
 def barley_cutout(source: Image.Image) -> Image.Image:
@@ -219,7 +246,10 @@ def write_contact(keys: list[str]) -> None:
 
 
 def write() -> None:
-    for directory in (MASTER_DIR, ROMAN_MASTER_DIR, CRAFT_MASTER_DIR, ICON_DIR, LEDGER.parent):
+    for directory in (
+        MASTER_DIR, ROMAN_MASTER_DIR, CRAFT_MASTER_DIR, LATE_MASTER_DIR,
+        ICON_DIR, ILLUSTRATION_DIR, LEDGER.parent,
+    ):
         directory.mkdir(parents=True, exist_ok=True)
     opened: dict[str, Image.Image] = {}
     rendered: dict[str, Image.Image] = {}
@@ -236,7 +266,13 @@ def write() -> None:
             if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
                 raise ValueError(f"missing or changed reviewed cutout atlas {path.relative_to(ROOT)}")
             opened[sheet] = Image.open(path).convert("RGBA")
-        rendered[key] = magenta_cutout(opened[sheet].crop(cell_box(opened[sheet].size, cell)))
+        cell = opened[sheet].crop(cell_box(opened[sheet].size, cell))
+        rendered[key] = magenta_cutout(cell)
+        if key in LATE_KEYS:
+            wide = wide_illustration(cell)
+            wide_path = LATE_MASTER_DIR / f"{key}_illustration.png"
+            wide.save(wide_path)
+            dds(wide_path, ILLUSTRATION_DIR / f"icon_goods_{key}.dds")
 
     for key, icon in rendered.items():
         if has_geometric_plate(icon):
@@ -301,6 +337,11 @@ def check() -> None:
         for retained in retained_targets(key)[1:]:
             if not retained.is_file() or retained.read_bytes() != master.read_bytes():
                 failures.append(f"{key} retained owning-generator master is stale")
+        if key in LATE_KEYS:
+            wide_master = LATE_MASTER_DIR / f"{key}_illustration.png"
+            wide = ILLUSTRATION_DIR / f"icon_goods_{key}.dds"
+            if not wide_master.is_file() or not wide.is_file():
+                failures.append(f"{key} is missing late-good illustration master or DDS")
     if failures:
         raise ValueError("\n".join(failures))
 

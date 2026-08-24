@@ -531,7 +531,7 @@ lutheranism_events.16 = {
 			religion = religion:catholic
 			has_variable = catholic_leaning
 		}
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 	}
 	illustration_tags = {
 		10 = interior
@@ -554,7 +554,7 @@ lutheranism_events.16 = {
 				scope:former_ruler = { remove_ruler = prev }
 			}
 
-			move_country = c:PAP
+			move_country = c:DUMMY
 		}
 		add_stability = stability_extreme_penalty
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_bonus }

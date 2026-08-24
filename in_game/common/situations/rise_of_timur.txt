@@ -7,7 +7,7 @@ rise_of_timur = {
 	can_start = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		has_enabled_situation_trigger = { type = rise_of_timur }
-		country_exists = c:TIM
+		country_exists = c:DUMMY
 		has_global_variable = timur_character
 		global_var:timur_character = { is_alive = yes }
 	}
@@ -18,10 +18,10 @@ rise_of_timur = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		OR = {
 			tag = TIM
-			is_neighbor_of = c:TIM
-			is_subject_of = c:TIM
-			is_enemy_of = c:TIM
-			is_rival_of = c:TIM
+			is_neighbor_of = c:DUMMY
+			is_subject_of = c:DUMMY
+			is_enemy_of = c:DUMMY
+			is_rival_of = c:DUMMY
 			capital ?= {
 				OR = {
 					sub_continent = sub_continent:central_asia
@@ -52,10 +52,10 @@ rise_of_timur = {
 			limit = {
 				NOT = { tag = TIM }
 				OR = {
-					is_neighbor_of = c:TIM
-					is_subject_of = c:TIM
-					is_enemy_of = c:TIM
-					is_rival_of = c:TIM
+					is_neighbor_of = c:DUMMY
+					is_subject_of = c:DUMMY
+					is_enemy_of = c:DUMMY
+					is_rival_of = c:DUMMY
 					capital.sub_continent = sub_continent:central_asia
 					capital.sub_continent = sub_continent:middle_east
 					capital.sub_continent = sub_continent:south_asia
@@ -63,7 +63,7 @@ rise_of_timur = {
 			}
 			trigger_event_non_silently = rise_of_timur.2
 		}
-		c:TIM = {
+		c:DUMMY = {
 			add_country_modifier = { modifier = rise_of_timur_impact years = -1 mode = add }
 			trigger_event_non_silently = rise_of_timur.1
 			add_area_preference = timurids_timur_conquests
@@ -80,29 +80,29 @@ rise_of_timur = {
 				# Declare War on a much weaker neighbor for free
 				20 = {
 					trigger = {
-						c:TIM ?= {
+						c:DUMMY ?= {
 							has_ruler = yes
 							months_since_war > 12
 							at_war = no
 							has_ruler = yes
 							any_neighbor_country = {
-								NOT = { has_truce_with = c:TIM }
-								NOT = { has_target_casus_belli_on_us = c:TIM }
-								NOT = { is_allied_with = { target = c:TIM } }
-								NOT = { is_subject_of = c:TIM }
+								NOT = { has_truce_with = c:DUMMY }
+								NOT = { has_target_casus_belli_on_us = c:DUMMY }
+								NOT = { is_allied_with = { target = c:DUMMY } }
+								NOT = { is_subject_of = c:DUMMY }
 								is_rebel_country = no
-								can_declare_war_on = c:TIM
+								can_declare_war_on = c:DUMMY
 							}
 						}
 					}
-					c:TIM ?= {
+					c:DUMMY ?= {
 						trigger_event_non_silently = rise_of_timur.100
 					}
 				}
 				# Reduce AE / War Exhaustion
 				20 = {
 					trigger = {
-						c:TIM ?= {
+						c:DUMMY ?= {
 							has_ruler = yes
 							OR = {
 								war_exhaustion >= war_exhaustion_mild_penalty
@@ -110,21 +110,21 @@ rise_of_timur = {
 							}
 						}
 					}
-					c:TIM ?= {
+					c:DUMMY ?= {
 						trigger_event_non_silently = rise_of_timur.101
 					}
 				}
 				# Influx of more manpower
 				20 = {
 					trigger = {
-						c:TIM ?= {
+						c:DUMMY ?= {
 							has_ruler = yes
 							war_exhaustion < HIGH_WAR_EXHAUSTION
 							manpower_percentage < 1
 							monthly_manpower > 0
 						}
 					}
-					c:TIM ?= {
+					c:DUMMY ?= {
 						trigger_event_non_silently = rise_of_timur.102
 					}
 				}
@@ -136,7 +136,7 @@ rise_of_timur = {
 		if = {
 			limit = { var:rise_of_the_timur_unique_event_cooldown > 20 }
 			set_variable = { name = rise_of_the_timur_unique_event_cooldown value = 1 }
-			c:TIM ?= {
+			c:DUMMY ?= {
 				if = {
 					limit = {
 						can_fire_situation_event = {
@@ -147,10 +147,10 @@ rise_of_timur = {
 							situation = root
 							event = rot_had_glh_alliance_break
 						}
-						country_exists = c:GLH
+						country_exists = c:DUMMY
 						has_ruler = yes
-						military_strength < c:GLH.military_strength
-						NOT = { is_allied_with = { target = c:GLH } }
+						military_strength < c:DUMMY.military_strength
+						NOT = { is_allied_with = { target = c:DUMMY } }
 					}
 					trigger_event_non_silently = rise_of_timur.1000
 				}
@@ -165,9 +165,9 @@ rise_of_timur = {
 							event = rot_had_glh_alliance_break
 						}
 						has_ruler = yes
-						country_exists = c:GLH
-						is_allied_with = { target = c:GLH }
-						military_strength > c:GLH.military_strength
+						country_exists = c:DUMMY
+						is_allied_with = { target = c:DUMMY }
+						military_strength > c:DUMMY.military_strength
 					}
 					trigger_event_non_silently = rise_of_timur.1010
 				}
@@ -182,7 +182,7 @@ rise_of_timur = {
 								owner ?= {
 									OR = {
 										tag = TIM
-										is_subject_of = c:TIM
+										is_subject_of = c:DUMMY
 									}
 								}
 							}
@@ -196,11 +196,11 @@ rise_of_timur = {
 							situation = root
 							event = rot_prepare_conquest_of_china
 						}
-						country_exists = c:CHI
-						is_neighbor_of = c:CHI
+						country_exists = c:DUMMY
+						is_neighbor_of = c:DUMMY
 						OR = {
 							is_situation_active = situation:red_turban_rebellions
-							c:CHI = { has_variable = rtr_is_new_china }
+							c:DUMMY = { has_variable = rtr_is_new_china }
 						}
 					}
 					trigger_event_non_silently = rise_of_timur.12
@@ -220,9 +220,9 @@ rise_of_timur = {
 							situation = root
 							event = rot_prepare_conquest_of_persia
 						}
-						country_exists = c:TIM
+						country_exists = c:DUMMY
 						region:persia_region = {
-							any_location_in_region = { owner ?= c:TIM }
+							any_location_in_region = { owner ?= c:DUMMY }
 						}
 					}
 					trigger_event_non_silently = rise_of_timur.14
@@ -233,10 +233,10 @@ rise_of_timur = {
 							situation = root
 							event = rot_prepare_conquest_of_anatolia
 						}
-						country_exists = c:TIM
+						country_exists = c:DUMMY
 						region:persia_region = {
 							any_location_in_region = {
-								owner ?= c:TIM
+								owner ?= c:DUMMY
 								percent >= 0.7
 							}
 						}
@@ -271,14 +271,13 @@ rise_of_timur = {
 							}
 						}
 					}
-					c:TIM ?= { trigger_event_non_silently = rise_of_timur.1030 }
+					c:DUMMY ?= { trigger_event_non_silently = rise_of_timur.1030 }
 				}
 			}
 		}
 	}
 	on_ended = {
-		remove_variable = rot_conquest_ambition
-		c:TIM ?= {
+		c:DUMMY ?= {
 			remove_country_modifier = rise_of_timur_impact
 			if = {
 				limit = { has_timurids_stagnate = yes }
@@ -287,12 +286,12 @@ rise_of_timur = {
 		}
 		every_country = {
 			limit = {
-				this != c:TIM
+				this != c:DUMMY
 				OR = {
-					is_neighbor_of = c:TIM
-					is_subject_of = c:TIM
-					is_enemy_of = c:TIM
-					is_rival_of = c:TIM
+					is_neighbor_of = c:DUMMY
+					is_subject_of = c:DUMMY
+					is_enemy_of = c:DUMMY
+					is_rival_of = c:DUMMY
 					capital.sub_continent = sub_continent:central_asia
 					capital.sub_continent = sub_continent:middle_east
 					capital.sub_continent = sub_continent:south_asia
@@ -301,7 +300,7 @@ rise_of_timur = {
 			trigger_event_silently = rise_of_timur.8
 		}
 		remove_global_variable = timur_character
-		c:TIM ?= {
+		c:DUMMY ?= {
 			every_owned_location = {
 				limit = { has_location_modifier = rot_timurs_core_region }
 				remove_location_modifier = rot_timurs_core_region
@@ -310,46 +309,46 @@ rise_of_timur = {
 	}
 	tooltip = {
 		if = {
-			limit = { owner = c:TIM }
+			limit = { owner = c:DUMMY }
 			custom_tooltip = ROT_TIMURIDS
 		}
 		else_if = {
-			limit = { owner ?= { is_allied_with = { target = c:TIM } }}
+			limit = { owner ?= { is_allied_with = { target = c:DUMMY } }}
 			custom_tooltip = ROT_TIMURS_ALLIES
 		}
 		else_if = {
-			limit = { owner ?= { is_subject_of = c:TIM }}
+			limit = { owner ?= { is_subject_of = c:DUMMY }}
 			custom_tooltip = ROT_TIMURS_SUBJECTS
 		}
 		else_if = {
-			limit = { owner ?= { is_at_war_with = c:TIM } }
+			limit = { owner ?= { is_at_war_with = c:DUMMY } }
 			custom_tooltip = ROT_CURRENTLY_INVADED
 		}
 		else_if = {
-			limit = { owner ?= { has_target_casus_belli_on_us = c:TIM } }
+			limit = { owner ?= { has_target_casus_belli_on_us = c:DUMMY } }
 			custom_tooltip = ROT_FUTURE_INVASION_TARGET
 		}
 	}
 	map_color = {
 		if = {
-			limit = { owner ?= c:TIM }
+			limit = { owner ?= c:DUMMY }
 			value = map_TIM
 		}
 		else_if = {
 			limit = {
 				OR = {
-					owner ?= { is_allied_with = { target = c:TIM } }
-					owner ?= { is_subject_of = c:TIM }
+					owner ?= { is_allied_with = { target = c:DUMMY } }
+					owner ?= { is_subject_of = c:DUMMY }
 				}
 			}
 			value = blue
 		}
 		else_if = {
-			limit = { owner ?= { is_at_war_with = c:TIM } }
+			limit = { owner ?= { is_at_war_with = c:DUMMY } }
 			value = map_serbian
 		}
 		else_if = {
-			limit = { owner ?= { has_target_casus_belli_on_us = c:TIM } }
+			limit = { owner ?= { has_target_casus_belli_on_us = c:DUMMY } }
 			value = orange
 		}
 		else = {
@@ -359,8 +358,7 @@ rise_of_timur = {
 	secondary_map_color = {
 		if = {
 			limit = {
-				scope:target = { has_variable = rot_conquest_ambition }
-				region = scope:target.var:rot_conquest_ambition
+				scope:target = { always = no }
 			}
 			value = purple
 		}

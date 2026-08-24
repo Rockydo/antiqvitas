@@ -33,7 +33,7 @@ flavor_hun_ven.1 = { #Treaty of Zadar - Hungarian Event
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -51,18 +51,18 @@ flavor_hun_ven.1 = { #Treaty of Zadar - Hungarian Event
 	trigger = {
 		current_date > 476.9.4
 		at_war = no
-		country_exists = c:VEN
-		country_exists = c:RAG
-		c:CRO ?= {
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
 			OR = {
-				in_union_with = c:HUN
-				is_subject_of = c:HUN
+				in_union_with = c:DUMMY
+				is_subject_of = c:DUMMY
 			}
 		}
-		c:RAG = {
-			is_subject_of = c:VEN
+		c:DUMMY = {
+			is_subject_of = c:DUMMY
 		}
-		c:VEN = {
+		c:DUMMY = {
 			at_war = no
 			OR = {
 				stability < 0
@@ -100,7 +100,7 @@ flavor_hun_ven.1 = { #Treaty of Zadar - Hungarian Event
 	
 	option = {
 		name = flavor_hun_ven.1.b
-		c:VEN = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_hun_ven.2
 		}
 	}
@@ -135,7 +135,7 @@ flavor_hun_ven.2 = { #Treaty of Zadar - Venetian Event
 		name = flavor_hun_ven.2.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
-		c:HUN = {
+		c:DUMMY = {
 			add_casus_belli = {
 				target = location:pag.owner
 				type = casus_belli:cb_conquer_province
@@ -161,32 +161,32 @@ flavor_hun_ven.2 = { #Treaty of Zadar - Venetian Event
 		name = flavor_hun_ven.2.b
 		add_prestige = prestige_severe_penalty
 		add_stability = stability_severe_penalty
-		c:RAG = {
+		c:DUMMY = {
 			make_subject_of = {
-				target = c:HUN
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 		}
 		if = {
 			limit = {
-				c:CRO = {
+				c:DUMMY = {
 					OR = {
-						in_union_with = c:HUN
-						is_subject_of = c:HUN
+						in_union_with = c:DUMMY
+						is_subject_of = c:DUMMY
 					}
 				}
 			}
 			every_in_list = {
 				list = list_of_dalmatian_locations
 				limit = { owner = ROOT }
-				change_location_owner = c:CRO
+				change_location_owner = c:DUMMY
 			}
 		}
 		else = {
 			every_in_list = {
 				list = list_of_dalmatian_locations
 				limit = { owner = ROOT }
-				change_location_owner = c:HUN
+				change_location_owner = c:DUMMY
 			}
 		}
 	}

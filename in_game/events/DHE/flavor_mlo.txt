@@ -7,7 +7,7 @@ flavor_mlo.3 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -46,7 +46,7 @@ flavor_mlo.4 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -65,18 +65,18 @@ flavor_mlo.4 = {
 		current_date > 476.9.4
 		num_of_non_rural > 1
 		at_war = no
-		country_exists = c:NAP
-		country_exists = c:VEN
-		country_exists = c:FLO
-		c:NAP = {
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			num_of_non_rural > 1
 			at_war = no
 		}
-		c:VEN = {
+		c:DUMMY = {
 			num_of_non_rural > 1
 			at_war = no
 		}
-		c:FLO = {
+		c:DUMMY = {
 			num_of_non_rural > 1
 			at_war = no
 		}
@@ -85,23 +85,23 @@ flavor_mlo.4 = {
 	option = {
 		name = flavor_mlo.4.a
 		historical_option = yes
-		c:NAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = mlo_peace_of_lodi }
 		}
-		c:VEN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = mlo_peace_of_lodi }
 		}
-		c:FLO = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = mlo_peace_of_lodi }
 		}
 		hidden_effect = {
-			c:NAP = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_mlo.5 }
 			}
-			c:VEN = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_mlo.5 }
 			}
-			c:FLO = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_mlo.5 }
 			}
 		}
@@ -131,33 +131,33 @@ flavor_mlo.5 = {
 		name = flavor_mlo.5.a
 		if = {
 			limit = {
-				NOT = { root = c:FLO }
+				NOT = { root = c:DUMMY }
 			}
-			c:FLO = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = mlo_peace_of_lodi }
 			}
 		}
 		if = {
 			limit = {
-				NOT = { root = c:NAP }
+				NOT = { root = c:DUMMY }
 			}
-			c:NAP = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = mlo_peace_of_lodi }
 			}
 		}
 		if = {
 			limit = {
-				NOT = { root = c:VEN }
+				NOT = { root = c:DUMMY }
 			}
-			c:VEN = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = mlo_peace_of_lodi }
 			}
 		}
 		if = {
 			limit = {
-				NOT = { root = c:MLO }
+				NOT = { root = c:DUMMY }
 			}
-			c:MLO = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = mlo_peace_of_lodi }
 			}
 		}
@@ -175,7 +175,7 @@ flavor_mlo.6 = { #Leonardo da Vinci Paints the Last Supper
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -233,7 +233,7 @@ flavor_mlo.9 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -305,7 +305,7 @@ flavor_mlo.10 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -347,7 +347,7 @@ flavor_mlo.11 = { #A Growing Power in Northern Italy
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 90
@@ -394,7 +394,7 @@ flavor_mlo.12 = { #The Visconti Family of Milan
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 90
@@ -465,7 +465,7 @@ flavor_mlo.13 = { #A United Realm
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -576,7 +576,7 @@ flavor_mlo.14 = { #Galvano Fiamma's Cronica Universalis
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -639,7 +639,7 @@ flavor_mlo.15 = { #Lodrisio Visconti
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -679,7 +679,7 @@ flavor_mlo.15 = { #Lodrisio Visconti
 
 		if = {
 			limit = {
-				c:VER = {
+				c:DUMMY = {
 					OR = {
 						is_rival_of = root
 						is_enemy_of = root
@@ -687,7 +687,7 @@ flavor_mlo.15 = { #Lodrisio Visconti
 					NOT = { has_truce_with = ROOT }
 				}
 			}
-			c:VER = {
+			c:DUMMY = {
 				trigger_event_non_silently = flavor_mlo.16
 			}
 		}
@@ -748,14 +748,14 @@ flavor_mlo.16 = { #Lodrisio Visconti Approaches a Rival Court
 		character:mlo_lodrisio_visconti = {
 			save_scope_as = target_character
 		}
-		c:MLO = {
+		c:DUMMY = {
 			capital = {
 				province = {
 					save_scope_as = target_province
 				}
 			}
 		}
-		c:MLO = { save_scope_as = target_rival }
+		c:DUMMY = { save_scope_as = target_rival }
 	}
 
 	option = {
@@ -766,7 +766,7 @@ flavor_mlo.16 = { #Lodrisio Visconti Approaches a Rival Court
 		}
 		change_gold_effect = { scale = -10 }
 		add_casus_belli = {
-			target = c:MLO
+			target = c:DUMMY
 			type = casus_belli:cb_claim_throne
 			character = scope:target_character
 		}
@@ -786,7 +786,7 @@ flavor_mlo.16 = { #Lodrisio Visconti Approaches a Rival Court
 		}
 		change_gold_effect = { scale = -5 }
 		add_casus_belli = {
-			target = c:MLO
+			target = c:DUMMY
 			type = casus_belli:cb_conquer_province
 			province = scope:target_province
 		}
@@ -802,7 +802,7 @@ flavor_mlo.16 = { #Lodrisio Visconti Approaches a Rival Court
 		name = flavor_mlo.16.c
 
 		add_prestige = prestige_weak_bonus
-		c:MLO = {
+		c:DUMMY = {
 			add_opinion = {
 				target = ROOT
 				modifier = opinion_pleased
@@ -868,7 +868,7 @@ flavor_mlo.18 = { #Pietro Azario writes the Liber Gestorum in Lombardy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -931,7 +931,7 @@ flavor_mlo.19 = { # Ponte Azzone Visconti Bridge
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -989,7 +989,7 @@ flavor_mlo.20 = { # The Ark of Saint Peter Martyr
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -1046,7 +1046,7 @@ flavor_mlo.21 = { # Public Water Statutes of [GetCurrentYear]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1151,7 +1151,7 @@ flavor_mlo.22 = { #The University of Pavia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1231,7 +1231,7 @@ flavor_mlo.23 = { #The Cloth Industry of Milan
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1337,7 +1337,7 @@ flavor_mlo.24 = { #Duomo di Milano
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1407,7 +1407,7 @@ flavor_mlo.25 = { #The Influence of Giotto
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1473,7 +1473,7 @@ flavor_mlo.26 = { #Reviving the Kingdom of Lombardy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1568,12 +1568,12 @@ flavor_mlo.27 = { #Milan Demands the Ducal Title
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:MLO = {
+		c:DUMMY = {
 			ruler_or_regent = {
 				save_scope_as = target_character
 			}
 		}
-		c:MLO = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 	}
 
 	option = {
@@ -1583,18 +1583,18 @@ flavor_mlo.27 = { #Milan Demands the Ducal Title
 		add_government_power = government_power_extreme_bonus
 		add_prestige = prestige_weak_bonus
 
-		c:MLO = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_mlo.35
 		}
 	}
 
 	option = {
 		name = flavor_mlo.27.b
-		c:MLO = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_mlo.28
 		}
 		add_opinion = {
-			target = c:MLO
+			target = c:DUMMY
 			modifier = opinion_declined_to_recognize_monarchy_modifier
 		}
 	}
@@ -1626,7 +1626,7 @@ flavor_mlo.28 = { #The Emperor Refuses to Recognize our Demands
 				save_scope_as = target_character
 			}
 		}
-		c:MLO = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 	}
 
 	option = {
@@ -1672,7 +1672,7 @@ flavor_mlo.29 = { #Petrarch visits Milano
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1742,7 +1742,7 @@ flavor_mlo.30 = { #The Metallurgical Center of Milano
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1813,7 +1813,7 @@ flavor_mlo.32 = { #Francesco Sforza
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1892,7 +1892,7 @@ flavor_mlo.33 = { #Renovating the Palazzo Ducale
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1953,7 +1953,7 @@ flavor_mlo.34 = { #The Equestrian Statue of Leonardo da Vinci
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2067,7 +2067,7 @@ flavor_mlo.36 = { ##The Palazzo Reale di Milano
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2135,7 +2135,7 @@ flavor_mlo.37 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2219,7 +2219,7 @@ flavor_mlo.40 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2291,7 +2291,7 @@ flavor_mlo.41 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2368,7 +2368,7 @@ flavor_mlo.42 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2486,7 +2486,7 @@ flavor_mlo.44 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2571,7 +2571,7 @@ flavor_mlo.45 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2648,7 +2648,7 @@ flavor_mlo.46 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2707,7 +2707,7 @@ flavor_mlo.47 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2766,7 +2766,7 @@ flavor_mlo.51 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2829,7 +2829,7 @@ flavor_mlo.52 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MLO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20

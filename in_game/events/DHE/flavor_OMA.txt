@@ -8,7 +8,7 @@ flavor_oma.1 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -56,7 +56,7 @@ flavor_oma.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -73,9 +73,9 @@ flavor_oma.2 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:POR
+		country_exists = c:DUMMY
 		owns = location:masqat
-		c:POR = {
+		c:DUMMY = {
 			has_discovered_area = area:oman_area
 		}
 		capital.market = {
@@ -90,7 +90,7 @@ flavor_oma.2 = {
 
 		historical_option = yes
 
-		c:POR = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = mam_por_confronted }
 			trigger_event_silently = { id = flavor_oma.3 }
 		}
@@ -123,7 +123,7 @@ flavor_oma.3 = {
 	historical_info = flavor_oma.3.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -133,7 +133,7 @@ flavor_oma.3 = {
 
 	trigger = {
 		current_date > 476.9.4
-		location:masqat.owner ?= c:OMA
+		location:masqat.owner ?= c:DUMMY
 		location:masqat = {
 			is_discovered_by = ROOT
 			owner ?= {
@@ -190,7 +190,7 @@ flavor_oma.4 = {
 	historical_info = flavor_oma.4.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -272,7 +272,7 @@ flavor_oma.5 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -339,7 +339,7 @@ flavor_oma.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -438,7 +438,7 @@ flavor_oma.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -494,7 +494,7 @@ flavor_oma.8 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -577,7 +577,7 @@ flavor_oma.9 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -637,7 +637,7 @@ flavor_oma.10 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -724,7 +724,7 @@ flavor_oma.11 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -798,7 +798,7 @@ flavor_oma.12 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -862,7 +862,7 @@ flavor_oma.13 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -956,7 +956,7 @@ flavor_oma.14 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1054,7 +1054,7 @@ flavor_oma.15 = { #It is debated as to how this happened. There are assumptions 
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1140,7 +1140,7 @@ flavor_oma.16 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1258,7 +1258,7 @@ flavor_oma.17 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1307,7 +1307,7 @@ flavor_oma.18 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = OMA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15

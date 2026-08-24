@@ -348,19 +348,19 @@ treaty_of_tordesillas.3 = {
 			triggered_desc = {
 				trigger = {
 					# PAP is the only remaining signatory (holds both slots)
-					exists = c:PAP
-					situation:treaty_of_tordesillas.var:var_east_country = c:PAP
-					situation:treaty_of_tordesillas.var:var_west_country = c:PAP
+					exists = c:DUMMY
+					situation:treaty_of_tordesillas.var:var_east_country = c:DUMMY
+					situation:treaty_of_tordesillas.var:var_west_country = c:DUMMY
 				}
 				desc = treaty_of_tordesillas.3.desc_pap_is_single_signatory
 			}
 			triggered_desc = {
 				trigger = {
 					# PAP is one of the two signatories
-					exists = c:PAP
+					exists = c:DUMMY
 					OR = {
-						situation:treaty_of_tordesillas.var:var_east_country = c:PAP
-						situation:treaty_of_tordesillas.var:var_west_country = c:PAP
+						situation:treaty_of_tordesillas.var:var_east_country = c:DUMMY
+						situation:treaty_of_tordesillas.var:var_west_country = c:DUMMY
 					}
 				}
 				desc = treaty_of_tordesillas.3.desc_pap_is_signatory
@@ -630,11 +630,6 @@ treaty_of_tordesillas.5 = {
 		scope:actor ?= {
 			add_opinion = { target = ROOT modifier = declined_demands_modifier }
 
-			add_casus_belli = {
-				target = scope:selected_country
-				type = casus_belli:cb_conquer_province
-				province = scope:selected_province
-			}
 		}
 		ai_will_select = {
 			value = 0
@@ -656,278 +651,5 @@ treaty_of_tordesillas.5 = {
 }
 
 #Triggered by tordesillas_swap_claim
-treaty_of_tordesillas.6 = {
-	type = country_event
-	category = situation_event
-
-	title = treaty_of_tordesillas.6.title
-	desc = treaty_of_tordesillas.6.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/treaty_of_tordesillas.dds"
-
-	major = yes
-	major_trigger = {
-		this = scope:actor
-	}
-
-	option = {
-		name = treaty_of_tordesillas.6.a
-
-		scope:actor ?= {
-			add_opinion = { target = ROOT modifier = accepted_demands_modifier }
-		}
-		change_societal_value = { type = belligerent_vs_conciliatory value = societal_value_minor_move_to_right }
-
-        #Remove the claims in both Areas
-		scope:target_actor_area ?= {
-			every_province_definition_in_area = {
-				remove_colonial_claim = this
-				root ?= {
-					add_colonial_claim = {
-						province_definition = prev
-						reason = claim_reason_treaty_of_tordesillas
-						category = same_religion
-					}
-				}
-			}
-
-		}
-		scope:target_recipient_area ?= {
-			every_province_definition_in_area = {
-				remove_colonial_claim = this
-				scope:actor ?= {
-					add_colonial_claim = {
-						province_definition = prev
-						reason = claim_reason_treaty_of_tordesillas
-						category = same_religion
-					}
-				}
-			}
-		}
-
-		ai_will_select = {
-			value = 1
-			#We lose the utility of a charter in this area
-			scope:target_recipient_area = {
-				every_province_in_area = {
-					subtract = population
-					subtract = province_capital.proximity
-				}
-			}
-			#We gain the utility of a charter in this area
-			scope:target_actor_area = {
-				every_province_in_area = {
-					add = population
-					add = province_capital.proximity
-				}
-			}
-			#bias against doing anything
-			subtract = {
-				desc = "bias against doing stuff"
-				value = 1
-			}
-       }
-	}
-
-	option = {
-		name = treaty_of_tordesillas.6.b
-
-		change_societal_value = { type = belligerent_vs_conciliatory value = societal_value_minor_move_to_left }
-		scope:actor ?= {
-			add_opinion = { target = ROOT modifier = declined_demands_modifier }
-		}
-
-		ai_will_select = {
-			value = 1
-			#We lose the utility of a charter in this area
-			scope:target_recipient_area = {
-				every_province_in_area = {
-					add = population
-					add = province_capital.proximity
-				}
-			}
-			#We gain the utility of a charter in this area
-			scope:target_actor_area = {
-				every_province_in_area = {
-					subtract = population
-					subtract = province_capital.proximity
-				}
-			}
-			#bias against doing anything
-			add = {
-				desc = "bias against doing stuff"
-				value = 1
-			}
-       }
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 #Launched from tordesillas_swap_sides action
-treaty_of_tordesillas.7 = {
-	type = country_event
-	category = situation_event
-
-	title = treaty_of_tordesillas.7.title
-	desc = treaty_of_tordesillas.7.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/treaty_of_tordesillas.dds"
-
-	major = yes
-	major_trigger = {
-		this = scope:actor
-	}
-
-	option = {
-		name = treaty_of_tordesillas.7.a
-
-		scope:actor ?= {
-			add_favors = { target = root value = 10 }
-			add_opinion = { target = root modifier = accepted_demands_modifier }
-		}
-		change_societal_value = { type = belligerent_vs_conciliatory value = societal_value_minor_move_to_right }
-
-		custom_tooltip = {
-			text = treaty_of_tordesillas.7.a.tt
-			#Swap the sides of the countries
-			if = {
-				#If we are the east country
-				limit ={
-					root = situation:treaty_of_tordesillas.var:var_east_country
-				}
-				situation:treaty_of_tordesillas ?= {				
-					set_variable = { name = var_east_country value = scope:actor }				
-					set_variable = { name = var_west_country value = root }
-				}
-			}
-			else = {			
-				situation:treaty_of_tordesillas ?= {				
-					set_variable = { name = var_east_country value = root }				
-					set_variable = { name = var_west_country value = scope:actor }
-				}
-			}
-		}
-
-		ai_will_select = {
-			#AI will accept this if they think that the other side is better
-			value = 1
-			#Add the value of the East side
-			add = {
-				value = {
-					every_region = {
-						limit = {					
-							continent != continent:europe
-							sub_continent != sub_continent:south_asia
-							sub_continent != sub_continent:east_asia
-							any_location_in_region = {						
-								is_east_of = situation:treaty_of_tordesillas.var:var_line_location
-							}
-						}
-						every_area_in_region = {
-							every_province_in_area = {
-								limit = {
-									any_location_in_province = {
-										is_ownable = yes
-										NAND = {
-											has_owner = yes
-											owner ?= { is_country_religion_pagan = no }
-										}
-										is_east_of = scope:target.var:var_line_location
-									}
-								}
-								add = population
-								add = province_capital.proximity
-							}
-						}
-					}
-				}
-				if = {
-					#If we are the east country now, this is the value that we are going to lose, so make it negative
-					limit ={
-						root = situation:treaty_of_tordesillas.var:var_east_country
-					}
-					multiply = -1
-				}
-			}
-			#Subtract the value of the West side
-			add = {
-				value = {
-					every_region = {
-						limit = {					
-							continent != continent:europe
-							sub_continent != sub_continent:south_asia
-							sub_continent != sub_continent:east_asia
-						}
-						every_area_in_region = {
-							every_province_in_area = {
-								limit = {
-									any_location_in_province = {
-										is_ownable = yes
-										NAND = {
-											has_owner = yes
-											owner ?= { is_country_religion_pagan = no }
-										}
-										NOT = { is_east_of = scope:target.var:var_line_location }
-									}
-								}
-								add = population
-								add = province_capital.proximity
-							}
-						}
-					}
-				}
-				
-				if = {
-					limit ={
-						root = situation:treaty_of_tordesillas.var:var_west_country
-					}
-					multiply = -1
-				}
-			}
-			#bias against doing anything
-			subtract = {
-				desc = "bias against doing stuff"
-				value = 1
-			}
-       }
-	}
-
-	option = {
-		name = treaty_of_tordesillas.7.b
-
-		change_societal_value = { type = belligerent_vs_conciliatory value = societal_value_minor_move_to_left }
-		scope:actor ?= {
-			add_opinion = { target = ROOT modifier = declined_demands_modifier }
-		}
-
-		ai_will_select = {
-			value = 1
-			#We lose the utility of a charter in this area
-			scope:target_recipient_area = {
-				every_province_in_area = {
-					add = population
-					add = province_capital.proximity
-				}
-			}
-			#We gain the utility of a charter in this area
-			scope:target_actor_area = {
-				every_province_in_area = {
-					subtract = population
-					subtract = province_capital.proximity
-				}
-			}
-			#bias against doing anything
-			add = {
-				desc = "bias against doing stuff"
-				value = 1
-			}
-       }
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}

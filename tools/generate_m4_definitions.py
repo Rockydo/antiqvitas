@@ -394,8 +394,9 @@ def brace_delta(line: str) -> int:
     return delta
 
 
-TOP_LEVEL_DEFINITION = re.compile(r"^\s*[A-Za-z0-9_]+\s*=\s*\{")
+TOP_LEVEL_DEFINITION = re.compile(r"^\s*([A-Za-z0-9_]+)\s*=\s*\{")
 TOP_LEVEL_ENABLE = re.compile(r"^\s*enable\s*=")
+RELIGION_FACTIONS = re.compile(r"^\s*factions\s*=\s*\{")
 
 
 def render_vanilla_compatibility(path: Path, kind: str) -> str:
@@ -416,22 +417,47 @@ def render_vanilla_compatibility(path: Path, kind: str) -> str:
         "# ANTIQVITAS exact-name compatibility overlay; do not hand-edit.",
     ]
     depth = 0
+    active_definition: str | None = None
+    skipped_block_parent_depth: int | None = None
     terminal_date = AntqDate(*END).engine()
     for line in lines:
         code = line.split("#", 1)[0]
         delta = brace_delta(line)
-        top_level_open = depth == 0 and TOP_LEVEL_DEFINITION.match(code)
+        if skipped_block_parent_depth is not None:
+            depth += delta
+            if depth == skipped_block_parent_depth:
+                skipped_block_parent_depth = None
+            continue
+        top_level_match = TOP_LEVEL_DEFINITION.match(code) if depth == 0 else None
+        top_level_open = top_level_match is not None
         direct_child = depth == 1
         if kind == "religions" and direct_child and TOP_LEVEL_ENABLE.match(code):
             depth += delta
             continue
+        if (
+            kind == "religions"
+            and active_definition == "shinto"
+            and direct_child
+            and RELIGION_FACTIONS.match(code)
+        ):
+            output.append(
+                "\t# Medieval Shinto factions are unavailable in the ANTIQVITAS timeframe."
+            )
+            skipped_block_parent_depth = depth
+            depth += delta
+            if depth == skipped_block_parent_depth:
+                skipped_block_parent_depth = None
+            continue
         output.append(line)
         if top_level_open:
+            active_definition = top_level_match.group(1)
             if kind == "religions":
                 output.append(
                     f"\tenable = {terminal_date} # unavailable before ANTIQVITAS campaign end"
                 )
         depth += delta
+        if depth == 0:
+            active_definition = None
         if depth < 0:
             raise ValueError(f"unbalanced vanilla source {path}")
     if depth:

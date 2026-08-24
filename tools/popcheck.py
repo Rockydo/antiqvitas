@@ -18,7 +18,10 @@ from generate_start_mirror import (
     COMPATIBILITY_RELIGION,
     MAX_UNTARGETED_LOCATION_POPULATION,
     OPENING_RELIGION_SEEDS,
+    PRIMARY_COURT_BALANCE_TAGS,
+    PRIMARY_COURT_DOMINANCE_MARGIN,
     RELIGION_RETENTION_POP_SIZE,
+    UPPER_CLASS_POP_TYPES,
     culture_presence_cultures,
     load_population_plan,
     population_city_targets,
@@ -125,6 +128,7 @@ def main() -> int:
     type_totals: defaultdict[str, Decimal] = defaultdict(Decimal)
     tribal_totals: defaultdict[tuple[str, str], Decimal] = defaultdict(Decimal)
     scope_totals: defaultdict[tuple[str, str], Decimal] = defaultdict(Decimal)
+    upper_culture_totals: defaultdict[tuple[str, str], Decimal] = defaultdict(Decimal)
     total = Decimal()
     for record in records:
         location = record.get("location", "")
@@ -154,6 +158,8 @@ def main() -> int:
         location_sizes[location] += size
         type_totals[record["type"]] += size
         tag = owners[location]
+        if record["type"] in UPPER_CLASS_POP_TYPES:
+            upper_culture_totals[(tag, record["culture"])] += size
         kind_group = "sop" if roster[tag]["kind"] == "sop" else "country_subject"
         scope_keys = (
             ("world", "world"),
@@ -181,7 +187,13 @@ def main() -> int:
             and record["type"] == opening_seed[3]
             and size == RELIGION_RETENTION_POP_SIZE
         )
-        if not is_opening_seed and (
+        is_primary_court_balance = bool(
+            tag in PRIMARY_COURT_BALANCE_TAGS
+            and record["type"] in UPPER_CLASS_POP_TYPES
+            and record["culture"] == profile.culture
+            and record["religion"] == expected_religion
+        )
+        if not is_opening_seed and not is_primary_court_balance and (
             record["culture"] != expected_culture or record["religion"] != expected_religion
         ):
             failures.append(
@@ -196,6 +208,21 @@ def main() -> int:
             geographic_totals[group] += size
             italy_cultures[record["culture"]] += size
         total += size
+    for tag in sorted(PRIMARY_COURT_BALANCE_TAGS):
+        primary = historical_profile_for(roster[tag]).culture
+        primary_total = upper_culture_totals[(tag, primary)]
+        rival_totals = [
+            value
+            for (candidate_tag, culture), value in upper_culture_totals.items()
+            if candidate_tag == tag and culture != primary
+        ]
+        if (
+            not rival_totals
+            or primary_total <= max(rival_totals) * PRIMARY_COURT_DOMINANCE_MARGIN
+        ):
+            failures.append(
+                f"{tag}: primary upper-class culture {primary} lacks the required dominance margin"
+            )
     compatibility = parse_records(COMPATIBILITY_POP_FILE)
     expected_cultures = culture_presence_cultures()
     if len(compatibility) != len(expected_cultures):

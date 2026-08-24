@@ -7,7 +7,7 @@ flavor_pis.1 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = PIS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -15,7 +15,7 @@ flavor_pis.1 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:GEN
+		country_exists = c:DUMMY
 	}
 
 	outcome = negative
@@ -32,7 +32,7 @@ flavor_pis.1 = {
 			save_scope_as = target_character
 		}
 
-		c:GEN = {
+		c:DUMMY = {
 			ruler_or_regent ?= {
 				save_scope_as =  target_character2
 			}
@@ -124,7 +124,7 @@ flavor_pis.3 = { #Reclaiming Sardinian Territory
     }
 
 	dynamic_historical_event = {
-		tag = PIS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -203,7 +203,7 @@ flavor_pis.4 = { #Completing the Leaning Tower of Pisa
 	desc = flavor_pis.4.desc
 
 	dynamic_historical_event = {
-		tag = PIS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -276,7 +276,7 @@ flavor_pis.5 = {
 	desc = flavor_pis.5.desc
 
 	dynamic_historical_event = {
-		tag = PIS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -509,7 +509,7 @@ flavor_pis.1000 = {
 	desc = flavor_pis.1000.desc
 
 	dynamic_historical_event = {
-		tag = PIS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -707,7 +707,7 @@ flavor_pis.1001 = {
 
 	major = yes
 	major_trigger = {
-		this = c:PIS	
+		this = c:DUMMY	
 	}
 
 	outcome = neutral
@@ -759,7 +759,7 @@ flavor_pis.1100 = {
 	desc = flavor_pis.1100.desc
 
 	dynamic_historical_event = {
-		tag = PIS
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -773,7 +773,7 @@ flavor_pis.1100 = {
 
 		owns = location:pisa
 
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 
 		location:pisa = {
 			NOT = {
@@ -789,7 +789,7 @@ flavor_pis.1100 = {
 			save_scope_as = target_character
 		}
 
-		c:PAP ?= {
+		c:DUMMY ?= {
 			ruler_or_regent ?= {
 				save_scope_as = target_character2
 			}
@@ -801,7 +801,7 @@ flavor_pis.1100 = {
 	option = {
 		name = flavor_pis.1100.a
 
-		c:PAP ?= {
+		c:DUMMY ?= {
 			trigger_event_silently = {
 				id = flavor_pis.1101
 			}

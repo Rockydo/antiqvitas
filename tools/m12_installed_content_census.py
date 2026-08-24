@@ -43,6 +43,8 @@ SURFACES = {
     "laws": "in_game/common/laws",
     "government_reforms": "in_game/common/government_reforms",
     "religious_aspects": "in_game/common/religious_aspects",
+    "character_interactions": "in_game/common/character_interactions",
+    "chivalric_orders": "in_game/common/chivalric_orders",
 }
 POLICY = {
     "ages": "engine_slot_adapter",
@@ -61,6 +63,8 @@ POLICY = {
     "laws": "exact_disabled_legacy",
     "government_reforms": "exact_disabled_legacy",
     "religious_aspects": "exact_disabled_legacy",
+    "character_interactions": "exact_reviewed_ancient_adapters",
+    "chivalric_orders": "exact_disabled_legacy",
 }
 EXACT_REQUIRED = {
     "ages",
@@ -75,6 +79,8 @@ EXACT_REQUIRED = {
     "laws",
     "government_reforms",
     "religious_aspects",
+    "character_interactions",
+    "chivalric_orders",
 }
 VISIBLE_DEBT = {
     "government_types",
@@ -209,10 +215,26 @@ def source_record(surface: str, relative: str, source: Path) -> dict[str, object
         )
         adapters = set(building_manifest["engine_adapter_definitions"])
         expected_markers = len(set(definitions) - adapters)
-        if (
-            mounted_text.count("ANTIQVITAS installed-building quarantine")
-            != expected_markers
-        ):
+        marker_count = mounted_text.count(
+            "ANTIQVITAS installed-building quarantine"
+        )
+        manifest_file = next(
+            (
+                item
+                for item in building_manifest["files"]
+                if item["relative"] == relative
+            ),
+            None,
+        )
+        exact_empty_mirror = (
+            marker_count == 0
+            and not DEFINITION.findall(mounted_text)
+            and manifest_file is not None
+            and manifest_file["rendered_sha256"] == sha256(mod.read_bytes())
+            and set(manifest_file["definitions"]) == set(definitions)
+            and not set(definitions).intersection(adapters)
+        )
+        if marker_count != expected_markers and not exact_empty_mirror:
             status = "uncovered"
     return {
         "relative": relative,

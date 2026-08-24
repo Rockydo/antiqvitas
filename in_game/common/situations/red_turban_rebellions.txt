@@ -8,8 +8,8 @@ red_turban_rebellions = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		current_age = age_2_renaissance
 		current_year > 1350
-		country_exists = c:CHI
-		c:CHI = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			government_type ?= government_type:monarchy
 			in_civil_war = no
 			OR = {
@@ -37,12 +37,12 @@ red_turban_rebellions = {
 		OR = {
 			tag = CHI
 			AND = {
-				country_exists = c:CHI
+				country_exists = c:DUMMY
 				OR = {
-					is_neighbor_of = c:CHI
-					is_subject_of = c:CHI
-					is_enemy_of = c:CHI
-					is_rival_of = c:CHI
+					is_neighbor_of = c:DUMMY
+					is_subject_of = c:DUMMY
+					is_enemy_of = c:DUMMY
+					is_rival_of = c:DUMMY
 				}
 			}
 			capital ?= {
@@ -52,11 +52,11 @@ red_turban_rebellions = {
 		}
 	}
 	on_start = {
-		c:CHI = {
+		c:DUMMY = {
 			trigger_event_non_silently = red_turban_rebellions.1
 			add_to_global_variable_list = {
 				name = rtr_loyal_faction
-				target = c:CHI
+				target = c:DUMMY
 			}
 
 			remove_list_global_variable = {
@@ -69,10 +69,10 @@ red_turban_rebellions = {
 			limit = {
 				NOT = { tag = CHI }
 				OR = {
-					is_neighbor_of = c:CHI
-					is_subject_of = c:CHI
-					is_enemy_of = c:CHI
-					is_rival_of = c:CHI
+					is_neighbor_of = c:DUMMY
+					is_subject_of = c:DUMMY
+					is_enemy_of = c:DUMMY
+					is_rival_of = c:DUMMY
 					capital.sub_continent = sub_continent:east_asia
 				}
 			}
@@ -85,9 +85,9 @@ red_turban_rebellions = {
 	on_monthly = {
 		if = {
 			limit = {
-				country_exists = c:CHI
+				country_exists = c:DUMMY
 			}
-			c:CHI = {
+			c:DUMMY = {
 				#The Song rebellion should ALWAYS happen
 				trigger_event_non_silently = { id = red_turban_rebellions.3 days = { 5 15 } }
 				if = {
@@ -155,16 +155,16 @@ red_turban_rebellions = {
 
 			random = {
 				chance = 2
-				c:KOR = { trigger_event_non_silently = red_turban_rebellions.1000 }
+				c:DUMMY = { trigger_event_non_silently = red_turban_rebellions.1000 }
 			}
 		}
 	}
 	on_ended = {
 		if = {
 			limit = {
-				country_exists = c:CHI
+				country_exists = c:DUMMY
 			}
-			c:CHI = {
+			c:DUMMY = {
 				if = {
 					limit = { has_country_modifier = chi_red_turban_propaganda }
 					remove_country_modifier = chi_red_turban_propaganda
@@ -191,7 +191,7 @@ red_turban_rebellions = {
 		}
 		else_if = {
 			limit = {
-				c:CHI ?= {
+				c:DUMMY ?= {
 					legitimacy >= 90
 					stability >= 30
 					current_celestial_authority = { value = 50 }
@@ -203,14 +203,14 @@ red_turban_rebellions = {
 					}
 				}
 			}
-			c:CHI = {
+			c:DUMMY = {
 				trigger_event_non_silently = red_turban_rebellions.103
 			}
 		}
 		else = {
 			if = { #Yuán still exists
-				limit = { country_exists = c:CHI }
-				c:CHI = { save_scope_as = new_china }
+				limit = { country_exists = c:DUMMY }
+				c:DUMMY = { save_scope_as = new_china }
 			}
 			else_if = { #Yuán doesn't exist but there's a leader of the red turban rebels
 				limit = {
@@ -294,8 +294,8 @@ red_turban_rebellions = {
 			destroy_international_organization_no_instigator = { target = international_organization:red_turban_rebels }
 		}
 		if = {
-			limit = { country_exists = c:CHI }
-			c:CHI = {
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = {
 				if = {
 					limit = { has_country_modifier = rtr_red_turban_rebellions }
 					remove_country_modifier = rtr_red_turban_rebellions
@@ -305,7 +305,7 @@ red_turban_rebellions = {
 	}
 	tooltip = {
 		if = {
-			limit = { owner = c:CHI }
+			limit = { owner = c:DUMMY }
 			custom_tooltip = RTR_EMPEROR
 		}
 		else_if = {
@@ -324,7 +324,7 @@ red_turban_rebellions = {
 				owner ?= {
 					has_reform = government_reform:warring_state
 					OR = {
-						is_allied_with = { target = c:CHI }
+						is_allied_with = { target = c:DUMMY }
 						var:rtr_yuan_allegiance >= 50
 					}
 				}
@@ -337,7 +337,7 @@ red_turban_rebellions = {
 				owner ?= {
 					has_reform = government_reform:warring_state
 					OR = {
-						is_at_war_with = c:CHI
+						is_at_war_with = c:DUMMY
 						var:rtr_yuan_allegiance < 0
 					}
 				}
@@ -358,7 +358,7 @@ red_turban_rebellions = {
 		if = {
 			limit = {
 				has_owner = yes
-				owner ?= c:CHI
+				owner ?= c:DUMMY
 			}
 			value = rtr_emperor_color
 		}
@@ -378,7 +378,7 @@ red_turban_rebellions = {
 				owner ?= {
 					has_reform = government_reform:warring_state
 					OR = {
-						is_allied_with = { target = c:CHI }
+						is_allied_with = { target = c:DUMMY }
 						AND = {
 							has_variable = rtr_yuan_allegiance
 							var:rtr_yuan_allegiance > 50
@@ -394,7 +394,7 @@ red_turban_rebellions = {
 				owner ?= {
 					has_reform = government_reform:warring_state
 					OR = {
-						is_at_war_with = c:CHI
+						is_at_war_with = c:DUMMY
 						AND = {
 							has_variable = rtr_yuan_allegiance
 							var:rtr_yuan_allegiance < -25

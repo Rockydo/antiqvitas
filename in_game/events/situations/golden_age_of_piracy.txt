@@ -5,223 +5,12 @@
 ######################################
 
 #A strong front against piracy
-golden_age_of_piracy.100 = {
-	type = country_event
-	category = situation_event
-
-	title = golden_age_of_piracy.100.title
-	desc = golden_age_of_piracy.100.desc
-	outcome = neutral
-
-	illustration_tags = {
-		10 = regular
-		10 = interior
-	}
-
-	immediate = {
-		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		save_scope_as = target_country_scope
-		# Prevent duplicate requests from queuing while this event is pending
-		set_variable = { name = antipiracy_request_cooldown value = yes months = 6 }
-	}
-
-	option = {
-		name = golden_age_of_piracy.100.a
-		add_policy = policy:anti_piracy_policy
-		add_opinion_mutual_effect = {
-			target = scope:actor
-			modifier = opinion_accepted_prosecute_pirates
-		}
-		scope:actor = {
-			trigger_event_non_silently = golden_age_of_piracy.101
-		}
-	}
-
-	option = {
-		name = golden_age_of_piracy.100.b
-		# 24-month cooldown blocks all nations from requesting again after a refusal
-		set_variable = { name = antipiracy_request_cooldown value = yes months = 24 }
-		scope:actor = {
-			trigger_event_non_silently = golden_age_of_piracy.102
-			add_opinion = {
-				target = ROOT
-				modifier = opinion_refused_prosecute_pirates
-			}
-			add_trust_equilibrium = {
-				target = ROOT
-				modifier = trust_protects_pirates
-			}
-		}
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 #A strong front against piracy
-golden_age_of_piracy.101 = {
-	type = country_event
-	category = situation_event
-
-	title = golden_age_of_piracy.101.title
-	desc = golden_age_of_piracy.101.desc
-	outcome = neutral
-
-	illustration_tags = {
-		10 = regular
-		10 = interior
-	}
-
-	immediate = {
-		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-	}
-
-	option = {
-		name = golden_age_of_piracy.101.a
-		show_as_tooltip = {
-			scope:target_country_scope = {
-				add_policy = policy:anti_piracy_policy
-				add_opinion_mutual_effect = {
-					target = scope:actor
-					modifier = opinion_accepted_prosecute_pirates
-				}
-			}
-		}
-	}
-
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 #A strong front against piracy
-golden_age_of_piracy.102 = {
-	type = country_event
-	category = situation_event
-
-	title = golden_age_of_piracy.102.title
-	desc = golden_age_of_piracy.102.desc
-	outcome = neutral
-
-	illustration_tags = {
-		10 = regular
-		10 = interior
-	}
-
-	immediate = {
-		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-	}
-
-	option = {
-		name = golden_age_of_piracy.102.a
-		show_as_tooltip = {
-			add_opinion = {
-				target = scope:target_country_scope
-				modifier = opinion_refused_prosecute_pirates
-			}
-			add_trust_equilibrium = {
-				target = scope:target_country_scope
-				modifier = trust_protects_pirates
-			}
-		}
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 #A Nation of Pirates
-golden_age_of_piracy.110 = {
-	type = country_event
-	category = situation_event
-
-	title = golden_age_of_piracy.110.title
-	desc = golden_age_of_piracy.110.desc
-	outcome = neutral
-
-	illustration_tags = {
-		10 = happy
-		10 = exterior
-	}
-
-	immediate = {
-		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
-
-		scope:target_location = {
-			create_country_from_location  = { #create_navy_country_in_location
-				overlord = root
-				subject_type = subject_type:vassal
-				unlock_government_reform_effect = { type = pirate_brethren_reform }
-
-				hidden_effect = {
-					scope:target_location = {
-						create_sub_unit_of_category = sub_unit_category:navy_galley
-						create_sub_unit_of_category = sub_unit_category:navy_galley
-						create_sub_unit_of_category = sub_unit_category:navy_galley
-						create_sub_unit_of_category = sub_unit_category:navy_galley
-						create_sub_unit_of_category = sub_unit_category:navy_galley
-						create_sub_unit_of_category = sub_unit_category:navy_galley
-						create_sub_unit_of_category = sub_unit_category:navy_galley
-						create_sub_unit_of_category = sub_unit_category:navy_galley
-						create_sub_unit_of_category = sub_unit_category:navy_galley
-						create_sub_unit_of_category = sub_unit_category:navy_galley
-						create_sub_unit_of_category = sub_unit_category:navy_galley
-						create_sub_unit_of_category = sub_unit_category:navy_galley
-					}
-				}
-
-				add_reform = government_reform:pirate_brethren_reform
-				save_scope_as = pirate_tag_scope
-
-				hidden_effect = {
-					change_heir_selection = heir_selection:pirate_elective
-					change_government_type = government_type:republic
-				}
-				add_gold = {
-					value = root.monthly_income_trade_and_tax
-					multiply = 4
-				}
-				change_culture = root.culture
-				change_religion = root.religion
-				create_character = {
-					estate = estate_type:peasants_estate
-					culture = root.culture
-					religion = root.religion
-					save_scope_as = pirate_ruler_scope
-				}
-				set_new_ruler = scope:pirate_ruler_scope
-				change_religion_for_ruler_and_family = { country = this religion = root.religion }
-
-			}
-
-			scope:pirate_tag_scope = {
-				change_country_type = navy
-			}
-
-			change_building_level_in_location = {
-				building = building_type:pirate_stronghold
-				value = 1
-				owner = scope:pirate_tag_scope
-			}
-		}
-	}
-
-	option = {
-		name = golden_age_of_piracy.110.a
-		custom_tooltip = golden_age_of_piracy.110.tt
-	}
-
-	option = {
-		name = golden_age_of_piracy.110.b
-		high_risk_option = yes
-
-		trigger = { is_ai = no }	#Let's avoid weird potential issues...
-		change_player = scope:pirate_tag_scope
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 namespace = great_pirate_era
 
@@ -241,7 +30,7 @@ great_pirate_era.1 = {
 		current_date > 476.9.4
 		current_year > 1679
 		current_year < 1715
-		NOT = { country_exists = c:NPV }
+		NOT = { country_exists = c:DUMMY }
 		NOT = { has_reform = government_reform:pirate_brethren_reform }
 		location:bahama = {
 			has_owner = yes
@@ -400,7 +189,7 @@ great_pirate_era.2 = {
 		current_year > 1689
 		current_year < 1720
 		NOT = { has_reform = government_reform:pirate_brethren_reform }
-		NOT = { country_exists = c:LIB }
+		NOT = { country_exists = c:DUMMY }
 		location:maroantsetra = {
 			has_owner = yes
 			integration_level = core
@@ -558,7 +347,7 @@ great_pirate_era.3 = {
 		current_year > 1588
 		current_year < 1635
 		NOT = { has_reform = government_reform:pirate_brethren_reform }
-		NOT = { country_exists = c:SLE }
+		NOT = { country_exists = c:DUMMY }
 		location:sale = {
 			has_owner = yes
 			integration_level = core
@@ -722,7 +511,7 @@ great_pirate_era.4 = {
 		current_date > 476.9.4
 		current_year > 1689
 		NOT = { has_reform = government_reform:pirate_brethren_reform }
-		NOT = { country_exists = c:TET }
+		NOT = { country_exists = c:DUMMY }
 		location:tizgane = {
 			has_owner = yes
 			integration_level = core
@@ -857,7 +646,7 @@ great_pirate_era.5 = {
 		current_date > 476.9.4
 		current_year > 1650
 		NOT = { has_reform = government_reform:pirate_brethren_reform }
-		NOT = { country_exists = c:PRY }
+		NOT = { country_exists = c:DUMMY }
 		location:yaguabo = {
 			has_owner = yes
 			integration_level = core
@@ -998,7 +787,7 @@ great_pirate_era.6 = {
 	trigger = {
 		current_date > 476.9.4
 		current_year > 1640
-		NOT = { country_exists = c:TRU }
+		NOT = { country_exists = c:DUMMY }
 		location:tortuga = {
 			has_owner = yes
 			integration_level = core
@@ -1154,7 +943,7 @@ great_pirate_era.100 = {	#Pirates Win
 	image = "gfx/interface/illustrations/situation/golden_age_of_piracy.dds"
 
 	immediate = {
-		c:LGK = { save_scope_as = target_pirate_country }
+		c:DUMMY = { save_scope_as = target_pirate_country }
 		scope:target_pirate_country = {
 			ruler_or_regent ?= { save_scope_as = target_character }
 		}

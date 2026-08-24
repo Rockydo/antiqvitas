@@ -77,8 +77,8 @@ flavor_dah.1 = { #Founding of Dahomey
 						is_ownable = yes
 						has_owner = no
 					}
-					change_location_owner = c:DAH
-					add_core = c:DAH
+					change_location_owner = c:DUMMY
+					add_core = c:DUMMY
 				}
 			}
 		}
@@ -143,7 +143,7 @@ flavor_dah.1 = { #Founding of Dahomey
 			}
 		}
 
-		c:DAH = {
+		c:DUMMY = {
 			change_government_type = government_type:monarchy
 			set_new_ruler = scope:target_character
 			every_province = {
@@ -224,7 +224,7 @@ flavor_dah.1 = { #Founding of Dahomey
 
 		add_casus_belli =  {
 			type = casus_belli:cb_annex
-			target = c:DAH
+			target = c:DUMMY
 		}
 	}
 
@@ -243,10 +243,10 @@ flavor_dah.1 = { #Founding of Dahomey
 
 		add_casus_belli =  {
 			type = casus_belli:cb_annex
-			target = c:DAH
+			target = c:DUMMY
 		}
 
-		change_player = c:DAH
+		change_player = c:DUMMY
 	}
 
 	option = {
@@ -266,8 +266,8 @@ flavor_dah.1 = { #Founding of Dahomey
 						is_ownable = yes
 						has_owner = no
 					}
-					change_location_owner = c:DAH
-					add_core = c:DAH
+					change_location_owner = c:DUMMY
+					add_core = c:DUMMY
 				}
 			}
 		}
@@ -303,8 +303,8 @@ flavor_dah.2 = { #Founding of Dahomey - Message for Everyone
 						is_ownable = yes 
 						has_owner = no
 					}
-					change_location_owner = c:DAH
-					add_core = c:DAH
+					change_location_owner = c:DUMMY
+					add_core = c:DUMMY
 				}
 			}
 		}

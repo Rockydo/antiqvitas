@@ -1,0 +1,151 @@
+{
+  "status": "PASS",
+  "baseline_save": "G:\\antiqvitas\\docs\\playtests\\R17_OBSERVER_AD1_AD19\\observer_ad9_baseline.eu5",
+  "sample_save": "G:\\antiqvitas\\docs\\playtests\\R17_OBSERVER_AD1_AD20\\observer_ad19.eu5",
+  "start_date": "9.1.1",
+  "end_date": "19.1.1",
+  "elapsed_months": 120.0,
+  "minimum_months": 120.0,
+  "countries": [
+    {
+      "tag": "ROM",
+      "role": "large Mediterranean imperial/literate",
+      "engine_tag": "XAA",
+      "opening_population_thousands": 48369.69389,
+      "sample_population_thousands": 50371.80898,
+      "starting_technology_level": 3,
+      "opening_researched_count": 30,
+      "sample_researched_count": 31,
+      "completed_count": 1,
+      "completed_advances": [
+        "antq_provincial_archive_copying"
+      ],
+      "completed_known_point_cost": 125.0,
+      "removed_advances": [],
+      "sample_active_slots": [
+        188,
+        141,
+        45
+      ],
+      "sample_active_progress": 46.33434,
+      "status": "pass"
+    },
+    {
+      "tag": "HAN",
+      "role": "large East-Asian imperial/literate",
+      "engine_tag": "XAR",
+      "opening_population_thousands": 59043.19763,
+      "sample_population_thousands": 61310.84613,
+      "starting_technology_level": 3,
+      "opening_researched_count": 25,
+      "sample_researched_count": 26,
+      "completed_count": 1,
+      "completed_advances": [
+        "antq_court_classics_recensions"
+      ],
+      "completed_known_point_cost": 125.0,
+      "removed_advances": [],
+      "sample_active_slots": [
+        41,
+        146,
+        193
+      ],
+      "sample_active_progress": 64.27696,
+      "status": "pass"
+    },
+    {
+      "tag": "PAR",
+      "role": "large Iranian imperial/mixed-literacy",
+      "engine_tag": "XAH",
+      "opening_population_thousands": 7011.61757,
+      "sample_population_thousands": 7295.9806,
+      "starting_technology_level": 3,
+      "opening_researched_count": 29,
+      "sample_researched_count": 30,
+      "completed_count": 1,
+      "completed_advances": [
+        "antq_noble_cavalry_retinues"
+      ],
+      "completed_known_point_cost": 112.5,
+      "removed_advances": [],
+      "sample_active_slots": [
+        156,
+        75,
+        179
+      ],
+      "sample_active_progress": 55.09882,
+      "status": "pass"
+    },
+    {
+      "tag": "CHL",
+      "role": "regional settled/literate",
+      "engine_tag": "XBC",
+      "opening_population_thousands": 463.52105,
+      "sample_population_thousands": 481.03895,
+      "starting_technology_level": 3,
+      "opening_researched_count": 21,
+      "sample_researched_count": 23,
+      "completed_count": 2,
+      "completed_advances": [
+        "antq_monsoon_campaign_stores",
+        "antq_shared_muster_ground_markers"
+      ],
+      "completed_known_point_cost": 237.5,
+      "removed_advances": [],
+      "sample_active_slots": [
+        41,
+        200
+      ],
+      "sample_active_progress": 13.83071,
+      "status": "pass"
+    },
+    {
+      "tag": "XIO",
+      "role": "large pastoral/low-literacy",
+      "engine_tag": "XIO",
+      "opening_population_thousands": 496.93485,
+      "sample_population_thousands": 576.79467,
+      "starting_technology_level": 3,
+      "opening_researched_count": 25,
+      "sample_researched_count": 27,
+      "completed_count": 2,
+      "completed_advances": [
+        "antq_mobile_felt_supply_camps",
+        "antq_subject_people_interpreters"
+      ],
+      "completed_known_point_cost": 225.0,
+      "removed_advances": [],
+      "sample_active_slots": [
+        48,
+        44,
+        161
+      ],
+      "sample_active_progress": 9.01834,
+      "status": "pass"
+    },
+    {
+      "tag": "AES",
+      "role": "small society-of-pops/low-literacy",
+      "engine_tag": "AES",
+      "opening_population_thousands": 51.30564,
+      "sample_population_thousands": 62.66848,
+      "starting_technology_level": 1,
+      "opening_researched_count": 14,
+      "sample_researched_count": 15,
+      "completed_count": 1,
+      "completed_advances": [
+        "antq_shared_river_crossing_guides"
+      ],
+      "completed_known_point_cost": 125.0,
+      "removed_advances": [],
+      "sample_active_slots": [
+        44,
+        148,
+        62
+      ],
+      "sample_active_progress": 60.44204,
+      "status": "pass"
+    }
+  ],
+  "failures": []
+}

@@ -29,6 +29,38 @@ MARKET_TREATY_TEST = (
     "\t\t\t\t}\n"
     "\t\t\t}"
 )
+MARKET_EMBARGO_TEST = (
+    "\t\t\t\tscope:actor = {\n"
+    "\t\t\t\t\tnot = { is_embargoed_by = root.owner }\n"
+    "\t\t\t\t}"
+)
+MARKET_EMBARGO_GUARD = (
+    "\t\t\t\tAND = {\n"
+    "\t\t\t\t\towner != scope:actor\n"
+    "\t\t\t\t\tscope:actor = {\n"
+    "\t\t\t\t\t\tnot = { is_embargoed_by = root.owner }\n"
+    "\t\t\t\t\t}\n"
+    "\t\t\t\t}"
+)
+MARKET_ISOLATION_TEST = (
+    "\t\t\t\troot.owner = {\n"
+    "\t\t\t\t\tor = {\n"
+    "\t\t\t\t\t\tmodifier:trade_isolation = no\n"
+    "\t\t\t\t\t\tgives_isolation_exemption_to = scope:actor\n"
+    "\t\t\t\t\t}\n"
+    "\t\t\t\t}"
+)
+MARKET_ISOLATION_GUARD = (
+    "\t\t\t\tAND = {\n"
+    "\t\t\t\t\towner != scope:actor\n"
+    "\t\t\t\t\troot.owner = {\n"
+    "\t\t\t\t\t\tor = {\n"
+    "\t\t\t\t\t\t\tmodifier:trade_isolation = no\n"
+    "\t\t\t\t\t\t\tgives_isolation_exemption_to = scope:actor\n"
+    "\t\t\t\t\t\t}\n"
+    "\t\t\t\t\t}\n"
+    "\t\t\t\t}"
+)
 
 
 def clean_text(text: str) -> str:
@@ -50,6 +82,17 @@ def render(relative: str, expected_count: int) -> bytes:
         raise ValueError(
             f"{relative}: expected {expected_count} unsafe market links, found {count}"
         )
+    if relative == "in_game/common/generic_actions/languages.txt":
+        text, ai_count = re.subn(
+            r"(?m)^(?P<indent>[ \t]*)(?P<field>ai_tick|automation_tick)\s*=\s*monthly(?P<tail>[ \t]*)$",
+            r"\g<indent>\g<field> = never\g<tail>",
+            text,
+        )
+        if ai_count != 4:
+            raise ValueError(
+                f"{relative}: expected four unsafe multi-target language scheduler ticks, "
+                f"found {ai_count}"
+            )
     if relative == "in_game/common/generic_actions/markets.txt":
         if text.count(MARKET_CENTER_TEST) != 1:
             raise ValueError(
@@ -58,6 +101,14 @@ def render(relative: str, expected_count: int) -> bytes:
         if text.count(MARKET_TREATY_TEST) != 1:
             raise ValueError(
                 f"{relative}: installed create-market treaty-test contract changed"
+            )
+        if text.count(MARKET_EMBARGO_TEST) != 2:
+            raise ValueError(
+                f"{relative}: installed create-trade self-embargo contract changed"
+            )
+        if text.count(MARKET_ISOLATION_TEST) != 1:
+            raise ValueError(
+                f"{relative}: installed create-trade isolation-exemption contract changed"
             )
         text = text.replace(
             MARKET_CENTER_TEST,
@@ -72,6 +123,17 @@ def render(relative: str, expected_count: int) -> bytes:
             "\t\t\tNOT = { market ?= { owner = { this = scope:actor } } }",
             1,
         )
+        # Both source- and destination-market selectors otherwise ask a
+        # market owner whether it embargoes itself.  Script OR branches are
+        # evaluated for candidate scoring even when the direct-owner branch
+        # already succeeds, so the explicit inequality is required.
+        text = text.replace(MARKET_EMBARGO_TEST, MARKET_EMBARGO_GUARD, 2)
+        # Han begins with four owned markets under trade isolation. Candidate
+        # scoring evaluates this branch even though direct ownership already
+        # admits those markets, making the native exemption lookup ask Han for
+        # its diplomatic relation with itself. Foreign markets still use the
+        # installed isolation/exemption contract unchanged.
+        text = text.replace(MARKET_ISOLATION_TEST, MARKET_ISOLATION_GUARD, 1)
         marker = "\ncreate_market = {"
         if text.count(marker) != 1:
             raise ValueError(f"{relative}: create_market action inventory changed")

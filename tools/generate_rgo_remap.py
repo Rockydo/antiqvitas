@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the M5 full map-template override with audited AD 1 RGO corrections."""
+"""Generate the M5 safe map-template overlay and audited AD 1 RGO ledger."""
 
 from __future__ import annotations
 
@@ -100,7 +100,6 @@ SPECIALTY_GOODS = {
     "antq_naphtha", "antq_papyrus", "antq_sesame", "antq_silphium",
     "antq_tree_nuts", "cloves", "elephants", "incense", "pepper", "silk", "tea",
 }
-
 
 def rows(path: Path, comments: bool = False) -> list[dict[str, str]]:
     with path.open(encoding="utf-8-sig", newline="") as handle:
@@ -356,27 +355,33 @@ def rendered() -> tuple[str, str, tuple[tuple[str, str, str, str, str], ...]]:
             return match.group(0)
         changes.append((location, region, operation, good, replacement))
         return f"{location} = {{{match['body']}{replacement}{match['tail']}"
-    content = LINE.sub(replace, source.read_text(encoding="utf-8"))
+    # EU5 1.3.11 can parse a modded template's raw material but crashes during
+    # live rendering once the bookmark instantiates any altered RGO.  Still
+    # render the full sourced ledger (``changes``) for the reports and runtime
+    # guard, but leave raw materials byte-for-byte installed in the VFS map
+    # overlay.  Only the independently safe landscape adjustments are emitted.
+    source_content = source.read_text(encoding="utf-8")
+    LINE.sub(replace, source_content)
+    content = source_content
     landscape = landscape_changes()
 
     def replace_landscape(match: re.Match[str]) -> str:
         change = landscape.get(match["location"])
-        if not change:
-            return match.group(0)
         body = match["body"]
-        for field in ("topography", "vegetation", "climate"):
-            if field not in change:
-                continue
-            body, count = re.subn(
-                rf"\b{field}\s*=\s*[A-Za-z0-9_.-]+",
-                f"{field} = {change[field]}",
-                body,
-                count=1,
-            )
-            if count != 1:
-                raise ValueError(
-                    f"landscape change for {match['location']} cannot replace {field}"
+        if change:
+            for field in ("topography", "vegetation", "climate"):
+                if field not in change:
+                    continue
+                body, count = re.subn(
+                    rf"\b{field}\s*=\s*[A-Za-z0-9_.-]+",
+                    f"{field} = {change[field]}",
+                    body,
+                    count=1,
                 )
+                if count != 1:
+                    raise ValueError(
+                        f"landscape change for {match['location']} cannot replace {field}"
+                    )
         return f"{match['location']} = {{{body}}}"
 
     content = ENTRY_LINE.sub(replace_landscape, content)
@@ -443,6 +448,11 @@ def global_audit(
         current = current_entries[location]
         anchor = anchors.get(location)
         changed = change_by_location.get(location)
+        # The generated map overlay intentionally retains installed raw
+        # materials for runtime safety.  The audit remains an audit of the
+        # historical AD 1 ledger, not of that engine-compatibility fallback.
+        if changed:
+            current = {**current, "raw_material": changed[2]}
         if not current.get("raw_material"):
             decision = "nonproductive_water_or_wasteland_template"
             source_key = "EU5-LOCAL-MAP;P12.1"

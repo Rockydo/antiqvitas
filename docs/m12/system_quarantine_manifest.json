@@ -1,15 +1,17 @@
 {
   "schema": 1,
-  "policy": "Preserve installed keys for reference resolution; false-gate every mounted post-antique definition, retain required engine adapters, and guard the HRE yearly pulse.",
+  "policy": "Preserve installed keys for reference resolution; false-gate every mounted post-antique definition, retain required engine adapters, guard optional installed scopes, and guard the HRE yearly pulse.",
   "totals": {
     "estate_privileges": 261,
     "cabinet_actions": 72,
     "parliament_issues": 160,
     "parliament_agendas": 128,
-    "laws": 195,
+    "laws": 194,
     "government_reforms": 328,
-    "country_interactions": 107,
-    "generic_actions": 352,
+    "country_interactions": 106,
+    "character_interactions": 15,
+    "chivalric_orders": 15,
+    "generic_actions": 346,
     "casus_belli": 68,
     "peace_treaties": 64,
     "subject_types": 19,
@@ -17,8 +19,18 @@
     "disasters": 35,
     "formable_countries": 151,
     "religious_aspects": 177,
-    "hre_generic_actions": 8,
-    "hre_yearly_scope_guard": 1
+    "generic_action_ai_lists": 94,
+    "generic_action_ai_references_kept": 83,
+    "generic_action_ai_references_removed": 348,
+    "shinto_religious_faction_quarantine": 5,
+    "rival_replacement_price_guard": 1,
+    "ai_rival_replacement_guard": 470,
+    "hre_yearly_scope_guard": 1,
+    "on_action_country_scope_guard": 4,
+    "exploration_trigger_guard": 1,
+    "insults_optional_ruler_guard": 1,
+    "hre_special_status_guard": 5,
+    "post_campaign_dates_sanitized": 0
   },
   "files": [
     {
@@ -37,7 +49,7 @@
       "source_sha256": "9587098d841732dcfb4d39297342747214a7c93718a506677b5cd35cc4e36d0c",
       "definition_count": 42,
       "output": "in_game/common/estate_privileges/clergy_estate.txt",
-      "output_sha256": "a98436c90d28a8b97913f9dd5da612cc52fbad859f84a6480682187d7a8be583"
+      "output_sha256": "84a1691af969db55616b95a0a63fe728cf4d5e075a5847f980fde670623c1ed6"
     },
     {
       "surface": "estate_privileges",
@@ -721,7 +733,7 @@
       "source_sha256": "dcac1490519b49b9619e16b383226585da131c3394cadf3147c29b3605099ac9",
       "definition_count": 16,
       "output": "in_game/common/parliament_issues/01_country_specific_parliament_issues.txt",
-      "output_sha256": "8dcc7932e366b046495f946023e08701a9e804f730cd2cef62d9081279e0a935"
+      "output_sha256": "6c5b4c5d0322816c8a9d311f77942c8f4d83039fc61ac7e68e1f86af33001908"
     },
     {
       "surface": "parliament_issues",
@@ -730,7 +742,7 @@
       "source_sha256": "b06aeedcdb76f257fa16b1793aa39ffcc31546a8e50e7bc7689971f45effa8e4",
       "definition_count": 10,
       "output": "in_game/common/parliament_issues/02_crown_estate_parliament_issues.txt",
-      "output_sha256": "939b48e57faa813af6d59e715b4f03d59d27803377e93ae27b1addb8c3b6b282"
+      "output_sha256": "321bb1dd952c2ee8b6b316cf273f0401796aec7eac5e3bb32ec5acedab87a773"
     },
     {
       "surface": "parliament_issues",
@@ -739,7 +751,7 @@
       "source_sha256": "b29c573df9ea2b1a983c29f5df115ab47764e5632536dee311ac02f45113ccc9",
       "definition_count": 20,
       "output": "in_game/common/parliament_issues/03_nobles_estate_parliament_issues.txt",
-      "output_sha256": "a3d1cb1245c338976d696871a582bdb63b0c8213fbbc0f8a6854b895e76498a7"
+      "output_sha256": "af2f8be6647967ff8241a36c3032f2f1491bd59620bc67cf6e1394c653ab09f1"
     },
     {
       "surface": "parliament_issues",
@@ -748,7 +760,7 @@
       "source_sha256": "0c5305b6bae4ff30f1a9adcf709afd4bb7e4280c6d8dea2ce281f9451641777c",
       "definition_count": 10,
       "output": "in_game/common/parliament_issues/04_clergy_estate_parliament_issues.txt",
-      "output_sha256": "76d1c5bcc6cfc8ccbb10cb8a075f81b0bd6ec16e2e66ce7cc86455c0e1672dca"
+      "output_sha256": "9ba2ccd3930f9dfe15da0b2e500dafa7e07121daf5fbab36d69bd8413af4c85f"
     },
     {
       "surface": "parliament_issues",
@@ -757,7 +769,7 @@
       "source_sha256": "b6b121dedfc4e7b14ee6eb9bfce8ad0dbc5b672871709b1d732df2fbaf764571",
       "definition_count": 21,
       "output": "in_game/common/parliament_issues/05_burghers_estate_parliament_issues.txt",
-      "output_sha256": "14539f3a9c4af18d2fe5f8013f5406103fad596a67649ee2117a76d7cc8fa78b"
+      "output_sha256": "847d8dee7038d9b8977a1c6cdfcd8c7edc1a602af3d305cf8320f375a413540c"
     },
     {
       "surface": "parliament_issues",
@@ -766,7 +778,7 @@
       "source_sha256": "2215200599a53db4d9c0c29bbe53103806a95c477c9a3f97832e8c17d8402a62",
       "definition_count": 12,
       "output": "in_game/common/parliament_issues/06_peasants_estate_parliament_issues.txt",
-      "output_sha256": "f6d293c2beabd97503c991a6fcef1669759b863eda6176c416881e1512065168"
+      "output_sha256": "e29837e0557f562af98bffc4308b0537667861746cfc393836330df0684d68a4"
     },
     {
       "surface": "parliament_issues",
@@ -775,7 +787,7 @@
       "source_sha256": "ec1b298ecbbf2398685c0a7ad4fb276f3ce25fd7641ce61a663b0f98110d3327",
       "definition_count": 62,
       "output": "in_game/common/parliament_issues/07_expansion_parliament_issues.txt",
-      "output_sha256": "59ba3518383ba8759e1c91707f2339f76528fc3c6a46ab3872dfb152b3f65bcf"
+      "output_sha256": "c4497eb3c4f301fcd062e88839dcfd1b503a2d0230bfea6d2b6a21aa83661409"
     },
     {
       "surface": "parliament_issues",
@@ -784,7 +796,7 @@
       "source_sha256": "a550b3cc15d43978d6fe8d48b778f7af4a4c1124e6a04666141764def5d53ba7",
       "definition_count": 8,
       "output": "in_game/common/parliament_issues/10_hre_issues.txt",
-      "output_sha256": "4efb00b52bb9f677c2ee3b1f67ac10cb11b7e7dc47646ce145c5b5ad4580bd55"
+      "output_sha256": "485a8efe76c56149e902c95094f48924c98f5b9f6360e1f5b48083c4d290a2e8"
     },
     {
       "surface": "parliament_issues",
@@ -793,7 +805,7 @@
       "source_sha256": "e04f51345011816eafb807cc2751f3e28f45913e723b149448f17c61f6369f6d",
       "definition_count": 1,
       "output": "in_game/common/parliament_issues/11_union_issue.txt",
-      "output_sha256": "8424e8f67b060331ece84e10f83642427dd332dc7450e8b5b8c5c8bf074975e3"
+      "output_sha256": "9df9bd0b2f6e8c23a5ae3565169ffbda294622723a47232a5182ab48471d9f2e"
     },
     {
       "surface": "parliament_agendas",
@@ -847,7 +859,7 @@
       "source_sha256": "a5be2c9d572eb922c7a2d17f3b9f0c3d551a6decfe9075dd1d60f825b1d8db93",
       "definition_count": 4,
       "output": "in_game/common/parliament_agendas/10_hre_agendas.txt",
-      "output_sha256": "ade1d56a01732c9d0d923021708ebfbb53dac81f14381aa8129bcfe7fa296d36"
+      "output_sha256": "7eb7e79e239f6dd7f1e86664ff1bae569e532ff966881369f46ec9e7bb2f6fa1"
     },
     {
       "surface": "laws",
@@ -856,7 +868,7 @@
       "source_sha256": "bf6a201f8eb0bdb9855a324b80228cd6eef620c6e3bbcb1ec665bbe28db74d38",
       "definition_count": 5,
       "output": "in_game/common/laws/00_monarchy.txt",
-      "output_sha256": "ab995e3bda801b597cc9db2b8cc4d2a7a68b0e805779d543b92023f5b98fd6d3"
+      "output_sha256": "31d88682d7b7d7b6a68fb364b6b6542d1a11af78f03cca1219686d1d083e2266"
     },
     {
       "surface": "laws",
@@ -899,9 +911,9 @@
       "relative": "01_common.txt",
       "source": "<GAME_ROOT>/in_game/common/laws/01_common.txt",
       "source_sha256": "eff197f5fc6c2c3c22d3663d492af29adec79ad4e0f76146aef42909ced368a9",
-      "definition_count": 19,
+      "definition_count": 18,
       "output": "in_game/common/laws/01_common.txt",
-      "output_sha256": "9280ffbfeeb73a1333641dcc6b3b0be3796fd40bda3dd134446dd7378a264399"
+      "output_sha256": "080fe2d265ecf4346f3a4c89b46599dd7aa792ce40ceff9d8d0d8e63b764c7c4"
     },
     {
       "surface": "laws",
@@ -937,7 +949,7 @@
       "source_sha256": "fdaaa1853928e2fedb0cd65e17878d846a5844cb8f066fdb38934296cb8c4dca",
       "definition_count": 22,
       "output": "in_game/common/laws/02_country_specific.txt",
-      "output_sha256": "e242bd79f533a00f033b24647d9112165bbb4e05991b3969b0aeddea0733c36d"
+      "output_sha256": "971d008b6a30cc4b7b257ab39115c5246dd1a421e364db138e2ef06e49de0a99"
     },
     {
       "surface": "laws",
@@ -1099,7 +1111,7 @@
       "source_sha256": "7d88d099a7cf0ac76de3828c66339b68469bfd5fe840ae7fbefe77297ed826e2",
       "definition_count": 3,
       "output": "in_game/common/laws/sects.txt",
-      "output_sha256": "183ccf1e687fc806f9139186137a8ac3337f58f3d917c864a6415832ee6273a2"
+      "output_sha256": "e5ea9f589b822071faf0eeff65f2e8ff24d31baca90c25cc1f7284ce304911a2"
     },
     {
       "surface": "laws",
@@ -1126,7 +1138,7 @@
       "source_sha256": "9484687b5fa15bf665b1af9cd703141a025329f94db27cade0edd14395d8ab53",
       "definition_count": 210,
       "output": "in_game/common/government_reforms/country_specific.txt",
-      "output_sha256": "66daa8a34ae4ae55cd84e1f3fff40ed948fbe7874841dff8dc69699984e1b0f3"
+      "output_sha256": "2f5af1d52ba3a68ee83e5a8d8f030e3944c8d1a24ba9d34823a818ee96dd9703"
     },
     {
       "surface": "government_reforms",
@@ -1207,7 +1219,7 @@
       "source_sha256": "ba282636a0cceb3595a8d23a41909abce58f3c0baf26df6fa7d4bdd381b4e793",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/ask_for_access_for_war_side.txt",
-      "output_sha256": "c19b023b012b8e45412ce439a47a8a4cd41f3df5413648093b338aea45d8a34f"
+      "output_sha256": "114c99ba9cc02521575686c7a2a6471b6ecb898a46602112623a10d7ed027350"
     },
     {
       "surface": "country_interactions",
@@ -1216,7 +1228,7 @@
       "source_sha256": "1f0c8b77c1967c515ca551ba54dc4c9fd178862f2da8045a2c78357e7b0412a0",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/ask_for_money.txt",
-      "output_sha256": "92c21e7634db7cf8b2405de03d89d579e2d2a81ebb1fc79733bea0c23ccb3b5a"
+      "output_sha256": "bb6b5c7418525c804f388bc3b9f2f36ead7bcea840bdb9a54a2f7fcae9ded401"
     },
     {
       "surface": "country_interactions",
@@ -1252,7 +1264,7 @@
       "source_sha256": "7bf068a52ad200b0d06261060b57bbaf184e685b35ad3e44a5626e73c27dcfba",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/assassinate_character.txt",
-      "output_sha256": "4c753811c01a794468753d7aa0f2c95fef63c87636283ee3d3c4e1f915088de5"
+      "output_sha256": "e251b9e0e8635e6ecc24aa0fefaa69b72d487dfbf01ed7d8f4e25d792cbea6a6"
     },
     {
       "surface": "country_interactions",
@@ -1261,7 +1273,7 @@
       "source_sha256": "014ae5568766b5a99ebc181f4ac95f8565ff4fa0a3947c15273b21387663ef38",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/break_others_alliance.txt",
-      "output_sha256": "10264ad347e741f593f79c9f39781491509669ee657f2fb16fca3e1451eec5aa"
+      "output_sha256": "31b921f13116b54a396af2f33e9c3f698bf11d2a6030e1de6c629f6311685f8e"
     },
     {
       "surface": "country_interactions",
@@ -1414,7 +1426,7 @@
       "source_sha256": "82f5bdf0c0c85637e7e1d81c9722d09083e7672fa08cfc8d9f91c6f9f6a489f3",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/give_location_to_subject.txt",
-      "output_sha256": "e4141271feb2810aba93256456610c538e269115f65252e585e0820b2af0f30d"
+      "output_sha256": "7aebde143b76268435399b108989ec2be8d2611bcb384fe1b69dd5e83ed3e221"
     },
     {
       "surface": "country_interactions",
@@ -1423,7 +1435,7 @@
       "source_sha256": "9322c96431873e8cfe9d37a2c284c0dc7fc22c7f92b509c32b88882ab30d7185",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/give_province_to_subject.txt",
-      "output_sha256": "4db47fe7c438564631a45071fde34ce37c3bfaab096622e803d78788318aeafe"
+      "output_sha256": "50391cb7b5203956d5e95993501b9e0718970bbac1d3fcdd055bb2ecd9fcf967"
     },
     {
       "surface": "country_interactions",
@@ -1432,7 +1444,7 @@
       "source_sha256": "58e84f71ad9219b2d1d81530d1b648d86b310b91fcda3c179d04e13e8022ee6e",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/give_subject_location_to_other_subject.txt",
-      "output_sha256": "a93aecccfe2db523e9d45033c79de6aa014fb3ae3682dd7bbdd06f72649fcd15"
+      "output_sha256": "c3a177ed30b678bb891529e0782e210f51f330197000ab7e409dd6593afc2dfc"
     },
     {
       "surface": "country_interactions",
@@ -1477,7 +1489,7 @@
       "source_sha256": "adcc03391d730e1c3e13d6f0aa1455e2ad66ce0b0da230bb626391416c43fcfa",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/influence_nation.txt",
-      "output_sha256": "cbcbeac4126509407b289117030d5c25d1547e413dd9967ac67743cf7a3b2133"
+      "output_sha256": "4de51aee84059ebeab953e5a6aa52b90967a27d507dad73d391ede108e81d88c"
     },
     {
       "surface": "country_interactions",
@@ -1486,7 +1498,7 @@
       "source_sha256": "9991440c7fe7cc476979949f6adc829165aaa7c024877dfc52e4e95f8270f1dd",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/intervene_in_subject_civil_war.txt",
-      "output_sha256": "489ed2a1dbcc50b306d879161faaca100d19a66bbd79a8f938d89c9ca30d66df"
+      "output_sha256": "3f4eddcf627ff5baf2914a100f3c1c270b41362d5d7d8f998ed104d54c86551f"
     },
     {
       "surface": "country_interactions",
@@ -1495,7 +1507,7 @@
       "source_sha256": "c5e5e65cb44f7828eae013704acacb79204b839a52f9818cc58193a14b6bb029",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/intervene_in_subject_war.txt",
-      "output_sha256": "0f04a5d6e4b21905f58c572d484db27d9125d87ef48d68315af1f285b7bf87d9"
+      "output_sha256": "dbed6d9b45e36a66aed3813b09c6641e337071cf26755332034e248be5f2662b"
     },
     {
       "surface": "country_interactions",
@@ -1513,7 +1525,7 @@
       "source_sha256": "e7a031b6b9949ff6fe8daf01657b0cf185a3548d4221959939d2e8a60c9855d7",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/invite_artist.txt",
-      "output_sha256": "f12331d2eb1caa5ea9f88f6a0b938201a147e1ff1f06bac1bd2d6a870a69f65c"
+      "output_sha256": "1b376668a0fb78b7dbfd74219df4d9b4f75c57c5a51b2444d6c7a5042373b5de"
     },
     {
       "surface": "country_interactions",
@@ -1522,7 +1534,7 @@
       "source_sha256": "d5cd89e362bc3e2d59e9d84d93c0f56efc6181de6cb5828b4869a64c589105c8",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/invite_prince.txt",
-      "output_sha256": "70b632a9a163c6f01e0a0f0475d20fedbc41822216f9fc4f59b7e767d8d8bac2"
+      "output_sha256": "647e3d381af86e333895393e2f364f7cc495b306d8a99374d71dab08b3c0e42b"
     },
     {
       "surface": "country_interactions",
@@ -1531,7 +1543,7 @@
       "source_sha256": "e9f53fcbd0c6c1bffc1644630b04df918491d817da5b50a51e843321b57afdd9",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/invite_royal_family.txt",
-      "output_sha256": "80b0ebeaa90acccf243980c78965342a98ced878133d7c67d70e52225b55b5cc"
+      "output_sha256": "81576b71f4e9ec49486bb17909f2d2a4325fc62b15478f91fa630ecc3dabe980"
     },
     {
       "surface": "country_interactions",
@@ -1540,7 +1552,7 @@
       "source_sha256": "7bcef4124cdf0329e1d83042f1fe9cc4583b450986a65611877547b525d1ca97",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/invite_settlers.txt",
-      "output_sha256": "675f0df14d2a494f7bf7a8161e5aa5d476bf98d04e34e613c2710f1191f938b6"
+      "output_sha256": "6e0421113bdc6ee95554e98eafb3224da2f389255ca3b667dafc271ff14ae018"
     },
     {
       "surface": "country_interactions",
@@ -1567,7 +1579,7 @@
       "source_sha256": "633916cd27b64fdf28e52491f510dc49e4fff797b7d35a06742ec05afc35a4cc",
       "definition_count": 2,
       "output": "in_game/common/country_interactions/japanese_clans_covert_actions.txt",
-      "output_sha256": "93cc2bfe3a7827f8ef75812214ee74bd605a0f6f537fcc0960ae2a51ae36cb02"
+      "output_sha256": "d98912d698ca0766c1c76da000783caeedd19a4048785e52f0b90ea41cd72b44"
     },
     {
       "surface": "country_interactions",
@@ -1576,7 +1588,7 @@
       "source_sha256": "27c0ea2d86dd4aad3efc28d9951f4faa67ab63cc2d4736e5fc40ed2da36a6e39",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/lend_unit_to_ally.txt",
-      "output_sha256": "cf23650135a71622596cc0b46e22a36f9918e6e4af142ad235c6ad59803e204f"
+      "output_sha256": "c6eede4d5baa89c7f0a18abc71d6c9889a35ae76cd337713332163962be6a519"
     },
     {
       "surface": "country_interactions",
@@ -1612,7 +1624,7 @@
       "source_sha256": "7f71b92b2fdbfdbc44a889940d00b2b2bae71b8a29057687fc3fddbe5e253dcd",
       "definition_count": 1,
       "output": "in_game/common/country_interactions/mfa_join_against_byz.txt",
-      "output_sha256": "068fe2dcaf25f903c1ed813a5b58abd66ace9ec1c7085f06a0b1ff8f60dfcc2d"
+      "output_sha256": "5eab539f021411fb935905dda3ead33fe1c964bcded195d3e0fc34256ac2d8ec"
     },
     {
       "surface": "country_interactions",
@@ -1657,7 +1669,7 @@
       "source_sha256": "3788581371a3b8f404d9763631e429d1349554488991ff2b5c898f0dbd9804c8",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/pay_off_debt.txt",
-      "output_sha256": "ce5b7c92f0d480ac20f35ac36edf7cb3a235e7ae2d07b954ecbe82ebc6409957"
+      "output_sha256": "538e41d2c8e9cbc0272f0a8e8503a47f0779a855fc14b330d172f53611551016"
     },
     {
       "surface": "country_interactions",
@@ -1711,7 +1723,7 @@
       "source_sha256": "526815b296bad3920997e9dddf77e2cbead5f35d652a8e6c2baf39759c19f2af",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/renegotiate_loan.txt",
-      "output_sha256": "6229fc4a9488db2394bb47fb9ad3fd5eeda4b22470fa3ca8c2b4e0176e2f06a9"
+      "output_sha256": "21e7ca039f8c05e54ff7070b4189affa4e094a075df472c87b13fae9017a37fc"
     },
     {
       "surface": "country_interactions",
@@ -1729,7 +1741,7 @@
       "source_sha256": "c0ba5dfd8614eb2a306dd36887bba075d8fb79f5223ef493738ea87422ae9a68",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/request_loan.txt",
-      "output_sha256": "75b4911f33f44ea1246f563da86b89250208869c96b718b935dc28c682dc40a2"
+      "output_sha256": "c67407c086866df0f1242e54f2ad9f8bb9f14572904f638ed2a98687f5ba64e8"
     },
     {
       "surface": "country_interactions",
@@ -1738,7 +1750,7 @@
       "source_sha256": "7d7d3465373a5351507924ec046af5976ff93ad52082b6f31dfe0f9c189bc8a6",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/request_work_of_art_purchase.txt",
-      "output_sha256": "8def78b36423e136556d44e99ca3aa488edfd4cd7dfdba9c140b13ae99e976be"
+      "output_sha256": "ec8bc8ce2d024ffa76b967092170b21ca756ac361ca86ad21061831f39e51066"
     },
     {
       "surface": "country_interactions",
@@ -1756,7 +1768,7 @@
       "source_sha256": "760ea22f9cd6adca5109004ab94b4587734b14ad8ed07ab3334f38a1e6bfd608",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/sabotage_reputation.txt",
-      "output_sha256": "9c80b3105168103f12082cbe12d00c7556856d8e008867754a741cac8fe50a5b"
+      "output_sha256": "97b91bd68dd1db7564f1c9fa4c7205a336f1670c2688bb7f26e9ba910a75cb56"
     },
     {
       "surface": "country_interactions",
@@ -1774,7 +1786,7 @@
       "source_sha256": "bc4a90fba8917cc75a102348f7654e68618c23cf352eb4c407aa4241327ae3e0",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/seize_location_from_subject.txt",
-      "output_sha256": "11d84b03a5d2151f071ed315b2c4f1fa3272baab79bebc5308c3244ee955f981"
+      "output_sha256": "47dd9d853517d90cd6df496e265743ae6ddc0da29f31efd4ffb3bf9eb4c777dc"
     },
     {
       "surface": "country_interactions",
@@ -1801,7 +1813,7 @@
       "source_sha256": "054a60489623a33cfc23549b7199e4c2e49acbb1179d63f002b18d39dde5f03f",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/sell_work_of_art.txt",
-      "output_sha256": "32d329007b5950f04d74e5e3d38b616d1b85040e480d734290348a53e43ce327"
+      "output_sha256": "1582cbf4d0449e701e3dce3f386a501c17f4e1337ca4e555757c4aed1d7387da"
     },
     {
       "surface": "country_interactions",
@@ -1810,7 +1822,7 @@
       "source_sha256": "cf59442f88d5f221b1208049df6a2d3611d66f9ec22d9ac4f9f0ee2b78a8e89c",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/share_maps.txt",
-      "output_sha256": "09e36f6379a9a360a128a9e6ba8f59343d4d83ac86df9b4f8ca81da58c928da9"
+      "output_sha256": "9fbc3d0e549f65172153f2e955f7592e58ea1b6ae20bddda1f26d53d4fe740bc"
     },
     {
       "surface": "country_interactions",
@@ -1837,7 +1849,7 @@
       "source_sha256": "c464a18c727e2a35057f7413f4c1f349ed1a3c6ebbf84f5dd0480879446f02ab",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/steal_maps.txt",
-      "output_sha256": "18df61624f5132d2f73bddcfd38af4b43f605589d439d5814eb0ef203c130918"
+      "output_sha256": "2cfae8197c3e4194ddd0622444f76333302a33894c3fecda4c615ccd72a03e6b"
     },
     {
       "surface": "country_interactions",
@@ -1846,7 +1858,7 @@
       "source_sha256": "138bf14feb02fa61b57d878601d87fe27e4c5e63b069f5f6730b8383d542dc07",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/steal_technology.txt",
-      "output_sha256": "a8c7e021c307c5630fb1e901c22a76fd8d7c6a706bb7a6a1c75c58cf1eedc7b8"
+      "output_sha256": "eeca27dd3da8c44c6f294f89afcda29c0375c67028a5ad542961b298e1db2081"
     },
     {
       "surface": "country_interactions",
@@ -1855,7 +1867,7 @@
       "source_sha256": "7e57d71678df0d992e8e02d78e12f6b36f201f0ce62ee7f65e3450355f89d316",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/subject_embargo.txt",
-      "output_sha256": "c11a7ab079553a7988ad082de37e4f16fba6d89ad0a8e92cd63e7ceb665c847e"
+      "output_sha256": "10cf457c1e492d005bb6f2690bbcdaa7e881c7b32c9f690103a4d270a515dcaf"
     },
     {
       "surface": "country_interactions",
@@ -1864,7 +1876,7 @@
       "source_sha256": "b73d97d313fbb8f5fc812e8dce5be8488a0c8ba1063792ef8f874be175cec93b",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/subject_enforce_peace.txt",
-      "output_sha256": "1a89f3ab7f663739da958526abb7f8003a5ad9c6e44886bcc872f8a93d0a6527"
+      "output_sha256": "abb22f3d8d7c9fa01a351e9b929755bc943ddd78b9d4f1d377318ac717c43aa1"
     },
     {
       "surface": "country_interactions",
@@ -1873,16 +1885,16 @@
       "source_sha256": "adfbaa42a6cd97a2345172403ed964e061acf3676f7400b3be30a5969e3d3d61",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/subject_return_land.txt",
-      "output_sha256": "ac77e517f80c296d920e01db20600ba3f2b7eff9c53ea3f795fb2c1941169871"
+      "output_sha256": "cba13f4faf968615d174744b7744b824bf35833cd37e8318fcae9dd97c54363c"
     },
     {
       "surface": "country_interactions",
       "relative": "surrender_civil_war.txt",
       "source": "<GAME_ROOT>/in_game/common/country_interactions/surrender_civil_war.txt",
       "source_sha256": "30d0b0f17ac1abc5f7654756bb19650e005cd697df6ca72c50a4d68f75e5f9e9",
-      "definition_count": 1,
+      "definition_count": 0,
       "output": "in_game/common/country_interactions/surrender_civil_war.txt",
-      "output_sha256": "f746c0057c85d07b56a70ecd0e1b2216269dbe6f93b76f6d1559077e22ac28ff"
+      "output_sha256": "7ca17a7be9db8bff39acef63dfc1a0f1febdda43e6e7df38121503da1119395f"
     },
     {
       "surface": "country_interactions",
@@ -1900,7 +1912,7 @@
       "source_sha256": "dc042e8d77aac29012f119f827b27c44d702163ff649cc107fc4a3948359a070",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/take_over_loan.txt",
-      "output_sha256": "c18b2b299626daad326e5223ceaa1f6ed76e389f058984d48f362a1e19959e18"
+      "output_sha256": "68df8fcac5f81020e345501ae9757183bfd8e63a2d1eaf2f4225c31a76090630"
     },
     {
       "surface": "country_interactions",
@@ -1918,7 +1930,7 @@
       "source_sha256": "89902de54d185299913a35cb17c9db1fab1dda464bb1cf1961409cc54c961d8e",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/transfer_occupation.txt",
-      "output_sha256": "c847490512ca266d4972b0e8acc8dce434fb9f8df209b3ff629850b9eaf29bc6"
+      "output_sha256": "43a15d6f430e5e4620fe622f6107b48f81eaafab913d31def03c3acef7736da2"
     },
     {
       "surface": "country_interactions",
@@ -1927,7 +1939,7 @@
       "source_sha256": "18590ca38b681055621bc0402a200fe8832ad18745f71e18714e3fdb8c8b58ed",
       "definition_count": 0,
       "output": "in_game/common/country_interactions/transfer_subject.txt",
-      "output_sha256": "18bd13611d8d509b7e5f32842247dd677ea714df6a35ae51a8c3b63a0ac43821"
+      "output_sha256": "f25bcefd30a68db1d126a8fe588db593946aafef10852427a450ce6a377971da"
     },
     {
       "surface": "country_interactions",
@@ -1957,13 +1969,319 @@
       "output_sha256": "d2141747981212fa2028a662f1d0907b33d5393bce4586593a6672ca9d5fd1f9"
     },
     {
+      "surface": "character_interactions",
+      "relative": "D008_assign_despot.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/D008_assign_despot.txt",
+      "source_sha256": "3e21632902215255582bc96e18180ed9743b5c2a15b685f9a792ab9b57951650",
+      "definition_count": 1,
+      "output": "in_game/common/character_interactions/D008_assign_despot.txt",
+      "output_sha256": "114f7d6bf3cf1cd4a0205550503c192e5abd5f1fdcdf5bfb63318e06c1bab6e3"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "D008_compose_strategikon.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/D008_compose_strategikon.txt",
+      "source_sha256": "418007477188038526daab02ac644fdb5694a6bf9960bda408f52a9582f70483",
+      "definition_count": 1,
+      "output": "in_game/common/character_interactions/D008_compose_strategikon.txt",
+      "output_sha256": "7051ec67fad4e1849c6cd4a2431f9124b2ea3cd1dc5e457ca49f181257ba2352"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "abdicate.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/abdicate.txt",
+      "source_sha256": "199035e79d7991941bbde169b1e32d1ba3f03dff7dce877be4952751fb4f71e5",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/abdicate.txt",
+      "output_sha256": "bc581a25ce39e72723fdd355250bedcc7c17e7355353b829dc77cf3f39f8604a"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "aclla_distribution.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/aclla_distribution.txt",
+      "source_sha256": "7f74019470a3ebe65c70c1fed9070025bfcf81846f0eed82f1680c55fee0e89c",
+      "definition_count": 1,
+      "output": "in_game/common/character_interactions/aclla_distribution.txt",
+      "output_sha256": "eb1b6be3544db0d5c295e24a3e00ba7c4188af156b6a50c525d88c218527da3b"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "adapt_culture.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/adapt_culture.txt",
+      "source_sha256": "dd5ab778e93ff130969f99a4a1905160ae7ca0ab40f4b8db57672aeef439e11c",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/adapt_culture.txt",
+      "output_sha256": "5d7c8529246774dd7e1efa83c7a0b916650e8ff24ecfad14484b81bb03f77341"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "appoint_as_heir.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/appoint_as_heir.txt",
+      "source_sha256": "4c04542a4f349d7b8e560fd3993dead73c81ea70f23522db267fd2c34cd178e9",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/appoint_as_heir.txt",
+      "output_sha256": "8d087a40075ecdbda4e477911b7cc763fbd0f0c437f5b14fddbb39b235d4b3fb"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "appoint_dragoman.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/appoint_dragoman.txt",
+      "source_sha256": "73f1894d77189281f79b4f539f9f42c6d56b7067b9f904c277a82c0d9d920fae",
+      "definition_count": 1,
+      "output": "in_game/common/character_interactions/appoint_dragoman.txt",
+      "output_sha256": "c381f514913cfa3e18b0dd972053c8a213d0c32f8d43db7ac32da158d6456a36"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "assign_governor.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/assign_governor.txt",
+      "source_sha256": "9178732bf2c4e2b38bea7138ee3185477b8d178ee2251055c479ebdfd3720374",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/assign_governor.txt",
+      "output_sha256": "3045677b5360aa93efc9fa65e34d822c3a92886aabe93acdf527baf7b56e35d0"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "assume_fort_command.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/assume_fort_command.txt",
+      "source_sha256": "126ffc529ab936591692ae2e45e1c79d52a73338821b5d2c596b9c6401c90b1d",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/assume_fort_command.txt",
+      "output_sha256": "9fff51bea4bfa028cfc3de45a2e81bae1aedaa0774faa68ae79f6f41e7421bf9"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "banish_character.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/banish_character.txt",
+      "source_sha256": "812c5f27c5b310c75ba2b2216b9f460d2cac9543cc2ce850b00f1cb2dfa6ebd8",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/banish_character.txt",
+      "output_sha256": "8b4cd249220b52de9c26046db4be0105fed7aac71e9def1f1663b1f90cd66523"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "choose_theologian_duelist.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/choose_theologian_duelist.txt",
+      "source_sha256": "d4811f5d82449d06a55cdd69c680726beff86f72de81b164d5023c9b52e7e99d",
+      "definition_count": 1,
+      "output": "in_game/common/character_interactions/choose_theologian_duelist.txt",
+      "output_sha256": "eac768a77caaa93a5ba0463c564cb75f91ae96cbc04bb8549f08ff28bd7559b2"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "commission_art.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/commission_art.txt",
+      "source_sha256": "f0488ef6f07b219c758ea223e66ac3f13fdb29ac80e56da1ffbea2e1300dcce4",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/commission_art.txt",
+      "output_sha256": "6dd89a599266fff8858c2455252ccc0f4511c4945e162f3866464d02a6b8b3d8"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "d008_mutilations.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/d008_mutilations.txt",
+      "source_sha256": "1f284fc26a0607445107c80e2fc219abbaac65859aad159d4deede0e2d313735",
+      "definition_count": 2,
+      "output": "in_game/common/character_interactions/d008_mutilations.txt",
+      "output_sha256": "7d54de7a01c36871bc1ec16ceda86daa1cc49fe39e5811f43ae1af02ee5b11b1"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "dismiss_artist.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/dismiss_artist.txt",
+      "source_sha256": "8835342e407a8607ea92041bbb8e74fd8538d302101efb8a7554f7fad08d47c6",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/dismiss_artist.txt",
+      "output_sha256": "49744e846f87c0f7046df52fb17e5647eeaf69a8a57c352234584d69600e77b1"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "dismiss_prince.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/dismiss_prince.txt",
+      "source_sha256": "d781bbcfb5c5fde85d6212869f1c4b14387fd61fd9bbb291c9ff0e2d982fa7ec",
+      "definition_count": 1,
+      "output": "in_game/common/character_interactions/dismiss_prince.txt",
+      "output_sha256": "86b60022562283fa5b29560849b02e2fa7e2205209d5f91f379ad2bd68b20f5f"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "ennoble.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/ennoble.txt",
+      "source_sha256": "9b14dd2eb1c33ffde8a86d70aad53ac677f5e6d5a8b0f5bb7cb15eebb131360f",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/ennoble.txt",
+      "output_sha256": "6d4470515c332a49c9f71d6209de1f6ae7beafda4f109ece7e7dffa4bb70ada6"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "execute_character.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/execute_character.txt",
+      "source_sha256": "20744f758bb8c740d4976a7ebdf3666d29aa66d2a5b46a2c5b672e92f9cd873f",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/execute_character.txt",
+      "output_sha256": "ac3865b806204ab0865fb595c4497c35b3176a6db427a7eeb783f2d5116016dd"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "favor_heir.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/favor_heir.txt",
+      "source_sha256": "668ffb3c049f578668d2c12a6e88e0fe739a4dd0111523830191459dcaf9aed1",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/favor_heir.txt",
+      "output_sha256": "f6e7c88516f97cffe71755e7801c37eb6195f75086761fb5bc0ae27996afa42b"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "grant_cabinet_right.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/grant_cabinet_right.txt",
+      "source_sha256": "75f72a57479689ef0ee79047e15e7322a083f754edf7851ed0b6e73c2966f5fc",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/grant_cabinet_right.txt",
+      "output_sha256": "86efac745ee49bc58d7df92f5dd9f793260781f610e7cc4952f1ca801bd64f78"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "make_regent_ruler.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/make_regent_ruler.txt",
+      "source_sha256": "817d0f3393be26b583670acc2f61c41097d194d690524bfa2af6d097625cd0a6",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/make_regent_ruler.txt",
+      "output_sha256": "c466113137860cc187471a84d9fd49f5e5e0a55a84245e6d572018d2c1ad9d66"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "marry_lowborn.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/marry_lowborn.txt",
+      "source_sha256": "07d2a5cf6d443abbb3558cd941b7d7c2c9cced07dc62a324a9c29cfeae1b6b89",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/marry_lowborn.txt",
+      "output_sha256": "911c3e132334c6fa3be4c7cdad3fcf6b74eee2af0a9b38c3233f168ac037e88e"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "move_children_to_court.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/move_children_to_court.txt",
+      "source_sha256": "0281a24110a101dd86148f9cf3998d20b40ec788921ecac74a0b873a7d8f540f",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/move_children_to_court.txt",
+      "output_sha256": "a4d7b1dfcf83f6c1ed90689a5a49c0546f06843ea14a64fff587925d9e1beeda"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "order_of_chivalry_actions.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/order_of_chivalry_actions.txt",
+      "source_sha256": "f75aaab4f0017b45b9c7b3d25d80232053bf76e6848a4a4a5e0aa999bd883831",
+      "definition_count": 2,
+      "output": "in_game/common/character_interactions/order_of_chivalry_actions.txt",
+      "output_sha256": "92de02066e19f85c5ae820aa6d4a8412fb3f18034ba82272353b2362f807b25f"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "pap_reassign_cleric.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/pap_reassign_cleric.txt",
+      "source_sha256": "1d8cc4304737d1be55fcf31192ccd188330f06a27f5ae12ddf3c50f6492f51e9",
+      "definition_count": 1,
+      "output": "in_game/common/character_interactions/pap_reassign_cleric.txt",
+      "output_sha256": "8bc49eeea767118e319ab3a53837810d816d6084a3315fe36b38166d9c6855ba"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "pardon.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/pardon.txt",
+      "source_sha256": "954d4a0eaad82d8abd9f462fa845f70b0ce93139ff03306aa931033709f226f3",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/pardon.txt",
+      "output_sha256": "85eaa5de77d109e1f70c3a0fc784dedb139d453039694109848b17ef61fabf20"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "prefection.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/prefection.txt",
+      "source_sha256": "c3c970de7be0e74f13e3e873365244b1ec3581b934c084557944981036d91563",
+      "definition_count": 1,
+      "output": "in_game/common/character_interactions/prefection.txt",
+      "output_sha256": "2d400d96e0ac2e9b1627104d706581dfeb9beecb5b9a0df01d975ae2a8b6cb4a"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "promote_to_head_of_cabinet.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/promote_to_head_of_cabinet.txt",
+      "source_sha256": "a6f1acb71c449b422b5bb1e7d47cd93d2d5df382bcdf7ce0dd99ae046b0b8171",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/promote_to_head_of_cabinet.txt",
+      "output_sha256": "28cfa4d744f5ab5bf569d84978a2b6b02022b57c99797d517ba4a674494642d5"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "resign_as_grand_master.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/resign_as_grand_master.txt",
+      "source_sha256": "f6158bee6b1442d0187f7701e9de22db5d5fa6a7626bef21c2badbc2b39f0e38",
+      "definition_count": 1,
+      "output": "in_game/common/character_interactions/resign_as_grand_master.txt",
+      "output_sha256": "154fc4527f44dddcd8537f7fc35a1b3470e20a7db02befa587d640adeb76bc21"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "seppuku.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/seppuku.txt",
+      "source_sha256": "dc838a2da608be982d407bd2298f5d47a93966551b75b9b926e351cb8da78128",
+      "definition_count": 1,
+      "output": "in_game/common/character_interactions/seppuku.txt",
+      "output_sha256": "6ac15f79b8f5d4dca459e35dfcca70295d7548ea8ac67f5b44b4288d7d00c81a"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "take_the_vows.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/take_the_vows.txt",
+      "source_sha256": "12079c8c6383034c9f7e06c01dffce9ccc6e317832031d5a701113e901ee4f04",
+      "definition_count": 1,
+      "output": "in_game/common/character_interactions/take_the_vows.txt",
+      "output_sha256": "8c1e9d03539a0ae5d3e2f3b20d21f8102f23e9a8f7cc5fdf6497b7d47e8df862"
+    },
+    {
+      "surface": "character_interactions",
+      "relative": "tribal_arrange_marriage.txt",
+      "source": "<GAME_ROOT>/in_game/common/character_interactions/tribal_arrange_marriage.txt",
+      "source_sha256": "290cdb16c0cc06ed5cc994df9a8494b05c8d14448a4594e2a0189716df3e9378",
+      "definition_count": 0,
+      "output": "in_game/common/character_interactions/tribal_arrange_marriage.txt",
+      "output_sha256": "f7eff2782e513ff1a259f8d8bca384c53a954aec495e5d3c61deac141bf47865"
+    },
+    {
+      "surface": "chivalric_orders",
+      "relative": "01_historical_orders.txt",
+      "source": "<GAME_ROOT>/in_game/common/chivalric_orders/01_historical_orders.txt",
+      "source_sha256": "9d34c490862f2d1d815bb1eac2c6b11d9aa4e450b72d809cf3f03a1abd3be21d",
+      "definition_count": 7,
+      "output": "in_game/common/chivalric_orders/01_historical_orders.txt",
+      "output_sha256": "6c1a0c2ce4143c247edb267190dadb4fac2a6189337dbdf54a2eef481f3e25d5"
+    },
+    {
+      "surface": "chivalric_orders",
+      "relative": "02_german_societies.txt",
+      "source": "<GAME_ROOT>/in_game/common/chivalric_orders/02_german_societies.txt",
+      "source_sha256": "05d4140593e6a8b903a80897235cbe40bf7ed6508ca4a28bb3b76eda9879c222",
+      "definition_count": 6,
+      "output": "in_game/common/chivalric_orders/02_german_societies.txt",
+      "output_sha256": "2bb91bcfbe68bd4dd1494d107f601d4549d4b627cb7cd0958efa690a326a9882"
+    },
+    {
+      "surface": "chivalric_orders",
+      "relative": "03_western_orders.txt",
+      "source": "<GAME_ROOT>/in_game/common/chivalric_orders/03_western_orders.txt",
+      "source_sha256": "4640e0dfb92b65bc767f710b11fd074c56aeac0647941c05ada118c323e57b76",
+      "definition_count": 2,
+      "output": "in_game/common/chivalric_orders/03_western_orders.txt",
+      "output_sha256": "ac971ab78be19e9b44c2ee262de2867890b6079b49aadc04dbba93774709b4d0"
+    },
+    {
       "surface": "generic_actions",
       "relative": "D008_fate_of_the_phoenix_actions.txt",
       "source": "<GAME_ROOT>/in_game/common/generic_actions/D008_fate_of_the_phoenix_actions.txt",
       "source_sha256": "5e3a9ccce1ca812915f9e7d0a00699605e1ca82e54b6a0950ad7fcee547f2683",
       "definition_count": 12,
       "output": "in_game/common/generic_actions/D008_fate_of_the_phoenix_actions.txt",
-      "output_sha256": "527049423b9f11eac814019d6395943b7a4e4321440ace968bff5518eddb2670"
+      "output_sha256": "bed4b0fc20f71c1e68b25f4b6f20e5a38d137a511ee6035b7924c9ae161313f9"
     },
     {
       "surface": "generic_actions",
@@ -1972,7 +2290,7 @@
       "source_sha256": "59039c9b7013a517c1a7822f0c42aa98bd19b45acb89d838d71d52157734b359",
       "definition_count": 1,
       "output": "in_game/common/generic_actions/D008_host_olympiad.txt",
-      "output_sha256": "14aaceddcce1c95c2f466200941bd72f1f6a5e66a954eea2408f736f06e53c85"
+      "output_sha256": "b0244a9c00b9ffa889c3aeeeeabd499d022c017cc0e911d6ecb294115546e66a"
     },
     {
       "surface": "generic_actions",
@@ -1981,7 +2299,7 @@
       "source_sha256": "ce99070a400dbfae9b04c57b60f1ccd97e13a72220a1e57f26900593147ccf72",
       "definition_count": 1,
       "output": "in_game/common/generic_actions/D008_lutheran.txt",
-      "output_sha256": "d5ba0e86dabc1db708ca2e0f27faddfa5aa226986348609cbdcf4387735bae28"
+      "output_sha256": "d5f82b5a290ede35b000d4c4db199078c25dc8b4a471e565e051ac9f8e96ef8a"
     },
     {
       "surface": "generic_actions",
@@ -1990,7 +2308,7 @@
       "source_sha256": "7ac0949271a48e4b1264ad4c1aad5ba9eec94420d75b6bbecd3576e4cffc01aa",
       "definition_count": 4,
       "output": "in_game/common/generic_actions/D008_orthodox.txt",
-      "output_sha256": "182be27e2dbcb8d5fa1e15d8ff5b3006aa32649b33e10bbdbb6dbf349053ca48"
+      "output_sha256": "19e41f17558b62147a19c33d5ccd8a1451503c52aa7c466147b7080042090b0a"
     },
     {
       "surface": "generic_actions",
@@ -1999,7 +2317,7 @@
       "source_sha256": "2c60826c4e0a00c8fead6f4d5da801640090d11b6a1f2f8d6ab2add2da6e7329",
       "definition_count": 18,
       "output": "in_game/common/generic_actions/black_death.txt",
-      "output_sha256": "f2bb124540fad3b67b0f23194413bf0797ad1df4a69e2e4a746f872ea88b9a73"
+      "output_sha256": "e850c191e3a5f55b2dff29d8896ca01c9f8e0136166f4246fdeaec7ce087b54f"
     },
     {
       "surface": "generic_actions",
@@ -2008,7 +2326,7 @@
       "source_sha256": "15764a29adbe548d17273632450ead5192f37761f58de59b70e0baf4c7dd3466",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/bureaucracy_actions.txt",
-      "output_sha256": "88f4ed89f0a56f3693ce0ec7f153e6a6728410a6eb457ba2b2537f2955dbd77e"
+      "output_sha256": "a86aa1ee96b49ec0f57f72ac11c8d81e11892326047d773d6f8b90a258acf661"
     },
     {
       "surface": "generic_actions",
@@ -2017,16 +2335,16 @@
       "source_sha256": "85a2be39cd572567f53608a22dba5b7c6db4855d58949e719c0a252596605bad",
       "definition_count": 1,
       "output": "in_game/common/generic_actions/canonization.txt",
-      "output_sha256": "e53918243197a3030b0373732f260608d9cfcdaf2f813ebf87919b57e37f256e"
+      "output_sha256": "25857abbb36f68c1158e5941b6759cc096433372dd055003d137efbccb68eafb"
     },
     {
       "surface": "generic_actions",
       "relative": "catholic.txt",
       "source": "<GAME_ROOT>/in_game/common/generic_actions/catholic.txt",
       "source_sha256": "bf86829da9735fafd2f6e5f034dcd858c275163dc5dc18aa475fb92603ee91d8",
-      "definition_count": 5,
+      "definition_count": 4,
       "output": "in_game/common/generic_actions/catholic.txt",
-      "output_sha256": "2567fae127e5e8d353cee01018a12d1e39c3fa8da0e1c851ce12820694e59ad9"
+      "output_sha256": "9ad35e1c40d7f1f5a98c8cdbebb216faea157d4d6ec8f2e3d3860bd60c849320"
     },
     {
       "surface": "generic_actions",
@@ -2035,7 +2353,7 @@
       "source_sha256": "8786663dd66e2b74d65ac1a1858022e64b113c229188dcef70145706b49f2d3f",
       "definition_count": 1,
       "output": "in_game/common/generic_actions/chinese_treasure_voyages.txt",
-      "output_sha256": "bc469d49968849eab1c843bca7267ec0c86b67cc81164239c035d01836a6ef6c"
+      "output_sha256": "d2173b599cb5cc8c2ed35d7e7234a0bef92e48708d1326cf47e1e06cca354834"
     },
     {
       "surface": "generic_actions",
@@ -2044,16 +2362,16 @@
       "source_sha256": "e53e2d9f59db4fb2f5ff460c63cfab837512a9ebad6859d6bb2bd3f3d14ec03b",
       "definition_count": 14,
       "output": "in_game/common/generic_actions/church_power.txt",
-      "output_sha256": "f201c788e4ffe79178333c87e7beca18f8c78e7b2c3acdc9ebc1d5c9738fe54f"
+      "output_sha256": "043452e63b9a1db01c5ec37a96bbb8cc0aaee546e13ab27f31a1cf616834c618"
     },
     {
       "surface": "generic_actions",
       "relative": "colonial_charters.txt",
       "source": "<GAME_ROOT>/in_game/common/generic_actions/colonial_charters.txt",
       "source_sha256": "2e3e40af9a6829e26e34300ecec86fd6a3a2077b964cb12decc04d1b045c7ff7",
-      "definition_count": 2,
+      "definition_count": 1,
       "output": "in_game/common/generic_actions/colonial_charters.txt",
-      "output_sha256": "c924436d0aa3ef4c8b70e9f62f42f93f85db43497cb803d7815d6ec05533d4a8"
+      "output_sha256": "b71a35404bf71f42195c8e69ced75aab043a76ea486c7c6ecc1a68502a4b7fd6"
     },
     {
       "surface": "generic_actions",
@@ -2062,7 +2380,7 @@
       "source_sha256": "53f884354ca518891cdc0a5034eb1622527d174cd2462b3ac69675a6ef807e82",
       "definition_count": 8,
       "output": "in_game/common/generic_actions/colonial_revolution.txt",
-      "output_sha256": "3986016fe50f807f246466a30f71f4539c96e6a0311da268e9315a92372f3b36"
+      "output_sha256": "727a781ebfe88dbe1ecf5d45edfbaf3b529383edce02300abf3c135c9a47f313"
     },
     {
       "surface": "generic_actions",
@@ -2071,7 +2389,7 @@
       "source_sha256": "ca988e61a8acb9b965db5e7a8acc33c128f79ba60dd9ad315ca16c0470f23480",
       "definition_count": 4,
       "output": "in_game/common/generic_actions/columbian_exchange.txt",
-      "output_sha256": "499bc56b9894a53d61be0c42b870651a0b19c927b20870a403e8668c06110948"
+      "output_sha256": "854f3cdbc874f6ad29fa9c5e4c5370ad8eaf39d55b6d4c97f96efa0d96bbf055"
     },
     {
       "surface": "generic_actions",
@@ -2080,7 +2398,7 @@
       "source_sha256": "a6aa9f14035a7d912143c713d10e08d39dc1930350edd20cf3d08807f93051b5",
       "definition_count": 1,
       "output": "in_game/common/generic_actions/conquistadors.txt",
-      "output_sha256": "f3a43ddf4fe44dbe8d1e1296c910939c3f286d3d9a666a69aee9ab41dfe8aad7"
+      "output_sha256": "047beeadc1093223c44a7a44df32378c2876822143f17512a0e907148c1b4fea"
     },
     {
       "surface": "generic_actions",
@@ -2089,7 +2407,7 @@
       "source_sha256": "28d1bc7c82dada777dd5ce29f4c5babebf301a8ec5b43ca73b13a90c90c1493d",
       "definition_count": 3,
       "output": "in_game/common/generic_actions/coup_attempt_actions.txt",
-      "output_sha256": "17d7d817daeeef5b755da58a622a9a7e0b1ae61a896aafc0bcb0eec6251b116c"
+      "output_sha256": "ecceb77e3e424ec7f62d1d6825c80b0b5191cb03823cfe19a09a4cc9feda06c7"
     },
     {
       "surface": "generic_actions",
@@ -2098,7 +2416,7 @@
       "source_sha256": "877c65957ac588ac209e3ecd21ba44dc1364ffc8c98bdb4694d7c90cc929d5e4",
       "definition_count": 6,
       "output": "in_game/common/generic_actions/court_and_country_actions.txt",
-      "output_sha256": "c172f7566c2289a57e437474a7d9ed5b384301c2b5bfe13cab1480b33df05fe5"
+      "output_sha256": "b9ad7842cb5571ef6e8e0ca10e471bbfe906659057da014e2470dd724d926b74"
     },
     {
       "surface": "generic_actions",
@@ -2107,7 +2425,7 @@
       "source_sha256": "d949adf7c46939ae87249a19489e4f5230713fb373e942a1e95f9fadf1a9b3e1",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/create_building_subject.txt",
-      "output_sha256": "47090a56faa78b2d77747280c4b758753461f77f273e6fa9a98683696adea65e"
+      "output_sha256": "45bd5182eb375a765261140ed983900445b4d8ca62976e8a7741677115fae9c8"
     },
     {
       "surface": "generic_actions",
@@ -2116,7 +2434,7 @@
       "source_sha256": "70506b3d269f2f7e0f7aaa835500646ddf7cd6e6aca329112ba3b4c703cb8e52",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/create_province_subject.txt",
-      "output_sha256": "d663fccd1b203aaa43309974bfd5eacfa4dcde2db8821fa5e3d9a328ea057078"
+      "output_sha256": "d76c2adf5f356ae2e6ac1ea3fac03e20a0cd4e3d008d0c60419ac7f25961fb8e"
     },
     {
       "surface": "generic_actions",
@@ -2125,7 +2443,7 @@
       "source_sha256": "d88f85817b26e2e209ce2fa3be4da4a0c8fbcaa3df85ba11f6eced50eb543327",
       "definition_count": 5,
       "output": "in_game/common/generic_actions/crisis_of_the_chinese_dynasty_actions.txt",
-      "output_sha256": "277e3b796d1ee3212ff257194e2f682ba6c6f1d0e5990ccf7a149e79cc5334fb"
+      "output_sha256": "affc43ef419fd33478b4afda960eb136d118c231cd16169330c97b5dc2c128b4"
     },
     {
       "surface": "generic_actions",
@@ -2134,7 +2452,7 @@
       "source_sha256": "70d10829c7a3f2552db7890122a36895616bbc1f6f5c0886c44e89b72f267e6b",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/culture.txt",
-      "output_sha256": "bd5dec1b5e62ec667e2af2905617ca4139ba894af428e31b1bbaccf1005e8baf"
+      "output_sha256": "53a0682530f742833264e0f874a9de7e0fa354fa6a2b8f9bd5ac56c5ec2d7609"
     },
     {
       "surface": "generic_actions",
@@ -2143,7 +2461,7 @@
       "source_sha256": "2654c3308df7b9130e61885c665a892cbc0f7a7b4d10ecea1cfec0142d167f22",
       "definition_count": 2,
       "output": "in_game/common/generic_actions/decline_of_empire_actions.txt",
-      "output_sha256": "73a318d94a5879d82003dc25f54610e651cce9e890f6c5d8a2a49d6d8107755e"
+      "output_sha256": "2fb73ac0d81f8d4a4db1d8486b01be1b1d38b33652491912bd0bed0d7e0cfece"
     },
     {
       "surface": "generic_actions",
@@ -2152,7 +2470,7 @@
       "source_sha256": "58fd7de493067aec4dbed74626fccaa26737f1c5d0ec60ede86f8bf49af01718",
       "definition_count": 6,
       "output": "in_game/common/generic_actions/decline_of_majapahit_actions.txt",
-      "output_sha256": "5a7c92c4edbdc0c9f55af2c4152a160436fb3f9dfcc036fc0d04f09af42ac40c"
+      "output_sha256": "8ea36d3a59e2b5d7cbce9e38f69cf331afd7ec75f310f23ea784cec150894009"
     },
     {
       "surface": "generic_actions",
@@ -2161,7 +2479,7 @@
       "source_sha256": "07b796f463e752da0eb8ead525a70ff0b2fed35565a88db256aa597f12960b28",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/employment_system.txt",
-      "output_sha256": "54736f3b54ec55dc41133aa858db55ffc2f2bcc5240d9f62c6f4a35c7e5ec2f3"
+      "output_sha256": "95c7c17609a818c0e8176f13ce3e4285e8c57bc6bd10b1dd99d73d2ae27fd21b"
     },
     {
       "surface": "generic_actions",
@@ -2170,7 +2488,7 @@
       "source_sha256": "4cf714e6f95f159c6dc614f67972f63825d2a2eae1e852fe3a7ca6d6e053f3b2",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/estate_emergency_actions.txt",
-      "output_sha256": "d41769315fe484fa1205e6e30369d4e24c8bcc3d1cd378cc1cbca3c7ed88cfcc"
+      "output_sha256": "58c579ebe9f138fb0e4ccec61eac0c133bbd73bcea77f0f0ca478b84f1ccd74d"
     },
     {
       "surface": "generic_actions",
@@ -2179,16 +2497,16 @@
       "source_sha256": "1372dbc0988dd01e621e37405f04f36c3e49865f7c8583725ab852911a66376b",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/estates.txt",
-      "output_sha256": "fc9b664ea8e76ddcab23e8c9d708a20a5dd08108c63b3191c5b7f94a97ada3a0"
+      "output_sha256": "e27cefdccd132877f53ac6e097e6b088c5e35f5b01b3f59c9be44fdc4d4989ef"
     },
     {
       "surface": "generic_actions",
       "relative": "explorers.txt",
       "source": "<GAME_ROOT>/in_game/common/generic_actions/explorers.txt",
       "source_sha256": "199b692d010037b54e349cef367263266f6abc80725ec96881060fc1d39f6444",
-      "definition_count": 0,
+      "definition_count": 2,
       "output": "in_game/common/generic_actions/explorers.txt",
-      "output_sha256": "d2e3eb5ab856b167e47e1498d4d240984bda8ea674d3707c3a2b35a5c56ea410"
+      "output_sha256": "12157b5253fd344946042a4a1473e95d220299bf8e7a4fc30d6477487f7a474b"
     },
     {
       "surface": "generic_actions",
@@ -2197,7 +2515,7 @@
       "source_sha256": "e18ea9111f0d99484765d378379a031a67350d4145eab03d145ce1114d4d8083",
       "definition_count": 5,
       "output": "in_game/common/generic_actions/fall_of_delhi.txt",
-      "output_sha256": "d24b288f27b6540f45faff1f733f39f077360ce4917ad26a9a9eee1c8b3be30b"
+      "output_sha256": "974cbf58bdca51f9241fd063f89d212344d4a0c1a912ac9444fa56ab2f9fc25c"
     },
     {
       "surface": "generic_actions",
@@ -2206,7 +2524,7 @@
       "source_sha256": "01be689edf786f0a33ebb87a7506f545a2d5fc415740af035e1bbfab3123590f",
       "definition_count": 1,
       "output": "in_game/common/generic_actions/french_wars_religion_actions.txt",
-      "output_sha256": "e378c32778b3fc81ce528795220b397a4d25a147763bb4abf272c08d3342aa4e"
+      "output_sha256": "8e9186181dd8c1fcc8d427cc4eb8bf882b3a537c0a3444f541fc16098e64d5bb"
     },
     {
       "surface": "generic_actions",
@@ -2215,7 +2533,7 @@
       "source_sha256": "600df377a3fc4788b9ad029e0a66cb49f5adf08ce45caa85b7062733323b13e9",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/general_religion.txt",
-      "output_sha256": "aa4b2a97f010e470aeeeb7c446fdd0939736fa73bd66d11b6c3960fa44686cf0"
+      "output_sha256": "a87915017d46048273ed41e8e27d35de3d973b38e12bbf93f035ab16eadee8bf"
     },
     {
       "surface": "generic_actions",
@@ -2224,7 +2542,7 @@
       "source_sha256": "5c7b7dea13b4c013963ab19f27c64ef99e50c3b3f93dfeb6b905bba59e619865",
       "definition_count": 5,
       "output": "in_game/common/generic_actions/golden_age_of_piracy.txt",
-      "output_sha256": "69308c5e82886fbf806182ba46527b8e104839e05ef805c4c2007b9a8a556fd9"
+      "output_sha256": "36978e488b98ecf3747173ff2d8a7c5c0958146b235e4fa072cc1dcc0f9e863f"
     },
     {
       "surface": "generic_actions",
@@ -2233,7 +2551,7 @@
       "source_sha256": "6298312213a344b9e576b8c54ce431f58e9d43bfb54ac2843f9b5f42950e7fce",
       "definition_count": 7,
       "output": "in_game/common/generic_actions/government_conversions.txt",
-      "output_sha256": "cc50311a7e5c13d5caecfe3afb0daf8f2f7ca6f1028df2a0a597aa35fb468074"
+      "output_sha256": "07ba843e82de1190518c2a5cad8540d3d78d6112976f5b90c8fa5dc0e206a53c"
     },
     {
       "surface": "generic_actions",
@@ -2242,7 +2560,7 @@
       "source_sha256": "8414bf9b96c614decf34470d5bf190d2476b3f23ac3b9e83a2483926c1f8e450",
       "definition_count": 10,
       "output": "in_game/common/generic_actions/great_pestilence.txt",
-      "output_sha256": "2cba90c350e16d3168ae3e85264e13568104404cef2856e9dd26bf4f46869574"
+      "output_sha256": "04d68b93e05992211987d0a0492867eb70380f5d4bbfa5f48ed185273e107533"
     },
     {
       "surface": "generic_actions",
@@ -2251,7 +2569,7 @@
       "source_sha256": "19f847345d04908c25aad38c24c4051cf7805b006d5e7bee96d6f4a81e118b29",
       "definition_count": 7,
       "output": "in_game/common/generic_actions/guelphs_and_ghibellines.txt",
-      "output_sha256": "58dc23fe62fd5400471d875ee8c63d2e6f37f600b4b919d3463fe0d269174801"
+      "output_sha256": "7ee4b28c64f8746101538721975bf90a109992b005d33924b5b1b02f1a36b785"
     },
     {
       "surface": "generic_actions",
@@ -2260,16 +2578,16 @@
       "source_sha256": "3fc222eceb59185e97b237d7ac31c579048a26c875217e8ca3a4b6d7d60b26f9",
       "definition_count": 3,
       "output": "in_game/common/generic_actions/high_kingship_of_ireland.txt",
-      "output_sha256": "7a2799b74def128852419d750e55b2a090508319e54044f6e36c376f9bc02b9c"
+      "output_sha256": "aafca92eefc7a0dafd4218aa0e3db3549612b812c2bdcd096d4b34571a6195f5"
     },
     {
       "surface": "generic_actions",
       "relative": "hindu_branches.txt",
       "source": "<GAME_ROOT>/in_game/common/generic_actions/hindu_branches.txt",
       "source_sha256": "a76eefefd39b7656b6e2bf1366fafee920fc006bdb1ff2a7bad099b459a049bd",
-      "definition_count": 10,
+      "definition_count": 7,
       "output": "in_game/common/generic_actions/hindu_branches.txt",
-      "output_sha256": "9b831bbb82e1c5286b6bb7b3bb2e7b1fb743a1305189f993517e4dc4ce70fd09"
+      "output_sha256": "62b5e77a28ebfff3fe33ab52d7c7b30d1d34816101731950ad6ba59030360d01"
     },
     {
       "surface": "generic_actions",
@@ -2278,7 +2596,7 @@
       "source_sha256": "cccf23c16abdad2abf38c25e044cd81e021d563dde2b7e702bd045b8c38d6d8e",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/hire_advisor.txt",
-      "output_sha256": "d0efc5bd33fd6b9b8659faba0c3fef5a228078070b5940b4f9e14190f9188e67"
+      "output_sha256": "705aa59ce017af473e121dc614c3e7a9fbcb26b3529f86aa5ace1ec069d96d46"
     },
     {
       "surface": "generic_actions",
@@ -2287,7 +2605,7 @@
       "source_sha256": "2bcdf7ff63c31e02a489cd48eae18087439868710309247a95afd70bd0f01dc6",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/hire_artist.txt",
-      "output_sha256": "5159fe8f3edc03f0d4df8cb619bd47534ba413427c4e02d2b1397cd232f44a39"
+      "output_sha256": "efbd83d49bd12a6156c4a05e2b1ec98db1aaa135b291da60789184f52dcd3646"
     },
     {
       "surface": "generic_actions",
@@ -2296,7 +2614,7 @@
       "source_sha256": "7799afff9f75a8596d2768464ffcc91c259e27d9f48621fb3a6c392550a4588a",
       "definition_count": 8,
       "output": "in_game/common/generic_actions/hre_circle_actions.txt",
-      "output_sha256": "61364c378796f569a26797f9ce675c0710b8442b405f81ce72d92db7ebf35a11"
+      "output_sha256": "fde0f899d262d49c55cc66e2dd439f95e8b450f6781ae778ec3537ea42ec0209"
     },
     {
       "surface": "generic_actions",
@@ -2305,7 +2623,7 @@
       "source_sha256": "0ae37af5cd24c20f387c8cfcc6e0377b051878637d6e307e06012d22a7131055",
       "definition_count": 12,
       "output": "in_game/common/generic_actions/hundred_years_war.txt",
-      "output_sha256": "f85c8d188c73d4bb61bc16e397f4c679438cc9f5d8354a5aa5a35209b3909416"
+      "output_sha256": "1c88a98a8e27d48265f21e081845c191c7d1ed1da4fec2c22d31573ab74c5d3a"
     },
     {
       "surface": "generic_actions",
@@ -2314,7 +2632,7 @@
       "source_sha256": "71fd08451e74e3efe6112d0d7afda873bef83fc5ec48af67ef089e4c800e6bb7",
       "definition_count": 9,
       "output": "in_game/common/generic_actions/hussite_wars_actions.txt",
-      "output_sha256": "f6800b46a60db9cb9ad24ffc6549a52abc12f715d3a1bf17cd0a21b694edf92f"
+      "output_sha256": "5034e3dca015e4c5b07ef7eabc9906a450630063178d299e560483cd993f4358"
     },
     {
       "surface": "generic_actions",
@@ -2323,7 +2641,7 @@
       "source_sha256": "c23b8516ebd061e8ca611e3f2703805129d8d8e95e64a17de78b92732cf4e1a6",
       "definition_count": 1,
       "output": "in_game/common/generic_actions/ilkhanate_actions.txt",
-      "output_sha256": "3e8a08e41441642f75beda2680b8b82e2381cb5591b8c32fd297b9a67f2eae3f"
+      "output_sha256": "a76f92f31f30e4ddaaeafb22bb6d30f36c6085fea2ba89f4ba0a917a674e3146"
     },
     {
       "surface": "generic_actions",
@@ -2332,7 +2650,7 @@
       "source_sha256": "34fa1eb8335d400ed5a87a5dc801fd1b0a3405e182eee61a1cb43e1387bb1230",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/improve_our_cultural_view.txt",
-      "output_sha256": "24d8c990a0965fe97e9860bd602e037e1808aa0b61b81161dbd622ec02594bfb"
+      "output_sha256": "e76954bbca9eb4a45b1896b7ebbb5b1b84c2da6ccd384c732ec273e22371acc3"
     },
     {
       "surface": "generic_actions",
@@ -2341,7 +2659,7 @@
       "source_sha256": "200dcee79fdd08e743a7298e68dee837527d1bb45439a2a9730f786be0af4150",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/international_organizations.txt",
-      "output_sha256": "253ff3be2659d27b0eda67014ae4a1334750433b6d566cce5f4f84e0c5faad7c"
+      "output_sha256": "ed4c624006a572080b97a2cb637cf25824e03f9648e6d84e4d4338a2cd8dd68c"
     },
     {
       "surface": "generic_actions",
@@ -2350,7 +2668,7 @@
       "source_sha256": "8a5cd25869a1423febd33b574aeb36f8e0bb44f3d24f9c7a3c58698e1c492d76",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/invite_foreign_cleric.txt",
-      "output_sha256": "ef0fc7294f2ca71020952dedc4af453c52c3728f6733d2512a0768f00001e7e0"
+      "output_sha256": "c3a9be7a4b5e252f9e6bf17b43ea1a5551e3db74d7a02de3516645067a57368b"
     },
     {
       "surface": "generic_actions",
@@ -2359,7 +2677,7 @@
       "source_sha256": "6c00159d6d2ef5368323f311f47871fa845daac35c1ee60ba9c656598223df06",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/invoke_omen.txt",
-      "output_sha256": "4c5a83865db7657b8f46af1a86b5778f1a0e7f46afe00d12f39b232abc0e82d9"
+      "output_sha256": "8990ad0e1ad3e4dc21c60966c581f89d0d5649c1684e91c51f160cabc1ea2957"
     },
     {
       "surface": "generic_actions",
@@ -2368,7 +2686,7 @@
       "source_sha256": "899f7ff5ac11e50b0049063720fa7a23145de5d88e1001353ce5194a37220806",
       "definition_count": 3,
       "output": "in_game/common/generic_actions/io_parliament.txt",
-      "output_sha256": "6ba21e9d59d470ddaa57aba6105c404de2d21657696c7eb5e7f9ec9341601303"
+      "output_sha256": "05e727a27bc7710d19295fca7801234450366773efac8a39eebe1f098721dbb2"
     },
     {
       "surface": "generic_actions",
@@ -2377,7 +2695,7 @@
       "source_sha256": "17c028c9751d23bb3d6eec568b1bcb66588d0b3c601b31db015094891b7947f2",
       "definition_count": 2,
       "output": "in_game/common/generic_actions/io_parliament_bribes.txt",
-      "output_sha256": "8dd5d57b17291914420c9f8f48172fe4886967f111ead8f0db601c89b33cf5cc"
+      "output_sha256": "a8c11d396baa36613c31a2877cf1d3024a073fb0dddae5794b9bdd7507e6ef27"
     },
     {
       "surface": "generic_actions",
@@ -2386,7 +2704,7 @@
       "source_sha256": "d370b88ea1ac1d18adaffd1b3ea9b4cf43f3fb0783255d7b1d4fd9a8403b2f66",
       "definition_count": 10,
       "output": "in_game/common/generic_actions/italian_wars.txt",
-      "output_sha256": "87656d57cb4b72a309448c2354a498acc2eb3142301c8923c07d889ff57aefdf"
+      "output_sha256": "bbdc8e89547c05b1b876dbaf53a2a23e40f2423e688f9c169cfe3c722de90894"
     },
     {
       "surface": "generic_actions",
@@ -2395,7 +2713,7 @@
       "source_sha256": "f9e310c8ce3318a084d02d555a02d8e9fcb43c3a9c0316f086fce8eb2d403106",
       "definition_count": 3,
       "output": "in_game/common/generic_actions/japanese_shogunate.txt",
-      "output_sha256": "05ca084756745a372a54f27350ca45d8b248dbce5926fbd54b22954e2f7c96a4"
+      "output_sha256": "76e8886b3e14453f144eb57777e5665c72ca9e854201d3493234e24f4dc50a4a"
     },
     {
       "surface": "generic_actions",
@@ -2404,7 +2722,7 @@
       "source_sha256": "c4fc94f5d37c1caac95f92cc2efdc002522b5672a144ae892625b1e2f4a3b8aa",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/join_intrenational_organization.txt",
-      "output_sha256": "58382d04a5f5910a8df74a261a8cb6913e86ea800422b17d0c86729d3cab8e04"
+      "output_sha256": "8febbddaba84f647ee7f53d5a6802f083ad2e059fd21fe0b3fddb88fbd6b2fe1"
     },
     {
       "surface": "generic_actions",
@@ -2413,7 +2731,7 @@
       "source_sha256": "4fdd00b3a771bf81defb4b1396cb67ab568d7c165a2b05ae8fd91a5af3b5d71f",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/leave_international_organization.txt",
-      "output_sha256": "b9ef0e2221e1e880fbf2f6f48f5796284a7a238010721c52749939790edad5e8"
+      "output_sha256": "0181e6787142631071de5b91edc7c78ae5386db89ff524ca8895691c7b0319c6"
     },
     {
       "surface": "generic_actions",
@@ -2422,7 +2740,7 @@
       "source_sha256": "c87d607fead2af54d2963ffc52862d9ee334fedb5e33e6b3c2ed190053d77bce",
       "definition_count": 3,
       "output": "in_game/common/generic_actions/little_ice_age_actions.txt",
-      "output_sha256": "31cfb15ddf0c089a1b4ac4adb3e15559f94114062ac394ab30b97711edc9bc37"
+      "output_sha256": "8e326d55bb453b8c95edf401fa725ea555c3d26ce19564d46abadb91e27fc58d"
     },
     {
       "surface": "generic_actions",
@@ -2431,7 +2749,7 @@
       "source_sha256": "8be19d6017570bfc1edd1ee55250acb4faa55092587201de64e37fb26a170558",
       "definition_count": 3,
       "output": "in_game/common/generic_actions/lordship_of_ireland.txt",
-      "output_sha256": "7ed61f10e49a7fa4b76527642b19f6308595856ede72a343ac493c44166f4468"
+      "output_sha256": "5ff5498534cbb106c24b0a8d482a9d7faaa760b9e2ee87e0c58836ebda87ef9a"
     },
     {
       "surface": "generic_actions",
@@ -2440,7 +2758,7 @@
       "source_sha256": "021437b85c682dc47e04d4f4981b9329564372ba50fecfd56efd9291096c6b67",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/make_unit_available_for_hire.txt",
-      "output_sha256": "df48956d87337498fcbdea8b8950a93f5dd547f337724dc04f31860349c32894"
+      "output_sha256": "fcd66775788998e9a9cc1eb71b22fc03cd9c20f57ed70b7f95be75ea175ed0d9"
     },
     {
       "surface": "generic_actions",
@@ -2449,7 +2767,7 @@
       "source_sha256": "b52eeb5f089eda58f18287f16809c24cd2d20e3a8c8ddee1ec9fd96fe42e2b5f",
       "definition_count": 1,
       "output": "in_game/common/generic_actions/mamluk_actions.txt",
-      "output_sha256": "f4b773f84f8cc71244fb176cb7ec0d56b95d1efcdc4c77dae2a89cd86ea4220d"
+      "output_sha256": "039955a553c4d807879aacc905c8f5be42c2e90366aaaef975e056a20276d348"
     },
     {
       "surface": "generic_actions",
@@ -2458,7 +2776,7 @@
       "source_sha256": "ea2c50a7a6e38b3acdcc4acd003f16d371a3440d0e0c4648a725601818ffd64e",
       "definition_count": 6,
       "output": "in_game/common/generic_actions/mayan.txt",
-      "output_sha256": "5588b3d038cb2e8587e79d98fbe459d78e7b08f89672800d309198c3441e7851"
+      "output_sha256": "7aed0c74d5587400fd39bc5aa5b9ac781ea9b1f1de550015ebfe3f9d04ac2480"
     },
     {
       "surface": "generic_actions",
@@ -2467,7 +2785,7 @@
       "source_sha256": "ceb991ab3c5c69b9f01df1ce1e8f21a11dcea58c6e48ff85eb42e4c1096f5e4f",
       "definition_count": 5,
       "output": "in_game/common/generic_actions/middle_kingdom.txt",
-      "output_sha256": "1cdb8ad72163353c2689e2079ffbafa211bb3d18bd8506462e0e976d90af740c"
+      "output_sha256": "11b481a33e60156e436c4c0a0540c0d3f705893e5e9d804694f996dc539920e3"
     },
     {
       "surface": "generic_actions",
@@ -2476,7 +2794,7 @@
       "source_sha256": "2ad7277ce896f70ac02b3f2f1aefb8f5ae9b4547b827ca9c558c14ff46f8e52a",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/military_stance.txt",
-      "output_sha256": "4e643ecc3ba6af73d83d32d4c265847fc27149a0186063ffafeaca5b0a23b6f4"
+      "output_sha256": "cd90780dad0df270d9f55d29e3d051cda9c8218583606b80fc55fbef594c01d0"
     },
     {
       "surface": "generic_actions",
@@ -2485,7 +2803,7 @@
       "source_sha256": "396a3a29b1925c7dc3b458922118417efc468970f8796fab005f459a259755a9",
       "definition_count": 1,
       "output": "in_game/common/generic_actions/muslim.txt",
-      "output_sha256": "16197c61f2b857fb96a8fa957f865e450c6efbc7502956faa361d108d5db0ee6"
+      "output_sha256": "aec8abe3adfe3b98423c4ea2e53792ca8efa28145406c1168040f3734afcf8c8"
     },
     {
       "surface": "generic_actions",
@@ -2494,7 +2812,7 @@
       "source_sha256": "7bdbdd33aca476d612baeb0c879da970e34d7dda6d976eba0527ede124351e68",
       "definition_count": 5,
       "output": "in_game/common/generic_actions/nahuatl.txt",
-      "output_sha256": "89c41ccf931d64195ee9d78269386a83ee68ae537d89859dcaa256849d305622"
+      "output_sha256": "8d402f59a4c1e5c7e6acdf2019960af07bacff4e6850d9ff772a6279555cc71f"
     },
     {
       "surface": "generic_actions",
@@ -2503,7 +2821,7 @@
       "source_sha256": "4f543b252504ba41ebe42691c9e4746aeafbea071d9b458151b2386c9118698b",
       "definition_count": 2,
       "output": "in_game/common/generic_actions/nanbokuchou.txt",
-      "output_sha256": "3288677a2ae44081d78ea82b6cf871caab07ca2a06837b6592e5d4c212930a73"
+      "output_sha256": "4a110a1d4a5e8b6fabd4ab04d424564373f3556274501538144d6273f627b2f4"
     },
     {
       "surface": "generic_actions",
@@ -2512,7 +2830,7 @@
       "source_sha256": "bbe9bb70a84ad2313987c71497c2f1a07b54fd523a6bddfa65d59b6637b08792",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/negotiate_rebels.txt",
-      "output_sha256": "4e609213e8d5c5938272d2adc977a82fcd044e0715ce3a40996d3676c518639f"
+      "output_sha256": "5ae440abaf186e8baf50b26bb538393d8ac8817b8e437433416174ab65c0aa54"
     },
     {
       "surface": "generic_actions",
@@ -2521,7 +2839,7 @@
       "source_sha256": "34381ba083a14e1a651ef16d43f8f9bd5cedd635aa48f4f8a4430c48baf89ce5",
       "definition_count": 3,
       "output": "in_game/common/generic_actions/orthodox.txt",
-      "output_sha256": "49d462001fa71d5aea7f97ffa6615ef8ab8f28f17fd11550c7f31c70d410b958"
+      "output_sha256": "d6223d92747e6040631e2e052dcbadd8dda7f3245f7eca0f48c6d022ba126516"
     },
     {
       "surface": "generic_actions",
@@ -2530,7 +2848,7 @@
       "source_sha256": "ec92d6148f93536ac678269fcbcc6bc6c38ebc3e500973dc5cceaf2aab9df308",
       "definition_count": 1,
       "output": "in_game/common/generic_actions/overrule_imperial_diet.txt",
-      "output_sha256": "e9d81037fb2d97c6cf5cab6783d52a20d41e3ed2fc7d5b4975bac43b5b20c594"
+      "output_sha256": "7f8266bbadda8be87addfab48899aac57a3bc488da81c24247e7aade4be93f05"
     },
     {
       "surface": "generic_actions",
@@ -2539,7 +2857,7 @@
       "source_sha256": "37eaa3e98d30eb73f4acfd85608d1591bac0b3970d4a542db905d01c0d65afc8",
       "definition_count": 4,
       "output": "in_game/common/generic_actions/parliament.txt",
-      "output_sha256": "1fd123fc7b8a8531bd43946bd56620086c002a953761ff3ab4837f2fe31105d9"
+      "output_sha256": "78b8faf7d4701f923231d4b017f523aada6012a7da6e04c773c0e7d1e1a6bf9c"
     },
     {
       "surface": "generic_actions",
@@ -2548,7 +2866,7 @@
       "source_sha256": "0d72e2f4f4d51bb2ad3447fdcb280ee2cd724b39d3aadaa1103de70cdeb74390",
       "definition_count": 3,
       "output": "in_game/common/generic_actions/peasants_war_actions.txt",
-      "output_sha256": "7fd886853f175f940c96c382cf35facaf521d6c8cb493551eaa6ac5f49eced94"
+      "output_sha256": "739eb40c4168b1684aee4934353dedea086e3894a9b74680c5f0a2b0065c1a2c"
     },
     {
       "surface": "generic_actions",
@@ -2557,7 +2875,7 @@
       "source_sha256": "c0c4fbd5559324803ee1a64aa64afd5c49af7df1641c2c668b6804fd6373f5b8",
       "definition_count": 3,
       "output": "in_game/common/generic_actions/piety.txt",
-      "output_sha256": "0a39e7608b8a975ccbdebfacf00dac0f6b7f26a3dcc11dd17cbf6c38236fae9b"
+      "output_sha256": "3c8326870adbdb873c69ca665f52b6819cbce53d7acc0a75df8dbe43c22fa078"
     },
     {
       "surface": "generic_actions",
@@ -2566,7 +2884,7 @@
       "source_sha256": "8f5935afef9b543d2fd9f70435c90f8ef040a68dabd1827cd9145379ab92c48b",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/pilgrimage.txt",
-      "output_sha256": "b052ccef80e1204ae988475810429ab530b504aa96b71dcc7b6baa48c4bfda9f"
+      "output_sha256": "63afb4f72e5f36272556b6b77f0d4874f8b4094477a337793bf2160e933b7321"
     },
     {
       "surface": "generic_actions",
@@ -2575,16 +2893,16 @@
       "source_sha256": "fd6af6d11e430d143aefb07cd24618683a44125ced7b7d4b9e2052f7966b437c",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/pop_based_countries.txt",
-      "output_sha256": "db7f68af42fbe7e14501e3ccd0b24b0012370aee5a583c7e0682644796abf222"
+      "output_sha256": "3b08f0889a61aafc27aecd2ec2d55983242f2a976ad41462e5714d3d3e02cb19"
     },
     {
       "surface": "generic_actions",
       "relative": "privateers.txt",
       "source": "<GAME_ROOT>/in_game/common/generic_actions/privateers.txt",
       "source_sha256": "53f0a0b402ea486dfa1c4a647e59c98ccfdbf0bfbeafa6b7d1468f231515e553",
-      "definition_count": 2,
+      "definition_count": 1,
       "output": "in_game/common/generic_actions/privateers.txt",
-      "output_sha256": "7919dd45fb07d60f40db695c5030b50cc1481dfabe7d97d4e9b48dc8839dd9cd"
+      "output_sha256": "fc34c5d031f93c4463e2befbe9cb810c3c1865fc2f9b5e1bee3cc05a998773d5"
     },
     {
       "surface": "generic_actions",
@@ -2593,7 +2911,7 @@
       "source_sha256": "b7a90ff57a83fd38143a573281f2c28aaaa628e7668777355166c1b0be4b58d6",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/province_capital.txt",
-      "output_sha256": "4314652d187c06faf908547ab8befb51b2f3da488567e8162b58788130751433"
+      "output_sha256": "3617abee585fcfc5a867258e1d8142da3c84326f2498ded50f9a31381819fe07"
     },
     {
       "surface": "generic_actions",
@@ -2602,7 +2920,7 @@
       "source_sha256": "2e93131aecdc3fb8bf88dc34be1eaf348ec8607b886bfef6ca8997b976c79e6e",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/provoke_rebels.txt",
-      "output_sha256": "aa697b321ea463ab5240e3a5192294e42c26bc1fb4c2ee91c2f85abdd927a042"
+      "output_sha256": "9ccf8b740a120233fed56560f1a52275759251bf2e415efee83141c3e0741fae"
     },
     {
       "surface": "generic_actions",
@@ -2611,7 +2929,7 @@
       "source_sha256": "4b1f67234988a50816b53922bdd272f0b7103671eb41ad6c703dff6160f2c53f",
       "definition_count": 1,
       "output": "in_game/common/generic_actions/purity.txt",
-      "output_sha256": "32c327ab2854f0a99f2ea5c2ea08fed627195aca5549cfe2fb1be7b8525347e2"
+      "output_sha256": "a492827c85d03744be74a4627602643f24bb090744aade890ab30500cec5125c"
     },
     {
       "surface": "generic_actions",
@@ -2620,7 +2938,7 @@
       "source_sha256": "b36562de13224009444393b214ce2cb6925b1217ff30b1ba2892e43a3139970b",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/recall_lent_unit.txt",
-      "output_sha256": "b9fe5da6f7fd5a3bb334fefe0a1cab46469bbcc6d727392847b13e8dce81b08c"
+      "output_sha256": "ade8c80b6986cf7a64091fa248a7cdaeeba58d28735e60efe67be6fd750332d3"
     },
     {
       "surface": "generic_actions",
@@ -2629,7 +2947,7 @@
       "source_sha256": "badd6f53fe1df4a5a12bcdf7a22bcf568b10a8817ebb2e6fc6ecd685af0d90db",
       "definition_count": 10,
       "output": "in_game/common/generic_actions/red_turban_rebellions.txt",
-      "output_sha256": "bd2d58753d0a99d27a924bc9ee76a334d0496682de7362b0e83d2d8a4e1794d3"
+      "output_sha256": "73b9b2cc65e9dda8b31275d35cfe3bfe52b25fb9381b9dc7eeba83f3577ef8dc"
     },
     {
       "surface": "generic_actions",
@@ -2638,7 +2956,7 @@
       "source_sha256": "1233b547ea70ee0db6d36f7b8529ec84ca6147fce21b27b485dd963a9344de42",
       "definition_count": 3,
       "output": "in_game/common/generic_actions/reformation.txt",
-      "output_sha256": "2559ecd1f5fbc29e4ab53d1a57abe4ec4012dbc3035ea46ea7efd95d7c7ef597"
+      "output_sha256": "fa136fc0aa5813d2f42462a6af8395ddd6b64f3d4895e1a4b853059da48a78a4"
     },
     {
       "surface": "generic_actions",
@@ -2647,7 +2965,7 @@
       "source_sha256": "198facf96b378402b997ab8fd640d8b31f687e715bde20c9b0773bb0f1f961a4",
       "definition_count": 20,
       "output": "in_game/common/generic_actions/religious_factions.txt",
-      "output_sha256": "85614bc816b0a5b8343deaba08cbc73179eaa290e84cc47f660069ca2504b488"
+      "output_sha256": "aad346d2636494751beae9b87a5c0fb2f14361a3973aae74fec7012081246b98"
     },
     {
       "surface": "generic_actions",
@@ -2656,7 +2974,7 @@
       "source_sha256": "7472fd53836fa227c3356b518765f2117298147be53a986b5a708a7568ebc242",
       "definition_count": 3,
       "output": "in_game/common/generic_actions/religious_turmoil_actions.txt",
-      "output_sha256": "8c1fc7b31a1bf6b4bffac366725fb51313c958760b2530aa9baf61d420c3d6a7"
+      "output_sha256": "f10ef32674f43203d3509661d35bc848904014bd5186a3424f3c37c8e9bdc4a3"
     },
     {
       "surface": "generic_actions",
@@ -2665,7 +2983,7 @@
       "source_sha256": "94b49301cc5ea6bb340d7e93a05d39785dc737118d42dcc0370f714e479f1878",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/revoke_town_rights.txt",
-      "output_sha256": "39a261b19c008095c167b4b3e561f0b03ae52658d5b518c20de87e2a0377c6ff"
+      "output_sha256": "2292cd53816d35b3f7db7b12880e541bb42223b8e5b95bbb666235aefb0430b1"
     },
     {
       "surface": "generic_actions",
@@ -2674,7 +2992,7 @@
       "source_sha256": "f3c5653784e9b4e7141bf1fadf49871c0d6bf246f7e5bbb5690c1e726195f5e2",
       "definition_count": 8,
       "output": "in_game/common/generic_actions/rise_of_the_ottomans.txt",
-      "output_sha256": "a827747a720d1d9901615ba3d73bf3cf4a8fbb1a4532a621151dd152c8da220d"
+      "output_sha256": "c37f2ea4017962e4a8aa071fdbe5713a25f76bd726c3e31d22b7480bc47cfb2e"
     },
     {
       "surface": "generic_actions",
@@ -2683,7 +3001,7 @@
       "source_sha256": "6d1ce2e6dd1e97fa1ce590bc9a455811c23f28d6fb062b91d5825355369c0ada",
       "definition_count": 2,
       "output": "in_game/common/generic_actions/rise_of_the_szlachta_actions.txt",
-      "output_sha256": "a11390aecdb5f7993f4f26af43e915e82d3463181286b6a858189a8aa3f9df2b"
+      "output_sha256": "21f05bf85be156d76f49b5bc61d051a31c54239e819b06d350a763fde2688d6e"
     },
     {
       "surface": "generic_actions",
@@ -2692,16 +3010,16 @@
       "source_sha256": "0c47b0cac08628dd81809478955d5f054453b0dde16cd22d4b1e0f4c51ad08b8",
       "definition_count": 5,
       "output": "in_game/common/generic_actions/rise_of_timur.txt",
-      "output_sha256": "33c21ec0173c8a0aefe8c9c811955e20ee2d1fbab306885937d9c4475327bbee"
+      "output_sha256": "25d32df619cb7ac40dd809a904a0f0947e8d1068365c260f40d0c472b2b76865"
     },
     {
       "surface": "generic_actions",
       "relative": "sects.txt",
       "source": "<GAME_ROOT>/in_game/common/generic_actions/sects.txt",
       "source_sha256": "909ad3bf49f19211a8ee09117f8a33b5f93443a4bc2bab80f37afa49dfed7aa4",
-      "definition_count": 9,
+      "definition_count": 8,
       "output": "in_game/common/generic_actions/sects.txt",
-      "output_sha256": "f8d04e283be55cfb29554341c696196597b4281d0ba03d5f65190bee48a16f81"
+      "output_sha256": "68d03a921d01a8de843a303f5b6b7cad97e32d2d55e3255723b8b02a47dd3efb"
     },
     {
       "surface": "generic_actions",
@@ -2710,16 +3028,16 @@
       "source_sha256": "b80322b5d7b90f9b106eb72f69999d209b09cba20f2e16eeca938a64694cdab9",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/sell_work_of_art_to_estates.txt",
-      "output_sha256": "1d25f824c662680ea55a9e758fafe09cc6328ef769a35c40e78578c8a5c9c458"
+      "output_sha256": "3302bb00f8cb32d2f969198cdb156fba68d5f103831c4440ae38b1c81406ef21"
     },
     {
       "surface": "generic_actions",
       "relative": "sengoku.txt",
       "source": "<GAME_ROOT>/in_game/common/generic_actions/sengoku.txt",
       "source_sha256": "4a72614332a2d2e14c7a3d5d68327468fcad651a1eeadf80bd820d471d58e52c",
-      "definition_count": 10,
+      "definition_count": 9,
       "output": "in_game/common/generic_actions/sengoku.txt",
-      "output_sha256": "dbd302f58e883e91a1d93b74325554105cea9376f47a302fce9a7083f5b7b24b"
+      "output_sha256": "74a58f072771b8508b9d0ab77e05034ca9f505938cbc13cc10993ae06a277963"
     },
     {
       "surface": "generic_actions",
@@ -2728,7 +3046,7 @@
       "source_sha256": "38a7515ffbc3d2a2644bdd543ea2e351877b1984195eb2029afe637b65931e34",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/settle_country.txt",
-      "output_sha256": "4e5de2ed46e8a5b839465380b5de3eec99b1d7161595e24a9b36152ade34c801"
+      "output_sha256": "660195559ef824d860de1f3bf98ef2e2185e78236c809fa708949e1040a3409c"
     },
     {
       "surface": "generic_actions",
@@ -2737,7 +3055,7 @@
       "source_sha256": "ef485a00e0f8fdb33747a64e2a35a370b659928606fc2a9f2f398f5c1b665de4",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/siege.txt",
-      "output_sha256": "b9e90f19f7437c8490835c90fdf1b3dacf6fd2d3eaf7ec2de01a5216edfed815"
+      "output_sha256": "76b7a074768da29edf4ea636c72aa06a9f06bd74a8ebc2a06a247467deeb611e"
     },
     {
       "surface": "generic_actions",
@@ -2746,7 +3064,7 @@
       "source_sha256": "e2d2147a41e334ca5afa85fa333fd5af8edd6e7cdfc99b27dca51c69eee4da5f",
       "definition_count": 5,
       "output": "in_game/common/generic_actions/succession_crisis_actions.txt",
-      "output_sha256": "c989f52b65621831d624ec40ca8733e7d1c1bda172949dde72a740fd1744af97"
+      "output_sha256": "684b50328ee76e0de7abcc2ff32d2b5550dcadb295e4645694748f8b29aed179"
     },
     {
       "surface": "generic_actions",
@@ -2755,7 +3073,7 @@
       "source_sha256": "c7c11ec6ecdeb3a8532a759c54bed73bc8408a8ac16c3e5bb7d470916aead730",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/take_bank_loan.txt",
-      "output_sha256": "82a5e109d35625471fccb271e438de0bc416c0da290fac6f0d44169315ef09f1"
+      "output_sha256": "4ff1be4f74eabb9bcba2af5dc86e9e8fbe5bbbdecafe6e1a6558f0e92196a491"
     },
     {
       "surface": "generic_actions",
@@ -2764,7 +3082,7 @@
       "source_sha256": "1ad7590b28329b1fee4fe73ca632073cf270a5225554192eba4a7e9ea66da7f3",
       "definition_count": 2,
       "output": "in_game/common/generic_actions/tatar_yoke.txt",
-      "output_sha256": "6f3c1bbfe2664a1625b91897ca87113e5f85173f063fc6f45f2cd6b14f2b1dbf"
+      "output_sha256": "afaf024098dee6e3e9e9c88b2d45ff8a84fbba753e6fe9e47045c60175a9ef6e"
     },
     {
       "surface": "generic_actions",
@@ -2773,7 +3091,7 @@
       "source_sha256": "77a3e2679fe040569541540c1f4d2aec294d075111aea022a3bdb5099660f085",
       "definition_count": 7,
       "output": "in_game/common/generic_actions/the_revolution.txt",
-      "output_sha256": "b019d5353a35cf56b73fb12c7d8da0a67b480eae61e57e239d14246069c29f66"
+      "output_sha256": "8ecc4614967a725703499be2fd84c3fee1e591ebbab786a90b798f55313e387b"
     },
     {
       "surface": "generic_actions",
@@ -2782,7 +3100,7 @@
       "source_sha256": "4f0639dcead822c9863ba6dae2a44a661f79a3bf187a99a3a30674f338fc6b61",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/train_admiral.txt",
-      "output_sha256": "0ef79eca846b2119a9c8e835e03b5c783c5f627a8c1ebe04ea39650ddf9b92d2"
+      "output_sha256": "ec511894f62f7e311d5fbfb5369733cd489bce6fe9aa439fa6d58dad2dde5582"
     },
     {
       "surface": "generic_actions",
@@ -2791,7 +3109,7 @@
       "source_sha256": "b4bdc6e517e161b0db91c8eb3f7e007c6d2b43ecdc11cd507094d39e5e25f877",
       "definition_count": 0,
       "output": "in_game/common/generic_actions/train_general.txt",
-      "output_sha256": "83deb64bb7c8815700908f402ec5f4f9e70e62d41ac5e3afcde540d072f83612"
+      "output_sha256": "82a99791b18ebd0fcb0e325af432a8c6ce999b058b0d7cf3da0a9b0ab7e5ad06"
     },
     {
       "surface": "generic_actions",
@@ -2800,7 +3118,7 @@
       "source_sha256": "a6769205063093cce61fd52fde9514d757d807b9399a445dde8b7012c6bcebbd",
       "definition_count": 12,
       "output": "in_game/common/generic_actions/treaty_of_tordesillas.txt",
-      "output_sha256": "007b3d465a9d00a77e301a4ab8ef8bdc9cc12310145d1905122203c2afcd5df7"
+      "output_sha256": "a44d2de02db2dd744e08f16c4fd05c1e715bfd110e6c3fb22b851a602b239a05"
     },
     {
       "surface": "generic_actions",
@@ -2809,7 +3127,7 @@
       "source_sha256": "36aa2297d188acca42be91b3604e1ee97d3311db49ca5eee6987f91dd370d04a",
       "definition_count": 3,
       "output": "in_game/common/generic_actions/twilight_of_the_tsardom_actions.txt",
-      "output_sha256": "b98c3398105b97268c3523f4c8cc77211236534ac318c9a58dfd30c07b27e9d9"
+      "output_sha256": "c1c94996e19f5c87574f93841af27b24638e4bfd89f29b4719f6a87b206e4a15"
     },
     {
       "surface": "generic_actions",
@@ -2818,7 +3136,7 @@
       "source_sha256": "21639932350a978176bc65ff4a1b18615fe07b342f3dd10fc057b520d269602d",
       "definition_count": 9,
       "output": "in_game/common/generic_actions/unlockable_io_actions.txt",
-      "output_sha256": "876e7f64556c3cf7c1ad097491830e5dbcb235f6d473acaf2a9c7f261df5feea"
+      "output_sha256": "5c0e2942922ae149fc813391846f5cabc9c9193414df82c570de266165b13185"
     },
     {
       "surface": "generic_actions",
@@ -2827,7 +3145,7 @@
       "source_sha256": "efd9188554a4695d89dcb42ad0db694cc72e55876d7a260e1fce03da3f3e3925",
       "definition_count": 5,
       "output": "in_game/common/generic_actions/war_of_religions.txt",
-      "output_sha256": "af18eb1230748a8081f6cfe857faab3d58c2573bf363775db895c2c1c6acaec1"
+      "output_sha256": "f3b85aa0d8812e3bdf3e95a86e4a6ee6ecce6df6f273614d5eb5543c6de9b7f7"
     },
     {
       "surface": "generic_actions",
@@ -2836,7 +3154,7 @@
       "source_sha256": "62cc71565a43910ec2454da7317d9ecfdd70a5962dfca1a47df0ee13b7d414bd",
       "definition_count": 1,
       "output": "in_game/common/generic_actions/war_of_the_roses_actions.txt",
-      "output_sha256": "f525a0133bc8cbfed4e599d3ad93d00ce0778f2e140b616affcd7a831c928921"
+      "output_sha256": "cef43f0907ee5beffd0e5fccb782a3c89dc5d6b64e96d1a6ddad6ff80c94d9a2"
     },
     {
       "surface": "generic_actions",
@@ -2845,7 +3163,7 @@
       "source_sha256": "c0382a47b332962f1e7db27ba88aca0da79371aff470bd843006651488b0b58d",
       "definition_count": 3,
       "output": "in_game/common/generic_actions/western_schism.txt",
-      "output_sha256": "01149040102237717f35a26126ba6c0d326c5eb763d496ac0a7249e13bde6670"
+      "output_sha256": "298b14c44217e8c53288b933784f74f3f3363b71f1e659f05956e798ed7be80b"
     },
     {
       "surface": "generic_actions",
@@ -2854,7 +3172,7 @@
       "source_sha256": "85dd1d56f250a54e5a7cfc9f101778d70cd4f38d0721c11bfe3d6c373349971d",
       "definition_count": 2,
       "output": "in_game/common/generic_actions/yanantin.txt",
-      "output_sha256": "e3c09ac38d509c754a3d287580784a35b9fda03c09c77ac5a407174b2a2198c2"
+      "output_sha256": "56d74269b6a882a53340ab401d23a1411149236a1c8ace5847ec66e894935ba6"
     },
     {
       "surface": "casus_belli",
@@ -2872,7 +3190,7 @@
       "source_sha256": "a4fb1aa620f602d044df87583e3d6ce61a2af32657e277d4ffc5f7e61700f00e",
       "definition_count": 0,
       "output": "in_game/common/casus_belli/anti_piracy.txt",
-      "output_sha256": "029fae63cdba69c4428798894accbab7f70911c7defd777f99f27e0fb5f583f3"
+      "output_sha256": "c903e6d79c6061a9f9af012adc50a7f9a9aba05e5e9426c332c42afd450556d7"
     },
     {
       "surface": "casus_belli",
@@ -2881,7 +3199,7 @@
       "source_sha256": "d5c7e870acca38544665c47607dd80c2db83718695aa383a7603eb0508705580",
       "definition_count": 0,
       "output": "in_game/common/casus_belli/attack_threat.txt",
-      "output_sha256": "8ca16d0d94c4fee9d06d45e2c3e20a0e331fcf15180b4a7b3161761ee34bf1aa"
+      "output_sha256": "c75a773445e86da30bc0d0067e384ebe1e956769ca66f06754d6b6e6f980a0ce"
     },
     {
       "surface": "casus_belli",
@@ -2926,7 +3244,7 @@
       "source_sha256": "775d130a2a2af5693c23c57f64444f51ab9ce17e42ffd9770c569901559ff945",
       "definition_count": 0,
       "output": "in_game/common/casus_belli/coalition.txt",
-      "output_sha256": "4dc5dcfd458a45a19e52de618a826af07fc9998f444cb813d68139380de00dac"
+      "output_sha256": "aef54a7385281ac2b335ece10abe9b3ca6b5ac54596a3201005f42651cf78817"
     },
     {
       "surface": "casus_belli",
@@ -2962,7 +3280,7 @@
       "source_sha256": "2a87d7c691caf596400af0da82288ceb49cf5d51d856b39b298c3ea3f8e117eb",
       "definition_count": 0,
       "output": "in_game/common/casus_belli/conquest.txt",
-      "output_sha256": "e94aa39c544f81f64419473cf079097875c5db2f07e08442a434606ecf96a84d"
+      "output_sha256": "4edb238a58220fc9a0c67be10aaa21be13ba6b828de4f7e9fc31d9a98cdbcb83"
     },
     {
       "surface": "casus_belli",
@@ -3007,7 +3325,7 @@
       "source_sha256": "e50048ffaf31f076468b8974cb942445c99f0b3c4a4f6cf69110de32865dca68",
       "definition_count": 0,
       "output": "in_game/common/casus_belli/disloyal_subject.txt",
-      "output_sha256": "88f9039c98fbb65b496ef21ae9b69a2afab65ce06f06bd0296db4fa8194dc542"
+      "output_sha256": "5bc9a88c69ab5ab10a5d15da491a85aa335e3787bb1c80166895993a24cc1b8b"
     },
     {
       "surface": "casus_belli",
@@ -3025,7 +3343,7 @@
       "source_sha256": "fb273d582cd08c7d216ef9b4c886d6883facf383c74fb8a537c2b7b67b3bff27",
       "definition_count": 1,
       "output": "in_game/common/casus_belli/dissolve_tatar_yoke.txt",
-      "output_sha256": "4f933ac254c23011b031d3db65ece6c34ef5efe3d3737eb3f88f49a6f0e797f5"
+      "output_sha256": "e84d46801d7e17e6fbd77be671ee9076c580f7df8c874893978009cd4619a468"
     },
     {
       "surface": "casus_belli",
@@ -3061,7 +3379,7 @@
       "source_sha256": "accb96b815d9fdef74204cec1e9c83b16db61668a2371edbfc8c561fe6aa1883",
       "definition_count": 0,
       "output": "in_game/common/casus_belli/fabricated_conquest.txt",
-      "output_sha256": "3d2e7c4d8831408e6057187cffe64d6a52b70fe3b7277b1d51126d7dfeb2fe03"
+      "output_sha256": "a1417738d9611c659c394f1a970681656e095b3b3eee0b794b3f069955732cde"
     },
     {
       "surface": "casus_belli",
@@ -3079,7 +3397,7 @@
       "source_sha256": "be0308a3601ef6655f53a43cfe62e86ff39e8fb6f8e290f08ec454694cda4bcb",
       "definition_count": 0,
       "output": "in_game/common/casus_belli/force_migration.txt",
-      "output_sha256": "eee75aecba9d924c8829dc6cbc4e4b6db475c7dd6f2b692839bc07d9767f5636"
+      "output_sha256": "c359a42f5928698bbfd027c7bccde506ee9ece227e7ff93805f209f97058a58e"
     },
     {
       "surface": "casus_belli",
@@ -3088,7 +3406,7 @@
       "source_sha256": "9e7169dbfa6c0118c739dee3ecad24e56673ae767c5eedac3407fd2ce282774b",
       "definition_count": 1,
       "output": "in_game/common/casus_belli/gag_force_country_into_faction.txt",
-      "output_sha256": "2e27ee74d58c9e5d4e333a04c4bd1d0aab43e40fb817ddc835c053e2ab02c17a"
+      "output_sha256": "aca2d1995fea5c29050abad4abe3b006604940bf1ba486b4fe8ed430cb3c3d1f"
     },
     {
       "surface": "casus_belli",
@@ -3223,7 +3541,7 @@
       "source_sha256": "ee70620ae357b01559b9eb81afdc70dbe98eab10eaca3d66273d8702e54a414f",
       "definition_count": 0,
       "output": "in_game/common/casus_belli/independence.txt",
-      "output_sha256": "8ab622aaf3d90befbe7a4eef2dbb90be194463b76180cdeda55efa5d80f9651e"
+      "output_sha256": "4d36ade872b41e3a18dc6f1ad2da56ee98dcd9d4ddbf2f64797cfe5cfb2a6589"
     },
     {
       "surface": "casus_belli",
@@ -3277,7 +3595,7 @@
       "source_sha256": "b751c73fb0ada9e533a4ff5bafc450e41ce6f9438420148af631c4c7e6429ac5",
       "definition_count": 0,
       "output": "in_game/common/casus_belli/make_tributary_cb.txt",
-      "output_sha256": "3195579b2dcb0c2b3153545a6fd136504520bcaba0e3caddb449a48b7cb479e2"
+      "output_sha256": "0d64add79d23b268dfc120a2707e5823636742d48914e647e00d9db7450490cc"
     },
     {
       "surface": "casus_belli",
@@ -3412,7 +3730,7 @@
       "source_sha256": "5609aa4891823cdb246e5f726a596bbd9d621eaa1a37ffa55b22d140dabba9d9",
       "definition_count": 0,
       "output": "in_game/common/casus_belli/trade_conflict.txt",
-      "output_sha256": "0f6d47f8d1ed66f674e4990847363c768f0f5b811ce92de27d5ffc4dbb990652"
+      "output_sha256": "b417bbf0429e745a4885e259116e06f3c561eb1cb741014211d6bfaa4116559c"
     },
     {
       "surface": "casus_belli",
@@ -3421,7 +3739,7 @@
       "source_sha256": "34f0195502ab51b6a94014466d1e880d099f4eff0d44f741d9dfc70749c50345",
       "definition_count": 0,
       "output": "in_game/common/casus_belli/tribal_feud.txt",
-      "output_sha256": "f9417b6dc4b772ab2e2d450779a1083c5fdfc78ba056ec3f3b6ce980bfaee4a5"
+      "output_sha256": "e33929f54eaf8db2c46697b2db143fe75fa6cd21ed259eb9dd3836c722246fed"
     },
     {
       "surface": "casus_belli",
@@ -3520,7 +3838,7 @@
       "source_sha256": "90d44c262b63d9d63ee62d6e2a4cc90c068411b2a88a1b3823e7870dc53f4970",
       "definition_count": 1,
       "output": "in_game/common/peace_treaties/claim_french_throne.txt",
-      "output_sha256": "6807561a8ff897ec5e75916e6bd464c72a5744a8feb619aa9186bef432221957"
+      "output_sha256": "eb7f0833ba0315d7e6c3f50438aea6663c1ff78de66ac07664864915e92f9ef3"
     },
     {
       "surface": "peace_treaties",
@@ -3592,7 +3910,7 @@
       "source_sha256": "7d5355482544861cb29b3e02330987a3cb6143afa7b97bb5405922076179d51f",
       "definition_count": 1,
       "output": "in_game/common/peace_treaties/dissolve_hanseatic_league.txt",
-      "output_sha256": "70dadb474e6b6b5e2469edcc1b2d95d25c034408acebda2813a007e7ad7a339a"
+      "output_sha256": "62df75fd320bab38e3d26e39602953bc80c2ad65edf20fd658945d1ff71e0c46"
     },
     {
       "surface": "peace_treaties",
@@ -3601,7 +3919,7 @@
       "source_sha256": "f7e99fa2a10432b37ee8c4b15abf2d7c04e1c313eebdbb489dee5be5789aa0c6",
       "definition_count": 1,
       "output": "in_game/common/peace_treaties/dissolve_league.txt",
-      "output_sha256": "0a5476ae9ebc6e926271b9e966a27d1e9ffdd825c72bd97f29db115b4dd56d8e"
+      "output_sha256": "7abe459e43c25fac9bfff1e039b0d144514e952d6758d36e3f9a6603042e8e7b"
     },
     {
       "surface": "peace_treaties",
@@ -3637,7 +3955,7 @@
       "source_sha256": "291d389f9254dce2f934098c29035f8444f492ea8b5e0de1019106ed2a3ccd39",
       "definition_count": 1,
       "output": "in_game/common/peace_treaties/force_convert.txt",
-      "output_sha256": "5dc12b7647f0eb81080ca3a35fedc491302b4843e22b4a217869dcb1491fed72"
+      "output_sha256": "4e5ca2be599a90edafba61d03aadda4e9ed6994e359ff640d3ee5fda2be8d356"
     },
     {
       "surface": "peace_treaties",
@@ -3682,7 +4000,7 @@
       "source_sha256": "beca7c215bd669b0597972e84b28083995c245be79ee57951ec331b011e92665",
       "definition_count": 1,
       "output": "in_game/common/peace_treaties/guelphs_and_ghibellines.txt",
-      "output_sha256": "7f5ed7d89173d870da946159fffaeeb1bb608e21e896370b8ca0b952450efdf7"
+      "output_sha256": "33418df555782682a62cf2110f2e3cedc7a365d187878ff9d97e24b20923a15f"
     },
     {
       "surface": "peace_treaties",
@@ -3745,7 +4063,7 @@
       "source_sha256": "20674d39a11d8699c25e24feeb101e4646d5af2ee95b72c442ff97b4d36a828f",
       "definition_count": 1,
       "output": "in_game/common/peace_treaties/league_of_public_weal_appanage.txt",
-      "output_sha256": "c5b336866eb40c2bd3c592971c4d630b4fbdd24e4986880f6ab5a54086558bb5"
+      "output_sha256": "9e3f292ce1b51f4ad9dc6be19995de060b20583b5b1c52824da3ac1736df751d"
     },
     {
       "surface": "peace_treaties",
@@ -3754,7 +4072,7 @@
       "source_sha256": "34182310b7e5bdd9c6c4daff34c1060ca968884d761fe2cc4a16c90603d2ae99",
       "definition_count": 1,
       "output": "in_game/common/peace_treaties/league_of_public_weal_royalist.txt",
-      "output_sha256": "604044bfb217ab8629bd8a8dd04039329ce2e643bc5c3c13fa0992d210a64be6"
+      "output_sha256": "af62ef143e654095b0613712ccfe12e68d81d5a241ba8a5913375442722737aa"
     },
     {
       "surface": "peace_treaties",
@@ -3844,7 +4162,7 @@
       "source_sha256": "aee9cf1bb78d73a4d27e8a85a20429d41e9c4aa023ad5306fc27562fd67b585c",
       "definition_count": 4,
       "output": "in_game/common/peace_treaties/scaligeri_peace_treaties.txt",
-      "output_sha256": "9b60585a5cacb1db94d1d8bdcb05f592a75863e1f8a1333b1a472d5981938a77"
+      "output_sha256": "130e5942f310ebd17feb7ed87dcf1ab847e9ad134ca6fe9b4d44b206b5b353bc"
     },
     {
       "surface": "peace_treaties",
@@ -3925,7 +4243,7 @@
       "source_sha256": "d8bb8dd638bd300f071e0298329d5dda5468a1c04e1efbbd9ba69583eb30de6a",
       "definition_count": 1,
       "output": "in_game/common/subject_types/D008_pronoia.txt",
-      "output_sha256": "3350570e10dcc09735eb336c29b23152236d744734625ba29a98658a0aa88e2f"
+      "output_sha256": "92d5fb0df6005a2d0751c1bf9a006a71d5faa2a3c18b4c85d42db07a02ef52cd"
     },
     {
       "surface": "subject_types",
@@ -3934,7 +4252,7 @@
       "source_sha256": "c41c925e4b6f2e953a9417f1ff83cfdc5e64b385691dcc81c9fb7288e4e5b86d",
       "definition_count": 1,
       "output": "in_game/common/subject_types/appanage.txt",
-      "output_sha256": "35d84da9284a672a2791d875a1d3eeaedfb656126d3a3cec44b2b2d10dca7643"
+      "output_sha256": "539f002d43c8bdce7bebce1efee1976c3ffce57ca3aaf420f245df4052bd0824"
     },
     {
       "surface": "subject_types",
@@ -4015,7 +4333,7 @@
       "source_sha256": "78c800e7b8a4929c009913d6fabb06ae1476869c2de00947b1bf27427e774405",
       "definition_count": 0,
       "output": "in_game/common/subject_types/secessionists.txt",
-      "output_sha256": "8595ab3a1686dde381ab8c0fb51f8a923bd89f8d2fcf05e0c09a98e5f01305d9"
+      "output_sha256": "f49357a2968b84c84367eaf60cc84a7741916a3e9f96abf3133a6242d3242145"
     },
     {
       "surface": "subject_types",
@@ -4078,7 +4396,7 @@
       "source_sha256": "79a6c2f1b71b5ad4eecc9064f69d3cbcb7091f26ff35dea33db1701ba7d4c932",
       "definition_count": 2,
       "output": "in_game/common/scripted_diplomatic_objectives/hre_emperorship.txt",
-      "output_sha256": "596879f781a9765b721721f97d251832beabc101f5e76c75ad6e1cda9067975e"
+      "output_sha256": "33f885f195784864229d5d24ec3680b7d2caebd59f41ea38c90a60b7893185e5"
     },
     {
       "surface": "scripted_diplomatic_objectives",
@@ -4087,7 +4405,7 @@
       "source_sha256": "8f5ee3bd98c037c92ffd87faa7e503d12505a84c957d62c4229e1b33c44fd4de",
       "definition_count": 3,
       "output": "in_game/common/scripted_diplomatic_objectives/japanese_clan_spying.txt",
-      "output_sha256": "22d1a8160ec19bf51dc8331b97b6e714b72b3078dcb5b196ac6ea279f92e4091"
+      "output_sha256": "8d4e90551fac57c98e9425e6d3be819c74571fce13e09b5c54803f19a46a6401"
     },
     {
       "surface": "disasters",
@@ -4096,7 +4414,7 @@
       "source_sha256": "e066a532160b27584d19e42a7fd3963576d2635b3c7b52cad26b292acb19817f",
       "definition_count": 1,
       "output": "in_game/common/disasters/D008_fate_of_the_phoenix.txt",
-      "output_sha256": "3d506ae93f085f9c1d173567300743eae51f4eda7e3ef749db88184bedc5b814"
+      "output_sha256": "a10d00bfd3d44ef4aefe14289ef2a804404379c1ae9c9515df224584764410a6"
     },
     {
       "surface": "disasters",
@@ -4123,7 +4441,7 @@
       "source_sha256": "bded944ac242d43fb4f5af248299b8db97b04486190cf0c0b58a4f2385abae64",
       "definition_count": 1,
       "output": "in_game/common/disasters/byzantine_succession_crisis.txt",
-      "output_sha256": "c6fea79dc4629b2c509aab22ce04498d02d071cb9360794b82e4e1b499e7d503"
+      "output_sha256": "2990408606574637874eb427571cad7b824873df5a7a7e0d7ff73b65d27d620c"
     },
     {
       "surface": "disasters",
@@ -4132,7 +4450,7 @@
       "source_sha256": "3b209554557e4f1bfb1b31e37a337a9523612065eb4eb0548beab368d5a5cceb",
       "definition_count": 1,
       "output": "in_game/common/disasters/castilian_civil_war.txt",
-      "output_sha256": "8697121cad4e2642f42be4af94d1b9060f2d8ade02c80ab506a46318d22e1ce3"
+      "output_sha256": "9446994a63fec58aa52ca3ac626f12ce9828b194bddd57cc6ba328826ac6a346"
     },
     {
       "surface": "disasters",
@@ -4168,7 +4486,7 @@
       "source_sha256": "2d386931434de0c2211b6b9763099e15234285b2f95c7bb0d42af3154ae77d00",
       "definition_count": 1,
       "output": "in_game/common/disasters/crisis_of_the_chinese_dynasty.txt",
-      "output_sha256": "356cb84498534481bf1aaec9fa99f63253eb7307abf00190863a54ffb5f32769"
+      "output_sha256": "99d3a3bbe807d7df6c5dab629de4c1bcdc812bc6d3734b1dc3ba5f67bddca58f"
     },
     {
       "surface": "disasters",
@@ -4195,7 +4513,7 @@
       "source_sha256": "dfb7bd18118206cd3153f756492178329961cf4f7ac969fc9b10b72037329d22",
       "definition_count": 1,
       "output": "in_game/common/disasters/death_of_hayan_wuruk.txt",
-      "output_sha256": "06a2f2e157b085fb24b6a9dd21cb33997ca0131bc52bf1f6342a0c08e8734ea6"
+      "output_sha256": "7a6b5529aed7c958ff81e32eeacea360c2fdc6eb461b8b5ecb7e3a68f5652133"
     },
     {
       "surface": "disasters",
@@ -4204,7 +4522,7 @@
       "source_sha256": "8c089d65cf068b2a22adfc293069cc93fe590fb0608ad05503ab68a80918a5b8",
       "definition_count": 1,
       "output": "in_game/common/disasters/decline_of_empire.txt",
-      "output_sha256": "7b849e930ac57c84ae887f12225a760c1aaa5774c5fb1d2571f2e8d9e98e6280"
+      "output_sha256": "5c33602c5068733fc1052c3d20c92da90264dfcdec3daefe186aa9ff1e0a5762"
     },
     {
       "surface": "disasters",
@@ -4213,7 +4531,7 @@
       "source_sha256": "cf72ce5d617594b4c00b52042946e93d0261a481ffd0f0a1275ddc5767f116a9",
       "definition_count": 1,
       "output": "in_game/common/disasters/decline_of_majapahit.txt",
-      "output_sha256": "c07e0048279e6b98215307731a05169eb1f10017d4d5f74f688a84b5ef7dc22c"
+      "output_sha256": "3c34d13d67c8ffcd785fc6884077a6cb51fa9bea19802be14ba9886248afa6b3"
     },
     {
       "surface": "disasters",
@@ -4222,7 +4540,7 @@
       "source_sha256": "278612c42bc34c23fa40711a62915ffbed4c865e74273fd98fcfe22d63e9882a",
       "definition_count": 1,
       "output": "in_game/common/disasters/decline_of_mali.txt",
-      "output_sha256": "9b56ad5ab93447b09cec7256b6c11242293d637dcf08f9ca6380fc70052b5ad0"
+      "output_sha256": "3acfcdb2af3f98583e92873ac946df10b9d6f158c0eeb5cd9d3ad1159e035300"
     },
     {
       "surface": "disasters",
@@ -4231,7 +4549,7 @@
       "source_sha256": "97315eb94598cfbb7aa49d19015835f7401bbdea4d987b644276ea9129b60717",
       "definition_count": 1,
       "output": "in_game/common/disasters/dissolution_of_delhi.txt",
-      "output_sha256": "f4fc515aea432a3a6c096dd7e4c5645e65a32197be05ce758461ebc7c9f720d2"
+      "output_sha256": "be83455d61fa8293343b321e0242ee6ada10493b03f35b1973677a2c8e60759f"
     },
     {
       "surface": "disasters",
@@ -4240,7 +4558,7 @@
       "source_sha256": "fc4543fb100450442ddaa274c703e2def7b7ed701c8a41c9400b0819272a083b",
       "definition_count": 1,
       "output": "in_game/common/disasters/english_civil_war.txt",
-      "output_sha256": "a5e5ae675ef1ba3ab1b8f004826fbfa1c93e80abd5122784b33384eb1e678cb0"
+      "output_sha256": "648908e9b7d9b981e9e08d469c27c3d1561cd0588b3e1ae345ea738f6cf66ed4"
     },
     {
       "surface": "disasters",
@@ -4294,7 +4612,7 @@
       "source_sha256": "347d7bcbc417d7bf3c3227b6e5ae36ddd6d94b12f9a83c1e70887a01bafe9cf9",
       "definition_count": 1,
       "output": "in_game/common/disasters/reform_society.txt",
-      "output_sha256": "889c8fb234e20e3dda2870951a23910b7b223cb5e389e62039a396b5b6831efd"
+      "output_sha256": "82d6150cb69629fc0c34fee5bb69fef928a471724ec0a3dfdb0dbac1c1027970"
     },
     {
       "surface": "disasters",
@@ -4339,7 +4657,7 @@
       "source_sha256": "ec7f1c2186ec64ee179c54ec1bb657cf13916c34da969587e41eb29b83145cb0",
       "definition_count": 1,
       "output": "in_game/common/disasters/sinicization_disaster.txt",
-      "output_sha256": "85b2fab80ca7f1b9cd4eecf9dbe476459b261a8709f2b7789db3cc1e86e51aa3"
+      "output_sha256": "80fb5f7a36bcb24e943e71a2c86bea2cad9df997f750ca4854570c9d8a989811"
     },
     {
       "surface": "disasters",
@@ -4384,7 +4702,7 @@
       "source_sha256": "48587ab85b3a17a8e4f1bcf4f390584ec6c493234da01fa60e51310c9d4c068e",
       "definition_count": 1,
       "output": "in_game/common/disasters/twilight_of_the_tsardom.txt",
-      "output_sha256": "03444557fdef4c7c89d0f2e53279edda450bfdad06215ec9db56ae4162fa4334"
+      "output_sha256": "5794ab341800f57f09d9565025a54ebe2839df32cab290f6f2bfa42c07471802"
     },
     {
       "surface": "disasters",
@@ -4411,7 +4729,7 @@
       "source_sha256": "6b8ede50cee881b5e8facee269930a1da8ae4385812aaa63fe85982a92a36eb0",
       "definition_count": 151,
       "output": "in_game/common/formable_countries/00_formable_countries.txt",
-      "output_sha256": "7fcf7aa6329ca7f45de7480d00a151504bdae75c7320791c081efe041b6d008e"
+      "output_sha256": "0cfcf77d74a792652944fdf458f57ca304887eb31338035fe79f63da41e201c5"
     },
     {
       "surface": "religious_aspects",
@@ -4576,13 +4894,977 @@
       "output_sha256": "6eccef3354a4aae4a89956c6865560a5ffca75929e5cf100193b9aabda66d8d1"
     },
     {
-      "surface": "hre_generic_actions",
-      "relative": "hre_circle_actions.txt",
-      "source": "<GAME_ROOT>/in_game/common/generic_actions/hre_circle_actions.txt",
-      "source_sha256": "7799afff9f75a8596d2768464ffcc91c259e27d9f48621fb3a6c392550a4588a",
-      "definition_count": 8,
-      "output": "in_game/common/generic_actions/hre_circle_actions.txt",
-      "output_sha256": "2157aed3c9480ff4aef7ceff83c5d6c310ad35c4709b0b9ac5a1d5e98693b71f"
+      "surface": "generic_action_ai_lists",
+      "relative": "D008_fate_of_the_phoenix_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/D008_fate_of_the_phoenix_list.txt",
+      "source_sha256": "5aa2cca1f88a149250f1f5c6e4138f5d297bc678411f8bd23f612e3101a2de9f",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 8,
+      "output": "in_game/common/generic_action_ai_lists/D008_fate_of_the_phoenix_list.txt",
+      "output_sha256": "d150e8bf15d619d20151d1ef6133aad827e6b1493ec1c335b1bbc44e358eb32b"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "D008_hellenism_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/D008_hellenism_list.txt",
+      "source_sha256": "9ad1547c78ac0e2d3d4528e2433e74f7c883d74c04e0ca757f1a3ef649321512",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 5,
+      "output": "in_game/common/generic_action_ai_lists/D008_hellenism_list.txt",
+      "output_sha256": "1cac79cf74493cd49826164a6ec905a283f7e822fdb84b364d6a72a14f81a69e"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "advisor_management_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/advisor_management_list.txt",
+      "source_sha256": "33e9ec9539aaa8ea053772dcde3798e8c170c04235abc4949546de31ee9565d9",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/advisor_management_list.txt",
+      "output_sha256": "dab06e454da2c1eb4b38aaf8efc93208eb61e756e561bd6238e123016b473511"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "aspiration_for_liberty_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/aspiration_for_liberty_list.txt",
+      "source_sha256": "07d2f46b93aa4855ca7c0611132c066ae478b948a5c321e3dd5975ee73a351f8",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/aspiration_for_liberty_list.txt",
+      "output_sha256": "5795f092d292cdb072b26cfdd683f0be559b03e9950e5a7cd33e07b8da69cf1d"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "autocephalous_patriarchates_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/autocephalous_patriarchates_list.txt",
+      "source_sha256": "005b18b77aac38d909b419642535462194f4b66c2c4a899e574042b94f69c6f3",
+      "definition_count": 2,
+      "kept_action_references": 0,
+      "removed_action_references": 5,
+      "output": "in_game/common/generic_action_ai_lists/autocephalous_patriarchates_list.txt",
+      "output_sha256": "d806b4249595426c4f0413ef1a14b190313f5f280db63653f91b6fe48c9ee994"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "black_death_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/black_death_list.txt",
+      "source_sha256": "4c51270d130d685469450bd154bf8fc2a19d16380ba771eb73b9a36199120554",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 18,
+      "output": "in_game/common/generic_action_ai_lists/black_death_list.txt",
+      "output_sha256": "a45d8128cc88d39974cbd40f02bce271f604144016003cc33ce5b009e88ef6b2"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "bureaucracy_actions_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/bureaucracy_actions_list.txt",
+      "source_sha256": "e6f9e518825764abc93a3bfd3e58f67e493f2bd8754432f22ee9bca3b717a576",
+      "definition_count": 1,
+      "kept_action_references": 2,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/bureaucracy_actions_list.txt",
+      "output_sha256": "1c4a8024f4f5f2cc1afcaad1e60d94bd409dab791a6c4cb3faa7027ece90950d"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "canonize_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/canonize_list.txt",
+      "source_sha256": "0b55cf2f0dd8f8ae08df19a8a02d120bc93f50da9ae9d92dc13192dc4178920a",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/canonize_list.txt",
+      "output_sha256": "5f1d1869864835f4607d87b08c064d7ca2b9ca52404625d2b55490d9d3470b82"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "catholic_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/catholic_list.txt",
+      "source_sha256": "5777824520f54b7e4e88c3016d64ab3ed8921d8f49987e1cd62c5d188bf261e3",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 3,
+      "output": "in_game/common/generic_action_ai_lists/catholic_list.txt",
+      "output_sha256": "2c47ad6cba5c253ff6337fcbcaef8c604e26e8d9f596158b385884a8ea623376"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "church_aspect_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/church_aspect_list.txt",
+      "source_sha256": "c22bab6541313f7489c2b38a0d2a700b7734665c22905cd25de59d594cf06a0a",
+      "definition_count": 1,
+      "kept_action_references": 3,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/church_aspect_list.txt",
+      "output_sha256": "6effb83afc471ef9742b759cf858b575c338b8ef0314051a3f6e8b1389111814"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "church_aspects_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/church_aspects_list.txt",
+      "source_sha256": "feb3ec59845a06c7ec611e19e896947af26ae620f5e081a149254fe7e146eb07",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 14,
+      "output": "in_game/common/generic_action_ai_lists/church_aspects_list.txt",
+      "output_sha256": "e5f5d1d4bdc4c15f68af0a70c7bd4ab05fe59cb5957967e09f2e1965bb1a4f57"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "colonial_charters_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/colonial_charters_list.txt",
+      "source_sha256": "f8ebb791fe01c223c0c85bb357ab417cd8f333c1f7fd1eee8d1b461a33ed2f07",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/colonial_charters_list.txt",
+      "output_sha256": "75544c402905e9eac32eeb4aa63be6be30f6a51d71318272b0e17a88e9fa5e14"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "colonial_revolution_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/colonial_revolution_list.txt",
+      "source_sha256": "fdde6c4c34dfd3eb39b9c5f67f7e8ab06811fe45dd74699585b8d5d0b21caebd",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 8,
+      "output": "in_game/common/generic_action_ai_lists/colonial_revolution_list.txt",
+      "output_sha256": "df57a7df45dd1b6541929ad4741fa24215b8b15f4bc4bca4a262e14d03e972ef"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "columbian_exchange_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/columbian_exchange_list.txt",
+      "source_sha256": "fa25d7527b2dc057c63231c8500635bb063905384c618f7cb2403181841ff9cb",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 4,
+      "output": "in_game/common/generic_action_ai_lists/columbian_exchange_list.txt",
+      "output_sha256": "255b9c0461568edb004dd597e6d7ae262ddea2d406e40948f52fd2c07e1434b9"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "conquistador_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/conquistador_list.txt",
+      "source_sha256": "4851cf13e41135bf3e6a835b396a7a05f475074d5db14cb5645838fb9c7d974b",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/conquistador_list.txt",
+      "output_sha256": "7d0e0c693768290d76836f348f7be91725927bb2430e6cd5690f02cf45439f80"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "coup_attempt_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/coup_attempt_list.txt",
+      "source_sha256": "80b0a330d0610762f26d8c325c9eee2d5917b2ad37efc82ffa6fa1c3154c5253",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 3,
+      "output": "in_game/common/generic_action_ai_lists/coup_attempt_list.txt",
+      "output_sha256": "6a5405f97eda5117c8adb429f9d830f0dd3e6c56a25988fce1d0c55b8fab7db7"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "court_and_country_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/court_and_country_list.txt",
+      "source_sha256": "3860a9ce72c3ebf6f55a6cf75d3b571b2f7f51adfc762d6c897147a19be6a829",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 5,
+      "output": "in_game/common/generic_action_ai_lists/court_and_country_list.txt",
+      "output_sha256": "6a81077a65165cb093435b012eaa0f3aebd6d94a8fce9e67a98a7e35eeed4aa9"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "crisis_of_the_chinese_dynasty_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/crisis_of_the_chinese_dynasty_list.txt",
+      "source_sha256": "ccc7f5e981f93d6650a3524e3b580662feb9d67c1a74511d8f2422d8eab2bc25",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 5,
+      "output": "in_game/common/generic_action_ai_lists/crisis_of_the_chinese_dynasty_list.txt",
+      "output_sha256": "5d14d24bd3eb51dbb5101e14cfb8eff6859bc4d7e38274bfa0e2db4b453339a2"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "culture_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/culture_list.txt",
+      "source_sha256": "1f3ae60811d1527b64d3bbb1fe0817af88578b9718b8f41f5636bbf11aeab982",
+      "definition_count": 1,
+      "kept_action_references": 2,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/culture_list.txt",
+      "output_sha256": "65a0a4c5030327148f88cea20613eef9cf5ab8368e96d094a10d999edc5e902c"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "decline_of_empire_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/decline_of_empire_list.txt",
+      "source_sha256": "86c14a55543816b426a9b220991f124d4871679859ec55cdc20d9d6d99fe4a2b",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 2,
+      "output": "in_game/common/generic_action_ai_lists/decline_of_empire_list.txt",
+      "output_sha256": "1b9b320ce28e173485876b27a928146ee52f1b630c7d6230d1b4240230040691"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "decline_of_majapahit_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/decline_of_majapahit_list.txt",
+      "source_sha256": "e36c5a9cd8be1359a0ac738bfbb6500e8779e60979c1e86b544fe51ad7cae296",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 6,
+      "output": "in_game/common/generic_action_ai_lists/decline_of_majapahit_list.txt",
+      "output_sha256": "b2cc6a8d7580cc0e35a03bd611e1b92bf4274be5625e70385560fb450e001ab8"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "estate_emergency_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/estate_emergency_list.txt",
+      "source_sha256": "771db06862a9f20264de6b7c46e95810d121c51a965bca2a6b9d3ea78a21420d",
+      "definition_count": 1,
+      "kept_action_references": 6,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/estate_emergency_list.txt",
+      "output_sha256": "5595893aa55ec1547da3570fa87e9bf1a1114fa2316926fa72d6e69e5fb9f897"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "exploration_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/exploration_list.txt",
+      "source_sha256": "35e8521517dd28f7301825249089b429c24154d097d87be94902b1c97bc3592a",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 2,
+      "output": "in_game/common/generic_action_ai_lists/exploration_list.txt",
+      "output_sha256": "d76134101d40fa07a5e83ddc6f0f23539452d35b75e6e1918b16da5ce2b89fe7"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "fall_of_delhi_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/fall_of_delhi_list.txt",
+      "source_sha256": "dfe78d23251d700a71cefd39e3628c517f8808feb1e4336e5b197b5081853fa2",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 5,
+      "output": "in_game/common/generic_action_ai_lists/fall_of_delhi_list.txt",
+      "output_sha256": "b9a0f004739da12a592043b84700f19075f674a711a2e85858d402eaa0577857"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "french_wars_religion_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/french_wars_religion_list.txt",
+      "source_sha256": "16631d463c51f77d4640da6b344f2af06f1e2beacd1f78ad538b60f104b7297c",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/french_wars_religion_list.txt",
+      "output_sha256": "047ac7aaab2c112df4f5eb82238091cc9cb5aad6482b2eea5d63b7c843ba5a3e"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "global_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/global_list.txt",
+      "source_sha256": "43ee3e1f8d8e9b87c0a582f5f0b066a376027331340d3199d048b94fe77e8e9f",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 19,
+      "output": "in_game/common/generic_action_ai_lists/global_list.txt",
+      "output_sha256": "b66b808b19bf69fb0d3fa742aae6d4d7d43b991b6ac9b75c5c52cabeb5136cd9"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "golden_age_of_piracy_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/golden_age_of_piracy_list.txt",
+      "source_sha256": "817d81fce88deca216d5e3889fdc984d2ae28b7ad803942571405f8a9ef1525d",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 5,
+      "output": "in_game/common/generic_action_ai_lists/golden_age_of_piracy_list.txt",
+      "output_sha256": "499bfbf7876bb43ba720d18c20c2f5d9c2536e82648844bf4a578477c0ecfe2c"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "government_transition_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/government_transition_list.txt",
+      "source_sha256": "642d682b242bab0fc620025b4471161263d3ac891c1d829f4be7cf5a58020570",
+      "definition_count": 5,
+      "kept_action_references": 1,
+      "removed_action_references": 7,
+      "output": "in_game/common/generic_action_ai_lists/government_transition_list.txt",
+      "output_sha256": "fedb1c6e6d663eeeeeb9d186906439f48f12ad3c831748aa879898b790a61447"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "great_pestilence_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/great_pestilence_list.txt",
+      "source_sha256": "ca56123466c446045a22bc5e711b216f42f96455a757ebb19b0e57a54b9b1243",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 10,
+      "output": "in_game/common/generic_action_ai_lists/great_pestilence_list.txt",
+      "output_sha256": "cea952e4d5c3bb8b37c5ce3d80f4aca5c90c9b9397de0e45181df45b4fcf312d"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "guelphs_and_ghibellines_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/guelphs_and_ghibellines_list.txt",
+      "source_sha256": "c2cae41b30c73bfbc172835f5f24e9612e21d029abe3cf53d8a0c5dd5c2e747a",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 7,
+      "output": "in_game/common/generic_action_ai_lists/guelphs_and_ghibellines_list.txt",
+      "output_sha256": "f36b85b295513ec6567bd862f31a5c9062c5297c92eca42dc1010ae396dc44dd"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "high_kingship_of_ireland_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/high_kingship_of_ireland_list.txt",
+      "source_sha256": "c9479732a4f329c2b3bdf32be228a405e7645119cac46ed413f92c7a02e240bc",
+      "definition_count": 2,
+      "kept_action_references": 0,
+      "removed_action_references": 3,
+      "output": "in_game/common/generic_action_ai_lists/high_kingship_of_ireland_list.txt",
+      "output_sha256": "54a8f79f5646723cb5f6aad6d6e49fa353c2c06da82de55554b264c0618d67ed"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "hindu_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/hindu_list.txt",
+      "source_sha256": "f4c1f185472662a8c41a73aa10e385487fc3338a3966c55523db85b0906aa71e",
+      "definition_count": 2,
+      "kept_action_references": 3,
+      "removed_action_references": 7,
+      "output": "in_game/common/generic_action_ai_lists/hindu_list.txt",
+      "output_sha256": "f9946ad63de9a9d880a087030420e6293180155af3ebe53ff784738dfc0f7046"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "hre_circle_actions_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/hre_circle_actions_list.txt",
+      "source_sha256": "829756b5206bce2d1874b3e7a76cc24c76ad741be945bd35b7b9b10bca1f6cc3",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/hre_circle_actions_list.txt",
+      "output_sha256": "15ef4e9eab2c49a4a54063ad4ee8b5174eefd9c6a3ad1f14d20e1fcd8a78b521"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "hre_circle_leader_actions_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/hre_circle_leader_actions_list.txt",
+      "source_sha256": "73d6997aff0afad3bc113ca97186d7541e10497de62176b05135fbfb04653382",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 6,
+      "output": "in_game/common/generic_action_ai_lists/hre_circle_leader_actions_list.txt",
+      "output_sha256": "98f77d5cb6efe046c78f47b7ebf38e2525dc65eeb07ebde5ca91ea8b3867dfbc"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "hre_emperor_circle_actions_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/hre_emperor_circle_actions_list.txt",
+      "source_sha256": "5739d62c795aba5fb5cdfe38ee10a17eedd396df77e9ea235086b5b0ecae3674",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/hre_emperor_circle_actions_list.txt",
+      "output_sha256": "044ea5b8dd6ccd6f701361c49b65256af0104b6225405661a96d6b78c6d1606b"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "hundred_years_war_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/hundred_years_war_list.txt",
+      "source_sha256": "e4b50e6569e9248595434c25bafe3a53829d33c31511f575adaba76a7fdb31cb",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 12,
+      "output": "in_game/common/generic_action_ai_lists/hundred_years_war_list.txt",
+      "output_sha256": "7d8bcc5e346c0fde09d5780630827de41c6852a944bcd98f7af8bc15ae3c08bb"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "hussite_wars_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/hussite_wars_list.txt",
+      "source_sha256": "c914d77f9efa3e2801be722f1eaf486176aa8948353d63676ce2efd5707713a8",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 9,
+      "output": "in_game/common/generic_action_ai_lists/hussite_wars_list.txt",
+      "output_sha256": "9f8d0522616f3ddb921dbf6ce7504498b27be34b1ad586dfa74e5709ddab0285"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "ilkhanate_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/ilkhanate_list.txt",
+      "source_sha256": "002a070b538b2df7507d18c199ab263ce2a10e29f73a1806f2c14514b9506ec0",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/ilkhanate_list.txt",
+      "output_sha256": "21f7e193169ae706e2588be3187e91a66c2c0fde23082863edf787a0d8a42fba"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "international_organization_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/international_organization_list.txt",
+      "source_sha256": "868d57d2a934e2f4607571171d4402a43d8ac658fcb3bff5f286ad151c43c9e8",
+      "definition_count": 1,
+      "kept_action_references": 4,
+      "removed_action_references": 4,
+      "output": "in_game/common/generic_action_ai_lists/international_organization_list.txt",
+      "output_sha256": "429185849700346110fc97632069b27c4a674b2afacac8d29c4052891f49c1a8"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "inti_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/inti_list.txt",
+      "source_sha256": "bf7d618152a42536c0ef3b719b3087c8ccbbeb5442c00168190535d683ab8fed",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/inti_list.txt",
+      "output_sha256": "080200931ddf0f553c90c076081a1c6e1714c11ba8c1532f2a9bd6db3357ef82"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "italian_wars_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/italian_wars_list.txt",
+      "source_sha256": "74606fb41279b71b5034bdada7c5fd13b988683071962f6d0028063f7d125db7",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 10,
+      "output": "in_game/common/generic_action_ai_lists/italian_wars_list.txt",
+      "output_sha256": "9a1f4b0276ee2554f21469341711d7bbc741bb53d83b59a3c61f95ce2aa76b2f"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "japanese_shogunate_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/japanese_shogunate_list.txt",
+      "source_sha256": "06bb5fabea7285625da5cda5b3f8e4667e21184f3adf3c5e0379e937a5777d62",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 3,
+      "output": "in_game/common/generic_action_ai_lists/japanese_shogunate_list.txt",
+      "output_sha256": "56534effc396daf80f6a9ed907afe58ae008d0f752becd6125f9dd5f7a222e51"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "lend_unit_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/lend_unit_list.txt",
+      "source_sha256": "82a38640329b7e22954d066dce1b15479a17206a4cd6bd420ef2d6e6e0b83531",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/lend_unit_list.txt",
+      "output_sha256": "1a249f08ac5ea3084452ffe791e4199c0f4161aed98f4f1986d9f36bb5fc7070"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "little_ice_age_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/little_ice_age_list.txt",
+      "source_sha256": "cf30567406aacb8c607d46dafe9263933bad21ec0c2abf8e89193e128e729789",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 3,
+      "output": "in_game/common/generic_action_ai_lists/little_ice_age_list.txt",
+      "output_sha256": "18ecc7e6401bb0294ff7576d947d062f359c89574f4891f6c387e4b090a22443"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "lordship_of_ireland.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/lordship_of_ireland.txt",
+      "source_sha256": "dc2541b464f1713944206f225ea36f35a855371513cfce383be4336e2d03c009",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 3,
+      "output": "in_game/common/generic_action_ai_lists/lordship_of_ireland.txt",
+      "output_sha256": "129dd895b433258ab20d81703a2b5dbea5c5018964341803a6c4967d5567af5d"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "mayan_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/mayan_list.txt",
+      "source_sha256": "8b635816225bffb1fa95b920baa4a8a07e3b4e14c94cce770d209126800f8cae",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 6,
+      "output": "in_game/common/generic_action_ai_lists/mayan_list.txt",
+      "output_sha256": "bd705146784daa52073bb9ecee141a40344665c42167568869b256a43957d2e1"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "middle_kingdom_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/middle_kingdom_list.txt",
+      "source_sha256": "f273af37c35613dfd548beb5e335c874194b8f1f6c750a41897c3b28f005bd9e",
+      "definition_count": 2,
+      "kept_action_references": 0,
+      "removed_action_references": 6,
+      "output": "in_game/common/generic_action_ai_lists/middle_kingdom_list.txt",
+      "output_sha256": "607e07fd504f992d558e9b822acbe7ac3714b968efc031101060c96a2906bb2e"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "military_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/military_list.txt",
+      "source_sha256": "1af3f30478ae039bc352a6332967212f4b1030f5298ffa004cdc952d7fee8671",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/military_list.txt",
+      "output_sha256": "16a279c6df573844ee4eddc4fbeeb2bee742b305f7d7dc679519ffb4594e965a"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "muslim_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/muslim_list.txt",
+      "source_sha256": "0a4a777c18e67da5d2012c466406e2a5f6dd6320ff5b17bd3b28bc4e7fa19fc0",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/muslim_list.txt",
+      "output_sha256": "8f002539fd4dd68375bdab667e62048668a13b22367459643b82f4488c4048fe"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "nahuatl_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/nahuatl_list.txt",
+      "source_sha256": "5e263fcd0c4227e860062344c0f04dfd65baef07807ac6d7d12537830d8212f2",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 4,
+      "output": "in_game/common/generic_action_ai_lists/nahuatl_list.txt",
+      "output_sha256": "3b208c24c6ed0738612b0cce9772dc5907a0312dd0b563aaa75a0baf1543ff0e"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "nanbokuchou_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/nanbokuchou_list.txt",
+      "source_sha256": "0ddc9866c01472213cd2bec6c46c19f63cdf97312346b2e33f2e3d022a167f1d",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 2,
+      "output": "in_game/common/generic_action_ai_lists/nanbokuchou_list.txt",
+      "output_sha256": "1ff379ff59b23b4681119f03d16e821fa6dcf73b0e2f7ac85eae0308768ebb15"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "naval_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/naval_list.txt",
+      "source_sha256": "8d60df37feef34ed30bcb8387942d62c5c66eaffdab83803f6614c613fbf69de",
+      "definition_count": 1,
+      "kept_action_references": 2,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/naval_list.txt",
+      "output_sha256": "aeb429f4d08c5c9651478f90c08a04fca05dc80b9d514a867ad0a4d8f5a2b76e"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "omens_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/omens_list.txt",
+      "source_sha256": "7e1fbd84bb3d0c639e443cec711737b170568a357c3c7dfe3aefe59f2338e341",
+      "definition_count": 1,
+      "kept_action_references": 2,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/omens_list.txt",
+      "output_sha256": "8c52da02da67c3276c23b9fd616f791a8f253e9fe5f5b69a2cdcec17a642cc56"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "orthodox_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/orthodox_list.txt",
+      "source_sha256": "658b9fc2f2e0b9f051956c0f5ae00900be5e768b7372c5c710438721e8e10c49",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 7,
+      "output": "in_game/common/generic_action_ai_lists/orthodox_list.txt",
+      "output_sha256": "3888154d1fc38ae1330f8d2771291e610ac16d54275b5430f0117f7b02348728"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "parliament_inactive_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/parliament_inactive_list.txt",
+      "source_sha256": "37ab17bcab7f5ab1fa706ac9e0cad21a8c3e4abdeffa4946c3cd9270f7a30500",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/parliament_inactive_list.txt",
+      "output_sha256": "423d3c3772336a69769faaf45b9d39fbc7c3621066cb8485e34c905dc8ceb595"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "parliament_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/parliament_list.txt",
+      "source_sha256": "efddb617e9c7a4591b9d799fdfb7675243d01f6599e04a9d6e8a4502f30ea0e8",
+      "definition_count": 1,
+      "kept_action_references": 4,
+      "removed_action_references": 5,
+      "output": "in_game/common/generic_action_ai_lists/parliament_list.txt",
+      "output_sha256": "2508f5c52b2b5f2261b0db548a21c5e38200e575b29d7d91f7d6d54ec89ed425"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "peasants_war_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/peasants_war_list.txt",
+      "source_sha256": "8642034d58932a9f5f4478de3066dd67d75607024e1e42f9f50f445eb48fefc2",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 3,
+      "output": "in_game/common/generic_action_ai_lists/peasants_war_list.txt",
+      "output_sha256": "7625c5931bd8835aceb789db6ef398ea02c01efe4037fb306c5ce663aa784613"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "piety_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/piety_list.txt",
+      "source_sha256": "b6c83864454268ea7d64033f6617a14bd14eafd34bd6808e08cf8ae08f925626",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 2,
+      "output": "in_game/common/generic_action_ai_lists/piety_list.txt",
+      "output_sha256": "dec3e580661fb3fde0acddd92a5f0d213c99b42253982d60be989aa1c2e4f4b4"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "pilgrimage_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/pilgrimage_list.txt",
+      "source_sha256": "1d25cddf4935b832df2e8cb78f8c473a34a4e42c4013faabdbc4149af140e9ef",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/pilgrimage_list.txt",
+      "output_sha256": "3055ea4233887a98236beb377700fe9d78e697a56ff046165591d3a60bc2b908"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "pop_based_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/pop_based_list.txt",
+      "source_sha256": "b2a11700436c560a58b61d8d202f2a8c6a2c279486f762f729a8c5cc87a1bebe",
+      "definition_count": 1,
+      "kept_action_references": 2,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/pop_based_list.txt",
+      "output_sha256": "ee0f1ac99b9a7b2e465ae135b832d31115f8de3999661edfbbd8553a74518d61"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "purity_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/purity_list.txt",
+      "source_sha256": "2d68835250bb1cb2b4d3e47daabef487b72ce3dba8ffa3270005bcec4ad58278",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/purity_list.txt",
+      "output_sha256": "02e632971e540261269f26c1e961b44a6cfa0bc9f9299518391624cf477acdd0"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "rebels_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/rebels_list.txt",
+      "source_sha256": "8b0e22ff2d6e42d43282e16a5200dcae96a860f0333c71d1a813b5863e0e9410",
+      "definition_count": 1,
+      "kept_action_references": 3,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/rebels_list.txt",
+      "output_sha256": "64123416abb6787fca885196a7b9399295449fb9c2ab14409b92fe45f9aa7f89"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "red_turban_rebellions_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/red_turban_rebellions_list.txt",
+      "source_sha256": "e68d3dcdc291cbae3b3be445fa74200b204ea9e4aacea9730cbbcc4263fb4059",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 10,
+      "output": "in_game/common/generic_action_ai_lists/red_turban_rebellions_list.txt",
+      "output_sha256": "6fcdc310642aba2f70eb92073629049195534b39eb1c7ee6b46c160ded0bed23"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "reformation_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/reformation_list.txt",
+      "source_sha256": "6605467d56b7311f234a5aebd81c0414a3df30c47a1bc12ec9f78bc79eef59db",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 4,
+      "output": "in_game/common/generic_action_ai_lists/reformation_list.txt",
+      "output_sha256": "5deba20edf1a1c42029ad219e9bb211d6e949fce9c017a1560a0c4db8baadb94"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "religious_faction_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/religious_faction_list.txt",
+      "source_sha256": "c93b119ba1a19475996547db456fc09f5e1ec09e3f79cd56b1fc5ad52a02dec4",
+      "definition_count": 1,
+      "kept_action_references": 20,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/religious_faction_list.txt",
+      "output_sha256": "a3c0377eee4668c65c382cff260d8c804bd820713c2cb5df59ce9da85d3753a4"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "religious_influence_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/religious_influence_list.txt",
+      "source_sha256": "9e01c8afaee5949be299e28fc97ec401df2c6bfdad0bd6d6ef911c7d73b441b1",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/religious_influence_list.txt",
+      "output_sha256": "c5a8feaaa51da94efbf618fb43eb373c9a03b37e50deb8484a97836924ed6d7a"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "religious_school_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/religious_school_list.txt",
+      "source_sha256": "90eaa41d5619e98a53fc01a109d709116d46d3a7eb2da9782eee3171208e2796",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/religious_school_list.txt",
+      "output_sha256": "243c4786593074b37c632d4c079f1b85e78d82d379061637969ffd023800eed3"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "religious_turmoil_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/religious_turmoil_list.txt",
+      "source_sha256": "8c44f9c828782c5c03dfe0fa3c27a2b3e13bab090a033732397427d23fbd6e3f",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 3,
+      "output": "in_game/common/generic_action_ai_lists/religious_turmoil_list.txt",
+      "output_sha256": "45feb2cf7d9813eeee2ecd85a8fec09a7252031dc606a4893444b45b1832c7e7"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "revolution_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/revolution_list.txt",
+      "source_sha256": "1ce1392e96ebed795bf145c470f02051dcca1cf6e8a132e0b9f36d33cb6188c2",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 7,
+      "output": "in_game/common/generic_action_ai_lists/revolution_list.txt",
+      "output_sha256": "67e99d77d855bc5b4e880c9175d0625527e63ec841c93010164743cc0f3f05f3"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "rise_of_the_ottomans_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/rise_of_the_ottomans_list.txt",
+      "source_sha256": "52cdf1712f453210a70aa040c06e220f6ed8da67d80871224aa58805761753ea",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 8,
+      "output": "in_game/common/generic_action_ai_lists/rise_of_the_ottomans_list.txt",
+      "output_sha256": "9f84ae88bb9854e0ea632fa6842bdb9296e7016999e18dcdee03b643a732b49c"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "rise_of_the_szlachta_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/rise_of_the_szlachta_list.txt",
+      "source_sha256": "bb65268445ca9aa2ec4a6b36b05c028ddcb5b5b898b58e07fab2b919b6fdb22e",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 2,
+      "output": "in_game/common/generic_action_ai_lists/rise_of_the_szlachta_list.txt",
+      "output_sha256": "ad2fefbb41b439e55a79d7d50700598ec8d29146ba8872a08bc52e550d1e5807"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "rise_of_timur_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/rise_of_timur_list.txt",
+      "source_sha256": "93d1caf53a63031ccf372b9c036818431ea54874514680855d6a619684cb1eed",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 5,
+      "output": "in_game/common/generic_action_ai_lists/rise_of_timur_list.txt",
+      "output_sha256": "08ff6c9ee8fd0fdea3a5a20d7745399d9423eb9aab58462559589e20a413188a"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "sects_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/sects_list.txt",
+      "source_sha256": "1295de6c45b8a6c1a602b0e2af4b43a021c70fc7084d330c8ca83aaad20548cb",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 8,
+      "output": "in_game/common/generic_action_ai_lists/sects_list.txt",
+      "output_sha256": "93b47e6578810fb8dce57a3964852600e141b018885a71b7f497a8de45cc2b7a"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "sengoku_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/sengoku_list.txt",
+      "source_sha256": "4b38461dee9f08d1ba680e401aa7fe8f5af677db8ade588f6c9afd39a5f0b802",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 9,
+      "output": "in_game/common/generic_action_ai_lists/sengoku_list.txt",
+      "output_sha256": "7b33477af39117af8fb1008170b5e3b627c30f8b395bc0e1b2acb21c8eb14ac2"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "siege_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/siege_list.txt",
+      "source_sha256": "51ae2949ff2d47fddc058ac475913de2d975bf79af33a016625441bb05aad22d",
+      "definition_count": 1,
+      "kept_action_references": 1,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/siege_list.txt",
+      "output_sha256": "bf250e04ed97605a36338f5f1d6da8468948cf543095f7cbed50ce98151daa7a"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "succession_crisis_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/succession_crisis_list.txt",
+      "source_sha256": "cdcd4d7956d60be403901ba472515641e1bb6c87763cb0739b53ace05eff80ab",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 5,
+      "output": "in_game/common/generic_action_ai_lists/succession_crisis_list.txt",
+      "output_sha256": "3090a933b7ecbb91ddc6f2c19b11e39344e0126a00f709d001c89777d4c5074b"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "tatar_yoke_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/tatar_yoke_list.txt",
+      "source_sha256": "07e5389c1542d3b0e51ef8c5df81ba66374f18d6b2368ad6ed1af794435120a0",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 2,
+      "output": "in_game/common/generic_action_ai_lists/tatar_yoke_list.txt",
+      "output_sha256": "7839c468ed3657d5f65863447fca31837b4d92a90e4c1a89d0fb0c39d8a7bf75"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "treaty_of_tordesillas_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/treaty_of_tordesillas_list.txt",
+      "source_sha256": "1100060f4df2e6cae81bc100c85f5403a621f920bb904442f348c0b0367d97a8",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 12,
+      "output": "in_game/common/generic_action_ai_lists/treaty_of_tordesillas_list.txt",
+      "output_sha256": "697837727dc0cc6aea7040f41a77db9f5ea59bf4e917381c4cbf0e0419dfb9bf"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "twilight_of_the_tsardom_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/twilight_of_the_tsardom_list.txt",
+      "source_sha256": "795dc138a695578b8ffac2f86fdf98241f315910579a3a4df78393f96c91ec00",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 3,
+      "output": "in_game/common/generic_action_ai_lists/twilight_of_the_tsardom_list.txt",
+      "output_sha256": "7c0ef99eeb6db62dcfb5d5ef7d1fef6148e88e63bc765d073084aed24f8de771"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "union_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/union_list.txt",
+      "source_sha256": "25b66b84be24c60b3c6904117cd2b274dd7c9a2733373b5f8580ac3d4238a130",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 2,
+      "output": "in_game/common/generic_action_ai_lists/union_list.txt",
+      "output_sha256": "e9456bcc044477f4ad580f6e3ae4878e257ff5576dae64e6ea470bfd0cf4d042"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "unlockable_io_actions_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/unlockable_io_actions_list.txt",
+      "source_sha256": "c530e185edb32e8daf2672388a6c140f7fc8c9bca86067a7d10546df67f15995",
+      "definition_count": 1,
+      "kept_action_references": 2,
+      "removed_action_references": 9,
+      "output": "in_game/common/generic_action_ai_lists/unlockable_io_actions_list.txt",
+      "output_sha256": "1c736cd9828a2a79caf3cfd66556b903aad858cd0ba9829a0a1cf86d690c9007"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "war_of_religions_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/war_of_religions_list.txt",
+      "source_sha256": "f3f551d0e405d1dfefc07120ec3d7c6440521a7fd7038c30ade89f271f49aae7",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 5,
+      "output": "in_game/common/generic_action_ai_lists/war_of_religions_list.txt",
+      "output_sha256": "d1524e3957b29213a748a41a72f2a023f3eb8e35b5b8b63e3b1966e57e2fc5b5"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "war_of_the_roses_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/war_of_the_roses_list.txt",
+      "source_sha256": "6cebef2fcb57bd4421a94597bd733a78989a4494877701cb8b2fe2cea1cc7927",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/war_of_the_roses_list.txt",
+      "output_sha256": "380b57063c75f9b58cef012d051aeea7c45f082f1b76fca63a163b14da144b12"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "western_schism_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/western_schism_list.txt",
+      "source_sha256": "0c76deec96e7d7d4ec08a4d0dc2e30dafea4f4721f13c42d2f0d2163e2cb9e20",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 3,
+      "output": "in_game/common/generic_action_ai_lists/western_schism_list.txt",
+      "output_sha256": "f9c2116b356f9feb882f3a33133f4f6e5a857cd88555604300d866d95739dad8"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "yanantin_list.txt",
+      "source": "<GAME_ROOT>/in_game/common/generic_action_ai_lists/yanantin_list.txt",
+      "source_sha256": "3395630ce3cc0e44aea9c9b73ece6eecac01814fe40636600e7f18d25e6c455f",
+      "definition_count": 1,
+      "kept_action_references": 0,
+      "removed_action_references": 1,
+      "output": "in_game/common/generic_action_ai_lists/yanantin_list.txt",
+      "output_sha256": "7be59c0502d66d841562b150d82896b7fdaf763ce7559fa202722f864d03ea19"
+    },
+    {
+      "surface": "generic_action_ai_lists",
+      "relative": "antq_portable_global_actions_list.txt",
+      "source": "<GENERATED>/manual-global-actions",
+      "source_sha256": "3f62dd68eaa7adff9b5a033f95a378aaeb5536ce02afef8ced5376dfe4f6a1a8",
+      "definition_count": 1,
+      "kept_action_references": 13,
+      "removed_action_references": 0,
+      "output": "in_game/common/generic_action_ai_lists/antq_portable_global_actions_list.txt",
+      "output_sha256": "c22d23389e09afe02587146fab0ea9b960d2fb816c7ea2f83cdbde807741aa6c"
+    },
+    {
+      "surface": "shinto_religious_faction_quarantine",
+      "relative": "shinto.txt",
+      "source": "<GAME_ROOT>/in_game/common/religious_factions/shinto.txt",
+      "source_sha256": "d8f6b93345d7ae1a583091edaec39faaaec0bb213b8fad6441ea75ff56af6b34",
+      "definition_count": 5,
+      "output": "in_game/common/religious_factions/shinto.txt",
+      "output_sha256": "ce3a9985b5f0b7c0b9ecc5fba1e9741ca03853c5d7563cbce8d4f3c612a7bac2"
+    },
+    {
+      "surface": "rival_replacement_price_guard",
+      "relative": "00_hardcoded.txt",
+      "source": "<GAME_ROOT>/in_game/common/prices/00_hardcoded.txt",
+      "source_sha256": "2a8386adad59783340b47f5406870e4e1bb9f3012d6508650700a7b801df86ca",
+      "definition_count": 1,
+      "output": "in_game/common/prices/00_hardcoded.txt",
+      "output_sha256": "ffc0fdcfd7b20f1cf70c0ba6c0a2738cd8f63cb4944c066fad878ef6c88f996e"
+    },
+    {
+      "surface": "ai_rival_replacement_guard",
+      "relative": "zz_antq_ai_rival_replacement_guard.txt",
+      "source": "<GENERATED>/AD-1-and-dynamic-ancient-country-tags",
+      "source_sha256": "db96ebc999a0ff62bac5d0cceee26fedccc264841536ddee1ed1d11b91b350da",
+      "definition_count": 470,
+      "output": "in_game/common/rival_criteria/zz_antq_ai_rival_replacement_guard.txt",
+      "output_sha256": "112214666e63497859317123ab6bbeaa8a23a2c175a7ec8b3022e5e62e7f0bf8"
     },
     {
       "surface": "hre_yearly_scope_guard",
@@ -4591,7 +5873,70 @@
       "source_sha256": "b2686adb8d0c1b9d50bbff97cc6b05bb4d6ce88d681c63eb5bb858c438fab46e",
       "definition_count": 1,
       "output": "in_game/common/on_action/country_yearly.txt",
-      "output_sha256": "796858536ccd4a4aed4c6bc01faf18043c497c26f1bc283df8f6e44b7abf6e9e"
+      "output_sha256": "c5167cf912402fb8ccde0f3378c723ea1e6a5df70f1d7f6e84ab4cc58addfe7c"
+    },
+    {
+      "surface": "on_action_country_scope_guard",
+      "relative": "appanage_monthly.txt",
+      "source": "<GAME_ROOT>/in_game/common/on_action/appanage_monthly.txt",
+      "source_sha256": "909134434d7adc6184a31fb35c55237290b6c3853ec0431f11e31418db5af3af",
+      "definition_count": 1,
+      "output": "in_game/common/on_action/appanage_monthly.txt",
+      "output_sha256": "e99f736cad0f8fc9835a5ac607ad4e5533dcb705c2da4e633bbfafda54680493"
+    },
+    {
+      "surface": "on_action_country_scope_guard",
+      "relative": "character.txt",
+      "source": "<GAME_ROOT>/in_game/common/on_action/character.txt",
+      "source_sha256": "2c5d6c15b4ab93af90009cb8563af420df7359a872a219c8ae0c4ae1d6336868",
+      "definition_count": 1,
+      "output": "in_game/common/on_action/character.txt",
+      "output_sha256": "cb98e5d849dc8da734327bfbc50d5dd403fb87cb0a4d421a07ce7580d5a0f08f"
+    },
+    {
+      "surface": "on_action_country_scope_guard",
+      "relative": "character_death_pulses.txt",
+      "source": "<GAME_ROOT>/in_game/common/on_action/character_death_pulses.txt",
+      "source_sha256": "0daa3824947a21da97e58ff04aff2cecce3e0b121357a8d666ba85c77e0f7d02",
+      "definition_count": 1,
+      "output": "in_game/common/on_action/character_death_pulses.txt",
+      "output_sha256": "c36a7e6cdb85b09dbe8ac3aebc0b5730cb4feff1b08f2a452eabbab62e1ac1cb"
+    },
+    {
+      "surface": "on_action_country_scope_guard",
+      "relative": "on_country_specific_pulse.txt",
+      "source": "<GAME_ROOT>/in_game/common/on_action/on_country_specific_pulse.txt",
+      "source_sha256": "5078a166e04346865f8b31c172b11ddd0e46c35c62642dbabde0ac100cfc605f",
+      "definition_count": 1,
+      "output": "in_game/common/on_action/on_country_specific_pulse.txt",
+      "output_sha256": "d5b995bde46d5e3260398002d5d0374002f1d55934d0e9cb213b6938fa405a2b"
+    },
+    {
+      "surface": "exploration_trigger_guard",
+      "relative": "exploration_triggers.txt",
+      "source": "<GAME_ROOT>/in_game/common/scripted_triggers/exploration_triggers.txt",
+      "source_sha256": "93a47ae083d325d93c2057e9c4913b3ebb90f8dc0bc2fd05e87b47d3a853141e",
+      "definition_count": 1,
+      "output": "in_game/common/scripted_triggers/exploration_triggers.txt",
+      "output_sha256": "fe8721e3482ca89c47e83474df64039c17419a8a7858e1c5a435a47c245daacc"
+    },
+    {
+      "surface": "insults_optional_ruler_guard",
+      "relative": "00_insults.txt",
+      "source": "<GAME_ROOT>/in_game/common/insults/00_insults.txt",
+      "source_sha256": "c14c778c64daec270a42f57a1f42b32f2c4c0cd95b7a320898858c0f95cc0ae3",
+      "definition_count": 1,
+      "output": "in_game/common/insults/00_insults.txt",
+      "output_sha256": "ae109f9841c73bb523271f64fcab0d71c19c1dd6dba71d6c5e810626cda90001"
+    },
+    {
+      "surface": "hre_special_status_guard",
+      "relative": "hre.txt",
+      "source": "<GAME_ROOT>/in_game/common/international_organization_special_statuses/hre.txt",
+      "source_sha256": "df9ab82b2128b2e7c51ef1d70689f6a82a36a3dbc33830205e4910b58fa28983",
+      "definition_count": 5,
+      "output": "in_game/common/international_organization_special_statuses/hre.txt",
+      "output_sha256": "8a10ba239127748998b621c0d93df514282a5ceead7e5b19b712e3a3409b8ede"
     }
   ]
 }

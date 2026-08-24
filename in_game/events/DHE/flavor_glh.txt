@@ -10,7 +10,7 @@ flavor_glh.1 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = GLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -78,21 +78,21 @@ flavor_glh.2 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					root = c:GLH
+					root = c:DUMMY
 					has_variable = kalita_the_tax_collector
 				}
 				desc = flavor_glh.2.desc_kalita_the_tax_collector
 			}
 			triggered_desc = {
 				trigger = {
-					root = c:GLH
+					root = c:DUMMY
 					has_variable = discovered_treachery
 				}
 				desc = flavor_glh.2.desc_discovered_treachery
 			}
 			triggered_desc = {
 				trigger = {
-					NOT = { root = c:GLH }
+					NOT = { root = c:DUMMY }
 				}
 				desc = flavor_glh.2.desc
 			}
@@ -120,7 +120,7 @@ flavor_glh.2 = {
 	option = {
 		name = flavor_glh.2.a
 		trigger = {
-			root = c:GLH
+			root = c:DUMMY
 			has_variable = kalita_the_tax_collector
 		}
 
@@ -142,7 +142,7 @@ flavor_glh.2 = {
 	option = {
 		name = flavor_glh.2.b
 		trigger = {
-			root = c:GLH
+			root = c:DUMMY
 			has_variable = discovered_treachery
 		}
 
@@ -161,7 +161,7 @@ flavor_glh.2 = {
 	option = {
 		name = flavor_glh.2.c
 		trigger = {
-			NOT = { root = c:GLH }
+			NOT = { root = c:DUMMY }
 		}
 
 		add_trust_equilibrium = {
@@ -190,13 +190,13 @@ flavor_glh.3 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					root = c:GLH
+					root = c:DUMMY
 				}
 				desc = flavor_glh.3.desc_direct_appeal_to_khan
 			}
 			triggered_desc = {
 				trigger = {
-					NOT = { root = c:GLH }
+					NOT = { root = c:DUMMY }
 					scope:target_root_country = {
 						has_variable = endorses_ruler
 					}
@@ -205,7 +205,7 @@ flavor_glh.3 = {
 			}
 			triggered_desc = {
 				trigger = {
-					NOT = { root = c:GLH }
+					NOT = { root = c:DUMMY }
 					scope:target_root_country = {
 						has_variable = endorses_pretender
 					}
@@ -233,7 +233,7 @@ flavor_glh.3 = {
 		name = flavor_glh.3.a
 		historical_option = yes
 		trigger = {
-			root = c:GLH
+			root = c:DUMMY
 		}
 
 		scope:target_root_country = {
@@ -252,7 +252,7 @@ flavor_glh.3 = {
 	option = {
 		name = flavor_glh.3.b
 		trigger = {
-			root = c:GLH
+			root = c:DUMMY
 		}
 
 		scope:target_root_country = {
@@ -272,7 +272,7 @@ flavor_glh.3 = {
 		name = flavor_glh.3.c
 		trigger = {
 			NOT = {
-				root = c:GLH
+				root = c:DUMMY
 			}	
 		}
 
@@ -300,115 +300,3 @@ flavor_glh.3 = {
 	}
 }
 
-flavor_glh.1000 = {
-	hide_portraits = yes
-	type = country_event
-	title = flavor_glh.1000.title
-	desc = flavor_glh.1000.desc
-	outcome = neutral
-
-	major = yes
-
-	major_trigger = {
-		exists = capital
-		capital.sub_continent = sub_continent:eastern_europe
-	}
-
-	illustration_tags = {
-		10 = regular
-		10 = interior
-	}
-
-	immediate = {
-		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
-
-		international_organization:tatar_yoke = {
-			random_country_with_special_status_of_type = {
-				type = tatar_tax_collector
-				save_scope_as = old_tax_collector
-			}
-		}
-		international_organization:tatar_yoke.leader_country = {
-			save_scope_as = target
-		}
-	}
-
-	option = {
-		name = flavor_glh.1000.a
-
-		international_organization:tatar_yoke = {
-			international_organization_remove_special_status = {
-				type = special_status:tatar_tax_collector
-				country = scope:old_tax_collector
-			}
-			international_organization_add_special_status = {
-				type = special_status:tatar_tax_collector
-				country = scope:actor
-			}
-		}
-		scope:actor = {
-			add_opinion = {
-				target = scope:target
-				modifier = opinion_tax_collector_granted
-			}
-		}
-		scope:old_tax_collector = {
-			add_opinion = {
-				target = scope:target
-				modifier = opinion_tax_collector_revoked
-			}
-		}
-		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 10
-				scope:target = {
-					is_allied_with = {
-						target = scope:actor
-					}
-				}
-			}
-			modifier = {
-				factor = 0.1
-				scope:target = {
-					opinion = {
-						target = scope:actor
-						value < 50
-					}
-				}
-			}
-			modifier = {
-				factor = 10
-				scope:target = {
-					opinion = {
-						target = scope:actor
-						value > 100
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				scope:target = {
-					opinion = {
-						target = scope:old_tax_collector
-						value > 75
-					}
-				}
-			}
-		}
-	}
-
-	option = {
-		name = flavor_glh.1000.b
-
-		scope:actor = {
-			add_opinion = {
-				target = scope:target
-				modifier = opinion_tax_collector_rejected
-			}
-		}
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}

@@ -10,7 +10,7 @@ flavor_hab.1 = { #Johann Ribi von Lenzburg
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -41,7 +41,7 @@ flavor_hab.1 = { #Johann Ribi von Lenzburg
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 		religion = religion:catholic
 	}
 
@@ -58,9 +58,9 @@ flavor_hab.1 = { #Johann Ribi von Lenzburg
 		name = flavor_hab.1.b
 
 		scope:target_character = {
-			move_country = c:PAP
+			move_country = c:DUMMY
 		}
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = good_papal_relations
@@ -79,7 +79,7 @@ flavor_hab.2 = { #Liber certarum historiarum
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -161,7 +161,7 @@ flavor_hab.3 = { #Loss of the Habsburg
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -208,9 +208,9 @@ flavor_hab.4 = { #Goldenes Dachl Innsbruck
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -289,7 +289,7 @@ flavor_hab.5 = { #Meteorite of Ensisheim
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -321,7 +321,7 @@ flavor_hab.6 = { #Generallandtag
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -354,7 +354,7 @@ flavor_hab.7 = { #Reichshofrat
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -397,9 +397,9 @@ flavor_hab.8 = { #Monastery Reform of Melk
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -449,9 +449,9 @@ flavor_hab.9 = { #Concordat of Vienna
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -468,8 +468,8 @@ flavor_hab.9 = { #Concordat of Vienna
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:PAP
-		opinion = { target = c:PAP value >= 0 }
+		country_exists = c:DUMMY
+		opinion = { target = c:DUMMY value >= 0 }
 		is_leader_of_international_organization = international_organization:hre
 	}
 
@@ -501,9 +501,9 @@ flavor_hab.10 = { #Cathedral of Graz Fresco
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -571,7 +571,7 @@ flavor_hab.11 = { #AEIOU
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -618,7 +618,7 @@ flavor_hab.12 = { #Kaspar Schlick
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -680,7 +680,7 @@ flavor_hab.13 = { #Cameralism in Austria
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -760,7 +760,7 @@ flavor_hab.14 = { #Tractatus de iuribus incorporalibus
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -811,7 +811,7 @@ flavor_hab.15 = { #Founding of the Wiener Zeitung
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -866,7 +866,7 @@ flavor_hab.16 = { #Melchior Khlesl
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -948,8 +948,8 @@ flavor_hab.17 = { #Expulsion of Lutherans in Salzburg
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = SLZ
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1082,7 +1082,7 @@ flavor_hab.18 = { #Geheime Kabinettskanzlei
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1125,7 +1125,7 @@ flavor_hab.19 = { #Prince Eugene of Savoy
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1190,7 +1190,7 @@ flavor_hab.20 = { #Ludwig van Beethoven
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1250,7 +1250,7 @@ flavor_hab.21 = { #Wolfgang Amadeus Mozart
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -1305,7 +1305,7 @@ flavor_hab.22 = { #Resettlements into Hungary
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1364,7 +1364,7 @@ flavor_hab.23 = { #Klemens von Metternich
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1414,7 +1414,7 @@ flavor_hab.24 = { #Johann Wenzel Radetzky
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1483,7 +1483,7 @@ flavor_hab.25 = { #Schönbrunn Palace
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1570,7 +1570,7 @@ flavor_hab.26 = { #Joseph Haydn
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1641,7 +1641,7 @@ flavor_hab.27 = { #Imperial Colors
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1684,7 +1684,7 @@ flavor_hab.29 = { #Finishing the St. Stephen's Cathedral
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1741,7 +1741,7 @@ flavor_hab.30 = { #University of Vienna
 	historical_info = flavor_hab.30.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1794,7 +1794,7 @@ flavor_hab.31 = { #Vienna Gesera
 	historical_info = flavor_hab.31.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1918,7 +1918,7 @@ flavor_hab.32 = { #Paracelsus
 	historical_info = flavor_hab.32.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1980,7 +1980,7 @@ flavor_hab.33 = { #Oswald von Wolkenstein
 	historical_info = flavor_hab.33.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2047,7 +2047,7 @@ flavor_hab.34 = { #Petrus Zwicker
 	historical_info = flavor_hab.34.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2122,8 +2122,8 @@ flavor_hab.35 = { #Peasant Uprising in Salzburg
 	historical_info = flavor_hab.35.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = SLZ
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2201,8 +2201,8 @@ flavor_hab.36 = { #The Peasant Rebellion Spreads
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = SLZ
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2332,7 +2332,7 @@ flavor_hab.38 = { #The Tomb of the First Emperor
 	historical_info = flavor_hab.38.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2398,7 +2398,7 @@ flavor_hab.39 = { #Reichstürkenhilfe
 	historical_info = flavor_hab.39.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2419,7 +2419,7 @@ flavor_hab.39 = { #Reichstürkenhilfe
 		current_date > 476.9.4
 		is_leader_of_international_organization = international_organization:hre
 		has_ruler = yes
-		is_at_war_with = c:TUR
+		is_at_war_with = c:DUMMY
 	}
 
 	option = {
@@ -2452,7 +2452,7 @@ flavor_hab.40 = { #The Frauenstein Madonna
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2539,7 +2539,7 @@ flavor_hab.41 = { #The Ambras Castle
 	historical_info = flavor_hab.41.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2585,7 +2585,7 @@ flavor_hab.42 = { #The Trial of Martin Siebenbürger
 	historical_info = flavor_hab.42.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2654,7 +2654,7 @@ flavor_hab.43 = { #A Merchant of Influence
 	historical_info = flavor_hab.43.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2716,7 +2716,7 @@ flavor_hab.44 = { #An Appeal for Salamanca's Dismissal
 	historical_info = flavor_hab.44.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2765,7 +2765,7 @@ flavor_hab.45 = { #The Wiener Neustadt Blood Court
 	historical_info = flavor_hab.45.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2833,7 +2833,7 @@ flavor_hab.46 = { #Fall of Hungary
 	historical_info = flavor_hab.46.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2848,16 +2848,16 @@ flavor_hab.46 = { #Fall of Hungary
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:HUN
-		country_exists = c:TUR
-		NOT = { in_union_with = c:HUN }
-		c:HUN = {
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		NOT = { in_union_with = c:DUMMY }
+		c:DUMMY = {
 			has_royal_marriage_with = root
-			has_truce_with = c:TUR
+			has_truce_with = c:DUMMY
 		}
-		c:TUR = {
+		c:DUMMY = {
 			any_owned_location = {
-				previous_owner = c:HUN
+				previous_owner = c:DUMMY
 				region = region:carpathia_region
 			}
 		}
@@ -2866,10 +2866,10 @@ flavor_hab.46 = { #Fall of Hungary
 	option = {
 		name = flavor_hab.46.a
 		historical_option = yes
-		add_casus_belli = {	target = c:HUN	type = casus_belli:cb_claim_throne	}
+		add_casus_belli = {	target = c:DUMMY	type = casus_belli:cb_claim_throne	}
 		every_known_country = {
 			limit = {
-				is_neighbor_of = c:HUN
+				is_neighbor_of = c:DUMMY
 			}
 			add_opinion = { target = root modifier = hab_claimed_hungary }
 		}
@@ -2890,7 +2890,7 @@ flavor_hab.47 = { #A Palace of Splendor
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2935,7 +2935,7 @@ flavor_hab.48 = { #Bernhard von Cles
 	historical_info = flavor_hab.48.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2995,7 +2995,7 @@ flavor_hab.49 = { #Georg Tannstetter
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3051,7 +3051,7 @@ flavor_hab.50 = { #Tannstetter Creates the Tabula Hungariae
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3074,7 +3074,7 @@ flavor_hab.50 = { #Tannstetter Creates the Tabula Hungariae
 		character:hab_tannstetter ?= {
 			is_alive = yes
 		}
-		country_exists = c:HUN
+		country_exists = c:DUMMY
 		owns = location:vienna
 	}
 
@@ -3094,7 +3094,7 @@ flavor_hab.50 = { #Tannstetter Creates the Tabula Hungariae
 				}
 			}
 		}
-		c:HUN = {
+		c:DUMMY = {
 			add_opinion = {
 				modifier = hab_published_map_of_hungary
 				target = root
@@ -3141,7 +3141,7 @@ flavor_hab.52 = { #Fortifying Vienna
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3195,7 +3195,7 @@ flavor_hab.53 = { #Tearing Down the Walls of Vienna
 	historical_info = flavor_hab.53.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3235,7 +3235,7 @@ flavor_hab.54 = { #Landtafel
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3276,7 +3276,7 @@ flavor_hab.55 = { #Military Frontier
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3284,7 +3284,7 @@ flavor_hab.55 = { #Military Frontier
 
 	trigger = {
 		current_date > 476.9.4
-		is_neighbor_of = c:TUR
+		is_neighbor_of = c:DUMMY
 		has_advance = military_border
 	}
 
@@ -3312,7 +3312,7 @@ flavor_hab.56 = { #Populating the Military Frontier
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3321,13 +3321,13 @@ flavor_hab.56 = { #Populating the Military Frontier
 	immediate = {
 		random_owned_location = {
 			limit = {
-				any_neighbor_location = { owner ?= c:TUR  }
+				any_neighbor_location = { owner ?= c:DUMMY  }
 			}
 			save_scope_as = target_location_1
 		}
 		random_owned_location = {
 			limit = {
-				any_neighbor_location = { owner ?= c:TUR  }
+				any_neighbor_location = { owner ?= c:DUMMY  }
 				NOT = { this = scope:target_location_1 }
 			}
 			save_scope_as = target_location_2
@@ -3340,11 +3340,11 @@ flavor_hab.56 = { #Populating the Military Frontier
 	trigger = {
 		current_date > 476.9.4
 		at_war = no
-		is_neighbor_of = c:TUR
+		is_neighbor_of = c:DUMMY
 		any_owned_location = {
 			is_capital = no
 			any_neighbor_location = {
-				owner ?= c:TUR
+				owner ?= c:DUMMY
 			}
 			count > 4
 		}
@@ -3389,8 +3389,8 @@ flavor_hab.57 = { #Peasant Revolt in Tirol
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3507,7 +3507,7 @@ flavor_hab.58 = { #An Elephant Gift
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3515,8 +3515,8 @@ flavor_hab.58 = { #An Elephant Gift
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:POR
-		c:POR = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_royal_marriage_with = root
 			has_presence_in = area:taiwan_area
 		}
@@ -3526,7 +3526,7 @@ flavor_hab.58 = { #An Elephant Gift
 		name = flavor_hab.58.a
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
-		c:POR = {
+		c:DUMMY = {
 			add_opinion = {
 				modifier = hab_gifted_an_elephant
 				target = root
@@ -3551,7 +3551,7 @@ flavor_hab.59 = { #Expanding the Hofburg
 	historical_info = flavor_hab.59.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3607,7 +3607,7 @@ flavor_hab.60 = { #Giovanni Pierluigi da Palestrina
 	historical_info = flavor_hab.60.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3674,7 +3674,7 @@ flavor_hab.61 = { #Pieter Bruegel
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3740,7 +3740,7 @@ flavor_hab.62 = { #Kaiserkrone
 	historical_info = flavor_hab.62.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3804,7 +3804,7 @@ flavor_hab.64 = { #Institutionalizing the Geheimer Rat
 	}
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3840,7 +3840,7 @@ flavor_hab.65 = { #The Hammer of Heretics
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3909,7 +3909,7 @@ flavor_hab.66 = { #Gundakar von Liechtenstein
 	historical_info = flavor_hab.66.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3989,7 +3989,7 @@ flavor_hab.67 = { #Karl von Liechtenstein
 	historical_info = flavor_hab.67.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4070,7 +4070,7 @@ flavor_hab.68 = { #Maximilian von Liechtenstein
 	historical_info = flavor_hab.68.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4153,7 +4153,7 @@ flavor_hab.69 = { #Maximilian Trauttmansdorff
 	historical_info = flavor_hab.69.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4210,7 +4210,7 @@ flavor_hab.70 = { #Franz von Dietrichstein
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4265,7 +4265,7 @@ flavor_hab.71 = { #Gerhard von Questenberg
 	historical_info = flavor_hab.71.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4317,7 +4317,7 @@ flavor_hab.72 = { #Johann Baptist Verda
 	historical_info = flavor_hab.72.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4369,7 +4369,7 @@ flavor_hab.73 = { #Nicolas Esterhazy
 	historical_info = flavor_hab.73.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4443,7 +4443,7 @@ flavor_hab.74 = { #Vilem Slavata
 	historical_info = flavor_hab.74.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4502,7 +4502,7 @@ flavor_hab.75 = { #Geheimer Rat Growing Inefficient
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4561,7 +4561,7 @@ flavor_hab.76 = { #The Marian Column
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4627,7 +4627,7 @@ flavor_hab.77 = { #Antonio Cesti
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4690,8 +4690,8 @@ flavor_hab.78 = { #Disempowering the Tirolean Parliament
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4769,7 +4769,7 @@ flavor_hab.79 = { #St Stephens Cathedral Bell
 	historical_info = flavor_hab.79.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4828,7 +4828,7 @@ flavor_hab.80 = { #König Ottokars Glück und Ende
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4891,7 +4891,7 @@ flavor_hab.81 = { #Kingdom of Galicia-Lodomeria
 	historical_info = flavor_hab.81.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -4981,7 +4981,7 @@ flavor_hab.82 = { #Johann Anton von Pergen
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5079,7 +5079,7 @@ flavor_hab.84 = { #Bocskais Uprising
 	historical_info = flavor_hab.84.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5189,7 +5189,7 @@ flavor_hab.85 = { #Bethlens Uprising
 	historical_info = flavor_hab.85.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5301,7 +5301,7 @@ flavor_hab.86 = { #Rakoczis Uprising
 	historical_info = flavor_hab.86.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5401,7 +5401,7 @@ flavor_hab.88 = { #Primož Trubar's Religious Mission
 	historical_info = flavor_hab.88.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5497,7 +5497,7 @@ flavor_hab.90 = { #Böhmer Publishes the Regesta Imperii
 	historical_info = flavor_hab.90.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5559,7 +5559,7 @@ flavor_hab.91 = { #The Biedermeier Era
 	historical_info = flavor_hab.91.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5598,7 +5598,7 @@ flavor_hab.92 = { #Johann Strauss
 	historical_info = flavor_hab.92.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5658,7 +5658,7 @@ flavor_hab.93 = { #Imperial Artillery
 	historical_info = flavor_hab.93.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5731,7 +5731,7 @@ flavor_hab.94 = { #Multicultural Empire
 	historical_info = flavor_hab.94.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5765,7 +5765,7 @@ flavor_hab.95 = { #Wiener Klassik
 	historical_info = flavor_hab.95.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5806,7 +5806,7 @@ flavor_hab.96 = { #The Pragmatic Sanction
 	historical_info = flavor_hab.96.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5855,7 +5855,7 @@ flavor_hab.97 = { #Marianna Martines
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5910,7 +5910,7 @@ flavor_hab.98 = { #Antonio Salieri
 	historical_info = flavor_hab.98.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -5967,7 +5967,7 @@ flavor_hab.99 = { #Proclaiming the Austrian Empire
 	historical_info = flavor_hab.99.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -6030,7 +6030,7 @@ flavor_hab.100 = { #Johann Lukas von Hildebrandt
 	historical_info = flavor_hab.100.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -6088,7 +6088,7 @@ flavor_hab.101 = { #The Belvedere Palace
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -6135,7 +6135,7 @@ flavor_hab.102 = { #Composing the Kaiserhymne
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -6220,7 +6220,7 @@ flavor_hab.103 = { #Regulating the Danube
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -6313,9 +6313,9 @@ flavor_hab.1000 = { #Forge the Privilegium Maius
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = STY
-		tag = TIR
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -6684,9 +6684,9 @@ flavor_hab.1008 = { #Grant ourselves the Privilegium Maius
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = STY
-		tag = TIR
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -6745,9 +6745,9 @@ flavor_hab.1009 = { #Rudolfine House Rules - formerly flavor_hab.28
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = STY
-		tag = TIR
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -6920,7 +6920,7 @@ flavor_hab.1101 = { #Permanent Capital for the Habsburgs
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -7008,9 +7008,9 @@ flavor_hab.1200 = { #The beginning of Silver Mining in Schwaz
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = STY
-		tag = TIR
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -7056,9 +7056,9 @@ flavor_hab.1201 = { #Schwaz Silver Mine
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = STY
-		tag = TIR
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -7105,9 +7105,9 @@ flavor_hab.1202 = { #Schladminger Bergbrief
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = STY
-		tag = TIR
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -7190,9 +7190,9 @@ flavor_hab.1300 = { #Maximilian as Patron of the Arts
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -7246,9 +7246,9 @@ flavor_hab.1301 = { #College of Poets - Conrad Celtes
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -7323,9 +7323,9 @@ flavor_hab.1302 = { #Theuerdank
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -7382,9 +7382,9 @@ flavor_hab.1303 = { #Johannes Cuspinian
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -7470,7 +7470,7 @@ flavor_hab.1400 = { #Mailberger Bund and Noble resistance
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -7583,7 +7583,7 @@ flavor_hab.1401 = { #Ulrich von Eyczing declares for the rebels
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -7653,7 +7653,7 @@ flavor_hab.1402 = { #Mailberger Bund Demands Privileges
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -7718,7 +7718,7 @@ flavor_hab.1403 = { #Styrian Noble Rebellion
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -7801,7 +7801,7 @@ flavor_hab.1500 = { #Georg von Peuerbach
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -7967,7 +7967,7 @@ flavor_hab.1600 = { #Mandate of Ofen
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -8046,7 +8046,7 @@ flavor_hab.1601 = { #Johann Pfauser becomes Court Preacher in Austria
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -8131,7 +8131,7 @@ flavor_hab.1602 = { #Protestant Nobles demand lutheran confession for Austria
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -8235,7 +8235,7 @@ flavor_hab.1603 = { #Harnessed Diet of Augsburg and Augsburg Interim
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -8356,7 +8356,7 @@ flavor_hab.1604 = { #Jesuit Colleges in Bohemia
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -8459,7 +8459,7 @@ flavor_hab.1605 = { #Lutherans are unhappy with Jesuit Colleges
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -8552,7 +8552,7 @@ flavor_hab.1606 = { #Pope and Spain is unhappy about Jesuit refusal
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -8599,7 +8599,7 @@ flavor_hab.1606 = { #Pope and Spain is unhappy about Jesuit refusal
 				has_policy = jesuits_allowed
 			}
 		}
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 	}
 
 	option = {
@@ -8608,7 +8608,7 @@ flavor_hab.1606 = { #Pope and Spain is unhappy about Jesuit refusal
 
 		add_policy = policy:jesuits_allowed
 
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = favors_catholics_catholics }
 		}
 		scope:catholic_strong_country = {
@@ -8619,7 +8619,7 @@ flavor_hab.1606 = { #Pope and Spain is unhappy about Jesuit refusal
 	option = {
 		name = flavor_hab.1606.b
 
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = favors_protestants_catholics }
 		}
 		scope:catholic_strong_country = {
@@ -8639,7 +8639,7 @@ flavor_hab.1607 = { #Monastery Council of Austria
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -8694,7 +8694,7 @@ flavor_hab.1608 = { #Confessio Bohemica
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -8739,11 +8739,11 @@ flavor_hab.1608 = { #Confessio Bohemica
 
 		if = {
 			limit = {
-				c:BOH ?= {
-					in_union_with = c:HAB
+				c:DUMMY ?= {
+					in_union_with = c:DUMMY
 				}
 			}
-			c:BOH = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = royal_letter_of_bohemia }
 			}
 		}
@@ -8754,11 +8754,11 @@ flavor_hab.1608 = { #Confessio Bohemica
 		name = flavor_hab.1608.b
 		if = {
 			limit = {
-				c:BOH ?= {
-					in_union_with = c:HAB
+				c:DUMMY ?= {
+					in_union_with = c:DUMMY
 				}
 			}
-			c:BOH = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = refused_royal_letter_of_bohemia }
 			}
 		}
@@ -8779,12 +8779,12 @@ flavor_hab.1608 = { #Confessio Bohemica
 		}
 		if = {
 			limit = {
-				c:BOH ?= {
-					in_union_with = c:HAB
+				c:DUMMY ?= {
+					in_union_with = c:DUMMY
 					religion = religion:lutheran
 				}
 			}
-			c:BOH = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = royal_letter_of_bohemia }
 			}
 		}
@@ -8821,7 +8821,7 @@ flavor_hab.1609 = { #Austrian Recatholicization - formerly flavor_hab.63
 	}
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -8891,7 +8891,7 @@ flavor_hab.1700 = { #Founding a state owned bank for Austria
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -8955,7 +8955,7 @@ flavor_hab.1701 = { #The fate of the state owned bank
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -9008,7 +9008,7 @@ flavor_hab.1800 = { #Mühlviertel Textile Production
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -9071,7 +9071,7 @@ flavor_hab.1801 = { #Mühlviertel Textile Production Success
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -9120,7 +9120,7 @@ flavor_hab.1802 = { #Mühlviertel Textile Production Failure
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -9173,7 +9173,7 @@ flavor_hab.1900 = {  #Samuel Oppenheimer
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -9233,7 +9233,7 @@ flavor_hab.1901 = {  #Samson Wertheimer
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -9302,7 +9302,7 @@ flavor_hab.1902 = { #The Court Bankers finance in wartime
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -9368,7 +9368,7 @@ flavor_hab.1903 = { #The Court Bankers finance in wartime
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -9440,7 +9440,7 @@ flavor_hab.2000 = { #Wenzel Anton Kaunitz - Diplomatic Revolution
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -9535,7 +9535,7 @@ flavor_hab.2001 = { #Diplomatic Revolution - Rivals Response
 	option = {
 		name = flavor_hab.2001.a
 
-		remove_rival = c:HAB
+		remove_rival = c:DUMMY
 	}
 
 	option = {
@@ -9558,7 +9558,7 @@ flavor_hab.2100 = { #Reforms of Maria Theresia and Joseph II
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -9603,7 +9603,7 @@ flavor_hab.2101 = { #Pushback against enlightenment reforms
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 6
@@ -9671,7 +9671,7 @@ flavor_hab.2102 = { #Embracement of enlighten reforms
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -9719,7 +9719,7 @@ flavor_hab.2103 = { #The Raabization of the Land Management - formerly flavor_ha
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -9798,7 +9798,7 @@ flavor_hab.2104 = { #Reforms of Adam František Kollár - formerly flavor_hab.89
 	historical_info = flavor_hab.2104.historical_info
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -9871,9 +9871,9 @@ flavor_hab.2200 = { #Growth of Wiener Neustadt
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -9934,9 +9934,9 @@ flavor_hab.2201 = { #Bastion of Wiener Neustadt
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
-		tag = TIR
-		tag = STY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -10004,7 +10004,7 @@ flavor_hab.2202 = { #Military Academy of Maria Theresia
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -10074,7 +10074,7 @@ flavor_hab.2300 = { #Burgundian Marriage
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -10084,7 +10084,7 @@ flavor_hab.2300 = { #Burgundian Marriage
 		ruler = {
 			save_scope_as = austrian_ruler
 		}
-		c:BUR = {
+		c:DUMMY = {
 			ruler = {
 				save_scope_as = burgundian_ruler
 			}
@@ -10093,18 +10093,18 @@ flavor_hab.2300 = { #Burgundian Marriage
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:BUR
-		NOT = { c:BUR = { is_rival_of = root } }
-		NOT = { c:BUR = { is_enemy_of = root } }
+		country_exists = c:DUMMY
+		NOT = { c:DUMMY = { is_rival_of = root } }
+		NOT = { c:DUMMY = { is_enemy_of = root } }
 		has_ruler = yes
 		government_type = government_type:monarchy
-		NOT = { in_union_with = c:BUR }
-		NOT = { has_royal_marriage_with = c:BUR }
+		NOT = { in_union_with = c:DUMMY }
+		NOT = { has_royal_marriage_with = c:DUMMY }
 		ruler = {
 			is_female = no
 			is_married = no
 		}
-		c:BUR = {
+		c:DUMMY = {
 			government_type = government_type:monarchy
 			has_ruler = yes
 			ruler ?= {
@@ -10118,7 +10118,7 @@ flavor_hab.2300 = { #Burgundian Marriage
 	option = {
 		name = flavor_hab.2300.a
 		historical_option = yes
-		c:BUR = {
+		c:DUMMY = {
 			trigger_event_non_silently = { id = flavor_hab.2301 days = 7 }
 		}
 	}
@@ -10141,12 +10141,12 @@ flavor_hab.2301 = { #An Offer of Marriage - Burgundy
         name = flavor_hab.2301.a
 		historical_option = yes
 		add_legitimacy = legitimacy_severe_bonus
-        c:HAB = { trigger_event_non_silently = { id = flavor_hab.2302 days = 20 } }
+        c:DUMMY = { trigger_event_non_silently = { id = flavor_hab.2302 days = 20 } }
 		ruler ?= {
 			marry_character = scope:austrian_ruler
 		}
 		add_opinion_mutual_effect = {
-			target = c:HAB
+			target = c:DUMMY
 			modifier = hab_austro_burgundian_friendship
 		}
     }
@@ -10154,9 +10154,9 @@ flavor_hab.2301 = { #An Offer of Marriage - Burgundy
     option = {
         name = flavor_hab.2301.b
 		add_prestige = prestige_severe_bonus
-        c:HAB = { trigger_event_non_silently = { id = flavor_hab.2303 days = 20 } }
+        c:DUMMY = { trigger_event_non_silently = { id = flavor_hab.2303 days = 20 } }
 		add_opinion_mutual_effect = {
-			target = c:HAB
+			target = c:DUMMY
 			modifier = hab_austro_burgundian_friendship_refused
 		}
     }
@@ -10177,7 +10177,7 @@ flavor_hab.2302 = { #Positive Response
 				marry_character = scope:austrian_ruler
 			}
 			add_opinion_mutual_effect = {
-				target = c:BUR
+				target = c:DUMMY
 				modifier = hab_austro_burgundian_friendship
 			}
 		}
@@ -10197,7 +10197,7 @@ flavor_hab.2303 = { #Negative Response
         name = flavor_hab.2303.a
 		show_as_tooltip = {
 			add_opinion_mutual_effect = {
-				target = c:BUR
+				target = c:DUMMY
 				modifier = hab_austro_burgundian_friendship_refused
 			}
 		}
@@ -10219,7 +10219,7 @@ flavor_hab.2400 = { #Bohemian Marriage
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -10230,7 +10230,7 @@ flavor_hab.2400 = { #Bohemian Marriage
 		ruler = {
 			save_scope_as = austrian_ruler
 		}
-		c:BOH = {
+		c:DUMMY = {
 			ruler = {
 				save_scope_as = bohemian_ruler
 				random_child = {
@@ -10249,15 +10249,15 @@ flavor_hab.2400 = { #Bohemian Marriage
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:BOH
-		NOT = { c:BOH = { is_rival_of = root } }
-		NOT = { c:BOH = { is_enemy_of = root } }
+		country_exists = c:DUMMY
+		NOT = { c:DUMMY = { is_rival_of = root } }
+		NOT = { c:DUMMY = { is_enemy_of = root } }
 		has_ruler = yes
 		has_regent = no
 		in_civil_war = no
 		government_type = government_type:monarchy
-		NOT = { in_union_with = c:BOH }
-		NOT = { has_royal_marriage_with = c:BOH }
+		NOT = { in_union_with = c:DUMMY }
+		NOT = { has_royal_marriage_with = c:DUMMY }
 		ruler = {
 			is_female = no
 			is_married = no
@@ -10265,7 +10265,7 @@ flavor_hab.2400 = { #Bohemian Marriage
 			has_dynasty = yes
 			is_alive = yes
 		}
-		c:BOH = {
+		c:DUMMY = {
 			government_type = government_type:monarchy
 			has_ruler = yes
 			ruler = {
@@ -10283,7 +10283,7 @@ flavor_hab.2400 = { #Bohemian Marriage
 	option = {
 		name = flavor_hab.2400.a
 		historical_option = yes
-		c:BOH = {
+		c:DUMMY = {
 			trigger_event_non_silently = { id = flavor_hab.2401 days = 7 }
 		}
 	}
@@ -10306,12 +10306,12 @@ flavor_hab.2401 = { #An Offer of Marriage - Bohemia
         name = flavor_hab.2401.a
 		historical_option = yes
 		add_legitimacy = legitimacy_severe_bonus
-        c:HAB = { trigger_event_non_silently = { id = flavor_hab.2402 days = 20 } }
+        c:DUMMY = { trigger_event_non_silently = { id = flavor_hab.2402 days = 20 } }
 		show_as_tooltip = {
 			scope:target_princess ?= {
 				marry_character = scope:austrian_ruler
 			}
-			c:HAB = {
+			c:DUMMY = {
 				add_opinion = {
 					modifier = hab_austro_bohemian_friendship
 					target = root
@@ -10327,9 +10327,9 @@ flavor_hab.2401 = { #An Offer of Marriage - Bohemia
     option = {
         name = flavor_hab.2401.b
 		add_prestige = prestige_severe_bonus
-        c:HAB = { trigger_event_non_silently = { id = flavor_hab.2403 days = 20 } }
+        c:DUMMY = { trigger_event_non_silently = { id = flavor_hab.2403 days = 20 } }
 		show_as_tooltip = {
-			c:HAB = {
+			c:DUMMY = {
 				add_opinion = {
 					modifier = hab_austro_bohemian_friendship_refused
 					target = root
@@ -10356,7 +10356,7 @@ flavor_hab.2402 = { #Positive Response
 		scope:target_princess ?= {
 			marry_character = scope:austrian_ruler
 		}
-		c:BOH = {
+		c:DUMMY = {
 			add_opinion = {
 				modifier = hab_austro_bohemian_friendship
 				target = root
@@ -10380,7 +10380,7 @@ flavor_hab.2403 = { #Negative Response
 
     option = {
         name = flavor_hab.2403.a
-		c:BOH = {
+		c:DUMMY = {
 			add_opinion = {
 				modifier = hab_austro_bohemian_friendship_refused
 				target = root
@@ -10407,7 +10407,7 @@ flavor_hab.2500 = { #The Austro-Prussian Rivalry
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -10422,19 +10422,19 @@ flavor_hab.2500 = { #The Austro-Prussian Rivalry
 		is_leader_of_international_organization = international_organization:hre
 		AND = {
 			tag_exists = PRU
-			country_exists = c:PRU
+			country_exists = c:DUMMY
 		}
-		NOT = { is_allied_with = { target = c:PRU } }
-		NOT = { has_truce_with = c:PRU }
-		c:PRU = { NOT = { is_subject_of = root } }
-		c:PRU = {
+		NOT = { is_allied_with = { target = c:DUMMY } }
+		NOT = { has_truce_with = c:DUMMY }
+		c:DUMMY = { NOT = { is_subject_of = root } }
+		c:DUMMY = {
 			OR = {
 				is_rival_of = ROOT
 				is_enemy_of = ROOT
 				country_rank_level > 2
 			}
 		}
-		c:PRU = {
+		c:DUMMY = {
 			any_owned_location = {
 				is_core_of = root
 			}
@@ -10450,14 +10450,14 @@ flavor_hab.2500 = { #The Austro-Prussian Rivalry
 		name = flavor_hab.2500.a
 		historical_option = yes
 		add_casus_belli = {
-			target = c:PRU
+			target = c:DUMMY
 			type = casus_belli:cb_humiliate
 		}
-		add_historical_rival_scripted = { target = c:PRU trigger_recipient_event = no }
-		c:PRU = {
-			add_historical_rival_scripted = { target = c:HAB trigger_recipient_event = no }
+		add_historical_rival_scripted = { target = c:DUMMY trigger_recipient_event = no }
+		c:DUMMY = {
+			add_historical_rival_scripted = { target = c:DUMMY trigger_recipient_event = no }
 		}
-		c:PRU = { trigger_event_non_silently = { id = flavor_hab.2501 days = 20 } }
+		c:DUMMY = { trigger_event_non_silently = { id = flavor_hab.2501 days = 20 } }
 		every_country = {
 			limit = {
 				NOT = {
@@ -10470,8 +10470,8 @@ flavor_hab.2500 = { #The Austro-Prussian Rivalry
 					}
 				}
 				OR = {
-					is_rival_of = c:PRU
-					is_enemy_of = c:PRU
+					is_rival_of = c:DUMMY
+					is_enemy_of = c:DUMMY
 				}
 			}
 			add_opinion = { target = root modifier = opinion_anti_prussian_coalition }
@@ -10496,14 +10496,14 @@ flavor_hab.2501 = { #Prussian Event about the rivalry
         name = flavor_hab.2501.a
 		historical_option = yes
 		show_as_tooltip = {
-			c:HAB = {
+			c:DUMMY = {
 				add_casus_belli = {
-					target = c:PRU
+					target = c:DUMMY
 					type = casus_belli:cb_humiliate
 				}
-				add_historical_rival_scripted = { target = c:PRU trigger_recipient_event = no }
-				c:PRU = {
-					add_historical_rival_scripted = { target = c:HAB trigger_recipient_event = no }
+				add_historical_rival_scripted = { target = c:DUMMY trigger_recipient_event = no }
+				c:DUMMY = {
+					add_historical_rival_scripted = { target = c:DUMMY trigger_recipient_event = no }
 				}
 				every_country = {
 					limit = {
@@ -10517,8 +10517,8 @@ flavor_hab.2501 = { #Prussian Event about the rivalry
 							}
 						}
 						OR = {
-							is_rival_of = c:PRU
-							is_enemy_of = c:PRU
+							is_rival_of = c:DUMMY
+							is_enemy_of = c:DUMMY
 						}
 					}
 					add_opinion = { target = root modifier = opinion_anti_prussian_coalition }
@@ -10543,7 +10543,7 @@ flavor_hab.2600 = { #Spanish Marriage
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAB
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -10555,14 +10555,14 @@ flavor_hab.2600 = { #Spanish Marriage
 		}
 		if = {
 			limit = {
-				country_exists = c:CAS
+				country_exists = c:DUMMY
 			}
-			c:CAS = {
+			c:DUMMY = {
 				save_scope_as = target_spain
 			}
 		}
 		else = {
-			c:SPA = {
+			c:DUMMY = {
 				save_scope_as = target_spain
 			}
 		}
@@ -10585,22 +10585,22 @@ flavor_hab.2600 = { #Spanish Marriage
 	trigger = {
 		current_date > 476.9.4
 		OR = {
-			country_exists = c:CAS
-			country_exists = c:SPA
+			country_exists = c:DUMMY
+			country_exists = c:DUMMY
 		}
 		trigger_if = {
 			limit = {
-				country_exists = c:CAS
+				country_exists = c:DUMMY
 			}
 			NOT = {
-				is_rival_of = c:CAS
+				is_rival_of = c:DUMMY
 			}
 			NOT = {
-				is_enemy_of = c:CAS
+				is_enemy_of = c:DUMMY
 			}
-			NOT = { in_union_with = c:CAS }
-			NOT = { has_royal_marriage_with = c:CAS }
-			c:CAS = {
+			NOT = { in_union_with = c:DUMMY }
+			NOT = { has_royal_marriage_with = c:DUMMY }
+			c:DUMMY = {
 				government_type = government_type:monarchy
 				has_ruler = yes
 				ruler = {
@@ -10612,21 +10612,21 @@ flavor_hab.2600 = { #Spanish Marriage
 					}
 				}
 				OR = {
-					is_rival_of = c:FRA
-					is_enemy_of = c:FRA
+					is_rival_of = c:DUMMY
+					is_enemy_of = c:DUMMY
 				}
 			}
 		}
 		trigger_else = {
 			NOT = {
-				is_rival_of = c:SPA
+				is_rival_of = c:DUMMY
 			}
 			NOT = {
-				is_enemy_of = c:SPA
+				is_enemy_of = c:DUMMY
 			}
-			NOT = { in_union_with = c:SPA }
-			NOT = { has_royal_marriage_with = c:SPA }
-			c:SPA = {
+			NOT = { in_union_with = c:DUMMY }
+			NOT = { has_royal_marriage_with = c:DUMMY }
+			c:DUMMY = {
 				government_type = government_type:monarchy
 				has_ruler = yes
 				ruler = {
@@ -10638,14 +10638,14 @@ flavor_hab.2600 = { #Spanish Marriage
 					}
 				}
 				OR = {
-					is_rival_of = c:FRA
-					is_enemy_of = c:FRA
+					is_rival_of = c:DUMMY
+					is_enemy_of = c:DUMMY
 				}
 			}
 		}
 		OR = {
-			is_rival_of = c:FRA
-			is_enemy_of = c:FRA
+			is_rival_of = c:DUMMY
+			is_enemy_of = c:DUMMY
 		}
 		has_ruler = yes
 		government_type = government_type:monarchy
@@ -10681,11 +10681,11 @@ flavor_hab.2601 = { #An Offer of Marriage - Spain
         name = flavor_hab.2601.a
 		historical_option = yes
 		add_legitimacy = legitimacy_severe_bonus
-        c:HAB = { trigger_event_non_silently = { id = flavor_hab.2602 days = 20 } }
+        c:DUMMY = { trigger_event_non_silently = { id = flavor_hab.2602 days = 20 } }
 		scope:target_princess ?= {
 			marry_character = scope:austrian_ruler
 		}
-		c:HAB = {
+		c:DUMMY = {
 			add_opinion = {
 				modifier = hab_austro_spanish_friendship
 				target = root
@@ -10700,8 +10700,8 @@ flavor_hab.2601 = { #An Offer of Marriage - Spain
     option = {
         name = flavor_hab.2601.b
 		add_prestige = prestige_severe_bonus
-        c:HAB = { trigger_event_non_silently = { id = flavor_hab.2603 days = 20 } }
-		c:HAB = {
+        c:DUMMY = { trigger_event_non_silently = { id = flavor_hab.2603 days = 20 } }
+		c:DUMMY = {
 			add_opinion = {
 				modifier = hab_austro_spanish_friendship_refused
 				target = root
@@ -10728,7 +10728,7 @@ flavor_hab.2602 = { #Positive Response
 			scope:target_princess ?= {
 				marry_character = scope:austrian_ruler
 			}
-			c:HAB = {
+			c:DUMMY = {
 				add_opinion = {
 					modifier = hab_austro_spanish_friendship
 					target = root
@@ -10754,7 +10754,7 @@ flavor_hab.2603 = { #Negative Response
     option = {
         name = flavor_hab.2603.a
 		show_as_tooltip = {
-			c:HAB = {
+			c:DUMMY = {
 				add_opinion = {
 					modifier = hab_austro_bohemian_friendship_refused
 					target = root
@@ -10821,7 +10821,7 @@ flavor_hab.2603 = { #Negative Response
 # 				owner = root
 # 			}
 # 		}
-# 		NOT = { country_exists = c:HUN }
+# 		NOT = { country_exists = c:DUMMY }
 # 	}
 
 
@@ -10858,9 +10858,9 @@ flavor_hab.2603 = { #Negative Response
 # 	option = {
 # 		name = flavor_hab.22.b
 # 		destroy_rebel = scope:hungarian_nobles
-# 		create_country_from_cores_in_our_locations = c:HUN
-# 		c:HUN = {
-# 			make_subject_of = { target = c:HAB type = subject_type:dominion }
+# 		create_country_from_cores_in_our_locations = c:DUMMY
+# 		c:DUMMY = {
+# 			make_subject_of = { target = c:DUMMY type = subject_type:dominion }
 # 		}
 # 		add_government_power = government_power_weak_penalty
 # 	}

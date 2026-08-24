@@ -5,6 +5,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from m8_effect_scales import ADVANCE_EFFECT_SCALES, effect_value
+
 
 @dataclass(frozen=True)
 class RegionalTheme:
@@ -192,48 +194,43 @@ NODE_SUFFIXES: dict[str, tuple[tuple[str, str], ...]] = {
 }
 
 
-EFFECT_SCALES: dict[str, tuple[tuple[str, float, float], ...]] = {
+EFFECT_FIELDS: dict[str, tuple[str, ...]] = {
     "statecraft": (
-        ("country_cabinet_efficiency", 0.0040, 0.000003),
-        ("stability_cost_efficiency", 0.0080, 0.000003),
-        ("global_monthly_control", 0.00010, 0.0000003),
-        ("tax_income_efficiency", 0.0045, 0.000003),
-        ("legislative_efficiency", 0.0120, 0.000004),
+        "country_cabinet_efficiency",
+        "stability_cost_efficiency",
+        "global_monthly_control",
+        "tax_income_efficiency",
+        "legislative_efficiency",
     ),
     "warfare": (
-        ("levy_recovery_modifier", 0.0040, 0.000003),
-        ("army_logistics_distance_modifier", 0.0200, 0.000010),
-        ("army_maintenance_efficiency", 0.0045, 0.000003),
-        ("land_morale_modifier", 0.0030, 0.000002),
-        ("discipline", 0.0010, 0.000001),
+        "levy_recovery_modifier",
+        "army_logistics_distance_modifier",
+        "army_maintenance_efficiency",
+        "land_morale_modifier",
+        "discipline",
     ),
     "exchange": (
-        ("trade_range_modifier", 0.0080, 0.000005),
-        ("merchant_maintenance_efficiency", 0.0040, 0.000003),
-        ("global_trade_through_owned_territory_efficiency", 0.0150, 0.000008),
-        ("import_efficiency", 0.0035, 0.000003),
-        ("export_efficiency", 0.0040, 0.000003),
+        "trade_range_modifier",
+        "merchant_maintenance_efficiency",
+        "global_trade_through_owned_territory_efficiency",
+        "import_efficiency",
+        "export_efficiency",
     ),
     "learning": (
-        ("research_speed_modifier", 0.0040, 0.000002),
-        ("cultural_influence_modifier", 0.0045, 0.000003),
-        ("global_monthly_literacy", 0.0010, 0.000001),
-        ("global_institution_growth_modifier", 0.0250, 0.000010),
-        ("research_speed_modifier", 0.0130, 0.000002),
+        "research_speed_modifier",
+        "cultural_influence_modifier",
+        "global_monthly_literacy",
+        "global_institution_growth_modifier",
+        "research_speed_modifier",
     ),
     "society": (
-        ("global_disease_resistance", 0.0015, 0.000001),
-        ("global_population_capacity_modifier", 0.0060, 0.000004),
-        ("global_pop_promotion_speed_modifier", 0.0080, 0.000005),
-        ("global_pop_assimilation_speed_modifier", 0.0085, 0.000005),
-        ("stability_cost_efficiency", 0.0300, 0.000004),
+        "global_disease_resistance",
+        "global_population_capacity_modifier",
+        "global_pop_promotion_speed_modifier",
+        "global_pop_assimilation_speed_modifier",
+        "stability_cost_efficiency",
     ),
 }
-
-# EU5's persistent script reader rejects numeric literals beyond five decimal
-# places. Distinct values therefore advance in 1e-5 steps rather than relying
-# on engine-invalid sixth or seventh decimal digits.
-ENGINE_DECIMAL_STEP = 0.00001
 
 
 def later_branch_pairs() -> tuple[tuple[str, str], ...]:
@@ -255,10 +252,10 @@ def node_effect(
     branch_ordinal: int,
     node_index: int,
 ) -> tuple[str, str]:
-    field, base, _increment = EFFECT_SCALES[track][node_index]
-    ordinal = (conceptual_age - 1) * len(LATER_THEMES) + branch_ordinal + 1
-    value = base + ENGINE_DECIMAL_STEP * ordinal
-    return field, f"{value:.5f}".rstrip("0").rstrip(".")
+    del branch_ordinal  # identity changes content, never hidden decimal magnitude
+    field = EFFECT_FIELDS[track][node_index]
+    role = ("minor", "standard", "standard", "major")[conceptual_age - 1]
+    return field, effect_value(field, role)
 
 
 def validate_catalog(expected_pairs: set[tuple[str, str]]) -> None:
@@ -270,7 +267,6 @@ def validate_catalog(expected_pairs: set[tuple[str, str]]) -> None:
         )
     anchors: set[str] = set()
     keys: set[str] = set()
-    effects: set[tuple[str, str]] = set()
     for branch_ordinal, ((track, _profile), themes) in enumerate(LATER_THEMES.items()):
         if len(themes) != 4:
             raise ValueError(f"{track} later path must cover four conceptual ages")
@@ -285,11 +281,10 @@ def validate_catalog(expected_pairs: set[tuple[str, str]]) -> None:
                     raise ValueError(f"repeated S2-P3 regional advance {key}")
                 keys.add(key)
                 effect = node_effect(track, conceptual_age, branch_ordinal, node_index)
-                if effect in effects:
-                    raise ValueError(f"repeated S2-P3 regional effect {effect}")
-                effects.add(effect)
+                if effect[0] not in ADVANCE_EFFECT_SCALES:
+                    raise ValueError(f"unscaled S2-P3 regional effect {effect[0]}")
     expected_nodes = len(expected_pairs) * 4 * 5
-    if len(keys) != expected_nodes or len(effects) != expected_nodes:
+    if len(keys) != expected_nodes:
         raise ValueError(
             f"regional catalog must contain {expected_nodes} unique nodes, got {len(keys)}"
         )

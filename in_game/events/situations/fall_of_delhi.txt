@@ -361,7 +361,7 @@ fall_of_delhi.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -406,7 +406,7 @@ fall_of_delhi.2 = {
 
 	immediate = {
 		capital = { save_scope_as = target_capital }
-		c:DLH = {
+		c:DUMMY = {
 			ruler_or_regent ?= { save_scope_as = target_character }
 			random_owned_location = {
 				limit = {
@@ -479,14 +479,14 @@ fall_of_delhi.2 = {
 			modifier = {
 				factor = 0.5
 				opinion = {
-					target = c:DLH
+					target = c:DUMMY
 					value >50
 				}
 			}
 			modifier = {
 				factor = 2
 				relative_strength = {
-					target = c:DLH
+					target = c:DUMMY
 					value >= 0.85
 				}
 			}
@@ -495,46 +495,46 @@ fall_of_delhi.2 = {
 		custom_tooltip = side_with_opposers_tt
 		if = {
 			limit = {
-				is_neighbor_of = c:DLH
+				is_neighbor_of = c:DUMMY
 				OR = {
 					is_subject = no
 					AND = {
-						is_subject_of = c:DLH
+						is_subject_of = c:DUMMY
 						liberty_desire > 50
 					}
 				}
 			}
-			add_casus_belli = { target = c:DLH type = casus_belli:cb_conquer_province province = scope:target_location.province }
+			add_casus_belli = { target = c:DUMMY type = casus_belli:cb_conquer_province province = scope:target_location.province }
 			if = {
 				limit = {
 					exists = scope:target_location2
 				}
-				add_casus_belli = { target = c:DLH type = casus_belli:cb_conquer_province province = scope:target_location2.province }
+				add_casus_belli = { target = c:DUMMY type = casus_belli:cb_conquer_province province = scope:target_location2.province }
 			}
 			if = {
 				limit = {
 					exists = scope:target_location3
 				}
-				add_casus_belli = { target = c:DLH type = casus_belli:cb_conquer_province province = scope:target_location3.province }
+				add_casus_belli = { target = c:DUMMY type = casus_belli:cb_conquer_province province = scope:target_location3.province }
 			}
 		}
 		if = {
 			limit = {
-				this != c:DLH
-				is_allied_with = { target = c:DLH }
+				this != c:DUMMY
+				is_allied_with = { target = c:DUMMY }
 			}
 			remove_relation = {
 				type = relation_type:alliance
 				first = this
-				second = c:DLH
+				second = c:DUMMY
 			}
 		}
-		add_opinion = { modifier = delhi_claimant_opinion  target = c:DLH }
-		reverse_add_opinion = { modifier = delhi_claimant_opinion  target = c:DLH }
+		add_opinion = { modifier = delhi_claimant_opinion  target = c:DUMMY }
+		reverse_add_opinion = { modifier = delhi_claimant_opinion  target = c:DUMMY }
 		hidden_effect = {
 			if = {
 				limit = {
-					is_subject_of = c:DLH
+					is_subject_of = c:DUMMY
 				}
 				add_liberty_desire = liberty_desire_extreme_plus
 			}
@@ -572,27 +572,27 @@ fall_of_delhi.2 = {
 			modifier = {
 				factor = 0.5
 				opinion = {
-					target = c:DLH
+					target = c:DUMMY
 					value <= 0
 				}
 			}
 			modifier = {
 				factor = 1.1
 				relative_strength = {
-					target = c:DLH
+					target = c:DUMMY
 					value <= 0.5
 				}
 			}
 		}
 		custom_tooltip = side_with_delhi_tt
-		add_opinion = { modifier = promise_of_peace  target = c:DLH }
-		reverse_add_opinion = { modifier = promise_of_peace  target = c:DLH }
+		add_opinion = { modifier = promise_of_peace  target = c:DUMMY }
+		reverse_add_opinion = { modifier = promise_of_peace  target = c:DUMMY }
 		hidden_effect = {
 			situation:fall_of_delhi = {
 				set_vote = {
 					voter = ROOT
 					resolution = resolution:fall_of_delhi_resolution
-					vote = c:DLH
+					vote = c:DUMMY
 				}
 			}
 			add_cooldown = {
@@ -1030,7 +1030,7 @@ fall_of_delhi.11 = {
 		custom_tooltip = gain_5_sop_tt
 		custom_tooltip = opposers_lose_5_sop_tt
 		hidden_effect = {
-			c:DLH = {
+			c:DUMMY = {
 				change_variable = {
 					name = fall_of_delhi_vote_weight
 					add = 0.05
@@ -1063,7 +1063,7 @@ fall_of_delhi.12 = {
 
 	immediate = {
 		save_scope_as = target_country
-		c:DLH = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 		}
 	}
@@ -1073,7 +1073,7 @@ fall_of_delhi.12 = {
 
 		custom_tooltip = delhi_loses_opposers_gain_1_tt
 		hidden_effect = {
-			c:DLH = {
+			c:DUMMY = {
 				change_variable = {
 					name = fall_of_delhi_vote_weight
 					subtract = 0.05
@@ -1243,7 +1243,7 @@ fall_of_delhi.14 = {	#Opposer Insults our Authority!
 			trigger_event_non_silently = fall_of_delhi.15
 		}
 		hidden_effect = {
-			c:DLH = {
+			c:DUMMY = {
 				change_variable = {
 					name = fall_of_delhi_vote_weight
 					add = 0.01
@@ -1267,7 +1267,7 @@ fall_of_delhi.14 = {	#Opposer Insults our Authority!
 		add_government_power = government_power_weak_penalty
 		custom_tooltip = delhi_lose_half_percentage_support_tt
 		hidden_effect = {
-			c:DLH = {
+			c:DUMMY = {
 				change_variable = {
 					name = fall_of_delhi_vote_weight
 					subtract = 0.005
@@ -1306,16 +1306,16 @@ fall_of_delhi.15 = {
 			every_known_country = {
 				limit = { has_variable = offended_opposer }
 				add_opinion = {
-					target = c:DLH
+					target = c:DUMMY
 					modifier = opinion_insulted
 				}
 				reverse_add_opinion = {
-					target = c:DLH
+					target = c:DUMMY
 					modifier = opinion_insulted
 				}
 			}
 		}
-		c:DLH = {
+		c:DUMMY = {
 			add_casus_belli = {
 				target = ROOT
 				type = casus_belli:cb_insulted_us
@@ -1552,7 +1552,7 @@ fall_of_delhi.17 = {	#Irrigation Works along the Yamuna
 			modifier = {
 				factor = 1.5
 				gold >= {
-					value = c:DLH.monthly_income_total
+					value = c:DUMMY.monthly_income_total
 					multiply = 5
 				}
 			}
@@ -1655,7 +1655,7 @@ fall_of_delhi.18 = {
 	historical_info = delhi_situation.18.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1803,7 +1803,7 @@ fall_of_delhi.19 = {
 			modifier = {
 				factor = 1.5
 				gold >= {
-					value = c:DLH.monthly_income_total
+					value = c:DUMMY.monthly_income_total
 					multiply = 5
 				}
 			}
@@ -1831,7 +1831,7 @@ fall_of_delhi.19 = {
 			}
 
 			add_gold = {
-				value = c:DLH.monthly_income_trade_and_tax
+				value = c:DUMMY.monthly_income_trade_and_tax
 				multiply = 3
 				add = 3
 			}
@@ -1850,7 +1850,7 @@ fall_of_delhi.19 = {
 			modifier = {
 				factor = 0.5
 				gold >= {
-					value = c:DLH.monthly_income_total
+					value = c:DUMMY.monthly_income_total
 					multiply = 5
 				}
 			}
@@ -2106,7 +2106,7 @@ fall_of_delhi.22 = {
 			modifier = {
 				factor = 1.5
 				gold >= {
-					value = c:DLH.monthly_income_total
+					value = c:DUMMY.monthly_income_total
 					multiply = 5
 				}
 			}
@@ -2137,7 +2137,7 @@ fall_of_delhi.22 = {
 			modifier = {
 				factor = 1.5
 				gold >= {
-					value = c:DLH.monthly_income_total
+					value = c:DUMMY.monthly_income_total
 					multiply = 5
 				}
 			}

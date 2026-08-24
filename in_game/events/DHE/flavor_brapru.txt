@@ -9,7 +9,7 @@ flavor_brapru.1 = { #The End of the Twin-Towns of Berlin and Kölln
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -115,7 +115,7 @@ flavor_brapru.3 = { #Brandenburgian East-African Company
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -163,7 +163,7 @@ flavor_brapru.4 = { #Immanuel Kant
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -221,7 +221,7 @@ flavor_brapru.5 = { #The Soldier-King of Prussia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -264,7 +264,7 @@ flavor_brapru.6 = { #The Canton System First Chance
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -311,7 +311,7 @@ flavor_brapru.7 = { #The Canton System Second Chance
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -505,7 +505,7 @@ flavor_brapru.9 = { #The Capital moves to Berlin
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 6
@@ -550,7 +550,7 @@ flavor_brapru.10 = { #Hallescher Pietism and Prussian virtues
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -594,7 +594,7 @@ flavor_brapru.11 = { #University of Königsberg
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -657,7 +657,7 @@ flavor_brapru.12 = { #Erasmus Reinhold and his Prutenic Tables
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -718,7 +718,7 @@ flavor_brapru.13 = { #Edict of Potsdam
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -851,7 +851,7 @@ flavor_brapru.14 = { #Königsberg Burghers rebell against us
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -932,7 +932,7 @@ flavor_brapru.15 = { # Johann Crüger and Praxis Pietatis Melica
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -989,7 +989,7 @@ flavor_brapru.16 = { #Moses Mendelssohn Phaedon
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1050,7 +1050,7 @@ flavor_brapru.17 = { #Johannes Agricola
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1117,7 +1117,7 @@ flavor_brapru.18 = { #Frankfurt Oder emerging University
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1180,7 +1180,7 @@ flavor_brapru.19 = { #Knüppelkrieg between Spandau and Berlin
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1239,7 +1239,7 @@ flavor_brapru.20 = { #Johann Gottlieb Fichte
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1311,7 +1311,7 @@ flavor_brapru.21 = { #Friedrich Nicolai and the Joys of Young Werther
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1344,7 +1344,7 @@ flavor_brapru.21 = { #Friedrich Nicolai and the Joys of Young Werther
 		current_date > 476.9.4
 		owns = location:berlin
 		exists = work_of_art:sorrows_of_young_werther
-		c:MEI = {
+		c:DUMMY = {
 			capital = {
 				any_work_of_art_in_location = {
 					this = work_of_art:sorrows_of_young_werther
@@ -1385,7 +1385,7 @@ flavor_brapru.22 = { #Wilhelm von Humbolt - University of Berlin
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1456,7 +1456,7 @@ flavor_brapru.23 = { #Gotthold Ephraim Lessing
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1522,7 +1522,7 @@ flavor_brapru.24 = { #Order of The Swan
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4 #1440 in our timeline
 		to = 476.9.4
 		monthly_chance = 5
@@ -1625,7 +1625,7 @@ flavor_brapru.26 = { #Order of the Black Eagle
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4 #1701 in our timeline
 		to = 476.9.4
 		monthly_chance = 10
@@ -1681,7 +1681,7 @@ flavor_brapru.27 = { #Prussian Colonization of Silesia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4 #1740 in our timeline
 		to = 476.9.4
 		monthly_chance = 2
@@ -1830,7 +1830,7 @@ flavor_brapru.28 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1938,7 +1938,7 @@ flavor_brapru.29 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2119,7 +2119,7 @@ flavor_brapru.31 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4 #1662 but in reality it is better to have it earlier in game
 		to = 476.9.4
 		monthly_chance = 10
@@ -2256,7 +2256,7 @@ flavor_brapru.33 = { #The Potato King
 	}
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2334,7 +2334,7 @@ flavor_brapru.34 = { #Peuplierung System
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2390,7 +2390,7 @@ flavor_brapru.35 = { #Monarch's Last Will
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2474,7 +2474,7 @@ flavor_brapru.36 = { #Charité
 	historical_info = flavor_brapru.36.historical_info
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2517,7 +2517,7 @@ flavor_brapru.37 = { #Alexander von Humboldt
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2580,7 +2580,7 @@ flavor_brapru.38 = { #Humboldt's Cosmos
 	historical_info = flavor_brapru.38.historical_info
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2633,7 +2633,7 @@ flavor_brapru.39 = { #Georg Wilhelm Friedrich Hegel
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2693,7 +2693,7 @@ flavor_brapru.40 = { #Anna Dorothea Therbusch
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2754,7 +2754,7 @@ flavor_brapru.41 = { #Christian Wolff
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2821,7 +2821,7 @@ flavor_brapru.42 = { #Kurt von Schwerin
 	historical_info = flavor_brapru.42.historical_info
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2891,7 +2891,7 @@ flavor_brapru.43 = { #Andreas Schlüter
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2953,7 +2953,7 @@ flavor_brapru.1000 = { #Inheritance of Duchy of Prussia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2966,7 +2966,7 @@ flavor_brapru.1000 = { #Inheritance of Duchy of Prussia
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }	
-		c:TEU = {
+		c:DUMMY = {
 			ruler = { save_scope_as = target_character }
 		}
 	}
@@ -2978,28 +2978,28 @@ flavor_brapru.1000 = { #Inheritance of Duchy of Prussia
 		ruler = {
 			has_dynasty = yes
 		}
-		c:TEU ?= {
+		c:DUMMY ?= {
 			is_ai = yes
 			has_ruler = yes
 			ruler ?= {
 				has_dynasty = yes
 				dynasty = root.ruler.dynasty
 			}
-			expected_army_size < c:BRA.expected_army_size
+			expected_army_size < c:DUMMY.expected_army_size
 		}
 	}
 
 	option = {
 		historical_option = yes
 		name = flavor_brapru.1000.a
-		c:TEU ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = {
 					NOT = {
 						is_subject_of  = ROOT
 					}
 				}
-				make_subject_of = { target = c:BRA type = subject_type:fiefdom }
+				make_subject_of = { target = c:DUMMY type = subject_type:fiefdom }
 			}
 			change_government_type = government_type:monarchy
 			trigger_event_non_silently = { id = flavor_brapru.1001 }
@@ -3049,7 +3049,7 @@ flavor_brapru.1100 = { #Construction of Berlin Palace
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -3183,7 +3183,7 @@ flavor_brapru.1200 = { #Samuel von Cocceji and the Legal Reforms of Prussia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -3297,7 +3297,7 @@ flavor_brapru.1300 = { #Carl von Clausewitz
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PRU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3392,7 +3392,7 @@ flavor_brapru.1400 = { #Construction of Sanssouci
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3464,7 +3464,7 @@ flavor_brapru.1401 = { #Sanssouci finished and Potsdam
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -3512,7 +3512,7 @@ flavor_brapru.1500 = { #Oder-Spree Friedrich Wilhelm Canal
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3627,7 +3627,7 @@ flavor_brapru.1600 = { #The Kreditwerk takes charges of the finances
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3670,7 +3670,7 @@ flavor_brapru.1601 = { #Bankruptcy of the Kreditwerk
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3745,15 +3745,15 @@ scripted_trigger pru_can_rule_us = {
 scripted_trigger pru_is_polish_subject = {
 	trigger_if = {
 		limit = {
-			country_exists = c:PLC
+			country_exists = c:DUMMY
 		}
 		OR = {
-			is_subject_of = c:PLC
-			is_subject_of = c:POL
+			is_subject_of = c:DUMMY
+			is_subject_of = c:DUMMY
 		}
 	}
 	trigger_else = {
-		is_subject_of = c:POL
+		is_subject_of = c:DUMMY
 	}
 }
 
@@ -3765,7 +3765,7 @@ flavor_brapru.1800 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = PRU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3781,15 +3781,15 @@ flavor_brapru.1800 = {
 	trigger = {
 		current_date > 476.9.4
 		pru_is_polish_subject = yes
-		country_exists = c:BRA
+		country_exists = c:DUMMY
 		has_ruler = yes
-		c:BRA = {
+		c:DUMMY = {
 			has_ruler = yes
 			ruler = {
 				has_dynasty = yes
 			}
 		}
-		c:BRA.ruler.dynasty = {
+		c:DUMMY.ruler.dynasty = {
 			any_character_in_dynasty = {
 				is_alive = yes
 				pru_can_rule_us = yes
@@ -3805,7 +3805,7 @@ flavor_brapru.1800 = {
 		ruler = {
 			save_scope_as = our_ruler
 		}
-		c:BRA.ruler.dynasty = {
+		c:DUMMY.ruler.dynasty = {
 			random_character_in_dynasty = {
 				limit = {
 					is_alive = yes
@@ -3851,11 +3851,11 @@ flavor_brapru.1800 = {
 		set_new_ruler = scope:target_character
 		add_prestige = prestige_severe_bonus
 		add_legitimacy = legitimacy_mild_bonus
-		c:BRA = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_brapru.1801
 		}
 
-		c:BRA = {
+		c:DUMMY = {
 			add_opinion = {
 				modifier = BRA_dynastic_connections
 				target = ROOT
@@ -3931,7 +3931,7 @@ flavor_brapru.1802 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = PRU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3947,25 +3947,25 @@ flavor_brapru.1802 = {
 	trigger = {
 		current_date > 476.9.4
 		pru_is_polish_subject = yes
-		country_exists = c:BRA
+		country_exists = c:DUMMY
 		has_ruler = yes
 		ruler = {
 			has_dynasty = yes
 		}
-		c:BRA = {
+		c:DUMMY = {
 			is_subject = no
 		}
-		c:BRA = {
+		c:DUMMY = {
 			has_ruler = yes
 			ruler = {
 				has_dynasty = yes
 			}
 		}
-		c:BRA.ruler.dynasty = ROOT.ruler.dynasty
+		c:DUMMY.ruler.dynasty = ROOT.ruler.dynasty
 		NAND = {
-			c:PRU.overlord = { has_ruler = yes }
-			c:PRU.overlord.ruler = { has_dynasty = yes }
-			c:BRA.ruler.dynasty = c:PRU.overlord.ruler.dynasty
+			c:DUMMY.overlord = { has_ruler = yes }
+			c:DUMMY.overlord.ruler = { has_dynasty = yes }
+			c:DUMMY.ruler.dynasty = c:DUMMY.overlord.ruler.dynasty
 		}
 		custom_tooltip = {
 			text = variable_insanity_cooldown_tt
@@ -3980,7 +3980,7 @@ flavor_brapru.1802 = {
 		ruler = {
 			save_scope_as = insane_individual
 		}
-		c:BRA.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = proposed_regent
 		}
 		save_scope_as = pru_from
@@ -3992,7 +3992,7 @@ flavor_brapru.1802 = {
 		show_as_tooltip = {
 			set_new_ruler = scope:proposed_regent
 		}
-		c:BRA = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_brapru.1810
 		}
 	}
@@ -4024,7 +4024,7 @@ flavor_brapru.1803 = {
 			set_new_ruler = scope:proposed_regent
 		}
 
-		c:BRA ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = flavor_brapru.1804
 		}
 	}
@@ -4041,7 +4041,7 @@ flavor_brapru.1803 = {
 			trigger_event_non_silently = flavor_brapru.1805
 		}
 
-		c:BRA = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_brapru.1806
 		}
 
@@ -4163,13 +4163,13 @@ flavor_brapru.1807 = {
 			save_scope_as = ruler_or_regent_scope
 		}
 
-		c:PRU.overlord.ruler_or_regent = {
+		c:DUMMY.overlord.ruler_or_regent = {
 			save_scope_as = ruler_or_regent_poland_scope
 		}
 	}
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -4179,13 +4179,13 @@ flavor_brapru.1807 = {
 
 	trigger = {
 		current_date > 476.9.4
-		in_union_with = c:PRU
-		c:PRU = {
+		in_union_with = c:DUMMY
+		c:DUMMY = {
 			pru_is_polish_subject = yes
 		}
 
 		relative_strength = {
-			target = c:PRU.overlord
+			target = c:DUMMY.overlord
 			value >= 0.85
 		}
 	}
@@ -4194,7 +4194,7 @@ flavor_brapru.1807 = {
 
 		historical_option = yes
 
-		c:PRU.overlord = {
+		c:DUMMY.overlord = {
 			trigger_event_non_silently = flavor_brapru.1808
 		}
 	}
@@ -4232,7 +4232,7 @@ flavor_brapru.1808 = {
 
 		historical_option = yes
 
-		cancel_subject = c:PRU
+		cancel_subject = c:DUMMY
 		show_as_tooltip = {
 			scope:bra_from = {
 				add_prestige = prestige_severe_bonus
@@ -4241,7 +4241,7 @@ flavor_brapru.1808 = {
 					years = 25
 				}
 			}
-			c:PRU = {
+			c:DUMMY = {
 				make_subject_of = {
 					target = scope:bra_from
 					type = subject_type:vassal
@@ -4271,7 +4271,7 @@ flavor_brapru.1808 = {
 				}
 				add_casus_belli = {
 					type = casus_belli:cb_destabilized_our_state
-					target = c:PRU.overlord
+					target = c:DUMMY.overlord
 				}
 			}
 		}
@@ -4332,7 +4332,7 @@ flavor_brapru.1809 = {
 			modifier = PRU_increase_power_projection_rating
 			years = 25
 		}
-		c:PRU = {
+		c:DUMMY = {
 			make_subject_of = {
 				target = scope:bra_from
 				type = subject_type:vassal
@@ -4350,7 +4350,7 @@ flavor_brapru.1809 = {
 		}
 		add_casus_belli = {
 			type = casus_belli:cb_destabilized_our_state
-			target = c:PRU.overlord
+			target = c:DUMMY.overlord
 		}
 	}
 	after = {
@@ -4431,8 +4431,8 @@ flavor_brapru.1811 = {
 	historical_info = flavor_brapru.1811.historical_info
 
 	dynamic_historical_event = {
-		tag = PRU
-		tag = TEU
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4487,7 +4487,7 @@ flavor_brapru.2000  = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -4563,7 +4563,7 @@ flavor_brapru.2001  = {
 	historical_info = flavor_brapru.2001.historical_info
 
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10

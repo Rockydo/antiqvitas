@@ -1,0 +1,1049 @@
+{
+  "save": "G:\\antiqvitas_user_data\\save games\\economy_probe_tribal_ad6_bankrupt.eu5",
+  "date": "7.1.5",
+  "real_polities": 468,
+  "stability": {
+    "minimum": -44.20757,
+    "p10": 8.044383,
+    "median": 16.308300000000003,
+    "p90": 24.591309000000003,
+    "maximum": 36.21519,
+    "negative_count": 8,
+    "severe_count": 6
+  },
+  "solvency": {
+    "bankrupt_count": 5,
+    "bankrupt_polities": [
+      {
+        "id": 14,
+        "name": "XAH",
+        "tag": "XAH",
+        "type": "Real",
+        "province_count": 89,
+        "stability": -35.43451,
+        "gold": 53.54072,
+        "great_power": true,
+        "population_thousands": 7500.37781,
+        "bankrupt_until": "6.5.3",
+        "debt": 1455.64464,
+        "loan_capacity": 31839.96204,
+        "monthly_income": 13.94562,
+        "monthly_expense": 17.05329
+      },
+      {
+        "id": 88,
+        "name": "KIN",
+        "tag": "KIN",
+        "type": "Real",
+        "province_count": 9,
+        "stability": -44.20757,
+        "gold": 9.36552,
+        "great_power": false,
+        "population_thousands": 1376.65948,
+        "bankrupt_until": "6.8.30",
+        "debt": 18.18592,
+        "loan_capacity": 3280.84892,
+        "monthly_income": 0.08777,
+        "monthly_expense": 0.63456
+      },
+      {
+        "id": 272,
+        "name": "BED",
+        "tag": "BED",
+        "type": "Real",
+        "province_count": 10,
+        "stability": -43.1591,
+        "gold": 14.44563,
+        "great_power": false,
+        "population_thousands": 1590.92832,
+        "bankrupt_until": "6.8.3",
+        "debt": 118.58463,
+        "loan_capacity": 3452.04695,
+        "monthly_income": 0.21901,
+        "monthly_expense": 0.77761
+      },
+      {
+        "id": 349,
+        "name": "MYB",
+        "tag": "MYB",
+        "type": "Real",
+        "province_count": 1,
+        "stability": -34.42731,
+        "gold": 2.38392,
+        "great_power": false,
+        "population_thousands": 124.52479,
+        "bankrupt_until": "6.9.1",
+        "debt": 0.0,
+        "loan_capacity": 1187.16324,
+        "monthly_income": 0.37354,
+        "monthly_expense": 0.07158
+      },
+      {
+        "id": 462,
+        "name": "OLC",
+        "tag": "OLC",
+        "type": "Real",
+        "province_count": 1,
+        "stability": -24.85576,
+        "gold": 3.421,
+        "great_power": false,
+        "population_thousands": 75.93078,
+        "bankrupt_until": "6.1.1",
+        "debt": 0.0,
+        "loan_capacity": 1089.02086,
+        "monthly_income": 0.26146,
+        "monthly_expense": 0.05671
+      }
+    ],
+    "major_bankrupt_count": 1,
+    "major_bankrupt_polities": [
+      {
+        "id": 14,
+        "name": "XAH",
+        "tag": "XAH",
+        "type": "Real",
+        "province_count": 89,
+        "stability": -35.43451,
+        "gold": 53.54072,
+        "great_power": true,
+        "population_thousands": 7500.37781,
+        "bankrupt_until": "6.5.3",
+        "debt": 1455.64464,
+        "loan_capacity": 31839.96204,
+        "monthly_income": 13.94562,
+        "monthly_expense": 17.05329
+      }
+    ],
+    "indebted_count": 55,
+    "largest_debts": [
+      {
+        "id": 28,
+        "tag": "XAR",
+        "name": "XAR",
+        "province_count": 382,
+        "great_power": true,
+        "debt": 1951.7542,
+        "loan_capacity": 127152.43381,
+        "monthly_income": 72.62545,
+        "monthly_expense": 55.27903,
+        "debt_to_annual_income": 2.239520489488648
+      },
+      {
+        "id": 14,
+        "tag": "XAH",
+        "name": "XAH",
+        "province_count": 89,
+        "great_power": true,
+        "debt": 1455.64464,
+        "loan_capacity": 31839.96204,
+        "monthly_income": 13.94562,
+        "monthly_expense": 17.05329,
+        "debt_to_annual_income": 8.69833825961126
+      },
+      {
+        "id": 41,
+        "tag": "SAT",
+        "name": "SAT",
+        "province_count": 31,
+        "great_power": true,
+        "debt": 1342.34063,
+        "loan_capacity": 19431.70237,
+        "monthly_income": 15.13419,
+        "monthly_expense": 11.75879,
+        "debt_to_annual_income": 7.391325149655625
+      },
+      {
+        "id": 25,
+        "tag": "IBR",
+        "name": "IBR",
+        "province_count": 5,
+        "great_power": false,
+        "debt": 877.08604,
+        "loan_capacity": 2434.36036,
+        "monthly_income": 11.78294,
+        "monthly_expense": 18.49186,
+        "debt_to_annual_income": 6.203078631761965
+      },
+      {
+        "id": 24,
+        "tag": "XAO",
+        "name": "XAO",
+        "province_count": 14,
+        "great_power": false,
+        "debt": 680.21894,
+        "loan_capacity": 7259.93813,
+        "monthly_income": 9.35226,
+        "monthly_expense": 11.27914,
+        "debt_to_annual_income": 6.061092363414477
+      },
+      {
+        "id": 27,
+        "tag": "XAQ",
+        "name": "XAQ",
+        "province_count": 5,
+        "great_power": false,
+        "debt": 630.34163,
+        "loan_capacity": 4116.82329,
+        "monthly_income": 9.65957,
+        "monthly_expense": 4.83874,
+        "debt_to_annual_income": 5.43797179032469
+      },
+      {
+        "id": 218,
+        "tag": "XCS",
+        "name": "XCS",
+        "province_count": 14,
+        "great_power": false,
+        "debt": 522.11147,
+        "loan_capacity": 4569.34375,
+        "monthly_income": 3.31896,
+        "monthly_expense": 4.29613,
+        "debt_to_annual_income": 13.109314112452898
+      },
+      {
+        "id": 50,
+        "tag": "XBC",
+        "name": "XBC",
+        "province_count": 1,
+        "great_power": false,
+        "debt": 428.90632,
+        "loan_capacity": 1781.17539,
+        "monthly_income": 4.23803,
+        "monthly_expense": 2.83902,
+        "debt_to_annual_income": 8.43368105778707
+      },
+      {
+        "id": 434,
+        "tag": "ATY",
+        "name": "ATY",
+        "province_count": 1,
+        "great_power": false,
+        "debt": 348.87768,
+        "loan_capacity": 1128.54733,
+        "monthly_income": 2.76585,
+        "monthly_expense": 2.05316,
+        "debt_to_annual_income": 10.511466637742467
+      },
+      {
+        "id": 26,
+        "tag": "CLZ",
+        "name": "CLZ",
+        "province_count": 4,
+        "great_power": false,
+        "debt": 347.67009,
+        "loan_capacity": 2186.48111,
+        "monthly_income": 5.69744,
+        "monthly_expense": 7.42001,
+        "debt_to_annual_income": 5.085179922912746
+      },
+      {
+        "id": 91,
+        "tag": "GRH",
+        "name": "GRH",
+        "province_count": 2,
+        "great_power": false,
+        "debt": 328.18167,
+        "loan_capacity": 1617.22264,
+        "monthly_income": 4.3633,
+        "monthly_expense": 3.55786,
+        "debt_to_annual_income": 6.267841427360025
+      },
+      {
+        "id": 219,
+        "tag": "XCU",
+        "name": "XCU",
+        "province_count": 5,
+        "great_power": false,
+        "debt": 311.74527,
+        "loan_capacity": 2773.99863,
+        "monthly_income": 3.09442,
+        "monthly_expense": 2.62913,
+        "debt_to_annual_income": 8.395360843065905
+      },
+      {
+        "id": 47,
+        "tag": "XAZ",
+        "name": "XAZ",
+        "province_count": 7,
+        "great_power": false,
+        "debt": 281.02536,
+        "loan_capacity": 3151.97686,
+        "monthly_income": 2.12433,
+        "monthly_expense": 4.62659,
+        "debt_to_annual_income": 11.024078179943794
+      },
+      {
+        "id": 84,
+        "tag": "XBI",
+        "name": "XBI",
+        "province_count": 4,
+        "great_power": false,
+        "debt": 262.74966,
+        "loan_capacity": 2994.97641,
+        "monthly_income": 3.90982,
+        "monthly_expense": 1.88834,
+        "debt_to_annual_income": 5.600207937961339
+      },
+      {
+        "id": 344,
+        "tag": "TIW",
+        "name": "TIW",
+        "province_count": 1,
+        "great_power": false,
+        "debt": 247.96748,
+        "loan_capacity": 1444.08095,
+        "monthly_income": 5.78867,
+        "monthly_expense": 1.7971,
+        "debt_to_annual_income": 3.5697244214416552
+      },
+      {
+        "id": 8,
+        "tag": "CAP",
+        "name": "CAP",
+        "province_count": 8,
+        "great_power": false,
+        "debt": 225.29121,
+        "loan_capacity": 7260.4025,
+        "monthly_income": 4.26345,
+        "monthly_expense": 5.09403,
+        "debt_to_annual_income": 4.403538800736492
+      },
+      {
+        "id": 433,
+        "tag": "XDN",
+        "name": "XDN",
+        "province_count": 1,
+        "great_power": false,
+        "debt": 218.48237,
+        "loan_capacity": 1502.96057,
+        "monthly_income": 3.24981,
+        "monthly_expense": 1.51454,
+        "debt_to_annual_income": 5.60243957851895
+      },
+      {
+        "id": 49,
+        "tag": "XBB",
+        "name": "XBB",
+        "province_count": 6,
+        "great_power": false,
+        "debt": 193.60338,
+        "loan_capacity": 5106.06469,
+        "monthly_income": 11.6926,
+        "monthly_expense": 3.37729,
+        "debt_to_annual_income": 1.3798141559618902
+      },
+      {
+        "id": 102,
+        "tag": "XBO",
+        "name": "XBO",
+        "province_count": 11,
+        "great_power": false,
+        "debt": 193.11402,
+        "loan_capacity": 1943.68947,
+        "monthly_income": 8.44502,
+        "monthly_expense": 2.24021,
+        "debt_to_annual_income": 1.9056005788026555
+      },
+      {
+        "id": 306,
+        "tag": "XGQ",
+        "name": "XGQ",
+        "province_count": 4,
+        "great_power": false,
+        "debt": 148.28895,
+        "loan_capacity": 2158.36962,
+        "monthly_income": 1.55406,
+        "monthly_expense": 1.42845,
+        "debt_to_annual_income": 7.951695880467935
+      }
+    ],
+    "major_economies": [
+      {
+        "id": 3,
+        "tag": "XAA",
+        "name": "XAA",
+        "province_count": 399,
+        "great_power": true,
+        "population_thousands": 47903.65453,
+        "gold": 12139.14383,
+        "debt": 0.0,
+        "loan_capacity": 176762.79838,
+        "monthly_income": 86.78872,
+        "monthly_expense": 76.20865,
+        "bankrupt_until": null
+      },
+      {
+        "id": 28,
+        "tag": "XAR",
+        "name": "XAR",
+        "province_count": 382,
+        "great_power": true,
+        "population_thousands": 58562.66794,
+        "gold": 813.83223,
+        "debt": 1951.7542,
+        "loan_capacity": 127152.43381,
+        "monthly_income": 72.62545,
+        "monthly_expense": 55.27903,
+        "bankrupt_until": null
+      },
+      {
+        "id": 14,
+        "tag": "XAH",
+        "name": "XAH",
+        "province_count": 89,
+        "great_power": true,
+        "population_thousands": 7500.37781,
+        "gold": 53.54072,
+        "debt": 1455.64464,
+        "loan_capacity": 31839.96204,
+        "monthly_income": 13.94562,
+        "monthly_expense": 17.05329,
+        "bankrupt_until": "6.5.3"
+      },
+      {
+        "id": 173,
+        "tag": "ROX",
+        "name": "ROX",
+        "province_count": 38,
+        "great_power": false,
+        "population_thousands": 499.96694,
+        "gold": 39.64388,
+        "debt": 0.0,
+        "loan_capacity": 3947.4141,
+        "monthly_income": 6.20039,
+        "monthly_expense": 0.53335,
+        "bankrupt_until": null
+      },
+      {
+        "id": 41,
+        "tag": "SAT",
+        "name": "SAT",
+        "province_count": 31,
+        "great_power": true,
+        "population_thousands": 7963.95229,
+        "gold": 74.66965,
+        "debt": 1342.34063,
+        "loan_capacity": 19431.70237,
+        "monthly_income": 15.13419,
+        "monthly_expense": 11.75879,
+        "bankrupt_until": null
+      },
+      {
+        "id": 29,
+        "tag": "XIO",
+        "name": "XIO",
+        "province_count": 30,
+        "great_power": false,
+        "population_thousands": 480.8611,
+        "gold": 33.57399,
+        "debt": 0.0,
+        "loan_capacity": 1877.37522,
+        "monthly_income": 1.99807,
+        "monthly_expense": 0.61221,
+        "bankrupt_until": null
+      },
+      {
+        "id": 188,
+        "tag": "XCM",
+        "name": "XCM",
+        "province_count": 29,
+        "great_power": false,
+        "population_thousands": 765.11787,
+        "gold": 94.31622,
+        "debt": 0.0,
+        "loan_capacity": 4693.88264,
+        "monthly_income": 2.47091,
+        "monthly_expense": 1.36975,
+        "bankrupt_until": null
+      }
+    ]
+  },
+  "construction": {
+    "active_projects": 522,
+    "active_payers": 162,
+    "busiest_payers": [
+      {
+        "id": 14,
+        "tag": "XAH",
+        "name": "XAH",
+        "province_count": 89,
+        "great_power": true,
+        "active_projects": 16,
+        "rgo_upgrades": 14,
+        "building_projects": 2,
+        "gold_committed": 880.22426,
+        "project_types": {
+          "rgo_upgrade": 14,
+          "antq_cult_papyrus_beds": 1,
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 28,
+        "tag": "XAR",
+        "name": "XAR",
+        "province_count": 382,
+        "great_power": true,
+        "active_projects": 13,
+        "rgo_upgrades": 0,
+        "building_projects": 13,
+        "gold_committed": 347.6391600000001,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 6,
+          "antq_cult_barley_plots": 3,
+          "antq_cult_horse_pastures": 2,
+          "antq_cult_flax_hemp_fields": 2
+        }
+      },
+      {
+        "id": 41,
+        "tag": "SAT",
+        "name": "SAT",
+        "province_count": 31,
+        "great_power": true,
+        "active_projects": 12,
+        "rgo_upgrades": 1,
+        "building_projects": 11,
+        "gold_committed": 333.19652999999994,
+        "project_types": {
+          "antq_reg_ropewalk": 2,
+          "antq_reg_wool_carder": 2,
+          "antq_cult_sesame_plots": 2,
+          "antq_cult_fruit_orchards": 1,
+          "rgo_upgrade": 1,
+          "antq_reg_leatherworks": 1,
+          "antq_reg_joinery": 1,
+          "antq_reg_tile_yard": 1,
+          "antq_reg_glassworks": 1
+        }
+      },
+      {
+        "id": 277,
+        "tag": "PCM",
+        "name": "PCM",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 11,
+        "rgo_upgrades": 0,
+        "building_projects": 11,
+        "gold_committed": 453.96759999999995,
+        "project_types": {
+          "antq_reg_leatherworks": 3,
+          "antq_cult_barley_plots": 3,
+          "antq_cult_sesame_plots": 2,
+          "antq_reg_tile_yard": 1,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 19,
+        "tag": "ADI",
+        "name": "ADI",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 11,
+        "rgo_upgrades": 0,
+        "building_projects": 11,
+        "gold_committed": 343.71901,
+        "project_types": {
+          "antq_cult_flax_hemp_fields": 3,
+          "antq_cult_dye_gardens": 2,
+          "antq_cult_wheat_fields": 2,
+          "antq_cult_papyrus_beds": 2,
+          "antq_cult_nut_orchards": 2
+        }
+      },
+      {
+        "id": 436,
+        "tag": "VDS",
+        "name": "VDS",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 9,
+        "rgo_upgrades": 0,
+        "building_projects": 9,
+        "gold_committed": 264.90191,
+        "project_types": {
+          "antq_cult_sugar_cane": 2,
+          "antq_cult_apiaries": 2,
+          "antq_reg_ropewalk": 2,
+          "antq_cult_flax_hemp_fields": 1,
+          "antq_cult_sesame_plots": 1,
+          "antq_cult_barley_plots": 1
+        }
+      },
+      {
+        "id": 49,
+        "tag": "XBB",
+        "name": "XBB",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 9,
+        "rgo_upgrades": 1,
+        "building_projects": 8,
+        "gold_committed": 143.76147,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 2,
+          "antq_cult_coconut_groves": 2,
+          "antq_irrigation_network": 1,
+          "antq_reg_dye_workshop": 1,
+          "antq_cult_cattle_pastures": 1,
+          "rgo_upgrade": 1,
+          "antq_reg_saddlery": 1
+        }
+      },
+      {
+        "id": 52,
+        "tag": "XBD",
+        "name": "XBD",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 8,
+        "rgo_upgrades": 3,
+        "building_projects": 5,
+        "gold_committed": 357.48449999999997,
+        "project_types": {
+          "rgo_upgrade": 3,
+          "antq_cult_dye_gardens": 2,
+          "antq_reg_charcoal_hearth": 2,
+          "antq_reg_tile_yard": 1
+        }
+      },
+      {
+        "id": 247,
+        "tag": "GMU",
+        "name": "GMU",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 8,
+        "rgo_upgrades": 1,
+        "building_projects": 7,
+        "gold_committed": 329.20221000000004,
+        "project_types": {
+          "antq_reg_carpet_loom": 3,
+          "antq_reg_ropewalk": 2,
+          "rgo_upgrade": 1,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_cult_wheat_fields": 1
+        }
+      },
+      {
+        "id": 12,
+        "tag": "XAF",
+        "name": "XAF",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 8,
+        "rgo_upgrades": 0,
+        "building_projects": 8,
+        "gold_committed": 258.36931,
+        "project_types": {
+          "antq_reg_instrument_maker": 3,
+          "antq_cult_barley_plots": 3,
+          "antq_reg_carpet_loom": 2
+        }
+      },
+      {
+        "id": 433,
+        "tag": "XDN",
+        "name": "XDN",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 8,
+        "rgo_upgrades": 2,
+        "building_projects": 6,
+        "gold_committed": 258.34882000000005,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_cult_sesame_plots": 1,
+          "antq_reg_wool_carder": 1,
+          "antq_reg_saddlery": 1,
+          "antq_reg_leatherworks": 1,
+          "antq_reg_ropewalk": 1,
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 440,
+        "tag": "DKS",
+        "name": "DKS",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 8,
+        "rgo_upgrades": 2,
+        "building_projects": 6,
+        "gold_committed": 256.91182000000003,
+        "project_types": {
+          "antq_reg_ropewalk": 3,
+          "rgo_upgrade": 2,
+          "antq_cult_sesame_plots": 2,
+          "antq_cult_apiaries": 1
+        }
+      },
+      {
+        "id": 13,
+        "tag": "XAG",
+        "name": "XAG",
+        "province_count": 21,
+        "great_power": false,
+        "active_projects": 8,
+        "rgo_upgrades": 0,
+        "building_projects": 8,
+        "gold_committed": 183.88549999999998,
+        "project_types": {
+          "antq_reg_ropewalk": 3,
+          "antq_cult_nut_orchards": 2,
+          "antq_cult_flax_hemp_fields": 1,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_cult_barley_plots": 1
+        }
+      },
+      {
+        "id": 11,
+        "tag": "THR",
+        "name": "THR",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 8,
+        "rgo_upgrades": 0,
+        "building_projects": 8,
+        "gold_committed": 156.68042,
+        "project_types": {
+          "antq_reg_wheat_brewery": 2,
+          "antq_cult_wheat_fields": 2,
+          "antq_reg_fruit_brewery": 1,
+          "antq_cult_fruit_orchards": 1,
+          "antq_cult_nut_orchards": 1,
+          "antq_cult_barley_plots": 1
+        }
+      },
+      {
+        "id": 25,
+        "tag": "IBR",
+        "name": "IBR",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 8,
+        "rgo_upgrades": 3,
+        "building_projects": 5,
+        "gold_committed": 150.75,
+        "project_types": {
+          "rgo_upgrade": 3,
+          "antq_cult_fruit_orchards": 1,
+          "antq_cult_grape_arbors": 1,
+          "antq_cult_wheat_fields": 1,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_cult_flax_hemp_fields": 1
+        }
+      },
+      {
+        "id": 239,
+        "tag": "XHH",
+        "name": "XHH",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 0,
+        "building_projects": 7,
+        "gold_committed": 257.67562000000004,
+        "project_types": {
+          "antq_cult_barley_plots": 2,
+          "antq_cult_fruit_orchards": 2,
+          "antq_cult_wheat_fields": 2,
+          "antq_cult_wool_flocks": 1
+        }
+      },
+      {
+        "id": 284,
+        "tag": "PDR",
+        "name": "PDR",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 0,
+        "building_projects": 7,
+        "gold_committed": 250.31919,
+        "project_types": {
+          "antq_reg_glassworks": 2,
+          "antq_reg_saddlery": 2,
+          "antq_reg_leatherworks": 2,
+          "antq_reg_wool_carder": 1
+        }
+      },
+      {
+        "id": 48,
+        "tag": "XBA",
+        "name": "XBA",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 0,
+        "building_projects": 7,
+        "gold_committed": 81.99038,
+        "project_types": {
+          "antq_irrigation_network": 2,
+          "antq_cult_wheat_fields": 1,
+          "antq_reg_lead_foundry": 1,
+          "antq_reg_ropewalk": 1,
+          "antq_cult_sesame_plots": 1,
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 23,
+        "tag": "MRG",
+        "name": "MRG",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 2,
+        "building_projects": 4,
+        "gold_committed": 334.89065,
+        "project_types": {
+          "antq_reg_carpet_loom": 3,
+          "rgo_upgrade": 2,
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 279,
+        "tag": "AYM",
+        "name": "AYM",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 0,
+        "building_projects": 6,
+        "gold_committed": 193.29071000000002,
+        "project_types": {
+          "antq_reg_leatherworks": 2,
+          "antq_reg_glassworks": 2,
+          "antq_cult_wheat_fields": 1,
+          "antq_reg_wool_carder": 1
+        }
+      },
+      {
+        "id": 323,
+        "tag": "PTF",
+        "name": "PTF",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 0,
+        "building_projects": 6,
+        "gold_committed": 184.40408999999997,
+        "project_types": {
+          "antq_cult_fruit_orchards": 2,
+          "antq_cult_barley_plots": 2,
+          "antq_cult_wheat_fields": 2
+        }
+      },
+      {
+        "id": 9,
+        "tag": "XAE",
+        "name": "XAE",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 0,
+        "building_projects": 6,
+        "gold_committed": 58.56435999999999,
+        "project_types": {
+          "antq_cult_grape_arbors": 2,
+          "antq_cult_wheat_fields": 1,
+          "antq_cult_nut_orchards": 1,
+          "antq_reg_ropewalk": 1,
+          "antq_cult_barley_plots": 1
+        }
+      },
+      {
+        "id": 278,
+        "tag": "KSM",
+        "name": "KSM",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 209.67694999999998,
+        "project_types": {
+          "antq_reg_wool_carder": 2,
+          "antq_cult_horse_pastures": 1,
+          "antq_cult_fruit_orchards": 1,
+          "antq_reg_glassworks": 1
+        }
+      },
+      {
+        "id": 280,
+        "tag": "XFU",
+        "name": "XFU",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 2,
+        "building_projects": 3,
+        "gold_committed": 209.59366,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_reg_glassworks": 2,
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 124,
+        "tag": "XCB",
+        "name": "XCB",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 201.3177,
+        "project_types": {
+          "antq_trib_basketry_shelter": 2,
+          "antq_trib_household_loom": 1,
+          "antq_trib_bone_antler_workshop": 1,
+          "antq_cult_barley_plots": 1
+        }
+      },
+      {
+        "id": 274,
+        "tag": "XDP",
+        "name": "XDP",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 197.71199000000001,
+        "project_types": {
+          "antq_reg_wool_carder": 2,
+          "antq_reg_leatherworks": 2,
+          "antq_reg_glassworks": 1
+        }
+      },
+      {
+        "id": 119,
+        "tag": "XBW",
+        "name": "XBW",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 2,
+        "building_projects": 3,
+        "gold_committed": 193.16534,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_reg_ropewalk": 2,
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 50,
+        "tag": "XBC",
+        "name": "XBC",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 3,
+        "building_projects": 2,
+        "gold_committed": 184.5521,
+        "project_types": {
+          "rgo_upgrade": 3,
+          "antq_cult_sesame_plots": 1,
+          "antq_reg_wool_carder": 1
+        }
+      },
+      {
+        "id": 84,
+        "tag": "XBI",
+        "name": "XBI",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 3,
+        "building_projects": 2,
+        "gold_committed": 176.9775,
+        "project_types": {
+          "rgo_upgrade": 3,
+          "antq_cult_camel_corrals": 1,
+          "antq_cult_date_groves": 1
+        }
+      },
+      {
+        "id": 255,
+        "tag": "HMR",
+        "name": "HMR",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 161.78336,
+        "project_types": {
+          "antq_cult_barley_plots": 2,
+          "antq_trib_horse_herd_camp": 2,
+          "antq_cult_fruit_orchards": 1
+        }
+      }
+    ]
+  },
+  "estates": {
+    "records": 2578,
+    "minimum": 0.11368,
+    "p10": 0.4595,
+    "median": 0.6255550000000001,
+    "polity_mean_p10": 0.5880999333333333,
+    "below_10_percent": 0,
+    "below_25_percent": 7
+  },
+  "wars": {
+    "distinct_civil_wars": 7,
+    "active_wars": 5,
+    "active_civil_wars": 5,
+    "elapsed_years": 6.010958904109589,
+    "civil_wars_per_polity_year": 0.0025152044354227413
+  },
+  "epidemics": {
+    "non_endemic_outbreaks": 3,
+    "outbreaks": [
+      {
+        "id": 6700,
+        "type": "influenza",
+        "outbreak_date": "1.5.1",
+        "died_out_date": "1.7.31",
+        "affected_locations": 17,
+        "age_years": 5.677625570776256,
+        "affected_locations_per_year": 2.994209425768055
+      },
+      {
+        "id": 6701,
+        "type": "measles",
+        "outbreak_date": "5.4.1",
+        "died_out_date": "5.11.20",
+        "affected_locations": 86,
+        "age_years": 1.7609589041095894,
+        "affected_locations_per_year": 48.83702839362115
+      },
+      {
+        "id": 6702,
+        "type": "influenza",
+        "outbreak_date": "7.1.1",
+        "died_out_date": null,
+        "affected_locations": 3,
+        "age_years": 0.01095890410958944,
+        "affected_locations_per_year": 273.74999999999005
+      }
+    ]
+  },
+  "log": {
+    "path": "G:\\antiqvitas_user_data\\logs\\error.log",
+    "script_errors": 0,
+    "ai_command_errors": 0,
+    "locations": {}
+  },
+  "failures": [
+    "major polities are bankrupt: XAH (89 provinces)"
+  ]
+}

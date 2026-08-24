@@ -9,10 +9,10 @@ fall_of_delhi = {
 
 	can_start = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		country_exists = c:DLH
+		country_exists = c:DUMMY
 		custom_tooltip = {
 			text = has_never_had_situation_before_tt
-			c:DLH = { has_variable = starts_fall_of_delhi_variable }
+			c:DUMMY = { has_variable = starts_fall_of_delhi_variable }
 		}
 	}
 
@@ -29,12 +29,12 @@ fall_of_delhi = {
 					capital.sub_continent = sub_continent:south_asia
 				}
 				AND = {
-					country_exists = c:DLH
+					country_exists = c:DUMMY
 					OR = {
-						is_neighbor_of = c:DLH
-						is_subject_of = c:DLH
-						is_enemy_of = c:DLH
-						is_rival_of = c:DLH
+						is_neighbor_of = c:DUMMY
+						is_subject_of = c:DUMMY
+						is_enemy_of = c:DUMMY
+						is_rival_of = c:DUMMY
 					}
 				}
 			}
@@ -43,25 +43,25 @@ fall_of_delhi = {
 
 
 	on_start = {
-		add_to_global_variable_list = { name = fall_of_delhi_voters target = c:DLH }
+		add_to_global_variable_list = { name = fall_of_delhi_voters target = c:DUMMY }
 		every_country = {
 			limit = {
-				NOT = { is_at_war_with = c:DLH }
-				NOT = { has_truce_with = c:DLH }
+				NOT = { is_at_war_with = c:DUMMY }
+				NOT = { has_truce_with = c:DUMMY }
 				AND = {
 					exists = capital
 					capital.sub_continent = sub_continent:south_asia
 				}
 				NOT = { tag = DLH }
 				OR = {
-					is_subject_of = c:DLH
+					is_subject_of = c:DUMMY
 					is_subject = no
 				}
 			}
 			add_to_global_variable_list = { name = fall_of_delhi_voters target = this }
 			trigger_event_non_silently = fall_of_delhi.2
 		}
-		c:DLH = {
+		c:DUMMY = {
 			#var for any bribes or favours given
 			set_variable = {
 				name = fall_of_delhi_vote_weight
@@ -69,12 +69,12 @@ fall_of_delhi = {
 			}
 			trigger_event_non_silently = fall_of_delhi.3
 		}
-		c:DLH = {
+		c:DUMMY = {
 			ordered_known_country = {
 				limit = {
 					capital.sub_continent = sub_continent:south_asia
 					NOR = {
-						is_allied_with = { target = c:DLH }
+						is_allied_with = { target = c:DUMMY }
 						is_subject = yes
 						is_during_bankruptcy = yes
 					}
@@ -95,7 +95,7 @@ fall_of_delhi = {
 					months = -1
 					mode = replace
 				}
-				add_to_global_variable_list = { name = fall_of_delhi_possible_votes target = c:DLH }
+				add_to_global_variable_list = { name = fall_of_delhi_possible_votes target = c:DUMMY }
 				add_to_global_variable_list = { name = fall_of_delhi_possible_votes target = this }
 
 				#var for any bribes or favours given
@@ -115,9 +115,9 @@ fall_of_delhi = {
 				#Delhi will obviously side with himself
 				situation:fall_of_delhi = {
 					set_vote = {
-						voter = c:DLH
+						voter = c:DUMMY
 						resolution = resolution:fall_of_delhi_resolution
-						vote = c:DLH
+						vote = c:DUMMY
 					}
 				}
 			}
@@ -140,7 +140,7 @@ fall_of_delhi = {
 		random_list = {
 			70 = { }
 			1 = {
-				c:DLH = { trigger_event_non_silently = fall_of_delhi.8 }
+				c:DUMMY = { trigger_event_non_silently = fall_of_delhi.8 }
 			}
 			1 = {
 				var:strongest_claimant_capital.owner ?= {
@@ -148,13 +148,13 @@ fall_of_delhi = {
 				}
 			}
 			1 = {
-				c:DLH = { trigger_event_non_silently = fall_of_delhi.13 }
+				c:DUMMY = { trigger_event_non_silently = fall_of_delhi.13 }
 			}
 			1 = {
-				c:DLH = { trigger_event_non_silently = fall_of_delhi.14 }
+				c:DUMMY = { trigger_event_non_silently = fall_of_delhi.14 }
 			}
 			1 = {
-				c:DLH = { trigger_event_non_silently = fall_of_delhi.16 }
+				c:DUMMY = { trigger_event_non_silently = fall_of_delhi.16 }
 			}
 		}
 
@@ -176,7 +176,7 @@ fall_of_delhi = {
 				}
 			}
 			1 = {
-				c:DLH = { trigger_event_non_silently = fall_of_delhi.19 }
+				c:DUMMY = { trigger_event_non_silently = fall_of_delhi.19 }
 			}
 			25 = {
 				random_in_global_list = {
@@ -202,7 +202,7 @@ fall_of_delhi = {
 				}
 			}
 			1 = {
-				c:DLH = { trigger_event_non_silently = fall_of_delhi.22 }
+				c:DUMMY = { trigger_event_non_silently = fall_of_delhi.22 }
 			}
 			95 = {}
 		}
@@ -210,7 +210,7 @@ fall_of_delhi = {
 
 
 	on_ended = {
-		c:DLH ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = { has_country_modifier = dlh_outside_interference_modifier }
 				remove_country_modifier = dlh_outside_interference_modifier
@@ -218,7 +218,7 @@ fall_of_delhi = {
 		}
 		if = {
 			limit = {
-				NOT = { country_exists = c:DLH }
+				NOT = { country_exists = c:DUMMY }
 			}
 			every_country = {
 				limit = {
@@ -229,22 +229,22 @@ fall_of_delhi = {
 		}
 		else_if = {
 			limit = {
-				c:DLH = { has_variable = dlh_surrendered_territories_var }
+				c:DUMMY = { has_variable = dlh_surrendered_territories_var }
 			}
-			c:DLH = { trigger_event_non_silently = fall_of_delhi.5 }
+			c:DUMMY = { trigger_event_non_silently = fall_of_delhi.5 }
 		}
 		else_if = {
 			limit = {
-				c:DLH = {
+				c:DUMMY = {
 					any_active_disaster = { disaster_type = disaster_type:dissolution_of_delhi }
 				}
 			}
-			c:DLH = { trigger_event_non_silently = fall_of_delhi.5 }
+			c:DUMMY = { trigger_event_non_silently = fall_of_delhi.5 }
 		}
 		else = {
-			c:DLH = { trigger_event_non_silently = fall_of_delhi.6 }
+			c:DUMMY = { trigger_event_non_silently = fall_of_delhi.6 }
 		}
-		c:DLH = {
+		c:DUMMY = {
 			remove_variable = starts_fall_of_delhi_variable
 			remove_variable = dlh_countdown_disaster_variable
 		}
@@ -260,12 +260,12 @@ fall_of_delhi = {
 			limit = {
 				has_owner = yes
 				owner ?= {
-					is_subject_of = c:DLH
+					is_subject_of = c:DUMMY
 					liberty_desire <= 50
 				}
 				situation:fall_of_delhi = {
 					"active_resolution(resolution:fall_of_delhi_resolution)" = {
-						"vote_in_active_resolution(root.owner)" ?= c:DLH
+						"vote_in_active_resolution(root.owner)" ?= c:DUMMY
 					}
 				}
 			}
@@ -275,7 +275,7 @@ fall_of_delhi = {
 			limit = {
 				has_owner = yes
 				owner ?= {
-					is_subject_of = c:DLH
+					is_subject_of = c:DUMMY
 					liberty_desire > 50
 				}
 				situation:fall_of_delhi = {
@@ -290,7 +290,7 @@ fall_of_delhi = {
 			limit = {
 				has_owner = yes
 				owner ?= {
-					is_allied_with = { target = c:DLH }
+					is_allied_with = { target = c:DUMMY }
 				}
 			}
 			custom_tooltip = "ALLY_OF_DELHI"
@@ -299,9 +299,9 @@ fall_of_delhi = {
 			limit = {
 				owner ?= {
 					OR = {
-						is_at_war_with = c:DLH
-						is_rival_of = c:DLH
-						is_enemy_of = c:DLH
+						is_at_war_with = c:DUMMY
+						is_rival_of = c:DUMMY
+						is_enemy_of = c:DUMMY
 					}
 				}
 			}
@@ -319,7 +319,7 @@ fall_of_delhi = {
 		if = {
 			limit = {
 				has_owner = yes
-				owner = c:DLH
+				owner = c:DUMMY
 			}
 			value = map_delhi
 		}
@@ -327,10 +327,10 @@ fall_of_delhi = {
 			limit = {
 				has_owner = yes
 				OR = {
-					owner ?= {is_allied_with = { target = c:DLH }}
+					owner ?= {is_allied_with = { target = c:DUMMY }}
 					situation:fall_of_delhi = {
 						"active_resolution(resolution:fall_of_delhi_resolution)" = {
-							"vote_in_active_resolution(root.owner)" ?= c:DLH
+							"vote_in_active_resolution(root.owner)" ?= c:DUMMY
 						}
 					}
 				}
@@ -341,9 +341,9 @@ fall_of_delhi = {
 			limit = {
 				owner ?= {
 					OR = {
-						is_at_war_with = c:DLH
-						is_rival_of = c:DLH
-						is_enemy_of = c:DLH
+						is_at_war_with = c:DUMMY
+						is_rival_of = c:DUMMY
+						is_enemy_of = c:DUMMY
 					}
 				}
 			}
@@ -353,7 +353,7 @@ fall_of_delhi = {
 			limit = {
 				owner ?= {
 					AND = {
-						is_subject_of = c:DLH
+						is_subject_of = c:DUMMY
 						liberty_desire > 50
 					}
 				}

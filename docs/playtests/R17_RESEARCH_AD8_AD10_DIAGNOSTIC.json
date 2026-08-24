@@ -1,0 +1,150 @@
+{
+  "status": "FAIL",
+  "baseline_save": "G:\\antiqvitas_runtime\\state\\save_melts\\autosave_a636dbaa-b9c6-46a4-abe2-5c3bc7a1c47d-02743cccb83eab8f9155.eu5",
+  "sample_save": "G:\\antiqvitas_runtime\\state\\save_melts\\autosave_a636dbaa-b9c6-46a4-abe2-5c3bc7a1c47d_2-bc84620be96f57898a15.eu5",
+  "start_date": "11.1.1",
+  "end_date": "9.1.1",
+  "elapsed_months": -24.0,
+  "minimum_months": 1.0,
+  "countries": [
+    {
+      "tag": "ROM",
+      "role": "large Mediterranean imperial/literate",
+      "engine_tag": "XAA",
+      "opening_population_thousands": 48700.25549,
+      "sample_population_thousands": 48369.69389,
+      "starting_technology_level": 3,
+      "opening_researched_count": 30,
+      "sample_researched_count": 30,
+      "completed_count": 0,
+      "completed_advances": [],
+      "completed_known_point_cost": 0,
+      "removed_advances": [],
+      "sample_active_slots": [
+        188,
+        141,
+        45,
+        190
+      ],
+      "sample_active_progress": 14.80469,
+      "status": "fail"
+    },
+    {
+      "tag": "HAN",
+      "role": "large East-Asian imperial/literate",
+      "engine_tag": "XAR",
+      "opening_population_thousands": 59508.12143,
+      "sample_population_thousands": 59043.19763,
+      "starting_technology_level": 3,
+      "opening_researched_count": 25,
+      "sample_researched_count": 25,
+      "completed_count": 0,
+      "completed_advances": [],
+      "completed_known_point_cost": 0,
+      "removed_advances": [],
+      "sample_active_slots": [
+        41,
+        146,
+        193,
+        195
+      ],
+      "sample_active_progress": 23.21811,
+      "status": "fail"
+    },
+    {
+      "tag": "PAR",
+      "role": "large Iranian imperial/mixed-literacy",
+      "engine_tag": "XAH",
+      "opening_population_thousands": 7062.63015,
+      "sample_population_thousands": 7011.61757,
+      "starting_technology_level": 3,
+      "opening_researched_count": 29,
+      "sample_researched_count": 29,
+      "completed_count": 0,
+      "completed_advances": [],
+      "completed_known_point_cost": 0,
+      "removed_advances": [],
+      "sample_active_slots": [
+        156,
+        75,
+        179,
+        118
+      ],
+      "sample_active_progress": 5.526,
+      "status": "fail"
+    },
+    {
+      "tag": "CHL",
+      "role": "regional settled/literate",
+      "engine_tag": "XBC",
+      "opening_population_thousands": 466.91494,
+      "sample_population_thousands": 463.52105,
+      "starting_technology_level": 3,
+      "opening_researched_count": 21,
+      "sample_researched_count": 21,
+      "completed_count": 0,
+      "completed_advances": [],
+      "completed_known_point_cost": 0,
+      "removed_advances": [],
+      "sample_active_slots": [
+        41,
+        200,
+        45,
+        103
+      ],
+      "sample_active_progress": 49.77688,
+      "status": "fail"
+    },
+    {
+      "tag": "XIO",
+      "role": "large pastoral/low-literacy",
+      "engine_tag": "XIO",
+      "opening_population_thousands": 512.65508,
+      "sample_population_thousands": 496.93485,
+      "starting_technology_level": 3,
+      "opening_researched_count": 26,
+      "sample_researched_count": 25,
+      "completed_count": 0,
+      "completed_advances": [],
+      "completed_known_point_cost": 0,
+      "removed_advances": [
+        "antq_mobile_felt_supply_camps"
+      ],
+      "sample_active_slots": [
+        48,
+        44,
+        161,
+        80,
+        123
+      ],
+      "sample_active_progress": 104.89931,
+      "status": "fail"
+    },
+    {
+      "tag": "AES",
+      "role": "small society-of-pops/low-literacy",
+      "engine_tag": "AES",
+      "opening_population_thousands": 53.42797,
+      "sample_population_thousands": 51.30564,
+      "starting_technology_level": 1,
+      "opening_researched_count": 14,
+      "sample_researched_count": 14,
+      "completed_count": 0,
+      "completed_advances": [],
+      "completed_known_point_cost": 0,
+      "removed_advances": [],
+      "sample_active_slots": [
+        44,
+        148,
+        62,
+        41
+      ],
+      "sample_active_progress": 13.46103,
+      "status": "fail"
+    }
+  ],
+  "failures": [
+    "interval is only -24.00 months; need 1.00",
+    "XIO lost researched advances: ['antq_mobile_felt_supply_camps']"
+  ]
+}

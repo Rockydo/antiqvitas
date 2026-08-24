@@ -22,7 +22,7 @@ dissolution_of_delhi = {
 				}
 				trigger_if = {
 					limit = {
-						c:DLH = { has_variable = harsher_requirements_for_disaster }
+						c:DUMMY = { has_variable = harsher_requirements_for_disaster }
 					}
 					custom_tooltip = {
 						text = opposers_at_least_80_sop_tt
@@ -62,15 +62,15 @@ dissolution_of_delhi = {
 		global_estate_target_satisfaction = medium_permanent_target_satisfaction_penalty
 		stability_investment = stability_investment_penalty
 		monthly_complacency = 0.3
-		has_complacency_effects = yes
+		has_complacency_effects = no
 	}
 
 	on_start = {
-		c:DLH = { trigger_event_non_silently = dissolution_of_delhi.1 }
+		c:DUMMY = { trigger_event_non_silently = dissolution_of_delhi.1 }
 	}
 
 	on_end = {
-		c:DLH = { trigger_event_non_silently = dissolution_of_delhi.7 }
+		c:DUMMY = { trigger_event_non_silently = dissolution_of_delhi.7 }
 
 	}
 

@@ -234,10 +234,10 @@ def expected_master(asset: AdvanceIcon) -> Image.Image:
     alpha = candidate.getchannel("A")
     bounds = alpha.point(lambda value: 255 if value >= 12 else 0).getbbox()
     perimeter = (
-        list(alpha.crop((0, 0, SIZE[0], 1)).getdata())
-        + list(alpha.crop((0, SIZE[1] - 1, SIZE[0], SIZE[1])).getdata())
-        + list(alpha.crop((0, 1, 1, SIZE[1] - 1)).getdata())
-        + list(alpha.crop((SIZE[0] - 1, 1, SIZE[0], SIZE[1] - 1)).getdata())
+        list(alpha.crop((0, 0, SIZE[0], 1)).get_flattened_data())
+        + list(alpha.crop((0, SIZE[1] - 1, SIZE[0], SIZE[1])).get_flattened_data())
+        + list(alpha.crop((0, 1, 1, SIZE[1] - 1)).get_flattened_data())
+        + list(alpha.crop((SIZE[0] - 1, 1, SIZE[0], SIZE[1] - 1)).get_flattened_data())
     )
     if (
         bounds is not None
@@ -251,21 +251,21 @@ def expected_master(asset: AdvanceIcon) -> Image.Image:
 
 def alpha_metrics(image: Image.Image) -> dict[str, object]:
     alpha = image.getchannel("A")
-    values = list(alpha.getdata())
+    values = list(alpha.get_flattened_data())
     active = sum(value >= 12 for value in values)
     opaque = sum(value >= 245 for value in values)
     threshold = alpha.point(lambda value: 255 if value >= 12 else 0)
     bounds = threshold.getbbox()
     perimeter = (
-        list(alpha.crop((0, 0, SIZE[0], 1)).getdata())
+        list(alpha.crop((0, 0, SIZE[0], 1)).get_flattened_data())
         + list(
-            alpha.crop((0, SIZE[1] - 1, SIZE[0], SIZE[1])).getdata()
+            alpha.crop((0, SIZE[1] - 1, SIZE[0], SIZE[1])).get_flattened_data()
         )
-        + list(alpha.crop((0, 1, 1, SIZE[1] - 1)).getdata())
+        + list(alpha.crop((0, 1, 1, SIZE[1] - 1)).get_flattened_data())
         + list(
             alpha.crop(
                 (SIZE[0] - 1, 1, SIZE[0], SIZE[1] - 1)
-            ).getdata()
+            ).get_flattened_data()
         )
     )
     return {

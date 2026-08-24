@@ -13,7 +13,7 @@ reform_society = {
 		has_any_active_disaster = no
 		custom_tooltip = {
 			text = eligible_for_reform_society_disaster_tt
-			has_variable = eligible_for_reform_society_disaster_variable
+			always = no
 			NOT = { has_variable = completed_nahuatl_reform_society_disaster_variable }
 		}
 	}
@@ -50,7 +50,6 @@ reform_society = {
 	}
 	on_end = {
 		#This removes the variable that made us eligible for the disaster
-		remove_variable = eligible_for_reform_society_disaster_variable
 
 		#This ensures we do not get the disaster again back-to-back
 		set_variable = completed_nahuatl_reform_society_disaster_variable

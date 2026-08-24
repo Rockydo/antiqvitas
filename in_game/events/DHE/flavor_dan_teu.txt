@@ -10,7 +10,7 @@ flavor_dan_teu.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -86,7 +86,7 @@ flavor_dan_teu.1 = {
 	}
 
 	after = {
-		c:TEU = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = flavor_dan_teu.2
 				days = 40
@@ -105,7 +105,7 @@ flavor_dan_teu.2 = {
 	
 	trigger = {
 		current_date > 476.9.4
-		c:DAN = {
+		c:DUMMY = {
 			any_current_war	= {
 				#Is Denmark defending from an Estonian Country?
 				any_attacker = {
@@ -128,7 +128,7 @@ flavor_dan_teu.2 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
-		c:DAN = {
+		c:DUMMY = {
 			random_war = {
 				limit = {
 					any_attacker = {
@@ -214,7 +214,7 @@ flavor_dan_teu.3 = {
 	trigger = {
 		current_date > 476.9.4
 		has_variable = estonian_rebellion_flag
-		country_exists = c:DAN
+		country_exists = c:DUMMY
 		NOT = { religion = religion:catholic }
 		OR = {
 			any_owned_location = {
@@ -231,7 +231,7 @@ flavor_dan_teu.3 = {
 			}
 		}
 		any_current_war = {
-			is_civil_war_for = c:DAN
+			is_civil_war_for = c:DUMMY
 			any_defender = { #any_war_enemy
 				OR = {
 					tag = TEU
@@ -303,7 +303,7 @@ flavor_dan_teu.3 = {
 						owner = ROOT
 					}
 				}
-				c:DAN = { trigger_event_non_silently = flavor_dan_teu.4 }
+				c:DUMMY = { trigger_event_non_silently = flavor_dan_teu.4 }
 			}
 			else = {
 				scope:teu_affected_pop.location.owner = {
@@ -469,7 +469,7 @@ flavor_dan_teu.7 = {
 
 	trigger = {
 		current_date > 476.9.4
-		c:TEU = { 
+		c:DUMMY = { 
 			any_current_war = {
 				this = scope:TEU_independence_war_estonian
 			}
@@ -487,15 +487,15 @@ flavor_dan_teu.7 = {
 		}	
 		if = {
 			limit = {
-				country_exists = c:LIV
-				c:LIV = {
-					is_subject_of = c:TEU 
+				country_exists = c:DUMMY
+				c:DUMMY = {
+					is_subject_of = c:DUMMY 
 				}
 			}			
-			c:LIV = { save_scope_as = teu_receives_estonia }
+			c:DUMMY = { save_scope_as = teu_receives_estonia }
 		}
 		else = {
-			c:TEU = { save_scope_as = teu_receives_estonia }
+			c:DUMMY = { save_scope_as = teu_receives_estonia }
 		}
 		
 		ruler_or_regent = {

@@ -1,0 +1,152 @@
+{
+  "status": "FAIL",
+  "baseline_save": "G:\\antiqvitas_user_data\\save games\\r7_current_rome_ad1_exercised_both.eu5",
+  "sample_save": "G:\\antiqvitas_user_data\\save games\\r7_current_rome_ad8_exercised.eu5",
+  "start_date": "1.1.1",
+  "end_date": "8.1.1",
+  "elapsed_months": 84.0,
+  "minimum_months": 72.0,
+  "countries": [
+    {
+      "tag": "ROM",
+      "role": "large Mediterranean imperial/literate",
+      "engine_tag": "XAA",
+      "opening_population_thousands": 47500.0,
+      "sample_population_thousands": 48154.03806,
+      "starting_technology_level": 3,
+      "opening_researched_count": 29,
+      "sample_researched_count": 29,
+      "completed_count": 0,
+      "completed_advances": [],
+      "completed_known_point_cost": 0,
+      "removed_advances": [],
+      "sample_active_slots": [],
+      "sample_active_progress": 15.2496,
+      "status": "fail"
+    },
+    {
+      "tag": "HAN",
+      "role": "large East-Asian imperial/literate",
+      "engine_tag": "XAR",
+      "opening_population_thousands": 57805.693,
+      "sample_population_thousands": 58812.803,
+      "starting_technology_level": 3,
+      "opening_researched_count": 24,
+      "sample_researched_count": 25,
+      "completed_count": 1,
+      "completed_advances": [
+        "antq_hydraulic_administration_manuals"
+      ],
+      "completed_known_point_cost": 112.5,
+      "removed_advances": [],
+      "sample_active_slots": [
+        41,
+        146,
+        193,
+        195
+      ],
+      "sample_active_progress": 6.57657,
+      "status": "pass"
+    },
+    {
+      "tag": "PAR",
+      "role": "large Iranian imperial/mixed-literacy",
+      "engine_tag": "XAH",
+      "opening_population_thousands": 6951.965,
+      "sample_population_thousands": 6987.6072,
+      "starting_technology_level": 3,
+      "opening_researched_count": 28,
+      "sample_researched_count": 28,
+      "completed_count": 0,
+      "completed_advances": [],
+      "completed_known_point_cost": 0,
+      "removed_advances": [],
+      "sample_active_slots": [
+        75,
+        156,
+        179,
+        118,
+        41
+      ],
+      "sample_active_progress": 113.15088,
+      "status": "fail"
+    },
+    {
+      "tag": "CHL",
+      "role": "regional settled/literate",
+      "engine_tag": "XBC",
+      "opening_population_thousands": 466.226,
+      "sample_population_thousands": 461.84832,
+      "starting_technology_level": 3,
+      "opening_researched_count": 20,
+      "sample_researched_count": 21,
+      "completed_count": 1,
+      "completed_advances": [
+        "antq_astronomical_reckoning"
+      ],
+      "completed_known_point_cost": 112.5,
+      "removed_advances": [],
+      "sample_active_slots": [
+        41,
+        200,
+        45,
+        103
+      ],
+      "sample_active_progress": 28.90573,
+      "status": "pass"
+    },
+    {
+      "tag": "XIO",
+      "role": "large pastoral/low-literacy",
+      "engine_tag": "XIO",
+      "opening_population_thousands": 440.136,
+      "sample_population_thousands": 489.06764,
+      "starting_technology_level": 3,
+      "opening_researched_count": 25,
+      "sample_researched_count": 25,
+      "completed_count": 0,
+      "completed_advances": [],
+      "completed_known_point_cost": 0,
+      "removed_advances": [],
+      "sample_active_slots": [
+        44,
+        48,
+        161,
+        80,
+        123
+      ],
+      "sample_active_progress": 93.45376,
+      "status": "fail"
+    },
+    {
+      "tag": "AES",
+      "role": "small society-of-pops/low-literacy",
+      "engine_tag": "AES",
+      "opening_population_thousands": 43.723,
+      "sample_population_thousands": 50.26724,
+      "starting_technology_level": 1,
+      "opening_researched_count": 13,
+      "sample_researched_count": 13,
+      "completed_count": 0,
+      "completed_advances": [],
+      "completed_known_point_cost": 0,
+      "removed_advances": [],
+      "sample_active_slots": [
+        48,
+        148,
+        62,
+        41,
+        45
+      ],
+      "sample_active_progress": 121.3579,
+      "status": "fail"
+    }
+  ],
+  "failures": [
+    "ROM completed no advance across the required interval",
+    "ROM has no valid active research at sample date",
+    "PAR completed no advance across the required interval",
+    "XIO completed no advance across the required interval",
+    "AES completed no advance across the required interval"
+  ]
+}

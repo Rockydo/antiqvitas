@@ -1249,8 +1249,8 @@ devotion_events.107 = {
 		has_policy = clerical_state
 		has_ruler = yes
 		NOT = { has_country_modifier = dev_jubilee }
-		country_exists = c:PAP
-		c:PAP = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			religion = religion:catholic
 			has_ruler = yes
 		}
@@ -1258,7 +1258,7 @@ devotion_events.107 = {
 
 	immediate = {
 		save_scope_as = from_country
-		c:PAP = {
+		c:DUMMY = {
 			ruler = {
 				save_scope_as = pope
 			}
@@ -1271,7 +1271,7 @@ devotion_events.107 = {
 		add_country_modifier = { modifier = dev_jubilee years = 10 mode = add_and_extend }
 		if = {
 			limit = { NOT = { tag = PAP } }
-			c:PAP = {
+			c:DUMMY = {
 				trigger_event_silently = { id = devotion_events.108 }
 			}
 		}
@@ -1350,7 +1350,7 @@ devotion_events.109 = {
 		}
 		remove_variable = dev_jubilee_bad_flag
 		show_as_tooltip = {
-			c:PAP = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = opinion_jubilee_bad }
 			}
 		}
@@ -1363,7 +1363,7 @@ devotion_events.109 = {
 		}
 		remove_variable = dev_jubilee_good_flag
 		show_as_tooltip = {
-			c:PAP = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = opinion_jubilee_good }
 			}
 		}

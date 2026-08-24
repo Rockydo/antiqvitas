@@ -195,7 +195,7 @@ scripted_effect ccw_grant_reward_for_joining_side = {
 	}
 	else_if = {
 		limit = { tag = NAV }
-		ccw_grant_reward_for_joining_side_nav = { from = scope:from_country target = c:NAV }
+		ccw_grant_reward_for_joining_side_nav = { from = scope:from_country target = c:DUMMY }
 	}
 	else_if = {
 		limit = { OR = { tag = POR culture = culture:portuguese } }
@@ -334,8 +334,8 @@ scripted_effect ccw_joins_ruler_side_effect = {
 			text = castilian_civil_war.1031.a.tt.100yw
 			if = {
 				limit = {
-					country_exists = c:NAV
-					c:NAV = {
+					country_exists = c:DUMMY
+					c:DUMMY = {
 						is_allied_with = { target = scope:target_country }
 					}
 				}
@@ -2053,11 +2053,11 @@ castilian_civil_war.1000 = {
 	}
 	trigger = {
 		current_date > 476.9.4
-		c:CAS = { has_variable = succession_crisis_pretender_variable }
+		c:DUMMY = { has_variable = succession_crisis_pretender_variable }
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:CAS = {
+		c:DUMMY = {
 			save_scope_as = from_country
 			ccw_set_ruler_pretender_scopes = yes
 			ccw_set_legitimate_bastard_scopes = yes
@@ -2078,8 +2078,8 @@ castilian_civil_war.1000 = {
 			limit = { is_situation_active = situation:hundred_years_war }
 			custom_tooltip = castilian_civil_war.1000.a.tt.100yw
 			if = {
-				limit = { country_exists = c:NAV c:NAV = { is_allied_with = { target = root } } }
-				c:NAV = { trigger_event_silently = castilian_civil_war.1003 }
+				limit = { country_exists = c:DUMMY c:DUMMY = { is_allied_with = { target = root } } }
+				c:DUMMY = { trigger_event_silently = castilian_civil_war.1003 }
 			}
 		}
 		scope:from_country = {
@@ -2237,7 +2237,7 @@ castilian_civil_war.1010 = {
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:CAS = {
+		c:DUMMY = {
 			save_scope_as = from_country
 			ccw_set_ruler_pretender_scopes = yes
 			ccw_set_legitimate_bastard_scopes = yes
@@ -2412,11 +2412,11 @@ castilian_civil_war.1020 = {
 		trigger = { has_variable = ccw_sided_with_legal_heir }
 		scope:target_rebels = { add_rebel_progress = rebel_progress_extreme_bonus }
 		scope:ruler_mother = {
-			banish_character_to_country_effect = { target = c:POR }
+			banish_character_to_country_effect = { target = c:DUMMY }
 		}
 		if = {
-			limit = { country_exists = c:POR }
-			c:POR = { trigger_event_silently = castilian_civil_war.1025 }
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = { trigger_event_silently = castilian_civil_war.1025 }
 		}
 		custom_tooltip = {
 			text = castilian_civil_war.1020.b.tt
@@ -2438,7 +2438,7 @@ castilian_civil_war.1020 = {
 				order_by = total_abilities
 				max = 3
 				check_range_bounds = no
-				banish_character_to_country_effect = { target = c:POR }
+				banish_character_to_country_effect = { target = c:DUMMY }
 				set_variable = por_character
 			}
 		}
@@ -2448,11 +2448,11 @@ castilian_civil_war.1020 = {
 		name = castilian_civil_war.1020.c
 		trigger = { has_variable = ccw_sided_with_bastard_heir }
 		scope:pretender_mother = {
-			banish_character_to_country_effect = { target = c:POR }
+			banish_character_to_country_effect = { target = c:DUMMY }
 		}
 		if = {
-			limit = { country_exists = c:POR }
-			c:POR = {
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = {
 				trigger_event_silently = castilian_civil_war.1022
 				show_as_tooltip = {
 					add_opinion = {
@@ -2571,14 +2571,14 @@ castilian_civil_war.1021 = {
 	option = {
 		name = castilian_civil_war.1021.a
 		scope:murderer_character = {
-			banish_character_to_country_effect = { target = c:POR }
+			banish_character_to_country_effect = { target = c:DUMMY }
 		}
 		add_prestige = prestige_severe_penalty
 		add_legitimacy = legitimacy_mild_bonus
 		scope:target_rebels = { add_rebel_progress = rebel_progress_mild_penalty }
 		if = {
-			limit = { country_exists = c:POR }
-			c:POR = {
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = {
 				trigger_event_silently = castilian_civil_war.1022
 				show_as_tooltip = {
 					add_opinion = {
@@ -2600,8 +2600,8 @@ castilian_civil_war.1021 = {
 		add_legitimacy = legitimacy_severe_bonus
 		scope:target_rebels = { add_rebel_progress = rebel_progress_severe_penalty }
 		if = {
-			limit = { country_exists = c:POR }
-			c:POR = {
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = {
 				trigger_event_silently = castilian_civil_war.1023
 				show_as_tooltip = {
 					add_opinion = {
@@ -2791,10 +2791,10 @@ castilian_civil_war.1030 = {
 		switch = {
 			trigger = has_variable
 			ccw_sided_with_legal_heir = {
-				c:ENG = { save_scope_as = target_country }
+				c:DUMMY = { save_scope_as = target_country }
 			}
 			ccw_sided_with_bastard_heir = {
-				c:FRA = { save_scope_as = target_country }
+				c:DUMMY = { save_scope_as = target_country }
 			}
 		}
 		ccw_setup_rewards_for_joining_side = yes
@@ -2960,7 +2960,7 @@ castilian_civil_war.1035 = {
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:NAV = { save_scope_as = root_country }
+		c:DUMMY = { save_scope_as = root_country }
 		ccw_set_promised_basque_land_scopes = yes
 		ccw_set_rebels_scope = yes
 	}
@@ -3078,8 +3078,8 @@ castilian_civil_war.1039 = {
 		if = {
 			limit = {
 				is_situation_active = situation:hundred_years_war	#Navarra is only involved when the 100yw is active too
-				country_exists = c:NAV
-				c:NAV = { is_allied_with = { target = scope:target_country } }
+				country_exists = c:DUMMY
+				c:DUMMY = { is_allied_with = { target = scope:target_country } }
 			}
 			trigger_event_silently = castilian_civil_war.1035
 		}
@@ -3141,11 +3141,11 @@ castilian_civil_war.1050 = {
 		OR = {
 			AND = {
 				has_variable = ccw_sided_with_legal_heir
-				country_exists = c:POR
+				country_exists = c:DUMMY
 			}
 			AND = {
 				has_variable = ccw_sided_with_bastard_heir
-				country_exists = c:ARA
+				country_exists = c:DUMMY
 			}
 		}
 	}
@@ -3157,12 +3157,12 @@ castilian_civil_war.1050 = {
 		switch = {
 			trigger = has_variable
 			ccw_sided_with_legal_heir = {
-				c:POR = {
+				c:DUMMY = {
 					save_scope_as = target_country
 				}
 			}
 			ccw_sided_with_bastard_heir = {
-				c:ARA = {
+				c:DUMMY = {
 					save_scope_as = target_country
 				}
 			}

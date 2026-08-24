@@ -9,7 +9,7 @@ flavor_mor.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -143,7 +143,7 @@ flavor_mor.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -213,7 +213,7 @@ flavor_mor.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -273,7 +273,7 @@ flavor_mor.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -337,7 +337,7 @@ flavor_mor.6 = { #CONSPIRATION
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -568,7 +568,7 @@ flavor_mor.12 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -739,7 +739,7 @@ flavor_mor.14 = {	#The Banu Marin
 	historical_info = flavor_mor.14.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -812,7 +812,7 @@ flavor_mor.15 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -902,7 +902,7 @@ flavor_mor.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -971,7 +971,7 @@ flavor_mor.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1029,7 +1029,7 @@ flavor_mor.18 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1184,7 +1184,7 @@ flavor_mor.19 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1477,7 +1477,7 @@ flavor_mor.24 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1545,7 +1545,7 @@ flavor_mor.25 = { #GRAVEYARD
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1602,7 +1602,7 @@ flavor_mor.26 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1733,7 +1733,7 @@ flavor_mor.27 = {#"The just defense of [GetCountry('TUN').GetLongNameWithNoToolt
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -1746,7 +1746,7 @@ flavor_mor.27 = {#"The just defense of [GetCountry('TUN').GetLongNameWithNoToolt
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
-		c:TLE.capital = {
+		c:DUMMY.capital = {
 			save_scope_as = tle_capital_scope
 		}
 		ruler = {
@@ -1775,7 +1775,7 @@ flavor_mor.28 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1981,7 +1981,7 @@ flavor_mor.30 = { #GRAVEYARD
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2040,7 +2040,7 @@ flavor_mor.31 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2102,7 +2102,7 @@ flavor_mor.32 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2171,7 +2171,7 @@ flavor_mor.33 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2268,7 +2268,7 @@ flavor_mor.34 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2332,7 +2332,7 @@ flavor_mor.35 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2385,7 +2385,7 @@ flavor_mor.36 = {
 		event_illustration_poptype_effect = { foreground = pop_type:nobles background = pop_type:soldiers }
 		save_scope_as = prev_country
 
-		c:GRA ?= {
+		c:DUMMY ?= {
 			save_scope_as = target_country
 		}
 	}
@@ -2514,7 +2514,7 @@ flavor_mor.1000 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2528,20 +2528,20 @@ flavor_mor.1000 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:TUR
+		country_exists = c:DUMMY
 		has_mutual_scripted_relation = {
 			type = relation_type:alliance
-			target = c:TUR
+			target = c:DUMMY
 		}
 
-		c:TUR = {
+		c:DUMMY = {
 			is_great_power = yes
 		}
 	}
 
 	immediate = {
 
-		c:TUR = {
+		c:DUMMY = {
 			event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 			save_scope_as = target_country
 			capital ?= {
@@ -2557,10 +2557,10 @@ flavor_mor.1000 = {
 		create_character = {
 			estate = estate_type:nobles_estate
 			age = 30
-			birth_location = c:TUR.capital
+			birth_location = c:DUMMY.capital
 			trait_category = general
-			culture = c:TUR.culture
-			religion = c:TUR.religion
+			culture = c:DUMMY.culture
+			religion = c:DUMMY.religion
 			dynasty = scope:target_dynasty
 			adm = { 30 40 }
 			dip = { 30 40 }
@@ -2694,7 +2694,7 @@ flavor_mor.1100 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_slaves_goods.dds"
 
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2868,7 +2868,7 @@ flavor_mor.1200 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2882,16 +2882,16 @@ flavor_mor.1200 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:GRA
-		country_exists = c:CAS
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 
-		c:GRA = {
+		c:DUMMY = {
 			is_subject = no
 		}
 		is_subject = no
 		at_war = no
 
-		location:cordoba.owner ?= c:CAS
+		location:cordoba.owner ?= c:DUMMY
 	}
 
 	immediate = {
@@ -2901,14 +2901,14 @@ flavor_mor.1200 = {
 			save_scope_as = target_character
 		}
 
-		c:GRA = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			ruler_or_regent ?= {
 				save_scope_as = target_character2
 			}
 		}
 
-		c:CAS = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 		}
 
@@ -2919,7 +2919,7 @@ flavor_mor.1200 = {
 		name = flavor_mor.1200.a
 
 		add_casus_belli = {
-			target = c:CAS
+			target = c:DUMMY
 			type = casus_belli:cb_reclaim_andalucia
 		}
 

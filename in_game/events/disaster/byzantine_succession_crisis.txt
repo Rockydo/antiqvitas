@@ -1115,7 +1115,7 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 	type = country_event
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1132,16 +1132,16 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 		current_date > 476.9.4
 		any_active_disaster = { disaster_type = disaster_type:byzantine_succession_crisis }
 		exists = capital
-		country_exists = c:VEN
-		country_exists = c:GEN
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 		NOR = {
-			c:VEN = { is_subject_of = root }
-			c:GEN = { is_subject_of = root }
+			c:DUMMY = { is_subject_of = root }
+			c:DUMMY = { is_subject_of = root }
 		}
 		in_civil_war = no
 		NOR = {
-			is_at_war_with = c:GEN
-			is_at_war_with = c:VEN
+			is_at_war_with = c:DUMMY
+			is_at_war_with = c:DUMMY
 		}
 	}
 	immediate = {
@@ -1170,7 +1170,7 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 		}
 		scope:target_location.market = {
 			add_merchant_power = {
-				country = c:VEN
+				country = c:DUMMY
 				key = italian_merchants_favored_key
 				months = 120
 				power = merchant_power_severe_bonus
@@ -1181,7 +1181,7 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 			mode = add_and_extend
 			years = 10
 		}
-		c:VEN = {
+		c:DUMMY = {
 			trigger_event_non_silently = byzantine_succ_crisis.12
 		}
 		if = {
@@ -1203,7 +1203,7 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 		}
 		scope:target_location.market = {
 			add_merchant_power = {
-				country = c:GEN
+				country = c:DUMMY
 				key = italian_merchants_favored_key
 				months = 120
 				power = merchant_power_severe_bonus
@@ -1214,7 +1214,7 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 			mode = add_and_extend
 			years = 10
 		}
-		c:GEN = {
+		c:DUMMY = {
 			trigger_event_non_silently = byzantine_succ_crisis.12
 		}
 		if = {
@@ -1236,7 +1236,7 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 		}
 		scope:target_location.market = {
 			add_merchant_power = {
-				country = c:VEN
+				country = c:DUMMY
 				key = italian_merchants_favored_key
 				months = 120
 				power = merchant_power_severe_bonus
@@ -1244,7 +1244,7 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 		}
 		scope:target_location.market = {
 			add_merchant_power = {
-				country = c:GEN
+				country = c:DUMMY
 				key = italian_merchants_favored_key
 				months = 120
 				power = merchant_power_severe_bonus
@@ -1265,10 +1265,10 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 				value = societal_value_large_move_to_right
 			}
 		}
-		c:VEN = {
+		c:DUMMY = {
 			trigger_event_non_silently = byzantine_succ_crisis.12
 		}
-		c:GEN = {
+		c:DUMMY = {
 			trigger_event_non_silently = byzantine_succ_crisis.12
 		}
 	}
@@ -1282,11 +1282,11 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 			mode = add_and_extend
 		}
 		add_opinion_mutual_effect = {
-			target = c:GEN
+			target = c:DUMMY
 			modifier = opinion_denied_special_access
 		}
 		add_opinion_mutual_effect = {
-			target = c:VEN
+			target = c:DUMMY
 			modifier = opinion_denied_special_access
 		}
 		if = {
@@ -1299,10 +1299,10 @@ byzantine_succ_crisis.11 = { 	#Foreign Merchants Privileges
 			}
 		}
 		hidden_effect = {
-			c:VEN = {
+			c:DUMMY = {
 				trigger_event_non_silently = byzantine_succ_crisis.13
 			}
-			c:GEN = {
+			c:DUMMY = {
 				trigger_event_non_silently = byzantine_succ_crisis.13
 			}
 		}
@@ -1323,7 +1323,7 @@ byzantine_succ_crisis.12 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
-		c:BYZ = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			ruler_or_regent ?= {
 				save_scope_as = target_character
@@ -1379,13 +1379,13 @@ byzantine_succ_crisis.13 = {
 
 		show_as_tooltip = {
 			add_opinion_mutual_effect = {
-				target = c:BYZ
+				target = c:DUMMY
 				modifier = opinion_denied_special_access
 			}
 		} 
 		add_casus_belli = { 
 			type = casus_belli:cb_trade_conflict 
-			target = c:BYZ
+			target = c:DUMMY
 		}
 	}
 	trigger = {
@@ -1406,17 +1406,17 @@ byzantine_succ_crisis.14 = { #The Demands of the Ottomans - Ottomans
 	}
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:BYZ
+		country_exists = c:DUMMY
 		in_civil_war = no
-		NOT = { is_at_war_with = c:BYZ }
-		NOT = { is_allied_with = { target = c:BYZ } }
-		NOT = { has_truce_with = c:BYZ }
-		c:BYZ = { is_subject = no }
+		NOT = { is_at_war_with = c:DUMMY }
+		NOT = { is_allied_with = { target = c:DUMMY } }
+		NOT = { has_truce_with = c:DUMMY }
+		c:DUMMY = { is_subject = no }
 		is_subject = no
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:BYZ = {
+		c:DUMMY = {
 			if = {
 				limit = { exists = var:succession_crisis_pretender_variable }
 			}
@@ -1431,7 +1431,7 @@ byzantine_succ_crisis.14 = { #The Demands of the Ottomans - Ottomans
 			}
 			capital = { save_scope_as = target_location }
 		}
-		c:BYZ = { 
+		c:DUMMY = { 
 			ruler_or_regent ?= { save_scope_as = target_character2 }
 			save_scope_as = target_country 
 		}
@@ -1441,7 +1441,7 @@ byzantine_succ_crisis.14 = { #The Demands of the Ottomans - Ottomans
 	option = {	#Demand money
 		name = byzantine_succ_crisis.14.a
 
-		c:BYZ = {
+		c:DUMMY = {
 			trigger_event_non_silently = byzantine_succ_crisis.15
 		}
 		custom_tooltip = sc_this_may_bring_us_into_conflict_tt
@@ -1488,9 +1488,9 @@ byzantine_succ_crisis.15 = {
 		name = byzantine_succ_crisis.15.a
 
 		show_as_tooltip = {
-			add_truce_with = { target = c:TUR }
+			add_truce_with = { target = c:DUMMY }
 		}
-		c:TUR = {
+		c:DUMMY = {
 			set_variable = byz_paid_variable 
 			trigger_event_non_silently = byzantine_succ_crisis.16
 		}
@@ -1503,7 +1503,7 @@ byzantine_succ_crisis.15 = {
 		name = byzantine_succ_crisis.15.b 
 
 		add_government_power = government_power_mild_bonus
-		c:TUR = { trigger_event_non_silently = byzantine_succ_crisis.16 }
+		c:DUMMY = { trigger_event_non_silently = byzantine_succ_crisis.16 }
 	}
 	trigger = {
 		current_date > 476.9.4
@@ -1535,7 +1535,7 @@ byzantine_succ_crisis.16 = {
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:BYZ = {
+		c:DUMMY = {
 			if = {
 				limit = { exists = var:succession_crisis_pretender_variable }
 			}
@@ -1559,19 +1559,19 @@ byzantine_succ_crisis.16 = {
 				has_variable = byz_paid_variable
 			}
 			add_gold = {
-				value = c:BYZ.monthly_income_trade_and_tax
+				value = c:DUMMY.monthly_income_trade_and_tax
 				multiply = 12
 			}
-			add_truce_with = { target = c:BYZ }
+			add_truce_with = { target = c:DUMMY }
 			remove_variable = byz_paid_variable
 		}
 		else = {
 			add_casus_belli = {	
-				target = c:BYZ	
+				target = c:DUMMY	
 				type = casus_belli:cb_insulted_us 
 			}
 			add_opinion = { 
-				target = c:BYZ 
+				target = c:DUMMY 
 				modifier = opinion_insulted 
 			} 
 		}

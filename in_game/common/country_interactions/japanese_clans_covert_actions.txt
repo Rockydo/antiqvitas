@@ -23,7 +23,7 @@ scout_enemy_holdings =  {
 				limit = {
 					situation:sengoku = { days_since_situation_start < 0 }
 				}
-				this != c:JAP
+				this != c:DUMMY
 			}
 		}
 	}
@@ -48,7 +48,7 @@ scout_enemy_holdings =  {
 				limit = {
 					situation:sengoku = { days_since_situation_start < 0 }
 				}
-				this != c:JAP
+				this != c:DUMMY
 			}
 		}
 	}

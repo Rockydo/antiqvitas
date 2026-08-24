@@ -11,7 +11,7 @@ flavor_chi_dai.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -62,7 +62,7 @@ flavor_chi_dai.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DAI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -209,7 +209,7 @@ flavor_chi_dai.3 = {
 			}
 		}
 
-		c:DAI = {
+		c:DUMMY = {
 			event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		}
 	}
@@ -349,7 +349,7 @@ flavor_chi_dai.5 = {
 			}
 		}
 
-		c:CHA ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = {
 				id = flavor_chi_dai.10
 				months = { 2 4 }
@@ -384,7 +384,7 @@ flavor_chi_dai.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -406,7 +406,7 @@ flavor_chi_dai.6 = {
 		any_character = {
 			is_general = yes	
 		}
-		NOT = { country_exists = c:DAI }
+		NOT = { country_exists = c:DUMMY }
 	}
 
 	immediate = {
@@ -454,11 +454,11 @@ flavor_chi_dai.6 = {
 				limit = {
 					owner = ROOT
 				}
-				change_province_owner = c:DAI
+				change_province_owner = c:DUMMY
 			}
 		}
 
-		c:DAI = {
+		c:DUMMY = {
 			make_subject_of = {
 				target = ROOT
 				type = subject_type:tributary
@@ -478,7 +478,7 @@ flavor_chi_dai.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -570,7 +570,7 @@ flavor_chi_dai.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -584,7 +584,7 @@ flavor_chi_dai.8 = {
 				owner ?= ROOT
 			}
 		}
-		NOT = { country_exists = c:DAI }
+		NOT = { country_exists = c:DUMMY }
 	}
 
 	illustration_tags = {
@@ -634,18 +634,18 @@ flavor_chi_dai.8 = {
 			factor = 0.33
 		}
 
-		create_country_from_cores_in_our_locations = c:DAI
+		create_country_from_cores_in_our_locations = c:DUMMY
 
 		every_in_list = {
 			list = revolt_provinces
-			change_province_owner = c:DAI
+			change_province_owner = c:DUMMY
 		}
 
 		scope:target_character = {
-			move_country = c:DAI
+			move_country = c:DUMMY
 		}
 
-		c:DAI = {
+		c:DUMMY = {
 			change_country_name = DAI
 			set_new_ruler = scope:target_character
 		}
@@ -675,7 +675,7 @@ flavor_chi_dai.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -836,7 +836,7 @@ flavor_chi_dai.11 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10

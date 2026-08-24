@@ -11,6 +11,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from dates import AntqDate, END
+from dead_script_links import sanitize_dead_links, validate_inventory
 from m12_system_quarantine import render_quarantine
 
 
@@ -102,7 +103,43 @@ def render_epidemic(disease: Disease) -> str:
 \t}}
 \tr0 = {{ value = {{ {disease.r0[0]:g} {disease.r0[1]:g} }} }}
 \tcalc_interval_days = {{ {disease.interval[0]} {disease.interval[1]} }}
-\tlocation_stagnation_chance = {{ value = {disease.stagnation:g} }}
+\t# An outbreak may travel through a regional road/port corridor, but its
+\t# original focus remains the distance anchor.  A flat stagnation chance let
+\t# lightly infected edges relay smallpox and measles around the whole world
+\t# in two to four years during the AD 1 production run.
+\tlocation_stagnation_chance = {{
+\t\tif = {{
+\t\t\tlimit = {{ "disease_presence(scope:disease)" > 0.05 }}
+\t\t\tvalue = "distance_to_squared(scope:disease.origin)"
+\t\t\tmultiply = 0.0006
+\t\t\tmultiply = 0.005
+\t\t}}
+\t\telse = {{
+\t\t\tvalue = "distance_to_squared(scope:disease.origin)"
+\t\t\tmultiply = 0.00006
+\t\t}}
+\t\tadd = {disease.stagnation:g}
+\t\tif = {{
+\t\t\tlimit = {{
+\t\t\t\tOR = {{
+\t\t\t\t\tlocation_rank ?= location_rank:rural_settlement
+\t\t\t\t\tAND = {{
+\t\t\t\t\t\tnum_roads = 0
+\t\t\t\t\t\tOR = {{
+\t\t\t\t\t\t\ttopography = mountains
+\t\t\t\t\t\t\ttopography = wetlands
+\t\t\t\t\t\t\tvegetation = desert
+\t\t\t\t\t\t\tvegetation = jungle
+\t\t\t\t\t\t}}
+\t\t\t\t\t}}
+\t\t\t\t}}
+\t\t\t}}
+\t\t\tadd = 0.15
+\t\t}}
+\t}}
+\t# Armies can carry sickness, but an isolated marching unit must not bypass
+\t# the geographic bound and create a second intercontinental focus.
+\tsub_unit_stagnation_chance = {{ value = 0.65 }}
 \tpercentage_to_meet_their_fate_on_calc = {{ value = {disease.fate:g} }}
 \tlocation_spread_threshold = {{ value = 0.12 }}
 \tmonthly_resistance_reduction = 0.001
@@ -163,24 +200,16 @@ def situation_bytes(filename: str) -> bytes:
         raise ValueError(f"{filename}: expected one installed situation, found {definitions}")
     had_bom = rendered.startswith(b"\xef\xbb\xbf")
     text = rendered.decode("utf-8-sig")
+    validate_inventory()
+    text, _dead_links = sanitize_dead_links(
+        text, label=f"in_game/common/situations/{filename}"
+    )
     inert_date = AntqDate(*END).engine()
 
     def clamp(match: re.Match[str]) -> str:
         return inert_date if int(match.group(1)) > END[0] else match.group(0)
 
     text = re.sub(r"\b(\d{3,4})\.\d{1,2}\.\d{1,2}\b", clamp, text)
-    if filename in {"black_death.txt", "great_pestilence.txt"}:
-        marker = "\ton_start = {"
-        if marker not in text:
-            raise ValueError(f"{filename}: installed situation lacks on_start")
-        # The installed adapters dereference this engine compatibility variable.
-        # Their start and visibility gates are permanently false, so a neutral
-        # initializer satisfies the reference graph without activating them.
-        text = text.replace(
-            marker,
-            marker + "\n\t\tset_variable = { name = original_outbreak value = no }",
-            1,
-        )
     return text.encode("utf-8-sig" if had_bom else "utf-8")
 
 
@@ -333,6 +362,16 @@ def validate() -> None:
         for required in ("mortality_rate", "location_modifier", "map_color", "calc_interval_days"):
             if required not in text:
                 failures.append(f"{path}: missing {required}")
+        if path.stem != "malaria":
+            if text.count('value = "distance_to_squared(scope:disease.origin)"') != 2:
+                failures.append(f"{path}: epidemic spread is not anchored to its origin in both phases")
+            for required in (
+                "location_rank ?= location_rank:rural_settlement",
+                "num_roads = 0",
+                "sub_unit_stagnation_chance = { value = 0.65 }",
+            ):
+                if required not in text:
+                    failures.append(f"{path}: missing ancient-mobility bound {required}")
 
     installed_situations = set(installed_files("in_game/common/situations"))
     for filename in sorted(installed_situations):

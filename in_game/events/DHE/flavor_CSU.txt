@@ -44,7 +44,7 @@ flavor_csu.200 = { #The Best aqha in the Andes
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CSU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -57,7 +57,7 @@ flavor_csu.200 = { #The Best aqha in the Andes
 
 	trigger = { #Ayamarca exists, the poisoner is alive and married to the ruler
 		current_date > 476.9.4
-		country_exists = c:AYA
+		country_exists = c:DUMMY
 		character:csu_cusi_chimbo = { 
 			is_alive = yes 
 			first_spouse = ROOT.ruler
@@ -156,8 +156,8 @@ flavor_csu.200 = { #The Best aqha in the Andes
 				add_trait = trait:secretive 
 			}
 		}
-		scope:concubine_poisoner = { move_country = c:AYA }
-		c:AYA = {
+		scope:concubine_poisoner = { move_country = c:DUMMY }
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
 	}
@@ -280,8 +280,8 @@ flavor_csu.201 = { #Betrayal!
 			scope:usurper_inka ?= { is_alive = no }
 		}
 		add_legitimacy = legitimacy_weak_penalty
-		scope:concubine_poisoner = { move_country = c:AYA }
-		c:AYA = {
+		scope:concubine_poisoner = { move_country = c:DUMMY }
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
 		
@@ -294,9 +294,9 @@ flavor_csu.201 = { #Betrayal!
 		}
 		add_legitimacy = legitimacy_mild_bonus
 		kill_character = scope:concubine_poisoner
-		c:AYA = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_angry }
-			add_casus_belli = { target = c:CSU type = casus_belli:cb_claim_throne}
+			add_casus_belli = { target = c:DUMMY type = casus_belli:cb_claim_throne}
 		}
 		
 	}
@@ -404,7 +404,7 @@ flavor_csu.210 = { #A Devious Plan
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = AYA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -412,8 +412,8 @@ flavor_csu.210 = { #A Devious Plan
 	
 	trigger = { #Qusqu exists, and hates Ayarmaca. Heir is alive and a kid
 		current_date > 476.9.4
-		country_exists = c:CSU
-		c:CSU = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			opinion = {
 				target = root
 				value <= 25 
@@ -440,7 +440,7 @@ flavor_csu.210 = { #A Devious Plan
 		random_cabinet_character = {
 			save_scope_as = minister
 		}
-		c:CSU = {
+		c:DUMMY = {
 			heir ?= {
 				save_scope_as = kidnapped_heir
 			}
@@ -450,7 +450,7 @@ flavor_csu.210 = { #A Devious Plan
 	option = { #Kidnap
 		name = flavor_csu.210.a
 		historical_option = yes
-		c:CSU = {
+		c:DUMMY = {
 			heir ?= {
 				move_country = root
 			}
@@ -494,7 +494,7 @@ flavor_csu.211 = { #Kidnapped Heir
 		name = flavor_csu.211.a
 		change_gold_effect = { scale = -5 }
 
-		c:AYA = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_csu.212 days = 5 }
 		}
 		add_prestige = prestige_severe_penalty
@@ -508,7 +508,7 @@ flavor_csu.211 = { #Kidnapped Heir
 		add_prestige = prestige_mild_penalty
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_severe_penalty }
 		add_legitimacy = legitimacy_weak_penalty
-		c:AYA = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_csu.213 days = 5 }
 		}
 	}
@@ -534,7 +534,7 @@ flavor_csu.212 = { #They Payed
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:CSU = {
+		c:DUMMY = {
 			heir ?= {
 				save_scope_as = kidnapped_heir
 			}
@@ -543,12 +543,12 @@ flavor_csu.212 = { #They Payed
 
 	option = { #Accept
 		name = flavor_csu.212.a
-		c:CSU = {
+		c:DUMMY = {
 			heir ?= {
-				move_country = c:CSU
+				move_country = c:DUMMY
 			}
 		}
-		add_gold = { value = c:CSU.monthly_income_trade_and_tax multiply = 5 }
+		add_gold = { value = c:DUMMY.monthly_income_trade_and_tax multiply = 5 }
 		add_prestige = prestige_weak_penalty
 		
 	}	
@@ -556,11 +556,11 @@ flavor_csu.212 = { #They Payed
 	option = { #Keep both
 		name = flavor_csu.212.b
 		add_prestige = prestige_extreme_penalty
-		add_gold = { value = c:CSU.monthly_income_trade_and_tax multiply = 5 }
+		add_gold = { value = c:DUMMY.monthly_income_trade_and_tax multiply = 5 }
 		trigger_event_silently = { id = flavor_csu.212 days = {50 300} }
-		c:CSU = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_angry }
-			add_casus_belli = { target = c:AYA type = casus_belli:cb_insulted_us}
+			add_casus_belli = { target = c:DUMMY type = casus_belli:cb_insulted_us}
 		}
 	}	
 	trigger = {
@@ -583,7 +583,7 @@ flavor_csu.213 = { #The Evil Child
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:CSU = {
+		c:DUMMY = {
 			heir ?= {
 				save_scope_as = kidnapped_heir
 			}
@@ -592,9 +592,9 @@ flavor_csu.213 = { #The Evil Child
 
 	option = { #Accept
 		name = flavor_csu.213.a
-		c:CSU = {
+		c:DUMMY = {
 			heir ?= {
-				move_country = c:CSU
+				move_country = c:DUMMY
 			}
 		}
 		add_prestige = prestige_severe_penalty

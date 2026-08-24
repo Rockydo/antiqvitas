@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "purpose": "Matched stock-EU5 control for runtime AI-command diagnostics",
+  "game_version": "1.3.11 (Pavia)",
+  "mode": "vanilla",
+  "resolution": "1920x1080",
+  "session": "docs/screens/v106_vanilla_trade_control",
+  "observer_wall_seconds": 240,
+  "start_date": "1337.4.1",
+  "final_date": "1338.3.14",
+  "process_exit_during_sample": false,
+  "resumes": 1,
+  "captures": 2,
+  "ai_log_bytes": 114688,
+  "ai_log_sha256": "BF9B8F5EB8D2488940E325352C7C52BEC65CE89C4A75DF4ED9F968C53DEF876A",
+  "error_log_bytes": 1940,
+  "error_log_sha256": "A094AC359F1F1DFAE9A175F672CEAB2661FF25FA7F07A2817BE805A22C05F837",
+  "invalid_ai_commands": {
+    "change_trade_capacity": 60,
+    "perform_generic_action": 56,
+    "diplomaticactioncommand": 38,
+    "merge_army": 1,
+    "toggle_can_attach_to": 1,
+    "invite_scholars": 1,
+    "upgrade_rgo": 1
+  },
+  "invalid_ai_command_total": 158,
+  "evidence": {
+    "paused_start": "docs/screens/v106_vanilla_trade_control/observer_0000.png",
+    "midpoint_1337_08_16": "docs/screens/v106_vanilla_trade_control/observer_0001.png",
+    "final_1338_03_14": "docs/screens/v106_vanilla_trade_control/observer_final.png"
+  },
+  "interpretation": "These command families are emitted by the unmodified installed engine and cannot by themselves identify a conversion regression. Mod-authored commands remain subject to structural validation and matched-rate/runtime analysis; this control does not authorize a blanket ignore list."
+}

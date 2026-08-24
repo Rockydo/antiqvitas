@@ -1,5 +1,5 @@
 {
-  "active_custom_definition_count": 408,
+  "active_custom_definition_count": 412,
   "active_custom_definitions": [
     "antq_aedes_bellonae",
     "antq_aedes_concordiae_augustae",
@@ -148,6 +148,7 @@
     "antq_reg_cheese_dairy",
     "antq_reg_clay_brickworks",
     "antq_reg_coconut_workshop",
+    "antq_reg_codex_bindery",
     "antq_reg_collegia_hall",
     "antq_reg_colonia_forum",
     "antq_reg_combmaker",
@@ -161,6 +162,7 @@
     "antq_reg_cursus_mansio",
     "antq_reg_customs_gate",
     "antq_reg_date_drying_yard",
+    "antq_reg_diatretum_glasshouse",
     "antq_reg_dye_finishing_house",
     "antq_reg_dye_workshop",
     "antq_reg_eastern_arabian_aflaj",
@@ -238,6 +240,7 @@
     "antq_reg_papyrus_workshop",
     "antq_reg_parchmentery",
     "antq_reg_perfumery",
+    "antq_reg_polychrome_goldsmith",
     "antq_reg_pottery_kiln",
     "antq_reg_public_cistern",
     "antq_reg_pulley_workshop",
@@ -311,6 +314,7 @@
     "antq_reg_wiredrawer",
     "antq_reg_wool_carder",
     "antq_reg_wool_drapery",
+    "antq_reg_yue_celadon_kiln",
     "antq_regia",
     "antq_rostra_augusti",
     "antq_saepta_iulia",
@@ -420,7 +424,7 @@
         "provincial_garrison"
       ],
       "relative": "00_unique_buildings_to_make_obsolete.txt",
-      "rendered_sha256": "0d8b85df046adee6ffcaf619cbe08d444522c8f65df8670dd99d7f328b20e850",
+      "rendered_sha256": "b18b49d03fb8b4f35b10517498beb9f31edfb7e463bd39815d8cb83b8061bead",
       "source": "<GAME_ROOT>/in_game/common/building_types/00_unique_buildings_to_make_obsolete.txt",
       "source_sha256": "39617f59b117ec93c85e395a91417136e2fe1fea497be9f05918a59e51eec1dd",
       "target": "in_game/common/building_types/00_unique_buildings_to_make_obsolete.txt"
@@ -444,7 +448,7 @@
         "central_bank"
       ],
       "relative": "capital_buildings.txt",
-      "rendered_sha256": "91b781957e370fd33f1be3c3fd2cbd160b85c63fd6a27046598e666b17722902",
+      "rendered_sha256": "ee7f9378fbe42710d9ef058de4535820598343385d03ae260f544cc8c965bd23",
       "source": "<GAME_ROOT>/in_game/common/building_types/capital_buildings.txt",
       "source_sha256": "e7696209f23b1605bd7720ee81070e32cf887aaa9da18520d74e06aefdbe36be",
       "target": "in_game/common/building_types/capital_buildings.txt"
@@ -547,7 +551,7 @@
         "free_village"
       ],
       "relative": "estate_buildings.txt",
-      "rendered_sha256": "2a37628ecc3ac56e1ccf494c57ea4b0dc1a1e5de16e52cfe66b81cd111893720",
+      "rendered_sha256": "ca9a18a89bed97c22f6034fd529ef9e95b62665a245fa6e58a73000524a8bf4d",
       "source": "<GAME_ROOT>/in_game/common/building_types/estate_buildings.txt",
       "source_sha256": "8abc3c21e21a9af60eab9c99b728dd678d1f55e62d0c5773d2ebe244ef703504",
       "target": "in_game/common/building_types/estate_buildings.txt"
@@ -660,7 +664,7 @@
         "sie_sienese_port"
       ],
       "relative": "event_only_buildings.txt",
-      "rendered_sha256": "837ae57235b0393fdf7c8126df28c2db3ec1180dcf70ad7e60b8ee86fa5f105e",
+      "rendered_sha256": "f3fcb8fe3e45cca35d79cac09e51b1a0783b66b29a8b4d5a7b108ef71d3cbcf6",
       "source": "<GAME_ROOT>/in_game/common/building_types/event_only_buildings.txt",
       "source_sha256": "9f5f8c55f3dda0d3e8d0240670fd3e32859ebc6c168b5a98d88685cf7f185867",
       "target": "in_game/common/building_types/event_only_buildings.txt"
@@ -703,7 +707,7 @@
         "hre_imperial_armory_own"
       ],
       "relative": "hre_buildings.txt",
-      "rendered_sha256": "29a542f74621d4af74d7e6d7235e72fba6a8221189e4139b77106b4d69f93231",
+      "rendered_sha256": "9a20ff147829a9de70c5c1b8eda0580f2d9d631ceceec17d7a9cec7595046484",
       "source": "<GAME_ROOT>/in_game/common/building_types/hre_buildings.txt",
       "source_sha256": "e22df2deebb45e6df10ddcbd7d9162ee879c2e3c921c4a18efa5ae85334c49fa",
       "target": "in_game/common/building_types/hre_buildings.txt"
@@ -722,7 +726,7 @@
         "city_guard"
       ],
       "relative": "manpower_buildings.txt",
-      "rendered_sha256": "046fd5dea6bdd22c2291a9c6bc6aa7167f4855abc220904784c6412b6e6c3b55",
+      "rendered_sha256": "3c6506625741d28039ad5617840ab9397397cc9561a093041002ef6e5bb03995",
       "source": "<GAME_ROOT>/in_game/common/building_types/manpower_buildings.txt",
       "source_sha256": "5130be1e5ef95b014fc0ec6e9f57ba8b129d82b83a5361ed2aaf4b34761db888",
       "target": "in_game/common/building_types/manpower_buildings.txt"
@@ -751,7 +755,7 @@
         "pirate_tavern"
       ],
       "relative": "pirate_buildings.txt",
-      "rendered_sha256": "60d8def055d765501f3d3b85c99101198755f51072d36fd349b06f8af697a7f7",
+      "rendered_sha256": "af89c11c71ff8736afed503632e6414871307da7fcbe587bc964f0893ca8c0b2",
       "source": "<GAME_ROOT>/in_game/common/building_types/pirate_buildings.txt",
       "source_sha256": "4ac0c894993453c6cd04b4c646ce3fe54a4aecfbdfe9500786e80ff8312446a5",
       "target": "in_game/common/building_types/pirate_buildings.txt"
@@ -778,7 +782,7 @@
         "protected_harbor"
       ],
       "relative": "port_buildings.txt",
-      "rendered_sha256": "dbcfd50ec204769c942296b370a5a617367a008189fd54edb23d061dbd82d5fc",
+      "rendered_sha256": "069fad9778045b96984b90d737c292f83588eb6e50a505604e538d3419b14fc6",
       "source": "<GAME_ROOT>/in_game/common/building_types/port_buildings.txt",
       "source_sha256": "9dfa8e370916179ec9ee506938b6049a5ca1522ff7b3d9954b5840ca4ee7563c",
       "target": "in_game/common/building_types/port_buildings.txt"
@@ -1094,7 +1098,7 @@
         "kilwan_shipwrights"
       ],
       "relative": "rural_buildings.txt",
-      "rendered_sha256": "b6b1a31bd2edefb1d44728d771778543968b3f2143863b0ce1ebb716e646921b",
+      "rendered_sha256": "56a0198b3e5e210d00031c1596077bb784d49502c894b8a5207116612f5a29c0",
       "source": "<GAME_ROOT>/in_game/common/building_types/rural_buildings.txt",
       "source_sha256": "6e21a38fcae792ae9bad54e6e52c905d71de05baa073f36ffff04c272e2244ac",
       "target": "in_game/common/building_types/rural_buildings.txt"
@@ -1129,7 +1133,7 @@
         "provincial_chancery"
       ],
       "relative": "town_buildings.txt",
-      "rendered_sha256": "eabce5104c0e01593a676e90fbc339faab38b8f7ab8549c49626aa563a7dd073",
+      "rendered_sha256": "4c37d66dbff7260c3cb4e84e54064821577006b1a1b3b8853317fb55efe5771a",
       "source": "<GAME_ROOT>/in_game/common/building_types/town_buildings.txt",
       "source_sha256": "5dda1ef6774690d837dbc9204fec418673895397b3603a0267a98fcae8087681",
       "target": "in_game/common/building_types/town_buildings.txt"
@@ -1158,7 +1162,7 @@
         "trade_company_governance"
       ],
       "relative": "trade_company_buildings.txt",
-      "rendered_sha256": "2a05efb6fe15b5a9a59d7d74b3b2ebea734a5691f1ed9dbc25d073834ffa53a7",
+      "rendered_sha256": "d2160aeebc82c5521fef84fbed17ba79d28ab56714af99e89645f9e45dbb8080",
       "source": "<GAME_ROOT>/in_game/common/building_types/trade_company_buildings.txt",
       "source_sha256": "fadafecdae3c24140b80161860f1d8786bdc3f33f07495f5a6c3f92a6f88867e",
       "target": "in_game/common/building_types/trade_company_buildings.txt"
@@ -1277,7 +1281,7 @@
         "hsa_burgtor"
       ],
       "relative": "unique_buildings.txt",
-      "rendered_sha256": "44ffeead1491b4f00d6a87e445b75c18aa09d9199ace566ccbcebe6c94a7f7f5",
+      "rendered_sha256": "7b2ddfa87b2ad40e49fae2771508d30a7b9cc80bbf3aab113e16903275da24b0",
       "source": "<GAME_ROOT>/in_game/common/building_types/unique_buildings.txt",
       "source_sha256": "b7853a50eda5edd9dbc291d962096ce73296b1b3e78412e28e333c3c7836080e",
       "target": "in_game/common/building_types/unique_buildings.txt"

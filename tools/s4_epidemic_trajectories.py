@@ -98,9 +98,10 @@ def main() -> int:
             failures.append(f"{label} trajectory does not retain one start and one safety-bound date")
 
     game_dir = Path(json.loads(CONFIG.read_text(encoding="utf-8-sig"))["game_dir"])
-    disease_root = game_dir / "game/in_game/common/diseases"
-    readme = (disease_root / "readme.txt").read_text(encoding="utf-8-sig")
-    smallpox = (disease_root / "smallpox.txt").read_text(encoding="utf-8-sig")
+    installed_disease_root = game_dir / "game/in_game/common/diseases"
+    mod_disease_root = ROOT / "in_game/common/diseases"
+    readme = (installed_disease_root / "readme.txt").read_text(encoding="utf-8-sig")
+    smallpox = (mod_disease_root / "smallpox.txt").read_text(encoding="utf-8-sig")
     for token in (
         "pop deaths",
         "mortality_rate:",
@@ -114,9 +115,24 @@ def main() -> int:
         "mortality_rate = {",
         "location_spread_threshold = {",
         "on_spread_to_country = {",
+        'value = "distance_to_squared(scope:disease.origin)"',
+        "sub_unit_stagnation_chance = { value = 0.65 }",
     ):
         if token not in smallpox:
-            failures.append(f"installed smallpox proxy lacks {token}")
+            failures.append(f"mod smallpox proxy lacks {token}")
+    for path in sorted(mod_disease_root.glob("*.txt")):
+        if path.stem == "malaria":
+            continue
+        epidemic = path.read_text(encoding="utf-8-sig")
+        if epidemic.count('value = "distance_to_squared(scope:disease.origin)"') != 2:
+            failures.append(f"{path.name} does not distance-bound both outbreak phases")
+        for token in (
+            "location_rank ?= location_rank:rural_settlement",
+            "num_roads = 0",
+            "sub_unit_stagnation_chance = { value = 0.65 }",
+        ):
+            if token not in epidemic:
+                failures.append(f"{path.name} lacks ancient-mobility bound {token}")
 
     if failures:
         print("s4_epidemic_trajectories: FAIL")

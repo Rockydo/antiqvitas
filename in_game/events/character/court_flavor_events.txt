@@ -1201,9 +1201,9 @@ court_flavor_events.40 = {
 
 	option = {
 		name = court_flavor_events.40.a
-		scope:advisor = { move_country = c:PAP }
+		scope:advisor = { move_country = c:DUMMY }
 
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_bowed_to_papal_demand_advisor }
 			trigger_event_silently = { id = court_flavor_events.41 }
 		}
@@ -1212,7 +1212,7 @@ court_flavor_events.40 = {
 	}
 	option = {
 		name = court_flavor_events.40.b
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_rejected_papal_demand_advisor }
 			trigger_event_silently = { id = court_flavor_events.42 }
 		}

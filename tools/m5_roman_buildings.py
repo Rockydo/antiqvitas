@@ -165,7 +165,12 @@ def definition(items: list[dict[str, str]]) -> str:
     for row in items:
         lines.extend((f"{row['key']} = {{", "\taudio_tier = 2", "\tis_special = yes", "\tis_foreign = no",
                       f"\tpop_type = {row['pop_type']}", "\tmax_levels = 1", f"\tcategory = {row['category']}",
-                      f"\temployment_size = {row['employment_size']}", "\ttown = yes", "\tcity = yes", "\tmegalopolis = yes",
+                      f"\temployment_size = {row['employment_size']}"))
+        if row["category"] == "defense_category":
+            # Several securely attested Augustan timber camps occupy rural
+            # engine polygons; the monument follows the site, not a later town.
+            lines.append("\trural_settlement = yes")
+        lines.extend(("\ttown = yes", "\tcity = yes", "\tmegalopolis = yes",
                       f"\tbuild_time = {row['build_time']}",
                       "\t# Historical one-level monument: created only by the sourced AD 1 setup.",
                       "\tcountry_potential = { always = no }",

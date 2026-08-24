@@ -1289,9 +1289,9 @@ black_death.1012 = { # By Order of The Pope
 		NOT = { has_variable = bd1012_cd }
 		country_has_disease = disease:bubonic_plague
 		religion = religion:catholic
-		NOT = { c:PAP = root }
-		exists = c:PAP.ruler
-		c:PAP = { 
+		NOT = { c:DUMMY = root }
+		exists = c:DUMMY.ruler
+		c:DUMMY = { 
 			has_ruler = yes 
 			NOT = { has_insulted = ROOT }
 		}
@@ -1299,7 +1299,7 @@ black_death.1012 = { # By Order of The Pope
 
 	immediate = {
 		set_variable = bd1012_cd
-		c:PAP.ruler = { save_scope_as = target_character } 
+		c:DUMMY.ruler = { save_scope_as = target_character } 
 	}
 
 	option = {
@@ -1320,7 +1320,7 @@ black_death.1012 = { # By Order of The Pope
 		add_estate_satisfaction = { type = estate_type:peasants_estate
 			value = estate_satisfaction_mild_bonus
 		}
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = opinion_insulted

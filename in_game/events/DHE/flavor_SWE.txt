@@ -8,7 +8,7 @@ flavor_swe.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -98,7 +98,7 @@ flavor_swe.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -116,11 +116,11 @@ flavor_swe.2 = {
 	trigger = {
 		current_date > 476.9.4
 		has_or_had_tag = SWE
-		in_union_with = c:DAN
+		in_union_with = c:DUMMY
 		ruler ?= {
 			culture = culture:danish
 		}
-		succession_law = c:DAN.succession_law
+		succession_law = c:DUMMY.succession_law
 	}
 
 	option = {
@@ -130,7 +130,7 @@ flavor_swe.2 = {
 	}
 	option = {
 		name = flavor_swe.2.b
-		c:DAN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = swe_supports_the_union }
 		}
 		add_estate_satisfaction = { type = estate_type:peasants_estate value = estate_satisfaction_extreme_penalty }
@@ -138,7 +138,7 @@ flavor_swe.2 = {
 	}
 	option = {
 		name = flavor_swe.2.c
-		c:DAN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = swe_renounced_the_union }
 		}
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
@@ -154,7 +154,7 @@ flavor_swe.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -167,7 +167,7 @@ flavor_swe.3 = {
 	
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:DAN
+		country_exists = c:DUMMY
 		has_or_had_tag = SWE
 	}
 
@@ -179,14 +179,14 @@ flavor_swe.3 = {
 		name = flavor_swe.3.a
 		historical_option = yes
 		add_legitimacy = legitimacy_mild_bonus
-		c:DAN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = swe_rejected_the_kalmar_recess }
 		}
 	}
 	option = {
 		name = flavor_swe.3.b
 		add_stability = stability_mild_bonus
-		c:DAN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = swe_honored_the_kalmar_recess }
 		}
 	}
@@ -202,7 +202,7 @@ flavor_swe.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -271,7 +271,7 @@ flavor_swe.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -328,7 +328,7 @@ flavor_swe.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -378,7 +378,7 @@ flavor_swe.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -456,7 +456,7 @@ flavor_swe.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -493,7 +493,7 @@ flavor_swe.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -525,7 +525,7 @@ flavor_swe.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -581,7 +581,7 @@ flavor_swe.11 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -639,7 +639,7 @@ flavor_swe.12 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -678,7 +678,7 @@ flavor_swe.13 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -753,7 +753,7 @@ flavor_swe.14 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -805,7 +805,7 @@ flavor_swe.15 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -847,7 +847,7 @@ flavor_swe.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -903,7 +903,7 @@ flavor_swe.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -964,7 +964,7 @@ flavor_swe.18 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -1014,7 +1014,7 @@ flavor_swe.19 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1069,7 +1069,7 @@ flavor_swe.20 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1137,7 +1137,7 @@ flavor_swe.21 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1178,7 +1178,7 @@ flavor_swe.22 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1221,7 +1221,7 @@ flavor_swe.23 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1230,17 +1230,17 @@ flavor_swe.23 = {
 	trigger = {
 		current_date > 476.9.4
 		has_or_had_tag = SWE
-		country_exists = c:RUS
-		is_at_war_with = c:RUS
+		country_exists = c:DUMMY
+		is_at_war_with = c:DUMMY
 		NOT = {
-			country_exists = c:FIN
+			country_exists = c:DUMMY
 		}
 		any_owned_location = {
-			is_core_of = c:FIN
+			is_core_of = c:DUMMY
 		}
-		c:RUS = {
+		c:DUMMY = {
 			any_owned_location = {
-				is_core_of = c:SWE
+				is_core_of = c:DUMMY
 			}
 		}
 	}
@@ -1252,7 +1252,7 @@ flavor_swe.23 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:RUS = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 	}
 
 	option = {
@@ -1264,7 +1264,7 @@ flavor_swe.23 = {
 		historical_option = yes
 		custom_tooltip = {
 			text = flavor_swe.23.b.tt
-			c:RUS = {
+			c:DUMMY = {
 				trigger_event_silently = { id = flavor_rus.31 }
 			}
 		}
@@ -1281,7 +1281,7 @@ flavor_swe.24 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1338,7 +1338,7 @@ flavor_swe.25 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1379,7 +1379,7 @@ flavor_swe.26 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1424,7 +1424,7 @@ flavor_swe.27 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1457,7 +1457,7 @@ flavor_swe.28 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1511,7 +1511,7 @@ flavor_swe.29 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1539,7 +1539,7 @@ flavor_swe.30 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1599,7 +1599,7 @@ flavor_swe.31 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1628,7 +1628,7 @@ flavor_swe.32 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1663,7 +1663,7 @@ flavor_swe.33 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1708,7 +1708,7 @@ flavor_swe.34 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1751,8 +1751,8 @@ flavor_swe.35 = {
 		current_date > 476.9.4
 		tag = SWE
 		has_reform = government_reform:swe_age_of_freedom
-		country_exists = c:FRA
-		country_exists = c:RUS
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 		NOT = { has_variable = swe_parliament_cooldown }
 	}
 
@@ -1768,11 +1768,11 @@ flavor_swe.35 = {
 
 	option = {
 		name = flavor_swe.35.a
-		c:FRA = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = swedish_hats }
 		}
-		c:RUS = {
-			add_casus_belli = {	target = c:SWE	type = casus_belli:cb_insulted_us	}
+		c:DUMMY = {
+			add_casus_belli = {	target = c:DUMMY	type = casus_belli:cb_insulted_us	}
 		}
 
 		change_societal_value = { type = belligerent_vs_conciliatory value = societal_value_tiny_move_to_left }
@@ -1786,11 +1786,11 @@ flavor_swe.35 = {
 	}
 	option = {
 		name = flavor_swe.35.b
-		c:RUS = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = swedish_caps }
 		}
-		c:FRA = {
-			add_casus_belli = {	target = c:SWE	type = casus_belli:cb_insulted_us	}
+		c:DUMMY = {
+			add_casus_belli = {	target = c:DUMMY	type = casus_belli:cb_insulted_us	}
 		}
 		change_societal_value = { type = belligerent_vs_conciliatory value = societal_value_tiny_move_to_right }
 		if = {
@@ -1813,7 +1813,7 @@ flavor_swe.36 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1855,7 +1855,7 @@ flavor_swe.37 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1903,7 +1903,7 @@ flavor_swe.38 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -1956,7 +1956,7 @@ flavor_swe.39 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2021,7 +2021,7 @@ flavor_swe.40 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2070,7 +2070,7 @@ flavor_swe.41 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2132,8 +2132,8 @@ flavor_swe.42 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
-		tag = FIN
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2212,7 +2212,7 @@ flavor_swe.43 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 30
@@ -2258,8 +2258,8 @@ flavor_swe.44 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
-		tag = FIN
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 8
@@ -2300,7 +2300,7 @@ flavor_swe.45 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2340,7 +2340,7 @@ flavor_swe.46 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2394,7 +2394,7 @@ flavor_swe.47 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2491,7 +2491,7 @@ flavor_swe.48 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2551,7 +2551,7 @@ flavor_swe.49 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2593,7 +2593,7 @@ flavor_swe.50 = { #University of Uppsala
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2613,8 +2613,8 @@ flavor_swe.50 = { #University of Uppsala
 		has_or_had_tag = SWE
 		owns = location:uppsala
 		religion = religion:catholic
-		c:PAP = {
-			opinion = { target = c:SWE value >= 0 }
+		c:DUMMY = {
+			opinion = { target = c:DUMMY value >= 0 }
 			has_ruler = yes
 		}
 	}
@@ -2662,7 +2662,7 @@ flavor_swe.51 = { #Carl Michael Bellman
 	image = "gfx/interface/illustrations/institutions/enlightenment.dds"
 
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2712,7 +2712,7 @@ flavor_swe.52 = { #Carl von Linne
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2756,7 +2756,7 @@ flavor_swe.53 = { #Magnus Eriksson's Landslag
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2803,7 +2803,7 @@ flavor_swe.54 = { #Anckarström assassinates Gustav III
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 1795.1
 		monthly_chance = 5
@@ -2884,7 +2884,7 @@ flavor_swe.55 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2901,24 +2901,24 @@ flavor_swe.55 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:HSA
+		country_exists = c:DUMMY
 		has_or_had_tag = SWE
 
-		c:HSA ?= {
+		c:DUMMY ?= {
 			NOT = { is_allied_with = { target = ROOT } }
 		}
 
 		capital.market ?= {
-			most_powerful_merchant = c:HSA
+			most_powerful_merchant = c:DUMMY
 		}
 	}
 	option = {
 		name = flavor_swe.55.a
 		historical_option = yes
-		c:HSA = { add_opinion = { target = root modifier = swe_denies_hsa } }
+		c:DUMMY = { add_opinion = { target = root modifier = swe_denies_hsa } }
 		capital.market = {
 			add_merchant_power = {
-				country = c:HSA
+				country = c:DUMMY
 				power = merchant_power_weak_penalty
 				months = 240
 				key = swe_denies_hsa
@@ -2929,11 +2929,11 @@ flavor_swe.55 = {
 	option = {
 		name = flavor_swe.55.b
 
-		c:HSA = { add_opinion = { target = root modifier = swe_allows_hsa } }
+		c:DUMMY = { add_opinion = { target = root modifier = swe_allows_hsa } }
 
 		capital.market = {
 			add_merchant_power = {
-				country = c:HSA
+				country = c:DUMMY
 				power = merchant_power_ultimate_bonus
 				months = 240
 				key = swe_allows_hsa
@@ -2952,7 +2952,7 @@ flavor_swe.56 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2996,7 +2996,7 @@ flavor_swe.57 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3054,7 +3054,7 @@ flavor_swe.58 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3093,7 +3093,7 @@ flavor_swe.59 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3140,7 +3140,7 @@ flavor_swe.60 = {
 		}
 	}
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1

@@ -1406,7 +1406,7 @@ def cabinet_actions() -> str:
         lines.extend(reform_trigger(small_reforms))
         lines.append("\t\tOR = {")
         lines.extend(
-            f"\t\t\tdominant_culture = {{ has_culture_group = culture_group:{group} }}"
+            f"\t\t\tdominant_culture ?= {{ has_culture_group = culture_group:{group} }}"
             for group in pack.culture_groups
         )
         lines.extend((

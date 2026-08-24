@@ -44,7 +44,7 @@ peace_gag_force_faction_change = {
 	allow = {
 		scope:loser = {
 			NOR = {
-				this = c:PAP
+				this = c:DUMMY
 				is_leader_of_international_organization = international_organization:hre
 			}
 		}
@@ -54,7 +54,7 @@ peace_gag_force_faction_change = {
 				scope:loser = {
 					NOR = {
 						is_member_of_international_organization_of_type = { type = ghibellines_io }
-						this = c:PAP
+						this = c:DUMMY
 						is_leader_of_international_organization = international_organization:hre
 					}
 				}
@@ -148,11 +148,6 @@ peace_gag_force_faction_change = {
 				name = gag_recently_joined_a_faction
 				value = scope:recipient
 				years = 5
-			}
-			set_variable = {
-				name = gag_force_switched_faction_penalty
-				value = scope:recipient
-				years = 10
 			}
 		}
 	}

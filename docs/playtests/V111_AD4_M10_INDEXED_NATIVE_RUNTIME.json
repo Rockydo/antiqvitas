@@ -1,0 +1,60 @@
+{
+  "session": "v111_m10_indexed_native_runtime",
+  "fingerprint": "3db00f7fceb0474e2b4ef4ad455f43450b43352c5bb3db99ff6eec24c2f7a175",
+  "validation": {
+    "command_count": 182,
+    "result": "PASS",
+    "elapsed_seconds": 872
+  },
+  "runtime": {
+    "mode": "observer",
+    "resolution": "1920x1080",
+    "fresh_start": "1.1.1",
+    "paused_boundary": "4.5.10 11:00",
+    "uninterrupted_real_seconds": 900,
+    "process_interruptions": 0,
+    "error_log_initial_bytes": 995,
+    "error_log_final_bytes": 995,
+    "perform_generic_action_errors": 0,
+    "change_trade_capacity_errors": 0,
+    "invalid_ai_commands": 0,
+    "unlisted_ai_action_warnings": 0,
+    "antiquitas_log_errors": 0
+  },
+  "save": {
+    "path": "G:\\antiqvitas_user_data\\save games\\autosave_1510f3fa-49e2-4fe1-b47d-a76ceb622320.eu5",
+    "date": "4.1.1",
+    "gaius_eastern_settlement": {
+      "start": "1.2.1",
+      "end": "1.9.7",
+      "natural_progress_insufficient": true
+    },
+    "immensum_bellum": {
+      "start": "1.2.1",
+      "end": "2.1.24",
+      "executed_action_cooldown": {
+        "action": "antq_m10_immensum_bellum_depots",
+        "until": "4.1.24"
+      }
+    }
+  },
+  "stability_gate": {
+    "result": "PASS",
+    "real_polities": 463,
+    "minimum_stability": 10.50249,
+    "negative_stability_polities": 0,
+    "bankrupt_polities": 0,
+    "indebted_polities": 0,
+    "active_construction_projects": 33,
+    "active_construction_payers": 21,
+    "estate_satisfaction_below_25_percent": 0,
+    "active_civil_wars": 0
+  },
+  "evidence": {
+    "boundary_screenshot": "docs/screens/v111_m10_indexed_native_runtime/boundary_paused.png",
+    "loading_capture": "docs/screens/v111_m10_indexed_native_runtime/loading_capture.json",
+    "resource_telemetry": "docs/screens/v111_m10_indexed_native_runtime/resource_telemetry.csv",
+    "driver_events": "docs/screens/v111_m10_indexed_native_runtime/driver_events.jsonl"
+  },
+  "result": "PASS"
+}

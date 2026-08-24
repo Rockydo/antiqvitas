@@ -9,7 +9,7 @@ flavor_bng.1 = { #Nur Qutb Alam and the Chishti Order
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -72,7 +72,7 @@ flavor_bng.2 = { #Syed Sultan finishes the Nabibangsha
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -142,7 +142,7 @@ flavor_bng.3 = { #Khan Jahan Ali - Khalifatabad
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -203,7 +203,7 @@ flavor_bng.4 = { #Minting Towns in Bengal
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -238,7 +238,7 @@ flavor_bng.5 = { #Adina Mosque Pandua
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -318,7 +318,7 @@ flavor_bng.6 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = STN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -332,13 +332,13 @@ flavor_bng.6 = {
 	trigger = {
 		current_date > 476.9.4
 		OR = {
-			c:SGN ?= {
+			c:DUMMY ?= {
 				is_subject = no
 			}
-			c:GAU ?= {
+			c:DUMMY ?= {
 				is_subject = no
 			}
-			c:TRF ?= {
+			c:DUMMY ?= {
 				is_subject = no
 			}
 		}
@@ -346,13 +346,13 @@ flavor_bng.6 = {
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
-		c:SGN ?= {
+		c:DUMMY ?= {
 			save_scope_as = target_country1
 		}
-		c:GAU ?= {
+		c:DUMMY ?= {
 			save_scope_as = target_country2
 		}
-		c:TRF ?= {
+		c:DUMMY ?= {
 			save_scope_as = target_country3
 		}
 
@@ -415,7 +415,7 @@ flavor_bng.7 = { #Pandua as the capital
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -473,7 +473,7 @@ flavor_bng.8 = { #Hindu pretender
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -569,7 +569,7 @@ flavor_bng.9 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -647,7 +647,7 @@ flavor_bng.10 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -705,7 +705,7 @@ flavor_bng.11 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -778,7 +778,7 @@ flavor_bng.12 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -839,7 +839,7 @@ flavor_bng.13 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -902,7 +902,7 @@ flavor_bng.14 = {
 	historical_info = flavor_bng.14.historical_info
 
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -989,7 +989,7 @@ flavor_bng.1000 = { #China relations event chain
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = BNG
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1078,7 +1078,7 @@ flavor_bng.1001 = {
 				is_ai = no
 			}
 			event_illustration_estate_background_effect = { background = estate_type:nobles_estate }
-			c:BNG = {
+			c:DUMMY = {
 				event_illustration_estate_foreground_effect = { foreground = estate_type:nobles_estate }
 			}
 		}

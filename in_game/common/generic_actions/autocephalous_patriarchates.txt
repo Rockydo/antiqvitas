@@ -6,12 +6,12 @@ change_autocephalous_patriarchate = {
 
 	sound = UI_action_religion_generic
 
-	ai_tick = monthly
+	ai_tick = never
 	ai_tick_frequency = 3
-	automation_tick = monthly
+	automation_tick = never
 	automation_tick_frequency = 1
 
-	automation_tick = monthly
+	automation_tick = never
 	automation_tick_frequency = 3
 	player_automated_category = religiousdoctrines
 
@@ -141,12 +141,12 @@ join_autocephalous_patriarchate = {
 
 	sound = UI_action_religion_generic
 
-	ai_tick = monthly
+	ai_tick = never
 	ai_tick_frequency = 3
-	automation_tick = monthly
+	automation_tick = never
 	automation_tick_frequency = 1
 
-	automation_tick = daily
+	automation_tick = never
 	automation_tick_frequency = 1
 	player_automated_category = religiousdoctrines
 
@@ -235,12 +235,12 @@ create_autocephalous_patriarchate = {
 
 	sound = UI_action_religion_generic
 
-	ai_tick = monthly
+	ai_tick = never
 	ai_tick_frequency = 3
-	automation_tick = monthly
+	automation_tick = never
 	automation_tick_frequency = 1
 
-	automation_tick = monthly
+	automation_tick = never
 	automation_tick_frequency = 1
 	player_automated_category = religiousdoctrines
 
@@ -349,12 +349,12 @@ third_rome = {
 
 	sound = UI_action_religion_generic
 
-	ai_tick = monthly
+	ai_tick = never
 	ai_tick_frequency = 3
-	automation_tick = monthly
+	automation_tick = never
 	automation_tick_frequency = 1
 
-	automation_tick = monthly
+	automation_tick = never
 	automation_tick_frequency = 1
 	player_automated_category = religiousdoctrines
 	potential = {
@@ -442,10 +442,10 @@ relocate_ecumenical_patriarchate = {
 
 	sound = UI_action_religion_generic
 
-	ai_tick = monthly
+	ai_tick = never
 	ai_tick_frequency = 12
 
-	automation_tick = monthly
+	automation_tick = never
 	automation_tick_frequency = 3
 	player_automated_category = religiousdoctrines
 	potential = {

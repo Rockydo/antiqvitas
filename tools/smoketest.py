@@ -135,6 +135,10 @@ def main() -> int:
     baseline_only = args.baseline_only or not (ROOT / ".metadata/metadata.json").exists()
     baseline = ROOT / "baselines/vanilla_error.log"
     accepted = ROOT / "baselines/last_accepted_error.log"
+    config = json.loads(
+        (ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig")
+    )
+    actual_path = Path(str(config["user_dir"])) / "logs/error.log"
     if not baseline.is_file():
         print("smoketest: FAIL (vanilla baseline not captured)", file=sys.stderr)
         return 1
@@ -159,7 +163,6 @@ def main() -> int:
     try:
         if not args.resume:
             if not baseline_only:
-                config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
                 if not Path(str(config["mod_dir"])).exists():
                     subprocess.run(
                         [
@@ -204,8 +207,6 @@ def main() -> int:
                     environment=environment,
                 )
         else:
-            config = json.loads((ROOT / "config/local_paths.json").read_text(encoding="utf-8-sig"))
-            actual_path = Path(str(config["user_dir"])) / "logs/error.log"
             actual = normalize(actual_path)
             vanilla_actual = set()
     finally:

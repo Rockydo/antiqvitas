@@ -64,7 +64,7 @@ flavor_brapru_teu.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BRA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -77,7 +77,7 @@ flavor_brapru_teu.1 = {
 	
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:TEU
+		country_exists = c:DUMMY
 		at_war = no
 		any_owned_non_rural_location = {
 			province_definition = province_definition:neumark_province
@@ -115,7 +115,7 @@ flavor_brapru_teu.1 = {
 		show_as_tooltip = {
 			add_gold = local_var:TEU_price_for_neumark
 			
-			c:TEU = {
+			c:DUMMY = {
 				add_gold = {
 					value = local_var:TEU_price_for_neumark
 					multiply = -1
@@ -124,11 +124,11 @@ flavor_brapru_teu.1 = {
 			every_in_list = {
 				list = list_of_neumark_locations
 				limit = { owner = ROOT }
-				change_location_owner = c:TEU
+				change_location_owner = c:DUMMY
 			}
 		}
 
-		c:TEU = { trigger_event_non_silently = flavor_brapru_teu.2 }
+		c:DUMMY = { trigger_event_non_silently = flavor_brapru_teu.2 }
 	}
 
 	option = {
@@ -203,7 +203,7 @@ flavor_brapru_teu.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TEU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -216,7 +216,7 @@ flavor_brapru_teu.3 = {
 	
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:BRA
+		country_exists = c:DUMMY
 		at_war = no
 		custom_tooltip = {
 			text = variable_bought_neumark_tt
@@ -256,7 +256,7 @@ flavor_brapru_teu.3 = {
 		show_as_tooltip = {
 			add_gold = local_var:TEU_price_for_neumark
 			
-			c:BRA = {
+			c:DUMMY = {
 				add_gold = {
 					value = local_var:TEU_price_for_neumark
 					multiply = -1
@@ -268,18 +268,18 @@ flavor_brapru_teu.3 = {
 			every_in_list = {
 				list = list_of_neumark_locations
 				limit = { owner = ROOT }
-				change_location_owner = c:BRA
+				change_location_owner = c:DUMMY
 			}
 		}
-		c:BRA = { trigger_event_non_silently = flavor_brapru_teu.4 }
+		c:DUMMY = { trigger_event_non_silently = flavor_brapru_teu.4 }
 	}
 	option = {
 		name = flavor_brapru_teu.3.b
 
 		trigger = {
-			country_exists = c:POL
+			country_exists = c:DUMMY
 			NOT = {
-				c:POL = {
+				c:DUMMY = {
 					is_at_war_with = ROOT
 				}
 			}
@@ -289,7 +289,7 @@ flavor_brapru_teu.3 = {
 		show_as_tooltip = {
 			add_gold = local_var:TEU_price_for_neumark
 			
-			c:POL = {
+			c:DUMMY = {
 				add_gold = {
 					value = local_var:TEU_price_for_neumark
 					multiply = -1
@@ -301,11 +301,11 @@ flavor_brapru_teu.3 = {
 			every_in_list = {
 				list = list_of_neumark_locations
 				limit = { owner = ROOT }
-				change_location_owner = c:POL
+				change_location_owner = c:DUMMY
 			}
 		}
 
-		c:POL = { trigger_event_non_silently = flavor_brapru_teu.4 }
+		c:DUMMY = { trigger_event_non_silently = flavor_brapru_teu.4 }
 	}
 
 	option = {

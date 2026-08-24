@@ -1,0 +1,420 @@
+﻿corridor_origin,corridor_destination,step,origin,destination,corridor,source,confidence,note
+rome,pisa,1,rome,bracciano,Via Aurelia,ORB;P8.1,secure,Italian Tyrrhenian trunk leg
+rome,pisa,2,bracciano,civitavecchia,Via Aurelia,ORB;P8.1,secure,Italian Tyrrhenian trunk leg
+rome,pisa,3,civitavecchia,corneto,Via Aurelia,ORB;P8.1,secure,Italian Tyrrhenian trunk leg
+rome,pisa,4,corneto,pitigliano,Via Aurelia,ORB;P8.1,secure,Italian Tyrrhenian trunk leg
+rome,pisa,5,pitigliano,grosseto,Via Aurelia,ORB;P8.1,secure,Italian Tyrrhenian trunk leg
+rome,pisa,6,grosseto,massamar,Via Aurelia,ORB;P8.1,secure,Italian Tyrrhenian trunk leg
+rome,pisa,7,massamar,volterra,Via Aurelia,ORB;P8.1,secure,Italian Tyrrhenian trunk leg
+rome,pisa,8,volterra,livorno,Via Aurelia,ORB;P8.1,secure,Italian Tyrrhenian trunk leg
+rome,pisa,9,livorno,pisa,Via Aurelia,ORB;P8.1,secure,Italian Tyrrhenian trunk leg
+pisa,genoa,1,pisa,lucca,Via Aurelia,ORB;P8.1,secure,Ligurian Tyrrhenian trunk leg
+pisa,genoa,2,lucca,massa,Via Aurelia,ORB;P8.1,secure,Ligurian Tyrrhenian trunk leg
+pisa,genoa,3,massa,fosdinovo,Via Aurelia,ORB;P8.1,secure,Ligurian Tyrrhenian trunk leg
+pisa,genoa,4,fosdinovo,bardi,Via Aurelia,ORB;P8.1,secure,Ligurian Tyrrhenian trunk leg
+pisa,genoa,5,bardi,lavagna,Via Aurelia,ORB;P8.1,secure,Ligurian Tyrrhenian trunk leg
+pisa,genoa,6,lavagna,genoa,Via Aurelia,ORB;P8.1,secure,Ligurian Tyrrhenian trunk leg
+genoa,marseille,1,genoa,acqui,Via Aurelia,ORB;P8.1,secure,Ligurian-Gallic coastal trunk leg
+genoa,marseille,2,acqui,alba,Via Aurelia,ORB;P8.1,secure,Ligurian-Gallic coastal trunk leg
+genoa,marseille,3,alba,cuneo,Via Aurelia,ORB;P8.1,secure,Ligurian-Gallic coastal trunk leg
+genoa,marseille,4,cuneo,barcelonnette,Via Aurelia,ORB;P8.1,secure,Ligurian-Gallic coastal trunk leg
+genoa,marseille,5,barcelonnette,sisteron,Via Aurelia,ORB;P8.1,secure,Ligurian-Gallic coastal trunk leg
+genoa,marseille,6,sisteron,forcalquier,Via Aurelia,ORB;P8.1,secure,Ligurian-Gallic coastal trunk leg
+genoa,marseille,7,forcalquier,aix_en_provence,Via Aurelia,ORB;P8.1,secure,Ligurian-Gallic coastal trunk leg
+genoa,marseille,8,aix_en_provence,marseille,Via Aurelia,ORB;P8.1,secure,Ligurian-Gallic coastal trunk leg
+marseille,lyon,1,marseille,aix_en_provence,Rhone axis,ORB;P8.1,secure,Rhone valley trunk leg
+marseille,lyon,2,aix_en_provence,apt,Rhone axis,ORB;P8.1,secure,Rhone valley trunk leg
+marseille,lyon,3,apt,mevouillon,Rhone axis,ORB;P8.1,secure,Rhone valley trunk leg
+marseille,lyon,4,mevouillon,valence,Rhone axis,ORB;P8.1,secure,Rhone valley trunk leg
+marseille,lyon,5,valence,romans,Rhone axis,ORB;P8.1,secure,Rhone valley trunk leg
+marseille,lyon,6,romans,vienne,Rhone axis,ORB;P8.1,secure,Rhone valley trunk leg
+marseille,lyon,7,vienne,lyon,Rhone axis,ORB;P8.1,secure,Rhone valley trunk leg
+rome,benevento,1,rome,palestrina,Via Appia,ORB;ITA-APPIA;P8.1,contested,Benevento is the first available installed inland proxy after the missing Capua map key
+rome,benevento,2,palestrina,anagni,Via Appia,ORB;ITA-APPIA;P8.1,contested,Benevento is the first available installed inland proxy after the missing Capua map key
+rome,benevento,3,anagni,sora,Via Appia,ORB;ITA-APPIA;P8.1,contested,Benevento is the first available installed inland proxy after the missing Capua map key
+rome,benevento,4,sora,venafro,Via Appia,ORB;ITA-APPIA;P8.1,contested,Benevento is the first available installed inland proxy after the missing Capua map key
+rome,benevento,5,venafro,piedimonte,Via Appia,ORB;ITA-APPIA;P8.1,contested,Benevento is the first available installed inland proxy after the missing Capua map key
+rome,benevento,6,piedimonte,benevento,Via Appia,ORB;ITA-APPIA;P8.1,contested,Benevento is the first available installed inland proxy after the missing Capua map key
+benevento,taranto,1,benevento,ariano,Via Appia,ORB;ITA-APPIA;P8.1,secure,Samnite to Tarentine trunk leg
+benevento,taranto,2,ariano,bovino,Via Appia,ORB;ITA-APPIA;P8.1,secure,Samnite to Tarentine trunk leg
+benevento,taranto,3,bovino,foggia,Via Appia,ORB;ITA-APPIA;P8.1,secure,Samnite to Tarentine trunk leg
+benevento,taranto,4,foggia,andria,Via Appia,ORB;ITA-APPIA;P8.1,secure,Samnite to Tarentine trunk leg
+benevento,taranto,5,andria,altamura,Via Appia,ORB;ITA-APPIA;P8.1,secure,Samnite to Tarentine trunk leg
+benevento,taranto,6,altamura,martinafr,Via Appia,ORB;ITA-APPIA;P8.1,secure,Samnite to Tarentine trunk leg
+benevento,taranto,7,martinafr,taranto,Via Appia,ORB;ITA-APPIA;P8.1,secure,Samnite to Tarentine trunk leg
+taranto,brindisi,1,taranto,francavilla,Via Appia,ORB;ITA-APPIA;P8.1,secure,Adriatic terminus trunk leg
+taranto,brindisi,2,francavilla,brindisi,Via Appia,ORB;ITA-APPIA;P8.1,secure,Adriatic terminus trunk leg
+narni,spoleto,1,narni,spoleto,Via Flaminia eastern branch,P8.1;ORB;MIC-FLAM,contested,Narni to Spoleto is a high-level installed-map proxy for the eastern branch through unavailable Terni
+rimini,bologna,1,rimini,cesena,Via Aemilia eastern section,P8.1;ORB;MIC-AEM,contested,Rimini to Bologna is a high-level map proxy for the 187 BCE Via Aemilia with intermediate anchors omitted
+rimini,bologna,2,cesena,faenza,Via Aemilia eastern section,P8.1;ORB;MIC-AEM,contested,Rimini to Bologna is a high-level map proxy for the 187 BCE Via Aemilia with intermediate anchors omitted
+rimini,bologna,3,faenza,imola,Via Aemilia eastern section,P8.1;ORB;MIC-AEM,contested,Rimini to Bologna is a high-level map proxy for the 187 BCE Via Aemilia with intermediate anchors omitted
+rimini,bologna,4,imola,medicina,Via Aemilia eastern section,P8.1;ORB;MIC-AEM,contested,Rimini to Bologna is a high-level map proxy for the 187 BCE Via Aemilia with intermediate anchors omitted
+rimini,bologna,5,medicina,bologna,Via Aemilia eastern section,P8.1;ORB;MIC-AEM,contested,Rimini to Bologna is a high-level map proxy for the 187 BCE Via Aemilia with intermediate anchors omitted
+bologna,modena,1,bologna,modena,Via Aemilia,P8.1;ORB;MIC-AEM,secure,Bologna to Modena is an installed endpoint link on the documented Via Aemilia corridor
+modena,parma,1,modena,canossa,Via Aemilia,P8.1;ORB;MIC-AEM,contested,Modena to Parma is a high-level map proxy through unavailable Reggio Emilia
+modena,parma,2,canossa,parma,Via Aemilia,P8.1;ORB;MIC-AEM,contested,Modena to Parma is a high-level map proxy through unavailable Reggio Emilia
+parma,piacenza,1,parma,cremona,Via Aemilia western section,P8.1;ORB;MIC-AEM,secure,Parma to Piacenza completes the installed endpoint corridor to the documented western terminus
+parma,piacenza,2,cremona,piacenza,Via Aemilia western section,P8.1;ORB;MIC-AEM,secure,Parma to Piacenza completes the installed endpoint corridor to the documented western terminus
+rimini,ravenna,1,rimini,cesena,Via Popilia southern section,P8.1;ORB;MIC-POP,contested,Rimini to Ravenna is a high-level installed-map proxy for the documented Popilia corridor
+rimini,ravenna,2,cesena,ravenna,Via Popilia southern section,P8.1;ORB;MIC-POP,contested,Rimini to Ravenna is a high-level installed-map proxy for the documented Popilia corridor
+ravenna,rovigo,1,ravenna,comacchio,Via Popilia northern section,P8.1;ORB;MIC-POP,contested,Ravenna to Rovigo is a high-level proxy toward the unavailable Adria and Altino anchors
+ravenna,rovigo,2,comacchio,rovigo,Via Popilia northern section,P8.1;ORB;MIC-POP,contested,Ravenna to Rovigo is a high-level proxy toward the unavailable Adria and Altino anchors
+durres,thessaloniki,1,durres,kavaje,Via Egnatia,ORB;P8.1,secure,Adriatic to Macedonian trunk leg
+durres,thessaloniki,2,kavaje,elbasan,Via Egnatia,ORB;P8.1,secure,Adriatic to Macedonian trunk leg
+durres,thessaloniki,3,elbasan,ohrid,Via Egnatia,ORB;P8.1,secure,Adriatic to Macedonian trunk leg
+durres,thessaloniki,4,ohrid,bitola,Via Egnatia,ORB;P8.1,secure,Adriatic to Macedonian trunk leg
+durres,thessaloniki,5,bitola,prosek,Via Egnatia,ORB;P8.1,secure,Adriatic to Macedonian trunk leg
+durres,thessaloniki,6,prosek,giannitsa,Via Egnatia,ORB;P8.1,secure,Adriatic to Macedonian trunk leg
+durres,thessaloniki,7,giannitsa,thessaloniki,Via Egnatia,ORB;P8.1,secure,Adriatic to Macedonian trunk leg
+thessaloniki,constantinople,1,thessaloniki,gynaikokastro,Via Egnatia,ORB;P8.1,secure,Macedonian to Thracian trunk leg
+thessaloniki,constantinople,2,gynaikokastro,rentina,Via Egnatia,ORB;P8.1,secure,Macedonian to Thracian trunk leg
+thessaloniki,constantinople,3,rentina,drama,Via Egnatia,ORB;P8.1,secure,Macedonian to Thracian trunk leg
+thessaloniki,constantinople,4,drama,xanthia,Via Egnatia,ORB;P8.1,secure,Macedonian to Thracian trunk leg
+thessaloniki,constantinople,5,xanthia,komotini,Via Egnatia,ORB;P8.1,secure,Macedonian to Thracian trunk leg
+thessaloniki,constantinople,6,komotini,demotica,Via Egnatia,ORB;P8.1,secure,Macedonian to Thracian trunk leg
+thessaloniki,constantinople,7,demotica,hayrabolu,Via Egnatia,ORB;P8.1,secure,Macedonian to Thracian trunk leg
+thessaloniki,constantinople,8,hayrabolu,malgara,Via Egnatia,ORB;P8.1,secure,Macedonian to Thracian trunk leg
+thessaloniki,constantinople,9,malgara,corlu,Via Egnatia,ORB;P8.1,secure,Macedonian to Thracian trunk leg
+thessaloniki,constantinople,10,corlu,catalca,Via Egnatia,ORB;P8.1,secure,Macedonian to Thracian trunk leg
+thessaloniki,constantinople,11,catalca,constantinople,Via Egnatia,ORB;P8.1,secure,Macedonian to Thracian trunk leg
+alexandria,gaza,1,alexandria,damanhur,Via Maris,ORB;P8.1,secure,Egypt-Levant coastal trunk proxy
+alexandria,gaza,2,damanhur,el_mahalla,Via Maris,ORB;P8.1,secure,Egypt-Levant coastal trunk proxy
+alexandria,gaza,3,el_mahalla,samanoud,Via Maris,ORB;P8.1,secure,Egypt-Levant coastal trunk proxy
+alexandria,gaza,4,samanoud,kafr_saqr,Via Maris,ORB;P8.1,secure,Egypt-Levant coastal trunk proxy
+alexandria,gaza,5,kafr_saqr,faqus,Via Maris,ORB;P8.1,secure,Egypt-Levant coastal trunk proxy
+alexandria,gaza,6,faqus,tinnis,Via Maris,ORB;P8.1,secure,Egypt-Levant coastal trunk proxy
+alexandria,gaza,7,tinnis,qatya,Via Maris,ORB;P8.1,secure,Egypt-Levant coastal trunk proxy
+alexandria,gaza,8,qatya,warrada,Via Maris,ORB;P8.1,secure,Egypt-Levant coastal trunk proxy
+alexandria,gaza,9,warrada,el_arish,Via Maris,ORB;P8.1,secure,Egypt-Levant coastal trunk proxy
+alexandria,gaza,10,el_arish,gaza,Via Maris,ORB;P8.1,secure,Egypt-Levant coastal trunk proxy
+gaza,jerusalem,1,gaza,majdal,Via Maris-Judaean branch,ORB;P8.1,secure,Southern Levant trunk branch
+gaza,jerusalem,2,majdal,jerusalem,Via Maris-Judaean branch,ORB;P8.1,secure,Southern Levant trunk branch
+jerusalem,damascus,1,jerusalem,nablus,Levant interior,ORB;P8.1,secure,Judaea to Damascus caravan-road leg
+jerusalem,damascus,2,nablus,safed,Levant interior,ORB;P8.1,secure,Judaea to Damascus caravan-road leg
+jerusalem,damascus,3,safed,nawa,Levant interior,ORB;P8.1,secure,Judaea to Damascus caravan-road leg
+jerusalem,damascus,4,nawa,damascus,Levant interior,ORB;P8.1,secure,Judaea to Damascus caravan-road leg
+damascus,homs,1,damascus,baalbek,Syrian interior,ORB;P8.1,contested,Damascus to Palmyra-proxy trunk leg
+damascus,homs,2,baalbek,qusayr,Syrian interior,ORB;P8.1,contested,Damascus to Palmyra-proxy trunk leg
+damascus,homs,3,qusayr,homs,Syrian interior,ORB;P8.1,contested,Damascus to Palmyra-proxy trunk leg
+homs,aleppo,1,homs,hama,Syrian interior,ORB;P8.1,contested,Palmyra-proxy to northern Syria leg
+homs,aleppo,2,hama,khanaser,Syrian interior,ORB;P8.1,contested,Palmyra-proxy to northern Syria leg
+homs,aleppo,3,khanaser,aleppo,Syrian interior,ORB;P8.1,contested,Palmyra-proxy to northern Syria leg
+aleppo,edessa,1,aleppo,afrin,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,2,afrin,kilis,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,3,kilis,marash,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,4,marash,besni,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,5,besni,malatya,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,6,malatya,gerger,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,7,gerger,harput,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,8,harput,palu,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,9,palu,adakli,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,10,adakli,tercan,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,11,tercan,erzurum,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,12,erzurum,tortum,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,13,tortum,oltu,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,14,oltu,ardahan,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,15,ardahan,akhaltsikhe,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,16,akhaltsikhe,gori,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,17,gori,kvenipnevi,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,18,kvenipnevi,dusheti,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,19,dusheti,jariekhi,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,20,jariekhi,targim,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,21,targim,nazran,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,22,nazran,novopavlovsk,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,23,novopavlovsk,novoselitskoye,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,24,novoselitskoye,blagodarnoye,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,25,blagodarnoye,ipatovo,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,26,ipatovo,gorodovikovsk,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,27,gorodovikovsk,yundin,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,28,yundin,bagayevskaya,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,29,bagayevskaya,tana,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,30,tana,taganrog,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,31,taganrog,shyrokyne,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,32,shyrokyne,domakha,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,33,domakha,huliaipole,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,34,huliaipole,kichkas,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,35,kichkas,kodak,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,36,kodak,myshuryn_rih,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,37,myshuryn_rih,usivka,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,38,usivka,mala_vyska,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,39,mala_vyska,harbuzynka,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,40,harbuzynka,aqmecit_prybuzhzhya,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,41,aqmecit_prybuzhzhya,ananiv,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,42,ananiv,iagorlic,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,43,iagorlic,cetatea_alba,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,44,cetatea_alba,sarata,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,45,sarata,chilia,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,46,chilia,tulcea,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,47,tulcea,isaccea,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,48,isaccea,harsova,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,49,harsova,cernavoda,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,50,cernavoda,drastar,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,51,drastar,razgrad,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,52,razgrad,cherven,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,53,cherven,nikopol,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,54,nikopol,gigen,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,55,gigen,dobrolak,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,56,dobrolak,svoge,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,57,svoge,zemlungrad,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,58,zemlungrad,velbuzd,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,59,velbuzd,kocani,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,60,kocani,shtip,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,61,shtip,prosek,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+aleppo,edessa,62,prosek,edessa,Upper Mesopotamian corridor,ORB;P8.1,contested,Northern Syrian to Edessa corridor leg
+baghdad,susa,1,baghdad,baqubah,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,2,baqubah,khalis,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,3,khalis,tuz_khurma,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,4,tuz_khurma,chamchamal,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,5,chamchamal,qaladiza,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,6,qaladiza,piranshahr,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,7,piranshahr,osnavieh,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,8,osnavieh,urmia,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,9,urmia,salmas,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,10,salmas,khameneh,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,11,khameneh,mardanaqom,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,12,mardanaqom,kaleybar,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,13,kaleybar,goroz,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,14,goroz,beylagan,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,15,beylagan,javad,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,16,javad,maraza,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,17,maraza,shirvan,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,18,shirvan,shabran,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,19,shabran,niyazabad,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,20,niyazabad,derbent,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,21,derbent,boynak,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,22,boynak,tarki,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,23,tarki,terek,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,24,terek,kara_bazaar,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,25,kara_bazaar,dardeling,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,26,dardeling,mekletin,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,27,mekletin,iki_burul,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,28,iki_burul,raguli,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,29,raguli,gorodovikovsk,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,30,gorodovikovsk,yundin,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,31,yundin,bagayevskaya,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,32,bagayevskaya,tana,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,33,tana,taganrog,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,34,taganrog,shyrokyne,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,35,shyrokyne,domakha,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,36,domakha,huliaipole,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,37,huliaipole,kichkas,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,38,kichkas,kodak,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,39,kodak,myshuryn_rih,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,40,myshuryn_rih,usivka,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,41,usivka,mala_vyska,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,42,mala_vyska,harbuzynka,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,43,harbuzynka,aqmecit_prybuzhzhya,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,44,aqmecit_prybuzhzhya,ananiv,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,45,ananiv,iagorlic,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,46,iagorlic,tuzara,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,47,tuzara,ungheni,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,48,ungheni,harlau,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,49,harlau,suceava,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,50,suceava,campulung_moldovenesc,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,51,campulung_moldovenesc,cuhea,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,52,cuhea,sighet,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,53,sighet,khust,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,54,khust,beregovo,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,55,beregovo,varda,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,56,varda,satoraljaujhely,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,57,satoraljaujhely,miskolc,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,58,miskolc,eger,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,59,eger,nograd,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,60,nograd,buda,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,61,buda,fehervar,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,62,fehervar,papa,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,63,papa,vasvar,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,64,vasvar,kormend,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,65,kormend,feldbach,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,66,feldbach,graz,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,67,graz,judenburg,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,68,judenburg,murau,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,69,murau,spittal,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,70,spittal,winklern,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,71,winklern,lienz,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,72,lienz,bruneck,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,73,bruneck,brixen,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,74,brixen,villandro,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,75,villandro,bolzano,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,76,bolzano,cles,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,77,cles,breno,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,78,breno,palazzolo,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,79,palazzolo,cremona,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,80,cremona,lodi,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,81,lodi,pavia,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,82,pavia,lomello,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,83,lomello,casale,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,84,casale,lanzo,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+baghdad,susa,85,lanzo,susa,Royal Road legacy,ORB;P8.2,contested,Seleucia-Ctesiphon proxy to Susiana leg
+susa,hamadan,1,susa,lanzo,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,2,lanzo,asti,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,3,asti,alessandria,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,4,alessandria,voghera,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,5,voghera,piacenza,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,6,piacenza,cremona,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,7,cremona,palazzolo,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,8,palazzolo,breno,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,9,breno,cles,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,10,cles,bolzano,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,11,bolzano,villandro,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,12,villandro,brixen,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,13,brixen,bruneck,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,14,bruneck,lienz,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,15,lienz,winklern,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,16,winklern,spittal,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,17,spittal,murau,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,18,murau,judenburg,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,19,judenburg,graz,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,20,graz,feldbach,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,21,feldbach,kormend,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,22,kormend,vasvar,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,23,vasvar,gyor,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,24,gyor,tata,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,25,tata,buda,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,26,buda,nograd,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,27,nograd,eger,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,28,eger,miskolc,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,29,miskolc,satoraljaujhely,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,30,satoraljaujhely,varda,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,31,varda,beregovo,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,32,beregovo,khust,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,33,khust,rakhiv,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,34,rakhiv,bohorodchany,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,35,bohorodchany,tysmenytsia,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,36,tysmenytsia,zalishchyky,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,37,zalishchyky,hotin,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,38,hotin,lipnic,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,39,lipnic,soroca,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,40,soroca,karabul,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,41,karabul,ananiv,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,42,ananiv,aqmecit_prybuzhzhya,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,43,aqmecit_prybuzhzhya,harbuzynka,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,44,harbuzynka,mala_vyska,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,45,mala_vyska,usivka,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,46,usivka,myshuryn_rih,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,47,myshuryn_rih,kodak,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,48,kodak,kichkas,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,49,kichkas,hryshyne,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,50,hryshyne,velyka_novosilka,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,51,velyka_novosilka,shyrokyne,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,52,shyrokyne,taganrog,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,53,taganrog,tana,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,54,tana,bagayevskaya,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,55,bagayevskaya,yundin,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,56,yundin,gorodovikovsk,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,57,gorodovikovsk,ipatovo,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,58,ipatovo,blagodarnoye,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,59,blagodarnoye,majar,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,60,majar,kamysh_burun,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,61,kamysh_burun,kurskaya,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,62,kurskaya,alkhan_kala,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,63,alkhan_kala,tsontaroy_kala,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,64,tsontaroy_kala,shatili,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,65,shatili,alaverdi,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,66,alaverdi,gremi,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,67,gremi,khornabuji,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,68,khornabuji,hereti,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,69,hereti,ganja,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,70,ganja,barda,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,71,barda,gandzasar,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,72,gandzasar,kashatagh,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,73,kashatagh,kaleybar,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,74,kaleybar,ahar,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,75,ahar,heris,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,76,heris,sarab,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,77,sarab,miyaneh,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,78,miyaneh,aghkand,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,79,aghkand,sarcham,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,80,sarcham,mahneshan,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,81,mahneshan,yasukand,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,82,yasukand,bashqurtaran,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+susa,hamadan,83,bashqurtaran,hamadan,Royal Road legacy,ORB;P8.2,secure,Susiana to Median core leg
+kashgar,khotan,1,kashgar,payzawat,Southern Tarim route,ORB;P8.3;CHG,secure,Tarim oasis corridor leg
+kashgar,khotan,2,payzawat,maralbexi,Southern Tarim route,ORB;P8.3;CHG,secure,Tarim oasis corridor leg
+kashgar,khotan,3,maralbexi,yarkand,Southern Tarim route,ORB;P8.3;CHG,secure,Tarim oasis corridor leg
+kashgar,khotan,4,yarkand,kargilik,Southern Tarim route,ORB;P8.3;CHG,secure,Tarim oasis corridor leg
+kashgar,khotan,5,kargilik,guma,Southern Tarim route,ORB;P8.3;CHG,secure,Tarim oasis corridor leg
+kashgar,khotan,6,guma,karakax,Southern Tarim route,ORB;P8.3;CHG,secure,Tarim oasis corridor leg
+kashgar,khotan,7,karakax,khotan,Southern Tarim route,ORB;P8.3;CHG,secure,Tarim oasis corridor leg
+balkh,termez,1,balkh,zadian,Oxus corridor,P8.4;P8.8;CAH-XI,contested,Bactrian-Oxus corridor leg
+balkh,termez,2,zadian,termez,Oxus corridor,P8.4;P8.8;CAH-XI,contested,Bactrian-Oxus corridor leg
+termez,samarkand,1,termez,basand,Transoxianian corridor,P8.8;CAH-XI,contested,Oxus to Sogdian corridor leg
+termez,samarkand,2,basand,akhsisek,Transoxianian corridor,P8.8;CAH-XI,contested,Oxus to Sogdian corridor leg
+termez,samarkand,3,akhsisek,nasaf,Transoxianian corridor,P8.8;CAH-XI,contested,Oxus to Sogdian corridor leg
+termez,samarkand,4,nasaf,koson,Transoxianian corridor,P8.8;CAH-XI,contested,Oxus to Sogdian corridor leg
+termez,samarkand,5,koson,samarkand,Transoxianian corridor,P8.8;CAH-XI,contested,Oxus to Sogdian corridor leg
+samarkand,bukhara,1,samarkand,dimishk,Transoxianian corridor,P8.8;CAH-XI,secure,Sogdian oasis corridor leg
+samarkand,bukhara,2,dimishk,karmana,Transoxianian corridor,P8.8;CAH-XI,secure,Sogdian oasis corridor leg
+samarkand,bukhara,3,karmana,bukhara,Transoxianian corridor,P8.8;CAH-XI,secure,Sogdian oasis corridor leg
+jingzhao,luoyang,1,jingzhao,lantian,Han trunk road,BHR;P8.3,secure,Chang'an commandery anchor to Luoyang trunk leg
+jingzhao,luoyang,2,lantian,weinan,Han trunk road,BHR;P8.3,secure,Chang'an commandery anchor to Luoyang trunk leg
+jingzhao,luoyang,3,weinan,tongzhou,Han trunk road,BHR;P8.3,secure,Chang'an commandery anchor to Luoyang trunk leg
+jingzhao,luoyang,4,tongzhou,ruicheng,Han trunk road,BHR;P8.3,secure,Chang'an commandery anchor to Luoyang trunk leg
+jingzhao,luoyang,5,ruicheng,pinglu,Han trunk road,BHR;P8.3,secure,Chang'an commandery anchor to Luoyang trunk leg
+jingzhao,luoyang,6,pinglu,mianchi,Han trunk road,BHR;P8.3,secure,Chang'an commandery anchor to Luoyang trunk leg
+jingzhao,luoyang,7,mianchi,xinan,Han trunk road,BHR;P8.3,secure,Chang'an commandery anchor to Luoyang trunk leg
+jingzhao,luoyang,8,xinan,luoyang,Han trunk road,BHR;P8.3,secure,Chang'an commandery anchor to Luoyang trunk leg
+luoyang,kaifeng,1,luoyang,mengjin,Han trunk road,BHR;P8.3,secure,Luoyang to eastern Henan trunk leg
+luoyang,kaifeng,2,mengjin,gongxian,Han trunk road,BHR;P8.3,secure,Luoyang to eastern Henan trunk leg
+luoyang,kaifeng,3,gongxian,mixian,Han trunk road,BHR;P8.3,secure,Luoyang to eastern Henan trunk leg
+luoyang,kaifeng,4,mixian,guancheng_zhengzhou,Han trunk road,BHR;P8.3,secure,Luoyang to eastern Henan trunk leg
+luoyang,kaifeng,5,guancheng_zhengzhou,yuanyang,Han trunk road,BHR;P8.3,secure,Luoyang to eastern Henan trunk leg
+luoyang,kaifeng,6,yuanyang,kaifeng,Han trunk road,BHR;P8.3,secure,Luoyang to eastern Henan trunk leg
+kaifeng,xuzhou,1,kaifeng,lanyang,Han trunk road,BHR;P8.3,secure,Eastern Henan to lower Huai trunk leg
+kaifeng,xuzhou,2,lanyang,chuqiu,Han trunk road,BHR;P8.3,secure,Eastern Henan to lower Huai trunk leg
+kaifeng,xuzhou,3,chuqiu,shansu,Han trunk road,BHR;P8.3,secure,Eastern Henan to lower Huai trunk leg
+kaifeng,xuzhou,4,shansu,fengxian,Han trunk road,BHR;P8.3,secure,Eastern Henan to lower Huai trunk leg
+kaifeng,xuzhou,5,fengxian,xuzhou,Han trunk road,BHR;P8.3,secure,Eastern Henan to lower Huai trunk leg
+patna,varanasi,1,patna,arrah,Uttarapatha,P8.4;CAH-XI,contested,Pataliputra to Varanasi trunk leg
+patna,varanasi,2,arrah,buxar,Uttarapatha,P8.4;CAH-XI,contested,Pataliputra to Varanasi trunk leg
+patna,varanasi,3,buxar,chunar,Uttarapatha,P8.4;CAH-XI,contested,Pataliputra to Varanasi trunk leg
+patna,varanasi,4,chunar,varanasi,Uttarapatha,P8.4;CAH-XI,contested,Pataliputra to Varanasi trunk leg
+varanasi,mathura,1,varanasi,bhadohi,Uttarapatha,P8.4;CAH-XI,contested,Middle-Gangetic to Mathura corridor leg
+varanasi,mathura,2,bhadohi,manikpur,Uttarapatha,P8.4;CAH-XI,contested,Middle-Gangetic to Mathura corridor leg
+varanasi,mathura,3,manikpur,unnao,Uttarapatha,P8.4;CAH-XI,contested,Middle-Gangetic to Mathura corridor leg
+varanasi,mathura,4,unnao,makanpur,Uttarapatha,P8.4;CAH-XI,contested,Middle-Gangetic to Mathura corridor leg
+varanasi,mathura,5,makanpur,etawah,Uttarapatha,P8.4;CAH-XI,contested,Middle-Gangetic to Mathura corridor leg
+varanasi,mathura,6,etawah,agra,Uttarapatha,P8.4;CAH-XI,contested,Middle-Gangetic to Mathura corridor leg
+varanasi,mathura,7,agra,mathura,Uttarapatha,P8.4;CAH-XI,contested,Middle-Gangetic to Mathura corridor leg
+attock,mathura,1,attock,pindi_gheb,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,2,pindi_gheb,chakwal,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,3,chakwal,dina,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,4,dina,gujrat,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,5,gujrat,eminabad,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,6,eminabad,pasrur,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,7,pasrur,kalanaur,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,8,kalanaur,milwat,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,9,milwat,jalandhar,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,10,jalandhar,hajner,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,11,hajner,sunam,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,12,sunam,jind,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,13,jind,rohtak,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,14,rohtak,gurgaon,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+attock,mathura,15,gurgaon,mathura,Uttarapatha,P8.4;UNESCO-UTT,contested,Attock Taxila proxy to Mathura high-level Uttarapatha leg
+mathura,ujjain,1,mathura,agra,Indian interior trunk,P8.4;CAH-XI,contested,Mathura to Malwa corridor leg
+mathura,ujjain,2,agra,sabalgarh,Indian interior trunk,P8.4;CAH-XI,contested,Mathura to Malwa corridor leg
+mathura,ujjain,3,sabalgarh,sheopur,Indian interior trunk,P8.4;CAH-XI,contested,Mathura to Malwa corridor leg
+mathura,ujjain,4,sheopur,mangrol,Indian interior trunk,P8.4;CAH-XI,contested,Mathura to Malwa corridor leg
+mathura,ujjain,5,mangrol,kota,Indian interior trunk,P8.4;CAH-XI,contested,Mathura to Malwa corridor leg
+mathura,ujjain,6,kota,gagraun,Indian interior trunk,P8.4;CAH-XI,contested,Mathura to Malwa corridor leg
+mathura,ujjain,7,gagraun,ujjain,Indian interior trunk,P8.4;CAH-XI,contested,Mathura to Malwa corridor leg
+ujjain,khambat,1,ujjain,dhar,Western Indian trade road,P8.4;PER,contested,Malwa to Barygaza-proxy corridor leg
+ujjain,khambat,2,dhar,jabhua,Western Indian trade road,P8.4;PER,contested,Malwa to Barygaza-proxy corridor leg
+ujjain,khambat,3,jabhua,baria,Western Indian trade road,P8.4;PER,contested,Malwa to Barygaza-proxy corridor leg
+ujjain,khambat,4,baria,champaner,Western Indian trade road,P8.4;PER,contested,Malwa to Barygaza-proxy corridor leg
+ujjain,khambat,5,champaner,ashaval,Western Indian trade road,P8.4;PER,contested,Malwa to Barygaza-proxy corridor leg
+ujjain,khambat,6,ashaval,khambat,Western Indian trade road,P8.4;PER,contested,Malwa to Barygaza-proxy corridor leg
+marseille,arles,1,marseille,aix_en_provence,Roman Provence connector,ORB;P8.1,contested,Massilia to Arelate high-level connector between the existing Aurelia and Domitia corridors
+marseille,arles,2,aix_en_provence,arles,Roman Provence connector,ORB;P8.1,contested,Massilia to Arelate high-level connector between the existing Aurelia and Domitia corridors
+arles,nimes,1,arles,nimes,Via Domitia,OCD-DOM;P8.1,secure,Arelate to Nemausus leg recorded by the Oxford Classical Dictionary
+nimes,narbonne,1,nimes,french_ales,Via Domitia,OCD-DOM;P8.1,secure,Nemausus to Narbo leg recorded by the Oxford Classical Dictionary
+nimes,narbonne,2,french_ales,lodeve,Via Domitia,OCD-DOM;P8.1,secure,Nemausus to Narbo leg recorded by the Oxford Classical Dictionary
+nimes,narbonne,3,lodeve,beziers,Via Domitia,OCD-DOM;P8.1,secure,Nemausus to Narbo leg recorded by the Oxford Classical Dictionary
+nimes,narbonne,4,beziers,narbonne,Via Domitia,OCD-DOM;P8.1,secure,Nemausus to Narbo leg recorded by the Oxford Classical Dictionary
+narbonne,perpignan,1,narbonne,perpignan,Via Domitia,ORB;OCD-DOM;P8.1,contested,Narbo to the Pyrenean approach represented by the available Perpignan proxy
+perpignan,girona,1,perpignan,castellon_ampurias,Via Domitia-Via Augusta junction,ORB;IGN-ROAD;P8.1,contested,Pyrenean crossing is a high-level installed-location connector rather than a surveyed trace
+perpignan,girona,2,castellon_ampurias,girona,Via Domitia-Via Augusta junction,ORB;IGN-ROAD;P8.1,contested,Pyrenean crossing is a high-level installed-location connector rather than a surveyed trace
+girona,barcelona,1,girona,sant_feliu,Via Augusta,IGN-ROAD;P8.1,secure,Gerunda to Barcino trunk leg in the Spanish Roman-road atlas
+girona,barcelona,2,sant_feliu,barcelona,Via Augusta,IGN-ROAD;P8.1,secure,Gerunda to Barcino trunk leg in the Spanish Roman-road atlas
+barcelona,tarragona,1,barcelona,sitges,Via Augusta,IGN-ROAD;P8.1,secure,Barcino to Tarraco trunk leg in the Spanish Roman-road atlas
+barcelona,tarragona,2,sitges,tarragona,Via Augusta,IGN-ROAD;P8.1,secure,Barcino to Tarraco trunk leg in the Spanish Roman-road atlas

@@ -10,7 +10,7 @@ flavor_cro.1000 = { #The Unification of Croatia and Slavonia - Croatia
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = CRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -28,19 +28,19 @@ flavor_cro.1000 = { #The Unification of Croatia and Slavonia - Croatia
 	trigger = {
 		current_date > 476.9.4
 		at_war = no
-		country_exists = c:TUR
-		country_exists = c:HUN
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 		OR = {
-			in_union_with = c:HUN
-			is_subject_of = c:HUN
+			in_union_with = c:DUMMY
+			is_subject_of = c:DUMMY
 		}
 		any_neighbor_country = {
 			tag = TUR
 		}
-		c:HUN = {
+		c:DUMMY = {
 			any_owned_location = {
 				area = area:slavonia_area
-				is_core_of = c:SVN
+				is_core_of = c:DUMMY
 			}
 		}
 	}
@@ -48,7 +48,7 @@ flavor_cro.1000 = { #The Unification of Croatia and Slavonia - Croatia
 	option = {
 		name = flavor_cro.1000.a
 		historical_option = yes
-		c:HUN = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_cro.1001
 		}
 	}
@@ -87,7 +87,7 @@ flavor_cro.1001 = { #The Unification of Croatia and Slavonia - Croatia
 					has_owner = yes
 					OR = {
 						area = area:slavonia_area
-						is_core_of = c:SVN
+						is_core_of = c:DUMMY
 					}
 				}
 				add_to_list = list_of_slavonian_locations
@@ -103,10 +103,10 @@ flavor_cro.1001 = { #The Unification of Croatia and Slavonia - Croatia
 			every_in_list = {
 				list = list_of_slavonian_locations
 				limit = { owner ?= ROOT }
-				change_location_owner = c:CRO
+				change_location_owner = c:DUMMY
 			}
 		}
-		c:CRO = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = cro_approved_the_merge
@@ -124,7 +124,7 @@ flavor_cro.1001 = { #The Unification of Croatia and Slavonia - Croatia
 	
 	option = {
 		name = flavor_cro.1001.b
-		c:CRO = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = cro_rejected_the_merge
@@ -150,7 +150,7 @@ flavor_cro.1100 = { #The Dominion of Ivan Nelipic
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = CRO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -164,8 +164,8 @@ flavor_cro.1100 = { #The Dominion of Ivan Nelipic
 	trigger = {
 		current_date > 476.9.4
 		at_war = no
-		country_exists = c:HUN
-		in_union_with = c:HUN
+		country_exists = c:DUMMY
+		in_union_with = c:DUMMY
 	}
 	
 	immediate = {
@@ -207,7 +207,7 @@ flavor_cro.1100 = { #The Dominion of Ivan Nelipic
 	option = {
 		name = flavor_cro.1100.b
 		add_legitimacy = legitimacy_mild_bonus
-		c:HUN = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_cro.1101
 		}
 	}
@@ -240,7 +240,7 @@ flavor_cro.1101 = { #Croatia Seeks Compromise
 		name = flavor_cro.1101.a
 		historical_option = yes
 		add_legitimacy = legitimacy_mild_bonus
-		c:CRO = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = cro_dismissal_of_nelipic
@@ -250,7 +250,7 @@ flavor_cro.1101 = { #Croatia Seeks Compromise
 			type = centralization_vs_decentralization
 			value = societal_value_move_to_left
 		}
-		c:CRO = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_cro.1102
 		}
 	}
@@ -258,11 +258,11 @@ flavor_cro.1101 = { #Croatia Seeks Compromise
 	option = {
 		name = flavor_cro.1101.b
 		add_legitimacy = legitimacy_severe_penalty
-		c:CRO = {
+		c:DUMMY = {
 			set_new_ruler = scope:target_character
-			make_subject_of = { target = c:HUN type = subject_type:vassal }
+			make_subject_of = { target = c:DUMMY type = subject_type:vassal }
 		}
-		c:CRO = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = cro_legitimation_of_nelipic
@@ -324,13 +324,13 @@ flavor_cro.1102 = { #Hungary Dismisses Our Claim
 			type = belligerent_vs_conciliatory
 			value = societal_value_move_to_left
 		}
-		c:HUN = {
+		c:DUMMY = {
 			add_casus_belli = {
-				target = c:CRO
+				target = c:DUMMY
 				type = casus_belli:cb_claim_throne
 			}
 		}
-		c:HUN = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_cro.1103
 		}
 	}
@@ -373,13 +373,13 @@ flavor_cro.1103 = { #Croatia Terminates Pacta Conventa
 		}
 		if = {
 			limit = {
-				can_declare_legal_war_on = { target = c:CRO }
+				can_declare_legal_war_on = { target = c:DUMMY }
 			}
-			declare_war_with_cb = {	target = c:CRO	type = casus_belli:cb_claim_throne	}
+			declare_war_with_cb = {	target = c:DUMMY	type = casus_belli:cb_claim_throne	}
 		}
 		else = {
 			add_casus_belli = {
-				target = c:CRO
+				target = c:DUMMY
 				type = casus_belli:cb_claim_throne
 			}
 		}

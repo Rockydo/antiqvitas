@@ -55,8 +55,8 @@ guelphs_and_ghibellines = {
 			}
 			save_temporary_scope_as = targetted_country
 			if = {
-				limit = { country_exists = c:PAP }
-				c:PAP = {
+				limit = { country_exists = c:DUMMY }
+				c:DUMMY = {
 					if = {
 						limit = {
 							NOT = { is_member_of_international_organization = international_organization:guelphs_io }
@@ -69,7 +69,7 @@ guelphs_and_ghibellines = {
 				}
 			}
 		}
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = guelphs_and_ghibellines.3
 				days = 20
@@ -81,15 +81,15 @@ guelphs_and_ghibellines = {
 				limit = {
 					capital.region = region:italy_region
 					NAND = {
-						is_allied_with = { target = c:PAP }
+						is_allied_with = { target = c:DUMMY }
 						OR = {
 							AND = {
-								is_subject_of = c:PAP
+								is_subject_of = c:DUMMY
 								liberty_desire < 50
 							}
 							AND = {
 								is_subject = yes
-								NOT = { is_subject_of = c:PAP }
+								NOT = { is_subject_of = c:DUMMY }
 							}
 						}
 						is_during_bankruptcy = yes
@@ -115,7 +115,7 @@ guelphs_and_ghibellines = {
 				}
 			}
 			#event for neutral countries in the situation but not in an io
-			c:PAP ?= {
+			c:DUMMY ?= {
 				if = {
 					limit = {
 						NOR = {
@@ -347,8 +347,8 @@ guelphs_and_ghibellines = {
 			international_organization:guelphs_io ?= { every_international_organization_member = { trigger_event_non_silently = guelphs_and_ghibellines.8 } }
 		}
 		if = {
-			limit = { country_exists = c:PAP }
-			c:PAP = { trigger_event_non_silently = { id = guelphs_and_ghibellines.10 days = 3 } }
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = { trigger_event_non_silently = { id = guelphs_and_ghibellines.10 days = 3 } }
 		}
 		else_if = {
 			limit = {

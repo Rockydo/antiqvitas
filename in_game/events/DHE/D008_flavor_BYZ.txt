@@ -10,7 +10,7 @@ d008_flavor_byz.1 = { #Possibility to sponsor Greek Fire
 	image = "gfx/interface/illustrations/event/backgrounds/special/greek_fire.dds"
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -170,7 +170,7 @@ d008_flavor_byz.5 = { # Tagmata Reformed after victorious end of Fate of the Pho
 	image = "gfx/interface/illustrations/disaster/fate_of_the_phoenix.dds"
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -231,7 +231,7 @@ d008_flavor_byz.6 = { # A Trebizond-formed Byzantium restores the Empire, earnin
 	image = "gfx/interface/illustrations/disaster/fate_of_the_phoenix.dds"
 
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10

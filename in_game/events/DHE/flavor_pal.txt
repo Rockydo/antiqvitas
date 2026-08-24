@@ -10,7 +10,7 @@ flavor_pal.1 = { #https://en.wikipedia.org/wiki/Heidelberg_University
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -27,12 +27,12 @@ flavor_pal.1 = { #https://en.wikipedia.org/wiki/Heidelberg_University
 		international_organization:catholic_church = {
 			resolution_is_active = resolution:western_schism_resolution
 		}
-		"resolution_vote(this|international_organization:catholic_church|resolution:western_schism_resolution)" ?= c:PAP
+		"resolution_vote(this|international_organization:catholic_church|resolution:western_schism_resolution)" ?= c:DUMMY
 	}
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
-		c:PAP.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = pope_ruler
 		}
 	}
@@ -67,7 +67,7 @@ flavor_pal.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -138,7 +138,7 @@ flavor_pal.3 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = PAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5

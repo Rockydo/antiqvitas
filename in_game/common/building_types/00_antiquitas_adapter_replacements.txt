@@ -27,10 +27,9 @@ antq_irrigation_network = {
 	}
 	unique_production_methods = {
 		antq_irrigation_network_maintenance = {
-			tools = 0.10
+			tools = 0.12
 			lumber = 0.05
-			antq_lead_wares = 0.030
-			antq_iron_hardware = 0.020
+			masonry = 0.010
 			category = building_maintenance
 		}
 	}
@@ -59,14 +58,11 @@ antq_maritime_harbor = {
 	}
 	unique_production_methods = {
 		antq_maritime_harbor_maintenance = {
-			tar = 0.10
+			tar = 0.12
 			tools = 0.10
 			lumber = 0.10
 			stone = 0.20
 			antq_cordage = 0.040
-			antq_sailcloth = 0.030
-			antq_iron_hardware = 0.020
-			antq_cured_meat = 0.020
 			category = building_maintenance
 		}
 	}
@@ -93,12 +89,9 @@ antq_earthwork_stockade = {
 	unique_production_methods = {
 		antq_earthwork_stockade_maintenance = {
 			lumber = 0.16
-			weaponry = 0.05
+			weaponry = 0.07
 			tools = 0.04
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			leather = 0.020
 			category = building_maintenance
 		}
 	}
@@ -132,10 +125,9 @@ antq_buddhist_vihara = {
 		antq_buddhist_vihara_maintenance = {
 			rice = 0.10
 			paper = 0.05
-			incense = 0.05
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			incense = 0.03
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}
@@ -164,11 +156,9 @@ antq_taixue_changan = {
 		antq_taixue_changan_maintenance = {
 			paper = 0.40
 			books = 0.20
-			cloth = 0.20
+			cloth = 0.22
 			beeswax = 0.10
-			antq_papyrus = 0.040
-			antq_parchment = 0.030
-			antq_wax_goods = 0.020
+			leather = 0.015
 			category = building_maintenance
 		}
 	}
@@ -198,9 +188,8 @@ antq_library_alexandria = {
 			paper = 0.30
 			books = 0.30
 			dyes = 0.05
-			antq_papyrus = 0.040
-			antq_parchment = 0.030
-			antq_wax_goods = 0.020
+			cloth = 0.020
+			leather = 0.015
 			category = building_maintenance
 		}
 	}
@@ -231,10 +220,8 @@ antq_pharos_alexandria = {
 			naval_supplies = 0.30
 			tar = 0.10
 			tools = 0.10
-			steel = 0.005
-			antq_iron_hardware = 0.030
-			antq_leather_goods = 0.020
-			antq_cured_meat = 0.030
+			weaponry = 0.020
+			leather = 0.020
 			category = building_maintenance
 		}
 	}
@@ -261,12 +248,11 @@ antq_second_temple_jerusalem = {
 	}
 	unique_production_methods = {
 		antq_second_temple_jerusalem_maintenance = {
-			incense = 0.12
+			incense = 0.10
 			wine = 0.05
 			masonry = 0.08
-			antq_wax_goods = 0.020
-			antq_perfumes = 0.010
-			antq_fine_ceramics = 0.010
+			pottery = 0.020
+			cloth = 0.010
 			category = building_maintenance
 		}
 	}

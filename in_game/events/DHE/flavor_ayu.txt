@@ -14,8 +14,8 @@ flavor_ayu.1 = { #Formation of Ayutthaya
     }
 
 	dynamic_historical_event = {
-		tag = LAV
-		tag = ADH
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -29,28 +29,28 @@ flavor_ayu.1 = { #Formation of Ayutthaya
 			ruler = root.ruler
 		}
 		OR = {
-			NOT = { country_exists = c:SPN }
+			NOT = { country_exists = c:DUMMY }
 			ruler = character:adh_ramathibodi
-			opinion = { target = c:SPN value >= 50 }
+			opinion = { target = c:DUMMY value >= 50 }
 		}
 		OR = {
 			AND = {
 				tag = LAV
-				country_exists = c:ADH
-				c:ADH = { 
+				country_exists = c:DUMMY
+				c:DUMMY = { 
 					has_ruler = yes
 					is_ai = yes
 				}
-				ruler = c:ADH.ruler
+				ruler = c:DUMMY.ruler
 			}
 			AND = {
 				tag = ADH
-				country_exists = c:LAV
-				c:LAV = { 
+				country_exists = c:DUMMY
+				c:DUMMY = { 
 					has_ruler = yes
 					is_ai = yes
 				}
-				ruler = c:LAV.ruler
+				ruler = c:DUMMY.ruler
 			}
 			AND = {
 				own_entire_province = province_definition:ayutthaya_province
@@ -92,17 +92,17 @@ flavor_ayu.1 = { #Formation of Ayutthaya
 			limit = {
 				tag = LAV
 			}
-			annex_country = { country = c:ADH }
+			annex_country = { country = c:DUMMY }
 		}
 		else = {
-			annex_country = { country = c:LAV }
+			annex_country = { country = c:DUMMY }
 		}
 		if = {
 			limit = {
-				country_exists = c:SPN
-				c:SPN = { is_ai = yes }
+				country_exists = c:DUMMY
+				c:DUMMY = { is_ai = yes }
 			}
-			annex_country = { country = c:SPN }
+			annex_country = { country = c:DUMMY }
 		}
 		if = {
 			limit = {
@@ -156,7 +156,7 @@ flavor_ayu.2 = { #Borommatrailokkanat Reforms
 	historical_info = flavor_ayu.2.historical_info
 
 	dynamic_historical_event = {
-		tag = AYU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -199,7 +199,7 @@ flavor_ayu.3 = { #Army reforms
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = AYU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -243,7 +243,7 @@ flavor_ayu.4 = { #Economic Reforms
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = AYU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -305,7 +305,7 @@ flavor_ayu.5 = { #The Foundation of the Modern Thai State
 	historical_info = flavor_ayu.5.historical_info
 
 	dynamic_historical_event = {
-		tag = AYU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -373,7 +373,7 @@ flavor_ayu.6 = { #Wat Chaiwatthanaram
 	historical_info = flavor_ayu.6.historical_info
 
 	dynamic_historical_event = {
-		tag = AYU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -430,7 +430,7 @@ flavor_ayu.7 = { #Furthening Horizons
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = AYU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -494,7 +494,7 @@ flavor_ayu.8 = { #The Buddha's Footprint
 	historical_info = flavor_ayu.8.historical_info
 
 	dynamic_historical_event = {
-		tag = AYU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -568,7 +568,7 @@ flavor_ayu.9 = { #Constantine Phaulkon
 	historical_info = flavor_ayu.9.historical_info
 
 	dynamic_historical_event = {
-		tag = AYU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -639,7 +639,7 @@ flavor_ayu.1000 = { #The issue of Sukhothai/Ayutthaya
 	historical_info = flavor_ayu.1000.historical_info
 
 	dynamic_historical_event = {
-		tag = AYU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -662,16 +662,16 @@ flavor_ayu.1000 = { #The issue of Sukhothai/Ayutthaya
 		OR = {
 			AND = {
 				tag = AYU
-				country_exists = c:SUK
-				c:SUK = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					is_subject_of = root
 					liberty_desire <= 50
 				}
 			}
 			AND = {
 				tag = SUK
-				country_exists = c:AYU
-				c:AYU = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					is_subject_of = root
 					liberty_desire <= 50
 				}
@@ -690,10 +690,10 @@ flavor_ayu.1000 = { #The issue of Sukhothai/Ayutthaya
 		heir = { save_scope_as = target_heir }
 		if = {
 			limit = { tag = AYU }
-			c:SUK = { save_scope_as = target_country }
+			c:DUMMY = { save_scope_as = target_country }
 		}
 		else = {
-			c:AYU = { save_scope_as = target_country }
+			c:DUMMY = { save_scope_as = target_country }
 		}
 		save_scope_as = target_origin_country
 	}
@@ -834,7 +834,7 @@ flavor_ayu.1003 = { #Ayutthaya or Sukhothai
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = AYU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -848,8 +848,8 @@ flavor_ayu.1003 = { #Ayutthaya or Sukhothai
 		OR = {
 			AND = {
 				tag = AYU
-				country_exists = c:SUK
-				c:SUK = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					is_ai = yes
 					has_ruler = yes
 					ruler = root.ruler
@@ -857,8 +857,8 @@ flavor_ayu.1003 = { #Ayutthaya or Sukhothai
 			}
 			AND = {
 				tag = SUK
-				country_exists = c:AYU
-				c:AYU = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					is_ai = yes
 					has_ruler = yes
 					ruler = root.ruler
@@ -871,10 +871,10 @@ flavor_ayu.1003 = { #Ayutthaya or Sukhothai
 		ruler = { save_scope_as = target_ruler }
 		if = {
 			limit = { tag = AYU }
-			c:SUK = { save_scope_as = target_country }
+			c:DUMMY = { save_scope_as = target_country }
 		}
 		else = {
-			c:AYU = { save_scope_as = target_country }
+			c:DUMMY = { save_scope_as = target_country }
 		}
 	}
 
@@ -886,9 +886,9 @@ flavor_ayu.1003 = { #Ayutthaya or Sukhothai
 			limit = {
 				NOT = { tag = AYU }
 			}
-			change_player = c:AYU
+			change_player = c:DUMMY
 		}
-		annex_country = { country = c:SUK }
+		annex_country = { country = c:DUMMY }
 	}
 
 	option = { #Choose Sukhothai
@@ -898,9 +898,9 @@ flavor_ayu.1003 = { #Ayutthaya or Sukhothai
 			limit = {
 				NOT = { tag = SUK }
 			}
-			change_player = c:SUK
+			change_player = c:DUMMY
 		}
-		annex_country = { country = c:AYU }
+		annex_country = { country = c:DUMMY }
 	}
 
 	option = { #The current situation works

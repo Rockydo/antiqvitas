@@ -21,10 +21,12 @@ the AD 1 unit-manager ledger.
 | --- | --- |
 | Foot Skirmishers | Balearic Slingers, Cilician Marine Company, Cretan Archers, Syrian Archer Company, Thracian Peltasts |
 | Heavy Foot | Dacian Falxmen, Galatian Swordsmen, Germanic Bodyguards, Iberian Swordsmen |
-| Mounted Companies | Armenian Horse Company, Numidian Horse Company, Saka Horse |
+| Mounted Companies | Armenian Horse Company, Hired Horse Company, Numidian Horse Company, Saka Horse |
 | Han Companies | Han Frontier Crossbow Company, Yellow River Escort Company |
 | Indian Companies | Deccan Spear Company, Indian Longbow Company |
 | African Companies | Nile Bow Company, Sahel Javelin Company |
 | American Companies | Andean Sling Company, Mesoamerican Atlatl Company |
 
-The roster contains **141** ancient unit types, including **22** reviewed mercenary companies. The M7 validator fails if a listed core type loses its bounded country availability, a required company or tactical profile disappears, or a core AD 1 seed no longer contains every required role.
+The roster contains **143** ancient unit types, including **24** reviewed mercenary companies. The M7 validator fails if a listed core type loses its bounded country availability, a required company or tactical profile disappears, or a core AD 1 seed no longer contains every required role.
+
+EU5 1.3.11 initializes mercenary availability by combat class: an eligible regional company replaces the universal representative of the same class rather than creating a duplicate slot, and hired entries do not regenerate after a contract. Every ancient company therefore carries the same reviewed multi-hire century reserve. Frontier Spears and Caravan Guards remain the two static defaults; Hired Horse and Local Retainers are universal non-default alternatives unlocked by opening warfare foundations. The production-save audit requires heavy foot, light foot, and mounted coverage in every live cell, both portable systems somewhere in the manager, and six distinct regional company families.

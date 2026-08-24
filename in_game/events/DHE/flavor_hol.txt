@@ -9,7 +9,7 @@ flavor_hol.1 = {
 	historical_info = flavor_hol.1.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -64,7 +64,7 @@ flavor_hol.2 = {
 	historical_info = flavor_hol.2.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -142,7 +142,7 @@ flavor_hol.3 = {
 	historical_info = flavor_hol.3.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -206,7 +206,7 @@ flavor_hol.4 = {
 	historical_info = flavor_hol.4.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -279,7 +279,7 @@ flavor_hol.5 = {
 	historical_info = flavor_hol.5.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -317,7 +317,7 @@ flavor_hol.6 = {
 	historical_info = flavor_hol.6.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -374,7 +374,7 @@ flavor_hol.7 = {
 	historical_info = flavor_hol.7.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -427,7 +427,7 @@ flavor_hol.8 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -438,7 +438,7 @@ flavor_hol.8 = {
 			any_subject = { is_subject_type = colonial_nation }
 			has_colonial_charters = yes
 		}
-		c:POR ?= {
+		c:DUMMY ?= {
 			NOT = { is_allied_with = { target = root } }
 			OR = {
 				any_subject = { is_subject_type = colonial_nation }
@@ -456,8 +456,8 @@ flavor_hol.8 = {
 	option = {
 		name = flavor_hol.8.a
 		historical_option = yes
-		add_casus_belli = { target = c:POR type = casus_belli:cb_colonial_conflict }
-		c:POR = {
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_colonial_conflict }
+		c:DUMMY = {
 			add_opinion = { target = root modifier = ned_grand_design }
 			every_related_country = {
 				type = alliance
@@ -479,7 +479,7 @@ flavor_hol.9 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -546,7 +546,7 @@ flavor_hol.10 = {
 	historical_info = flavor_hol.10.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -604,7 +604,7 @@ flavor_hol.11 = {
 	historical_info = flavor_hol.11.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -657,7 +657,7 @@ flavor_hol.12 = {
 	historical_info = flavor_hol.12.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -714,7 +714,7 @@ flavor_hol.13 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -758,7 +758,7 @@ flavor_hol.14 = {
 	historical_info = flavor_hol.14.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = FLA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -807,7 +807,7 @@ flavor_hol.15 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -852,7 +852,7 @@ flavor_hol.16 = {
 	historical_info = flavor_hol.16.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -907,7 +907,7 @@ flavor_hol.17 = {
 	historical_info = flavor_hol.17.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -945,7 +945,7 @@ flavor_hol.18 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -955,8 +955,8 @@ flavor_hol.18 = {
 		owns = location:amsterdam
 		exists = international_organization:hre
 		religion = religion:calvinist
-		country_exists = c:FRA
-		c:FRA = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			religion = religion:catholic
 			is_neighbor_of = root
 			"religion_percentage_in_country(religion:calvinist)" > 0
@@ -968,13 +968,13 @@ flavor_hol.18 = {
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:FRA = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 		save_scope_as = root_country
 	}
 	option = {
 		name = flavor_hol.18.a
 		save_scope_as = from
-		c:FRA = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_hol.19 }
 			every_rival = {
 				limit = {
@@ -987,11 +987,11 @@ flavor_hol.18 = {
 	}
 	option = {
 		name = flavor_hol.18.b
-		c:FRA = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = ned_friendly_towards_france }
 		}
 		hidden_effect = {
-			add_opinion = { target = c:FRA modifier = ned_friendly_towards_france }
+			add_opinion = { target = c:DUMMY modifier = ned_friendly_towards_france }
 		}
 	}
 }
@@ -1027,7 +1027,7 @@ flavor_hol.20 = {
 	historical_info = flavor_hol.20.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1075,7 +1075,7 @@ flavor_hol.21 = {
 	historical_info = flavor_hol.21.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1127,7 +1127,7 @@ flavor_hol.22 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1185,7 +1185,7 @@ flavor_hol.23 = {
 	historical_info = flavor_hol.23.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1233,7 +1233,7 @@ flavor_hol.24 = {
 	historical_info = flavor_hol.24.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 1590
 		to = 1620
 		monthly_chance = 3
@@ -1308,7 +1308,7 @@ flavor_hol.25 = {
 	historical_info = flavor_hol.25.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 1590
 		to = 1650
 		monthly_chance = 3
@@ -1388,16 +1388,16 @@ flavor_hol.26 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 1340
 		to = 1430
 		monthly_chance = 3
 	}
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:FRI
+		country_exists = c:DUMMY
 		religion.group = religion_group:christian
-		c:FRI = { has_reform = government_reform:frisian_freedom_reform }
+		c:DUMMY = { has_reform = government_reform:frisian_freedom_reform }
 		at_war = no
 	}
 	illustration_tags = {
@@ -1406,7 +1406,7 @@ flavor_hol.26 = {
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:FRI = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 	}
 	option = {
 		name = flavor_hol.26.a
@@ -1424,7 +1424,7 @@ flavor_hol.27 = {
 	historical_info = flavor_hol.27.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 1600
 		to = 1700
 		monthly_chance = 5
@@ -1473,7 +1473,7 @@ flavor_hol.28 = {
 		}
 	}
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1514,7 +1514,7 @@ flavor_hol.29 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -1523,8 +1523,8 @@ flavor_hol.29 = {
 	trigger = {
 		current_date > 476.9.4
 		trigger_if = {
-			limit = { this = c:HOL }
-			NOT = { country_exists = c:NED }
+			limit = { this = c:DUMMY }
+			NOT = { country_exists = c:DUMMY }
 		}
 		always = no
 	}
@@ -1598,7 +1598,7 @@ flavor_hol.30 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1607,8 +1607,8 @@ flavor_hol.30 = {
 	trigger = {
 		current_date > 476.9.4
 		trigger_if = {
-			limit = { this = c:HOL }
-			NOT = { country_exists = c:NED }
+			limit = { this = c:DUMMY }
+			NOT = { country_exists = c:DUMMY }
 		}
 		societal_value:spiritualist_vs_humanist >= 35
 		owns = location:amsterdam
@@ -1672,7 +1672,7 @@ flavor_hol.31 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1686,8 +1686,8 @@ flavor_hol.31 = {
 	trigger = {
 		current_date > 476.9.4
 		trigger_if = {
-			limit = { this = c:HOL }
-			NOT = { country_exists = c:NED }
+			limit = { this = c:DUMMY }
+			NOT = { country_exists = c:DUMMY }
 		}
 		owns = location:amsterdam
 		has_advance = port_authority_advance
@@ -1760,7 +1760,7 @@ flavor_hol.32 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1774,8 +1774,8 @@ flavor_hol.32 = {
 	trigger = {
 		current_date > 476.9.4
 		trigger_if = {
-			limit = { this = c:HOL }
-			NOT = { country_exists = c:NED }
+			limit = { this = c:DUMMY }
+			NOT = { country_exists = c:DUMMY }
 		}
 	}
 
@@ -1841,8 +1841,8 @@ flavor_hol.33 = {
 	trigger = {
 		current_date > 476.9.4
 		trigger_if = {
-			limit = { this = c:HOL }
-			NOT = { country_exists = c:NED }
+			limit = { this = c:DUMMY }
+			NOT = { country_exists = c:DUMMY }
 		}
 		capital.market = {
 			market_possible_goods_trade_surplus = {
@@ -1854,7 +1854,7 @@ flavor_hol.33 = {
 	}
 
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1904,7 +1904,7 @@ flavor_hol.34 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = HOL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -1920,8 +1920,8 @@ flavor_hol.34 = {
 	trigger = {
 		current_date > 476.9.4
 		trigger_if = {
-			limit = { this = c:HOL }
-			NOT = { country_exists = c:NED }
+			limit = { this = c:DUMMY }
+			NOT = { country_exists = c:DUMMY }
 		}
 		custom_tooltip = {
 			text = variable_ned_grain_trade_start_flag_tt

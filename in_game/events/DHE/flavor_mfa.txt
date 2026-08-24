@@ -9,7 +9,7 @@ flavor_mfa.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MFA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -27,7 +27,7 @@ flavor_mfa.1 = {
 		character:mfa_teodoro_i_palaiologos = {
 			is_alive = no
 		}
-		exists = c:BYZ
+		exists = c:DUMMY
 		has_ruler = yes
 		ruler.dynasty ?= dynasty:palaiologos_dynasty
 	}
@@ -42,7 +42,7 @@ flavor_mfa.1 = {
 		character:mfa_teodoro_i_palaiologos = {
 			save_scope_as = target_character2
 		}
-		c:BYZ = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		government_reform:byzantine_court_in_italy = {
@@ -150,7 +150,7 @@ flavor_mfa.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MFA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -288,7 +288,7 @@ flavor_mfa.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MFA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -529,7 +529,7 @@ flavor_mfa.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MFA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 75
@@ -537,14 +537,14 @@ flavor_mfa.7 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:BYZ
+		country_exists = c:DUMMY
 		has_reform = government_reform:byzantine_court_in_italy
 		"religion_percentage_in_country(religion:orthodox)" >= 0.75
 		"culture_group_percentage_in_country(culture_group:greek_group)" >= 0.75
 		ruler ?= {
 			dynasty ?= dynasty:palaiologos_dynasty
 		}
-		c:BYZ ?= {
+		c:DUMMY ?= {
 			ruler ?= {
 				dynasty ?= dynasty:palaiologos_dynasty
 			}
@@ -553,15 +553,15 @@ flavor_mfa.7 = {
 		scripted_geography:claims_of_thessalonica_geography = {
 			any_location_in_scripted_geography = {
 				percent >= 0.5
-				owner ?= c:BYZ
+				owner ?= c:DUMMY
 			}
 		}
-		NOT = { country_exists = c:THE }
+		NOT = { country_exists = c:DUMMY }
 	}
 
 	immediate = {
 		save_scope_as = from_country
-		c:BYZ = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		ruler = {
@@ -694,7 +694,7 @@ flavor_mfa.1000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MFA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -702,28 +702,28 @@ flavor_mfa.1000 = {
 
 	trigger = {
 		current_date > 476.9.4
-		c:BYZ ?= {
+		c:DUMMY ?= {
 			any_active_disaster = {
 				disaster_type = disaster_type:byzantine_succession_crisis
 			}
 			has_ruler = yes
 		}
 		ruler ?= character:mfa_giovanni_palaiologos
-		c:BYZ ?= {
+		c:DUMMY ?= {
 			ruler ?= {
 				dynasty ?= dynasty:palaiologos_dynasty
 			}
 		}
-		c:BYZ = {
+		c:DUMMY = {
 			owns = location:thessaloniki
 		}
 		scripted_geography:claims_of_thessalonica_geography = {
 			any_location_in_scripted_geography = {
 				percent >= 0.5
-				owner ?= c:BYZ
+				owner ?= c:DUMMY
 			}
 		}
-		NOT = { country_exists = c:THE }
+		NOT = { country_exists = c:DUMMY }
 	}
 
 	immediate = {
@@ -731,7 +731,7 @@ flavor_mfa.1000 = {
 		ruler = {
 			save_scope_as = target_character
 		}
-		c:BYZ = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			ruler = {
 				save_scope_as = target_character2
@@ -891,7 +891,7 @@ flavor_mfa.1002 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:BYZ
+		country_exists = c:DUMMY
 		has_variable = mfa_gathering_for_fight_with_byz
 	}
 

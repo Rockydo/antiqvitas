@@ -15,7 +15,7 @@
   "game_build_id": "24187685",
   "game_version": "1.3.11",
   "installed_art_reference_count": 1170,
-  "installed_definition_count": 5315,
+  "installed_definition_count": 5364,
   "installed_reference_count": 7082,
   "localization": {
     "country_history_client_coverage": {
@@ -778,6 +778,8 @@
     "ages": "engine_slot_adapter",
     "buildings": "exact_hidden_legacy",
     "cabinet_actions": "exact_disabled_legacy",
+    "character_interactions": "exact_reviewed_ancient_adapters",
+    "chivalric_orders": "exact_disabled_legacy",
     "country_ranks": "engine_adapter_period_presentation_complete",
     "estate_privileges": "exact_disabled_legacy",
     "government_reforms": "exact_disabled_legacy",
@@ -796,11 +798,12 @@
     "engine_adapter_pending_presentation": 2,
     "engine_adapter_period_presentation_complete": 1,
     "engine_slot_adapter": 1,
-    "exact_disabled_legacy": 362,
+    "exact_disabled_legacy": 365,
     "exact_hidden_legacy": 74,
-    "installed_reference_document": 16
+    "exact_reviewed_ancient_adapters": 32,
+    "installed_reference_document": 17
   },
-  "surface_count": 16,
+  "surface_count": 18,
   "surfaces": {
     "advances": {
       "definition_count": 3159,
@@ -4027,7 +4030,7 @@
             "war_score_absolutism_advance"
           ],
           "mod_mirror": "in_game/common/advances/0_age_of_absolutism.txt",
-          "mod_sha256": "fe4f79927855350328bf3d6716590d9044132c37ac6a3e02d12cb6b4a3e8050f",
+          "mod_sha256": "00a926ecb47be1e30c633e8119b707f0e6da940a92899fbeef195b360379a101",
           "reference_count": 107,
           "references_sha256": "66f725d267d680f2fd647e8cde57a844577f47485eefd1c772f9e78f5f2e1681",
           "relative": "0_age_of_absolutism.txt",
@@ -4104,7 +4107,7 @@
             "trade_through_owned_disc_advance"
           ],
           "mod_mirror": "in_game/common/advances/0_age_of_discovery.txt",
-          "mod_sha256": "339c62eacd705bf55353edab002ed9d7995d907bdeca57d57108e7c21417e4bc",
+          "mod_sha256": "5173ecf1419a0aae25c134a271d957c511f7642c10f8edc37e1418cce373eb7d",
           "reference_count": 135,
           "references_sha256": "1dc79b97f52319420be6c4646ca204ccdba589e8c07af8e08b27e45a40f66430",
           "relative": "0_age_of_discovery.txt",
@@ -4173,7 +4176,7 @@
             "war_score_reformations_advance"
           ],
           "mod_mirror": "in_game/common/advances/0_age_of_reformation.txt",
-          "mod_sha256": "882f95c18ee3a65ec675307772e0feb3e71799c94724285ba385fc8ec08fdfdb",
+          "mod_sha256": "987c98cac83ef18e793b800928f5d9288ffaa9ba786d56e6ba31f10e0d2cf653",
           "reference_count": 112,
           "references_sha256": "13119423f024f487910afcaa0e2484769df35f58f56d0dc00ed0ad052a271e3a",
           "relative": "0_age_of_reformation.txt",
@@ -4245,7 +4248,7 @@
             "war_no_cb_cost_modifier_renaissance_advance"
           ],
           "mod_mirror": "in_game/common/advances/0_age_of_renaissance.txt",
-          "mod_sha256": "eaa481d60d3d4eea4b2c45c1b43245376baef9b6b93056bfa11f2913b4f660e2",
+          "mod_sha256": "77f464b9dce2bbae470a4b6ca0563aab742dfd3ee353811559c5ab4c43c9f46f",
           "reference_count": 113,
           "references_sha256": "e60307a353f2bcc7226a5c50218d6e4540c8bb7b2ef4df3ce7a50636050a7c5b",
           "relative": "0_age_of_renaissance.txt",
@@ -4314,7 +4317,7 @@
             "war_score_revolutions_advance"
           ],
           "mod_mirror": "in_game/common/advances/0_age_of_revolutions.txt",
-          "mod_sha256": "2cf4f0492c1024a371d6afe25c860390d316fff39c1f9d27b3d5deca81bb126f",
+          "mod_sha256": "633432fd31f73ddbb4173a0615f9a50e4ac898e4729225785c9547edc091c16e",
           "reference_count": 106,
           "references_sha256": "91b6654ae0eaa2c852643a170128f5c0d598bb8ce699c9fd582f79c230023c3c",
           "relative": "0_age_of_revolutions.txt",
@@ -4389,7 +4392,7 @@
             "written_alphabet"
           ],
           "mod_mirror": "in_game/common/advances/0_age_of_traditions.txt",
-          "mod_sha256": "4938a68f5ebf45fa451bdd01f85c7112ab45de9f28684f882fb7b523c4044577",
+          "mod_sha256": "2fe55d5afa8abd19d46ccff96770a642d2a320bef46e3f7299a2aa20b905430a",
           "reference_count": 135,
           "references_sha256": "15e028fee6dd3c48119aeedc6d5b3d4e8b1b987888a9fbd4cf4c9bcae50b5c73",
           "relative": "0_age_of_traditions.txt",
@@ -4525,7 +4528,7 @@
             "winery_manufactory_advance"
           ],
           "mod_mirror": "in_game/common/advances/1_building_unlocks.txt",
-          "mod_sha256": "c7584a8dc674d407d37161c4865b9eb3111a0211a3cc60d46f901b29dea93642",
+          "mod_sha256": "4f016138d253bcd1468ab527c39645659922a3965a0e6bea2e6e1d0a135b8e87",
           "reference_count": 351,
           "references_sha256": "4f2c50a40b5153ab9ac7e1efbf450d5110e107f6d7fff7c4542823e66eb5b9bf",
           "relative": "1_building_unlocks.txt",
@@ -4582,7 +4585,7 @@
             "unlock_wagon_train"
           ],
           "mod_mirror": "in_game/common/advances/2_army_unlocks.txt",
-          "mod_sha256": "c179e95495f2e44fb329de76443221b70251052f0e7b96fe240fdce4d5e8e656",
+          "mod_sha256": "55aaede9e9e5d1fcd7a8070b688443e0639fe63a65dc350d146c91cabe51d84e",
           "reference_count": 126,
           "references_sha256": "0a738dcc763037fc89d11f9fb9cdb2cd8f15999533cca5ea6571ec2d6125b0b1",
           "relative": "2_army_unlocks.txt",
@@ -4631,7 +4634,7 @@
             "unlock_xebec_advance"
           ],
           "mod_mirror": "in_game/common/advances/2_ship_unlocks.txt",
-          "mod_sha256": "350a02b012934116fff78e804eca6b03cb7eec9b5a085e6e8d530dfa7dc6c0f5",
+          "mod_sha256": "ed4cc09d1c88d9c2823bb23f11e6447dd49896b3bd5ade10243c945389ef4433",
           "reference_count": 82,
           "references_sha256": "c463c5d1f0020939ba327abf23287c195f9aa0113e62c9b3be71a5499f3628f3",
           "relative": "2_ship_unlocks.txt",
@@ -4657,7 +4660,7 @@
             "study_institutions_advance"
           ],
           "mod_mirror": "in_game/common/advances/3_cabinet_actions_unlocks.txt",
-          "mod_sha256": "6465a192869c0dbfa02a7546e682cb7fb8abda3f07a376a8e090836ca5bc8822",
+          "mod_sha256": "cb904dfb88ddb32e12897628a70575583ef3f12904b96eac9edefff614b14735",
           "reference_count": 33,
           "references_sha256": "fd3f110767bc1ae0bd7370342cab27325f040c379e97f09899769b453ecfab48",
           "relative": "3_cabinet_actions_unlocks.txt",
@@ -4671,7 +4674,7 @@
           "definition_count": 0,
           "definitions": [],
           "mod_mirror": "in_game/common/advances/3_character_interaction_unlocks.txt",
-          "mod_sha256": "fac15ea82795676c9dac3a4b55420869554026a6da090377cb7c2a21bbd7fe12",
+          "mod_sha256": "8e3b0c6424135827ae8c8f46e6ea395d85fe24f4c902b14a089d936e5994db92",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "3_character_interaction_unlocks.txt",
@@ -4692,7 +4695,7 @@
             "fort_limit_6_advance"
           ],
           "mod_mirror": "in_game/common/advances/3_fort_level.txt",
-          "mod_sha256": "a0d371e9efcbdf27d241bdd877944267001daff718368952fc661fc1b3d80433",
+          "mod_sha256": "58f5aecaf9eb65e5fccef0281a8d939b7af0f65ac4ffbe81f8984172db4db213",
           "reference_count": 12,
           "references_sha256": "299f9e7c6de00ca68a74c4169cefdd99c2918357ef9614b3d4fedbc613ad1583",
           "relative": "3_fort_level.txt",
@@ -4710,7 +4713,7 @@
             "paper_guild_wood_pulp_maintenance_advance"
           ],
           "mod_mirror": "in_game/common/advances/3_production_method_unlocks.txt",
-          "mod_sha256": "83fcd49a316f7cdc27fb537dc1294322d941597542a3369b2576bfa71d13343d",
+          "mod_sha256": "da292aecb78d9bff76fb90b7ac682030518587c6b181828ef2f91d9bf6153592",
           "reference_count": 9,
           "references_sha256": "ea4719233d9e5986e9c5ff9565070360bf1a3913bba4d9220d4038cbc8aa8155",
           "relative": "3_production_method_unlocks.txt",
@@ -4752,7 +4755,7 @@
             "tribal_religious_values_law_advance"
           ],
           "mod_mirror": "in_game/common/advances/3_reform_unlocks.txt",
-          "mod_sha256": "f31bf3d22f96201f149433fce66698d2cc016aac84c02025610762aef8e20d8b",
+          "mod_sha256": "eb9914bb2a38f26f07953f1861827c3120af209bf7b518567825e3794a4e42a3",
           "reference_count": 73,
           "references_sha256": "ef18bfd44aefa278dd8a67100d4601439c54c5c0db1d0062b8a9f057d51e1565",
           "relative": "3_reform_unlocks.txt",
@@ -4771,7 +4774,7 @@
             "road_building"
           ],
           "mod_mirror": "in_game/common/advances/3_road_unlocks.txt",
-          "mod_sha256": "beb4b917ee15ab891941b1149dcc818e2efba81272cb0389544c945393c35688",
+          "mod_sha256": "b28cac4df17d5f5f6d57c56e558ad13f87627bf22f537f7b4a3a013f7bef1d2c",
           "reference_count": 12,
           "references_sha256": "868f55a343db7be71a2f76a5fa69609f4f55f6484392b59e0ac4d6c0d5db2c0e",
           "relative": "3_road_unlocks.txt",
@@ -4791,7 +4794,7 @@
             "standardized_pikes"
           ],
           "mod_mirror": "in_game/common/advances/3_supply_limit.txt",
-          "mod_sha256": "3b479c7b9850d1a265a5c637857fe581f431b2fac70b6fd7d6d8ed6e030444ec",
+          "mod_sha256": "91003a7c86f8f7919112ab442567583191c0711a06ccfae816e85a14771028c1",
           "reference_count": 8,
           "references_sha256": "3d8c493f05086e1412430fb52233b796d146b2887e2551bb6d46497781c7d711",
           "relative": "3_supply_limit.txt",
@@ -4856,7 +4859,7 @@
             "state_efficiency"
           ],
           "mod_mirror": "in_game/common/advances/4_choices_adm.txt",
-          "mod_sha256": "88d7d73e6e2615880f305ca6d179ddf5ccbb3c577b521ac8a657c088f3c6470b",
+          "mod_sha256": "40c0652dd631128ae69c147efc0e9349355d2d74ca3a573df4414fe4bb4e73dc",
           "reference_count": 61,
           "references_sha256": "1a450b194c1e55d00652d99c7814bad0e92d066a055452decaabbb3149f949a7",
           "relative": "4_choices_adm.txt",
@@ -4921,7 +4924,7 @@
             "vice_roys"
           ],
           "mod_mirror": "in_game/common/advances/4_choices_dip.txt",
-          "mod_sha256": "229c75526602a82bdbf439ed6703e7cddd2eca5fd3ea480c4ecd3313355185e2",
+          "mod_sha256": "9630a270b126729d345b94c78800be4492c0c63a31ee267da6ee4fba09a99522",
           "reference_count": 66,
           "references_sha256": "1d4dd4d4ec4074a92be74b29444e47c1686f7e994779d8d7e67178e517576151",
           "relative": "4_choices_dip.txt",
@@ -4986,7 +4989,7 @@
             "tolerance_idea"
           ],
           "mod_mirror": "in_game/common/advances/4_choices_mil.txt",
-          "mod_sha256": "6408a61c87ab17ed5e0864b3b7ad7ad4fa428e6d49fe82f9896ac324ec83c414",
+          "mod_sha256": "1400c5fd8aa208f1992b1c9892a17fb4a0624354356682a270c5ad4402f8b379",
           "reference_count": 60,
           "references_sha256": "5bf1a931487ff9955a161b9e323b9bd8845ae5a1493e8888493513e748466df0",
           "relative": "4_choices_mil.txt",
@@ -5017,7 +5020,7 @@
             "unlock_varangians_6_advance"
           ],
           "mod_mirror": "in_game/common/advances/D008_byzantine_unlocks.txt",
-          "mod_sha256": "56400c7b58a5419782cee50106bd1fc5127bfd131657fddea969c1b7cecfae76",
+          "mod_sha256": "1cc9ffe455e41b07793507c6b475291bcc9c95d4445e46a5839a22278275c21c",
           "reference_count": 48,
           "references_sha256": "e52dd6c539f5977ed35504957afcf1cb916351546d67c8ace0c7f5ab007d84e9",
           "relative": "D008_byzantine_unlocks.txt",
@@ -5031,7 +5034,7 @@
           "definition_count": 0,
           "definitions": [],
           "mod_mirror": "in_game/common/advances/_advances_template.txt",
-          "mod_sha256": "e647d54797173d148ef91a9b289b7b69098be120d12660d098fb96d144e2e8e2",
+          "mod_sha256": "8e3b0c6424135827ae8c8f46e6ea395d85fe24f4c902b14a089d936e5994db92",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "_advances_template.txt",
@@ -5054,7 +5057,7 @@
             "uc_bey_advance"
           ],
           "mod_mirror": "in_game/common/advances/beyliks.txt",
-          "mod_sha256": "01266641d2499f137128ad131b66cc803e600ef40e53a1926f293f2ad7b54a15",
+          "mod_sha256": "cae302715a7463858b714029b5039e71ad1251a5ca351c13e269d268c3788b36",
           "reference_count": 19,
           "references_sha256": "ecaa56fbe948a967175608d9f7c594bf7e457177beb29ec1d2fcb5ab1ac9454d",
           "relative": "beyliks.txt",
@@ -5080,7 +5083,7 @@
             "new_frontiers"
           ],
           "mod_mirror": "in_game/common/advances/colonial_nations.txt",
-          "mod_sha256": "75b949a87d1c19880fece71af9455e2c019f66b8de5b204bfe63f10f935e7367",
+          "mod_sha256": "fba0eba8026a38b8ab0d3c4525fd81d8ea901337ccb2d330602045f9b006f5e6",
           "reference_count": 11,
           "references_sha256": "49a7e3f0c0704a0e8ef1eacee167682d63bcd3e3ee2a5c73cd489ff76c48a5a9",
           "relative": "colonial_nations.txt",
@@ -5107,7 +5110,7 @@
             "ara_valencian_golden_age"
           ],
           "mod_mirror": "in_game/common/advances/country_ARA.txt",
-          "mod_sha256": "aa5e7a6a50e02befbbf05733e420faea40a5fbb685a835b0b7c128630e69df15",
+          "mod_sha256": "76a86b0c2fea2dddb1b7d763c74767581a7deaa29f7ebcaae7f819ff92c5fed0",
           "reference_count": 24,
           "references_sha256": "39bca56c8eb72c911e37dbfc825c6c4b65bcef52c56121b5677785ac2e01de1b",
           "relative": "country_ARA.txt",
@@ -5130,7 +5133,7 @@
             "wealth_of_mesoamerica"
           ],
           "mod_mirror": "in_game/common/advances/country_AZT.txt",
-          "mod_sha256": "1a4ab32316d4495d0111588c140e0bef1db99750f4ccf46225110c98f541e02a",
+          "mod_sha256": "8ccb3548e1957b3feeefa0a0eda94b2650dc4c8de7c5bfea949ec9f7a23c4544",
           "reference_count": 16,
           "references_sha256": "b45c89f5fa936f82c16ec78091817aba608acd65f0aba2dde02008786c20314b",
           "relative": "country_AZT.txt",
@@ -5154,7 +5157,7 @@
             "wagenburg"
           ],
           "mod_mirror": "in_game/common/advances/country_BOH.txt",
-          "mod_sha256": "e4e3fb7eb388023a86aad72db5d83fc5088c0c31819925224e55c0f526ff1f1b",
+          "mod_sha256": "08c67702c0e2de23ffd6470c6cb894e3fa9df069e124869bb5d1398102d4eac1",
           "reference_count": 16,
           "references_sha256": "c1b7450011858b69e9fde76093819d09df458ce1c54cacd66ae87ea9eed1ea80",
           "relative": "country_BOH.txt",
@@ -5172,7 +5175,7 @@
             "legacy_of_breton_independence"
           ],
           "mod_mirror": "in_game/common/advances/country_BRI.txt",
-          "mod_sha256": "682425683e6c2020af28effd1c6f483b3a10f5b412692bac554dabe8315a19a2",
+          "mod_sha256": "24b563cbfdbb82ada4b6e326f6eb64a3bcbfa4a45c5a94886db70688562c37b2",
           "reference_count": 4,
           "references_sha256": "c27e6774c6f88a2f489719b1b721b139c7fb9efb8802b23bee4f14533f5616a1",
           "relative": "country_BRI.txt",
@@ -5217,7 +5220,7 @@
             "vid_vidins_custom_houses"
           ],
           "mod_mirror": "in_game/common/advances/country_BUL.txt",
-          "mod_sha256": "e09870ac2de2082dfb8e5243857663a012cecb6037e90ab62592c3153389341e",
+          "mod_sha256": "6ce2ffce3d6de82e3c0f39f7f0d00faed4dea2f33633d81c20431132f5e71f73",
           "reference_count": 60,
           "references_sha256": "065b0890bc0dd2c78f95e9c678d182c2fa577e5788406ce375b4d4e81c6d73dd",
           "relative": "country_BUL.txt",
@@ -5241,7 +5244,7 @@
             "reform_the_feudal_army"
           ],
           "mod_mirror": "in_game/common/advances/country_BUR.txt",
-          "mod_sha256": "09b23f9c6d209637eea1a371b2982a6473c102e52e6805fb4110e78ce965ec22",
+          "mod_sha256": "80c0e9135e0bfd5a0c98059f25b09680bd0cc4beeaaa0a1b7d2d14354f0ab1ef",
           "reference_count": 19,
           "references_sha256": "97c5e2b2889906f1e68538bc754bea09d757a4dc7ed6e289358ac1c6106bff3c",
           "relative": "country_BUR.txt",
@@ -5268,7 +5271,7 @@
             "cas_the_reconquista"
           ],
           "mod_mirror": "in_game/common/advances/country_CAS.txt",
-          "mod_sha256": "abee4574a2f1695500bd378d6030891c4176b288f2a38dec6fba301d21ba2db1",
+          "mod_sha256": "88666eab7be13808477288df1c598ea4aceef17f19b7758e915648ab6c93d147",
           "reference_count": 24,
           "references_sha256": "9a9f5ac1a247a1b11c1a19f1632e0d2f146a7102b8602e78426dd5bf4e7e2f8a",
           "relative": "country_CAS.txt",
@@ -5285,7 +5288,7 @@
             "my_son_sanctuary"
           ],
           "mod_mirror": "in_game/common/advances/country_CHA.txt",
-          "mod_sha256": "7c55bc2e70c5c9878047be8201bb1ab5c00b72ed71a87554d00575c6f09009b9",
+          "mod_sha256": "03bea868e65173dc3f04f07464685e3fa3f4e396bcd25884600253e62fd127ca",
           "reference_count": 4,
           "references_sha256": "7b9e265b55de6170f376aae55fdab3a4e8c6aa883292f97bcaa3787b7ebcbeb2",
           "relative": "country_CHA.txt",
@@ -5309,7 +5312,7 @@
             "chg_unrelenting_horde"
           ],
           "mod_mirror": "in_game/common/advances/country_CHG.txt",
-          "mod_sha256": "95b51309064ace3cda6b178762ac006b79fe9885749eed68d2a242beed965e6b",
+          "mod_sha256": "1b1d92906ca3675addd2798ef2577df5c983bc78d553c6aab1f8516581342c0d",
           "reference_count": 18,
           "references_sha256": "ffa5b12eb2cdac90f8bb168e7b8cd232491c0f3248e71f6f32498d53ac6e35b1",
           "relative": "country_CHG.txt",
@@ -5329,7 +5332,7 @@
             "cri_steppe_commanders"
           ],
           "mod_mirror": "in_game/common/advances/country_CRI.txt",
-          "mod_sha256": "d5d7250f3e95b831f3167ee47a109757c6b0a1046a070fb7a4dead37f7b76995",
+          "mod_sha256": "3ae3a1947d54cd2f23f88f78d27871bc5b6873ddc4a8a0cdb0d84471787be318",
           "reference_count": 5,
           "references_sha256": "0f6e07175be999427c1beed79c6141b6e3f155a8bc514a31a2013c57f7270f3a",
           "relative": "country_CRI.txt",
@@ -5354,7 +5357,7 @@
             "cth_wine_traders"
           ],
           "mod_mirror": "in_game/common/advances/country_CTH.txt",
-          "mod_sha256": "72b2bccf92bd994476e678e3252c9a22011fd09550bda1f3630c2ea41a920403",
+          "mod_sha256": "001edf097d84686b6a9eb3ded1d8c0d4f00cafdc16003d4c534d86f29e0de531",
           "reference_count": 19,
           "references_sha256": "0a27915bd97839f036d3e7add4128b8a63ab04e1ba8816b7534cc3833090d34a",
           "relative": "country_CTH.txt",
@@ -5376,7 +5379,7 @@
             "dahomey_amazons"
           ],
           "mod_mirror": "in_game/common/advances/country_DAH.txt",
-          "mod_sha256": "09e97a5a49b118245cafa78c058ea8751f9a802194a450a1926eac2cfb567f8c",
+          "mod_sha256": "47ca3112b34ed8cd3504dea6b3be9ae8fb61de241d0e674b6e10f549b24b113a",
           "reference_count": 16,
           "references_sha256": "720f18507b3833504c46e4f485e51ce609fb0bc1702c2cd8c8428d8d750d89f3",
           "relative": "country_DAH.txt",
@@ -5393,7 +5396,7 @@
             "nghia_quan"
           ],
           "mod_mirror": "in_game/common/advances/country_DAI.txt",
-          "mod_sha256": "b325da6933ebd17b046ef9f02b97c33ac66c3d9f9829db77b0b9b70afdbf5842",
+          "mod_sha256": "99230dd977fb7721183ef5ccea31606f9933c58a662509d6e66794990d09b35e",
           "reference_count": 4,
           "references_sha256": "48431ae745a9cfaeaf8c7d53c1fb855eba00e16290db30c126950585c9e4e4e3",
           "relative": "country_DAI.txt",
@@ -5422,7 +5425,7 @@
             "dan_trading_economy"
           ],
           "mod_mirror": "in_game/common/advances/country_DAN.txt",
-          "mod_sha256": "1a5a3c90e1aa0403a0f680d65a7215f97e80d45d7dda0d9764722953116c8054",
+          "mod_sha256": "32bf29d8c22c6fc513e868a6fe4bd17d370eb27fdd3c6f90aaaae59fc964729f",
           "reference_count": 29,
           "references_sha256": "28540beece53f0c8ded21e81d486079616e8fe798be7f1e70bb3dbc702a89fb7",
           "relative": "country_DAN.txt",
@@ -5450,7 +5453,7 @@
             "dlh_turkic_conqueror_roots"
           ],
           "mod_mirror": "in_game/common/advances/country_DLH.txt",
-          "mod_sha256": "ba8f2d96460b7308d33d9d522c1ca8f9059a900a7f07aa62520c61c29bc7b231",
+          "mod_sha256": "4172fc73752d44720f6ccc97b53fb54a9e94a9d856854b8d72a955507339fb73",
           "reference_count": 26,
           "references_sha256": "4e55477c6c58747876a37f1db34324168e231a995bba82bc25cf7587ff06040b",
           "relative": "country_DLH.txt",
@@ -5484,7 +5487,7 @@
             "water_frame"
           ],
           "mod_mirror": "in_game/common/advances/country_ENG.txt",
-          "mod_sha256": "e1156948c2ae7934acf58454d74e4d78a680c81777aa796d5c2e1cfcbf6bc192",
+          "mod_sha256": "254de969a0fc54f1365fb601bc1d1b849a074499763bdd25618c97bda73351de",
           "reference_count": 34,
           "references_sha256": "90de0c829830b938479f02125650744b736046f58cf9c0349f12b4ab5a36d83c",
           "relative": "country_ENG.txt",
@@ -5517,7 +5520,7 @@
             "the_ark_of_the_covenant"
           ],
           "mod_mirror": "in_game/common/advances/country_ETH.txt",
-          "mod_sha256": "5a0f9e304b2bb955ba9677d2ec47b7edbb90ce607533b85755dee07514f62c40",
+          "mod_sha256": "a4d43261679d41bead777b52e8899716d0ab4489b64b7045a5d42de7c397f67e",
           "reference_count": 33,
           "references_sha256": "b6a3c46bb9200bcc16e1da29cf2a48dd2ee4e06761c7a7e780068dd2a3bb3946",
           "relative": "country_ETH.txt",
@@ -5548,7 +5551,7 @@
             "vauban_fortifications"
           ],
           "mod_mirror": "in_game/common/advances/country_FRA.txt",
-          "mod_sha256": "9ae9b21fd96e918781dbdd748b9a896f68dcb77fdd3160bf5ef47c8c8684b2de",
+          "mod_sha256": "ff61de6d8c6d241d0b96e844ca316149ffdcf40513fc422c6da3c6c9a3319a6a",
           "reference_count": 18,
           "references_sha256": "c8acea8012a9a516a95d7a8ba1f5241aac58ae4b6bc716503c02b3556235d7d7",
           "relative": "country_FRA.txt",
@@ -5571,7 +5574,7 @@
             "glh_tatar_traditions"
           ],
           "mod_mirror": "in_game/common/advances/country_GLH.txt",
-          "mod_sha256": "8704cdf3d02aa19196d822ce1a139f92f4195d3ae71cfb57fe04d2cc97475408",
+          "mod_sha256": "b9fd96b1db1b22a6dc0a7eaffa494b6b689931ed012ec898ff7d5ad15602a4e1",
           "reference_count": 16,
           "references_sha256": "5bd5a2831b65ff5093710302b256d65decc47838f806e0d202c0b790b32fe3dc",
           "relative": "country_GLH.txt",
@@ -5598,7 +5601,7 @@
             "gra_skillful_envoys"
           ],
           "mod_mirror": "in_game/common/advances/country_GRA.txt",
-          "mod_sha256": "08891e5667688b35d1487b8a74f7f5ae09883cd704f3dcdb6d4cdf08a9bc1753",
+          "mod_sha256": "d4f7508ab509eb2f52df1607779829e75757e0d7e7ece108c713cac13471ef2a",
           "reference_count": 24,
           "references_sha256": "2928750f9bdb5c9b381ef9d4bc265f537bdd08002d79986ffd584cdc679c96b2",
           "relative": "country_GRA.txt",
@@ -5629,7 +5632,7 @@
             "wiener_klassik"
           ],
           "mod_mirror": "in_game/common/advances/country_HAB.txt",
-          "mod_sha256": "f9cc6bee8ccd7dc961be8a67b21debb003a3f9820694933a8a0a4b9822c685ff",
+          "mod_sha256": "d4712c81e816fbb1a4de59f50fecdbc928e7af4d11324cb22f0a7ed219c3ba64",
           "reference_count": 32,
           "references_sha256": "d6eaeee5e9298dae266c7ef2eea25556e1ba14cfc750ce076ef42d1bf6c7b23a",
           "relative": "country_HAB.txt",
@@ -5654,7 +5657,7 @@
             "hin_united_india"
           ],
           "mod_mirror": "in_game/common/advances/country_HIN.txt",
-          "mod_sha256": "297fa04adf6bc7bfc5ae29d14bca87352ece675e432875a1717dd398eca8e817",
+          "mod_sha256": "ba176ad052724a0197e0d430b6c3f0ead13d9c4fe57ff4fac647875c775c082f",
           "reference_count": 20,
           "references_sha256": "3230e3c037548fddf525dfa00e8aad940097eee142fe8cde429976e40f73be05",
           "relative": "country_HIN.txt",
@@ -5684,7 +5687,7 @@
             "hun_the_catholic_shield"
           ],
           "mod_mirror": "in_game/common/advances/country_HUN.txt",
-          "mod_sha256": "fa008214ba41d190ec90585b2b98802b7c9697dff5df59dd73097f71be004b80",
+          "mod_sha256": "647cc95f456e85aeaf9894945d4303f356741ee58a1e446b80a270d18cb8543b",
           "reference_count": 32,
           "references_sha256": "c778fe3e9774f988a2708c012d907d2dc12925e323b2ee7eec08da927bd91811",
           "relative": "country_HUN.txt",
@@ -5704,7 +5707,7 @@
             "ilk_restore_yam"
           ],
           "mod_mirror": "in_game/common/advances/country_ILK.txt",
-          "mod_sha256": "84f779376a2a0d404d2de56489d20d4db1eee17ec25ba3bf2940ddeb6f0ef790",
+          "mod_sha256": "ca18338ef57df100b6aa215900aee427816347549da67745e1799757d4ac8e4f",
           "reference_count": 10,
           "references_sha256": "48bf93c2ea9590279d2179a828d4a221990192f08d02ff58c965890abd52e039",
           "relative": "country_ILK.txt",
@@ -5730,7 +5733,7 @@
             "warachikuy"
           ],
           "mod_mirror": "in_game/common/advances/country_INC.txt",
-          "mod_sha256": "0f290e5f2f68d84dedb067dff50aa3a5f8c924cc1c3d496e2a7595e34303a51c",
+          "mod_sha256": "b0dd6ef8c0f382e3d302c1334e52023edf548400ff8f57e0c619c753149efd2d",
           "reference_count": 19,
           "references_sha256": "6c9c2748f898a5b35c56215373dcbafd6a1487b4b6e506758a5fdb714e1f3b9e",
           "relative": "country_INC.txt",
@@ -5767,7 +5770,7 @@
             "ira_the_tupchi"
           ],
           "mod_mirror": "in_game/common/advances/country_IRA.txt",
-          "mod_sha256": "b79974095b1c11cacb1376173990eacc57b3063cd89fbed03b2c22d69aafad6c",
+          "mod_sha256": "a2b71c258d88dab4a7ff56271c5ed3d58245f5d5e9f6ba45374247c9938a1273",
           "reference_count": 52,
           "references_sha256": "8d93ded8e41a72575710912f7580e6a398642e238ae06f579cdeed1e9f2e0d32",
           "relative": "country_IRA.txt",
@@ -5788,7 +5791,7 @@
             "ita_influence_over_the_clergy"
           ],
           "mod_mirror": "in_game/common/advances/country_ITA.txt",
-          "mod_sha256": "9ba0358caeca7dbcbcd08ee9f5d75db4e97ec291f5c3de8a087c21ea574cfe86",
+          "mod_sha256": "0b800fac4289f1f59809a627a8a2459c57d0e3f4adccaa5a5dc79700671d9419",
           "reference_count": 12,
           "references_sha256": "92fad5d135d60fca5e848d738dad67b17dc713d829693c626ef2b519460a536b",
           "relative": "country_ITA.txt",
@@ -5807,7 +5810,7 @@
             "sons_of_the_salur_tribe"
           ],
           "mod_mirror": "in_game/common/advances/country_KAR.txt",
-          "mod_sha256": "d5f4d2982d226c4096ab7bafde5cae75b2db0b59b360f88d449aed07c16fedd1",
+          "mod_sha256": "e10ab646f518d33a4dbb291ba6094f37167443cb7150b4b8dd7071d1ac4303fd",
           "reference_count": 8,
           "references_sha256": "a6c5a974e95240f0eaaf0f6994d7dc271294e5516ff5b3f8612b554311fd74e5",
           "relative": "country_KAR.txt",
@@ -5827,7 +5830,7 @@
             "kbo_ribat_fortifications"
           ],
           "mod_mirror": "in_game/common/advances/country_KBO.txt",
-          "mod_sha256": "f0a34e116985991dbf089c163b7a8ebb6c81c70ca556d456d77c1262cdb911b2",
+          "mod_sha256": "0d552c4d4521c2726211947460982ad9f25263a59a04f7ea4745889e72e94af9",
           "reference_count": 12,
           "references_sha256": "8a1e9521723780840f6caa1618ac4c9d2d1531b2afb4c5d0e25d35b3ab0161f1",
           "relative": "country_KBO.txt",
@@ -5854,7 +5857,7 @@
             "the_right_hand_pope"
           ],
           "mod_mirror": "in_game/common/advances/country_KNI.txt",
-          "mod_sha256": "ebca5d7c44c0959d90860cfefccf11cfb925babb328dd87d83e9494c572b9fd0",
+          "mod_sha256": "c72bae3e6d3b265149f398ac72606b00e0aa219711315e4dbbc722f01a141790",
           "reference_count": 12,
           "references_sha256": "58bd3c5018702e417bd06d77d8181494ad8e5f142c6ce30a4d473e6cf6bd45b2",
           "relative": "country_KNI.txt",
@@ -5874,7 +5877,7 @@
             "symbol_of_catholicism"
           ],
           "mod_mirror": "in_game/common/advances/country_KOJ.txt",
-          "mod_sha256": "c7910e3780bb7bfcc87e27681905040a3f3ffa72442481a2ad29c4a872297189",
+          "mod_sha256": "297425fc55f2297fb80a70ec61b9dd1761c238810c6bdb63415074a801aa8b46",
           "reference_count": 10,
           "references_sha256": "1c5b69a5a99dae067389f3b4cc1961ed75c0e842ab280b208b22aec17a1bdf51",
           "relative": "country_KOJ.txt",
@@ -5895,7 +5898,7 @@
             "kon_transatlantic_slave_trade"
           ],
           "mod_mirror": "in_game/common/advances/country_KON.txt",
-          "mod_sha256": "ddf82b47459705121482e533c68874db37a662f3dbbb073af81248697bedb614",
+          "mod_sha256": "930997e45334e477e7133bb96d5c8fd2ca532978771df5d225b0c6fc4ec2e680",
           "reference_count": 12,
           "references_sha256": "d1651f3cbb2ae206ca5ca45ce35686df0cb3e7936e6d69c68dc536ad4edfde03",
           "relative": "country_KON.txt",
@@ -5928,7 +5931,7 @@
             "kor_panokseon_advance"
           ],
           "mod_mirror": "in_game/common/advances/country_KOR.txt",
-          "mod_sha256": "fec3bcab11581ab42df51384f14d0bebf3993475f4da6c0ae74b5dc741ad68a0",
+          "mod_sha256": "59bd2c728b7cb7dace1b283d6ac7c660dd14431a3b247888ae70b495d0d21efe",
           "reference_count": 43,
           "references_sha256": "233301d4583321214062fc4f9a2842eed41bd804558a796dd6cefa2b5c680ceb",
           "relative": "country_KOR.txt",
@@ -5949,7 +5952,7 @@
             "krs_legacy_of_the_kurdish_dynasties"
           ],
           "mod_mirror": "in_game/common/advances/country_KRS.txt",
-          "mod_sha256": "42f525eaeb47f132062b3c09113cded94c9c753caad1dd7019ec46a43623208b",
+          "mod_sha256": "5b116c8adcfdfc4e48e2766b2aa335a23cbaf412904074cf73e044c75e909b42",
           "reference_count": 12,
           "references_sha256": "7942a7f0059403e0dd95c38a6b4b425d775f038ae22cc1343bcae3cb9e58a098",
           "relative": "country_KRS.txt",
@@ -5969,7 +5972,7 @@
             "lva_baltic_forts"
           ],
           "mod_mirror": "in_game/common/advances/country_LIV.txt",
-          "mod_sha256": "b6893570a3001700103bd0f80448868050e96f396d5a35db0ee20eb576edf4ab",
+          "mod_sha256": "269f4e8b638946de7f237f44a9932596323313649904c80b85086a2c4a92ba1c",
           "reference_count": 12,
           "references_sha256": "fa6686a70dba90883077e40bd437ed83bfd6f792f1057dd370d459f6a52feb4c",
           "relative": "country_LIV.txt",
@@ -5997,7 +6000,7 @@
             "maj_the_magic_arrow"
           ],
           "mod_mirror": "in_game/common/advances/country_MAJ.txt",
-          "mod_sha256": "a0e746d76c77f2175a41e4291bdffc5048af001897fb68316493f6fcfd70a8f7",
+          "mod_sha256": "0990be5e6a157af45d56dac91233cda97a8e9c0d883326f56faa55cd1f3d2925",
           "reference_count": 33,
           "references_sha256": "4ee5d70a3bc485a82c7e50a0512fbc329c3d3961eb4d6a1bd8c6128f0612b1cf",
           "relative": "country_MAJ.txt",
@@ -6024,7 +6027,7 @@
             "west_african_slave_trade"
           ],
           "mod_mirror": "in_game/common/advances/country_MAL.txt",
-          "mod_sha256": "4e3b3ea96653aef8b9bfbe47c82775da5c8533d28f7d410f1cd40845e25cfe1f",
+          "mod_sha256": "d0881cabef886340240a9295ee660b51abff4bfb1313a9d91d5a09b6bd3a9627",
           "reference_count": 28,
           "references_sha256": "9d0307d06ce6bd2a611aeaaa36b4566ccd05fbeb79b29f6b53dd826aca09c115",
           "relative": "country_MAL.txt",
@@ -6045,7 +6048,7 @@
             "warka_ties"
           ],
           "mod_mirror": "in_game/common/advances/country_MCH.txt",
-          "mod_sha256": "ad1457c1a24aef37e8c57119ffaae2065416969003c66743ea98669d1b6e6971",
+          "mod_sha256": "ff2869bd99ab17f56b045e683a9b60148cf32aaf7f0544a5797f6f7511bc80d9",
           "reference_count": 12,
           "references_sha256": "1706cae1e5f1332605d20b8fb8e0140be82a0aed58db9e34118fd31708d6dfec",
           "relative": "country_MCH.txt",
@@ -6070,7 +6073,7 @@
             "mge_yeke_mongol_ulus"
           ],
           "mod_mirror": "in_game/common/advances/country_MGE.txt",
-          "mod_sha256": "dbe67ec29c95d56cbe5f32a37a856c5c0639c7245139cb0cf13a1cd6dca079eb",
+          "mod_sha256": "0955b16ea9741b115124b5870c143ab1de27a1a79372312e01f5475e00e5533b",
           "reference_count": 20,
           "references_sha256": "df0afb52be86af3186bea1211a2546ad957485631d415b160dd312c0b4984f8f",
           "relative": "country_MGE.txt",
@@ -6091,7 +6094,7 @@
             "shahbandar"
           ],
           "mod_mirror": "in_game/common/advances/country_MLC.txt",
-          "mod_sha256": "8bf3ceeb471d4dc307d40800d96a6944753c9ae9bff815baede63dde3d3919ba",
+          "mod_sha256": "7cb07caf9b7252a541e3e17a9c6e3e261f470b4ee5fc11f515e4741c3f6036a8",
           "reference_count": 13,
           "references_sha256": "513d557bf254a76e50a755396ce4af15930ffad5e0e98a536efb1b0c13d69f19",
           "relative": "country_MLC.txt",
@@ -6116,7 +6119,7 @@
             "zasechnaya_cherta"
           ],
           "mod_mirror": "in_game/common/advances/country_MOS.txt",
-          "mod_sha256": "61e76586e908e2323b69893dda36a3bca4f855889a7bedfc3f64e5493626f8b1",
+          "mod_sha256": "6e228dbab037971cc501fda224d96cad750a72642ce0aeaf6f9894bfd653409d",
           "reference_count": 14,
           "references_sha256": "8260dc67abdb126480db6d749cc6e52fed05a401004cb952b11f71b206b6c473",
           "relative": "country_MOS.txt",
@@ -6137,7 +6140,7 @@
             "settle_the_islands"
           ],
           "mod_mirror": "in_game/common/advances/country_MSA.txt",
-          "mod_sha256": "3dc182230b39540ec0e0d8189494d3d67f803224f8c5bb70625bac771ff594be",
+          "mod_sha256": "71e014bcb297cae21ee41403c275aa025b821225feb6151ca0e074b18c0e6fe1",
           "reference_count": 12,
           "references_sha256": "618db0930d630a018a5230066e007cc317f22da463ad3c7c336acec4b3bee9d8",
           "relative": "country_MSA.txt",
@@ -6157,7 +6160,7 @@
             "mug_zamindar_system"
           ],
           "mod_mirror": "in_game/common/advances/country_MUG.txt",
-          "mod_sha256": "fbf489fc584d8369d3e0c645f20c766ec802e0c72ce01e96ca971bb3b0f27c3f",
+          "mod_sha256": "9cc7c99d4322e511b1a184bafb022638950298c286abebc9f40588436665a6dd",
           "reference_count": 11,
           "references_sha256": "c8c18181a9f6292ef374e993d9770fe40f71149c2432a6472093b5ae0b5046ed",
           "relative": "country_MUG.txt",
@@ -6190,7 +6193,7 @@
             "nav_transatlantic_whaling"
           ],
           "mod_mirror": "in_game/common/advances/country_NAV.txt",
-          "mod_sha256": "52e65a50f62bcc022a1f7e84842b3bafcc9a8fa7fa2ddf221918739cd28ff25c",
+          "mod_sha256": "d50995a359f400411bf437ed268ad566aab5e1602d7193d537eb9b067f1e9992",
           "reference_count": 36,
           "references_sha256": "a8a3eaed8ff334866fd95c3f3698b6d2510a3c47a20e446f61916cb26b87bc75",
           "relative": "country_NAV.txt",
@@ -6241,7 +6244,7 @@
             "utr_skilled_diplomats"
           ],
           "mod_mirror": "in_game/common/advances/country_NED.txt",
-          "mod_sha256": "2fc89f467571b41086c98e75d443672ffdedbcb63f32e3904f3b266aa92fcd86",
+          "mod_sha256": "e09a22e5a0d68e51be181692f820b19fa8c9561c9d2ed6a54d94e83cf0f48efe",
           "reference_count": 74,
           "references_sha256": "78cb23c79ec5602a515c61d505fc4c0d3d7728388c1d6f9682d33fa484b30260",
           "relative": "country_NED.txt",
@@ -6264,7 +6267,7 @@
             "write_new_sagas"
           ],
           "mod_mirror": "in_game/common/advances/country_NOR.txt",
-          "mod_sha256": "4748fa4f78566ff2d57a9d5ead23df05e075485488018a2d90e8ca1e1d098e2b",
+          "mod_sha256": "6f8123ad5ef5b1ecb68d5e0150ff241ecc2ec393124dbfd8b40798986126bbb1",
           "reference_count": 10,
           "references_sha256": "62ee9e63aaa892f9ca05d09df1c802bce5f110861f2f54cadcdb0f482a166d73",
           "relative": "country_NOR.txt",
@@ -6289,7 +6292,7 @@
             "ushkuiniks"
           ],
           "mod_mirror": "in_game/common/advances/country_NOV.txt",
-          "mod_sha256": "cfc92a67b2799776f34fa098b6476d2938525dfd850daa3e43c5cd30d4c00b91",
+          "mod_sha256": "d81c906a332e0aed864c48343b2da8932e3009d16d94ba8824c49231233b8313",
           "reference_count": 20,
           "references_sha256": "966a94830ce89dc0bf836a03b213dba21cd406eb6912fff722500e3016da87fe",
           "relative": "country_NOV.txt",
@@ -6309,7 +6312,7 @@
             "trade_ports_in_the_channel"
           ],
           "mod_mirror": "in_game/common/advances/country_NRM.txt",
-          "mod_sha256": "19db411d29f9990b368380294ed7f2d531299b494dbdd482b5ef88943ccea6c1",
+          "mod_sha256": "15fe0d352a55cbf8719fa28e899162bf76bb50c15f85f16901c110ad8312eeba",
           "reference_count": 11,
           "references_sha256": "7edc5503bc4c525d407499469448401c3990a8af0f84e43e1b1cc3996ce07ca8",
           "relative": "country_NRM.txt",
@@ -6333,7 +6336,7 @@
             "skilled_captains"
           ],
           "mod_mirror": "in_game/common/advances/country_OMA.txt",
-          "mod_sha256": "471229fd2d34d35f8c0a4eba05f0954cd8885dfbfa61beff956034caa7ee07cb",
+          "mod_sha256": "c3ef6137348b0d40b0e2e6f73e8d0c398a8ac3b85fea92ad190d4805ac995179",
           "reference_count": 11,
           "references_sha256": "0545b09fd6e53f9f8f477d2b9888df85940548fb0e8ad39cf5c35ca754ec087a",
           "relative": "country_OMA.txt",
@@ -6355,7 +6358,7 @@
             "ormuzi_navy"
           ],
           "mod_mirror": "in_game/common/advances/country_ORM.txt",
-          "mod_sha256": "4b2c146c07d0c3b23929258c5cac5593f0146ab1bab10b5f8fc4de72f7498ef1",
+          "mod_sha256": "21f2deb507343bab14d41b3015d1881810e8c3539a50b5fa17ee48fcffc25df4",
           "reference_count": 14,
           "references_sha256": "1239b34332ec58b808fc29c6d9cf4aaae9184efca8aae4e5574bdcbf828b63a5",
           "relative": "country_ORM.txt",
@@ -6386,7 +6389,7 @@
             "wojsko_komputoe"
           ],
           "mod_mirror": "in_game/common/advances/country_POL.txt",
-          "mod_sha256": "bdd6826cc952fa572a8a462460d81b5c766a0c22cf9bc6cb5812ce165ca40867",
+          "mod_sha256": "2026c61cdf038363ddbf8c8403bc0c1798a8f4536ab56e00759c80e65971f114",
           "reference_count": 33,
           "references_sha256": "2aa67031c2b6f5a57e0da1a5e9054680101a25c76a51c705550b49b3a37fd66a",
           "relative": "country_POL.txt",
@@ -6413,7 +6416,7 @@
             "por_vinho_porto"
           ],
           "mod_mirror": "in_game/common/advances/country_POR.txt",
-          "mod_sha256": "816fe6ef8a76548325069f419c673dce12a6181554e060ead80dd0748e7e42e4",
+          "mod_sha256": "b9876e29ef696241a81747a49595d676e9051b34d49b94845dc1c2ec59a021a9",
           "reference_count": 25,
           "references_sha256": "7b72ffbb0444cd6f66c34932dd18768bd3f3504a776213f8ab2cc8340a595f60",
           "relative": "country_POR.txt",
@@ -6435,7 +6438,7 @@
             "statutes_of_aix"
           ],
           "mod_mirror": "in_game/common/advances/country_PRO.txt",
-          "mod_sha256": "f7d4628f06c9c106b2a9aebd56abe55cb23e97ca2ac9ce7fbc9c393b02de7fd9",
+          "mod_sha256": "917dde2c9cf4b1d2e34dccbf93f0f215208a04ac7e3960688adc206851dded8b",
           "reference_count": 14,
           "references_sha256": "e2dbb25557af157937b9aa3b532f24b50e0dce6fa54bb37f2d9da2719dae81bf",
           "relative": "country_PRO.txt",
@@ -6462,7 +6465,7 @@
             "rom_triumphs"
           ],
           "mod_mirror": "in_game/common/advances/country_ROM.txt",
-          "mod_sha256": "451e31fcaa987387ea68aace504b21bd1f9bf51ba4456718934a9c3ee727c641",
+          "mod_sha256": "ddf3104e34fc135d851039b00ad7e9e75f4a430316de4c9309b06856a655528a",
           "reference_count": 25,
           "references_sha256": "6069c70c1dbe9fbd7c2854a7d3bff4afd85f6d67bc27ef501a8fad6eead10cc3",
           "relative": "country_ROM.txt",
@@ -6484,7 +6487,7 @@
             "swedish_roots"
           ],
           "mod_mirror": "in_game/common/advances/country_SCA.txt",
-          "mod_sha256": "08a904725cec455feb36dadee526210a7a6aff5ee2d18741c692f622e088b9b0",
+          "mod_sha256": "f80156534e09008b04caa7937c1bc6a4d66cbf5430dadf5a68b4ba49ad78956f",
           "reference_count": 14,
           "references_sha256": "55c9cc2d6cc8333ea41b7fdf1d951a45e4dec02527db089d6528da59a1e845fa",
           "relative": "country_SCA.txt",
@@ -6519,7 +6522,7 @@
             "unlock_reformed_gallowglass_advance"
           ],
           "mod_mirror": "in_game/common/advances/country_SCO.txt",
-          "mod_sha256": "18db9a279b9d7778399c46484e5f708ec188e963b1d6450d82ca07b35e11449b",
+          "mod_sha256": "1c6a9d0d9e0b3377837b488f83c41b1b24c10771a6081ab919fd5695e4760e28",
           "reference_count": 48,
           "references_sha256": "6523eeae9e045fc5bb4d4f0727828d2231cb48f13adab7430943f2f9b3d8cdff",
           "relative": "country_SCO.txt",
@@ -6570,7 +6573,7 @@
             "zta_the_vladika_sovereignty"
           ],
           "mod_mirror": "in_game/common/advances/country_SER.txt",
-          "mod_sha256": "f6a734d623ecfaa31ffc29805683f7c2423a165efb7bd5951e2d0f523697c789",
+          "mod_sha256": "ad9480f07cc0b8afd64d392cd0fd369f5381bc09add4f6628950e071baa836ad",
           "reference_count": 73,
           "references_sha256": "5e14ca505550cddf300de478d2db85bf3dd825acb2eabbe88e0f9906996f7e1f",
           "relative": "country_SER.txt",
@@ -6591,7 +6594,7 @@
             "sko_religious_court"
           ],
           "mod_mirror": "in_game/common/advances/country_SKO.txt",
-          "mod_sha256": "5b72f7d8b9249c6a65975b76f5ad5eee381dfad800e7245bedc58b8ca3ad9e25",
+          "mod_sha256": "c4724f5d5fb421f2f2820280579f333b51fc28948d4fd0fa6013944d08ca0d2a",
           "reference_count": 13,
           "references_sha256": "d6241e921b38995f7fa00a6c6e6608183b642089d4f71758f88a7fb478f3052e",
           "relative": "country_SKO.txt",
@@ -6611,7 +6614,7 @@
             "smolenskian_resolve"
           ],
           "mod_mirror": "in_game/common/advances/country_SMO.txt",
-          "mod_sha256": "88a41245120141ddadd791ddd791a849839ac34de7a8b56d5817940cb1a909b9",
+          "mod_sha256": "586b9fa2918bf0ddfb7aa90922a2f49395ce2986b22a29f2a5efff438c668078",
           "reference_count": 10,
           "references_sha256": "edfc86b6016f1c2b6537aeb459cefa6ff24f6f012d93c047fefbcfef7ff749ab",
           "relative": "country_SMO.txt",
@@ -6636,7 +6639,7 @@
             "trans_sahara_trade"
           ],
           "mod_mirror": "in_game/common/advances/country_SON.txt",
-          "mod_sha256": "937ed3859443a510cac2d5b5426c951284c9de948e1cf45aeaf49d73d1bd8919",
+          "mod_sha256": "c3744238a836e69a7ad49de818c69f4fa1f1a813a7e1f7f74f3303fc4eaa00e0",
           "reference_count": 12,
           "references_sha256": "ed656ec742fd84e4ac38852bcb327e46d4619b751125d0fa9dcde716175cb90e",
           "relative": "country_SON.txt",
@@ -6657,7 +6660,7 @@
             "spa_viceroyalties"
           ],
           "mod_mirror": "in_game/common/advances/country_SPA.txt",
-          "mod_sha256": "a8498b79c9c87309609415db4433ba6bb7cd3de2850b15edc4c7d7b834d8d3d7",
+          "mod_sha256": "cdd5a035b4e999962f3c5767678a60dd13f28f94ae3eb0394c17a31f34974d8b",
           "reference_count": 12,
           "references_sha256": "c4de3f436618df0f5c34555cc93991428d15eb34c8bfb6c178df7697a372934f",
           "relative": "country_SPA.txt",
@@ -6676,7 +6679,7 @@
             "seren_taun"
           ],
           "mod_mirror": "in_game/common/advances/country_SUN.txt",
-          "mod_sha256": "733ee1b49a491621ce530f64fb7dbdbf32124b4ab2cb668c2dca077884595bd8",
+          "mod_sha256": "c875df6637e771ed2dc4b722b16bca7b7f54c98ad7701e5102a19500a6e054ce",
           "reference_count": 8,
           "references_sha256": "042a471f3b2df1678de9f58f041e55967fee07587f046bcbefea38352d6eab7e",
           "relative": "country_SUN.txt",
@@ -6704,7 +6707,7 @@
             "swedish_tradition"
           ],
           "mod_mirror": "in_game/common/advances/country_SWE.txt",
-          "mod_sha256": "a64735a27cb23ef2e61d1475deab28d4d9b020d30ede32a7426f4d8b64986548",
+          "mod_sha256": "aa403d3676d2f00a1cbb49ce68f8f828b5aaabaaf172c89192570c936527ea1a",
           "reference_count": 25,
           "references_sha256": "dc9a7e1c6b162de60fb93458b2cb515dd1f1b5263ff5076c5c838ec22ca59aed",
           "relative": "country_SWE.txt",
@@ -6729,7 +6732,7 @@
             "teu_teutonic_religious_authority"
           ],
           "mod_mirror": "in_game/common/advances/country_TEU.txt",
-          "mod_sha256": "00527801ae7dd5ba318ae227c977ba0c2cfaf6a69de7e7ed866961d4c621bae3",
+          "mod_sha256": "bbbc5043c969779c11a447a7f987f2115c6284c4bed19faf4511fb643173c206",
           "reference_count": 12,
           "references_sha256": "87db4fc290cede9933b6800bd5a40416ee1d0e040d3a544a2be1e4adf17cc59d",
           "relative": "country_TEU.txt",
@@ -6751,7 +6754,7 @@
             "tibetan_monastic_education"
           ],
           "mod_mirror": "in_game/common/advances/country_TIB.txt",
-          "mod_sha256": "213aed7eaa3632c271010e125cdf68b40b3a23667ea3ab55d1f617c851d4dbfc",
+          "mod_sha256": "8fd8f949958f25a406507affc78a61d431e52e326c7b42d0e240d33827d52b4e",
           "reference_count": 14,
           "references_sha256": "0d9be70f5369de626e6086101f8a789f1fa231b0d5e6d934f60acc4cc28c0b1b",
           "relative": "country_TIB.txt",
@@ -6777,7 +6780,7 @@
             "turco_persian_tradition"
           ],
           "mod_mirror": "in_game/common/advances/country_TIM.txt",
-          "mod_sha256": "0318484626d6d404a57dd39b4b26747177094338bea07e972ee0082aba0bff9e",
+          "mod_sha256": "756f90554e26405db5a473bc6f9aad0bc4ef611b4069752edd23273b4eb4dc21",
           "reference_count": 22,
           "references_sha256": "c99ba8cdedeecfd8481d990d5daf1623ba01a72bd7088db39d99b3571eb99122",
           "relative": "country_TIM.txt",
@@ -6797,7 +6800,7 @@
             "qalat_al_mashwar_advance"
           ],
           "mod_mirror": "in_game/common/advances/country_TLE.txt",
-          "mod_sha256": "449a04fff8af3c84feccf4704c3533a539da7364a949a65c0a0ec52adb9d31c9",
+          "mod_sha256": "38cfab34fc8f956e5c476e0ba62ff8b947e2a24b97cb83b4dc67a8b5674df70a",
           "reference_count": 11,
           "references_sha256": "2a508a1014d94188a942cc09406c24304f567f340d5fa61aea42f4cd20c051ad",
           "relative": "country_TLE.txt",
@@ -6824,7 +6827,7 @@
             "warrior_societies"
           ],
           "mod_mirror": "in_game/common/advances/country_TNC.txt",
-          "mod_sha256": "e875f315645168af7827a73d1ee98a57cce5c9ff8430b9e69b9f6f695a33f53d",
+          "mod_sha256": "d18602570289591b9f498453f33f957bb7bc38c18a5528536492cceceb50b5ac",
           "reference_count": 15,
           "references_sha256": "1c907a468e59fd91d75cdea14280ebf4d067c90241d4f11774769d4af2e33732",
           "relative": "country_TNC.txt",
@@ -6848,7 +6851,7 @@
             "tunisian_corsairs"
           ],
           "mod_mirror": "in_game/common/advances/country_TUN.txt",
-          "mod_sha256": "19f35d3090d8fdf66b24a224d5df925ae4469a655f5166175f9897fbabf69780",
+          "mod_sha256": "f13686c087747e2138b9d0c03097507afb1b8ff1b435544717b49ae2e4d99418",
           "reference_count": 18,
           "references_sha256": "100650a32e2c755e0d5ebf32f1f6f6a0c229fb4ece196817fa0ccfc31356d933",
           "relative": "country_TUN.txt",
@@ -6889,7 +6892,7 @@
             "turkic_traditions"
           ],
           "mod_mirror": "in_game/common/advances/country_TUR.txt",
-          "mod_sha256": "1da5a743092fb7d8d92a35805548da10126e8433b071d4ca415868496c7139ad",
+          "mod_sha256": "fdbaa9fdac5177e03d76d8d9cfe7262db3d1bfeb947b2af8c036b749d7566f98",
           "reference_count": 57,
           "references_sha256": "dbff7f9a1206b9b1c68e51d13e5bb3d1cdea01c9b417c150c37ddc5b6871990b",
           "relative": "country_TUR.txt",
@@ -6910,7 +6913,7 @@
             "tuscan_uffizi"
           ],
           "mod_mirror": "in_game/common/advances/country_TUS.txt",
-          "mod_sha256": "11f1152b0fddd1c928f8400ea7446090ef14fe4ef8ccd466dbfe2f9ba539ec62",
+          "mod_sha256": "d68ad494690ad0e58effe1dee11068aaba90da7b420add600efdaa9a77aed498",
           "reference_count": 13,
           "references_sha256": "477bc03cf2e336d5253c71a72e05711b219a75d20161a6e73dabd88509e586fd",
           "relative": "country_TUS.txt",
@@ -6931,7 +6934,7 @@
             "tws_unified_legal_code"
           ],
           "mod_mirror": "in_game/common/advances/country_TWS.txt",
-          "mod_sha256": "ed7e7909d643dd13d3455caa7f9bad905ff0cd12a36b274e8a16e110cff79ea9",
+          "mod_sha256": "b56a11e65c7e813b84872f29af4bc8385396e33189b452042a2caf54484998f5",
           "reference_count": 12,
           "references_sha256": "4bbd71891f7eb5e486b525697b75e23ec7cde852ca28982a759ede13e6068e4b",
           "relative": "country_TWS.txt",
@@ -6953,7 +6956,7 @@
             "usa_recognized_sovereignty"
           ],
           "mod_mirror": "in_game/common/advances/country_USA.txt",
-          "mod_sha256": "629c76e8a97e31fed60139666b27ebf4159c0e8e9f6703bd40ca04b74c3b3598",
+          "mod_sha256": "852d28acdd331d6cf1ed44514cf9441cdd16d4c33ef83f4188fea03786c7991e",
           "reference_count": 14,
           "references_sha256": "4bbe383e1569220c66508402640fd69ced54d943da1414bcee7e98f34a3503fa",
           "relative": "country_USA.txt",
@@ -6981,7 +6984,7 @@
             "vij_the_bunds"
           ],
           "mod_mirror": "in_game/common/advances/country_VIJ.txt",
-          "mod_sha256": "ae78bd39c095ac610fc3bdb54f003dcea346fd1b518abf54a4403dffbc90b9b4",
+          "mod_sha256": "c609bbea392811262ae135d4586cd22f6786b75e639a08617dbd6dc6bbbc7511",
           "reference_count": 27,
           "references_sha256": "3687e0b152523a8bdf5464e4f626e994796e3ce701b72e81568a247a6089ee5b",
           "relative": "country_VIJ.txt",
@@ -7003,7 +7006,7 @@
             "zaydi_scholarly_traditions"
           ],
           "mod_mirror": "in_game/common/advances/country_YEM.txt",
-          "mod_sha256": "0ef0b33e2555083aa869536dc454cae3da766d056390eba929d536783ca2ab50",
+          "mod_sha256": "99d9ac87e4168ec181e90570f881238525d13c4992ce6b7e15c4c6eff2020f61",
           "reference_count": 14,
           "references_sha256": "aefaad82f2d26cb37a20afd8cd534628762b362e828c17a611c2ce17d3aa09fb",
           "relative": "country_YEM.txt",
@@ -7029,7 +7032,7 @@
             "zanj_taxation"
           ],
           "mod_mirror": "in_game/common/advances/country_ZAN.txt",
-          "mod_sha256": "fa43d0350f29ac1bbcb019cd97d4b1cb9ee19f36535a62d78224e7bafad9a168",
+          "mod_sha256": "181a30599c3af06c83ede8aac13b6d5bce4114f9f567d5e00a84c191705439f1",
           "reference_count": 26,
           "references_sha256": "b3b75707742ca9603c8853940e68928630c361bdc595b23b5861f9172a90dea4",
           "relative": "country_ZAN.txt",
@@ -7052,7 +7055,7 @@
             "ayu_white_elephant"
           ],
           "mod_mirror": "in_game/common/advances/country_ayu.txt",
-          "mod_sha256": "9ae2d62a548777267e710eb345656bc72c3557529a207f6d974d02872106b1cf",
+          "mod_sha256": "1e566f490f9b662a23bf2ec02b429822205c914d4aa0940126e2206b2637ba89",
           "reference_count": 16,
           "references_sha256": "92473d1d77616e901ca8b891643d19ab5c0e2c961daca2a667c80db0b41e2bf2",
           "relative": "country_ayu.txt",
@@ -7079,7 +7082,7 @@
             "bosnian_susjedsvto_of_bosnia"
           ],
           "mod_mirror": "in_game/common/advances/country_bos.txt",
-          "mod_sha256": "959125e8ab0b8b2cdd9a44ebbd6395af8da0a88855b3bcdcfac699f60288acc1",
+          "mod_sha256": "5d1d43a552960e06d1139429be3ac96931a113068cd0187ce946aac0deeff165",
           "reference_count": 24,
           "references_sha256": "2c3c57e1c8d0dfaa827f1f87b24ce041c299498b3b7f554f10feb7112402a0c0",
           "relative": "country_bos.txt",
@@ -7107,7 +7110,7 @@
             "soldiers_fortune"
           ],
           "mod_mirror": "in_game/common/advances/country_bra.txt",
-          "mod_sha256": "4e5eb36543350452d0823ba04502fae1a7e90ec2f1d78afea731361f1c7c6f51",
+          "mod_sha256": "5fe114f391fb412e3d1c3b4283f1eeda3aff1777ce61c14ba240a702baa76b54",
           "reference_count": 21,
           "references_sha256": "e3c5be412857f8088e0cc7223adabf2ddd30cda1af7a168c6fe8a5daebef2dbd",
           "relative": "country_bra.txt",
@@ -7121,7 +7124,7 @@
           "definition_count": 0,
           "definitions": [],
           "mod_mirror": "in_game/common/advances/country_byz.txt",
-          "mod_sha256": "4548d9b11d33459e1e4e0c4626c0a9f09e34f948682197dafbab080222097c89",
+          "mod_sha256": "af345a184b6e7f09f63baf072c3ce9ad6ac4a2c6ff2d9dd17186d9562dc4cca9",
           "reference_count": 39,
           "references_sha256": "46e06ca883630f02b9f6e258304c0c907cdc64fc11a095cf80904d7dc13e8273",
           "relative": "country_byz.txt",
@@ -7166,7 +7169,7 @@
             "zhongshu_sheng"
           ],
           "mod_mirror": "in_game/common/advances/country_chi.txt",
-          "mod_sha256": "be2424716c6c4c2afc79a703f49f14f7dd965979e84eea0b2cd3b0bea78cd673",
+          "mod_sha256": "3b72d5440843213981e2bc164891159f4a510f5e2e340996ec6e5a8ec94da667",
           "reference_count": 61,
           "references_sha256": "ab0c757690b45a1866be1a589754dfeb867a5aeb93ff6b34a0ea129af96b2f58",
           "relative": "country_chi.txt",
@@ -7187,7 +7190,7 @@
             "cir_tribal_elections"
           ],
           "mod_mirror": "in_game/common/advances/country_cir.txt",
-          "mod_sha256": "6be08d9b43ce69e31db703e04e8276f6c23b5452add9c900db434e0a68aa4a92",
+          "mod_sha256": "d94cc7f6764f538eaa4d068fac97c57259a4dd2a7f24178350d79f753a3b2738",
           "reference_count": 12,
           "references_sha256": "b71eb57eb205ceeb5d04f84ac570d7252cf91d8dc1b9f61df1dbdc8d856f1e0c",
           "relative": "country_cir.txt",
@@ -7226,7 +7229,7 @@
             "svn_the_slavonian_sabor"
           ],
           "mod_mirror": "in_game/common/advances/country_cro.txt",
-          "mod_sha256": "9da676d57d20c4a89df61309e97cd14b22a16837613aafbd99b25d562f9488e5",
+          "mod_sha256": "07f2f3a602487936243929d9b7577806ca7c4e040318aea49ad42e27253c3da8",
           "reference_count": 48,
           "references_sha256": "8c69229730ea6a6d9f37b47a53f4ee5b2826f77749782e3611b681d489e33329",
           "relative": "country_cro.txt",
@@ -7251,7 +7254,7 @@
             "geo_legacy_of_tamar"
           ],
           "mod_mirror": "in_game/common/advances/country_geo.txt",
-          "mod_sha256": "53a645ae8358d648daa88149b14384821da58bf3e4b87e5379687683eaec1463",
+          "mod_sha256": "741d4ccac63f9a2e13c16618bb9226ee383e09617c634db332dcd349dbac4127",
           "reference_count": 20,
           "references_sha256": "d4aeb511452fa2775e7653c1b6ac5d03fab98a0de5d4d633868d969108554cd9",
           "relative": "country_geo.txt",
@@ -7267,7 +7270,7 @@
             "hes_form_the_militia_army"
           ],
           "mod_mirror": "in_game/common/advances/country_hes.txt",
-          "mod_sha256": "934afb940877ce33b0d6779af64c743858f3b6bd9e602c7c27cddea1c5d5426c",
+          "mod_sha256": "17d97566962399ae8406e47b7324e2ec2551d0e995047842a3a5f436e6bd2510",
           "reference_count": 2,
           "references_sha256": "178662b9f2dd6e7bb202d0999d720a9cc80fb75a1cc3c517b59af62f1077438a",
           "relative": "country_hes.txt",
@@ -7297,7 +7300,7 @@
             "the_hansa_bank"
           ],
           "mod_mirror": "in_game/common/advances/country_hsa.txt",
-          "mod_sha256": "23a625d8fe541404452ca52207145bf1d8287f767038937d1cdad8150d8082a5",
+          "mod_sha256": "90c540c71c358d5f51253eb18e797bef05bf36e0ecff97d197b376f422a5e41b",
           "reference_count": 32,
           "references_sha256": "f633db30f1204e315675c019e31145874493cc380811f5be1971ad2a1b0b991a",
           "relative": "country_hsa.txt",
@@ -7325,7 +7328,7 @@
             "khm_utilize_the_rivers"
           ],
           "mod_mirror": "in_game/common/advances/country_khm.txt",
-          "mod_sha256": "4bcf185d463f5a8407b2dd3cd70057981672ff139be94be2f295dd3fbea53474",
+          "mod_sha256": "a283e7a97a48b22ef9a7808ae5be173eb5cc8cd3f3db2865e14bbfa85a1681da",
           "reference_count": 27,
           "references_sha256": "71f93f9c065710fd421f4fe21e61d4e1bbce87daa7cc72d3a8f6232fad78b215",
           "relative": "country_khm.txt",
@@ -7342,7 +7345,7 @@
             "kol_school_of_painting"
           ],
           "mod_mirror": "in_game/common/advances/country_kol.txt",
-          "mod_sha256": "723987b9700ea116266285712f945199666aef8486bf1635409b4eee9560e26f",
+          "mod_sha256": "44910569417d92f30ee0f895640b0219691ea08c155904be1f37fa57255fd8f6",
           "reference_count": 4,
           "references_sha256": "103dfb3066e28e833b3bcbd0ffdb7694415c6b15cf6c6e4d3824da046de76587",
           "relative": "country_kol.txt",
@@ -7368,7 +7371,7 @@
             "warlord_dukes"
           ],
           "mod_mirror": "in_game/common/advances/country_lit.txt",
-          "mod_sha256": "7e80475fc5e4c70dc7bde8dd54daa96f9706599957d0ba8e5e11c7e01025f726",
+          "mod_sha256": "1ea168d418cbb8d71ed8da3832f6c00df9d1fbbe62335a0e40762fed0c7a71b9",
           "reference_count": 23,
           "references_sha256": "dd192392b8ebc4b184f04c22d8986d1729f26303df9a47730d7ea249b8555278",
           "relative": "country_lit.txt",
@@ -7388,7 +7391,7 @@
             "lor_three_bishoprics"
           ],
           "mod_mirror": "in_game/common/advances/country_lor.txt",
-          "mod_sha256": "14393ff025e0a1ffcffe3c8f0c8777ef756807f01376d99cd35a127d11227184",
+          "mod_sha256": "439947abb6c56e6827317c7097654dfacd83a4367d640fc171ae2491f8cfce0b",
           "reference_count": 10,
           "references_sha256": "7c82604c91468959e7a8a378a36fd78386186c03a48d427bd076f8cf9ea09a1f",
           "relative": "country_lor.txt",
@@ -7411,7 +7414,7 @@
             "mai_zealous_fight_against_heretics"
           ],
           "mod_mirror": "in_game/common/advances/country_mai.txt",
-          "mod_sha256": "48263f9242944a6a48d47ac1316f5b4aee01dc99204e4541bde3447965de4288",
+          "mod_sha256": "d6d24b86f3b8e3ec0ca6101948c2479c4cef23fce58ca5e71de41453189858f4",
           "reference_count": 16,
           "references_sha256": "1a15b36290fc07fb82fe1bef102825015d85bb5f5eba5666b216a077848a49ed",
           "relative": "country_mai.txt",
@@ -7439,7 +7442,7 @@
             "study_foreign_gunpowder_techniques"
           ],
           "mod_mirror": "in_game/common/advances/country_mam.txt",
-          "mod_sha256": "71f18ae2f59a2e667902999d60c225ae1ea23fc6a264e9409b2dc48c3760ae24",
+          "mod_sha256": "4f70a3fe31050e50aa33e037f2938696c35e6f971b41eb4fc8191d2f10df9f36",
           "reference_count": 31,
           "references_sha256": "efa297c483f5a072483f0d53989a535f32cfa3981edb50b7d7b317c6bb3931eb",
           "relative": "country_mam.txt",
@@ -7466,7 +7469,7 @@
             "saxon_industrialization"
           ],
           "mod_mirror": "in_game/common/advances/country_mei.txt",
-          "mod_sha256": "05a8269ae603bbfe66ed2f4c52bd24782ae731ad52334368dcebbd35527c7da5",
+          "mod_sha256": "9fe97a715cdedf71eb322f2b34a772a717f1eb56192e5920cd0d2bd7d211be16",
           "reference_count": 14,
           "references_sha256": "c1b6a89e8508b9cc954c920f5d5a13064e7611f3da92f7aed7b61a247533fa2b",
           "relative": "country_mei.txt",
@@ -7496,7 +7499,7 @@
             "zenata_roots"
           ],
           "mod_mirror": "in_game/common/advances/country_mor.txt",
-          "mod_sha256": "08357f3f52383e92d85e547c3f0f5ee274134205963c26df84d266e77575a2c4",
+          "mod_sha256": "c66bb5efb89cc1cbb6237f9f2be12b707f59dd36bf2397781d4dc123ae6d0b1d",
           "reference_count": 32,
           "references_sha256": "8f00b2d45b4c169ba854b43d8cfb7f953b58e6b00d302f4d1859e4839c357157",
           "relative": "country_mor.txt",
@@ -7521,7 +7524,7 @@
             "ori_servitor_of_jagganath"
           ],
           "mod_mirror": "in_game/common/advances/country_ori.txt",
-          "mod_sha256": "d54111ebf54072bf90c61bf3fb100fa4064baca7fbb442ed6f7dfa090b2aaa6e",
+          "mod_sha256": "31f7ebda633b9239a351e4c2f07251c2225dd846788267ffe63eeaa67aa3ed69",
           "reference_count": 21,
           "references_sha256": "125f77a9e46fbdd5abdc317c68c2cbc304d863d60bb5b9ca31deb0c2380f848a",
           "relative": "country_ori.txt",
@@ -7548,7 +7551,7 @@
             "palatinate_romanticism"
           ],
           "mod_mirror": "in_game/common/advances/country_pal.txt",
-          "mod_sha256": "e10dee7e54579e6d8586466e9a599715c8a601ad825ffe4dc53daa1ef0ac1b04",
+          "mod_sha256": "e69ba20c3f778147c708a1e5d3353a7a29fbe8ea8e3e1c4fa3e9cf9c14c56bb4",
           "reference_count": 25,
           "references_sha256": "504eb66e3136d508301603bd3f84019cabcfdeaba1d007a85c0e73ce049d0534",
           "relative": "country_pal.txt",
@@ -7576,7 +7579,7 @@
             "teutonic_legacy"
           ],
           "mod_mirror": "in_game/common/advances/country_pru.txt",
-          "mod_sha256": "834cfcc144400a362abdb1c0133f03f475f580cb1a2be6ff6fb54d8702e865d0",
+          "mod_sha256": "5ea670366cc2305613fdd7ccb6d08f315a14760e710ce8bb786b7042f0d3ca61",
           "reference_count": 24,
           "references_sha256": "ef93283c48a3c5aadffd3e5a601f083984cdfc86812e29ef23ad235f10516045",
           "relative": "country_pru.txt",
@@ -7599,7 +7602,7 @@
             "sav_the_shroud_of_turin"
           ],
           "mod_mirror": "in_game/common/advances/country_sav.txt",
-          "mod_sha256": "3e9a87c35ff106a0f88eec6576b04a0e3e83d83b47c417b951dbdcd584e67570",
+          "mod_sha256": "0d1f90b5462ede63dfe84b7d64afff81e751d105653ddd9093b7ad46df0f8d13",
           "reference_count": 16,
           "references_sha256": "45b6c96c232eca57b17aca94600b66d23493990582933a63474fdce429040360",
           "relative": "country_sav.txt",
@@ -7621,7 +7624,7 @@
             "sia_thai_unity"
           ],
           "mod_mirror": "in_game/common/advances/country_sia.txt",
-          "mod_sha256": "4dc4c56550cff4f6e1398ecf727c1eaabd9c5aa938c87a348c5f55b13c0f0f3c",
+          "mod_sha256": "cd794f63c597c4270fe77d66d38f8511e152e85b55431c40d0523d308d8b7c76",
           "reference_count": 15,
           "references_sha256": "6a53c2fabac0f1ff645cf48a937c0becb56ea783247d35b216ed4ddb6a814f08",
           "relative": "country_sia.txt",
@@ -7645,7 +7648,7 @@
             "sme_sacred_land"
           ],
           "mod_mirror": "in_game/common/advances/country_sme.txt",
-          "mod_sha256": "886af8c3a313e525985c4fb1d5a2e3bae4811c3d378fde3291a8d3f72ebda528",
+          "mod_sha256": "550df6f5cdc4dad7c13892dc4711e00bd3f26adb94623c16ee768b1804e9d782",
           "reference_count": 17,
           "references_sha256": "c59b8594712c5d56824c39b5c883e9e47f9a814cebe2750ce40c25d63654db99",
           "relative": "country_sme.txt",
@@ -7668,7 +7671,7 @@
             "suk_wat_si_sawai"
           ],
           "mod_mirror": "in_game/common/advances/country_suk.txt",
-          "mod_sha256": "e86f1fba172ae6d3d288f43c9fd6c266a9c378dd4125f52d4e843db22f282e10",
+          "mod_sha256": "084d715711c5ff10718997eaf5c0dcbfa8ac8a660595f1bd165f08681ae3997c",
           "reference_count": 16,
           "references_sha256": "26922d754d9a037c3ab301486e482fe0d29815c86afeb762a23733d8fa58ce48",
           "relative": "country_suk.txt",
@@ -7688,7 +7691,7 @@
             "tnk_resist_invaders"
           ],
           "mod_mirror": "in_game/common/advances/country_tnk.txt",
-          "mod_sha256": "c3f31cf2e455fdbd18cb76feb8ac6752bb338e0c2f663b0bfa19a8382f20dcaa",
+          "mod_sha256": "427f9710d6bbfaefd6628a2f80536087aa4dae4e873c4db3590ed9acb8ac1cdf",
           "reference_count": 10,
           "references_sha256": "27597e0e82b6d701d726516454cef30b7a9812f3772f3c7b2ab83342644849ee",
           "relative": "country_tnk.txt",
@@ -7717,7 +7720,7 @@
             "tre_trapezuntine_monasteries"
           ],
           "mod_mirror": "in_game/common/advances/country_tre.txt",
-          "mod_sha256": "2e17b2b3ca0b37e1172d70438a493326c309abedae1878d46a1d2ceef33c7c0d",
+          "mod_sha256": "c7f735926bf900bad3e7ebe6494fa644ecf9e3dbde1c9912b3f1e8767cad5a75",
           "reference_count": 27,
           "references_sha256": "36c5aa0c515526842ea4c28a9f55fb6767b94835c707200e6e07941c6ddcb932",
           "relative": "country_tre.txt",
@@ -7733,7 +7736,7 @@
             "tri_balance_the_landstande"
           ],
           "mod_mirror": "in_game/common/advances/country_tri.txt",
-          "mod_sha256": "e676b1b8a37f258ef53529a336e7fc741c869dabc56ee691520e632cb5951b9b",
+          "mod_sha256": "112c89fada213966453362d3b82e196378f1f727f98e0b9217c08fd3ea863fe2",
           "reference_count": 2,
           "references_sha256": "0ed1130d5c30524cb5e5ef8eb07df36ba0cced667ba1907104ff9f31debf7ea1",
           "relative": "country_tri.txt",
@@ -7759,7 +7762,7 @@
             "foundation_of_bavarian_army"
           ],
           "mod_mirror": "in_game/common/advances/country_ubv.txt",
-          "mod_sha256": "e9376ca5293352ece6b9e007feed81e8aa99f73c6dee5a1e2978383fd369a53c",
+          "mod_sha256": "ee7f9eede643f1e1cb11805f45480721057cfd762bcd882b29794dd40d9b74bd",
           "reference_count": 26,
           "references_sha256": "1afe3d012b4a4c2d42b18b4b1b8f38671041a021198fd9e971b2f1bc3d4cdda6",
           "relative": "country_ubv.txt",
@@ -7786,7 +7789,7 @@
             "zmw_strict_gold_regulations"
           ],
           "mod_mirror": "in_game/common/advances/country_zmw.txt",
-          "mod_sha256": "f0eaa47ce71a42afa09aa0a7267cb5809088f8b47d829f96a9e768194f8e760d",
+          "mod_sha256": "ce4e4f83092102266fc98c3d6260f0dd5e09dae5442f47cab8130908be4dc977",
           "reference_count": 24,
           "references_sha256": "3bc843fbfe68ee8cc1a8ae1e0bdab94ace66ab857af091beeac24f11628014e2",
           "relative": "country_zmw.txt",
@@ -7806,7 +7809,7 @@
             "army_country_movement_speed_advance"
           ],
           "mod_mirror": "in_game/common/advances/ctype_army.txt",
-          "mod_sha256": "1c9774c500442e73999e8a92e300d1b40904005e0d18aab8c42b7b4aec430d26",
+          "mod_sha256": "4f09926aa8a9b899ae15a4f5350d1553eec2480adf709afff83c0fdbf578bc72",
           "reference_count": 5,
           "references_sha256": "214bb5f5ca6f1555375258f4f6521b4b25fd01662f98869fa99040b94e4f1895",
           "relative": "ctype_army.txt",
@@ -7827,7 +7830,7 @@
             "trade_center_building_country_advance"
           ],
           "mod_mirror": "in_game/common/advances/ctype_buildings.txt",
-          "mod_sha256": "f5484193bad5c39fa8105e182cda18e76c5336b26c647df2d3a1f38e95d7ca20",
+          "mod_sha256": "324d87d2ebd69a080b1aa4009350e4d4221016ccaa6e5358e5b13ffd37ccebe6",
           "reference_count": 6,
           "references_sha256": "e4c8552b2b067a469771e7d11fe2d100bb333d00b4878a84b8410be86e62d5e5",
           "relative": "ctype_buildings.txt",
@@ -7843,7 +7846,7 @@
             "rgo_build_time_advance"
           ],
           "mod_mirror": "in_game/common/advances/ctype_location.txt",
-          "mod_sha256": "529f64a82ac9e04ab559b30481aefa0acf04d187cf05315d3ec5e28a777a8a8d",
+          "mod_sha256": "6cab7aaffadfe6418eb07519dd0696478f989762768065e14dccaef5d3914f30",
           "reference_count": 1,
           "references_sha256": "471adca71a3b392c2347e3e9d955e20ea201094b4bed0c7a0f945571873120c6",
           "relative": "ctype_location.txt",
@@ -7901,7 +7904,7 @@
             "thp_the_thopia_merchant_marine"
           ],
           "mod_mirror": "in_game/common/advances/culture_albanian.txt",
-          "mod_sha256": "8217076a378d6e74beae6ae262042ef2c622c7dda09a71a244554534f246153e",
+          "mod_sha256": "18842462284423752c4b02cc62c3e4523df7cf70a0e6ff878a8591f1fca70a2d",
           "reference_count": 86,
           "references_sha256": "fac12cb663807ff5f0ec0c527591d0d69c227399f9c693aa2e1816e8c9df900a",
           "relative": "culture_albanian.txt",
@@ -7919,7 +7922,7 @@
             "terraces_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_andean.txt",
-          "mod_sha256": "b613edd8252b49426038a3900b6f81a4583a9f81bfbee3a4fbb2edbaf477f941",
+          "mod_sha256": "b47c5083936c4f7fef62c9917187705f8d66c4de9042f7fc05ed625e1e878218",
           "reference_count": 9,
           "references_sha256": "f922c72a19eba7f6ff6976a9beeb5d487e745ac8c373890c332ef05ced26ff40",
           "relative": "culture_andean.txt",
@@ -7935,7 +7938,7 @@
             "a_bedouin_cavalry_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_arabian.txt",
-          "mod_sha256": "345f0dc49e0886e218a65844320e4385cf8126d46204fc36fdab49730e140902",
+          "mod_sha256": "93344e374f7814afeef8ade51e2fd8dbab19540e810b28f5ce166811e0a5cba5",
           "reference_count": 3,
           "references_sha256": "1a472a98bcec5ede114c944bfd91bcc0f9b6cd7b87767fadb525148a0256718c",
           "relative": "culture_arabian.txt",
@@ -7960,7 +7963,7 @@
             "arm_nakharar_titles"
           ],
           "mod_mirror": "in_game/common/advances/culture_armenian.txt",
-          "mod_sha256": "5ae9eb8ab97d6bfc94ce119fd147e37714b38327e919066d62029e4c8788d96a",
+          "mod_sha256": "2e620004fdd7e575c2592ec79174ec9d5eaccdb03b47a67aa96ef036fcdea838",
           "reference_count": 19,
           "references_sha256": "d78564bccaef5bdc2accb444c653480e6c0bf65607a52a7d36f2a232c96c9e6d",
           "relative": "culture_armenian.txt",
@@ -7988,7 +7991,7 @@
             "bng_war_elephants"
           ],
           "mod_mirror": "in_game/common/advances/culture_bengali.txt",
-          "mod_sha256": "3fcd325e277e6afd350476f293132034e3bc51fa9daf26d66e8b10e1a100bd92",
+          "mod_sha256": "6df34ae66e1d38073efc4928b540b38f410014cf96db3eae8f10ae7877cf8165",
           "reference_count": 27,
           "references_sha256": "d533da9bf82c9127bea3d1109e734d9c9d304554d0a8fcf280265ebf726a1398",
           "relative": "culture_bengali.txt",
@@ -8013,7 +8016,7 @@
             "cha_veteran_shipbuilders"
           ],
           "mod_mirror": "in_game/common/advances/culture_cham.txt",
-          "mod_sha256": "5a5d386506d1cb029bae1151481b76f2e345700b77c3c386b8ed7f70d30f579d",
+          "mod_sha256": "f53e6e82069f8124fb22563f7594b16a101de0c20a3392eec4624381bd8fb3dd",
           "reference_count": 21,
           "references_sha256": "2627818edaa3303e4c1823a348d78205d00589c8bca3e706f24e14d9c345c4c1",
           "relative": "culture_cham.txt",
@@ -8040,7 +8043,7 @@
             "corsican_the_vindetta"
           ],
           "mod_mirror": "in_game/common/advances/culture_corsican.txt",
-          "mod_sha256": "60a15f490382885a305b1c65b8327daba11fbe486899548f29e2463671c533ac",
+          "mod_sha256": "14ad334954b33c787338aebc492d2755b72464fe4e81d95d902b27c5f34db01d",
           "reference_count": 24,
           "references_sha256": "309e8fc91d1fbe6ee46687cb56ae0e9c324dbedab3df03ff333698ef971e76b6",
           "relative": "culture_corsican.txt",
@@ -8073,7 +8076,7 @@
             "rag_the_statute_of_1272"
           ],
           "mod_mirror": "in_game/common/advances/culture_dalmatian.txt",
-          "mod_sha256": "df5aea34665d40b2002f72f99b90617f2f8d3daffc6e2137b6c64cdf64379bb7",
+          "mod_sha256": "0b964862f9345c3a8abf6494eaf8964276581c4f5003d6e06753f69f3d854ca9",
           "reference_count": 36,
           "references_sha256": "288e09dd3d8f146c0235f41365913ed55e728c1b1a91d54c710c179ddf54ceb5",
           "relative": "culture_dalmatian.txt",
@@ -8130,7 +8133,7 @@
             "pcz_the_citadel"
           ],
           "mod_mirror": "in_game/common/advances/culture_emilian.txt",
-          "mod_sha256": "3cce0e98e03d629fb4e399a75cb0174a6cfa33bc4b201c042d5fb5333057ea03",
+          "mod_sha256": "96486a2a3fbcc4de03534681ec455858ea509fbb514252296e7dad09990b90fc",
           "reference_count": 84,
           "references_sha256": "0371e42bde223c6b50d2b7cac01373d4b3a8b89145a5a796e22ca5b865d41b0a",
           "relative": "culture_emilian.txt",
@@ -8154,7 +8157,7 @@
             "geo_sadrosho_districts"
           ],
           "mod_mirror": "in_game/common/advances/culture_georgian.txt",
-          "mod_sha256": "86ad86b020e793ccdc8200c6cd927cb51d302bd15db71650ff6ede7c813a277c",
+          "mod_sha256": "9d161f2d2000e18884c5a35386578ddbdd004db5add8cb3579eb7d53b7b58058",
           "reference_count": 18,
           "references_sha256": "af49293ba531a7401ffceaf2bb6e7d2fb1537a57b0f82bde59a99616ab9ee376",
           "relative": "culture_georgian.txt",
@@ -8173,7 +8176,7 @@
             "arabian_horsemanship"
           ],
           "mod_mirror": "in_game/common/advances/culture_group_arabian.txt",
-          "mod_sha256": "6d9fb932219dfb9fdd1e9e51b0c789e27d3269ffe81dd9ebb28f99027b628442",
+          "mod_sha256": "c6e3e82934d298ba47b4d285acc88ea64b99f1cddfa1e1135c78a25a3368a353",
           "reference_count": 8,
           "references_sha256": "99859d10e2e06e7169576804d5b5955a5f7af5825e3406da7b01ba019b5c366a",
           "relative": "culture_group_arabian.txt",
@@ -8189,7 +8192,7 @@
             "voievodate_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_group_carpathian.txt",
-          "mod_sha256": "729a03c48d9418ef5615fb01f4fad08cf587e9f78ac90d597c6d4387a528e9ee",
+          "mod_sha256": "fa87618a304e897b7b9662edab27e19eddd3dde634dd93b3e8bf6eb07ab2594b",
           "reference_count": 3,
           "references_sha256": "3fff2077a2a46df598129af8c8671db94860b3f15c41a7e4ab7dc0051d3b240a",
           "relative": "culture_group_carpathian.txt",
@@ -8207,7 +8210,7 @@
             "chinese_siege_engineers"
           ],
           "mod_mirror": "in_game/common/advances/culture_group_chinese.txt",
-          "mod_sha256": "f4c48083c21504f9ad29c9f48833553ca8ef6e61b1cec2da659cb8ceef59e256",
+          "mod_sha256": "dfca694215dff23640e0ea644a521882b0dd3c2b02b9162fb169abd69406f0ad",
           "reference_count": 6,
           "references_sha256": "808e4c8b7c0d23dbf055e7d1e97eed848173788785e5b664c41c6b55034acfa8",
           "relative": "culture_group_chinese.txt",
@@ -8252,7 +8255,7 @@
             "westphalian_monastic_traditions"
           ],
           "mod_mirror": "in_game/common/advances/culture_group_german.txt",
-          "mod_sha256": "7a62205e1adcf5ce020705c22933abc8b506b92651f3a31bd6148c6d65128b55",
+          "mod_sha256": "5d26826823d6633826cd2b75dbc06cf288547b5a26f37556a84bb4d6b04124a2",
           "reference_count": 76,
           "references_sha256": "d69b0fe8054fc9ce6f07a38f5ddbf9b445d67bbfd79d088da5b6f7a6949089ac",
           "relative": "culture_group_german.txt",
@@ -8303,7 +8306,7 @@
             "ths_thessalian_horse_breeding_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_group_greek.txt",
-          "mod_sha256": "fa47ca602cdd7263cd0808183ea2cbced722b9854fba685ca8a9cab9f266e034",
+          "mod_sha256": "5d5458e8580c44f9ce3e04357611dd1ebd9fcba2ca676111469d1d88768aeaf1",
           "reference_count": 72,
           "references_sha256": "be3499af4b8966300058d2d3549e75227939895e98fe35dc1dcbc7a5fa3a2b05",
           "relative": "culture_group_greek.txt",
@@ -8319,7 +8322,7 @@
             "wojewodztwo_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_group_polish.txt",
-          "mod_sha256": "7cd3e6d6e592951fbdc286ebbe00e3b88240da0a4933e4ca87a88622d59c52b9",
+          "mod_sha256": "7845468cb19f83586068e33ab5e942bc3f515f6ba435420939964841c1b743fc",
           "reference_count": 3,
           "references_sha256": "3fff2077a2a46df598129af8c8671db94860b3f15c41a7e4ab7dc0051d3b240a",
           "relative": "culture_group_polish.txt",
@@ -8346,7 +8349,7 @@
             "rhaetian_the_vicinanza"
           ],
           "mod_mirror": "in_game/common/advances/culture_group_rhaetian.txt",
-          "mod_sha256": "494a0848f6e994937d2f485c9c0dd5036b843604a3077edb6be0c465f31799db",
+          "mod_sha256": "49e07b087650db44dff2d7e9ebc459b51b8d821415bbbf8eefb6b74b9f7aa9be",
           "reference_count": 24,
           "references_sha256": "075b1223f5847a48c84f5b8248474280496cda4692ce159db8d455c8afcdb71b",
           "relative": "culture_group_rhaetian.txt",
@@ -8391,7 +8394,7 @@
             "wallachian_tradition"
           ],
           "mod_mirror": "in_game/common/advances/culture_group_romanian.txt",
-          "mod_sha256": "712d3bf19fa1dc113dc663c6581b852f97d1cdc3a0653696a4a1584384b13cb9",
+          "mod_sha256": "729e8d2405dbc253cec7d5c8ae7ee737451dce518cab48921cd5023558678393",
           "reference_count": 60,
           "references_sha256": "c381358860e28cc373f8f3bdd0f204938071794dc6474fa740b8a3893f386da2",
           "relative": "culture_group_romanian.txt",
@@ -8407,7 +8410,7 @@
             "vojvodstvo_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_group_south_slavic.txt",
-          "mod_sha256": "11038ff947c5982e62538f690c320c6ae87aa79fdb4f49c80188bd31b1cb7bfc",
+          "mod_sha256": "423dbdfa6cff9a54d7ac8c877a95c32e043ef937273c6ef3daee5a56d61a797a",
           "reference_count": 3,
           "references_sha256": "3fff2077a2a46df598129af8c8671db94860b3f15c41a7e4ab7dc0051d3b240a",
           "relative": "culture_group_south_slavic.txt",
@@ -8427,7 +8430,7 @@
             "guj_jain_routes"
           ],
           "mod_mirror": "in_game/common/advances/culture_gujurati.txt",
-          "mod_sha256": "1f5092b0715337a1ad7659b4fa9007e49fa6c0b35337635439411bab1d5efaf4",
+          "mod_sha256": "7849bf3e4a1e13eaa24382fb3d42eec0e484781688a309aaa0a8503c1af65c00",
           "reference_count": 10,
           "references_sha256": "3c98299b1adc6111e56ff69a22b6c4daf65c8efcdc28eafd92125519595a9e36",
           "relative": "culture_gujurati.txt",
@@ -8451,7 +8454,7 @@
             "warriors_unity"
           ],
           "mod_mirror": "in_game/common/advances/culture_haudenosaunee.txt",
-          "mod_sha256": "0a61fb69d6c7c113817a09d78c2c670e59ccd074b0253b20d1bd3b8b382a2421",
+          "mod_sha256": "ceae33029943a7d99d813259a3bab76142e302210b741247e29b4f0fa2311ec3",
           "reference_count": 18,
           "references_sha256": "6d09985aad011f7a309071172b2aab88265b7b1bbd2ca495660271e111204be4",
           "relative": "culture_haudenosaunee.txt",
@@ -8480,7 +8483,7 @@
             "the_swiss_confederation"
           ],
           "mod_mirror": "in_game/common/advances/culture_high_alemannic.txt",
-          "mod_sha256": "7f3aaf31df5f1f6aa389bd66af082bf497668b094d8930244923cbcb21b60c4b",
+          "mod_sha256": "bc940e4fc6f21e0d1aa9289e3cd6715da1857aca6baf0002550158ca7946acc1",
           "reference_count": 29,
           "references_sha256": "696256b7200d470aa4eb62554260c4952d851bf4c253b6aa414e943b12902ade",
           "relative": "culture_high_alemannic.txt",
@@ -8500,7 +8503,7 @@
             "samanta_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_indian.txt",
-          "mod_sha256": "4b44997e3c60662949ff6cf177bd6905249a641df00f96c672a5f8b08cdd9be1",
+          "mod_sha256": "7658a1f0b551115c753eb76209c04f4c2dfd552dc2c8f7b65dddc8ccd18e7928",
           "reference_count": 17,
           "references_sha256": "38926ddd84b17017f364724bd08eaa55b597a989a0eb1c66e89536de5f0b5567",
           "relative": "culture_indian.txt",
@@ -8533,7 +8536,7 @@
             "ple_pale_defenseworks_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_irish.txt",
-          "mod_sha256": "32d40581c4095ff659cd6294f385762e03dff02a18676c5478f578bc39ed6015",
+          "mod_sha256": "35edbdfb67ec0be32feb66baf65b17e7ce8513bcfb15f13ca2ad200530494f72",
           "reference_count": 28,
           "references_sha256": "3e996d48c92f6b8cdb33a212c74fbfb9a2aa0cecef835bf0b845964c93e7d5c1",
           "relative": "culture_irish.txt",
@@ -8561,7 +8564,7 @@
             "jap_wandering_ronin"
           ],
           "mod_mirror": "in_game/common/advances/culture_japan.txt",
-          "mod_sha256": "684f0ad3581620cd539571f68f0fedaf7cc90d0966ad1cac61e5e524a221b577",
+          "mod_sha256": "43c2eb063ecf3031f2816131471ec8acc9250d080e3f0dfd4d67ed5f79a31843",
           "reference_count": 26,
           "references_sha256": "931100a0ece9917b989b5743ec9772647891b9ded4f311edc8fdd7ee7e80fac4",
           "relative": "culture_japan.txt",
@@ -8588,7 +8591,7 @@
             "unite_the_tribes"
           ],
           "mod_mirror": "in_game/common/advances/culture_jurchen.txt",
-          "mod_sha256": "8c831f6329dd08310efab8af92d3e60bf63be579cb378827d7c841142a36a494",
+          "mod_sha256": "e8bd183c15a79ddd9f5e26a134f94a1bdda81407c400147c46eb09f2bd0d165d",
           "reference_count": 28,
           "references_sha256": "83523b8311210f4252e2d9cb49b6026878ade55695f9b73023dc1046da312efa",
           "relative": "culture_jurchen.txt",
@@ -8613,7 +8616,7 @@
             "bah_takht_e_firoza"
           ],
           "mod_mirror": "in_game/common/advances/culture_kannada_muslim.txt",
-          "mod_sha256": "34bf79091bb1bb5a7959381885f10c9dc3722cb1cf3e1bb435687c71630aa726",
+          "mod_sha256": "c6c8439cf630afedbeb6d23d38408713bcd5ee9056af2508f9e5687a40dfb5d2",
           "reference_count": 20,
           "references_sha256": "9d7bf1f468f17d1d234f61134dd6340a1e0be4102f89da6d97258f44b14f5826",
           "relative": "culture_kannada_muslim.txt",
@@ -8640,7 +8643,7 @@
             "the_age_of_the_genoese"
           ],
           "mod_mirror": "in_game/common/advances/culture_ligurian.txt",
-          "mod_sha256": "b2fb3424008dddad4e9e667f27fda670c2d1e1c8cc7ce7f1ead5b26f0e830db9",
+          "mod_sha256": "6d0dcba8260bdb97848a267c6c1b645a76d695c0681c65c4170ba432aa3c13c4",
           "reference_count": 26,
           "references_sha256": "20aa99c212a2d66a8ee7e074e928e2b91909304ed5191dd4fba05b0a0ef08c5d",
           "relative": "culture_ligurian.txt",
@@ -8667,7 +8670,7 @@
             "rulership_of_enlightened_principals"
           ],
           "mod_mirror": "in_game/common/advances/culture_lombard.txt",
-          "mod_sha256": "f38c66b26e5b4074ecd7b5c2aebaee16359f054beef858cc11d7202ec95d640c",
+          "mod_sha256": "db31f2c22db32805c6dedf5a656c5650ce5b3eb130ba5b45450e2b4abd14b1a7",
           "reference_count": 24,
           "references_sha256": "8bc0ea637b82b47cb4e1fd57c9b6fe1a7705579893c39dc1e13a638f273bc783",
           "relative": "culture_lombard.txt",
@@ -8683,7 +8686,7 @@
             "nair_military_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_malayalam.txt",
-          "mod_sha256": "56bd78bb4465638acab02877997bc13b4b9c70be8e50ac30f4b10da122679828",
+          "mod_sha256": "aca868be7ca4c6c4f065d7dfd5c08b64b269c116d99f9727365fc9e3d877856f",
           "reference_count": 2,
           "references_sha256": "d7bf8b0957c4a31398619561f905c92cca080d3a134b4a6e9f49fecc00f4dc0e",
           "relative": "culture_malayalam.txt",
@@ -8704,7 +8707,7 @@
             "maori_whakapapa_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_maori.txt",
-          "mod_sha256": "ab736cd00c7088140da66ad8435307b0c2a4b266390c112b21433709a7a3c163",
+          "mod_sha256": "e4ca7c9e6d9d575ae41ec6b9d68c7e3dce8959b1a77328b19cdc4078aabf4d9e",
           "reference_count": 8,
           "references_sha256": "74c77c0b15de67f68b79a0215a3e5b9baf0c9805e75e6d7cd4f71bbc4438e31c",
           "relative": "culture_maori.txt",
@@ -8725,7 +8728,7 @@
             "mhr_tradition_of_military_service"
           ],
           "mod_mirror": "in_game/common/advances/culture_marathi.txt",
-          "mod_sha256": "9d1c16346f046243721aa0aa0392bd995d86742ba5c6fbd433c2c6508eb50759",
+          "mod_sha256": "18876dc5b307af8ff132c4256c56aeeb76c7ad6b78332d6927c31d0f23ebc38b",
           "reference_count": 13,
           "references_sha256": "b26e986fb9e29d8f4a823f56f6abb9f897ccf172db582f6b44595d116f89d52a",
           "relative": "culture_marathi.txt",
@@ -8764,7 +8767,7 @@
             "spl_vale_of_spoleto"
           ],
           "mod_mirror": "in_game/common/advances/culture_median.txt",
-          "mod_sha256": "d1db3762a0c0fe34becd4495d4dfd24f89b8b425a1923edc27661cffa9d84afb",
+          "mod_sha256": "453b98ba127c35c83083ada07a040b543013d39ef4dc9e775e96c776be5af540",
           "reference_count": 46,
           "references_sha256": "94d4918c8dbf45d387120fe2ef25968e2bfad5dc0eac5d0f7a4b1ddce7b0c3a5",
           "relative": "culture_median.txt",
@@ -8791,7 +8794,7 @@
             "university_naples"
           ],
           "mod_mirror": "in_game/common/advances/culture_neapolitan.txt",
-          "mod_sha256": "ceab8e7876d9efa66de407e5cbcbdf1ca69ce93dad43b6b46077eceeb45e17ac",
+          "mod_sha256": "a9498f5c114b1854af1e0dcd779906951233557645cf8fa2062866d636195b16",
           "reference_count": 24,
           "references_sha256": "b4eb0f5f8f8e6bf0a95c1ba31a07b16216fb4bed24b86d2f8cc0eb8c480f4061",
           "relative": "culture_neapolitan.txt",
@@ -8809,7 +8812,7 @@
             "npl_the_divya_upadesh"
           ],
           "mod_mirror": "in_game/common/advances/culture_nepali.txt",
-          "mod_sha256": "a2a8c2732ce1fe742885391cf41d5d3d9ace02523650413e0361f5ffcabdccbc",
+          "mod_sha256": "7003124f65b78e1791b98204764247e2608e26e4f28ad13158c726e88e3504cb",
           "reference_count": 7,
           "references_sha256": "f1342c2da66dd7d443830c704db2cbc028a82630ff886d10509e6672aa8be98e",
           "relative": "culture_nepali.txt",
@@ -8827,7 +8830,7 @@
             "polders_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_netherlands.txt",
-          "mod_sha256": "7f995e18d0e72d7121c1e420d2e4ffbc554f4eda0025693f6d7a99620023399a",
+          "mod_sha256": "24ce130b298b6a6bc6b0c9fe6d67a1aa1eb85e2b901ba6a3a9c1eb4f8d4e19bc",
           "reference_count": 9,
           "references_sha256": "4b6d0ebbac66e490934b882f08ca3277a204931d9706c0b1522c527c9ccfea5d",
           "relative": "culture_netherlands.txt",
@@ -8843,7 +8846,7 @@
             "nomadic_legacy"
           ],
           "mod_mirror": "in_game/common/advances/culture_nomadic.txt",
-          "mod_sha256": "fe7200e07f1c531ff6945c1a26a76bc7bd54a4295095d5d8f773dfef64c4c957",
+          "mod_sha256": "664668de847105e53e060de809861e7340d0cf30c8872dc58f91df819c775968",
           "reference_count": 2,
           "references_sha256": "4f2ea76aef11f2253fed3d46d69d8b12b30704e7260ede6184818223d6445a65",
           "relative": "culture_nomadic.txt",
@@ -8876,7 +8879,7 @@
             "piedmontese_the_setajoj"
           ],
           "mod_mirror": "in_game/common/advances/culture_piedmontese.txt",
-          "mod_sha256": "ebd913d4c204d71e30e02cb35b9683c41813896fa337c6ec374d444ac5efbedb",
+          "mod_sha256": "3b4015e9b6d15962186d63da55cf2fcdb7c792c282e8853e8b13689abd9b6f7d",
           "reference_count": 36,
           "references_sha256": "152a694c82530fa47b73d83cb828315e09a55f53e19cbf2aa19951befcff158a",
           "relative": "culture_piedmontese.txt",
@@ -8898,7 +8901,7 @@
             "pun_strength_of_the_misls"
           ],
           "mod_mirror": "in_game/common/advances/culture_punjabi.txt",
-          "mod_sha256": "9249b04f487f487d917cdeb3364e1a55a2c07335d5317369aeb9fe6b8bf8019b",
+          "mod_sha256": "9550408b67b5b89549ca5bb62edb6226c20e8addace38032f7403d9528d38dd4",
           "reference_count": 14,
           "references_sha256": "0223a89ff67a0c0d73cb0e4f1dea896d97d3fb7fb155483ad0ba3158b8da45b2",
           "relative": "culture_punjabi.txt",
@@ -8927,7 +8930,7 @@
             "raj_the_purbias"
           ],
           "mod_mirror": "in_game/common/advances/culture_rajasthani.txt",
-          "mod_sha256": "c4fc333d94ce136994c6bc54d2cc5c3f2814999ea6e0e4f02cec0539564bc921",
+          "mod_sha256": "eb4e8f4b32a19c6de1efb498c2f67930b99ba565048a7110e50aba7d4b948e2b",
           "reference_count": 28,
           "references_sha256": "0145d25ad7496dce056e29a7213d0c9afd53469ed88d2f2245748747d9d6ed1d",
           "relative": "culture_rajasthani.txt",
@@ -8960,7 +8963,7 @@
             "urb_the_montefeltro_seignory"
           ],
           "mod_mirror": "in_game/common/advances/culture_romagnol.txt",
-          "mod_sha256": "2e48f3d9e59a8bd69e2f8270f41a0a54c5ccc991a0f1c71b467ead0bb835aefa",
+          "mod_sha256": "1ca370fdef405431390f0df57b14d272e1781981d3dc6a51736bfb6f6540ccd4",
           "reference_count": 36,
           "references_sha256": "1a3e2b58573f0e516e06a72342f5a87d34241097a6f5811519f210ae194fbc87",
           "relative": "culture_romagnol.txt",
@@ -8986,7 +8989,7 @@
             "voivode_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_russian.txt",
-          "mod_sha256": "3e057e1a6727627692d5f2be60d6200167bcc3a8fae3dc3c8e51ed8b96037eb6",
+          "mod_sha256": "3a9530894200c574646d2bdefe43ae5931fc871df43a23a454b5ca86af38f0ee",
           "reference_count": 22,
           "references_sha256": "f0f96402bf33214eee31296be8f25eb774cdef8a05e6647c8a218a8f91a15063",
           "relative": "culture_russian.txt",
@@ -9011,7 +9014,7 @@
             "united_faith"
           ],
           "mod_mirror": "in_game/common/advances/culture_ruthenian.txt",
-          "mod_sha256": "3305fb025033fe58a72fdf61016a84c4ae3ec690f9153d5d8812a6ef80be9ae4",
+          "mod_sha256": "e0f2c7d348e8d91adbc88344c626f5c98f944912dfb9ed05945ebc5b6d9bc880",
           "reference_count": 20,
           "references_sha256": "53dce0a4d1819fb77fccf7804ef3660e6dab1b65423c967516c015014137d4b9",
           "relative": "culture_ruthenian.txt",
@@ -9038,7 +9041,7 @@
             "sardinian_the_turres_costeras"
           ],
           "mod_mirror": "in_game/common/advances/culture_sardinian.txt",
-          "mod_sha256": "291495df8a7b2c66cb3b767c974fadd84745bb23eb8035c91d2337075ef333fc",
+          "mod_sha256": "b6ee4db9d3be91b8a3daa49e6dde0ed86f2874d1e12eda6401cfae2627c772cd",
           "reference_count": 24,
           "references_sha256": "84250e339904e69e66ff3e5525e7d6984d9758b313e020ffb9b84b87b9c171e8",
           "relative": "culture_sardinian.txt",
@@ -9057,7 +9060,7 @@
             "scandinavian_thing_rights_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_scandinavian.txt",
-          "mod_sha256": "ac81277f43ed3d8862161c47f067988df899880a4d705293ea30acf2d956b049",
+          "mod_sha256": "43e6ab9a30f57537b27e3a71ff05bfc1510be33858975c39050975a99ff7c0c2",
           "reference_count": 12,
           "references_sha256": "c8dacdccc5f59b56846c5f0dd1fb7c1582caea890537fd4f6779777701f3adde",
           "relative": "culture_scandinavian.txt",
@@ -9090,7 +9093,7 @@
             "sicilian_the_cult_of_the_santuzze"
           ],
           "mod_mirror": "in_game/common/advances/culture_sicilian.txt",
-          "mod_sha256": "8410fbb6a3179130f10672f4a85b89d3119f342912c48dc75ec5acbe0a30bb88",
+          "mod_sha256": "bc5d35b4920962ffd1405869a79e0e86678bfbf85113a054d3d02cd9db349f92",
           "reference_count": 36,
           "references_sha256": "b3ac480e37c13d2cb0c33cf764024c9bb1011a8191f312060e86b8e99500930f",
           "relative": "culture_sicilian.txt",
@@ -9117,7 +9120,7 @@
             "slovak_the_urban_syncretism"
           ],
           "mod_mirror": "in_game/common/advances/culture_slovak.txt",
-          "mod_sha256": "1bb667fc2de96787550503921dda7fcff5ce3907c2edec169f1b40ec797a247f",
+          "mod_sha256": "432f07b9348fd07f96f5d3ed7169d4d154a5e7cbe578d3a299c6847863dce060",
           "reference_count": 24,
           "references_sha256": "df60b7c13be658da6d417d1de4cec030c0d1d0acb57182acac0f5e8cfa1817b2",
           "relative": "culture_slovak.txt",
@@ -9144,7 +9147,7 @@
             "slovene_the_zois_circle"
           ],
           "mod_mirror": "in_game/common/advances/culture_slovene.txt",
-          "mod_sha256": "2bcd4205495d92ff318b38af78a37eb30df5f5341e88a80f7c00cdc70505b66b",
+          "mod_sha256": "b94d42e96f7223e3d685e2c9bb8a0f9738b64adf0c0807923ca5a42133e0c391",
           "reference_count": 24,
           "references_sha256": "721689984ece0420477640f31d80f203dfff0ec05789f4d793227dcc2008ae53",
           "relative": "culture_slovene.txt",
@@ -9171,7 +9174,7 @@
             "trading_links"
           ],
           "mod_mirror": "in_game/common/advances/culture_thai.txt",
-          "mod_sha256": "329724c7379d18881d55b05f8cecaec9fa9dd1ae75ede84548972e5beaa723ef",
+          "mod_sha256": "689d626ec6393bfc33b4319ed201177cdc892dd9ef8564fc40bddbb2b5f32435",
           "reference_count": 25,
           "references_sha256": "7e4abc1f5826e70b5fba4c72daaf7c4ca750f9273ed7fe173b40b2a6c0d9d125",
           "relative": "culture_thai.txt",
@@ -9216,7 +9219,7 @@
             "tuscan_the_mezzadria"
           ],
           "mod_mirror": "in_game/common/advances/culture_tuscan.txt",
-          "mod_sha256": "bb33a8b919e39f433fd0fc9d54660b903dd800798ee94298d1e82409370c9766",
+          "mod_sha256": "b64c3b76abafa8d1d67f0c80d9a2da6714a61f74c840a6d5d8383334e15f074f",
           "reference_count": 61,
           "references_sha256": "276391e76dd9b65699523f8d29b50195dc8ac8000ffa1ada316856be47d45803",
           "relative": "culture_tuscan.txt",
@@ -9255,7 +9258,7 @@
             "ven_venetian_thalassocracy"
           ],
           "mod_mirror": "in_game/common/advances/culture_venetian.txt",
-          "mod_sha256": "e9ac3b5f9cafa57c18549f9c00fcbcf8a9e583e2aa15b819c1605f1b40f5974a",
+          "mod_sha256": "91bee37ba8c248af2ace2b4bfb1df8e6fc6a000a740af5c4e04d5807444f846b",
           "reference_count": 50,
           "references_sha256": "f0d549b3aa1a0f2e430680516dfb17e9188475f032a25f8233fe230e14a7db58",
           "relative": "culture_venetian.txt",
@@ -9280,7 +9283,7 @@
             "dai_vietnamese_architecture"
           ],
           "mod_mirror": "in_game/common/advances/culture_vietnamese.txt",
-          "mod_sha256": "1c99069f18a02f755faa3d297818a4301e8eac460a9b61ee57cc2768eeb18217",
+          "mod_sha256": "8e120f45190d4325313864587e9f362ad67f40efc504174aa351c1ff189f5542",
           "reference_count": 20,
           "references_sha256": "94ec2e33e3c3a39d843ca00b3c7b85f73b874968086c38408ceb93790fd54281",
           "relative": "culture_vietnamese.txt",
@@ -9307,7 +9310,7 @@
             "vivaro_alpine_valley_councils"
           ],
           "mod_mirror": "in_game/common/advances/culture_vivaro_alpine.txt",
-          "mod_sha256": "0aa39ef9e7358b9144cdd6503411c990a7ae245f82b7092e85dfc968be0d7777",
+          "mod_sha256": "23ba07ee4a6c513a381777ff9d97105d4cff057a433f0cd15894b90e506a4919",
           "reference_count": 24,
           "references_sha256": "097d44c3dfa89adb3f23bf1805403808a2323a071a44a974e900e56b3bf211ce",
           "relative": "culture_vivaro_alpine.txt",
@@ -9325,7 +9328,7 @@
             "west_african_caravan_stop_advance"
           ],
           "mod_mirror": "in_game/common/advances/culture_west_african.txt",
-          "mod_sha256": "1b0bd25383bc319c4922d75da48d876db207b7c47806c35288a8d1876e7d5fdf",
+          "mod_sha256": "decee6fc3edf4f901bdf79bfa2d08e8d92a2b15667f4960242b4f3865ffe1def",
           "reference_count": 4,
           "references_sha256": "2afbd18187e7494c5db5ea120f64aa8c5c3b1e58ec7ab77c49c82039d5ebb19d",
           "relative": "culture_west_african.txt",
@@ -9341,7 +9344,7 @@
             "infiltrate_administration_advance"
           ],
           "mod_mirror": "in_game/common/advances/diplomacy_unlocks.txt",
-          "mod_sha256": "6f622f0fb4036e1de20c209ba6c6fa99e0f0d0a8c4e3a39ae707be3a713ece80",
+          "mod_sha256": "54c3146c2510cda06dc104663e3cf18463bcd8fd913b0e6775591d3d4c3c8939",
           "reference_count": 2,
           "references_sha256": "5d5a3a8a3a6362d5b48e9b70d7c0400f3929991b71c069fbb23bc777f3618e49",
           "relative": "diplomacy_unlocks.txt",
@@ -9369,7 +9372,7 @@
             "tamed_steppes"
           ],
           "mod_mirror": "in_game/common/advances/estate_cossacks.txt",
-          "mod_sha256": "c01a6b15c190158bc8fa728ddb2802f9d116ba0d5c365cab31c4002b01f2f615",
+          "mod_sha256": "201147658b70b602aef7735e85ee4abc3db097d57c85d651fa26c5b910e37d68",
           "reference_count": 32,
           "references_sha256": "5d73f6de4aa3d750d247443ff6d46990fbcb39b99e8af9c9c30135cce47a54e0",
           "relative": "estate_cossacks.txt",
@@ -9468,7 +9471,7 @@
             "the_the_via_egnatia_restoration_advance"
           ],
           "mod_mirror": "in_game/common/advances/frankokratia.txt",
-          "mod_sha256": "1b8209a2f3d90539ebd2570b6d6b993414377ca5a122f8fd29826b0678b28a5e",
+          "mod_sha256": "c81875022ef47ac7d92d043dc3986e8b6cd2aef4cef31892ef4b39fe3f06baa4",
           "reference_count": 168,
           "references_sha256": "9ddd5f788ccf948acc2f35f4a103f78f1d97d9985aff8c89cd45d5f2f9737ab0",
           "relative": "frankokratia.txt",
@@ -9495,7 +9498,7 @@
             "serfdom"
           ],
           "mod_mirror": "in_game/common/advances/government_monarchy.txt",
-          "mod_sha256": "b57e5d184d6bdba5fed97eb7c358ec2dc976929d342275b306be9a188ce5cad7",
+          "mod_sha256": "9b9c43181e4d670078e61e48c7964bef9829cc8786989e04db60816406b3ea65",
           "reference_count": 30,
           "references_sha256": "952cb00656b081598f62a3141469f7e88e834af27ce452a6a3b6517d9fdb6fa1",
           "relative": "government_monarchy.txt",
@@ -9523,7 +9526,7 @@
             "tradition_of_payment"
           ],
           "mod_mirror": "in_game/common/advances/government_republic.txt",
-          "mod_sha256": "516090c241c809c68d6c31c58daa85e363107958edf4963a39763377704a962b",
+          "mod_sha256": "6a2af406cba41bc041e880b8e9d906c43ef2f4240b780899767a3a34a355fa7b",
           "reference_count": 26,
           "references_sha256": "1ad6226e1c03d434d3b5afa52af4c633a48780663e8722b3e21d5b5575625bf1",
           "relative": "government_republic.txt",
@@ -9557,7 +9560,7 @@
             "yams_of_the_great_khan"
           ],
           "mod_mirror": "in_game/common/advances/government_steppe_horde.txt",
-          "mod_sha256": "30f7e0f2ed18256fda4a28ebf107dfe31cf5f6d899c1d65848a6bb788d9fecdf",
+          "mod_sha256": "c2862ee5d17b1de19f44a558e880a572893c06eb25d23e471e73f92041f20d73",
           "reference_count": 39,
           "references_sha256": "32b8807b936c8437eb9cb9a2ea55c699af0c24d2049dcbb46cd94d1a95f49839",
           "relative": "government_steppe_horde.txt",
@@ -9582,7 +9585,7 @@
             "state_of_clerics"
           ],
           "mod_mirror": "in_game/common/advances/government_theocracy.txt",
-          "mod_sha256": "ae504ff01f97eb1b976359da10afd30c22141f8433af483d9249cde0e8320972",
+          "mod_sha256": "c84915e452fa7bfc720c7481f181ba1e7c5f5c261df06b6830b00bb6fe2a3e0d",
           "reference_count": 13,
           "references_sha256": "e55f96acd70edf33264a45bb567d86fa5dbbc6d2393788e42a4d289ec18fb5f0",
           "relative": "government_theocracy.txt",
@@ -9702,7 +9705,7 @@
             "ymn_mediate_succession_disputes"
           ],
           "mod_mirror": "in_game/common/advances/japanese_unique.txt",
-          "mod_sha256": "48fe2cac6793abdcf89bf90a1be17c6d958eac261755a9cfe8be0bad1d38228c",
+          "mod_sha256": "cb49e07cd7a2343ac69c256b2fc4b91c1bd0675f21034826bbdd4aca6064535a",
           "reference_count": 210,
           "references_sha256": "c2ef55f373946258f4acabe569d623b101f61a90dad5bc60561f6729156c4040",
           "relative": "japanese_unique.txt",
@@ -9716,7 +9719,7 @@
           "definition_count": 0,
           "definitions": [],
           "mod_mirror": "in_game/common/advances/new_world.txt",
-          "mod_sha256": "aa019fa7ad76df4e8dd5c203f935aad26b45207e2000fd8a098a852853b86245",
+          "mod_sha256": "8e3b0c6424135827ae8c8f46e6ea395d85fe24f4c902b14a089d936e5994db92",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "new_world.txt",
@@ -9761,7 +9764,7 @@
             "wandering_scholars"
           ],
           "mod_mirror": "in_game/common/advances/region_africa.txt",
-          "mod_sha256": "ca49550deddaca30f36f57d6093ee0e535f84bfa55dc4f17f1c16b009f190e26",
+          "mod_sha256": "acdc9d5ece1cfe7ad64388b328b5b33d02a0d5358ee8aec4bc90ca3a7546707f",
           "reference_count": 32,
           "references_sha256": "8c8642c37bd045f52ef9a8523648b300eda248f2e5116b696782396dd6774f0b",
           "relative": "region_africa.txt",
@@ -9796,7 +9799,7 @@
             "wake_of_the_mongol_horde"
           ],
           "mod_mirror": "in_game/common/advances/region_asia.txt",
-          "mod_sha256": "e81322f439a15416162a296ee66a00441fa8f5ed732a272ec93d7d58bccbc62c",
+          "mod_sha256": "44b3f1f940ff2e224fb13d8deacf3ef9294ca06847ebebabd8ed8aec41771276",
           "reference_count": 42,
           "references_sha256": "c23d6dfb12fb11568cb6f88b7b2728efd9b2de0fd81c0adc8e72f109696a24b9",
           "relative": "region_asia.txt",
@@ -9815,7 +9818,7 @@
             "poklisars"
           ],
           "mod_mirror": "in_game/common/advances/region_balkans.txt",
-          "mod_sha256": "500685c6b7884bcfaf559cb619e7e7623822fe0f6bd1e10e1d136e0458418fe2",
+          "mod_sha256": "63da049c7c83e5b42acbfe3797d1e21493ad5b3d2f4d77903b029cbab00cdd5d",
           "reference_count": 10,
           "references_sha256": "d3a34d6caf587083eab171f81d193b81c69a6049e66847a13fdf20426f221092",
           "relative": "region_balkans.txt",
@@ -9831,7 +9834,7 @@
             "eastern_african_trade"
           ],
           "mod_mirror": "in_game/common/advances/region_east_africa.txt",
-          "mod_sha256": "5d2ac648172626d92d7023fa7622fc8bdb1dc8b78b13a7d1f5cc5f9f75fe796f",
+          "mod_sha256": "46c1087319dcdde27e408b5567b8dbc4802d1be0439d3552d993bda270eaa6cf",
           "reference_count": 2,
           "references_sha256": "2b8a0aac45a04b9c96c475b5a9247c720a0d45b6d65e82e33feedd5552726493",
           "relative": "region_east_africa.txt",
@@ -9847,7 +9850,7 @@
             "ukrainian_farmlands"
           ],
           "mod_mirror": "in_game/common/advances/region_eastern_europe.txt",
-          "mod_sha256": "442fc30eb1e440e372eb9a7499e81dfb566373d4be5978f4d8ca7855840acdc7",
+          "mod_sha256": "06b15006d30d59c841b03ed9c5f5c06b6224a34ce4dc0ae9e874f462c7079d28",
           "reference_count": 2,
           "references_sha256": "26276b026ef9f80d513a9ad6003d75a237731f96c539c2a902c329ede8ce83a6",
           "relative": "region_eastern_europe.txt",
@@ -9874,7 +9877,7 @@
             "tercio"
           ],
           "mod_mirror": "in_game/common/advances/region_iberia.txt",
-          "mod_sha256": "b3b6b0f84f4e2f31c6020f2a45bbd8545adcaede69dc71fb5f28d39471314262",
+          "mod_sha256": "434609c25aacdeac636d90fe35135b2397b4c73ea39e699699ded968c8e269fd",
           "reference_count": 35,
           "references_sha256": "08ea85ad1099502f832bcf17e1f8f71611135e98f3b99ee49e91e4cbda8c71e1",
           "relative": "region_iberia.txt",
@@ -9893,7 +9896,7 @@
             "indonesia_trading_hub_of_the_east"
           ],
           "mod_mirror": "in_game/common/advances/region_indonesia.txt",
-          "mod_sha256": "4f86b807535df3980b9c4997f0d7e592740ae5837b8cf04f514e7bc220145617",
+          "mod_sha256": "fcb9e9cd51780baff152d98c4ee9a5343d1a89adf9b5138e288fb9312fa6878f",
           "reference_count": 8,
           "references_sha256": "99859d10e2e06e7169576804d5b5955a5f7af5825e3406da7b01ba019b5c366a",
           "relative": "region_indonesia.txt",
@@ -9912,7 +9915,7 @@
             "italy_great_families"
           ],
           "mod_mirror": "in_game/common/advances/region_italy.txt",
-          "mod_sha256": "46635f7eaa458ac26a95f6c946e7038b6bd8f8bc057f2f043b41ba7c0c348d79",
+          "mod_sha256": "a7035a2e140b5c882e35f87979a11cec0e5b085be342fc70cbec16841b175385",
           "reference_count": 10,
           "references_sha256": "9dbfce42d9addc970b627cedf18ed00178556cb46a5254a04009edd204d59161",
           "relative": "region_italy.txt",
@@ -9970,7 +9973,7 @@
             "whale_hunters"
           ],
           "mod_mirror": "in_game/common/advances/region_north_america.txt",
-          "mod_sha256": "82b00a8711d7aaaee7d1f230156ab43b120337ac1a373b7161913ccfad588a1a",
+          "mod_sha256": "9086b599113583fba05db83a9c02efbf9616465bc20e529da4f52c1df4d0095c",
           "reference_count": 86,
           "references_sha256": "ad5e16fdf9cb0f16e209b4b2606af896040b2b13dc4798d83034dcd7e70104d0",
           "relative": "region_north_america.txt",
@@ -9987,7 +9990,7 @@
             "the_sahel_trade"
           ],
           "mod_mirror": "in_game/common/advances/region_west_africa.txt",
-          "mod_sha256": "269f24d66611deecfc5a32d8d49ba09a48f03d3e432e9d458b85c5e740c9ccc4",
+          "mod_sha256": "8e0e5af454238b93a1bd8fef56601b54eba17e18eb251afd33a05078c4a9d963",
           "reference_count": 4,
           "references_sha256": "7f057741621003f2069f121d466773affb003f9586d5a3fd4f4f67bbc66c453c",
           "relative": "region_west_africa.txt",
@@ -10033,7 +10036,7 @@
             "xuanzang_travels"
           ],
           "mod_mirror": "in_game/common/advances/religion_buddhist.txt",
-          "mod_sha256": "9cd8f821c0b1949f6165bc1957088f27ccb5cf578dcd7bca660d8fe44ee6a9ed",
+          "mod_sha256": "8bcc77f6ca773fd5de4824d718b645901e98ecfce4eefb31f84fc49caaf184fd",
           "reference_count": 62,
           "references_sha256": "3a5ace109e39c6564b819c3777bb92610a71c26b8379f9b8118291fb66c5b381",
           "relative": "religion_buddhist.txt",
@@ -10079,7 +10082,7 @@
             "second_scholasticism"
           ],
           "mod_mirror": "in_game/common/advances/religion_catholic.txt",
-          "mod_sha256": "3fa7375bb16580b8ebc2cb360dc467fba2d3fc967edecd7855a157d961192195",
+          "mod_sha256": "3feb0a28dde0ca645072ad6d43416df65225be8d4fe12b8ab3a1f83315007401",
           "reference_count": 63,
           "references_sha256": "a1f9a2ea5fdeba5819a18c4aa0508f7580f8ca7fb2b4101dc540f4e7b4c57add",
           "relative": "religion_catholic.txt",
@@ -10103,7 +10106,7 @@
             "variety_in_divine_identity_advance"
           ],
           "mod_mirror": "in_game/common/advances/religion_hellenism.txt",
-          "mod_sha256": "2dad34a04cad3d4e78ecc861d78d453beecaa0974005370e47bf572a7572b3e7",
+          "mod_sha256": "9ee74bd6a3e0a6070497c0614fb5dc2c2ae433e5ecbdce04aeb0d5a3d47e0fb3",
           "reference_count": 18,
           "references_sha256": "89f216775be94da74fa88d188da4b6fd555989784b3d6f32dfc7e42b21588b86",
           "relative": "religion_hellenism.txt",
@@ -10143,7 +10146,7 @@
             "yoga"
           ],
           "mod_mirror": "in_game/common/advances/religion_hindu.txt",
-          "mod_sha256": "191b62a25d8acc06f3c00663cb712f75d55bb0b887f5d23d16f5a0618c686589",
+          "mod_sha256": "513f82597d32a9ca0cfbb58577438c1d6ddf6cddcaea4c81c3410a0dcc245127",
           "reference_count": 50,
           "references_sha256": "68032183629e6da5ee6a21d75e423a8dc04b7183d483e0340b9a00784050a37c",
           "relative": "religion_hindu.txt",
@@ -10182,7 +10185,7 @@
             "unique_architecture"
           ],
           "mod_mirror": "in_game/common/advances/religion_miaphysite.txt",
-          "mod_sha256": "e8df3decb1554b52baaa9ce5308f045c8ba6f364c9a2eb57ee94ed25ecfff9c7",
+          "mod_sha256": "8de3dfffbf63c28279153eb8cd427abf50f87dc96bdaed02f9fc126476c5979b",
           "reference_count": 48,
           "references_sha256": "6485f5cf91408e4f67c8d6466be2761955ab3fd61876983f0f0897cfafd29805",
           "relative": "religion_miaphysite.txt",
@@ -10229,7 +10232,7 @@
             "zakah"
           ],
           "mod_mirror": "in_game/common/advances/religion_muslim.txt",
-          "mod_sha256": "09aac18df050e95874cfd8846ffc03562378e45c6418f51bf9138ad6e426a6f2",
+          "mod_sha256": "1470e353f74f7ce0d1d5b0aca59296a8bbef0d7d3fc716be94c2c285225f08c4",
           "reference_count": 64,
           "references_sha256": "03c3b4b73193fa1ee59fc1260fc119baa8db7e06b69eadd8dda6a00db4b777f2",
           "relative": "religion_muslim.txt",
@@ -10274,7 +10277,7 @@
             "unchanging_tradition"
           ],
           "mod_mirror": "in_game/common/advances/religion_orthodox.txt",
-          "mod_sha256": "2c116db18e1dbb98edd760aff75cad17fa0f26d006144ee07879314aec01c91c",
+          "mod_sha256": "8f1511aa5ae06432eee8b2ddad29f64d41bf86fe2cdbe37a69ccd0cc6bada431",
           "reference_count": 60,
           "references_sha256": "87af58650a4f366015ebfc6688c8827beb4d960bdfb7685f795517349bd4aee1",
           "relative": "religion_orthodox.txt",
@@ -10304,7 +10307,7 @@
             "wary_of_heretic_preachers"
           ],
           "mod_mirror": "in_game/common/advances/religion_protestant.txt",
-          "mod_sha256": "f703c2e2d148c34f45f7e39bff341f87a7ea60804007f3193aebec3b3563ba89",
+          "mod_sha256": "3661a7e07c4e1f191575bc8593a52e4736c2e825f3db05f72108f2d958111796",
           "reference_count": 30,
           "references_sha256": "c0196ee3756c795209168d53cec5cb714a96d82fa597eb6a0c22d8b7b59bb203",
           "relative": "religion_protestant.txt",
@@ -10338,7 +10341,7 @@
             "sumo"
           ],
           "mod_mirror": "in_game/common/advances/religion_shinto.txt",
-          "mod_sha256": "fc438c3e44d9e16dc4f0349f951a3b4d7e674072858f6c694811c72fcc3ae44e",
+          "mod_sha256": "a95aad50437256e2cf8db0a9807bed6f62e881110cf37bfe23a6d6a7a496847b",
           "reference_count": 38,
           "references_sha256": "aec0787c03aa64e7d7ca25bb107b55182ba161d2ecedbcd082d31a0fb7b787e6",
           "relative": "religion_shinto.txt",
@@ -10868,7 +10871,7 @@
             "sofa_stockade"
           ],
           "mod_mirror": "in_game/common/building_types/00_unique_buildings_to_make_obsolete.txt",
-          "mod_sha256": "0d8b85df046adee6ffcaf619cbe08d444522c8f65df8670dd99d7f328b20e850",
+          "mod_sha256": "b18b49d03fb8b4f35b10517498beb9f31edfb7e463bd39815d8cb83b8061bead",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "00_unique_buildings_to_make_obsolete.txt",
@@ -10898,7 +10901,7 @@
             "war_college"
           ],
           "mod_mirror": "in_game/common/building_types/capital_buildings.txt",
-          "mod_sha256": "91b781957e370fd33f1be3c3fd2cbd160b85c63fd6a27046598e666b17722902",
+          "mod_sha256": "ee7f9378fbe42710d9ef058de4535820598343385d03ae260f544cc8c965bd23",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "capital_buildings.txt",
@@ -11031,7 +11034,7 @@
             "warrior_monks_training_grounds"
           ],
           "mod_mirror": "in_game/common/building_types/estate_buildings.txt",
-          "mod_sha256": "2a37628ecc3ac56e1ccf494c57ea4b0dc1a1e5de16e52cfe66b81cd111893720",
+          "mod_sha256": "ca9a18a89bed97c22f6034fd529ef9e95b62665a245fa6e58a73000524a8bf4d",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "estate_buildings.txt",
@@ -11150,7 +11153,7 @@
             "zwinger"
           ],
           "mod_mirror": "in_game/common/building_types/event_only_buildings.txt",
-          "mod_sha256": "837ae57235b0393fdf7c8126df28c2db3ec1180dcf70ad7e60b8ee86fa5f105e",
+          "mod_sha256": "f3fcb8fe3e45cca35d79cac09e51b1a0783b66b29a8b4d5a7b108ef71d3cbcf6",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "event_only_buildings.txt",
@@ -11211,7 +11214,7 @@
             "hre_imperial_armory_own"
           ],
           "mod_mirror": "in_game/common/building_types/hre_buildings.txt",
-          "mod_sha256": "29a542f74621d4af74d7e6d7235e72fba6a8221189e4139b77106b4d69f93231",
+          "mod_sha256": "9a20ff147829a9de70c5c1b8eda0580f2d9d631ceceec17d7a9cec7595046484",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "hre_buildings.txt",
@@ -11236,7 +11239,7 @@
             "warrior_temple"
           ],
           "mod_mirror": "in_game/common/building_types/manpower_buildings.txt",
-          "mod_sha256": "046fd5dea6bdd22c2291a9c6bc6aa7167f4855abc220904784c6412b6e6c3b55",
+          "mod_sha256": "3c6506625741d28039ad5617840ab9397397cc9561a093041002ef6e5bb03995",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "manpower_buildings.txt",
@@ -11277,7 +11280,7 @@
             "smuggler_cove"
           ],
           "mod_mirror": "in_game/common/building_types/pirate_buildings.txt",
-          "mod_sha256": "60d8def055d765501f3d3b85c99101198755f51072d36fd349b06f8af697a7f7",
+          "mod_sha256": "af89c11c71ff8736afed503632e6414871307da7fcbe587bc964f0893ca8c0b2",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "pirate_buildings.txt",
@@ -11316,7 +11319,7 @@
             "shipyard"
           ],
           "mod_mirror": "in_game/common/building_types/port_buildings.txt",
-          "mod_sha256": "dbcfd50ec204769c942296b370a5a617367a008189fd54edb23d061dbd82d5fc",
+          "mod_sha256": "069fad9778045b96984b90d737c292f83588eb6e50a505604e538d3419b14fc6",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "port_buildings.txt",
@@ -11776,7 +11779,7 @@
             "windmill"
           ],
           "mod_mirror": "in_game/common/building_types/rural_buildings.txt",
-          "mod_sha256": "b6b1a31bd2edefb1d44728d771778543968b3f2143863b0ce1ebb716e646921b",
+          "mod_sha256": "56a0198b3e5e210d00031c1596077bb784d49502c894b8a5207116612f5a29c0",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "rural_buildings.txt",
@@ -11823,7 +11826,7 @@
             "wharf"
           ],
           "mod_mirror": "in_game/common/building_types/town_buildings.txt",
-          "mod_sha256": "eabce5104c0e01593a676e90fbc339faab38b8f7ab8549c49626aa563a7dd073",
+          "mod_sha256": "4c37d66dbff7260c3cb4e84e54064821577006b1a1b3b8853317fb55efe5771a",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "town_buildings.txt",
@@ -11864,7 +11867,7 @@
             "trade_company_local_venture"
           ],
           "mod_mirror": "in_game/common/building_types/trade_company_buildings.txt",
-          "mod_sha256": "2a05efb6fe15b5a9a59d7d74b3b2ebea734a5691f1ed9dbc25d073834ffa53a7",
+          "mod_sha256": "d2160aeebc82c5521fef84fbed17ba79d28ab56714af99e89645f9e45dbb8080",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "trade_company_buildings.txt",
@@ -11989,7 +11992,7 @@
             "zhixian"
           ],
           "mod_mirror": "in_game/common/building_types/unique_buildings.txt",
-          "mod_sha256": "44ffeead1491b4f00d6a87e445b75c18aa09d9199ace566ccbcebe6c94a7f7f5",
+          "mod_sha256": "7b2ddfa87b2ad40e49fae2771508d30a7b9cc80bbf3aab113e16903275da24b0",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "unique_buildings.txt",
@@ -13236,6 +13239,663 @@
       "known_visible_debt": false,
       "policy": "exact_disabled_legacy"
     },
+    "character_interactions": {
+      "definition_count": 34,
+      "definitions": [
+        "abdicate",
+        "aclla_distribution",
+        "adapt_culture_for_ruler",
+        "appoint_as_heir",
+        "assign_despot",
+        "assign_governor",
+        "assume_fort_command",
+        "banish_character",
+        "blind_character",
+        "castrate_character",
+        "choose_theologian_duelist",
+        "commission_art",
+        "compose_strategikon",
+        "dismiss_artist",
+        "dismiss_prince",
+        "ennoble",
+        "execute_character",
+        "favor_heir",
+        "grant_cabinet_right",
+        "invite_to_order_of_chivalry",
+        "join_foreign_order_of_chivalry",
+        "make_regent_ruler",
+        "marry_lowborn",
+        "marry_noble",
+        "move_child_to_court",
+        "pap_reassign_cleric",
+        "pardon",
+        "prefection",
+        "promote_to_head_of_cabinet",
+        "resign_as_grand_master",
+        "seppuku",
+        "take_the_vows",
+        "tribal_arrange_marriage",
+        "tur_appoint_dragoman"
+      ],
+      "file_count": 33,
+      "files": [
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "assign_despot"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/D008_assign_despot.txt",
+          "mod_sha256": "114f7d6bf3cf1cd4a0205550503c192e5abd5f1fdcdf5bfb63318e06c1bab6e3",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "D008_assign_despot.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/D008_assign_despot.txt",
+          "source_sha256": "3e21632902215255582bc96e18180ed9743b5c2a15b685f9a792ab9b57951650",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "compose_strategikon"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/D008_compose_strategikon.txt",
+          "mod_sha256": "7051ec67fad4e1849c6cd4a2431f9124b2ea3cd1dc5e457ca49f181257ba2352",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "D008_compose_strategikon.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/D008_compose_strategikon.txt",
+          "source_sha256": "418007477188038526daab02ac644fdb5694a6bf9960bda408f52a9582f70483",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "abdicate"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/abdicate.txt",
+          "mod_sha256": "bc581a25ce39e72723fdd355250bedcc7c17e7355353b829dc77cf3f39f8604a",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "abdicate.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/abdicate.txt",
+          "source_sha256": "199035e79d7991941bbde169b1e32d1ba3f03dff7dce877be4952751fb4f71e5",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "aclla_distribution"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/aclla_distribution.txt",
+          "mod_sha256": "eb1b6be3544db0d5c295e24a3e00ba7c4188af156b6a50c525d88c218527da3b",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "aclla_distribution.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/aclla_distribution.txt",
+          "source_sha256": "7f74019470a3ebe65c70c1fed9070025bfcf81846f0eed82f1680c55fee0e89c",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "adapt_culture_for_ruler"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/adapt_culture.txt",
+          "mod_sha256": "5d7c8529246774dd7e1efa83c7a0b916650e8ff24ecfad14484b81bb03f77341",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "adapt_culture.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/adapt_culture.txt",
+          "source_sha256": "dd5ab778e93ff130969f99a4a1905160ae7ca0ab40f4b8db57672aeef439e11c",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "appoint_as_heir"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/appoint_as_heir.txt",
+          "mod_sha256": "8d087a40075ecdbda4e477911b7cc763fbd0f0c437f5b14fddbb39b235d4b3fb",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "appoint_as_heir.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/appoint_as_heir.txt",
+          "source_sha256": "4c04542a4f349d7b8e560fd3993dead73c81ea70f23522db267fd2c34cd178e9",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "tur_appoint_dragoman"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/appoint_dragoman.txt",
+          "mod_sha256": "c381f514913cfa3e18b0dd972053c8a213d0c32f8d43db7ac32da158d6456a36",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "appoint_dragoman.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/appoint_dragoman.txt",
+          "source_sha256": "73f1894d77189281f79b4f539f9f42c6d56b7067b9f904c277a82c0d9d920fae",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "assign_governor"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/assign_governor.txt",
+          "mod_sha256": "3045677b5360aa93efc9fa65e34d822c3a92886aabe93acdf527baf7b56e35d0",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "assign_governor.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/assign_governor.txt",
+          "source_sha256": "9178732bf2c4e2b38bea7138ee3185477b8d178ee2251055c479ebdfd3720374",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "assume_fort_command"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/assume_fort_command.txt",
+          "mod_sha256": "9fff51bea4bfa028cfc3de45a2e81bae1aedaa0774faa68ae79f6f41e7421bf9",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "assume_fort_command.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/assume_fort_command.txt",
+          "source_sha256": "126ffc529ab936591692ae2e45e1c79d52a73338821b5d2c596b9c6401c90b1d",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "banish_character"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/banish_character.txt",
+          "mod_sha256": "8b4cd249220b52de9c26046db4be0105fed7aac71e9def1f1663b1f90cd66523",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "banish_character.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/banish_character.txt",
+          "source_sha256": "812c5f27c5b310c75ba2b2216b9f460d2cac9543cc2ce850b00f1cb2dfa6ebd8",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "choose_theologian_duelist"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/choose_theologian_duelist.txt",
+          "mod_sha256": "eac768a77caaa93a5ba0463c564cb75f91ae96cbc04bb8549f08ff28bd7559b2",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "choose_theologian_duelist.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/choose_theologian_duelist.txt",
+          "source_sha256": "d4811f5d82449d06a55cdd69c680726beff86f72de81b164d5023c9b52e7e99d",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "commission_art"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/commission_art.txt",
+          "mod_sha256": "6dd89a599266fff8858c2455252ccc0f4511c4945e162f3866464d02a6b8b3d8",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "commission_art.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/commission_art.txt",
+          "source_sha256": "f0488ef6f07b219c758ea223e66ac3f13fdb29ac80e56da1ffbea2e1300dcce4",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 2,
+          "definitions": [
+            "blind_character",
+            "castrate_character"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/d008_mutilations.txt",
+          "mod_sha256": "7d54de7a01c36871bc1ec16ceda86daa1cc49fe39e5811f43ae1af02ee5b11b1",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "d008_mutilations.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/d008_mutilations.txt",
+          "source_sha256": "1f284fc26a0607445107c80e2fc219abbaac65859aad159d4deede0e2d313735",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "dismiss_artist"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/dismiss_artist.txt",
+          "mod_sha256": "49744e846f87c0f7046df52fb17e5647eeaf69a8a57c352234584d69600e77b1",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "dismiss_artist.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/dismiss_artist.txt",
+          "source_sha256": "8835342e407a8607ea92041bbb8e74fd8538d302101efb8a7554f7fad08d47c6",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "dismiss_prince"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/dismiss_prince.txt",
+          "mod_sha256": "86b60022562283fa5b29560849b02e2fa7e2205209d5f91f379ad2bd68b20f5f",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "dismiss_prince.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/dismiss_prince.txt",
+          "source_sha256": "d781bbcfb5c5fde85d6212869f1c4b14387fd61fd9bbb291c9ff0e2d982fa7ec",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "ennoble"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/ennoble.txt",
+          "mod_sha256": "6d4470515c332a49c9f71d6209de1f6ae7beafda4f109ece7e7dffa4bb70ada6",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "ennoble.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/ennoble.txt",
+          "source_sha256": "9b14dd2eb1c33ffde8a86d70aad53ac677f5e6d5a8b0f5bb7cb15eebb131360f",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "execute_character"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/execute_character.txt",
+          "mod_sha256": "ac3865b806204ab0865fb595c4497c35b3176a6db427a7eeb783f2d5116016dd",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "execute_character.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/execute_character.txt",
+          "source_sha256": "20744f758bb8c740d4976a7ebdf3666d29aa66d2a5b46a2c5b672e92f9cd873f",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "favor_heir"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/favor_heir.txt",
+          "mod_sha256": "f6e7c88516f97cffe71755e7801c37eb6195f75086761fb5bc0ae27996afa42b",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "favor_heir.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/favor_heir.txt",
+          "source_sha256": "668ffb3c049f578668d2c12a6e88e0fe739a4dd0111523830191459dcaf9aed1",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "grant_cabinet_right"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/grant_cabinet_right.txt",
+          "mod_sha256": "86efac745ee49bc58d7df92f5dd9f793260781f610e7cc4952f1ca801bd64f78",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "grant_cabinet_right.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/grant_cabinet_right.txt",
+          "source_sha256": "75f72a57479689ef0ee79047e15e7322a083f754edf7851ed0b6e73c2966f5fc",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "make_regent_ruler"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/make_regent_ruler.txt",
+          "mod_sha256": "c466113137860cc187471a84d9fd49f5e5e0a55a84245e6d572018d2c1ad9d66",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "make_regent_ruler.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/make_regent_ruler.txt",
+          "source_sha256": "817d0f3393be26b583670acc2f61c41097d194d690524bfa2af6d097625cd0a6",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "marry_lowborn"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/marry_lowborn.txt",
+          "mod_sha256": "911c3e132334c6fa3be4c7cdad3fcf6b74eee2af0a9b38c3233f168ac037e88e",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "marry_lowborn.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/marry_lowborn.txt",
+          "source_sha256": "07d2a5cf6d443abbb3558cd941b7d7c2c9cced07dc62a324a9c29cfeae1b6b89",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "marry_noble"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/marry_noble.txt",
+          "mod_sha256": "a0485435762a035f9a98ffb41b9a566075e7845483389be6106d0834eb1dd1b4",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "marry_noble.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/marry_noble.txt",
+          "source_sha256": "a2f47c356fd65d3f6c5de92e16fd719f57626569bd104e89b04b0eb2e625393e",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "move_child_to_court"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/move_children_to_court.txt",
+          "mod_sha256": "a4d7b1dfcf83f6c1ed90689a5a49c0546f06843ea14a64fff587925d9e1beeda",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "move_children_to_court.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/move_children_to_court.txt",
+          "source_sha256": "0281a24110a101dd86148f9cf3998d20b40ec788921ecac74a0b873a7d8f540f",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 2,
+          "definitions": [
+            "invite_to_order_of_chivalry",
+            "join_foreign_order_of_chivalry"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/order_of_chivalry_actions.txt",
+          "mod_sha256": "92de02066e19f85c5ae820aa6d4a8412fb3f18034ba82272353b2362f807b25f",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "order_of_chivalry_actions.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/order_of_chivalry_actions.txt",
+          "source_sha256": "f75aaab4f0017b45b9c7b3d25d80232053bf76e6848a4a4a5e0aa999bd883831",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "pap_reassign_cleric"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/pap_reassign_cleric.txt",
+          "mod_sha256": "8bc49eeea767118e319ab3a53837810d816d6084a3315fe36b38166d9c6855ba",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "pap_reassign_cleric.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/pap_reassign_cleric.txt",
+          "source_sha256": "1d8cc4304737d1be55fcf31192ccd188330f06a27f5ae12ddf3c50f6492f51e9",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "pardon"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/pardon.txt",
+          "mod_sha256": "85eaa5de77d109e1f70c3a0fc784dedb139d453039694109848b17ef61fabf20",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "pardon.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/pardon.txt",
+          "source_sha256": "954d4a0eaad82d8abd9f462fa845f70b0ce93139ff03306aa931033709f226f3",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "prefection"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/prefection.txt",
+          "mod_sha256": "2d400d96e0ac2e9b1627104d706581dfeb9beecb5b9a0df01d975ae2a8b6cb4a",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "prefection.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/prefection.txt",
+          "source_sha256": "c3c970de7be0e74f13e3e873365244b1ec3581b934c084557944981036d91563",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "promote_to_head_of_cabinet"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/promote_to_head_of_cabinet.txt",
+          "mod_sha256": "28cfa4d744f5ab5bf569d84978a2b6b02022b57c99797d517ba4a674494642d5",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "promote_to_head_of_cabinet.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/promote_to_head_of_cabinet.txt",
+          "source_sha256": "a6f1acb71c449b422b5bb1e7d47cd93d2d5df382bcdf7ce0dd99ae046b0b8171",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 0,
+          "definitions": [],
+          "mod_mirror": null,
+          "mod_sha256": null,
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "readme.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/readme.txt",
+          "source_sha256": "751462b933386e82da9fc321b6baa4bad0d8ebf0aae9c9cef2f1a5879afd665b",
+          "status": "installed_reference_document"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "resign_as_grand_master"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/resign_as_grand_master.txt",
+          "mod_sha256": "154fc4527f44dddcd8537f7fc35a1b3470e20a7db02befa587d640adeb76bc21",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "resign_as_grand_master.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/resign_as_grand_master.txt",
+          "source_sha256": "f6158bee6b1442d0187f7701e9de22db5d5fa6a7626bef21c2badbc2b39f0e38",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "seppuku"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/seppuku.txt",
+          "mod_sha256": "6ac15f79b8f5d4dca459e35dfcca70295d7548ea8ac67f5b44b4288d7d00c81a",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "seppuku.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/seppuku.txt",
+          "source_sha256": "dc838a2da608be982d407bd2298f5d47a93966551b75b9b926e351cb8da78128",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "take_the_vows"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/take_the_vows.txt",
+          "mod_sha256": "8c1e9d03539a0ae5d3e2f3b20d21f8102f23e9a8f7cc5fdf6497b7d47e8df862",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "take_the_vows.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/take_the_vows.txt",
+          "source_sha256": "12079c8c6383034c9f7e06c01dffce9ccc6e317832031d5a701113e901ee4f04",
+          "status": "exact_reviewed_ancient_adapters"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 1,
+          "definitions": [
+            "tribal_arrange_marriage"
+          ],
+          "mod_mirror": "in_game/common/character_interactions/tribal_arrange_marriage.txt",
+          "mod_sha256": "f7eff2782e513ff1a259f8d8bca384c53a954aec495e5d3c61deac141bf47865",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "tribal_arrange_marriage.txt",
+          "source": "<GAME_ROOT>/in_game/common/character_interactions/tribal_arrange_marriage.txt",
+          "source_sha256": "290cdb16c0cc06ed5cc994df9a8494b05c8d14448a4594e2a0189716df3e9378",
+          "status": "exact_reviewed_ancient_adapters"
+        }
+      ],
+      "known_visible_debt": false,
+      "policy": "exact_reviewed_ancient_adapters"
+    },
+    "chivalric_orders": {
+      "definition_count": 15,
+      "definitions": [
+        "order_of_saint_george",
+        "order_of_the_band",
+        "order_of_the_black_eagle",
+        "order_of_the_dragon",
+        "order_of_the_ermine",
+        "order_of_the_garter",
+        "order_of_the_golden_fleece",
+        "order_of_the_swan",
+        "order_of_the_white_eagle",
+        "society_bengler_mainz",
+        "society_elephant_tyrol",
+        "society_furspang_franconia",
+        "society_hubertus_cologne",
+        "society_lion_nassau",
+        "society_with_the_donkey"
+      ],
+      "file_count": 3,
+      "files": [
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 7,
+          "definitions": [
+            "order_of_saint_george",
+            "order_of_the_band",
+            "order_of_the_black_eagle",
+            "order_of_the_dragon",
+            "order_of_the_ermine",
+            "order_of_the_swan",
+            "order_of_the_white_eagle"
+          ],
+          "mod_mirror": "in_game/common/chivalric_orders/01_historical_orders.txt",
+          "mod_sha256": "6c1a0c2ce4143c247edb267190dadb4fac2a6189337dbdf54a2eef481f3e25d5",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "01_historical_orders.txt",
+          "source": "<GAME_ROOT>/in_game/common/chivalric_orders/01_historical_orders.txt",
+          "source_sha256": "9d34c490862f2d1d815bb1eac2c6b11d9aa4e450b72d809cf3f03a1abd3be21d",
+          "status": "exact_disabled_legacy"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 6,
+          "definitions": [
+            "society_bengler_mainz",
+            "society_elephant_tyrol",
+            "society_furspang_franconia",
+            "society_hubertus_cologne",
+            "society_lion_nassau",
+            "society_with_the_donkey"
+          ],
+          "mod_mirror": "in_game/common/chivalric_orders/02_german_societies.txt",
+          "mod_sha256": "2bb91bcfbe68bd4dd1494d107f601d4549d4b627cb7cd0958efa690a326a9882",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "02_german_societies.txt",
+          "source": "<GAME_ROOT>/in_game/common/chivalric_orders/02_german_societies.txt",
+          "source_sha256": "05d4140593e6a8b903a80897235cbe40bf7ed6508ca4a28bb3b76eda9879c222",
+          "status": "exact_disabled_legacy"
+        },
+        {
+          "art_reference_count": 0,
+          "art_references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "definition_count": 2,
+          "definitions": [
+            "order_of_the_garter",
+            "order_of_the_golden_fleece"
+          ],
+          "mod_mirror": "in_game/common/chivalric_orders/03_western_orders.txt",
+          "mod_sha256": "ac971ab78be19e9b44c2ee262de2867890b6079b49aadc04dbba93774709b4d0",
+          "reference_count": 0,
+          "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "relative": "03_western_orders.txt",
+          "source": "<GAME_ROOT>/in_game/common/chivalric_orders/03_western_orders.txt",
+          "source_sha256": "4640e0dfb92b65bc767f710b11fd074c56aeac0647941c05ada118c323e57b76",
+          "status": "exact_disabled_legacy"
+        }
+      ],
+      "known_visible_debt": false,
+      "policy": "exact_disabled_legacy"
+    },
     "country_ranks": {
       "definition_count": 4,
       "definitions": [
@@ -13670,7 +14330,7 @@
             "warrior_tribunal"
           ],
           "mod_mirror": "in_game/common/estate_privileges/clergy_estate.txt",
-          "mod_sha256": "a98436c90d28a8b97913f9dd5da612cc52fbad859f84a6480682187d7a8be583",
+          "mod_sha256": "84a1691af969db55616b95a0a63fe728cf4d5e075a5847f980fde670623c1ed6",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "clergy_estate.txt",
@@ -14588,7 +15248,7 @@
             "zur_guild_constitution"
           ],
           "mod_mirror": "in_game/common/government_reforms/country_specific.txt",
-          "mod_sha256": "66daa8a34ae4ae55cd84e1f3fff40ed948fbe7874841dff8dc69699984e1b0f3",
+          "mod_sha256": "2f5af1d52ba3a68ee83e5a8d8f030e3944c8d1a24ba9d34823a818ee96dd9703",
           "reference_count": 61,
           "references_sha256": "3e31262e14a1fc2201db93d262587f285223614c584e2282ab646f44b141c256",
           "relative": "country_specific.txt",
@@ -15103,7 +15763,7 @@
             "royal_court_customs_law"
           ],
           "mod_mirror": "in_game/common/laws/00_monarchy.txt",
-          "mod_sha256": "ab995e3bda801b597cc9db2b8cc4d2a7a68b0e805779d543b92023f5b98fd6d3",
+          "mod_sha256": "31d88682d7b7d7b6a68fb364b6b6542d1a11af78f03cca1219686d1d083e2266",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "00_monarchy.txt",
@@ -15219,7 +15879,7 @@
             "slavery_laws"
           ],
           "mod_mirror": "in_game/common/laws/01_common.txt",
-          "mod_sha256": "9280ffbfeeb73a1333641dcc6b3b0be3796fd40bda3dd134446dd7378a264399",
+          "mod_sha256": "080fe2d265ecf4346f3a4c89b46599dd7aa792ce40ceff9d8d0d8e63b764c7c4",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "01_common.txt",
@@ -15313,7 +15973,7 @@
             "teu_amber_monopoly_law"
           ],
           "mod_mirror": "in_game/common/laws/02_country_specific.txt",
-          "mod_sha256": "e242bd79f533a00f033b24647d9112165bbb4e05991b3969b0aeddea0733c36d",
+          "mod_sha256": "971d008b6a30cc4b7b257ab39115c5246dd1a421e364db138e2ef06e49de0a99",
           "reference_count": 2,
           "references_sha256": "3a5287d56a531d8fd4f56ad34077bec481cc6f75fbee08d262e5f1c49f9ac560",
           "relative": "02_country_specific.txt",
@@ -15701,7 +16361,7 @@
             "vajrayana_law"
           ],
           "mod_mirror": "in_game/common/laws/sects.txt",
-          "mod_sha256": "183ccf1e687fc806f9139186137a8ac3337f58f3d917c864a6415832ee6273a2",
+          "mod_sha256": "e5ea9f589b822071faf0eeff65f2e8ff24d31baca90c25cc1f7284ce304911a2",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "sects.txt",
@@ -16117,7 +16777,7 @@
             "pa_hre_lessen_tax_burden"
           ],
           "mod_mirror": "in_game/common/parliament_agendas/10_hre_agendas.txt",
-          "mod_sha256": "ade1d56a01732c9d0d923021708ebfbb53dac81f14381aa8129bcfe7fa296d36",
+          "mod_sha256": "7eb7e79e239f6dd7f1e86664ff1bae569e532ff966881369f46ec9e7bb2f6fa1",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "10_hre_agendas.txt",
@@ -16332,7 +16992,7 @@
             "tolerance_of_non_hindus"
           ],
           "mod_mirror": "in_game/common/parliament_issues/01_country_specific_parliament_issues.txt",
-          "mod_sha256": "8dcc7932e366b046495f946023e08701a9e804f730cd2cef62d9081279e0a935",
+          "mod_sha256": "6c5b4c5d0322816c8a9d311f77942c8f4d83039fc61ac7e68e1f86af33001908",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "01_country_specific_parliament_issues.txt",
@@ -16357,7 +17017,7 @@
             "support_ruler"
           ],
           "mod_mirror": "in_game/common/parliament_issues/02_crown_estate_parliament_issues.txt",
-          "mod_sha256": "939b48e57faa813af6d59e715b4f03d59d27803377e93ae27b1addb8c3b6b282",
+          "mod_sha256": "321bb1dd952c2ee8b6b316cf273f0401796aec7eac5e3bb32ec5acedab87a773",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "02_crown_estate_parliament_issues.txt",
@@ -16392,7 +17052,7 @@
             "support_nobles_art"
           ],
           "mod_mirror": "in_game/common/parliament_issues/03_nobles_estate_parliament_issues.txt",
-          "mod_sha256": "a3d1cb1245c338976d696871a582bdb63b0c8213fbbc0f8a6854b895e76498a7",
+          "mod_sha256": "af2f8be6647967ff8241a36c3032f2f1491bd59620bc67cf6e1394c653ab09f1",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "03_nobles_estate_parliament_issues.txt",
@@ -16417,7 +17077,7 @@
             "support_religious_education"
           ],
           "mod_mirror": "in_game/common/parliament_issues/04_clergy_estate_parliament_issues.txt",
-          "mod_sha256": "76d1c5bcc6cfc8ccbb10cb8a075f81b0bd6ec16e2e66ce7cc86455c0e1672dca",
+          "mod_sha256": "9ba2ccd3930f9dfe15da0b2e500dafa7e07121daf5fbab36d69bd8413af4c85f",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "04_clergy_estate_parliament_issues.txt",
@@ -16453,7 +17113,7 @@
             "support_burgher_cabinet"
           ],
           "mod_mirror": "in_game/common/parliament_issues/05_burghers_estate_parliament_issues.txt",
-          "mod_sha256": "14539f3a9c4af18d2fe5f8013f5406103fad596a67649ee2117a76d7cc8fa78b",
+          "mod_sha256": "847d8dee7038d9b8977a1c6cdfcd8c7edc1a602af3d305cf8320f375a413540c",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "05_burghers_estate_parliament_issues.txt",
@@ -16480,7 +17140,7 @@
             "support_peasant_cabinet"
           ],
           "mod_mirror": "in_game/common/parliament_issues/06_peasants_estate_parliament_issues.txt",
-          "mod_sha256": "f6d293c2beabd97503c991a6fcef1669759b863eda6176c416881e1512065168",
+          "mod_sha256": "e29837e0557f562af98bffc4308b0537667861746cfc393836330df0684d68a4",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "06_peasants_estate_parliament_issues.txt",
@@ -16557,7 +17217,7 @@
             "wartime_officer_corps"
           ],
           "mod_mirror": "in_game/common/parliament_issues/07_expansion_parliament_issues.txt",
-          "mod_sha256": "59ba3518383ba8759e1c91707f2339f76528fc3c6a46ab3872dfb152b3f65bcf",
+          "mod_sha256": "c4497eb3c4f301fcd062e88839dcfd1b503a2d0230bfea6d2b6a21aa83661409",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "07_expansion_parliament_issues.txt",
@@ -16580,7 +17240,7 @@
             "hre_roman_month"
           ],
           "mod_mirror": "in_game/common/parliament_issues/10_hre_issues.txt",
-          "mod_sha256": "4efb00b52bb9f677c2ee3b1f67ac10cb11b7e7dc47646ce145c5b5ad4580bd55",
+          "mod_sha256": "485a8efe76c56149e902c95094f48924c98f5b9f6360e1f5b48083c4d290a2e8",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "10_hre_issues.txt",
@@ -16596,7 +17256,7 @@
             "union_enforce_law_implementation"
           ],
           "mod_mirror": "in_game/common/parliament_issues/11_union_issue.txt",
-          "mod_sha256": "8424e8f67b060331ece84e10f83642427dd332dc7450e8b5b8c5c8bf074975e3",
+          "mod_sha256": "9df9bd0b2f6e8c23a5ae3565169ffbda294622723a47232a5182ab48471d9f2e",
           "reference_count": 0,
           "references_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
           "relative": "11_union_issue.txt",

@@ -174,6 +174,24 @@ def render() -> tuple[str, int, int]:
             "note": note,
         }
 
+    # Exact reviewed anchors take precedence over broad regional envelopes.
+    # This matters at frontiers where one ancient polity's nearest ownable
+    # capital proxy lies inside another polity's coarse source region.
+    direct_locations: dict[str, str] = {}
+    for row in direct_rows:
+        location = row["location"]
+        previous = direct_locations.get(location)
+        if previous is not None and previous != row["tag"]:
+            errors.append(
+                f"{location}: conflicting exact anchors for {previous} and {row['tag']}"
+            )
+            continue
+        direct_locations[location] = row["tag"]
+        if location not in locations:
+            errors.append(f"{row['tag']}/{location}: unknown location")
+            continue
+        add(row["tag"], location, row["tenure"], row["source"], row["confidence"], row["note"])
+
     for row in area_rows:
         try:
             expanded = descendants(row["geography"], hierarchy, locations) & vanilla_owned
@@ -183,17 +201,9 @@ def render() -> tuple[str, int, int]:
         if not expanded:
             errors.append(f"{row['tag']}/{row['geography']}: no vanilla-ownable locations")
         for location in sorted(expanded):
+            if direct_locations.get(location, row["tag"]) != row["tag"]:
+                continue
             add(row["tag"], location, row["tenure"], row["source"], row["confidence"], row["note"])
-    for row in direct_rows:
-        location = row["location"]
-        if location not in locations:
-            errors.append(f"{row['tag']}/{location}: unknown location")
-            continue
-        # A directly reviewed local key can legitimately be unowned in 1337
-        # (for example, an ancient archaeological site). Broad geography is
-        # filtered through the vanilla ownership surface; exact reviewed keys
-        # are instead proved by the real-game smoke gate.
-        add(row["tag"], location, row["tenure"], row["source"], row["confidence"], row["note"])
     # Residual rows are an explicit last-mile SoP ledger.  They only fill
     # locations still unclaimed after precise area/direct rows and after any
     # earlier residual row.  Order is therefore a historical priority order,

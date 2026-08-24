@@ -108,7 +108,10 @@ aristocracy_vs_plutocracy = {
 }
 
 serfdom_vs_free_subjects = {
-	age = age_4_reformation
+	# Bound tenure and free household obligations are active ancient political
+	# questions, not a Dominate-only invention.  Availability from the opening
+	# age also keeps every retained reform requirement internally valid.
+	age = age_1_traditions
 	left_modifier = {
 		global_raw_material_output = 0.10
 		levy_recovery_modifier = 0.25
@@ -490,7 +493,7 @@ def validate() -> list[str]:
         )
 
     required_gates = {
-        "serfdom_vs_free_subjects": "age = age_4_reformation",
+        "serfdom_vs_free_subjects": "age = age_1_traditions",
         "outward_vs_inward": "age = age_3_discovery",
         "absolutism_vs_liberalism": "age = age_5_absolutism",
         "sinicized_vs_unsinicized": "antq_law_profile_eastern_trigger = yes",

@@ -753,8 +753,8 @@ antq_balearic_slingers = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -775,8 +775,8 @@ antq_cretan_archers = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -798,8 +798,8 @@ antq_germanic_bodyguards = {
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_heavy_infantry_construction
 	maintenance_demand = antq_heavy_infantry_maintenance
@@ -824,8 +824,8 @@ antq_saka_horse = {
 	copy_from = a_age_1_traditions_light_cavalry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_cavalry_construction
 	maintenance_demand = antq_light_cavalry_maintenance
@@ -850,8 +850,8 @@ antq_galatian_swordsmen = {
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_heavy_infantry_construction
 	maintenance_demand = antq_heavy_infantry_maintenance
@@ -876,8 +876,8 @@ antq_thracian_peltasts = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -902,8 +902,8 @@ antq_numidian_horse_company = {
 	copy_from = a_age_1_traditions_light_cavalry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_cavalry_construction
 	maintenance_demand = antq_light_cavalry_maintenance
@@ -1923,8 +1923,8 @@ antq_syrian_archers = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -1946,8 +1946,8 @@ antq_iberian_swordsmen = {
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_heavy_infantry_construction
 	maintenance_demand = antq_heavy_infantry_maintenance
@@ -1968,8 +1968,8 @@ antq_dacian_falxmen = {
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_heavy_infantry_construction
 	maintenance_demand = antq_heavy_infantry_maintenance
@@ -1991,8 +1991,8 @@ antq_armenian_horse = {
 	copy_from = a_age_1_traditions_light_cavalry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_cavalry_construction
 	maintenance_demand = antq_light_cavalry_maintenance
@@ -2014,8 +2014,8 @@ antq_cilician_marines = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -2499,8 +2499,8 @@ antq_frontier_spear_company = {
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	default = yes
 	age = age_1_traditions
 	construction_demand = antq_heavy_infantry_construction
@@ -2519,8 +2519,8 @@ antq_caravan_guard_company = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	default = yes
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
@@ -2535,12 +2535,50 @@ antq_caravan_guard_company = {
 	# P8.1;P8.2;P8.4;P8.5;P14;PER; A portable route-guard company role for paid escorts and armed brokers; local specialists and regional equipment remain represented by other companies.
 }
 
+antq_hired_horse_company = {
+	copy_from = a_age_1_traditions_light_cavalry
+	hide = no
+	buildable = yes
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
+	age = age_1_traditions
+	construction_demand = antq_light_cavalry_construction
+	maintenance_demand = antq_light_cavalry_maintenance
+	movement_speed = 0.12
+	flanking_ability = 0.06
+	combat = { grasslands = 0.04 desert = 0.03 }
+	country_potential = {
+		always = yes
+	}
+	gfx_tags = { light_tag }
+	# P14;CAH-XI; A portable mounted-service role for locally recruited scouts couriers and retainers without asserting uniform cavalry equipment or a named permanent company.
+}
+
+antq_local_retainer_company = {
+	copy_from = a_age_1_traditions_heavy_infantry
+	hide = no
+	buildable = yes
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
+	age = age_1_traditions
+	construction_demand = antq_heavy_infantry_construction
+	maintenance_demand = antq_heavy_infantry_maintenance
+	morale_damage_done = 0.04
+	strength_damage_taken = -0.01
+	combat = { forest = 0.03 hills = 0.03 }
+	country_potential = {
+		always = yes
+	}
+	gfx_tags = { medium_tag sword_tag }
+	# P14;CAH-XI; A portable paid-retainer role representing household and civic military labor without inventing a transregional institution or fixed ethnic roster.
+}
+
 antq_han_frontier_crossbow_company = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -2560,8 +2598,8 @@ antq_yellow_river_escort_company = {
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_heavy_infantry_construction
 	maintenance_demand = antq_heavy_infantry_maintenance
@@ -2581,8 +2619,8 @@ antq_indian_longbow_company = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -2656,8 +2694,8 @@ antq_deccan_spear_company = {
 	copy_from = a_age_1_traditions_heavy_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_heavy_infantry_construction
 	maintenance_demand = antq_heavy_infantry_maintenance
@@ -2731,8 +2769,8 @@ antq_nile_bow_company = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -2796,8 +2834,8 @@ antq_sahel_javelin_company = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -2861,8 +2899,8 @@ antq_mesoamerican_atlatl_company = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance
@@ -2940,8 +2978,8 @@ antq_andean_sling_company = {
 	copy_from = a_age_1_traditions_light_infantry
 	hide = no
 	buildable = yes
-	mercenaries_per_location = { pop_type = peasants multiply = 0.05 }
-	mercenaries_per_location = { pop_type = tribesmen multiply = 0.05 }
+	mercenaries_per_location = { pop_type = peasants multiply = 0.50 }
+	mercenaries_per_location = { pop_type = tribesmen multiply = 0.50 }
 	age = age_1_traditions
 	construction_demand = antq_light_infantry_construction
 	maintenance_demand = antq_light_infantry_maintenance

@@ -24,6 +24,8 @@ ROOT = Path(__file__).resolve().parents[1]
 TIMELINE = ROOT / "docs/timeline.csv"
 TAG_MAP = ROOT / "docs/world_1ad/tag_map.json"
 EVENT_OUTPUT = ROOT / "in_game/events/antq_m10_first_century.txt"
+TEUTOBURG_TRIGGER_OUTPUT = ROOT / "in_game/common/scripted_triggers/antq_s7_teutoburg.txt"
+TEUTOBURG_LIFESPAN_GUARD = "antq_m6_historical_lifespan_guard"
 SITUATION_OUTPUT = ROOT / "in_game/common/situations/antq_m10_first_century.txt"
 DISASTER_OUTPUT = ROOT / "in_game/common/disasters/antq_m10_first_century.txt"
 LOC_ROOT = ROOT / "main_menu/localization"
@@ -33,6 +35,9 @@ NORTH_XIONGNU_SEED = ROOT / "docs/m10/northern_xiongnu_48_locations.csv"
 START_COUNTRIES = ROOT / "main_menu/setup/start/10_countries.txt"
 LOCATION_COORDINATES = ROOT / "docs/vanilla_symbols/location_coordinates.json"
 BATCH_END = AntqDate.parse("96.1.1")
+
+TEUTOBURG_OPPONENTS = ("CRU", "CHT", "BRC", "MCM", "SEM", "BTV", "FRI", "SGM", "LAN")
+TEUTOBURG_POLICY_EVENT = "antq_m10.1099"
 
 
 def progress_variable(record: object) -> str:
@@ -62,77 +67,136 @@ def current_lifecycle_lines(record: object, *, country_scoped: bool) -> tuple[st
     instead of substituting prestige notifications for material consequences.
     """
     variable = progress_variable(record)
+    profile = event_choice_profile(record)
+    peace_rate, war_rate, collapse_rate = {
+        "contest": (2.5, 1.75, 0.5),
+        "frontier": (2.25, 2.0, 0.5),
+        "crisis": (2.0, 1.0, 0.5),
+        "belief": (3.0, 1.0, 0.75),
+        "exchange": (3.25, 1.25, 0.75),
+        "foundation": (2.75, 1.5, 0.5),
+        "government": (2.75, 1.25, 0.5),
+    }[profile]
     disease = record.key in {"antonine_plague", "cyprian_plague"}
+    baseline_pressure = (
+        (
+            "add_manpower = { value = monthly_manpower multiply = -0.5 }",
+            "add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }",
+            "capital = { province = { change_province_food_percentage = -0.01 } }",
+        )
+        if disease
+        else (
+            "add_manpower = { value = monthly_manpower multiply = -0.25 }",
+            "add_gold = { value = monthly_income_trade_and_tax multiply = -0.15 }",
+            "capital = { province = { change_province_food_percentage = -0.005 } }",
+        )
+    )
+    pressure_effects = baseline_pressure + {
+        "contest": ("add_stability = stability_weak_penalty",),
+        "frontier": ("add_war_exhaustion = war_exhaustion_weak_bonus",),
+        "crisis": ("add_stability = stability_weak_penalty",),
+        "belief": (
+            "add_religious_influence_if_valid = { VALUE = religious_influence_weak_penalty }",
+        ),
+        "exchange": ("add_prestige = prestige_weak_penalty",),
+        "foundation": ("add_legitimacy = legitimacy_weak_penalty",),
+        "government": ("add_stability = stability_weak_penalty",),
+    }[profile]
+    success_effects = {
+        "contest": ("add_army_tradition = army_tradition_weak_bonus", "add_stability = stability_weak_bonus"),
+        "frontier": ("add_army_tradition = army_tradition_mild_bonus", "add_prestige = prestige_weak_bonus"),
+        "crisis": ("add_stability = stability_mild_bonus",),
+        "belief": ("add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }",),
+        "exchange": ("add_research_progress = research_progress_weak_bonus", "add_prestige = prestige_weak_bonus"),
+        "foundation": ("add_legitimacy = legitimacy_mild_bonus", "add_stability = stability_weak_bonus"),
+        "government": ("add_legitimacy = legitimacy_weak_bonus", "add_stability = stability_weak_bonus"),
+    }[profile]
+    failure_effects = {
+        "contest": ("add_stability = stability_mild_penalty",),
+        "frontier": ("add_war_exhaustion = war_exhaustion_mild_bonus",),
+        "crisis": ("add_stability = stability_mild_penalty",),
+        "belief": ("add_religious_influence_if_valid = { VALUE = religious_influence_mild_penalty }",),
+        "exchange": ("add_prestige = prestige_mild_penalty",),
+        "foundation": ("add_legitimacy = legitimacy_mild_penalty",),
+        "government": ("add_stability = stability_mild_penalty",),
+    }[profile]
     pressure_weight = 3 if disease else 1
     empty_weight = 9 if disease else 23
+    milestone_variables = tuple(
+        f"{record.script_key}_milestone_{threshold}" for threshold in (25, 50, 75)
+    )
     start_event = (
         f"\t\ttrigger_event_non_silently = {record.event_key}"
         if country_scoped else
         f"\t\tc:{record.engine_tag} = {{ trigger_event_non_silently = {record.event_key} }}"
     )
     end_key = "on_end" if country_scoped else "on_ended"
-    if country_scoped:
-        monthly_lines = (
-            "\ton_monthly = {",
-            "\t\tif = {",
-            "\t\t\tlimit = { stability >= 20 at_war = no }",
-            f"\t\t\tchange_variable = {{ name = {variable} add = 3 }}",
-            "\t\t}",
-            "\t\telse_if = {",
-            "\t\t\tlimit = { stability >= 0 at_war = yes }",
-            f"\t\t\tchange_variable = {{ name = {variable} add = 1.5 }}",
-            "\t\t}",
-            "\t\telse = {",
-            f"\t\t\tchange_variable = {{ name = {variable} add = 0.5 }}",
-            "\t\t}",
-            "\t\trandom_list = {",
-            f"\t\t\t{pressure_weight} = {{",
-            "\t\t\t\tadd_manpower = { value = monthly_manpower multiply = -0.5 }",
-            "\t\t\t\tadd_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }",
-            "\t\t\t\tcapital = { province = { change_province_food_percentage = -0.01 } }",
-            "\t\t\t}",
-            f"\t\t\t{empty_weight} = {{}}",
-            "\t\t}",
-            "\t}",
-        )
-    else:
-        monthly_lines = (
-            "\ton_monthly = {",
-            f"\t\tc:{record.engine_tag} = {{",
-            "\t\t\tif = {",
-            "\t\t\t\tlimit = { stability >= 20 at_war = no }",
-            f"\t\t\t\troot = {{ change_variable = {{ name = {variable} add = 3 }} }}",
-            "\t\t\t}",
-            "\t\t\telse_if = {",
-            "\t\t\t\tlimit = { stability >= 0 at_war = yes }",
-            f"\t\t\t\troot = {{ change_variable = {{ name = {variable} add = 1.5 }} }}",
-            "\t\t\t}",
-            "\t\t\telse = {",
-            f"\t\t\t\troot = {{ change_variable = {{ name = {variable} add = 0.5 }} }}",
-            "\t\t\t}",
-            "\t\t\trandom_list = {",
-            f"\t\t\t\t{pressure_weight} = {{",
-            "\t\t\t\t\tadd_manpower = { value = monthly_manpower multiply = -0.5 }",
-            "\t\t\t\t\tadd_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }",
-            "\t\t\t\t\tcapital = { province = { change_province_food_percentage = -0.01 } }",
-            "\t\t\t\t}",
-            f"\t\t\t\t{empty_weight} = {{}}",
-            "\t\t\t}",
-            "\t\t}",
-            "\t}",
-        )
-    return (
+    lines = [
         "\ton_start = {",
         f"\t\tset_variable = {{ name = {variable} value = 0 }}",
         start_event,
         "\t}",
-        *monthly_lines,
-        f"\t{end_key} = {{",
-        f"\t\tif = {{ limit = {{ has_variable = {variable} }} remove_variable = {variable} }}",
-        "\t\tadd_stability = stability_weak_bonus" if country_scoped else
-        f"\t\tc:{record.engine_tag} ?= {{ add_stability = stability_weak_bonus }}",
-        "\t}",
+        "\ton_monthly = {",
+    ]
+    if not country_scoped:
+        lines.append(f"\t\tc:{record.engine_tag} = {{")
+    country_indent = "\t\t" if country_scoped else "\t\t\t"
+    progress_prefix = "" if country_scoped else "root = { "
+    progress_suffix = "" if country_scoped else " }"
+    lines.extend((
+        f"{country_indent}if = {{",
+        f"{country_indent}\tlimit = {{ stability >= 20 at_war = no }}",
+        f"{country_indent}\t{progress_prefix}change_variable = {{ name = {variable} add = {peace_rate:g} }}{progress_suffix}",
+        f"{country_indent}}}",
+        f"{country_indent}else_if = {{",
+        f"{country_indent}\tlimit = {{ stability >= 0 at_war = yes }}",
+        f"{country_indent}\t{progress_prefix}change_variable = {{ name = {variable} add = {war_rate:g} }}{progress_suffix}",
+        f"{country_indent}}}",
+        f"{country_indent}else = {{",
+        f"{country_indent}\t{progress_prefix}change_variable = {{ name = {variable} add = {collapse_rate:g} }}{progress_suffix}",
+        f"{country_indent}}}",
+        f"{country_indent}random_list = {{",
+        f"{country_indent}\t{pressure_weight} = {{",
+        *(f"{country_indent}\t\t{effect}" for effect in pressure_effects),
+        f"{country_indent}\t}}",
+        f"{country_indent}\t{empty_weight} = {{}}",
+        f"{country_indent}}}",
+    ))
+    if not country_scoped:
+        lines.append("\t\t}")
+    for threshold, milestone in zip((25, 50, 75), milestone_variables):
+        lines.extend((
+            "\t\tif = {",
+            f"\t\t\tlimit = {{ var:{variable} >= {threshold} NOT = {{ has_variable = {milestone} }} }}",
+            f"\t\t\tset_variable = {milestone}",
+            (
+                "\t\t\tadd_prestige = prestige_weak_bonus"
+                if country_scoped else
+                f"\t\t\tc:{record.engine_tag} ?= {{ add_prestige = prestige_weak_bonus }}"
+            ),
+            "\t\t}",
+        ))
+    lines.extend(("\t}", f"\t{end_key} = {{", "\t\tif = {", f"\t\t\tlimit = {{ var:{variable} >= 100 }}"))
+    if country_scoped:
+        lines.extend(f"\t\t\t{effect}" for effect in success_effects)
+    else:
+        lines.append(f"\t\t\tc:{record.engine_tag} ?= {{")
+        lines.extend(f"\t\t\t\t{effect}" for effect in success_effects)
+        lines.append("\t\t\t}")
+    lines.extend(("\t\t}", "\t\telse = {"))
+    if country_scoped:
+        lines.extend(f"\t\t\t{effect}" for effect in failure_effects)
+    else:
+        lines.append(f"\t\t\tc:{record.engine_tag} ?= {{")
+        lines.extend(f"\t\t\t\t{effect}" for effect in failure_effects)
+        lines.append("\t\t\t}")
+    lines.extend(("\t\t}", f"\t\tif = {{ limit = {{ has_variable = {variable} }} remove_variable = {variable} }}"))
+    lines.extend(
+        f"\t\tif = {{ limit = {{ has_variable = {milestone} }} remove_variable = {milestone} }}"
+        for milestone in milestone_variables
     )
+    lines.extend(("\t}",))
+    return tuple(lines)
 
 
 def situation_presentation_lines(key: str, anchor_tag: str) -> tuple[str, ...]:
@@ -296,6 +360,25 @@ def matching_block(text: str, open_brace: int) -> str:
     raise ValueError("unterminated Paradox block")
 
 
+def validate_ai_chance_syntax(script: str, *, source: str) -> None:
+    """Reject effect-flow syntax inside event MTTH/AI-weight blocks.
+
+    EU5 parses ``ai_chance`` with the mean-time-to-happen grammar: conditional
+    weights must be ``modifier`` blocks. Effect-style ``if``/``add`` tokens can
+    make the engine abandon the containing option and reject every later event
+    even when the file's braces are balanced.
+    """
+    for match in re.finditer(r"\bai_chance\s*=\s*\{", script):
+        block = matching_block(script, match.end() - 1)
+        invalid = re.search(r"(?m)^\s*(?:if|else_if|else|add)\s*=", block)
+        if invalid is not None:
+            line = script.count("\n", 0, match.start()) + 1
+            raise ValueError(
+                f"{source}:{line}: ai_chance uses effect-flow token "
+                f"{invalid.group(0).strip()} instead of modifier = {{ factor = ... }}"
+            )
+
+
 def start_country_locations(tag: str) -> frozenset[str]:
     """Read the checked M3 start surface so a later map revision cannot silently
     turn a dated release into an empty country.
@@ -419,6 +502,8 @@ def validate(records: tuple[Current, ...]) -> None:
 
 
 def event_outcome(record: Current) -> str:
+    if record.key == "teutoburg":
+        return "negative"
     if record.key == "second_temple_destruction":
         return "negative"
     if record.kind == "disaster":
@@ -430,6 +515,17 @@ def event_outcome(record: Current) -> str:
 
 def impact_lines(record: Current) -> tuple[str, ...]:
     """Use only effects harvested from installed country-event files."""
+    if record.key == "teutoburg":
+        return (
+            "\t\tadd_manpower = { value = monthly_manpower multiply = -3 }",
+            "\t\tadd_war_exhaustion = war_exhaustion_severe_bonus",
+            "\t\tadd_stability = stability_mild_penalty",
+            "\t\tadd_prestige = prestige_mild_penalty",
+            "\t\tvar:antq_teutoburg_opponent ?= {",
+            "\t\t\tadd_prestige = prestige_mild_bonus",
+            "\t\t\tadd_army_tradition = army_tradition_mild_bonus",
+            "\t\t}",
+        )
     if record.key == "christianity_foundation":
         return (
             "\t\treligion:antq_early_christianity = {",
@@ -509,6 +605,168 @@ def impact_lines(record: Current) -> tuple[str, ...]:
     return ("\t\tadd_prestige = prestige_mild_bonus",)
 
 
+def event_choice_profile(record: object) -> str:
+    """Classify a current for authored choice text and materially distinct costs."""
+    key = record.key
+    if record.kind == "disaster":
+        return "crisis"
+    if record.kind == "situation":
+        return "contest"
+    if record.kind in {"formation", "tagswitch"}:
+        return "foundation"
+    if any(token in key for token in (
+        "christian", "buddh", "celestial", "manichae", "conversion",
+        "nicaea", "thessalonica", "chalcedon", "temple", "olympic",
+    )):
+        return "belief"
+    if any(token in key for token in ("mission", "embassy", "paper", "silphium")):
+        return "exchange"
+    if any(token in key for token in (
+        "teutoburg", "fire", "wall", "graupius", "caledonia", "sack",
+    )):
+        return "frontier"
+    return "government"
+
+
+EVENT_CHOICE_TEXT = {
+    "contest": (
+        "Pursue the recorded settlement of {label}.",
+        "Negotiate a local compact for {label}.",
+        "Mobilize to impose a settlement in {label}.",
+    ),
+    "crisis": (
+        "Follow the recorded emergency measures for {label}.",
+        "Fund local relief and reconstruction during {label}.",
+        "Impose guarded rationing throughout {label}.",
+    ),
+    "foundation": (
+        "Recognize the political order created by {label}.",
+        "Build {label} through negotiated local compacts.",
+        "Impose the new order of {label} from the center.",
+    ),
+    "belief": (
+        "Accept the recorded religious settlement of {label}.",
+        "Protect debate and competing communities during {label}.",
+        "Bind the court publicly to one side of {label}.",
+    ),
+    "exchange": (
+        "Adopt the practice transmitted through {label}.",
+        "Fund the merchants and scholars carrying {label}.",
+        "Keep the knowledge of {label} under court supervision.",
+    ),
+    "frontier": (
+        "Carry out the recorded frontier response to {label}.",
+        "Rebuild locally and bargain through {label}.",
+        "Answer {label} with forts and concentrated troops.",
+    ),
+    "government": (
+        "Accept the recorded constitutional course of {label}.",
+        "Seek consent through offices during {label}.",
+        "Issue a binding central decree for {label}.",
+    ),
+}
+
+
+def event_choice_localization(record: object) -> tuple[str, str, str]:
+    if record.key == "teutoburg":
+        return (
+            "Accept the Varian disaster and withdraw the shattered commands.",
+            "Extricate the field army through prepared Rhine positions.",
+            "Concentrate reinforcements and contest the frontier campaign.",
+        )
+    return tuple(
+        text.format(label=record.label)
+        for text in EVENT_CHOICE_TEXT[event_choice_profile(record)]
+    )
+
+
+def event_path_variable(record: object, path: str) -> str:
+    return f"antq_m10_{record.key}_{path}_path"
+
+
+def historical_event_choice_lines(record: object) -> tuple[str, ...]:
+    path_state = (
+        () if record.key == "odoacer_finale" else
+        (f"\t\tset_variable = {event_path_variable(record, 'chronicle')}",)
+    )
+    return (
+        *path_state,
+        "\t\tai_chance = {",
+        "\t\t\tbase = 50",
+        "\t\t\tmodifier = { factor = 1.24 stability >= 20 }",
+        "\t\t\tmodifier = { factor = 0.84 at_war = yes }",
+        "\t\t}",
+    )
+
+
+def alternative_event_option_lines(record: object) -> tuple[str, ...]:
+    """Provide two persistent, non-cosmetic alternatives to the historical path."""
+    profile = event_choice_profile(record)
+    if record.key == "teutoburg":
+        second = (
+            "\t\tadd_gold = -18",
+            "\t\tadd_manpower = { value = monthly_manpower multiply = -1 }",
+            "\t\tadd_war_exhaustion = war_exhaustion_weak_bonus",
+            "\t\tadd_stability = stability_weak_bonus",
+            "\t\tvar:antq_teutoburg_opponent ?= { add_prestige = prestige_weak_bonus }",
+        )
+        third = (
+            "\t\tadd_gold = -24",
+            "\t\tadd_manpower = { value = monthly_manpower multiply = -2 }",
+            "\t\tadd_war_exhaustion = war_exhaustion_mild_bonus",
+            "\t\tadd_army_tradition = army_tradition_mild_bonus",
+            "\t\tvar:antq_teutoburg_opponent ?= { add_manpower = { value = monthly_manpower multiply = -1 } }",
+        )
+    elif profile == "crisis":
+        second = ("\t\tadd_gold = -24", "\t\tadd_stability = stability_weak_bonus", "\t\tadd_prestige = prestige_mild_bonus")
+        third = ("\t\tadd_manpower = { value = monthly_manpower multiply = -1 }", "\t\tadd_stability = stability_weak_penalty", "\t\tadd_legitimacy = legitimacy_mild_bonus")
+    elif profile in {"contest", "frontier"}:
+        second = ("\t\tadd_gold = -16", "\t\tadd_stability = stability_weak_bonus", "\t\tadd_prestige = prestige_mild_penalty")
+        third = ("\t\tadd_gold = -10", "\t\tadd_manpower = { value = monthly_manpower multiply = -1.5 }", "\t\tadd_stability = stability_weak_penalty", "\t\tadd_prestige = prestige_mild_bonus")
+    elif profile == "belief":
+        second = ("\t\tadd_gold = -18", "\t\tadd_stability = stability_weak_bonus", "\t\tadd_prestige = prestige_mild_bonus")
+        third = ("\t\tadd_legitimacy = legitimacy_mild_bonus", "\t\tadd_stability = stability_weak_penalty")
+    elif profile == "exchange":
+        second = ("\t\tadd_gold = -20", "\t\tadd_prestige = prestige_mild_bonus")
+        third = ("\t\tadd_gold = -10", "\t\tadd_stability = stability_weak_bonus", "\t\tadd_prestige = prestige_mild_penalty")
+    elif profile == "foundation":
+        second = ("\t\tadd_gold = -20", "\t\tadd_stability = stability_weak_bonus")
+        third = ("\t\tadd_legitimacy = legitimacy_mild_bonus", "\t\tadd_stability = stability_weak_penalty", "\t\tadd_prestige = prestige_mild_bonus")
+    else:
+        second = ("\t\tadd_gold = -18", "\t\tadd_stability = stability_weak_bonus", "\t\tadd_prestige = prestige_mild_penalty")
+        third = ("\t\tadd_legitimacy = legitimacy_mild_bonus", "\t\tadd_stability = stability_weak_penalty", "\t\tadd_prestige = prestige_mild_bonus")
+    compact_state = (
+        () if record.key == "odoacer_finale" else
+        (f"\t\tset_variable = {event_path_variable(record, 'compact')}",)
+    )
+    command_state = (
+        () if record.key == "odoacer_finale" else
+        (f"\t\tset_variable = {event_path_variable(record, 'command')}",)
+    )
+    return (
+        "\toption = {",
+        f"\t\tname = {record.event_key}.b",
+        *compact_state,
+        *second,
+        "\t\tai_chance = {",
+        "\t\t\tbase = 30",
+        "\t\t\tmodifier = { factor = 1.6 stability < 0 }",
+        "\t\t\tmodifier = { factor = 0.6 gold < 30 }",
+        "\t\t}",
+        "\t}",
+        "\toption = {",
+        f"\t\tname = {record.event_key}.c",
+        *command_state,
+        *third,
+        "\t\tai_chance = {",
+        "\t\t\tbase = 20",
+        "\t\t\tmodifier = { factor = 1.75 at_war = yes }",
+        "\t\t\tmodifier = { factor = 0.25 monthly_manpower < 1 }",
+        "\t\t}",
+        "\t}",
+    )
+
+
 def event_script(records: tuple[Current, ...]) -> str:
     lines = [
         "# Generated by tools/m10_history.py --write; first-century historical currents.",
@@ -530,26 +788,158 @@ def event_script(records: tuple[Current, ...]) -> str:
         if image is not None:
             lines.append(f'\timage = "{image}"')
         if record.kind not in {"situation", "disaster"}:
+            event_from = record.date
+            if record.key == "teutoburg":
+                # A battle culmination belongs late in the sourced AD 9 window,
+                # after campaign conditions can develop; it is never a day-one
+                # calendar notification.
+                event_from = offset_date(
+                    record.date,
+                    (days_between(record.date, record.end_date) * 3) // 5,
+                )
             lines.extend((
                 "\tdynamic_historical_event = {",
                 f"\t\ttag = {record.engine_tag}",
-                f"\t\tfrom = {record.date.engine()}",
+                f"\t\tfrom = {event_from.engine()}",
                 f"\t\tto = {record.end_date.engine()}",
                 "\t\tmonthly_chance = 100",
+                "\t}",
+            ))
+        if record.key == "teutoburg":
+            lines.extend((
+                "\ttrigger = {",
+                "\t\tantq_teutoburg_campaign_ready_trigger = yes",
+                "\t\tNOT = { has_variable = antq_teutoburg_battle_resolved }",
+                "\t}",
+                "\timmediate = {",
+                *teutoburg_opponent_capture_lines(indent="\t\t"),
+                "\t\tset_variable = antq_teutoburg_battle_resolved",
+                "\t\tif = { limit = { has_variable = antq_teutoburg_chain_active } remove_variable = antq_teutoburg_chain_active }",
+                "\t\tif = {",
+                "\t\t\tlimit = { has_variable = antq_teutoburg_varus }",
+                "\t\t\tvar:antq_teutoburg_varus = {",
+                f"\t\t\t\tremove_character_modifier = {TEUTOBURG_LIFESPAN_GUARD}",
+                "\t\t\t\tsave_scope_as = antq_teutoburg_departing_varus",
+                "\t\t\t}",
+                "\t\t\tkill_character_silently = scope:antq_teutoburg_departing_varus",
+                "\t\t\tremove_variable = antq_teutoburg_varus",
+                "\t\t}",
                 "\t}",
             ))
         lines.extend((
             "\toption = {",
             f"\t\tname = {record.event_key}.a",
             "\t\thistorical_option = yes",
+            *historical_event_choice_lines(record),
             *impact_lines(record),
             *event_effect_lines(record.key),
             *knowledge_response_lines(record.kind, 0),
             "\t}",
+            *alternative_event_option_lines(record),
             "}",
             "",
         ))
+    teutoburg = next(record for record in records if record.key == "teutoburg")
+    policy_from = offset_date(teutoburg.end_date, 1)
+    policy_to = offset_date(policy_from, 365)
+    lines.extend((
+        "# Counterfactual Germania policy; derived from the end of the sourced Teutoburg window.",
+        f"{TEUTOBURG_POLICY_EVENT} = {{",
+        "\ttype = country_event",
+        f"\ttitle = {TEUTOBURG_POLICY_EVENT}.title",
+        f"\tdesc = {TEUTOBURG_POLICY_EVENT}.desc",
+        "\toutcome = neutral",
+        "\tfire_only_once = yes",
+        f'\timage = "{EVENT_IMAGES["immensum_bellum"]}"',
+        "\tdynamic_historical_event = {",
+        f"\t\ttag = {teutoburg.engine_tag}",
+        f"\t\tfrom = {policy_from.engine()}",
+        f"\t\tto = {policy_to.engine()}",
+        "\t\tmonthly_chance = 100",
+        "\t}",
+        "\ttrigger = {",
+        "\t\tNOT = { has_variable = antq_teutoburg_battle_resolved }",
+        "\t\tNOT = { has_variable = antq_teutoburg_policy_resolved }",
+        "\t}",
+        "\timmediate = {",
+        "\t\tset_variable = antq_teutoburg_policy_resolved",
+        "\t\tif = {",
+        "\t\t\tlimit = { has_variable = antq_teutoburg_varus }",
+        "\t\t\tvar:antq_teutoburg_varus = {",
+        f"\t\t\t\tremove_character_modifier = {TEUTOBURG_LIFESPAN_GUARD}",
+        "\t\t\t}",
+        "\t\t\tremove_variable = antq_teutoburg_varus",
+        "\t\t}",
+        "\t}",
+        "\toption = {",
+        f"\t\tname = {TEUTOBURG_POLICY_EVENT}.a",
+        "\t\thistorical_option = yes",
+        "\t\tadd_gold = -12",
+        "\t\tadd_stability = stability_weak_bonus",
+        "\t\tadd_prestige = prestige_weak_penalty",
+        "\t\tai_chance = { base = 50 }",
+        "\t}",
+        "\toption = {",
+        f"\t\tname = {TEUTOBURG_POLICY_EVENT}.b",
+        "\t\tadd_manpower = { value = monthly_manpower multiply = -1 }",
+        "\t\tadd_prestige = prestige_weak_bonus",
+        "\t\tai_chance = { base = 30 }",
+        "\t}",
+        "\toption = {",
+        f"\t\tname = {TEUTOBURG_POLICY_EVENT}.c",
+        "\t\tadd_gold = -16",
+        "\t\tadd_legitimacy = legitimacy_weak_bonus",
+        "\t\tai_chance = { base = 20 }",
+        "\t}",
+        "}",
+        "",
+    ))
+    script = "\n".join(lines)
+    validate_ai_chance_syntax(script, source=str(EVENT_OUTPUT.relative_to(ROOT)))
+    return script
+
+
+def teutoburg_trigger_script() -> str:
+    """Require a living Roman Varus and a real war against a frontier polity."""
+    mapped_tags = engine_tags()
+    opponent_tags = tuple(mapped_tags[design_tag] for design_tag in TEUTOBURG_OPPONENTS)
+    lines = [
+        "# Generated by tools/m10_history.py --write; Round 7 Teutoburg campaign gate.",
+        "# Country scope. Territorial ownership and unrelated wars are intentionally insufficient.",
+        "antq_teutoburg_campaign_ready_trigger = {",
+        "\ttrigger_if = {",
+        "\t\tlimit = { has_variable = antq_teutoburg_varus }",
+        "\t\tvar:antq_teutoburg_varus = { is_alive = yes }",
+        "\t}",
+        "\ttrigger_else = { always = no }",
+        "\tOR = {",
+    ]
+    for tag in opponent_tags:
+        lines.extend((
+            "\t\tAND = {",
+            f"\t\t\tcountry_exists = c:{tag}",
+            f"\t\t\tis_at_war_with = c:{tag}",
+            "\t\t}",
+        ))
+    lines.extend(("\t}", "}", ""))
     return "\n".join(lines)
+
+
+def teutoburg_opponent_capture_lines(*, indent: str) -> tuple[str, ...]:
+    """Persist the first qualifying opponent for participant-facing consequences."""
+    mapped_tags = engine_tags()
+    lines: list[str] = []
+    for index, design_tag in enumerate(TEUTOBURG_OPPONENTS):
+        tag = mapped_tags[design_tag]
+        keyword = "if" if index == 0 else "else_if"
+        lines.extend((
+            f"{indent}{keyword} = {{",
+            f"{indent}\tlimit = {{ country_exists = c:{tag} is_at_war_with = c:{tag} }}",
+            f"{indent}\tc:{tag} = {{ save_scope_as = antq_teutoburg_selected_opponent }}",
+            f"{indent}\tset_variable = {{ name = antq_teutoburg_opponent value = scope:antq_teutoburg_selected_opponent }}",
+            f"{indent}}}",
+        ))
+    return tuple(lines)
 
 
 def situation_script(records: tuple[Current, ...]) -> str:
@@ -623,11 +1013,16 @@ def localization(records: tuple[Current, ...], language: str) -> str:
         ' XSO_ADJ: "Southern Xiongnu"',
     ))
     for record in records:
-        description = f"{record.summary} This historical current follows the {record.rails.lower()} setting."
+        description = (
+            f"{record.summary}. Decisions taken during this current alter its "
+            "pace, cost, and eventual resolution."
+        )
         lines.extend((
             f' {record.event_key}.title: "{record.label}"',
             f' {record.event_key}.desc: "{description}"',
-            f' {record.event_key}.a: "Meet the historical current."',
+            f' {record.event_key}.a: "{event_choice_localization(record)[0]}"',
+            f' {record.event_key}.b: "{event_choice_localization(record)[1]}"',
+            f' {record.event_key}.c: "{event_choice_localization(record)[2]}"',
             f' {record.event_key}.entry: "{record.label}"',
             f' {record.event_key}.entry_short: "{record.label}"',
         ))
@@ -636,6 +1031,15 @@ def localization(records: tuple[Current, ...], language: str) -> str:
                 f' {record.script_key}: "{record.label}"',
                 f' {record.script_key}_desc: "{description}"',
             ))
+    lines.extend((
+        f' {TEUTOBURG_POLICY_EVENT}.title: "The Germania Frontier Policy"',
+        f' {TEUTOBURG_POLICY_EVENT}.desc: "No Varian disaster has defined the northern frontier. The court must now decide whether Germania is to be held through a compact Rhine line, continued forward occupation, or negotiated frontier partnerships."',
+        f' {TEUTOBURG_POLICY_EVENT}.a: "Consolidate a defensible Rhine command."',
+        f' {TEUTOBURG_POLICY_EVENT}.b: "Maintain the forward military districts."',
+        f' {TEUTOBURG_POLICY_EVENT}.c: "Build compacts with the frontier peoples."',
+        f' {TEUTOBURG_POLICY_EVENT}.entry: "The Germania Frontier Policy"',
+        f' {TEUTOBURG_POLICY_EVENT}.entry_short: "Germania Policy"',
+    ))
     return "\n".join(lines) + "\n"
 
 
@@ -684,6 +1088,7 @@ def transformation_coas() -> str:
 def outputs(records: tuple[Current, ...]) -> dict[Path, str]:
     rendered = {
         EVENT_OUTPUT: event_script(records),
+        TEUTOBURG_TRIGGER_OUTPUT: teutoburg_trigger_script(),
         SITUATION_OUTPUT: situation_script(records),
         DISASTER_OUTPUT: disaster_script(records),
         COLOR_OUTPUT: transformation_colors(),

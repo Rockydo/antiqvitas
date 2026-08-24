@@ -44,7 +44,7 @@ sengoku = {
 	}
 
 	on_start = {
-		c:JAP ?= { form_country = formable_country:ASK_f }
+		c:DUMMY ?= { form_country = formable_country:ASK_f }
 		international_organization:japanese_shogunate ?= {
 			if = {
 				limit = {
@@ -275,7 +275,7 @@ sengoku = {
 						ruler ?= {
 							any_close_relative = {
 								owner ?= scope:sengoku_cache_country
-								NOT = { has_variable = hostage_character_country }
+								NOT = { always = no }
 								is_ruler = no
 								OR = {
 									is_adult = no

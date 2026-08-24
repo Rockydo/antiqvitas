@@ -11,14 +11,14 @@ english_civil_war = {
 			limit = {
 				OR = {
 					AND = {
-						country_exists = c:ENG
-						c:ENG = { has_variable = english_civil_war_chance_variable }
+						country_exists = c:DUMMY
+						c:DUMMY = { has_variable = english_civil_war_chance_variable }
 
 					}
 					AND = {
 						tag_exists = GBR
-						country_exists = c:GBR
-						c:GBR = { has_variable = english_civil_war_chance_variable }
+						country_exists = c:DUMMY
+						c:DUMMY = { has_variable = english_civil_war_chance_variable }
 					}
 				}
 			}

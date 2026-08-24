@@ -9,7 +9,7 @@ flavor_pav.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -18,7 +18,7 @@ flavor_pav.1 = {
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		government_type = c:MLO.government_type
+		government_type = c:DUMMY.government_type
 		ruler = { has_dynasty = yes }
 		ruler.dynasty = dynasty:beccaria_dynasty
 	}
@@ -55,7 +55,7 @@ flavor_pav.1 = {
 
 		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_extreme_bonus }
 
-		c:MLO ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = flavor_pav.2
 		}
 	}

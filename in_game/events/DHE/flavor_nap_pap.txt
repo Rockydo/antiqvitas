@@ -2,11 +2,11 @@
 
 scripted_effect nap_exposed_donation_of_constantine = {
 	drop_antagonism_bomb = {
-		target = c:PAP.capital
+		target = c:DUMMY.capital
 		modifier = antagonism_revealed_sham_documents
 	}
 
-    c:PAP ?= {
+    c:DUMMY ?= {
         add_opinion_mutual_effect = {
             modifier = nap_papal_state_exposed
             target = ROOT
@@ -30,7 +30,7 @@ flavor_nap_pap.1 = { #Lorenzo Valla
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -39,11 +39,11 @@ flavor_nap_pap.1 = { #Lorenzo Valla
 	trigger = {
 		current_date > 476.9.4
 		OR = {
-			is_rival_of = c:PAP
-			is_enemy_of = c:PAP
-			is_neighbor_of = c:PAP
+			is_rival_of = c:DUMMY
+			is_enemy_of = c:DUMMY
+			is_neighbor_of = c:DUMMY
 		}
-		c:PAP = {
+		c:DUMMY = {
 			has_ruler = yes
 		}
 		has_ruler = yes
@@ -127,7 +127,7 @@ flavor_nap_pap.2 = { #Exposee on Donation of Constantine is done
 
 		nap_exposed_donation_of_constantine = yes
 
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_nap_pap.3
 		}
 
@@ -284,7 +284,7 @@ flavor_nap_pap.4 = { #Each Christian Nation can make up their mind on it
 				multiply = local_var:harshness_multiplier
 			}
 		}
-		c:PAP ?= {
+		c:DUMMY ?= {
 			add_opinion = {
 				target = ROOT
 				modifier = nap_condemned_his_holiness
@@ -311,7 +311,7 @@ flavor_nap_pap.4 = { #Each Christian Nation can make up their mind on it
 			factor = 1
 			modifier = {
 				factor = { # 0 to 200
-					value = "root.opinion(c:PAP)"
+					value = "root.opinion(c:DUMMY)"
 					add = 200
 					divide = 2
             	}

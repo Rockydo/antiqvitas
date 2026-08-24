@@ -10,7 +10,7 @@ ai_ottomans_conquest_area_events.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -33,7 +33,7 @@ ai_ottomans_conquest_area_events.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -56,7 +56,7 @@ ai_ottomans_conquest_area_events.3 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -72,7 +72,7 @@ ai_ottomans_conquest_area_events.3 = {
 
 ai_ottomans_conquest_area_events.4 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = TUR from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	trigger = {
 		current_date > 476.9.4
 		has_area_preference = ottoman_expansion_balkan
@@ -85,7 +85,7 @@ ai_ottomans_conquest_area_events.4 = {
 
 ai_ottomans_conquest_area_events.5 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = TUR from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	trigger = {
 		current_date > 476.9.4
 		has_area_preference = ottoman_expansion_crescent_egypt
@@ -99,7 +99,7 @@ ai_ottomans_conquest_area_events.5 = {
 
 ai_ottomans_conquest_area_events.6 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = TUR from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	trigger = {
 		current_date > 476.9.4
 		has_area_preference = ottoman_expansion_carpathia
@@ -118,7 +118,7 @@ ai_ottomans_conquest_area_events.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -135,7 +135,7 @@ ai_ottomans_conquest_area_events.7 = {
 namespace = ai_france_conquest_area_events
 ai_france_conquest_area_events.1 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = FRA from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = france_little_bit_of_hre
@@ -148,7 +148,7 @@ ai_france_conquest_area_events.1 = {
 
 ai_france_conquest_area_events.2 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = FRA from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = generic_conquer_home_region
@@ -160,7 +160,7 @@ ai_france_conquest_area_events.2 = {
 
 ai_france_conquest_area_events.3 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = FRA from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	trigger = {
 		current_date > 476.9.4
 		is_revolutionary = yes
@@ -174,7 +174,7 @@ ai_france_conquest_area_events.3 = {
 namespace = ai_castile_conquest_area_events
 ai_castile_conquest_area_events.1 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = CAS tag = SPA from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = castile_conquer_new_world
@@ -187,7 +187,7 @@ ai_castile_conquest_area_events.1 = {
 namespace = ai_austria_conquest_area_events
 ai_austria_conquest_area_events.1 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = HAB from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		remove_area_preference = austria_swiss_intention
@@ -198,7 +198,7 @@ ai_austria_conquest_area_events.1 = {
 }
 ai_austria_conquest_area_events.2 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = HAB from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = austria_bohemia_conquest
@@ -210,7 +210,7 @@ ai_austria_conquest_area_events.2 = {
 }
 ai_austria_conquest_area_events.3 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = HAB from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = austria_empire_conquest
@@ -223,7 +223,7 @@ ai_austria_conquest_area_events.3 = {
 namespace = ai_brandenburg_conquest_area_events
 ai_brandenburg_conquest_area_events.1 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = BRA from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = brandenburg_conquest
@@ -236,7 +236,7 @@ ai_brandenburg_conquest_area_events.1 = {
 namespace = ai_prussia_conquest_area_events
 ai_prussia_conquest_area_events.1 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = PRU from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = prussia_conquest
@@ -247,7 +247,7 @@ ai_prussia_conquest_area_events.1 = {
 }
 ai_prussia_conquest_area_events.2 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = PRU from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = german_unification_conquest
@@ -260,7 +260,7 @@ ai_prussia_conquest_area_events.2 = {
 namespace = ai_saxony_conquest_area_events
 ai_saxony_conquest_area_events.1 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = SAX from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = saxony_conquest
@@ -273,7 +273,7 @@ ai_saxony_conquest_area_events.1 = {
 namespace = ai_russia_conquest_area_events
 ai_russia_conquest_area_events.1 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = RUS tag = MOS from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = russia_conquer_scandinavia
@@ -286,7 +286,7 @@ ai_russia_conquest_area_events.1 = {
 
 ai_russia_conquest_area_events.2 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = RUS tag = MOS from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = russia_conquer_siberia
@@ -300,7 +300,7 @@ ai_russia_conquest_area_events.2 = {
 
 ai_russia_conquest_area_events.3 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = RUS tag = MOS from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = russia_colonize_alaska
@@ -313,7 +313,7 @@ ai_russia_conquest_area_events.3 = {
 namespace = ai_england_conquest_area_events
 ai_england_conquest_area_events.1 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = ENG from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		remove_area_preference = england_conquer_france
@@ -327,7 +327,7 @@ ai_england_conquest_area_events.1 = {
 namespace = ai_sweden_conquest_area_events
 ai_sweden_conquest_area_events.1 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = SWE from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = sweden_swedish_empire_conquests
@@ -340,7 +340,7 @@ ai_sweden_conquest_area_events.1 = {
 namespace = ai_timurids_conquest_area_events
 ai_timurids_conquest_area_events.1 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = TIM from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = timurids_anatolian_conquest
@@ -356,7 +356,7 @@ ai_timurids_conquest_area_events.1 = {
 namespace = ai_china_conquest_area_events
 ai_china_conquest_area_events.1 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = CHI from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = china_chinese_unification
@@ -370,7 +370,7 @@ ai_china_conquest_area_events.1 = {
 namespace = ai_venice_conquest_area_events
 ai_venice_conquest_area_events.1 = {
 	type = country_event outcome = neutral title = empty_text desc = empty_text hidden = yes fire_only_once = yes
-	dynamic_historical_event = { tag = VEN from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
+	dynamic_historical_event = { tag = DUMMY from = 476.9.4 to = 476.9.4 monthly_chance = 10 }
 	
 	immediate = {
 		add_area_preference = venice_conquest

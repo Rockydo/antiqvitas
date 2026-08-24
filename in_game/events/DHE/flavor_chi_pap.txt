@@ -8,7 +8,7 @@ flavor_chi_pap.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -27,7 +27,7 @@ flavor_chi_pap.1 = {
 				}
 			}
 		}
-		country_exists = c:CHI
+		country_exists = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -97,7 +97,7 @@ flavor_chi_pap.1 = {
 		}
 		add_prestige = prestige_extreme_bonus
 
-		c:CHI = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = flavor_chi_pap.2
 				years = 3

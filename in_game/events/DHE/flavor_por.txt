@@ -12,7 +12,7 @@ flavor_por.1 = { #Christopher Columbus in Portugal
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -29,17 +29,17 @@ flavor_por.1 = { #Christopher Columbus in Portugal
 	immediate = {
 		if = {
 			limit = {
-				country_exists = c:SPA
+				country_exists = c:DUMMY
 			}
-			c:SPA = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}
 		else_if = {
 			limit = {
-				country_exists = c:CAS
+				country_exists = c:DUMMY
 			}
-			c:CAS = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}
@@ -106,7 +106,7 @@ flavor_por.2 = { #Atlantic Slave Trade
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -150,7 +150,7 @@ flavor_por.3 = { #Missionaries in the Spice Islands
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -200,7 +200,7 @@ flavor_por.4 = { #Founding Casa da India
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -240,7 +240,7 @@ flavor_por.5 = { #Tower of Belem
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -301,7 +301,7 @@ flavor_por.6 = { #Jerónimos Monastery
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -342,7 +342,7 @@ flavor_por.7 = { #Discovery of Indian Sea Route
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -360,7 +360,7 @@ flavor_por.7 = { #Discovery of Indian Sea Route
 	trigger = {
 		current_date > 476.9.4
 		discovered_route_to_india = yes
-		location:goa = { is_discovered_by = c:POR }
+		location:goa = { is_discovered_by = c:DUMMY }
 
 	}
 	
@@ -381,7 +381,7 @@ flavor_por.8 = {  #Governorate General of Brazil
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -431,7 +431,7 @@ flavor_por.9 = { #Spice Trade in Indian Ocean
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -505,7 +505,7 @@ flavor_por.10 = { #Afonso de Sousa Colonial Governor
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -570,7 +570,7 @@ flavor_por.11 = { #Crusade in Morocco
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -633,7 +633,7 @@ flavor_por.12 = { #Methuen Agreement
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -715,7 +715,7 @@ flavor_por.13 = { #Luís de Meneses Cabinet Member
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -774,7 +774,7 @@ flavor_por.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -941,7 +941,7 @@ flavor_por.19 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1016,9 +1016,9 @@ flavor_por.19 = {
 		name = flavor_por.19.b
 		trigger = {
 			OR = {
-				is_subject_of = c:SPA
+				is_subject_of = c:DUMMY
 				AND = {
-					in_union_with = c:SPA
+					in_union_with = c:DUMMY
 					is_junior_partner = yes
 				}
 			}
@@ -1029,19 +1029,19 @@ flavor_por.19 = {
 
 		if = {
 			limit = {
-				can_declare_legal_war_on = { target = c:SPA }
+				can_declare_legal_war_on = { target = c:DUMMY }
 			}
-			declare_war_with_cb = {	target = c:SPA	type = casus_belli:cb_independence_war }
+			declare_war_with_cb = {	target = c:DUMMY	type = casus_belli:cb_independence_war }
 		}
 		else = {
 			add_casus_belli = {
-				target = c:SPA
+				target = c:DUMMY
 				type = casus_belli:cb_independence_war
 			}
 		}
 
 		add_opinion = {
-			target = c:SPA
+			target = c:DUMMY
 			modifier = opinion_angry
 		}
 
@@ -1167,7 +1167,7 @@ flavor_por.21 = { #The Lusiads
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1229,7 +1229,7 @@ flavor_por.22 = { #Vasco da Gama
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1388,7 +1388,7 @@ flavor_por.25 = { #The New Seat of the Order of Christ
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1398,7 +1398,7 @@ flavor_por.25 = { #The New Seat of the Order of Christ
 		current_date > 476.9.4
 		owns = location:tavira
 		owns = location:tomar
-		c:POR = {
+		c:DUMMY = {
 			is_human = no
 		}
 	}
@@ -1410,7 +1410,7 @@ flavor_por.25 = { #The New Seat of the Order of Christ
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:POR = {
+		c:DUMMY = {
 			ruler ?= {
 				save_scope_as = target_character
 			}
@@ -1424,11 +1424,11 @@ flavor_por.25 = { #The New Seat of the Order of Christ
 			change_building_level_in_location = {
 				building = building_type:order_stronghold
 				value = 1
-				owner = c:POR
+				owner = c:DUMMY
 			}
 		}
 		location:tavira = {
-			destroy_building = "building(building_type:order_stronghold|c:POR)"
+			destroy_building = "building(building_type:order_stronghold|c:DUMMY)"
 		}
 	}
 
@@ -1451,7 +1451,7 @@ flavor_por.26 = { #Madeira Wine
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1515,7 +1515,7 @@ flavor_por.27 = { #Saint Thomas Christians
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1576,7 +1576,7 @@ flavor_por.28 = { #The Establishment of Portuguese Inquisition
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1648,7 +1648,7 @@ flavor_por.29 = { #The Epistola de Victoria Contra Infideles
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1986,7 +1986,7 @@ flavor_por.30 = { #The Lisbon Massacre
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2169,7 +2169,7 @@ flavor_por.31 = { #The Expulsion of Muslims from Portugal
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2618,7 +2618,7 @@ flavor_por.32 = { #Muslims in Portugal need our help
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:POR = {
+		c:DUMMY = {
 			ruler = {
 				save_scope_as = target_character
 			}
@@ -2628,16 +2628,16 @@ flavor_por.32 = { #Muslims in Portugal need our help
 	option = {
 		name = flavor_por.32.a
 		add_casus_belli = {
-			target = c:POR
+			target = c:DUMMY
 			type = casus_belli:cb_jihad
-			province = c:POR.capital.province
+			province = c:DUMMY.capital.province
 		}
 	}
 
 	option = {
 		name = flavor_por.32.b
 		declare_war_with_cb = {
-			target = c:POR
+			target = c:DUMMY
 			type = casus_belli:cb_jihad
 			target_province = location:lisbon.province
 		}
@@ -2656,7 +2656,7 @@ flavor_por.33 = { #Ribeira das Naus
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2704,7 +2704,7 @@ flavor_por.34 = { # Transferring the University of Coimbra
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2773,7 +2773,7 @@ flavor_por.35 = { # Ericeira's policies - Mercantilist Ideals of [target_charact
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2859,7 +2859,7 @@ flavor_por.36 = { # Pombal - Ambitions of [target_character.GetName]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2930,7 +2930,7 @@ flavor_por.37 = { # Esmeraldo de Situ Orbis
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3008,7 +3008,7 @@ flavor_por.38 = { # Gaspar da India
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3082,20 +3082,20 @@ flavor_por.39 = { # Cronica Geral de Espanha
 			is_alive = yes
 			owner = ROOT
 		}
-		c:CAS ?= {
+		c:DUMMY ?= {
 			custom_tooltip = {
 				text = variable_won_battle_of_rio_salado_tt
 				has_variable = won_battle_of_rio_salado
 			}
 		}
 		is_allied_with = {
-			target = c:CAS
+			target = c:DUMMY
 		}
 	}
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3143,7 +3143,7 @@ flavor_por.40 = { # Lei Mental
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3228,12 +3228,12 @@ flavor_por.41 = {
 			limit = {
 				tag = POR
 			}
-			c:CAS ?= {
+			c:DUMMY ?= {
 				is_neighbor_of = ROOT
 			}
 		}
 		trigger_else = {
-			c:POR ?= {
+			c:DUMMY ?= {
 				is_neighbor_of = ROOT
 			}
 		}
@@ -3277,12 +3277,12 @@ flavor_por.41 = {
 			limit = {
 				tag = POR
 			}
-			c:CAS = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}
 		else = {
-			c:POR = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}
@@ -3341,7 +3341,7 @@ flavor_por.43 = { # The Last Troubadour - Livro das Cantigas
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -3355,7 +3355,7 @@ flavor_por.43 = { # The Last Troubadour - Livro das Cantigas
 		}
 		character:cas_alfonso_xi_burgundy = {
 			is_alive = yes
-			owner ?= c:CAS
+			owner ?= c:DUMMY
 		}
 	}
 
@@ -3372,7 +3372,7 @@ flavor_por.43 = { # The Last Troubadour - Livro das Cantigas
 		character:cas_alfonso_xi_burgundy = {
 			save_scope_as = target_dedication_character
 		}
-		c:CAS = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		location:lamego = {
@@ -3456,7 +3456,7 @@ flavor_por.45 = { # Ordenações Afonsinas
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3511,7 +3511,7 @@ flavor_por.46 = { # Ordenações Manuelinas
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3550,7 +3550,7 @@ flavor_por.47 = { # The Misericórdia
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3620,7 +3620,7 @@ flavor_por.48 = { # Established Feitoria in Bruges
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3689,7 +3689,7 @@ flavor_por.49 = { # Fernão Lopes
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3744,7 +3744,7 @@ flavor_por.50 = { # End of the Orders of Avis, Christ and Santiago in Portugal
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3853,7 +3853,7 @@ flavor_por.51 = { # São Jorge da Mina
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3932,7 +3932,7 @@ flavor_por.52 = { # Navigator Prince
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4025,7 +4025,7 @@ flavor_por.53 = { # Bartolomeu Dias
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4092,7 +4092,7 @@ flavor_por.54 = { #Formation of the Terço
 	historical_info = flavor_por.54.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -4178,7 +4178,7 @@ flavor_por.55 = { #Feitoria of Arguin
 	historical_info = flavor_por.55.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -4240,7 +4240,7 @@ flavor_por.56 = { #Feitoria of Macau
 	historical_info = flavor_por.56.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4310,7 +4310,7 @@ flavor_por.57 = { #Feitoria of Goa
 	historical_info = flavor_por.57.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -4393,7 +4393,7 @@ flavor_por.58 = { #Feitoria of Hormuz
 	historical_info = flavor_por.58.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -4474,7 +4474,7 @@ flavor_por.59 = { #Feitoria of Malacca
 	historical_info = flavor_por.59.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -4552,7 +4552,7 @@ flavor_por.60 = {
 	historical_info = flavor_por.60.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4639,7 +4639,7 @@ flavor_por.61 = { #Ceuta Crusade
 	historical_info = flavor_por.61.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -4711,7 +4711,7 @@ flavor_por.62 = { #Magellan
 	historical_info = flavor_por.62.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -4744,17 +4744,17 @@ flavor_por.62 = { #Magellan
 
 		if = {
 			limit = {
-				country_exists = c:SPA
+				country_exists = c:DUMMY
 			}
-			c:SPA = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}
 		else_if = {
 			limit = {
-				country_exists = c:CAS
+				country_exists = c:DUMMY
 			}
-			c:CAS = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}
@@ -4815,7 +4815,7 @@ flavor_por.64 = { #Feitoria in the Gold Coast
 	image = "gfx/interface/illustrations/institutions/new_world.dds"
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -4893,7 +4893,7 @@ flavor_por.65 = { # The House of Mendes
 
 	major = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5030,7 +5030,7 @@ flavor_por.1000 = { #Capture of the Santa Catarina
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -5118,12 +5118,12 @@ flavor_por.1001 = {
 		name = flavor_por.1001.a
 		historical_option = yes
 		change_gold_effect = { scale = 6.00 }
-		c:POR = {	trigger_event_silently = { id = flavor_por.1002 }	}
+		c:DUMMY = {	trigger_event_silently = { id = flavor_por.1002 }	}
 	}
 	option = {
 		name = flavor_por.1001.b
 		add_prestige = prestige_mild_penalty
-		c:POR = {	trigger_event_silently = { id = flavor_por.1003 } }
+		c:DUMMY = {	trigger_event_silently = { id = flavor_por.1003 } }
 	}
 	trigger = {
 		current_date > 476.9.4
@@ -5199,7 +5199,7 @@ flavor_por.2000 = { # Inês de Castro joins the court
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 33
@@ -5257,7 +5257,7 @@ flavor_por.2001 = { # Pedro's affair with Inês
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5617,7 +5617,7 @@ flavor_por.2007 = { # Castro's Influences
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:CAS ?= {
+		c:DUMMY ?= {
 			save_scope_as = target_country
 		}
 	}
@@ -5652,7 +5652,7 @@ flavor_por.2100 = { # A Letter to the Persian King
 	historical_info = flavor_por.2100.historical_info
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -5668,7 +5668,7 @@ flavor_por.2100 = { # A Letter to the Persian King
 		current_date > 476.9.4
 		religion.group = religion_group:christian
 		tag_exists = IRA
-		c:IRA ?= {
+		c:DUMMY ?= {
 			is_subject = no
 			religion.group != root.religion.group
 			ruler_or_regent ?= {
@@ -5686,7 +5686,7 @@ flavor_por.2100 = { # A Letter to the Persian King
 			save_scope_as = target_character
 		}
 
-		c:IRA = {
+		c:DUMMY = {
 			event_illustration_government_estate_effect = yes
 			save_scope_as = target_country
 			ruler_or_regent = {
@@ -5785,7 +5785,7 @@ flavor_por.2200 = { # Gaining a port in Japan
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = POR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2

@@ -27,26 +27,51 @@ antq_m10_fourth_crete_earthquake = {
 	on_monthly = {
 		if = {
 			limit = { stability >= 20 at_war = no }
-			change_variable = { name = antq_m10_fourth_crete_earthquake_resolution_progress add = 3 }
+			change_variable = { name = antq_m10_fourth_crete_earthquake_resolution_progress add = 2 }
 		}
 		else_if = {
 			limit = { stability >= 0 at_war = yes }
-			change_variable = { name = antq_m10_fourth_crete_earthquake_resolution_progress add = 1.5 }
+			change_variable = { name = antq_m10_fourth_crete_earthquake_resolution_progress add = 1 }
 		}
 		else = {
 			change_variable = { name = antq_m10_fourth_crete_earthquake_resolution_progress add = 0.5 }
 		}
 		random_list = {
 			1 = {
-				add_manpower = { value = monthly_manpower multiply = -0.5 }
-				add_gold = { value = monthly_income_trade_and_tax multiply = -0.25 }
-				capital = { province = { change_province_food_percentage = -0.01 } }
+				add_manpower = { value = monthly_manpower multiply = -0.25 }
+				add_gold = { value = monthly_income_trade_and_tax multiply = -0.15 }
+				capital = { province = { change_province_food_percentage = -0.005 } }
+				add_stability = stability_weak_penalty
 			}
 			23 = {}
 		}
+		if = {
+			limit = { var:antq_m10_fourth_crete_earthquake_resolution_progress >= 25 NOT = { has_variable = antq_m10_fourth_crete_earthquake_milestone_25 } }
+			set_variable = antq_m10_fourth_crete_earthquake_milestone_25
+			add_prestige = prestige_weak_bonus
+		}
+		if = {
+			limit = { var:antq_m10_fourth_crete_earthquake_resolution_progress >= 50 NOT = { has_variable = antq_m10_fourth_crete_earthquake_milestone_50 } }
+			set_variable = antq_m10_fourth_crete_earthquake_milestone_50
+			add_prestige = prestige_weak_bonus
+		}
+		if = {
+			limit = { var:antq_m10_fourth_crete_earthquake_resolution_progress >= 75 NOT = { has_variable = antq_m10_fourth_crete_earthquake_milestone_75 } }
+			set_variable = antq_m10_fourth_crete_earthquake_milestone_75
+			add_prestige = prestige_weak_bonus
+		}
 	}
 	on_end = {
+		if = {
+			limit = { var:antq_m10_fourth_crete_earthquake_resolution_progress >= 100 }
+			add_stability = stability_mild_bonus
+		}
+		else = {
+			add_stability = stability_mild_penalty
+		}
 		if = { limit = { has_variable = antq_m10_fourth_crete_earthquake_resolution_progress } remove_variable = antq_m10_fourth_crete_earthquake_resolution_progress }
-		add_stability = stability_weak_bonus
+		if = { limit = { has_variable = antq_m10_fourth_crete_earthquake_milestone_25 } remove_variable = antq_m10_fourth_crete_earthquake_milestone_25 }
+		if = { limit = { has_variable = antq_m10_fourth_crete_earthquake_milestone_50 } remove_variable = antq_m10_fourth_crete_earthquake_milestone_50 }
+		if = { limit = { has_variable = antq_m10_fourth_crete_earthquake_milestone_75 } remove_variable = antq_m10_fourth_crete_earthquake_milestone_75 }
 	}
 }

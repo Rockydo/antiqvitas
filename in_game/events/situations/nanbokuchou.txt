@@ -99,7 +99,7 @@ nanbokuchou.1 = { #Nanbokuchō Jidai
 				set_vote = {
 					voter = prev
 					resolution = resolution:nanbokuchou_resolution
-					vote = c:NTC
+					vote = c:DUMMY
 					locked = yes
 				}
 			}
@@ -123,7 +123,7 @@ nanbokuchou.1 = { #Nanbokuchō Jidai
 				set_vote = {
 					voter = prev
 					resolution = resolution:nanbokuchou_resolution
-					vote = c:STC
+					vote = c:DUMMY
 					locked = yes
 				}
 			}
@@ -138,19 +138,19 @@ scripted_effect nanbokuchou_end_event_emperor_effect = {
 	scope:target_emperor = {
 		if = {
 			limit = {
-				this = c:NTC
-				exists = c:STC.ruler
-				ruler ?= c:STC.ruler
+				this = c:DUMMY
+				exists = c:DUMMY.ruler
+				ruler ?= c:DUMMY.ruler
 			}
-			annex_country = { country = c:STC }
+			annex_country = { country = c:DUMMY }
 		}
 		if = {
 			limit = {
-				this = c:STC
-				exists = c:NTC.ruler
-				ruler ?= c:NTC.ruler
+				this = c:DUMMY
+				exists = c:DUMMY.ruler
+				ruler ?= c:DUMMY.ruler
 			}
-			annex_country = { country = c:NTC }
+			annex_country = { country = c:DUMMY }
 		}
 		form_country = formable_country:YMT_f
 		if = {
@@ -250,13 +250,13 @@ nanbokuchou.3 = { #Window of Opportunity
 		international_organization:japanese_shogunate.leader_country = { save_scope_as = target_shogun }
 		if = {
 			limit = { has_variable = supports_northern_court }
-			c:STC = { save_scope_as = target_enemy_court }
-			c:NTC = { save_scope_as = target_supported_court }
+			c:DUMMY = { save_scope_as = target_enemy_court }
+			c:DUMMY = { save_scope_as = target_supported_court }
 		}
 		if = {
 			limit = { has_variable = supports_southern_court }
-			c:STC = { save_scope_as = target_supported_court }
-			c:NTC = { save_scope_as = target_enemy_court }
+			c:DUMMY = { save_scope_as = target_supported_court }
+			c:DUMMY = { save_scope_as = target_enemy_court }
 		}
 		scope:target_enemy_court = {
 			ruler_or_heir_if_regent ?= { save_scope_as = target_enemy_emperor }

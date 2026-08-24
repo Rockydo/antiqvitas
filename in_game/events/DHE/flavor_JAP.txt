@@ -9,7 +9,7 @@ flavor_jap.1 = { #The Sakoku Law
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -47,7 +47,7 @@ flavor_jap.2 = { #Rangaku
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -62,7 +62,7 @@ flavor_jap.2 = { #Rangaku
 		current_date > 476.9.4
 		is_subject = no
 		owns = location:nishisonogi	# nagasaki
-		country_exists = c:NED
+		country_exists = c:DUMMY
 		location:nishisonogi = {
 			has_location_modifier = jap_dejima_island
 		}
@@ -76,7 +76,7 @@ flavor_jap.2 = { #Rangaku
 					international_organization_has_policy = policy:sakoku_enabled
 				}
 				receiving_scripted_relation = {
-					target = c:NED
+					target = c:DUMMY
 					type = relation_type:exclusive_trade_rights_with_isolated
 				}
 			}
@@ -84,7 +84,7 @@ flavor_jap.2 = { #Rangaku
 	}
 
 	immediate = {
-		c:NED ?= { save_scope_as = target_country }
+		c:DUMMY ?= { save_scope_as = target_country }
 		location:nishisonogi = { save_scope_as = target_location }
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
 	}
@@ -113,7 +113,7 @@ flavor_jap.3 = { #William Adams #PRISON
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -275,7 +275,7 @@ flavor_jap.6 = { #Kirishitan
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -350,7 +350,7 @@ flavor_jap.7 = { #Buke Shohatto
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -443,7 +443,7 @@ flavor_jap.9 = { #Gokaidō
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -484,7 +484,7 @@ flavor_jap.10 = { #Kyōhō Reforms
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -521,7 +521,7 @@ flavor_jap.11 = { #Genroku
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -562,7 +562,7 @@ flavor_jap.12 = { #Kokugaku
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -599,7 +599,7 @@ flavor_jap.13 = { #Kakitsu Treaty
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = SOU
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -607,13 +607,13 @@ flavor_jap.13 = { #Kakitsu Treaty
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:KOR
-		opinion = { target = c:KOR value >= 50 }
+		country_exists = c:DUMMY
+		opinion = { target = c:DUMMY value >= 50 }
 		NOT = { has_policy = state_piracy_policy }
 	}
 
 	immediate = {
-		c:KOR = {
+		c:DUMMY = {
 			capital.market = { save_scope_as = target_location }
 			save_scope_as = target_kor
 		}
@@ -622,7 +622,7 @@ flavor_jap.13 = { #Kakitsu Treaty
 	option = { #Sign the treaty
 		name = flavor_jap.13.a
 		add_opinion_mutual_effect = {
-			target = c:KOR
+			target = c:DUMMY
 			modifier = opinion_traders_in_x
 		}
 		scope:target_location = {
@@ -666,7 +666,7 @@ flavor_jap.101 = { # Proclamation of Takauji as Shogun
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -677,7 +677,7 @@ flavor_jap.101 = { # Proclamation of Takauji as Shogun
 		has_ruler = yes
 		character:jap_ashikaga_takauji ?= {
 			is_alive = yes
-			owner = c:JAP
+			owner = c:DUMMY
 			is_ruler = yes
 		}
 		character:jap_koumyou_tenno ?= {
@@ -710,7 +710,7 @@ flavor_jap.102 = { # Appointment of Ko no Moronao as Shitsuji
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -741,7 +741,7 @@ flavor_jap.102 = { # Appointment of Ko no Moronao as Shitsuji
 	option = { # Grant him the office of Shitsuji
 		name = flavor_jap.102.a
 		historical_option = yes
-		c:KOU ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = flavor_jap.180
 		}
 		custom_tooltip = jap_should_ko_clan_accept
@@ -772,7 +772,7 @@ flavor_jap.103 = { # Attempted Assination of Moronao by Tadayoshi
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -856,7 +856,7 @@ flavor_jap.104 = { # Tadayoshi Defects to the South Court
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -877,14 +877,14 @@ flavor_jap.104 = { # Tadayoshi Defects to the South Court
 			text = variable_tadayoshi_to_south_court_tt
 			has_variable = tadayoshi_to_south_court
 		}
-		country_exists = c:STC
+		country_exists = c:DUMMY
 	}
 
 	immediate = {
 		ruler ?= {
 			save_scope_as = our_ruler
 		}
-		c:STC ?={
+		c:DUMMY ?={
 			ruler_or_regent ?= {
 				save_scope_as = stc_ruler
 			}
@@ -901,9 +901,9 @@ flavor_jap.104 = { # Tadayoshi Defects to the South Court
 		add_stability = stability_severe_penalty
 		custom_tooltip = south_court_will_become_stronger
 		scope:ask_tadayoshi = {
-			move_country = c:STC
+			move_country = c:DUMMY
 		}
-		c:STC = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_jap.105
 		}
 	}
@@ -931,7 +931,7 @@ flavor_jap.105 = { # Arrival of Tadayoshi to the South Court # For STC
 		ruler_or_regent ?= {
 			save_scope_as = our_ruler
 		}
-		c:JAP ?={
+		c:DUMMY ?={
 			ruler_or_regent ?= {
 				save_scope_as = jap_ruler
 			}
@@ -944,7 +944,7 @@ flavor_jap.105 = { # Arrival of Tadayoshi to the South Court # For STC
 		historical_option = yes
 		show_as_tooltip = {
 			scope:ask_tadayoshi = {
-				move_country = c:STC
+				move_country = c:DUMMY
 			}
 		}
 		add_stability = stability_mild_bonus
@@ -974,7 +974,7 @@ flavor_jap.106 = { # Yamana Shugo Sides with Southern Court
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -988,8 +988,8 @@ flavor_jap.106 = { # Yamana Shugo Sides with Southern Court
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:YMN
-		c:YMN ?= {
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
 			has_ruler = yes
 			custom_tooltip = {
 				text = variable_supports_northern_court_tt
@@ -1003,7 +1003,7 @@ flavor_jap.106 = { # Yamana Shugo Sides with Southern Court
 		ruler ?= {
 			save_scope_as = our_ruler
 		}
-		c:YMN ?={
+		c:DUMMY ?={
 			save_scope_as = ymn_clan
 			ruler ?= {
 				save_scope_as = ymn_ruler
@@ -1017,7 +1017,7 @@ flavor_jap.106 = { # Yamana Shugo Sides with Southern Court
 		historical_option = yes
 		add_stability = stability_mild_penalty
 		add_legitimacy = legitimacy_mild_penalty
-		c:YMN ?= {
+		c:DUMMY ?= {
 			custom_tooltip = {
 				text = flavor_jap.106.tt
 				nanbokuchou_change_sides_effect = yes
@@ -1029,13 +1029,13 @@ flavor_jap.106 = { # Yamana Shugo Sides with Southern Court
 		name = flavor_jap.106.b
 		add_stability = stability_severe_penalty
 		add_prestige = prestige_mild_bonus
-		c:YMN ?= {
+		c:DUMMY ?= {
 			custom_tooltip = {
 				text = flavor_jap.106.tt
 				nanbokuchou_change_sides_effect = yes
 			}
 		}
-		add_casus_belli = { target = c:YMN type = casus_belli:cb_shogunate_reassert_authority }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_shogunate_reassert_authority }
 	}
 }
 
@@ -1048,7 +1048,7 @@ flavor_jap.107 = { # Submission of the Yamana and Ouchi clans
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 14
@@ -1065,16 +1065,16 @@ flavor_jap.107 = { # Submission of the Yamana and Ouchi clans
 		has_ruler = yes
 		ruler = { has_dynasty = yes }
 		at_war = no
-		country_exists = c:OUC
-		country_exists = c:YMN
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 		international_organization:japanese_shogunate = {
 			country_has_special_status = {
 				type = special_status:shugo_daimyo
-				country = c:OUC
+				country = c:DUMMY
 			}
 			country_has_special_status = {
 				type = special_status:shugo_daimyo
-				country = c:YMN
+				country = c:DUMMY
 			}
 		}
 	}
@@ -1090,7 +1090,7 @@ flavor_jap.107 = { # Submission of the Yamana and Ouchi clans
 		historical_option = yes
 		add_stability = stability_mild_bonus
 		add_legitimacy = legitimacy_mild_bonus
-		c:OUC ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = {
 					religion = { has_honor = yes }
@@ -1101,9 +1101,9 @@ flavor_jap.107 = { # Submission of the Yamana and Ouchi clans
 				add_legitimacy = legitimacy_mild_bonus
 			}
 			add_country_modifier = { modifier = jap_shugo_autonomy_for_submission years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_submission_to_the_shogunate }
+			add_opinion = { target = c:DUMMY modifier = jap_submission_to_the_shogunate }
 		}
-		c:YMN ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = {
 					religion = { has_honor = yes }
@@ -1114,7 +1114,7 @@ flavor_jap.107 = { # Submission of the Yamana and Ouchi clans
 				add_legitimacy = legitimacy_mild_bonus
 			}
 			add_country_modifier = { modifier = jap_shugo_autonomy_for_submission years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_submission_to_the_shogunate }
+			add_opinion = { target = c:DUMMY modifier = jap_submission_to_the_shogunate }
 		}
 	}
 	option = { # Refuse, we will not offer special privileges to any Shugos!
@@ -1129,11 +1129,11 @@ flavor_jap.107 = { # Submission of the Yamana and Ouchi clans
 		else = {
 			add_legitimacy = legitimacy_mild_penalty
 		}
-		c:OUC ?= {
-			add_opinion = { target = c:JAP modifier = jap_refused_submission_offer }
+		c:DUMMY ?= {
+			add_opinion = { target = c:DUMMY modifier = jap_refused_submission_offer }
 		}
-		c:YMN ?= {
-			add_opinion = { target = c:JAP modifier = jap_refused_submission_offer }
+		c:DUMMY ?= {
+			add_opinion = { target = c:DUMMY modifier = jap_refused_submission_offer }
 		}
 	}
 }
@@ -1148,7 +1148,7 @@ flavor_jap.110 = { # Early Phase of Shugo integration into Bureaucracy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1202,7 +1202,7 @@ flavor_jap.111 = { # Kanrei Council System
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1246,7 +1246,7 @@ flavor_jap.112 = { # Inclusion of Powerful clans to the Kanrei Council
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1265,9 +1265,9 @@ flavor_jap.112 = { # Inclusion of Powerful clans to the Kanrei Council
 			text = variable_jap_integrating_the_shugo_tt
 			has_variable = jap_integrating_the_shugo
 		}
-		country_exists = c:HSK
-		country_exists = c:SBA
-		country_exists = c:HTK
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 	}
 
 	immediate = {
@@ -1282,19 +1282,19 @@ flavor_jap.112 = { # Inclusion of Powerful clans to the Kanrei Council
 		historical_option = yes
 		add_prestige = prestige_mild_bonus
 		add_legitimacy = legitimacy_mild_bonus
-		c:HSK ?= {
+		c:DUMMY ?= {
 			add_country_modifier = { modifier = jap_senior_kanrei_clan_member years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_on_kanrei_council }
+			add_opinion = { target = c:DUMMY modifier = jap_on_kanrei_council }
 			set_variable = { name = jap_founding_kanrei_member years = 175 }
 		}
-		c:SBA ?= {
+		c:DUMMY ?= {
 			add_country_modifier = { modifier = jap_senior_kanrei_clan_member years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_on_kanrei_council }
+			add_opinion = { target = c:DUMMY modifier = jap_on_kanrei_council }
 			set_variable = { name = jap_founding_kanrei_member years = 175 }
 		}
-		c:HTK ?= {
+		c:DUMMY ?= {
 			add_country_modifier = { modifier = jap_senior_kanrei_clan_member years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_on_kanrei_council }
+			add_opinion = { target = c:DUMMY modifier = jap_on_kanrei_council }
 			set_variable = { name = jap_founding_kanrei_member years = 175 }
 		}
 	}
@@ -1302,17 +1302,17 @@ flavor_jap.112 = { # Inclusion of Powerful clans to the Kanrei Council
 		name = flavor_jap.112.b
 		add_stability = stability_weak_penalty
 		add_prestige = prestige_extreme_bonus
-		c:HSK ?= {
+		c:DUMMY ?= {
 			add_country_modifier = { modifier = jap_senior_kanrei_clan_member_weakened years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_on_kanrei_council_weak_authority }
+			add_opinion = { target = c:DUMMY modifier = jap_on_kanrei_council_weak_authority }
 		}
-		c:SBA ?= {
+		c:DUMMY ?= {
 			add_country_modifier = { modifier = jap_senior_kanrei_clan_member_weakened years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_on_kanrei_council_weak_authority }
+			add_opinion = { target = c:DUMMY modifier = jap_on_kanrei_council_weak_authority }
 		}
-		c:HTK ?= {
+		c:DUMMY ?= {
 			add_country_modifier = { modifier = jap_senior_kanrei_clan_member_weakened years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_on_kanrei_council_weak_authority }
+			add_opinion = { target = c:DUMMY modifier = jap_on_kanrei_council_weak_authority }
 		}
 	}
 
@@ -1330,7 +1330,7 @@ flavor_jap.113 = { # The Shukurō Kaigi Expansion (Expansion of the Senior vassa
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1352,10 +1352,10 @@ flavor_jap.113 = { # The Shukurō Kaigi Expansion (Expansion of the Senior vassa
 			text = variable_kanrei_council_shugo_dominant_family_tt
 			has_variable = kanrei_council_shugo_dominant_family
 		}
-		country_exists = c:OUC
-		country_exists = c:RKK
-		country_exists = c:TKI
-		country_exists = c:KGK
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 	}
 
 	immediate = {
@@ -1369,21 +1369,21 @@ flavor_jap.113 = { # The Shukurō Kaigi Expansion (Expansion of the Senior vassa
 		historical_option = yes
 		change_societal_value = { type = aristocracy_vs_plutocracy value = societal_value_move_to_left }
 		add_country_modifier = { modifier = jap_shukuro_kaigi_expansion years = 15 mode = add }
-		c:OUC ?= {
+		c:DUMMY ?= {
 			add_country_modifier = { modifier = jap_kanrei_shukuro_kaigi_clan years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_shukuro_kaigi_council_member }
+			add_opinion = { target = c:DUMMY modifier = jap_shukuro_kaigi_council_member }
 		}
-		c:RKK ?= {
+		c:DUMMY ?= {
 			add_country_modifier = { modifier = jap_kanrei_shukuro_kaigi_clan years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_shukuro_kaigi_council_member }
+			add_opinion = { target = c:DUMMY modifier = jap_shukuro_kaigi_council_member }
 		}
-		c:TKI ?= {
+		c:DUMMY ?= {
 			add_country_modifier = { modifier = jap_kanrei_shukuro_kaigi_clan years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_shukuro_kaigi_council_member }
+			add_opinion = { target = c:DUMMY modifier = jap_shukuro_kaigi_council_member }
 		}
-		c:KGK ?= {
+		c:DUMMY ?= {
 			add_country_modifier = { modifier = jap_kanrei_shukuro_kaigi_clan years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_shukuro_kaigi_council_member }
+			add_opinion = { target = c:DUMMY modifier = jap_shukuro_kaigi_council_member }
 		}
 	}
 	option = { # We cannot risk strengthening these clans further.
@@ -1406,7 +1406,7 @@ flavor_jap.114 = { # Samurai-Dokoro #Board of Retainers
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1429,11 +1429,11 @@ flavor_jap.114 = { # Samurai-Dokoro #Board of Retainers
 			has_variable = jap_shukuro_kaigi_expanded_clans
 		}
 		has_reform = government_reform:shogunate_kanrei_council
-		country_exists = c:IMG
+		country_exists = c:DUMMY
 		international_organization:japanese_shogunate ?= {
 			country_has_special_status = {
 				type = special_status:shugo_daimyo
-				country = c:IMG
+				country = c:DUMMY
 			}
 			any_international_organization_member = {
 				NOT = { tag = IMG }
@@ -1476,9 +1476,9 @@ flavor_jap.114 = { # Samurai-Dokoro #Board of Retainers
 		add_prestige = prestige_mild_bonus
 		add_stability = stability_mild_bonus
 		add_country_modifier = { modifier = jap_board_of_retainers years = 30 mode = add }
-		c:IMG ?= {
+		c:DUMMY ?= {
 			add_country_modifier = { modifier = jap_samurai_dokoro_holder years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_granted_office_of_samurai_dokoro }
+			add_opinion = { target = c:DUMMY modifier = jap_granted_office_of_samurai_dokoro }
 		}
 	}
 	option = { # Leverage greater authority over the office.
@@ -1489,7 +1489,7 @@ flavor_jap.114 = { # Samurai-Dokoro #Board of Retainers
 		add_country_modifier = { modifier = jap_board_of_retainers years = 50 mode = add }
 		scope:replacement_clan = {
 			add_country_modifier = { modifier = jap_samurai_dokoro_holder years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_granted_office_of_samurai_dokoro }
+			add_opinion = { target = c:DUMMY modifier = jap_granted_office_of_samurai_dokoro }
 		}
 	}
 }
@@ -1503,7 +1503,7 @@ flavor_jap.115 = { # Kanrei Council Builds Kinship Among Shugo Lords
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 8
@@ -1550,7 +1550,7 @@ flavor_jap.120 = { # Discontentment with Shiba Shugo
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 16
@@ -1568,11 +1568,11 @@ flavor_jap.120 = { # Discontentment with Shiba Shugo
 			has_variable = jap_shukuro_kaigi_expanded_clans
 		}
 		has_reform = government_reform:shogunate_kanrei_council
-		country_exists = c:SBA
+		country_exists = c:DUMMY
 		international_organization:japanese_shogunate ?= {
 			country_has_special_status = {
 				type = special_status:shugo_daimyo
-				country = c:SBA
+				country = c:DUMMY
 			}
 		}
 	}
@@ -1581,7 +1581,7 @@ flavor_jap.120 = { # Discontentment with Shiba Shugo
 		ruler ?= {
 			save_scope_as = our_ruler
 		}
-		c:SBA ?={
+		c:DUMMY ?={
 			ruler_or_regent ?= {
 				save_scope_as = sba_ruler
 			}
@@ -1598,8 +1598,8 @@ flavor_jap.120 = { # Discontentment with Shiba Shugo
 		name = flavor_jap.120.a
 		add_prestige = prestige_severe_penalty
 		add_legitimacy = legitimacy_mild_penalty
-		add_opinion = { target = c:SBA modifier = jap_shiba_ashikaga_discontent }
-		reverse_add_opinion = { target = c:SBA modifier = jap_shiba_ashikaga_discontent }
+		add_opinion = { target = c:DUMMY modifier = jap_shiba_ashikaga_discontent }
+		reverse_add_opinion = { target = c:DUMMY modifier = jap_shiba_ashikaga_discontent }
 		custom_tooltip = {
 			text = summoning_of_shugo_lords
 			set_variable = { name = may_attack_shiba_for_free years = 25 }
@@ -1623,7 +1623,7 @@ flavor_jap.121 = { # Summoning of the Shugo Lords Against Shiba
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -1651,8 +1651,8 @@ flavor_jap.121 = { # Summoning of the Shugo Lords Against Shiba
 			has_variable = jap_shukuro_kaigi_expanded_clans
 		}
 		has_reform = government_reform:shogunate_kanrei_council
-		country_exists = c:SBA
-		c:SBA ?= {
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
 			at_war = no
 		}
 		international_organization:japanese_shogunate ?= {
@@ -1732,18 +1732,18 @@ flavor_jap.121 = { # Summoning of the Shugo Lords Against Shiba
 		name = flavor_jap.121.a
 		historical_option = yes
 		set_global_variable = { name = new_kanrei_ruler_if_win_war years = 20 }
-		add_casus_belli = { target = c:SBA type = casus_belli:cb_shogunate_reassert_authority }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_shogunate_reassert_authority }
 		if = {
 			limit = {
-				can_declare_legal_war_on = { target = c:SBA }
+				can_declare_legal_war_on = { target = c:DUMMY }
 			}
-			declare_war_with_cb = { target = c:SBA type = casus_belli:cb_shogunate_reassert_authority }
+			declare_war_with_cb = { target = c:DUMMY type = casus_belli:cb_shogunate_reassert_authority }
 		}
 		random_current_war = {
 			limit = {
 				or = {
-					attacker_leader = c:JAP
-					defender_leader = c:SBA
+					attacker_leader = c:DUMMY
+					defender_leader = c:DUMMY
 				}
 			}
 			save_scope_as = shogunate_war
@@ -1753,7 +1753,7 @@ flavor_jap.121 = { # Summoning of the Shugo Lords Against Shiba
 			scope:summoned_shugo_one = {
 				add_prestige = prestige_extreme_bonus
 				join_war_with = {
-					target = c:JAP
+					target = c:DUMMY
 					war = scope:shogunate_war
 					call_in_subjects = yes
 				}
@@ -1761,7 +1761,7 @@ flavor_jap.121 = { # Summoning of the Shugo Lords Against Shiba
 			scope:summoned_shugo_two = {
 				add_prestige = prestige_extreme_bonus
 				join_war_with = {
-					target = c:JAP
+					target = c:DUMMY
 					war = scope:shogunate_war
 					call_in_subjects = yes
 				}
@@ -1769,7 +1769,7 @@ flavor_jap.121 = { # Summoning of the Shugo Lords Against Shiba
 			scope:summoned_shugo_three = {
 				add_prestige = prestige_extreme_bonus
 				join_war_with = {
-					target = c:JAP
+					target = c:DUMMY
 					war = scope:shogunate_war
 					call_in_subjects = yes
 				}
@@ -1779,12 +1779,12 @@ flavor_jap.121 = { # Summoning of the Shugo Lords Against Shiba
 	option = { # We shall instead handle this ourselves
 		name = flavor_jap.121.b
 		add_prestige = prestige_severe_bonus
-		add_casus_belli = { target = c:SBA type = casus_belli:cb_shogunate_reassert_authority }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_shogunate_reassert_authority }
 		if = {
 			limit = {
-				can_declare_legal_war_on = { target = c:SBA }
+				can_declare_legal_war_on = { target = c:DUMMY }
 			}
-			declare_war_with_cb = { target = c:SBA type = casus_belli:cb_shogunate_reassert_authority }
+			declare_war_with_cb = { target = c:DUMMY type = casus_belli:cb_shogunate_reassert_authority }
 		}
 	}
 }
@@ -1797,7 +1797,7 @@ flavor_jap.122 = { # Hatakeyama or Hosokawa assumes Kanrei council
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 60 # A dynmamic aftermath event time wise
@@ -1816,8 +1816,8 @@ flavor_jap.122 = { # Hatakeyama or Hosokawa assumes Kanrei council
 			has_variable = jap_recently_won_against_shiba
 		}
 		at_war = no
-		country_exists = c:HTK
-		country_exists = c:HSK
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 		international_organization:japanese_shogunate ?= {
 			any_international_organization_member = { # For jap_new_major_kanrei_member
 				is_subject = no
@@ -1835,8 +1835,8 @@ flavor_jap.122 = { # Hatakeyama or Hosokawa assumes Kanrei council
 			save_scope_as = our_ruler
 		}
 		random_list = {
-			50 = { c:HTK ?={ save_scope_as = chosen_kanrei_leader } }
-			50 = { c:HSK ?={ save_scope_as = chosen_kanrei_leader } }
+			50 = { c:DUMMY ?={ save_scope_as = chosen_kanrei_leader } }
+			50 = { c:DUMMY ?={ save_scope_as = chosen_kanrei_leader } }
 		}
 		international_organization:japanese_shogunate ?= {
 			random_international_organization_member = {
@@ -1852,7 +1852,7 @@ flavor_jap.122 = { # Hatakeyama or Hosokawa assumes Kanrei council
 				save_scope_as = new_major_kanrei_member
 			}
 		}
-		c:SBA = {
+		c:DUMMY = {
 			remove_variable = jap_founding_kanrei_member
 		}
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
@@ -1876,11 +1876,11 @@ flavor_jap.122 = { # Hatakeyama or Hosokawa assumes Kanrei council
 			add_country_modifier = { modifier = jap_new_kanrei_leader years = 30 mode = add }
 			set_variable = { name = jap_founding_kanrei_member years = 175 }
 		}
-		c:HSK ?= {
-			add_opinion = { target = c:JAP modifier = opinion_mildly_displeased }
+		c:DUMMY ?= {
+			add_opinion = { target = c:DUMMY modifier = opinion_mildly_displeased }
 		}
-		c:HTK ?= {
-			add_opinion = { target = c:JAP modifier = opinion_mildly_displeased }
+		c:DUMMY ?= {
+			add_opinion = { target = c:DUMMY modifier = opinion_mildly_displeased }
 		}
 	}
 
@@ -1898,7 +1898,7 @@ flavor_jap.123 = { # Growth of Punitive Authority
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -1943,7 +1943,7 @@ flavor_jap.130 = { # Legitimization of the Ashikaga Shogunate
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -1954,9 +1954,9 @@ flavor_jap.130 = { # Legitimization of the Ashikaga Shogunate
 		has_ruler = yes
 		ruler = { has_dynasty = yes }
 		OR = {
-			country_exists = c:HTK
-			country_exists = c:HSK
-			country_exists = c:SBA
+			country_exists = c:DUMMY
+			country_exists = c:DUMMY
+			country_exists = c:DUMMY
 		}
 		character:jap_ashikaga_takauji ?= {
 			is_alive = no
@@ -2026,7 +2026,7 @@ flavor_jap.131 = { # Half-Tax Decree
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 9
@@ -2069,7 +2069,7 @@ flavor_jap.132 = { # Kyūshū Tandai
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -2132,7 +2132,7 @@ flavor_jap.132 = { # Kyūshū Tandai
 		add_stability = stability_mild_bonus
 		scope:non_kyushu_clan_tandai = {
 			add_country_modifier = { modifier = jap_shugo_tandai_of_kyushu years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_tandai_of_kyushu }
+			add_opinion = { target = c:DUMMY modifier = jap_tandai_of_kyushu }
 		}
 	}
 	option = { # Appoint a local kyushuan clan instead
@@ -2141,7 +2141,7 @@ flavor_jap.132 = { # Kyūshū Tandai
 		add_legitimacy = legitimacy_mild_bonus
 		scope:kyushu_clan_tandai = {
 			add_country_modifier = { modifier = jap_shugo_tandai_of_kyushu years = 20 mode = add }
-			add_opinion = { target = c:JAP modifier = jap_kyushu_tandai }
+			add_opinion = { target = c:DUMMY modifier = jap_kyushu_tandai }
 		}
 	}
 }
@@ -2154,7 +2154,7 @@ flavor_jap.133 = { # Development of the Shogunal Army
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2205,7 +2205,7 @@ flavor_jap.134 = { # Shugo Compulsory Residence Within Kyoto
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 6
@@ -2260,7 +2260,7 @@ flavor_jap.135 = { # Defiance of Toki
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -2274,9 +2274,9 @@ flavor_jap.135 = { # Defiance of Toki
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:TKI
+		country_exists = c:DUMMY
 		at_war = no
-		c:TKI ?= {
+		c:DUMMY ?= {
 			any_owned_foreign_building_location = {
 				count >= 9
 			}
@@ -2287,7 +2287,7 @@ flavor_jap.135 = { # Defiance of Toki
 		ruler ?= {
 			save_scope_as = our_ruler
 		}
-		c:TKI ?={
+		c:DUMMY ?={
 			save_scope_as = tki_country
 			ruler_or_regent ?= {
 				save_scope_as = tki_ruler
@@ -2299,12 +2299,12 @@ flavor_jap.135 = { # Defiance of Toki
 		name = flavor_jap.135.a
 		historical_option = yes
 		add_stability = stability_severe_penalty
-		add_casus_belli = { target = c:TKI type = casus_belli:cb_shogunate_reassert_authority }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_shogunate_reassert_authority }
 		if = {
 			limit = {
-				can_declare_legal_war_on = { target = c:TKI }
+				can_declare_legal_war_on = { target = c:DUMMY }
 			}
-			declare_war_with_cb = { target = c:TKI type = casus_belli:cb_shogunate_reassert_authority }
+			declare_war_with_cb = { target = c:DUMMY type = casus_belli:cb_shogunate_reassert_authority }
 		}
 	}
 	option = { # We will pursue this matter no further
@@ -2324,7 +2324,7 @@ flavor_jap.136 = { # Meitoku Uprising
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -2338,9 +2338,9 @@ flavor_jap.136 = { # Meitoku Uprising
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:YMN
+		country_exists = c:DUMMY
 		at_war = no
-		c:YMN ?= {
+		c:DUMMY ?= {
 			any_owned_foreign_building_location = {
 				count >= 14
 			}
@@ -2351,7 +2351,7 @@ flavor_jap.136 = { # Meitoku Uprising
 		ruler ?= {
 			save_scope_as = our_ruler
 		}
-		c:YMN ?={
+		c:DUMMY ?={
 			ruler_or_regent ?= {
 				save_scope_as = ymn_ruler
 			}
@@ -2364,9 +2364,9 @@ flavor_jap.136 = { # Meitoku Uprising
 		historical_option = yes
 		add_honor = honor_mild_bonus
 		add_stability = stability_mild_bonus
-		add_casus_belli = { target = c:YMN type = casus_belli:cb_shogunate_reassert_authority }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_shogunate_reassert_authority }
 		#Knowingly declaring an illegal war
-		declare_war_with_cb = { target = c:YMN type = casus_belli:cb_shogunate_reassert_authority }
+		declare_war_with_cb = { target = c:DUMMY type = casus_belli:cb_shogunate_reassert_authority }
 	}
 	option = { # Yamana is a strong clan, lets avoid conflict with them.
 		name = flavor_jap.136.b
@@ -2384,7 +2384,7 @@ flavor_jap.137 = { # Taxing of the Sakaya-Doso
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 6
@@ -2439,7 +2439,7 @@ flavor_jap.138 = { # Reestablishment with China
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2448,9 +2448,9 @@ flavor_jap.138 = { # Reestablishment with China
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:CHI
+		country_exists = c:DUMMY
 		at_war = no
-		c:CHI ?= {
+		c:DUMMY ?= {
 			has_ruler = yes
 		}
 	}
@@ -2459,7 +2459,7 @@ flavor_jap.138 = { # Reestablishment with China
 		ruler ?= {
 			save_scope_as = our_ruler
 		}
-		c:CHI ?= {
+		c:DUMMY ?= {
 			 save_scope_as = chi_nation
 			ruler ?= {
 				save_scope_as = chi_ruler
@@ -2473,7 +2473,7 @@ flavor_jap.138 = { # Reestablishment with China
 		historical_option = yes
 		add_opinion_mutual_effect = {
 			modifier = jap_new_relations_with_china
-			target = c:CHI
+			target = c:DUMMY
 		}
 	}
 	option = { # The affairs of China are meaningless to us
@@ -2481,7 +2481,7 @@ flavor_jap.138 = { # Reestablishment with China
 		add_prestige = prestige_mild_bonus
 		add_opinion_mutual_effect = {
 			modifier = jap_rejected_relations_with_china
-			target = c:CHI
+			target = c:DUMMY
 		}
 	}
 }
@@ -2496,7 +2496,7 @@ flavor_jap.140 = { # Hana no Gosho Palace
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 6
@@ -2550,7 +2550,7 @@ flavor_jap.141 = { # Construction of Kinkaku-ji
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -2602,7 +2602,7 @@ flavor_jap.142 = { # Jinnō Shōtōki # Chronicles of the Authentic Lineages of 
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -2619,8 +2619,8 @@ flavor_jap.142 = { # Jinnō Shōtōki # Chronicles of the Authentic Lineages of 
 		character:jap_kitabatake_chikafusa ?= {
 			is_alive = yes
 		}
-		country_exists = c:STC
-		country_exists = c:NTC
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 	}
 
 	immediate = {
@@ -2628,12 +2628,12 @@ flavor_jap.142 = { # Jinnō Shōtōki # Chronicles of the Authentic Lineages of 
 		ruler ?= {
 			save_scope_as = our_ruler
 		}
-		c:STC ?={
+		c:DUMMY ?={
 			ruler_or_regent ?= {
 				save_scope_as = stc_ruler
 			}
 		}
-		c:NTC ?={
+		c:DUMMY ?={
 			ruler_or_regent ?= {
 				save_scope_as = ntc_ruler
 			}
@@ -2680,7 +2680,7 @@ flavor_jap.143 = { # Revival of the Ashikaga Gakko Academy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -2719,7 +2719,7 @@ flavor_jap.144 = { # Francis Xavier
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4 # Passed Xavier historical death, but made plausible
 		monthly_chance = 40
@@ -2797,7 +2797,7 @@ flavor_jap.145 = { # Construction of Shōkoku-ji
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2870,7 +2870,7 @@ flavor_jap.146 = { # Josetsu
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2948,7 +2948,7 @@ flavor_jap.147 = { # Tensho Shubun
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -3025,7 +3025,7 @@ flavor_jap.148 = { # Sesshu Toyo
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -3104,7 +3104,7 @@ flavor_jap.150 = { # Founding of Kano School
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -3176,7 +3176,7 @@ flavor_jap.151 = { # Favoring of Noh Theatre
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3220,7 +3220,7 @@ flavor_jap.152 = { # Development of Shoin-Zukuri Architecture
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3262,7 +3262,7 @@ flavor_jap.153 = { # The Way of Tea # Sen-no-Rikyu and Chanoyu
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -3320,7 +3320,7 @@ flavor_jap.154 = { # Kyoto Shosidai
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 6
@@ -3361,7 +3361,7 @@ flavor_jap.155 = { # Institutionalisation of the Hatamoto
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 6
@@ -3412,7 +3412,7 @@ flavor_jap.156 = { # Construction of Dejima Island
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 6
@@ -3484,7 +3484,7 @@ flavor_jap.160 = { # Establishment of Yoshiwara District
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -3545,7 +3545,7 @@ flavor_jap.161 = { # Kinchu Narabini Kuge Shohatto # Laws for the Imperial Court
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 12
@@ -3561,8 +3561,8 @@ flavor_jap.161 = { # Kinchu Narabini Kuge Shohatto # Laws for the Imperial Court
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:YMT
-		c:YMT ?= {
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
 			has_ruler = yes
 		}
 	}
@@ -3572,7 +3572,7 @@ flavor_jap.161 = { # Kinchu Narabini Kuge Shohatto # Laws for the Imperial Court
 		ruler ?= {
 			save_scope_as = our_ruler
 		}
-		c:YMT ?= {
+		c:DUMMY ?= {
 			ruler ?= {
 				save_scope_as = ymt_ruler
 			}
@@ -3587,7 +3587,7 @@ flavor_jap.161 = { # Kinchu Narabini Kuge Shohatto # Laws for the Imperial Court
 		historical_option = yes
 		add_prestige = prestige_extreme_bonus
 		add_country_modifier = { modifier = jap_restricted_imperial_family years = 20 mode = add }
-		c:YMT ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = flavor_jap.163
 			add_country_modifier = { modifier = jap_ymt_restricted_imperial_family years = 50 mode = add }
 		}
@@ -3608,7 +3608,7 @@ flavor_jap.162 = { # Construction of Osaka Castle
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3696,7 +3696,7 @@ flavor_jap.163 = { # Institutionalization of the Kinchu Narabini Kuge Shohatto #
 		ruler ?= {
 			save_scope_as = our_ruler
 		}
-		c:JAP ?= {
+		c:DUMMY ?= {
 			ruler ?= {
 				save_scope_as = jap_ruler
 			}
@@ -3730,7 +3730,7 @@ flavor_jap.170 = { # Kansei Reforms
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = JAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 6
@@ -3791,7 +3791,7 @@ flavor_jap.180 = { # Appointment of Ko no Moronao as Shitsuji # For Clan Ko
 
 	immediate = {		
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:JAP ?= {
+		c:DUMMY ?= {
 			ruler ?= {
 				save_scope_as = jap_ruler
 			}
@@ -3810,7 +3810,7 @@ flavor_jap.180 = { # Appointment of Ko no Moronao as Shitsuji # For Clan Ko
 	option = { # Accept the office of Shitsuji
 		name = flavor_jap.180.a
 		historical_option = yes
-		c:JAP ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = flavor_jap.182
 		}
 		add_prestige = prestige_extreme_bonus
@@ -3825,7 +3825,7 @@ flavor_jap.180 = { # Appointment of Ko no Moronao as Shitsuji # For Clan Ko
 	}
 	option = { # Reject the office
 		name = flavor_jap.180.b
-		c:JAP ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = flavor_jap.181
 		}
 		add_stability = stability_extreme_bonus

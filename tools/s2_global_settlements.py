@@ -38,10 +38,12 @@ DEDICATED_FOOD_FAMILIES = {
     "antq_reg_soy_fermentary",
 }
 FAMILIES = ROOT / "docs/m5/regional_building_families.csv"
+LATER_ANTIQUE_GOODS = ROOT / "docs/m5/later_antique_goods.csv"
 SEEDS = ROOT / "docs/m5/regional_building_seeds.csv"
 BUNDLES = ROOT / "docs/m5/s2_britain_ireland_building_seeds.csv"
 FOOD_SEEDS = ROOT / "docs/m5/food_building_seeds.csv"
 CORE_MARKET_SEEDS = ROOT / "docs/m5/opening_market_building_seeds.csv"
+TRIBAL_SEEDS = ROOT / "docs/m5/tribal_building_seeds.csv"
 URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 OWNERSHIP = ROOT / "docs/world_1ad/ownership_resolved.csv"
 POLITIES = ROOT / "docs/world_1ad/polities.csv"
@@ -77,6 +79,26 @@ REGION_MACRO = {
     )},
     "Oceania": "Oceania",
 }
+
+# These are opening-capacity priorities, not the complete Roman construction
+# portfolio.  The full profile remains buildable through its advances; an AD 1
+# bookmark should not instantiate every possible workshop in every reviewed
+# provincial city.
+ROMAN_OPENING_PRIORITY = (
+    "villa_rustica",
+    "annona_bakery",
+    "textile_quarter",
+    "ceramic_quarter",
+    "horrea_complex",
+    "cursus_mansio",
+    "forum_basilica",
+    "aqueduct_distribution",
+    "river_port",
+    "olive_estate",
+    "vineyard_estate",
+    "castra_fabrica",
+    "frontier_magazine",
+)
 LOCATION_MACRO_OVERRIDES = {
     "alexandria": "North Africa",
     "tunis": "North Africa",
@@ -320,9 +342,15 @@ def candidate_score(
 
 def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     families = read_rows(FAMILIES)
+    later_antique_families = {
+        row["building"] for row in read_rows(LATER_ANTIQUE_GOODS)
+    }
+    if not later_antique_families:
+        raise ValueError("later-antique building portfolio is empty")
     family_keys = [
         row["key"] for row in families
         if row["key"] not in DEDICATED_FOOD_FAMILIES
+        and row["key"] not in later_antique_families
     ]
     signatures = {
         row["key"]: {
@@ -438,8 +466,9 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         return True
 
     selected_locations: set[str] = set()
-    # Preserve the deeply differentiated, source-reviewed Roman provincial
-    # packages as metropolitan exceptions. Ordinary sites remain capped at six.
+    # Preserve the differentiated Roman construction choices, but instantiate
+    # only a bounded opening sample.  The previous policy placed every eligible
+    # family and made ordinary provincial centres larger than vanilla capitals.
     roman_slugs = {family.removeprefix("antq_reg_") for family in ROMAN_ECONOMY_FAMILIES}
     for profile in read_rows(ROMAN_PROFILES):
         selected = (
@@ -451,11 +480,15 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
             if not location:
                 continue
             selected_locations.add(location)
-            for slug in sorted(selected):
+            ordered_slugs = [slug for slug in ROMAN_OPENING_PRIORITY if slug in selected]
+            ordered_slugs.extend(sorted(selected - set(ordered_slugs)))
+            opening_cap = 8 if location == "rome" else 6
+            placed = 0
+            for slug in ordered_slugs:
                 family = f"antq_reg_{slug}"
                 if urban.get(location) == "town" and family in CITY_ONLY_FAMILIES:
                     continue
-                add(
+                if add(
                     location,
                     family,
                     "reviewed Roman provincial",
@@ -463,10 +496,18 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
                     source=profile["source"],
                     confidence=profile["confidence"],
                     note=profile["note"],
-                    cap=32,
-                )
+                    cap=opening_cap,
+                ):
+                    placed += 1
+                if placed >= opening_cap:
+                    break
 
     for tag in sorted(polities):
+        # Collective polities receive their own four-building tribal opening
+        # package.  Layering this generic settled-economy pass on top was the
+        # single largest source of bookmark building duplication.
+        if polities[tag]["kind"] == "sop":
+            continue
         controlled = locations_by_tag[tag]
         if not controlled:
             continue
@@ -479,7 +520,7 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
                 location,
             ),
         )
-        quota = min(len(ordered), max(2, min(18, round(math.sqrt(len(ordered))))))
+        quota = min(len(ordered), max(2, min(8, round(math.sqrt(len(ordered))))))
         chosen: list[str] = []
         seen_goods: set[str] = set()
         for location in ordered:
@@ -501,30 +542,86 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     for location in sorted(urban):
         if location not in owner_by_location:
             continue
+        if polities[owner_by_location[location]]["kind"] == "sop":
+            continue
         selected_locations.add(location)
         add(location, choose_family(location), "urban-service and craft")
 
-    for family in family_keys:
-        if usage[family]:
+    # Large territorial states need an actual provincial information network,
+    # not a flat country modifier. Seed a bounded set of staffed record offices
+    # at the capital and the largest urban provincial centres. Their local
+    # control/proximity/literacy effects make administration spatial, while the
+    # maintenance and employment costs prevent the network from being free.
+    record_office = "antq_reg_scriptorium"
+    for tag in sorted(polities):
+        polity = polities[tag]
+        if polity["kind"] == "sop":
             continue
-        candidates: list[tuple[float, float, str]] = []
-        for location in selected_locations:
-            tag, region, harbor, urban_profile, good = details(location)
-            macro = LOCATION_MACRO_OVERRIDES.get(location, REGION_MACRO[region])
-            score, _ = candidate_score(
-                family, good, tag, region, macro, harbor, urban_profile,
-                rgo[location]["climate"], signatures, usage,
-            )
-            if score > -10_000 and per_location[location] < 6:
-                candidates.append((score, populations.get(location, 0.0), location))
-        if not candidates:
-            raise ValueError(f"no valid global settlement candidate for {family}")
-        _score, _population, location = max(candidates)
-        add(location, family, "specialized regional craft")
+        controlled = locations_by_tag[tag]
+        if not controlled:
+            continue
+        tier = int(polity["tier"] or 9)
+        if tier != 1 and len(controlled) < 30:
+            continue
+        capital = polity["map_capital"]
+        allowed_record_macros = FAMILY_MACRO_RESTRICTIONS.get(record_office)
+        candidates = sorted(
+            (
+                location for location in controlled
+                if (location == capital or location in urban)
+                and (
+                    allowed_record_macros is None
+                    or LOCATION_MACRO_OVERRIDES.get(
+                        location, REGION_MACRO[polity["region"]]
+                    ) in allowed_record_macros
+                )
+            ),
+            key=lambda location: (
+                location != capital,
+                -populations.get(location, 0.0),
+                location,
+            ),
+        )
+        # The three continental empires require a denser provincial relay
+        # network at bookmark start.  These are still sparse relative to their
+        # territory (and tiny beside the global placement budget), but one
+        # office in only five to eight cities left most provinces disconnected
+        # from any proximity source.
+        imperial_quota = {"ROM": 20, "PAR": 12, "HAN": 12}
+        quota = min(
+            len(candidates),
+            imperial_quota.get(
+                tag,
+                max(3, min(8, round(math.sqrt(len(controlled)) / 2))),
+            ),
+        )
+        administrative_placed = 0
+        for location in candidates:
+            selected_locations.add(location)
+            if add(
+                location,
+                record_office,
+                "capital-and-provincial administrative network",
+                key=f"reg_administrative_network_{tag.lower()}_{location}",
+                source="P8.1;P8.2;P8.3;P15;CAH-XI",
+                confidence="contested",
+                note=(
+                    f"Staffed AD 1 record-office proxy for {polity['name']}; "
+                    "the placement models provincial census, correspondence, "
+                    "legal-copy, and dispatch capacity rather than a named archive."
+                ),
+                cap=quota,
+            ):
+                administrative_placed += 1
+            if administrative_placed >= quota:
+                break
+
+    # A buildable family does not need a bookmark instance.  The former
+    # one-of-every-family rule added hundreds of arbitrary workshops merely to
+    # exercise the catalogue and could force them into implausible hubs.
 
     # A settlement system also needs storage, water, transport, exchange, and
-    # civic capacity. Bring ordinary regional placements to a 75% productive
-    # target, dispersed over the same reviewed settlement sample.
+    # civic capacity. Bring the bounded sample to a 75% productive target.
     def choose_service(location: str) -> str:
         tag, region, harbor, urban_profile, good = details(location)
         macro = LOCATION_MACRO_OVERRIDES.get(location, REGION_MACRO[region])
@@ -587,6 +684,21 @@ def generate() -> tuple[list[dict[str, str]], list[dict[str, str]]]:
         productive_by_tag[tag] += row["family"] in PRODUCTION_RECIPES
         locations_per_tag[tag].add(row["location"])
         location_counts_by_tag[tag][row["location"]] += 1
+    # Collective polities are deliberately excluded from the settled-economy
+    # generator because their four-building household package is owned by the
+    # tribal generator.  Include that package in the polity audit so regional
+    # granularity gates measure the actual generated bookmark rather than only
+    # this file's contribution.
+    for row in read_rows(TRIBAL_SEEDS):
+        tag = row["tag"]
+        location = row["location"]
+        if owner_by_location.get(location) != tag:
+            raise ValueError(
+                f"tribal opening seed ownership drift: {tag}/{location}"
+            )
+        placements_by_tag[tag] += 1
+        locations_per_tag[tag].add(location)
+        location_counts_by_tag[tag][location] += 1
 
     audit_rows: list[dict[str, str]] = []
     for tag, polity in sorted(polities.items()):

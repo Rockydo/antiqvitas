@@ -10,7 +10,7 @@ flavor_bav.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -49,7 +49,7 @@ flavor_bav.1 = {
 
 	option = {
 		name = flavor_bav.1.a
-		add_gold = { value = c:BAV.monthly_income_trade_and_tax multiply = -4.00 }
+		add_gold = { value = c:DUMMY.monthly_income_trade_and_tax multiply = -4.00 }
 		add_prestige = prestige_mild_bonus
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_weak_bonus }
 		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_weak_bonus }
@@ -71,7 +71,7 @@ flavor_bav.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -134,7 +134,7 @@ flavor_bav.3 = { #LBV comes under Ludwigs Rule
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = UBV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -159,7 +159,7 @@ flavor_bav.3 = { #LBV comes under Ludwigs Rule
 
 	trigger = {
 		current_date > 476.9.4
-		c:LBV = {
+		c:DUMMY = {
 			has_ruler = no
 		}
 		character:ubv_ludwig_iv_wittelsbach = {
@@ -173,25 +173,25 @@ flavor_bav.3 = { #LBV comes under Ludwigs Rule
 		historical_option = yes
 
 		drop_antagonism_bomb = {
-			target = c:LBV.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_bav_ignore_feudal_traditions_mild
 		}
 		if = {
 			limit = {
-				c:LBV = {
+				c:DUMMY = {
 					is_subject = no
 				}
 			}
-			c:LBV = {
+			c:DUMMY = {
 				make_subject_of = {
-					target = c:UBV
+					target = c:DUMMY
 					type = subject_type:vassal
 				}
 			}
 		}
 		else = {
 			add_casus_belli = {
-				target = c:LBV
+				target = c:DUMMY
 				type = casus_belli:cb_subjugation
 			}
 		}
@@ -202,14 +202,14 @@ flavor_bav.3 = { #LBV comes under Ludwigs Rule
 		name = flavor_bav.3.b
 
 		trigger = {
-			c:LBV = {
+			c:DUMMY = {
 				is_human = no
 				is_subject = no
 			}
 		}
 		add_stability = stability_severe_penalty
 		add_legitimacy = legitimacy_ultimate_penalty
-		c:LBV = {
+		c:DUMMY = {
 			every_owned_location = {
 				root = {
 					drop_antagonism_bomb = {
@@ -220,10 +220,10 @@ flavor_bav.3 = { #LBV comes under Ludwigs Rule
 				}
 			}
 			every_core_location = {
-				add_core = c:UBV
+				add_core = c:DUMMY
 			}
 		}
-		annex_country = { country = c:LBV }
+		annex_country = { country = c:DUMMY }
 	}
 
 	#Let us not meddle in their affairs.
@@ -232,7 +232,7 @@ flavor_bav.3 = { #LBV comes under Ludwigs Rule
 
 		add_legitimacy = legitimacy_severe_bonus
 		add_opinion = {
-			target = c:LBV
+			target = c:DUMMY
 			modifier = opinion_pleased
 		}
 	}
@@ -246,7 +246,7 @@ flavor_bav.4 = { #Wittelsbacher-Luxembourg Relations
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = UBV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -263,7 +263,7 @@ flavor_bav.4 = { #Wittelsbacher-Luxembourg Relations
 		ruler = {
 			save_scope_as = target_ruler
 		}
-		c:BOH.ruler ?= {
+		c:DUMMY.ruler ?= {
 			save_scope_as = target_rival
 		}
 	}
@@ -272,7 +272,7 @@ flavor_bav.4 = { #Wittelsbacher-Luxembourg Relations
 		current_date > 476.9.4
 		has_ruler = yes
 		ruler.dynasty ?= dynasty:wittelsbach_dynasty
-		c:BOH = {
+		c:DUMMY = {
 			has_ruler = yes
 			is_rival_of = root
 			NOT = {
@@ -285,18 +285,18 @@ flavor_bav.4 = { #Wittelsbacher-Luxembourg Relations
 	option = {
 		name = flavor_bav.4.a
 
-		remove_rival = c:BOH
+		remove_rival = c:DUMMY
 		change_societal_value = {
 			type = belligerent_vs_conciliatory
 			value = societal_value_move_to_right
 		}
 		add_opinion = {
-			target = c:BOH
+			target = c:DUMMY
 			modifier = opinion_good_relations
 		}
-		c:BOH = {
+		c:DUMMY = {
 			add_opinion = {
-				target = c:UBV
+				target = c:DUMMY
 				modifier = opinion_good_relations
 			}
 		}
@@ -309,9 +309,9 @@ flavor_bav.4 = { #Wittelsbacher-Luxembourg Relations
 			type = belligerent_vs_conciliatory
 			value = societal_value_move_to_left
 		}
-		c:BOH = {
+		c:DUMMY = {
 			add_opinion = {
-				target = c:UBV
+				target = c:DUMMY
 				modifier = opinion_irritated
 			}
 		}
@@ -327,7 +327,7 @@ flavor_bav.5 = { #Wittelsbacher-Habsburg Relations
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = UBV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -344,7 +344,7 @@ flavor_bav.5 = { #Wittelsbacher-Habsburg Relations
 		ruler = {
 			save_scope_as = target_ruler
 		}
-		c:HAB.ruler ?= {
+		c:DUMMY.ruler ?= {
 			save_scope_as = target_rival
 		}
 	}
@@ -353,7 +353,7 @@ flavor_bav.5 = { #Wittelsbacher-Habsburg Relations
 		current_date > 476.9.4
 		has_ruler = yes
 		ruler.dynasty ?= dynasty:wittelsbach_dynasty
-		c:HAB = {
+		c:DUMMY = {
 			is_rival_of = root
 			NOT = {
 				has_truce_with = root
@@ -365,18 +365,18 @@ flavor_bav.5 = { #Wittelsbacher-Habsburg Relations
 	option = {
 		name = flavor_bav.5.a
 
-		remove_rival = c:HAB
+		remove_rival = c:DUMMY
 		change_societal_value = {
 			type = belligerent_vs_conciliatory
 			value = societal_value_move_to_right
 		}
 		add_opinion = {
-			target = c:HAB
+			target = c:DUMMY
 			modifier = opinion_good_relations
 		}
-		c:HAB = {
+		c:DUMMY = {
 			add_opinion = {
-				target = c:UBV
+				target = c:DUMMY
 				modifier = opinion_good_relations
 			}
 		}
@@ -389,9 +389,9 @@ flavor_bav.5 = { #Wittelsbacher-Habsburg Relations
 			type = belligerent_vs_conciliatory
 			value = societal_value_move_to_left
 		}
-		c:HAB = {
+		c:DUMMY = {
 			add_opinion = {
-				target = c:UBV
+				target = c:DUMMY
 				modifier = opinion_irritated
 			}
 		}
@@ -408,7 +408,7 @@ flavor_bav.6 = { #Support the Habsburg Emperor?
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = UBV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -424,7 +424,7 @@ flavor_bav.6 = { #Support the Habsburg Emperor?
 		ruler = {
 			save_scope_as = target_ruler
 		}
-		c:HAB = {
+		c:DUMMY = {
 			ruler = {
 				save_scope_as = hre_ruler
 			}
@@ -436,8 +436,8 @@ flavor_bav.6 = { #Support the Habsburg Emperor?
 		has_ruler = yes
 		ruler.dynasty = dynasty:wittelsbach_dynasty
 		is_subject = no
-		international_organization:hre.leader_country = c:HAB
-		c:HAB = {
+		international_organization:hre.leader_country = c:DUMMY
+		c:DUMMY = {
 			has_ruler = yes
 			ruler.dynasty = dynasty:habsburg_dynasty
 		}
@@ -447,7 +447,7 @@ flavor_bav.6 = { #Support the Habsburg Emperor?
 		name = flavor_bav.6.a
 		historical_option = yes
 
-		c:HAB = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = bav_reconcile_habsburg }
 		}
 		add_country_modifier = {
@@ -460,7 +460,7 @@ flavor_bav.6 = { #Support the Habsburg Emperor?
 	option = {
 		name = flavor_bav.6.b
 
-		c:HAB = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = bav_against_habsburg }
 		}
 		change_societal_value = {
@@ -480,7 +480,7 @@ flavor_bav.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = UBV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -532,14 +532,14 @@ flavor_bav.7 = {
 				key = eight_questions_on_the_power_of_the_pope
 			}
 		}
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
 	}
 	option = {
 		name = flavor_bav.7.b
 		add_policy = policy:strict_censorship
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 		}
 	}
@@ -557,7 +557,7 @@ flavor_bav.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = UBV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -608,7 +608,7 @@ flavor_bav.8 = {
 			mode = add_and_extend
 		}
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_weak_penalty }
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_backward_monarch }
 		}
 	}
@@ -616,7 +616,7 @@ flavor_bav.8 = {
 		name = flavor_bav.8.b
 
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_weak_bonus }
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_supportive_monarch }
 		}
 	}
@@ -633,7 +633,7 @@ flavor_bav.9 = { #https://en.wikipedia.org/wiki/Frauenkirche,_Munich
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = UBV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -721,7 +721,7 @@ flavor_bav.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = UBV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -774,7 +774,7 @@ flavor_bav.10 = {
 
 		add_prestige = prestige_severe_penalty
 
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_bad_monarch }
 		}
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_mild_penalty }
@@ -784,7 +784,7 @@ flavor_bav.10 = {
 		scope:william_ockham_scope = { move_country = location:guildford.owner }
 		scope:michael_cesena_scope = { move_country = location:cesena.owner }
 		add_prestige = prestige_severe_bonus
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_reconcile }
 		}
 		add_estate_satisfaction = { type = estate_type:clergy_estate value = estate_satisfaction_severe_bonus }
@@ -799,7 +799,7 @@ flavor_bav.11 = { #The History of Bavaria
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = UBV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -874,7 +874,7 @@ flavor_bav.20 = {
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = BAV
+        tag = DUMMY
         from = 476.9.4
         to = 476.9.4
         monthly_chance = 3
@@ -929,7 +929,7 @@ flavor_bav.23 = {
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = BAV
+        tag = DUMMY
         from = 476.9.4
         to = 476.9.4
         monthly_chance = 2
@@ -987,14 +987,14 @@ flavor_bav.24 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BAV
-		tag = UBV
-		tag = FRE
-		tag = LBV
-		tag = SLZ
-		tag = PSS
-		tag = BRC
-		tag = GRF
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1059,7 +1059,7 @@ flavor_bav.25 = {
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = BAV
+        tag = DUMMY
         from = 476.9.4
         to = 476.9.4
         monthly_chance = 3
@@ -1103,7 +1103,7 @@ flavor_bav.27 = {
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = BAV
+        tag = DUMMY
         from = 476.9.4
         to = 476.9.4
         monthly_chance = 3
@@ -1173,7 +1173,7 @@ flavor_bav.28 = {
 
 	fire_only_once = yes
     dynamic_historical_event = {
-        tag = BAV
+        tag = DUMMY
         from = 476.9.4
         to = 476.9.4
         monthly_chance = 5
@@ -1435,7 +1435,7 @@ flavor_bav.33 = {
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = BAV
+        tag = DUMMY
         from = 476.9.4
         to = 476.9.4
         monthly_chance = 5
@@ -1486,7 +1486,7 @@ flavor_bav.1000 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					c:KOL = { is_rival_of = root }
+					c:DUMMY = { is_rival_of = root }
 				}
 				desc = flavor_bav.1000.desc_rival
 			}
@@ -1499,7 +1499,7 @@ flavor_bav.1000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1516,10 +1516,10 @@ flavor_bav.1000 = {
 		international_organization:hre = {
 			country_has_special_status = {
 				type = special_status:elector
-				country = c:KOL
+				country = c:DUMMY
 			}
 		}
-		c:KOL ?= {
+		c:DUMMY ?= {
 			NOT = { is_at_war_with = root }
 			ruler ?= {
 				this != root.ruler
@@ -1530,7 +1530,7 @@ flavor_bav.1000 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:KOL.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = kol_ruler
 		}
 	}
@@ -1539,10 +1539,10 @@ flavor_bav.1000 = {
 	option = {
 		name = flavor_bav.1000.a
 		trigger = {
-			NOT = {c:KOL = { is_rival_of = root }}
+			NOT = {c:DUMMY = { is_rival_of = root }}
 		}
-		add_gold = { value = c:KOL.monthly_income_trade_and_tax multiply = -5.00 }
-		c:KOL = {
+		add_gold = { value = c:DUMMY.monthly_income_trade_and_tax multiply = -5.00 }
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_bav.1001
 			add_opinion = { target = root modifier = opinion_bolster_up_our_dynasty_member }
 		}
@@ -1550,11 +1550,11 @@ flavor_bav.1000 = {
 	option = {
 		name = flavor_bav.1000.b
 		trigger = {
-			c:KOL = { is_rival_of = root }
+			c:DUMMY = { is_rival_of = root }
 		}
-		remove_rival = c:KOL
-		add_gold = { value = c:KOL.monthly_income_trade_and_tax multiply = -5.00 }
-		c:KOL = {
+		remove_rival = c:DUMMY
+		add_gold = { value = c:DUMMY.monthly_income_trade_and_tax multiply = -5.00 }
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_bav.1001
 			add_opinion = { target = root modifier = opinion_bolster_up_our_dynasty_member }
 		}
@@ -1572,13 +1572,13 @@ flavor_bav.1001 = { #"Our Kin from [BAV.GetCountry.GetNameWithNoTooltip]"
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					c:BAV.ruler = scope:kol_ruler
+					c:DUMMY.ruler = scope:kol_ruler
 				}
 				desc = flavor_bav.1001.desc_union
 			}
 			triggered_desc = {
 				trigger = {
-					c:BAV = { is_rival_of = root }
+					c:DUMMY = { is_rival_of = root }
 				}
 				desc = flavor_bav.1001.desc_rival
 			}
@@ -1596,7 +1596,7 @@ flavor_bav.1001 = { #"Our Kin from [BAV.GetCountry.GetNameWithNoTooltip]"
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:BAV.ruler = {
+		c:DUMMY.ruler = {
 			if = {
 				limit = {
 					NOT = {this = scope:kol_ruler }
@@ -1610,22 +1610,22 @@ flavor_bav.1001 = { #"Our Kin from [BAV.GetCountry.GetNameWithNoTooltip]"
 	option = {
 		name = flavor_bav.1001.a
 		trigger = {
-			NOT = {c:BAV = { is_rival_of = root }}
+			NOT = {c:DUMMY = { is_rival_of = root }}
 		}
 		add_gold = { value =root.monthly_income_trade_and_tax multiply = 5.00 }
 	}
 	option = {
 		name = flavor_bav.1001.b
 		trigger = {
-			c:BAV = { is_rival_of = root }
+			c:DUMMY = { is_rival_of = root }
 		}
-		remove_rival = c:BAV
+		remove_rival = c:DUMMY
 		change_gold_effect = { scale = 5.00 }
 	}
 	option = {
 		name = flavor_bav.1001.c
 
-		c:BAV = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_bav.1002
 		}
 	}
@@ -1647,14 +1647,14 @@ flavor_bav.1002 = { #"Rebuffed by [KOL.GetCountry.GetNameWithNoTooltip]"
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:KOL.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = kol_ruler
 		}
 	}
 
 	option = {
 		name = flavor_bav.1002.a
-		add_gold = { value = c:KOL.monthly_income_trade_and_tax multiply = 5.00 }
+		add_gold = { value = c:DUMMY.monthly_income_trade_and_tax multiply = 5.00 }
 	}
 	trigger = {
 		current_date > 476.9.4
@@ -1672,7 +1672,7 @@ flavor_bav.1100 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1731,7 +1731,7 @@ flavor_bav.1101 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1808,7 +1808,7 @@ flavor_bav.1102 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -1864,7 +1864,7 @@ flavor_bav.1200 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2062,7 +2062,7 @@ flavor_bav.1300 = { #The Inheritance of Ludwig IV
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = UBV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2119,7 +2119,7 @@ flavor_bav.1301 = { #Centralization of Bavaria
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = UBV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2166,7 +2166,7 @@ flavor_bav.1302 = {
 
 	fire_only_once = yes
     dynamic_historical_event = {
-        tag = UBV
+        tag = DUMMY
         from = 476.9.4
         to = 476.9.4
         monthly_chance = 4
@@ -2195,9 +2195,9 @@ flavor_bav.1302 = {
 		}
  		OR = {
 			AND = {
-				country_exists = c:LBV
-				c:LBV = {
-					is_subject_of = c:UBV
+				country_exists = c:DUMMY
+				c:DUMMY = {
+					is_subject_of = c:DUMMY
 					OR = {
                         opinion = {
                             target = root
@@ -2209,7 +2209,7 @@ flavor_bav.1302 = {
                  }
 			}
 			AND = {
-				NOT = { country_exists = c:LBV }
+				NOT = { country_exists = c:DUMMY }
 				owns = location:landshut
 				OR = {
 					stability <= 0
@@ -2234,11 +2234,11 @@ flavor_bav.1302 = {
 		}
 		if = {
 			limit = {
-				country_exists = c:LBV
-				NOT = { c:LBV.ruler = c:UBV.ruler }
+				country_exists = c:DUMMY
+				NOT = { c:DUMMY.ruler = c:DUMMY.ruler }
 			}
 
-			c:LBV.ruler ?= { save_scope_as = rival_brother }
+			c:DUMMY.ruler ?= { save_scope_as = rival_brother }
 		}
 		else = {
 			random_character = {
@@ -2266,23 +2266,23 @@ flavor_bav.1302 = {
 
         if = {
 			limit = {
-				NOT = { country_exists = c:LBV }
+				NOT = { country_exists = c:DUMMY }
 				owns = location:landshut
 			}
 
-			create_country_from_cores_in_our_locations = c:LBV
+			create_country_from_cores_in_our_locations = c:DUMMY
 
 			hidden_effect = {
 				international_organization:hre = {
-					add_country_to_international_organization = c:LBV
+					add_country_to_international_organization = c:DUMMY
 				}
 			}
-			c:LBV = {
+			c:DUMMY = {
 				set_new_ruler = scope:rival_brother
 			}
 		}
 		else = {
-			cancel_subject = c:LBV
+			cancel_subject = c:DUMMY
 		}
 
 	}
@@ -2291,19 +2291,19 @@ flavor_bav.1302 = {
         name = flavor_bav.1302.b
         if = {
 			limit = {
-				NOT = { country_exists = c:LBV }
+				NOT = { country_exists = c:DUMMY }
 				owns = location:landshut
 			}
 
-			create_country_from_cores_in_our_locations = c:LBV
+			create_country_from_cores_in_our_locations = c:DUMMY
 
 			hidden_effect = {
 				international_organization:hre = {
-					add_country_to_international_organization = c:LBV
+					add_country_to_international_organization = c:DUMMY
 				}
 			}
 
-			c:LBV = {
+			c:DUMMY = {
 				leave_all_wars_with = root
 				if = {
 					limit = {
@@ -2324,7 +2324,7 @@ flavor_bav.1302 = {
 			}
 		}
 		else = {
-			c:LBV = {
+			c:DUMMY = {
 				leave_all_wars_with = root
 				if = {
 					limit = {
@@ -2348,7 +2348,7 @@ flavor_bav.1302 = {
     option = {
         name = flavor_bav.1302.c
 		trigger = {
-			NOT = { country_exists = c:LBV }
+			NOT = { country_exists = c:DUMMY }
 			owns = location:landshut
 		}
 
@@ -2379,8 +2379,8 @@ flavor_bav.1400 = {
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = BAV
-		tag = UBV
+        tag = DUMMY
+		tag = DUMMY
         from = 476.9.4
         to = 476.9.4
         monthly_chance = 3
@@ -2430,7 +2430,7 @@ flavor_bav.1401 = {
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = BAV
+        tag = DUMMY
         from = 476.9.4
         to = 476.9.4
         monthly_chance = 4
@@ -2484,7 +2484,7 @@ flavor_bav.1402 = {
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = BAV
+        tag = DUMMY
         from = 476.9.4
         to = 476.9.4
         monthly_chance = 3

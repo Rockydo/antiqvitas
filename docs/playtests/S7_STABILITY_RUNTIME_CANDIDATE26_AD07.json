@@ -1,0 +1,60 @@
+{
+  "save": "G:\\antiqvitas_user_data\\save games\\autosave_4f67f2fa-a0a9-47f9-89ec-2dc3ba13e14c.eu5",
+  "date": "7.1.1",
+  "real_polities": 467,
+  "stability": {
+    "minimum": -44.60179,
+    "p10": 7.9189,
+    "median": 16.41602,
+    "p90": 24.39199,
+    "maximum": 42.18407,
+    "negative_count": 8,
+    "severe_count": 7
+  },
+  "estates": {
+    "records": 2578,
+    "minimum": 0.19669,
+    "p10": 0.457079,
+    "median": 0.62303,
+    "polity_mean_p10": 0.5882216,
+    "below_10_percent": 0,
+    "below_25_percent": 3
+  },
+  "wars": {
+    "distinct_civil_wars": 7,
+    "active_wars": 5,
+    "active_civil_wars": 5,
+    "elapsed_years": 6.0,
+    "civil_wars_per_polity_year": 0.0025197984161267097
+  },
+  "epidemics": {
+    "non_endemic_outbreaks": 2,
+    "outbreaks": [
+      {
+        "id": 6700,
+        "type": "influenza",
+        "outbreak_date": "2.2.1",
+        "died_out_date": "2.5.21",
+        "affected_locations": 7,
+        "age_years": 4.916666666666666,
+        "affected_locations_per_year": 1.4237288135593222
+      },
+      {
+        "id": 6701,
+        "type": "smallpox",
+        "outbreak_date": "2.3.1",
+        "died_out_date": "2.4.6",
+        "affected_locations": 1,
+        "age_years": 4.833333333333334,
+        "affected_locations_per_year": 0.2068965517241379
+      }
+    ]
+  },
+  "log": {
+    "path": "G:\\antiqvitas_user_data\\logs\\error.log",
+    "script_errors": 0,
+    "ai_command_errors": 0,
+    "locations": {}
+  },
+  "failures": []
+}

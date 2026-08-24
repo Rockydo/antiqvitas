@@ -11,23 +11,27 @@ country_flavor = {
 	}
 
 	text = {
-		localization_key = antq_rank_client_kingdom
+		localization_key = antq_rank_kingdom
 		trigger = {
 			OR = {
 				tag = ADI
-				tag = BTV
+				tag = AYM
 				tag = CAP
+				tag = DAC
 				tag = DNH
 				tag = EME
 				tag = FJS
 				tag = GMU
 				tag = IWL
 				tag = JUD
+				tag = KSM
 				tag = KUC
 				tag = LOU
 				tag = MRG
 				tag = NAB
 				tag = OSR
+				tag = PCM
+				tag = PND
 				tag = PRS
 				tag = PUL
 				tag = SHC
@@ -42,9 +46,12 @@ country_flavor = {
 				tag = XAK
 				tag = XAM
 				tag = XAN
+				tag = XAO
 				tag = XAS
 				tag = XAT
 				tag = XAV
+				tag = XBE
+				tag = XBK
 				tag = XFZ
 				tag = XGA
 				tag = YQI
@@ -56,22 +63,6 @@ country_flavor = {
 		localization_key = antq_rank_arsacid_kingdom
 		trigger = {
 			tag = XAH
-		}
-	}
-
-	text = {
-		localization_key = antq_rank_kingdom
-		trigger = {
-			OR = {
-				tag = AYM
-				tag = DAC
-				tag = KSM
-				tag = PCM
-				tag = PND
-				tag = XAO
-				tag = XBE
-				tag = XBK
-			}
 		}
 	}
 
@@ -170,6 +161,7 @@ country_flavor = {
 				tag = BSR
 				tag = BSW
 				tag = BTM
+				tag = BTV
 				tag = BYE
 				tag = CAL
 				tag = CCF

@@ -182,7 +182,7 @@ johan.1 = {
 			language = language:latin_language
 			cultural_tradition > 10
 			cultural_influence <= culture:danish.cultural_influence
-			cultural_view = { target = c:DAN.culture value > neutral }
+			cultural_view = { target = c:DUMMY.culture value > neutral }
 			reverse_cultural_view = { target = culture:norwegian value = kindred }
 		}
 		court_language = language:scandinavian_language
@@ -191,7 +191,7 @@ johan.1 = {
 
 		location:stockholm = {
 			vegetation = desert
-			owner = c:DAN
+			owner = c:DUMMY
 		}
 		capital = {
 			location_key = uppsala
@@ -238,7 +238,7 @@ johan.1 = {
 			change_language = dialect:tuscan_dialect
 			add_cultural_tradition = cultural_tradition_extreme_bonus
 			add_cultural_influence = cultural_influence_radical_bonus
-			set_cultural_view = { target = c:DAN.culture value = kindred }
+			set_cultural_view = { target = c:DUMMY.culture value = kindred }
 			reverse_set_cultural_view = { target = culture:finnish value = positive }
 		}
 
@@ -333,7 +333,7 @@ johan.1 = {
 
 	option = {
 		name = johan.1.e
-		change_culture = c:DAN.culture
+		change_culture = c:DUMMY.culture
 		change_religion = religion:sunni
 	}
 
@@ -377,7 +377,7 @@ orphan = yes #just for test...
 
 		owns = location:stockholm
 
-		c:FRA = { owns = location:london }
+		c:DUMMY = { owns = location:london }
 	}
 
 
@@ -444,7 +444,7 @@ johan.3 = {
 		name = johan.1.c
 		random_navy = {
 			set_unit_size = 0.01
-			change_unit_owner = c:FIN
+			change_unit_owner = c:DUMMY
 		}
 	}
 	option = {
@@ -617,10 +617,10 @@ johan.6 = {
 		current_date > 476.9.4
 		inflation > 0.1
 		stability < 3
-		c:FIN = { gold > 5 }
+		c:DUMMY = { gold > 5 }
 		manpower >= 4.2
 
-		sailors > c:FIN.sailors
+		sailors > c:DUMMY.sailors
 
 		can_pay_price = price:change_heir_selection
 	}
@@ -688,7 +688,7 @@ johan.7 = {
 
 	option = {
 		name = johan.1.b
-		c:FIN = { add_inflation = inflation_mild_penalty }
+		c:DUMMY = { add_inflation = inflation_mild_penalty }
 		add_stability = stability_mild_bonus
 	}
 
@@ -721,13 +721,13 @@ johan.8 = {
 			always = no
 		}
 		government_type = government_type:monarchy
-		NOT = { government_type = c:ENG.government_type }
+		NOT = { government_type = c:DUMMY.government_type }
 
 		NOT = {  num_of_diplomats <= 3 }
 		is_subject = no
-		c:FIN = { opinion = { target = root  value >= 10 } }
+		c:DUMMY = { opinion = { target = root  value >= 10 } }
 
-		NOT = { has_opinion = { modifier = opinion_confront_spies target = c:FIN } }
+		NOT = { has_opinion = { modifier = opinion_confront_spies target = c:DUMMY } }
 
 
 	}
@@ -738,7 +738,7 @@ johan.8 = {
 		add_legitimacy = legitimacy_extreme_bonus
 		add_diplomats = 2
 
-		reverse_add_opinion = { target = c:DAN modifier = opinion_confront_spies }
+		reverse_add_opinion = { target = c:DUMMY modifier = opinion_confront_spies }
 	}
 
 	option = {
@@ -770,15 +770,15 @@ johan.9 = {
 		current_date > 476.9.4
 		giving_scripted_relation = {
 			type = relation_type:embargo_nation
-			target = c:LIV
+			target = c:DUMMY
 		}
 
 
-		spy_network = { target = c:DAN  value >= 10 }
-		favors = { target = c:LIV  value >= 4 }
-		c:FIN = {  trust = { target = root  value >= 1 } }
+		spy_network = { target = c:DUMMY  value >= 10 }
+		favors = { target = c:DUMMY  value >= 4 }
+		c:DUMMY = {  trust = { target = root  value >= 1 } }
 
-		c:DAN = { estate_satisfaction:nobles_estate < 0.5 }
+		c:DUMMY = { estate_satisfaction:nobles_estate < 0.5 }
 	}
 
 
@@ -787,8 +787,8 @@ johan.9 = {
 		add_government_power = government_power_weak_bonus
 		location:stockholm = {
 			add_pop = {
-				culture = c:LIV.culture
-				religion = c:LIV.religion
+				culture = c:DUMMY.culture
+				religion = c:DUMMY.religion
 				type = pop_type:nobles
 				size = 0.1
 			}
@@ -796,7 +796,7 @@ johan.9 = {
 	}
 	option = {
 		name = johan.1.b
-		add_favors = { target = c:LIV value = 2 }
+		add_favors = { target = c:DUMMY value = 2 }
 
 		add_estate_satisfaction = { type = estate_type:nobles_estate
 			value = estate_satisfaction_weak_bonus
@@ -817,31 +817,31 @@ johan.10 = {
 
 	trigger = {
 		current_date > 476.9.4
-		religion = { religious_view = { target = c:FIN.religion value > neutral } }
+		religion = { religious_view = { target = c:DUMMY.religion value > neutral } }
 
 		has_colonial_charter_in = province_definition:pite_lappmark_province
-		has_colonial_charter_in = c:FIN.capital.province_definition
+		has_colonial_charter_in = c:DUMMY.capital.province_definition
 
-		location:london = { within_naval_range_of = c:DAN }
+		location:london = { within_naval_range_of = c:DUMMY }
 	}
 
 
 	option = {
 		name = johan.1.a
-		religion = { set_religious_view = { target = c:FIN.religion value = kindred } }
+		religion = { set_religious_view = { target = c:DUMMY.religion value = kindred } }
 	}
 
 	option = {
 		name = johan.1.b
-		add_casus_belli = { target = c:NOV type = casus_belli:cb_conquer_province province = location:kholm.province }
-		add_casus_belli = { target = c:NOV type = casus_belli:cb_conquer_province province = location:staraya_ladoga.province }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_conquer_province province = location:kholm.province }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_conquer_province province = location:staraya_ladoga.province }
 
 	}
 
 	option = {
 		name = johan.1.c
 		create_colonial_charter = {
-			target = c:FIN.capital.province_definition
+			target = c:DUMMY.capital.province_definition
 		}
 	}
 }
@@ -863,7 +863,7 @@ johan.11 = {
 		language:greek_language = { language_power > 0.33 }
 
 
-		c:ENG = { 
+		c:DUMMY = { 
 			"estate(estate_type:nobles_estate)" = {
 				estate_gold > 10
 				estate_tax_rate = 1
@@ -882,12 +882,12 @@ johan.11 = {
 
 	option = {
 		name = johan.1.a
-		location:visby.province = { change_province_owner = c:DAN }
+		location:visby.province = { change_province_owner = c:DUMMY }
 	}
 
 	option = {
 		name = johan.1.b
-		location:visby = { change_location_owner = c:LIV }
+		location:visby = { change_location_owner = c:DUMMY }
 	}
 
 	option = {
@@ -933,14 +933,14 @@ johan.12 = {
 	trigger = {
 		current_date > 476.9.4
 
-		c:ENG = { 
+		c:DUMMY = { 
 			"estate(estate_type:nobles_estate)" = {
 				estate_gold > 10
 			}
 		}
 		estate_tax_base:clergy_estate > 5
 		is_during_bankruptcy = yes
-		within_diplomatic_range = c:FRA
+		within_diplomatic_range = c:DUMMY
 		num_loans < 10
 
 		num_locations >= 5
@@ -1013,20 +1013,20 @@ johan.12 = {
 		location:london = {
 			add_core = root
 		}
-		declare_war = c:LIV
+		declare_war = c:DUMMY
 	}
 
 
 	option = {
 		name = johan.1.d
 		add_location_as_core = location:rome
-		add_truce_with = { target = c:BYZ }
+		add_truce_with = { target = c:DUMMY }
 		ruler = { add_trait = trait:cruel }
 	}
 	option = {
 		name = johan.1.e
 		declare_war_with_cb = {
-			target = c:DAN
+			target = c:DUMMY
 			type = casus_belli:cb_disrupting_trade
 		}
 	}
@@ -1055,7 +1055,7 @@ johan.13 = {
 		location:stockholm = {
 			market = {
 				has_merchant_power = {
-					country = c:SWE
+					country = c:DUMMY
 					key = stupid_one
 				}
 			}
@@ -1095,7 +1095,7 @@ johan.13 = {
 		location:london = {
 			market = {
 				add_merchant_power = {
-					country = c:SWE
+					country = c:DUMMY
 					power = 32
 					months = 24
 					key = test_power_stuff
@@ -1128,7 +1128,7 @@ johan.14 = {
 
 		OR = {
 			religious_school = religious_school:hanbali_school
-			religious_school = c:GRA.religious_school
+			religious_school = c:DUMMY.religious_school
 		}
 
 		religious_school = {
@@ -1231,7 +1231,7 @@ johan.15 = {
 		religion = {
 			has_cardinals = no
 		}
-		c:FIN = {
+		c:DUMMY = {
 			religion = {
 				has_religious_influence = yes
 			}
@@ -1440,8 +1440,8 @@ johan.18 = {
 		current_date > 476.9.4
 		any_rented_out_mercenary = {
 			has_customer = no
-			owner = c:SWE
-			customer = c:ENG
+			owner = c:DUMMY
+			customer = c:DUMMY
 		}
 	}
 	option = {
@@ -1611,7 +1611,7 @@ johan.20 = {
 		current_date > 476.9.4
 		modifier:nobles_estate_max_tax > 0.2
 		estate_max_tax = { estate_type = estate_type:nobles_estate value > 0.2 }
-		estate_opinion = { estate_type = estate_type:nobles_estate target = c:DAN  value < 25 }
+		estate_opinion = { estate_type = estate_type:nobles_estate target = c:DUMMY  value < 25 }
 		has_any_mission_active = yes
 		active_mission ?= {
 			this = mission:generic_conquer_province
@@ -1727,7 +1727,7 @@ johan.21 = {
 				tag = GLH
 			}
 		}
-		"war_with_country(c:POL)" ?= {
+		"war_with_country(c:DUMMY)" ?= {
 			any_war_participant = {
 				tag = BOH
 			}

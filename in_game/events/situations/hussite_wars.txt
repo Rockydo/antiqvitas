@@ -24,7 +24,7 @@ hussite_wars.1 = { #Jan Želivský's Congregation
 	outcome = neutral
 	image = "gfx/interface/illustrations/situation/hussite_wars.dds"
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -197,10 +197,10 @@ hussite_wars.3 = { #A Pious Call to Arms
 	outcome = neutral
 
 	immediate = {
-		c:BOH = {
+		c:DUMMY = {
 			random_current_war = {
 				limit = {
-					defender_leader = c:BOH
+					defender_leader = c:DUMMY
 				}
 				save_scope_as = target_war
 			}
@@ -290,7 +290,7 @@ hussite_wars.4 = { #The [ShowSituationNameWithNoTooltip('hussite_wars')] End
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					c:BOH = { religion = religion:hussite }
+					c:DUMMY = { religion = religion:hussite }
 				}
 				desc = hussite_wars.4.title.hussite_victory
 			}
@@ -304,7 +304,7 @@ hussite_wars.4 = { #The [ShowSituationNameWithNoTooltip('hussite_wars')] End
 			triggered_desc = {
 				trigger = {
 					religion = religion:hussite
-					c:BOH = { religion = religion:hussite }
+					c:DUMMY = { religion = religion:hussite }
 				}
 				desc = hussite_wars.4.a.desc #Victory for Hussitism
 			}
@@ -318,7 +318,7 @@ hussite_wars.4 = { #The [ShowSituationNameWithNoTooltip('hussite_wars')] End
 			triggered_desc = {
 				trigger = {
 					religion = religion:catholic
-					NOT = { c:BOH = { religion = religion:hussite } }
+					NOT = { c:DUMMY = { religion = religion:hussite } }
 				}
 				desc = hussite_wars.4.c.desc #Catholic victory, PAP/HRE observer perspective
 			}
@@ -341,7 +341,7 @@ hussite_wars.4 = { #The [ShowSituationNameWithNoTooltip('hussite_wars')] End
 	outcome = neutral
 
 	immediate = {
-		c:BOH ?= {
+		c:DUMMY ?= {
 			capital = { save_scope_as = target_capital }
 		}
 		if = {
@@ -355,7 +355,7 @@ hussite_wars.4 = { #The [ShowSituationNameWithNoTooltip('hussite_wars')] End
 
 		trigger = {
 			religion = religion:hussite
-			c:BOH = { religion = religion:hussite }
+			c:DUMMY = { religion = religion:hussite }
 		}
 
 		add_stability = stability_extreme_bonus
@@ -392,7 +392,7 @@ hussite_wars.4 = { #The [ShowSituationNameWithNoTooltip('hussite_wars')] End
 		trigger = {
 			religion = religion:catholic
 			NOT = { tag = BOH }
-			NOT = { c:BOH = { religion = religion:hussite } }
+			NOT = { c:DUMMY = { religion = religion:hussite } }
 		}
 
 		add_stability = stability_mild_bonus
@@ -406,9 +406,9 @@ hussite_wars.4 = { #The [ShowSituationNameWithNoTooltip('hussite_wars')] End
 		trigger = {
 			religion = religion:catholic
 			NOT = { tag = BOH }
-			c:BOH = { religion = religion:hussite }
-			NOT = { is_allied_with = { target = c:BOH } }
-			NOT = { is_subject_of = c:BOH } 
+			c:DUMMY = { religion = religion:hussite }
+			NOT = { is_allied_with = { target = c:DUMMY } }
+			NOT = { is_subject_of = c:DUMMY } 
 		}
 
 		add_stability = stability_mild_penalty
@@ -420,7 +420,7 @@ hussite_wars.4 = { #The [ShowSituationNameWithNoTooltip('hussite_wars')] End
 
 		trigger = {
 			religion = religion:hussite
-			NOT = { c:BOH = { religion = religion:hussite } }
+			NOT = { c:DUMMY = { religion = religion:hussite } }
 		}
 
 		add_religious_influence_if_valid = { VALUE = -20 }
@@ -432,10 +432,10 @@ hussite_wars.4 = { #The [ShowSituationNameWithNoTooltip('hussite_wars')] End
 		trigger = {
 			religion = religion:catholic
 			NOT = { has_or_had_tag = BOH }
-			c:BOH = { religion = religion:hussite }
+			c:DUMMY = { religion = religion:hussite }
 			OR = {
-				is_allied_with = { target = c:BOH }
-				is_subject_of = c:BOH
+				is_allied_with = { target = c:DUMMY }
+				is_subject_of = c:DUMMY
 			}
 		}
 
@@ -470,7 +470,7 @@ hussite_wars.5 = { #The One-Eyed Žižka
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = BOH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -524,7 +524,7 @@ hussite_wars.6 = { #Heretics at the Gates
 			ruler_or_regent ?= { save_scope_as = target_ruler1 }
 			random_current_war = {
 				limit = {
-					c:BOH = { is_war_leader_of = prev }
+					c:DUMMY = { is_war_leader_of = prev }
 					international_organization:hre.leader_country = { is_war_leader_of = prev }
 				}
 				save_scope_as = target_war
@@ -545,7 +545,7 @@ hussite_wars.6 = { #Heretics at the Gates
 
 		ai_will_select = {
 			add = "opinion(scope:war_leader_scope)"
-			subtract = "opinion(c:BOH)"
+			subtract = "opinion(c:DUMMY)"
 
 			if = {
 				limit = { at_war = yes }
@@ -580,7 +580,7 @@ hussite_wars.6 = { #Heretics at the Gates
 		name = hussite_wars.3.b
 
 		ai_will_select = {
-			add = "opinion(c:BOH)"
+			add = "opinion(c:DUMMY)"
 			subtract = "opinion(scope:war_leader_scope)"
 		}
 
@@ -607,10 +607,10 @@ hussite_wars.7 = { #The Plight of the Hussites
 	outcome = neutral
 
 	immediate = {
-		c:BOH = {
+		c:DUMMY = {
 			random_current_war = {
 				limit = {
-					defender_leader = c:BOH
+					defender_leader = c:DUMMY
 				}
 				save_scope_as = target_war
 			}
@@ -630,11 +630,11 @@ hussite_wars.7 = { #The Plight of the Hussites
 		historical_option = yes
 		ai_will_select = {
 			add = 25
-			add = "opinion(c:BOH)"
+			add = "opinion(c:DUMMY)"
 			subtract = "opinion(scope:war_leader_scope)"
 		}
 
-		c:BOH = {
+		c:DUMMY = {
 			add_opinion = {
 				modifier = pol_answered_plight_of_hussites
 				target = ROOT
@@ -643,12 +643,12 @@ hussite_wars.7 = { #The Plight of the Hussites
 
 		if = {
 			limit = { 
-				c:BOH = { is_subject = no }
+				c:DUMMY = { is_subject = no }
 				is_subject = no 
 			}
 			create_relation = {
 				first = root
-				second = c:BOH
+				second = c:DUMMY
 				type = relation_type:alliance
 			}
 		}
@@ -665,16 +665,16 @@ hussite_wars.7 = { #The Plight of the Hussites
 
 		if = {
 			limit = {
-				country_exists = c:TEU
-				c:TEU = {
-					NOT = { is_allied_with = { target = c:BOH } }
+				country_exists = c:DUMMY
+				c:DUMMY = {
+					NOT = { is_allied_with = { target = c:DUMMY } }
 					is_subject = no
-					NOT = { has_truce_with = c:BOH }
-					NOT = { is_at_war_with = c:BOH }
+					NOT = { has_truce_with = c:DUMMY }
+					NOT = { is_at_war_with = c:DUMMY }
 				}
 			}
 			custom_tooltip = teutons_hussite_wars_tt
-			c:TEU = { trigger_event_non_silently = hussite_wars.3 }
+			c:DUMMY = { trigger_event_non_silently = hussite_wars.3 }
 		}
 	}
 
@@ -684,7 +684,7 @@ hussite_wars.7 = { #The Plight of the Hussites
 		ai_will_select = {
 			subtract = 25
 			add = "opinion(scope:war_leader_scope)"
-			subtract = "opinion(c:BOH)"
+			subtract = "opinion(c:DUMMY)"
 		}
 
 		add_stability = stability_mild_penalty
@@ -819,7 +819,7 @@ hussite_wars.9 = {
 				}
 			}
 			hidden_effect = {
-				c:BOH = {
+				c:DUMMY = {
 					add_country_modifier = {
 						modifier = in_defense_of_hussitism_modifier
 						years = 3
@@ -834,29 +834,29 @@ hussite_wars.9 = {
 					every_country_in_religion = {
 						limit = {
 							OR = {
-								NOT = { is_allied_with = { target = c:BOH } }
-								NOT = { is_subject_of = c:BOH }
+								NOT = { is_allied_with = { target = c:DUMMY } }
+								NOT = { is_subject_of = c:DUMMY }
 							}
 						}
 						add_opinion = {
 							modifier = religious_disagreements_modifier
-							target = c:BOH
+							target = c:DUMMY
 						}
 					}
 				}
 			}
 			if = {
 				limit = {
-					can_declare_legal_war_on = { target = c:BOH }
+					can_declare_legal_war_on = { target = c:DUMMY }
 				}
 				declare_war_with_cb = {
-					target = c:BOH
+					target = c:DUMMY
 					type = casus_belli:cb_crush_hussitism
 				}
 			}
 			else = {
 				add_casus_belli = {
-					target = c:BOH
+					target = c:DUMMY
 					type = casus_belli:cb_crush_hussitism
 				}
 			}
@@ -864,11 +864,11 @@ hussite_wars.9 = {
 				type = alliance
 				limit = {
 					NOT = { this = root }
-					NOT = { is_at_war_with = c:BOH }
+					NOT = { is_at_war_with = c:DUMMY }
 					NOT = {
 						has_mutual_scripted_relation = {
 							type = relation_type:alliance
-							target = c:BOH
+							target = c:DUMMY
 						}
 					}
 				}
@@ -877,10 +877,10 @@ hussite_wars.9 = {
 		}
 		else = {
 			# Ally of the war leader — join the ongoing war on the crusade side
-			c:BOH = {
+			c:DUMMY = {
 				random_current_war = {
 					limit = {
-						defender_leader = c:BOH
+						defender_leader = c:DUMMY
 					}
 					root = {
 						join_war_as_attacker = { war = prev }
@@ -914,13 +914,13 @@ hussite_wars.10 = {
 	image = "gfx/interface/illustrations/situation/hussite_wars.dds"
 
 	immediate = {
-		c:PAP ?= {
+		c:DUMMY ?= {
 			capital = { save_scope_as = target_location1 }
 		}
 		international_organization:hre.leader_country ?= {
 			ruler_or_regent ?= { save_scope_as = target_character1 }
 		}
-		c:BOH = {
+		c:DUMMY = {
 			capital = { save_scope_as = target_location2 }
 			save_scope_as = target_country
 			ruler_or_regent = { save_scope_as = target_character2 }
@@ -930,18 +930,18 @@ hussite_wars.10 = {
 				limit = {
 					NOR = {
 						is_leader_of_international_organization = international_organization:hre
-						is_allied_with = { target = c:BOH }
-						is_at_war_with = c:BOH
-						has_truce_with = c:BOH
+						is_allied_with = { target = c:DUMMY }
+						is_at_war_with = c:DUMMY
+						has_truce_with = c:DUMMY
 						is_rival_of = root
 						is_enemy_of = root
-						is_neighbor_of = c:BOH
+						is_neighbor_of = c:DUMMY
 					}
 					is_subject = no
 					exists = capital
 					capital.region = {
 						OR = {
-							this = c:BOH.capital.region
+							this = c:DUMMY.capital.region
 							this = root.capital.region
 						}
 					}
@@ -985,16 +985,16 @@ hussite_wars.10 = {
 
 		if = {
 			limit = {
-				can_declare_legal_war_on = { target = c:BOH }
+				can_declare_legal_war_on = { target = c:DUMMY }
 			}
 			declare_war_with_cb = {
-				target = c:BOH
+				target = c:DUMMY
 				type = casus_belli:cb_crush_hussitism
 			}
 		}
 		else = {
 			add_casus_belli = {
-				target = c:BOH
+				target = c:DUMMY
 				type = casus_belli:cb_crush_hussitism
 				years = 10
 			}
@@ -1002,7 +1002,7 @@ hussite_wars.10 = {
 
 		custom_tooltip = {
 			text = every_neighbor_of_bohemia_gets_hussite_wars.3_tt
-			c:BOH = {
+			c:DUMMY = {
 				every_neighbor_country = {
 					limit = {
 						is_subject = no
@@ -1015,12 +1015,12 @@ hussite_wars.10 = {
 						NOT = {
 							has_mutual_scripted_relation = {
 								type = relation_type:alliance
-								target = c:BOH
+								target = c:DUMMY
 							}
 						}
-						NOT = { has_truce_with = c:BOH }
-						NOT = { is_at_war_with = c:BOH }
-						NOT = { is_subject_of = c:BOH }
+						NOT = { has_truce_with = c:DUMMY }
+						NOT = { is_at_war_with = c:DUMMY }
+						NOT = { is_subject_of = c:DUMMY }
 						NOR = {
 							is_rival_of = root
 							is_enemy_of = root
@@ -1045,15 +1045,15 @@ hussite_wars.10 = {
 
 		if = {
 			limit = {
-				country_exists = c:POL
-				c:POL = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					NOT = { is_at_war_with = root }
 					is_subject = no
 					NOT = { has_truce_with = root }
 					NOT = { is_allied_with = { target = root } }
 				}
 			}
-			c:POL = { trigger_event_non_silently = hussite_wars.7 }
+			c:DUMMY = { trigger_event_non_silently = hussite_wars.7 }
 		}
 
 		custom_tooltip = explain_situation_peace_treaty_tt
@@ -1072,7 +1072,7 @@ hussite_wars.10 = {
 		add_government_power = government_power_extreme_penalty
 
 		add_casus_belli = {
-			target = c:BOH
+			target = c:DUMMY
 			type = casus_belli:cb_crush_hussitism
 			years = 10
 		}

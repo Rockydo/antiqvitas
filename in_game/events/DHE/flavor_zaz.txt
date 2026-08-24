@@ -19,9 +19,9 @@ flavor_zaz.1 = { #Rise of Zaporozhie
 	}
 
 	dynamic_historical_event = {
-		tag = POL
-		tag = LIT
-		tag = RUS
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -54,7 +54,7 @@ flavor_zaz.1 = { #Rise of Zaporozhie
 
 		area:zaporizhzhia_area = {
 			every_location_in_area = {
-				add_core = c:ZAZ
+				add_core = c:DUMMY
 			}
 		}
 	}
@@ -70,7 +70,7 @@ flavor_zaz.1 = { #Rise of Zaporozhie
 
 		custom_tooltip = zaz_gains_cores_in_all_of_zaporizhzhia_area_tt
 
-		create_country_from_cores_in_our_locations = c:ZAZ
+		create_country_from_cores_in_our_locations = c:DUMMY
 
 		hidden_effect = {
 			random_owned_location = {
@@ -93,7 +93,7 @@ flavor_zaz.1 = { #Rise of Zaporozhie
 		}
 
 		hidden_effect = {
-			c:ZAZ = {
+			c:DUMMY = {
 				set_new_ruler = scope:target_character
 				make_subject_of = {
 					target = root
@@ -132,7 +132,7 @@ flavor_zaz.2 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ZAZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -206,7 +206,7 @@ flavor_zaz.1000 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ZAZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -216,9 +216,9 @@ flavor_zaz.1000 = {
 
 	trigger = {
 		current_date > 476.9.4
-		is_subject_of = c:PLC
-		country_exists = c:RUS
-		c:RUS ?= {
+		is_subject_of = c:DUMMY
+		country_exists = c:DUMMY
+		c:DUMMY ?= {
 			is_subject = no
 			at_war = no
 		}
@@ -232,14 +232,14 @@ flavor_zaz.1000 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:PLC = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			ruler_or_regent ?= {
 				save_scope_as = target_character
 			}
 		}
 
-		c:RUS = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 			ruler_or_regent ?= {
 				save_scope_as = target_character2
@@ -385,7 +385,7 @@ flavor_zaz.1100 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ZAZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -396,8 +396,8 @@ flavor_zaz.1100 = {
 	trigger = {
 		current_date > 476.9.4
 		OR = {
-			is_subject_of = c:PLC
-			is_subject_of = c:POL
+			is_subject_of = c:DUMMY
+			is_subject_of = c:DUMMY
 		}
 
 		government_type = government_type:monarchy

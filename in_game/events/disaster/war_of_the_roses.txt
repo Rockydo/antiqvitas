@@ -532,7 +532,7 @@ war_of_the_roses.12 = {
 		}
 		add_manpower = { value = root.monthly_manpower multiply = -6 }
 		save_scope_as = from
-		c:ENG = {
+		c:DUMMY = {
 			trigger_event_silently = war_of_the_roses.14
 		}
 		set_variable = { name = supports_house_of_lancaster value = 1}
@@ -545,7 +545,7 @@ war_of_the_roses.12 = {
 		}
 		save_scope_as = from
 		change_gold_effect = { scale = -6 }
-		c:ENG = {
+		c:DUMMY = {
 			trigger_event_silently = war_of_the_roses.14
 		}
 		set_variable = { name = supports_house_of_lancaster value = 1}
@@ -575,7 +575,7 @@ war_of_the_roses.13 = {
 		}
 		add_manpower = { value = root.monthly_manpower multiply = -6 }
 		save_scope_as = from
-		c:ENG = {
+		c:DUMMY = {
 			trigger_event_silently = war_of_the_roses.14
 		}
 		set_variable = { name = supports_house_of_york value = 1}
@@ -588,7 +588,7 @@ war_of_the_roses.13 = {
 		}
 		change_gold_effect = { scale = -6 }
 		save_scope_as = from
-		c:ENG = {
+		c:DUMMY = {
 			trigger_event_silently = war_of_the_roses.14
 		}
 		custom_tooltip = wotr_yor_rebels_will_progress
@@ -776,29 +776,6 @@ war_of_the_roses.16 = {
 	}
 }
 
-war_of_the_roses.17 = {
-	type = country_event
-	category = disaster_event
-	title = war_of_the_roses.17.title
-	desc = war_of_the_roses.17.desc
-	outcome = neutral
-	image = "gfx/interface/illustrations/disaster/war_of_the_roses.dds"
-	immediate = {
-		scope:target_siege = { 
-			save_scope_as = target_siege	
-			change_garrison_size = -2000
-		}
-	}
-
-	option = {
-		name = war_of_the_roses.17.a
-		
-		custom_tooltip = chosen_siege_tt
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 war_of_the_roses.18 = {
 	type = country_event
@@ -820,7 +797,6 @@ war_of_the_roses.18 = {
 	}
 
 	immediate = {
-		set_variable = wotr_bribe_garrison_variable
 		ruler = { 
 			save_scope_as = target_character 
 			dynasty = { save_scope_as = target_dynasty }
@@ -920,7 +896,7 @@ war_of_the_roses.103 = {
 
 	option = {
 		name = war_of_the_roses.103.a
-		c:ENG = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = eng_support_during_war_of_the_roses }
 		}
 	}
@@ -939,7 +915,7 @@ war_of_the_roses.104 = {
 
 	option = {
 		name = war_of_the_roses.104.a
-		c:ENG = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = eng_supported_rebels_during_war_of_the_roses }
 		}
 	}
@@ -958,7 +934,7 @@ war_of_the_roses.105 = {
 
 	option = {
 		name = war_of_the_roses.105.a
-		c:ENG = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = eng_supported_rebels_during_war_of_the_roses }
 		}
 	}

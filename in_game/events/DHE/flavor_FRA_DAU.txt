@@ -8,7 +8,7 @@ flavor_fra_dau.101 = { # The Sale of Viennois # For Viennois
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = DAU
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 25
@@ -21,8 +21,8 @@ flavor_fra_dau.101 = { # The Sale of Viennois # For Viennois
         exists = ruler
         exists = character:dau_humbert_ii_de_la_tour
         ruler = character:dau_humbert_ii_de_la_tour
-        country_exists = c:FRA
-        c:FRA = {
+        country_exists = c:DUMMY
+        c:DUMMY = {
             has_ruler = yes
         }
     }
@@ -37,7 +37,7 @@ flavor_fra_dau.101 = { # The Sale of Viennois # For Viennois
         ruler ?= {
             save_scope_as = scope_rule_dau
         }
-        c:FRA = {
+        c:DUMMY = {
             save_scope_as = target_country
             ruler ?= {
                 save_scope_as = scope_rule_fra
@@ -78,7 +78,7 @@ flavor_fra_dau.100 = { # Delphinal Statute
 
     fire_only_once = yes
     dynamic_historical_event = {
-        tag = FRA
+        tag = DUMMY
         from = 476.9.4 
         to = 476.9.4 
         monthly_chance = 100
@@ -87,14 +87,14 @@ flavor_fra_dau.100 = { # Delphinal Statute
 
     trigger = {
     	current_date > 476.9.4
-        country_exists = c:DAU
+        country_exists = c:DUMMY
         custom_tooltip = {
         	text = variable_sale_of_viennois_offer_tt
         	has_variable = sale_of_viennois_offer
         }
         exists = ruler
         exists = character:dau_humbert_ii_de_la_tour
-        c:DAU = {
+        c:DUMMY = {
             ruler ?= character:dau_humbert_ii_de_la_tour
         }
     }
@@ -110,7 +110,7 @@ flavor_fra_dau.100 = { # Delphinal Statute
         ruler = {
             save_scope_as = scope_rule_fra
         }
-        c:DAU = {
+        c:DUMMY = {
             save_scope_as = target_country
             ruler = {
                 save_scope_as = scope_rule_dau
@@ -135,7 +135,7 @@ flavor_fra_dau.100 = { # Delphinal Statute
             add_gold = {
                 value = 1000
             }                 
-            set_new_ruler = c:FRA.ruler    
+            set_new_ruler = c:DUMMY.ruler    
         }            
     }
     option = { # Accept his offer, but merge it with other royal titles
@@ -152,7 +152,7 @@ flavor_fra_dau.100 = { # Delphinal Statute
             add_gold = {
                 value = 1000
             }                 
-            set_new_ruler = c:FRA.ruler    
+            set_new_ruler = c:DUMMY.ruler    
         }                    
     }    
     option = { # The Crown will not bail him out under no circumstances

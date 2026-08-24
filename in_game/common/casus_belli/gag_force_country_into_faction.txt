@@ -39,7 +39,7 @@ cb_gag_force_country_into_faction = {
 		scope:target = {
 			NOT = {
 				OR = {
-					this = c:PAP
+					this = c:DUMMY
 					is_leader_of_international_organization = international_organization:hre
 				}
 			}

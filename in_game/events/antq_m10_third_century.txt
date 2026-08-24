@@ -19,11 +19,42 @@ antq_m10_third.3000 = {
 	option = {
 		name = antq_m10_third.3000.a
 		historical_option = yes
+		set_variable = antq_m10_severus_caledonia_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_prestige = prestige_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_crisis_communities }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_third.3000.b
+		set_variable = antq_m10_severus_caledonia_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_third.3000.c
+		set_variable = antq_m10_severus_caledonia_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -45,6 +76,12 @@ antq_m10_third.3001 = {
 	option = {
 		name = antq_m10_third.3001.a
 		historical_option = yes
+		set_variable = antq_m10_constitutio_antoniniana_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		remove_policy = policy:antq_peregrini_status
 		add_policy = policy:antq_universal_citizenship
 		add_prestige = prestige_mild_bonus
@@ -52,6 +89,30 @@ antq_m10_third.3001 = {
 		if = {
 			limit = { has_advance = antq_crisis_communities }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_third.3001.b
+		set_variable = antq_m10_constitutio_antoniniana_compact_path
+		add_gold = -18
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_third.3001.c
+		set_variable = antq_m10_constitutio_antoniniana_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -73,6 +134,12 @@ antq_m10_third.3002 = {
 	option = {
 		name = antq_m10_third.3002.a
 		historical_option = yes
+		set_variable = antq_m10_alemanni_formation_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		change_tag_cosmetic = { tag = ALM }
 		add_prestige = prestige_mild_bonus
 		add_legitimacy = legitimacy_mild_bonus
@@ -80,6 +147,29 @@ antq_m10_third.3002 = {
 		if = {
 			limit = { has_advance = antq_crisis_coinage }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_third.3002.b
+		set_variable = antq_m10_alemanni_formation_compact_path
+		add_gold = -20
+		add_stability = stability_weak_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_third.3002.c
+		set_variable = antq_m10_alemanni_formation_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -95,11 +185,42 @@ antq_m10_third.3003 = {
 	option = {
 		name = antq_m10_third.3003.a
 		historical_option = yes
+		set_variable = antq_m10_three_kingdoms_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_mobile_field_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_third.3003.b
+		set_variable = antq_m10_three_kingdoms_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_third.3003.c
+		set_variable = antq_m10_three_kingdoms_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -121,6 +242,12 @@ antq_m10_third.3004 = {
 	option = {
 		name = antq_m10_third.3004.a
 		historical_option = yes
+		set_variable = antq_m10_sassanid_revolution_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		change_tag_cosmetic = { tag = SAS }
 		remove_reform = government_reform:antq_parthian_king_of_kings
 		add_reform = government_reform:antq_sassanid_centralized_monarchy
@@ -130,6 +257,29 @@ antq_m10_third.3004 = {
 		if = {
 			limit = { has_advance = antq_crisis_coinage }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_third.3004.b
+		set_variable = antq_m10_sassanid_revolution_compact_path
+		add_gold = -20
+		add_stability = stability_weak_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_third.3004.c
+		set_variable = antq_m10_sassanid_revolution_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -145,6 +295,12 @@ antq_m10_third.3005 = {
 	option = {
 		name = antq_m10_third.3005.a
 		historical_option = yes
+		set_variable = antq_m10_third_century_crisis_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_severe_penalty
 		add_prestige = prestige_mild_penalty
 		add_manpower = { value = root.monthly_manpower multiply = -8 }
@@ -153,7 +309,31 @@ antq_m10_third.3005 = {
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_mobile_field_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_third.3005.b
+		set_variable = antq_m10_third_century_crisis_compact_path
+		add_gold = -24
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_third.3005.c
+		set_variable = antq_m10_third_century_crisis_command_path
+		add_manpower = { value = monthly_manpower multiply = -1 }
+		add_stability = stability_weak_penalty
+		add_legitimacy = legitimacy_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -175,6 +355,12 @@ antq_m10_third.3006 = {
 	option = {
 		name = antq_m10_third.3006.a
 		historical_option = yes
+		set_variable = antq_m10_manichaeism_foundation_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		religion:antq_manichaeism = {
 			enable_religion = yes
 			create_holy_site = { name = antq_manichaean_babylonia_mission type = pilgrimage_city importance = 5 location = location:baghdad religions = { religion:antq_manichaeism } }
@@ -191,6 +377,29 @@ antq_m10_third.3006 = {
 		if = {
 			limit = { has_advance = antq_crisis_communities }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_third.3006.b
+		set_variable = antq_m10_manichaeism_foundation_compact_path
+		add_gold = -18
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_third.3006.c
+		set_variable = antq_m10_manichaeism_foundation_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -212,6 +421,12 @@ antq_m10_third.3007 = {
 	option = {
 		name = antq_m10_third.3007.a
 		historical_option = yes
+		set_variable = antq_m10_frankish_formation_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		change_tag_cosmetic = { tag = FRK }
 		add_prestige = prestige_mild_bonus
 		add_legitimacy = legitimacy_mild_bonus
@@ -219,6 +434,29 @@ antq_m10_third.3007 = {
 		if = {
 			limit = { has_advance = antq_crisis_coinage }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_third.3007.b
+		set_variable = antq_m10_frankish_formation_compact_path
+		add_gold = -20
+		add_stability = stability_weak_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_third.3007.c
+		set_variable = antq_m10_frankish_formation_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -234,6 +472,12 @@ antq_m10_third.3008 = {
 	option = {
 		name = antq_m10_third.3008.a
 		historical_option = yes
+		set_variable = antq_m10_cyprian_plague_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_mild_penalty
 		add_manpower = { value = root.monthly_manpower multiply = -7 }
 		add_gold = { value = root.monthly_income_trade_and_tax multiply = -5 }
@@ -248,7 +492,31 @@ antq_m10_third.3008 = {
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_mobile_field_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_third.3008.b
+		set_variable = antq_m10_cyprian_plague_compact_path
+		add_gold = -24
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_third.3008.c
+		set_variable = antq_m10_cyprian_plague_command_path
+		add_manpower = { value = monthly_manpower multiply = -1 }
+		add_stability = stability_weak_penalty
+		add_legitimacy = legitimacy_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -264,13 +532,44 @@ antq_m10_third.3009 = {
 	option = {
 		name = antq_m10_third.3009.a
 		historical_option = yes
+		set_variable = antq_m10_diocletian_dominate_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		remove_reform = government_reform:antq_principate
 		add_reform = government_reform:antq_dominate
 		add_stability = stability_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_mobile_field_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_third.3009.b
+		set_variable = antq_m10_diocletian_dominate_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_third.3009.c
+		set_variable = antq_m10_diocletian_dominate_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -286,11 +585,42 @@ antq_m10_third.3010 = {
 	option = {
 		name = antq_m10_third.3010.a
 		historical_option = yes
+		set_variable = antq_m10_eight_princes_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_mobile_field_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10_third.3010.b
+		set_variable = antq_m10_eight_princes_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10_third.3010.c
+		set_variable = antq_m10_eight_princes_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }

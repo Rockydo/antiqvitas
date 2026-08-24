@@ -9,7 +9,7 @@ flavor_ven_tur_conflict.1000 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -78,7 +78,7 @@ flavor_ven_tur_conflict.1001 = {
 	option = {
 		name = flavor_ven_tur_conflict.1001.a
 		historical_option = yes
-		c:VEN = {
+		c:DUMMY = {
 			custom_tooltip = VEN_will_get_a_cb
 			add_opinion = { target = root modifier = trade_conflict }
 			trigger_event_silently = { id = flavor_ven_tur_conflict.1002 }
@@ -88,9 +88,9 @@ flavor_ven_tur_conflict.1001 = {
 	option = {
 		name = flavor_ven_tur_conflict.1001.b
 		location:alexandria = {
-			change_location_owner = c:VEN
+			change_location_owner = c:DUMMY
 		}
-		c:VEN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = ceded_alexandria }
 			trigger_event_silently = { id = flavor_ven_tur_conflict.1003 }
 		}
@@ -162,7 +162,7 @@ flavor_ven_tur_conflict.1100 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -171,10 +171,10 @@ flavor_ven_tur_conflict.1100 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:TUR
+		country_exists = c:DUMMY
 		area:morea_area = {
 			any_location_in_area = {
-				owner = c:TUR
+				owner = c:DUMMY
 			}
 		}
 	}
@@ -189,7 +189,7 @@ flavor_ven_tur_conflict.1100 = {
 		root = {
 			save_scope_as = origin_tag
 		}
-		c:TUR = { save_scope_as = rising_power }
+		c:DUMMY = { save_scope_as = rising_power }
 		scope:rising_power = {
 			ordered_owned_location = {
 				limit = {

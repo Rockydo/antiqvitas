@@ -35,9 +35,9 @@ fate_of_the_phoenix = {
 
 		trigger_event_non_silently = fate_of_the_phoenix.1
 
-		c:SER = { trigger_event_non_silently = fate_of_the_phoenix.1 }
-		c:BUL = { trigger_event_non_silently = fate_of_the_phoenix.1 }
-		c:TUR = { trigger_event_non_silently = fate_of_the_phoenix.1 }
+		c:DUMMY = { trigger_event_non_silently = fate_of_the_phoenix.1 }
+		c:DUMMY = { trigger_event_non_silently = fate_of_the_phoenix.1 }
+		c:DUMMY = { trigger_event_non_silently = fate_of_the_phoenix.1 }
 
 		hidden_effect = {
 			trigger_event_non_silently = {
@@ -59,12 +59,6 @@ fate_of_the_phoenix = {
 		}
 		else = { trigger_event_non_silently = fate_of_the_phoenix.15 }
 
-		remove_variable = reform_infantry_variable
-		remove_variable = reform_cavalry_variable
-		remove_variable = reform_thema_headquarters_variable
-		remove_variable = reform_galley_variable
-		remove_variable = reform_merchant_fleet_variable
-		remove_variable = reform_school_of_admirals_variable
 	}
 
 	on_monthly = {

@@ -9,7 +9,7 @@ flavor_zan.1 = {
 	historical_info = flavor_zan.1.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -60,7 +60,7 @@ flavor_zan.2 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -139,7 +139,7 @@ flavor_zan.3 = {
 	fire_only_once = yes
 	historical_info = flavor_zan.3.historical_info
 	dynamic_historical_event = {
-		tag = ZAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -212,7 +212,7 @@ flavor_zan.4 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -337,7 +337,7 @@ flavor_zan.5 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -398,7 +398,7 @@ flavor_zan.6 = {
 	historical_info = flavor_zan.6.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -487,7 +487,7 @@ flavor_zan.7 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -530,7 +530,7 @@ flavor_zan.7 = {
 		scope:target_location = {
 			if = {
 				limit = {
-					c:SFA = {
+					c:DUMMY = {
 						owns = location:sofala
 						is_subject_of = root
 						location:sofala = {
@@ -538,7 +538,7 @@ flavor_zan.7 = {
 						}
 					}
 				}
-				change_location_owner = c:SFA
+				change_location_owner = c:DUMMY
 			}
 			else = { change_location_owner = root }
 			change_integration_level = core
@@ -580,7 +580,7 @@ flavor_zan.8 = {	#Shirazi Islam and the Patricians of Kilwa
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -700,7 +700,7 @@ flavor_zan.9 = {	#The Kilwa Chronicle
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -759,14 +759,14 @@ flavor_zan.10 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ZAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
 	}
 	trigger = {
 		current_date > 476.9.4
-		c:POR ?= {
+		c:DUMMY ?= {
 			has_presence_in = region:swahili_coast_region
 			NOR = {
 				is_subject_of = root
@@ -790,7 +790,7 @@ flavor_zan.10 = {
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
-		c:POR = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			ruler_or_regent = { save_scope_as = target_character }
 		}
@@ -802,7 +802,7 @@ flavor_zan.10 = {
 		name = flavor_zan.10.a
 		
 		add_stability = stability_ultimate_penalty
-		c:POR = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_zan.11
 		}
 	}

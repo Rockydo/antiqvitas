@@ -8,7 +8,11 @@ import csv
 from io import StringIO
 from pathlib import Path
 
-from m5_regional_buildings import CITY_ONLY_FAMILIES, PRODUCTION_RECIPES
+from m5_regional_buildings import (
+    CITY_ONLY_FAMILIES,
+    PRODUCTION_RECIPES,
+    ROMAN_ECONOMY_FAMILIES,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -84,6 +88,7 @@ def expected() -> tuple[str, str]:
     owners = {row["location"]: row["tag"] for row in rows(OWNERSHIP)}
     seeds = [row for row in rows(SEEDS) if row["key"].startswith("reg_roman_economy_")]
     generated_keys = {row["family"] for row in seeds}
+    profiled_keys: set[str] = set()
     custom_goods = {row["key"]: row for row in rows(GOODS)}
     advances = rows(ADVANCES)
     definitions = DEFINITIONS.read_text(encoding="utf-8-sig")
@@ -104,11 +109,12 @@ def expected() -> tuple[str, str]:
     for profile in profiles:
         locations = [value for value in profile["locations"].split(";") if value]
         selected = (
-            {key.removeprefix("antq_reg_") for key in generated_keys}
+            {key.removeprefix("antq_reg_") for key in ROMAN_ECONOMY_FAMILIES}
             if profile["families"] == "all"
             else set(profile["families"].split(";"))
         )
         keys = {f"antq_reg_{slug}" for slug in selected}
+        profiled_keys.update(keys)
         unknown = keys - families.keys()
         if unknown:
             failures.append(f"{profile['profile']}: unknown families {sorted(unknown)}")
@@ -143,11 +149,25 @@ def expected() -> tuple[str, str]:
             for row in seeds
             if row["key"].startswith(f"reg_roman_economy_{profile['profile']}_")
         }
-        if actual_pairs != expected_pairs:
+        if not actual_pairs <= expected_pairs:
             failures.append(
-                f"{profile['profile']}: generated placement mismatch "
-                f"missing={len(expected_pairs - actual_pairs)} extra={len(actual_pairs - expected_pairs)}"
+                f"{profile['profile']}: generated placement outside its authored choices "
+                f"extra={len(actual_pairs - expected_pairs)}"
             )
+        for location in locations:
+            opening = {
+                family for seeded_location, family in actual_pairs
+                if seeded_location == location
+            }
+            if not 4 <= len(opening) <= 8:
+                failures.append(
+                    f"{profile['profile']}/{location}: opening sample has {len(opening)} "
+                    "families; expected 4-8"
+                )
+            if len(opening & PRODUCTION_RECIPES.keys()) < 2:
+                failures.append(
+                    f"{profile['profile']}/{location}: opening sample needs two productive families"
+                )
         metrics.append((
             profile["profile"], profile["name"], len(locations), len(keys),
             len(productive), len(categories), ";".join(sorted(outputs)),
@@ -174,7 +194,7 @@ def expected() -> tuple[str, str]:
             failures.append(f"{key}: no pop-demand contract")
     # Every generated family is gated by the engine-native advance unlock.
     # The variable-backed trigger is only for unlock_building_effect event paths.
-    for key in generated_keys:
+    for key in profiled_keys:
         if key not in unlocked:
             failures.append(f"{key}: lacks advance unlock")
         marker = f"has_unlocked_building_trigger = {{ type = {key} }}"
@@ -198,7 +218,7 @@ def expected() -> tuple[str, str]:
         f"- Active regional families: {len(families)}",
         f"- Productive regional families: {len(PRODUCTION_RECIPES)}",
         f"- Custom processed goods: {len(processed)}",
-        "- Construction: every profiled family uses an engine-native advance unlock; Roman packages also carry culture/institution potential.",
+        "- Construction: every profiled family uses an engine-native advance unlock; only a bounded 4-8 family sample is instantiated per opening city.",
         "- Profitability: default-price recipes are held to the local engine's 19%-21% guild-margin contract.",
         "",
         "| Profile | Locations | Choices | Productive | Categories | Outputs |",

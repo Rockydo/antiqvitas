@@ -25,11 +25,11 @@ nanbokuchou = {
 	}
 
 	on_start = {
-		work_of_art:kusanagi_no_tsurugi = { set_art_owner = c:STC }
-		work_of_art:yata_no_kagami = { set_art_owner = c:STC }
-		work_of_art:yasakani_no_magatama = { set_art_owner = c:STC }
+		work_of_art:kusanagi_no_tsurugi = { set_art_owner = c:DUMMY }
+		work_of_art:yata_no_kagami = { set_art_owner = c:DUMMY }
+		work_of_art:yasakani_no_magatama = { set_art_owner = c:DUMMY }
 
-		c:STC = {
+		c:DUMMY = {
 			add_to_global_variable_list = { name = nanbokuchou_voters target = this }
 			propose_resolution = {
 				resolution = resolution:nanbokuchou_resolution
@@ -41,7 +41,7 @@ nanbokuchou = {
 
 		international_organization:japanese_shogunate ?= {
 			every_international_organization_member = {
-				limit = { this != c:STC }
+				limit = { this != c:DUMMY }
 				if = {
 					limit = { has_variable = supports_northern_court }
 					add_to_global_variable_list = { name = nanbokuchou_northern_supporters target = this }
@@ -49,7 +49,7 @@ nanbokuchou = {
 						set_vote = {
 							voter = prev
 							resolution = resolution:nanbokuchou_resolution
-							vote = c:NTC
+							vote = c:DUMMY
 							locked = yes
 						}
 					}
@@ -61,7 +61,7 @@ nanbokuchou = {
 						set_vote = {
 							voter = prev
 							resolution = resolution:nanbokuchou_resolution
-							vote = c:STC
+							vote = c:DUMMY
 							locked = yes
 						}
 					}
@@ -94,24 +94,24 @@ nanbokuchou = {
 		clear_global_variable_list = nanbokuchou_southern_supporters
 		clear_global_variable_list = nanbokuchou_neutral_countries
 		if = {
-			limit = { country_exists = c:NTC }
+			limit = { country_exists = c:DUMMY }
 			add_to_global_variable_list = {
 				name = nanbokuchou_northern_supporters
-				target = c:NTC
+				target = c:DUMMY
 			}
 		}
 		if = {
-			limit = { country_exists = c:JAP }
+			limit = { country_exists = c:DUMMY }
 			add_to_global_variable_list = {
 				name = nanbokuchou_northern_supporters
-				target = c:JAP
+				target = c:DUMMY
 			}
 		}
 		if = {
-			limit = { country_exists = c:STC }
+			limit = { country_exists = c:DUMMY }
 			add_to_global_variable_list = {
 				name = nanbokuchou_southern_supporters
-				target = c:STC
+				target = c:DUMMY
 			}
 		}
 		# Single per-member pass: rebuild supporter lists AND cache CB/war target flags.
@@ -166,8 +166,8 @@ nanbokuchou = {
 					200 = { }
 					20 = { #Event for changing sides
 						trigger = { #If this clan hates its current side
-							country_exists = c:NTC
-							country_exists = c:STC
+							country_exists = c:DUMMY
+							country_exists = c:DUMMY
 							is_japanese_emperor_or_shogun = no
 							OR = {
 								AND = {
@@ -180,14 +180,14 @@ nanbokuchou = {
 												value <= -50
 											}
 										}
-										opinion = {	target = c:NTC value <= -50 }
+										opinion = {	target = c:DUMMY value <= -50 }
 									}
-									opinion = { target = c:STC value >= 0 }
-									c:STC ?= { has_ruler = yes }
+									opinion = { target = c:DUMMY value >= 0 }
+									c:DUMMY ?= { has_ruler = yes }
 								}
 								AND = {
 									has_variable = supports_southern_court
-									opinion = { target = c:STC value <= -50 }
+									opinion = { target = c:DUMMY value <= -50 }
 									OR = {
 										AND = {
 											exists = international_organization:japanese_shogunate.leader_country
@@ -196,9 +196,9 @@ nanbokuchou = {
 												value >= 0
 											}
 										}
-										opinion = {	target = c:NTC value >= 0 }
+										opinion = {	target = c:DUMMY value >= 0 }
 									}
-									c:NTC ?= { has_ruler = yes }
+									c:DUMMY ?= { has_ruler = yes }
 								}
 							}
 						}
@@ -207,8 +207,8 @@ nanbokuchou = {
 
 					20 = { #Event for losing purity due to war
 						trigger = {
-							country_exists = c:NTC
-							country_exists = c:STC
+							country_exists = c:DUMMY
+							country_exists = c:DUMMY
 							at_war = yes
 						}
 						trigger_event_non_silently = nanbokuchou.5

@@ -1,0 +1,114 @@
+{
+  "save": "G:\\antiqvitas_user_data\\save games\\autosave_4f67f2fa-a0a9-47f9-89ec-2dc3ba13e14c.eu5",
+  "date": "18.1.2",
+  "real_polities": 446,
+  "stability": {
+    "minimum": -94.80293,
+    "p10": 9.195695,
+    "median": 24.683230000000002,
+    "p90": 54.580905,
+    "maximum": 74.00622,
+    "negative_count": 19,
+    "severe_count": 17
+  },
+  "estates": {
+    "records": 2608,
+    "minimum": 0.0026,
+    "p10": 0.382482,
+    "median": 0.6040300000000001,
+    "polity_mean_p10": 0.5187193333333333,
+    "below_10_percent": 76,
+    "below_25_percent": 166
+  },
+  "wars": {
+    "distinct_civil_wars": 13,
+    "active_wars": 9,
+    "active_civil_wars": 9,
+    "elapsed_years": 17.002739726027396,
+    "civil_wars_per_polity_year": 0.0016513664404752874
+  },
+  "epidemics": {
+    "non_endemic_outbreaks": 8,
+    "outbreaks": [
+      {
+        "id": 6700,
+        "type": "influenza",
+        "outbreak_date": "2.2.1",
+        "died_out_date": "2.5.21",
+        "affected_locations": 7,
+        "age_years": 15.919406392694063,
+        "affected_locations_per_year": 0.4397148880634475
+      },
+      {
+        "id": 6701,
+        "type": "smallpox",
+        "outbreak_date": "2.3.1",
+        "died_out_date": "2.4.6",
+        "affected_locations": 1,
+        "age_years": 15.83607305936073,
+        "affected_locations_per_year": 0.06314696808050517
+      },
+      {
+        "id": 6702,
+        "type": "typhus",
+        "outbreak_date": "8.5.1",
+        "died_out_date": "8.7.11",
+        "affected_locations": 9,
+        "age_years": 9.669406392694063,
+        "affected_locations_per_year": 0.9307706837929733
+      },
+      {
+        "id": 6703,
+        "type": "influenza",
+        "outbreak_date": "9.5.1",
+        "died_out_date": "11.11.1",
+        "affected_locations": 46,
+        "age_years": 8.669406392694063,
+        "affected_locations_per_year": 5.306014958390394
+      },
+      {
+        "id": 6704,
+        "type": "great_pestilence",
+        "outbreak_date": "10.10.1",
+        "died_out_date": "10.11.16",
+        "affected_locations": 1,
+        "age_years": 7.2527397260273965,
+        "affected_locations_per_year": 0.1378789309660969
+      },
+      {
+        "id": 6705,
+        "type": "measles",
+        "outbreak_date": "12.11.1",
+        "died_out_date": "13.2.14",
+        "affected_locations": 33,
+        "age_years": 5.1694063926940625,
+        "affected_locations_per_year": 6.3837116862468
+      },
+      {
+        "id": 6706,
+        "type": "typhus",
+        "outbreak_date": "15.5.1",
+        "died_out_date": "17.4.1",
+        "affected_locations": 28,
+        "age_years": 2.6694063926940625,
+        "affected_locations_per_year": 10.489223400615812
+      },
+      {
+        "id": 6707,
+        "type": "great_pestilence",
+        "outbreak_date": "15.6.1",
+        "died_out_date": "15.7.17",
+        "affected_locations": 1,
+        "age_years": 2.5860730593607304,
+        "affected_locations_per_year": 0.38668667784938643
+      }
+    ]
+  },
+  "log": {
+    "path": "G:\\antiqvitas_user_data\\logs\\error.log",
+    "script_errors": 0,
+    "ai_command_errors": 0,
+    "locations": {}
+  },
+  "failures": []
+}

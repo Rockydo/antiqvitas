@@ -3,10 +3,6 @@
 antq_present_han_tribute = {
 	icon = antq_exchange_route_intelligence
 	type = internationalorganization
-	ai_tick = monthly
-	ai_tick_frequency = 12
-	automation_tick = monthly
-	automation_tick_frequency = 1
 	potential = {
 		exists = international_organization:antq_han_tributary_system
 		scope:actor = { is_member_of_international_organization = international_organization:antq_han_tributary_system }
@@ -17,6 +13,9 @@ antq_present_han_tribute = {
 		target_flag = recipient
 		name = "choose_international_organization"
 		column = { data = name }
+		interaction_source_list = {
+			international_organization:antq_han_tributary_system = { add_to_list = source }
+		}
 		visible = {
 			international_organization_type = international_organization_type:antq_han_tributary_system
 			scope:actor = { is_member_of_international_organization = root }
@@ -31,19 +30,11 @@ antq_present_han_tribute = {
 		}
 		scope:recipient = { change_variable = { name = antq_cohesion add = 3 } }
 	}
-	ai_will_do = {
-		add = { value = 15 }
-		if = { limit = { scope:actor = { gold < 30 } } add = { value = -40 } }
-	}
 }
 
 antq_convene_kangju_route_council = {
 	icon = antq_send_frontier_envoys
 	type = internationalorganization
-	ai_tick = monthly
-	ai_tick_frequency = 12
-	automation_tick = monthly
-	automation_tick_frequency = 1
 	potential = {
 		exists = international_organization:antq_kangju_confederation
 		scope:actor = { is_member_of_international_organization = international_organization:antq_kangju_confederation }
@@ -54,6 +45,9 @@ antq_convene_kangju_route_council = {
 		target_flag = recipient
 		name = "choose_international_organization"
 		column = { data = name }
+		interaction_source_list = {
+			international_organization:antq_kangju_confederation = { add_to_list = source }
+		}
 		visible = {
 			international_organization_type = international_organization_type:antq_kangju_confederation
 			scope:actor = { is_member_of_international_organization = root }
@@ -67,9 +61,5 @@ antq_convene_kangju_route_council = {
 			add_prestige = prestige_weak_bonus
 		}
 		scope:recipient = { change_variable = { name = antq_cohesion add = 3 } }
-	}
-	ai_will_do = {
-		add = { value = 15 }
-		if = { limit = { scope:actor = { gold < 24 } } add = { value = -40 } }
 	}
 }

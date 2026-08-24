@@ -10,7 +10,7 @@ flavor_mal.1 = {
 	historical_info = flavor_mal.1_historical_info
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -59,7 +59,7 @@ flavor_mal.2 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -127,7 +127,7 @@ flavor_mal.3 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -182,7 +182,7 @@ flavor_mal.4 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -222,7 +222,7 @@ flavor_mal.5 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -230,7 +230,7 @@ flavor_mal.5 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:POR
+		country_exists = c:DUMMY
 		num_of_ports > 0
 	}
 
@@ -247,8 +247,8 @@ flavor_mal.5 = {
 		name = flavor_mal.5.a
 		historical_option = yes
 		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_mild_penalty }
-		c:POR = {
-			add_opinion = { target = c:MAL modifier = trade_conflict }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = trade_conflict }
 		}
 	}
 	option = {
@@ -268,7 +268,7 @@ flavor_mal.6 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -335,7 +335,7 @@ flavor_mal.7 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_firearms.dds"
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -523,7 +523,7 @@ flavor_mal.11 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -600,7 +600,7 @@ flavor_mal.12 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -703,7 +703,7 @@ flavor_mal.13 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -766,7 +766,7 @@ flavor_mal.14 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -774,7 +774,7 @@ flavor_mal.14 = {
 	
 	trigger = {
 		current_date > 476.9.4
-		c:JOL = {
+		c:DUMMY = {
 			is_subject_of = ROOT
 			OR = {
 				opinion = {
@@ -793,13 +793,13 @@ flavor_mal.14 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:JOL = { save_scope_as = target_subject_country }
-		c:JOL.ruler = {
+		c:DUMMY = { save_scope_as = target_subject_country }
+		c:DUMMY.ruler = {
 			save_scope_as = target_character
 		}
 		capital = { save_scope_as = target_location }
 
-		c:MAL = { save_scope_as = target_overlord_country }
+		c:DUMMY = { save_scope_as = target_overlord_country }
 
 	}
 
@@ -808,7 +808,7 @@ flavor_mal.14 = {
 		name = flavor_mal.14.a
 		historical_option = yes
 
-		cancel_subject = c:JOL
+		cancel_subject = c:DUMMY
 		add_government_power = government_power_mild_penalty
 		add_estate_satisfaction = { type = estate_type:nobles_estate
 			value = estate_satisfaction_extreme_penalty
@@ -821,7 +821,7 @@ flavor_mal.14 = {
 		add_stability = stability_mild_penalty
 		custom_tooltip = {
 			text = flavor_mal.14.b.tt
-			c:JOL = {
+			c:DUMMY = {
 				trigger_event_silently = {
 					id = flavor_mal.15
 				}
@@ -852,7 +852,7 @@ flavor_mal.15 = {
 		historical_option = yes
 		custom_tooltip = {
 			text = flavor_mal.15.a.tt
-			c:MAL = {
+			c:DUMMY = {
 				trigger_event_silently = {
 					id = flavor_mal.17
 					days = 30
@@ -864,7 +864,7 @@ flavor_mal.15 = {
 	#Submit to Mali
 	option = {
 		name = flavor_mal.15.b
-		c:MAL = {
+		c:DUMMY = {
 			trigger_event_silently = {
 				id = flavor_mal.16
 			}
@@ -892,7 +892,7 @@ flavor_mal.16 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:JOL = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 	}
 	#Good
 	option = {
@@ -920,26 +920,26 @@ flavor_mal.17 = {
 
 	trigger = {
 		current_date > 476.9.4
-		c:JOL = {
+		c:DUMMY = {
 			is_subject_of = ROOT
 		}
 	}
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:JOL = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 	}
 
 	#let them go
 	option = {
 		name = flavor_mal.17.a
 		historical_option = yes
-		cancel_subject = c:JOL
+		cancel_subject = c:DUMMY
 
 		add_stability = stability_extreme_penalty
 		add_government_power = government_power_extreme_penalty
 
-		c:JOL = {
+		c:DUMMY = {
 			add_stability = stability_extreme_bonus
 			ruler ?= {
 				add_trait = trait:inspiring_leader
@@ -950,7 +950,7 @@ flavor_mal.17 = {
 	#put them to the sword
 	option = {
 		name = flavor_mal.17.b
-		c:JOL = {
+		c:DUMMY = {
 			if = {
 				limit = {
 					can_declare_legal_war_on = { target = root }
@@ -976,7 +976,7 @@ flavor_mal.18 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -987,14 +987,14 @@ flavor_mal.18 = {
 		OR = {
 			AND = {
 				any_owned_location = {
-					is_core_of = c:SON
+					is_core_of = c:DUMMY
 					average_satisfaction < 0.5
 				}
-				NOT = { country_exists = c:SON }
+				NOT = { country_exists = c:DUMMY }
 			}
 			AND = {
-				country_exists = c:SON
-				c:SON = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					is_subject_of = ROOT
 					OR = {
 						opinion = {
@@ -1017,7 +1017,7 @@ flavor_mal.18 = {
 		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
 		if = {
 			limit = {
-				NOT = { country_exists = c:SON }
+				NOT = { country_exists = c:DUMMY }
 			}
 			location:gao = {
 				create_dynasty_from_location = sonni_dynasty
@@ -1040,9 +1040,9 @@ flavor_mal.18 = {
 					min_mil = 50
 				}
 			}
-			create_country_from_cores_in_our_locations = c:SON
+			create_country_from_cores_in_our_locations = c:DUMMY
 			hidden_effect = {
-				c:SON = {
+				c:DUMMY = {
 					change_government_type = government_type:monarchy
 					set_new_ruler = scope:songhai_ruler
 					every_province = {
@@ -1060,12 +1060,12 @@ flavor_mal.18 = {
 		historical_option = yes
 		if = {
 			limit = {
-				country_exists = c:SON
-				c:SON = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					is_subject_of = ROOT
 				}
 			}
-			cancel_subject = c:SON
+			cancel_subject = c:DUMMY
 		}
 		add_stability = stability_mild_penalty
 		add_government_power = government_power_mild_penalty
@@ -1079,18 +1079,18 @@ flavor_mal.18 = {
 		name = flavor_mal.18.b
 		if = {
 			limit = {
-				country_exists = c:SON
-				c:SON = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					is_subject_of = ROOT
 				}
 			}
-			cancel_subject = c:SON
+			cancel_subject = c:DUMMY
 		}
 		add_stability = stability_severe_penalty
 		add_government_power = government_power_severe_penalty
 		add_casus_belli =  {
 			type = casus_belli:cb_annex
-			target = c:SON
+			target = c:DUMMY
 		}
 	}
 	option = {
@@ -1099,28 +1099,28 @@ flavor_mal.18 = {
 
 		trigger = {
 			is_ai = no
-			c:SON = {
+			c:DUMMY = {
 				is_ai = yes
 			}
 		}
 
 		if = {
 			limit = {
-				country_exists = c:SON
-				c:SON = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					is_subject_of = ROOT
 				}
 			}
-			cancel_subject = c:SON
+			cancel_subject = c:DUMMY
 		}
 		add_stability = stability_severe_penalty
 		add_government_power = government_power_severe_penalty
 		add_casus_belli =  {
 			type = casus_belli:cb_annex
-			target = c:SON
+			target = c:DUMMY
 		}
 
-		change_player = c:SON
+		change_player = c:DUMMY
 	}
 }
 
@@ -1145,7 +1145,7 @@ flavor_mal.19 = {
 	}
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1213,7 +1213,7 @@ flavor_mal.20 = {
 	}
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1282,7 +1282,7 @@ flavor_mal.21 = {
 	}
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1392,7 +1392,7 @@ flavor_mal.22 = {
 	}
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1462,7 +1462,7 @@ flavor_mal.23 = {
 	historical_info = flavor_mal.23.historical_info
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1512,7 +1512,7 @@ flavor_mal.24 = {
 	historical_info = flavor_mal.24.historical_info
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1646,7 +1646,7 @@ flavor_mal.26 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1696,7 +1696,7 @@ flavor_mal.27 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1748,7 +1748,7 @@ flavor_mal.28 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1801,7 +1801,7 @@ flavor_mal.29 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1864,7 +1864,7 @@ flavor_mal.30 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1921,7 +1921,7 @@ flavor_mal.31 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2004,7 +2004,7 @@ flavor_mal.32 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -2093,7 +2093,7 @@ flavor_mal.33 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = MAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2

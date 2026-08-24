@@ -66,8 +66,13 @@ def knowledge_response_lines(kind: str, age_index: int) -> tuple[str, ...]:
     """Reward preparedness without suppressing a historical current."""
     track = event_track(kind)
     advance = FOUNDATIONS[age_index][track]
+    # Warfare currents commonly carry an immediate stability cost.  Rewarding
+    # preparation with the exact opposite stability constant makes the option
+    # tooltip read as a cosmetic loss-and-refund and can leave its net effect
+    # at zero.  Army tradition is both thematically appropriate and visibly
+    # consequential without erasing the current's political cost.
     effect = (
-        "add_stability = stability_weak_bonus"
+        "add_army_tradition = army_tradition_weak_bonus"
         if track == "warfare"
         else "add_prestige = prestige_weak_bonus"
     )

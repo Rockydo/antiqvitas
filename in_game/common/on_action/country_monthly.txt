@@ -1,0 +1,454 @@
+﻿
+monthly_country_pulse = {
+	on_actions = {
+		antq_m6_roman_succession_monthly
+		antq_ancient_council_session
+		antq_m9_organization_ai_pulse
+		antq_m10_situation_ai_pulse
+		antq_s2_germania_ai_pulse
+		antq_s2_arabian_route_ai_pulse
+		antq_annona_monthly_supply
+		antq_roman_mint_monthly_supply
+		on_papal_opinion_added
+		on_papal_opinion_removed
+		on_papacy_reform_removed
+		on_papal_authority_updated
+		france_naples_administration_broken
+		on_new_appanage
+		on_vassalized_appanage
+		on_former_independent_appanage
+		on_disloyal_independent_appanage
+		on_annexing_subject_monthly_pulse
+		on_settle_the_frontier_monthly_pulse
+		wor_on_wallenstein_prison_occupation
+		wor_on_wallenstein_prison_timeout
+		on_fraticide_underage_succession_waiting
+	}
+	
+	random_events = {
+		10 = empires.1
+		10 = empires.2
+		10 = empires.3
+		1 = border_friction.1
+		1 = border_friction.2
+		
+		20 = flavor_dan.9 #Skane Fish Market comes to an end
+		10 = flavor_pol.1200 #Nicolaus Copernicus
+
+		30 = war_of_religions.1201
+		100 = war_of_religions.1204
+
+		20 = war_of_religions.1401
+
+		10 = little_ice_age.4
+	
+		chance_to_happen = 5
+	}
+	
+	
+	
+	events = {
+		#earthquake events 
+		earthquake_events.1			#Earthquake in Constantinople
+		earthquake_events.1000		#The Gallipoli Earthquake
+
+		#other events
+		devotion_events.21			#Change government form if low devotion
+		banking.1					#Spawn the Fuggers
+		banking.3					#Spawn the Welser
+		military_order_events.9 	#The Banners of Outremer
+		flavor_pap.9000 			#Give Rome back to the Pope
+		flavor_pap.9001				#Or he'll come for someone else's land
+		mayan_events.1				#The Start of a New K'atun
+		flavor_plc.15
+
+		turmoil_in_brandenburg.1200 #Hohenzollern event for the Emperor if they have BB as subject
+		turmoil_in_brandenburg.2 #Get rid of a modifier which serves no longer a purpose to BB
+	}
+}
+
+on_papal_opinion_added = {
+	trigger = {
+		OR = {
+			modifier:papal_relations < 0
+			modifier:papal_relations > 0
+		}
+		country_exists = c:DUMMY
+		not = { tag = PAP }
+	}
+	effect = {
+		c:DUMMY = {
+			remove_opinion = {
+				target = prev
+				modifier = opinion_papal_relations
+			}
+		}
+		reverse_add_opinion = {
+			target = c:DUMMY
+			modifier = opinion_papal_relations
+			scale = modifier:papal_relations
+		}
+	}
+}
+
+on_papal_opinion_removed = {
+	trigger = {
+		country_exists = c:DUMMY
+		not = { tag = PAP }
+		c:DUMMY = {
+			has_opinion = {
+				target = prev
+				modifier = opinion_papal_relations
+			}
+		}
+		modifier:papal_relations = 0
+	}
+	effect = {
+		c:DUMMY = {
+			remove_opinion = {
+				target = prev
+				modifier = opinion_papal_relations
+			}
+		}
+	}
+}
+
+on_papal_authority_updated = {
+	trigger = {
+		tag = PAP
+		country_exists = c:DUMMY
+		is_member_of_international_organization = international_organization:catholic_church
+	}
+	effect = {
+		if = {
+			limit = {
+				international_organization:catholic_church = {
+					var:papal_authority >= 75
+				}
+			}
+			religion:catholic = {
+				add_religion_modifier = {
+					modifier = high_papal_authority
+					days = -1
+				}
+				remove_religion_modifier = low_papal_authority
+			}
+		}
+		else_if = {
+			limit = {
+				international_organization:catholic_church = {
+					var:papal_authority < 25
+				}
+			}
+			religion:catholic = {
+				add_religion_modifier = {
+					modifier = low_papal_authority
+					days = -1
+				}
+				remove_religion_modifier = high_papal_authority
+			}
+		}
+		else = {
+			religion:catholic = {
+				remove_religion_modifier = high_papal_authority
+				remove_religion_modifier = low_papal_authority
+			}
+		}
+	}
+}
+
+on_papacy_reform_removed = {
+	trigger = {
+		tag = PAP
+		NOT = {
+			has_reform = government_reform:papacy_reform
+		}
+	}
+	effect = {
+		trigger_event_non_silently = catholic_flavor.9000
+	}
+}
+
+france_naples_administration_broken = {
+	trigger = {
+		has_variable = france_naples_union
+		NOT = { c:DUMMY ?= { in_union_with = c:DUMMY } }
+	}
+	effect = {
+		if = {
+			limit = {
+				has_country_modifier = fra_aligned_neapolitan_court
+			}
+			remove_country_modifier = fra_aligned_neapolitan_court
+		}	
+		if = {
+			limit = {
+				has_country_modifier = fra_tight_grip_over_neapolitan_court
+			}
+			remove_country_modifier = fra_tight_grip_over_neapolitan_court
+		}			
+		if = {
+			limit = {
+				has_country_modifier = fra_neapolitan_court_autonomy
+			}
+			remove_country_modifier = fra_neapolitan_court_autonomy
+		}	
+		c:DUMMY = {
+			if = {
+				limit = {
+					has_country_modifier = nap_aligned_neapolitan_court
+				}
+				remove_country_modifier = nap_aligned_neapolitan_court
+			}	
+			if = {
+				limit = {
+					has_country_modifier = nap_tight_grip_over_neapolitan_court
+				}
+				remove_country_modifier = nap_tight_grip_over_neapolitan_court
+			}			
+			if = {
+				limit = {
+					has_country_modifier = nap_neapolitan_court_autonomy
+				}
+				remove_country_modifier = nap_neapolitan_court_autonomy
+			}			
+		}
+		remove_variable = france_naples_union		
+	}	
+}
+
+wor_on_wallenstein_prison_occupation = {
+	trigger = {
+		global_var:wallensteins_prison ?= {
+			has_siege = yes
+			siege = {
+				any_besieging_unit = {
+					owner = {
+						has_variable = wallenstein_rescue_mission
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		trigger_event_non_silently = war_of_religions.1203
+	}
+}
+
+wor_on_wallenstein_prison_timeout = {
+	trigger = {
+		global_var:wallensteins_prison ?= {
+			has_siege = yes
+			siege = {
+				any_besieging_unit = {
+					owner = {
+						has_variable = wallenstein_rescue_mission
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		trigger_event_silently = war_of_religions.1204
+	}
+}
+
+# root = overlord
+# scope:target = subject
+on_annexing_subject_monthly_pulse = {
+	on_actions = {
+	}
+	
+	random_events = {
+		1 = subject_interaction_events.46
+		1 = subject_interaction_events.47
+		1 = subject_interaction_events.48
+		1 = flavor_fra.1102
+		100 = 0
+
+		chance_to_happen = 1
+	}
+}
+
+on_fraticide_underage_succession_waiting = {
+	trigger = {
+		has_variable = fraticide_succession_has_child_sons
+	}
+	effect = {
+		if = {
+			limit = {
+				list_size = { name = rival_male_children value > 0 }
+			}
+			if = {
+				limit = {
+					any_in_list = {
+						list = rival_male_children
+						is_alive = yes
+						is_adult = yes
+					}
+				}
+				trigger_event_silently = succession.5
+			}
+			else = {
+				every_in_list = {
+					list = rival_male_children
+					limit = { is_alive = no }
+					remove_from_list = rival_male_children
+				}
+			}
+		}
+		else = {
+			trigger_event_silently = succession.5
+		}
+	}
+}
+# ANTIQVITAS M6: deterministic sourced Julio-Claudian succession deadlines.
+antq_m6_roman_succession_monthly = {
+	trigger = { tag = XAA }
+	effect = {
+		if = {
+			limit = {
+				current_date > 4.2.20
+				has_variable = antq_m6_roman_gaius_caesar
+				has_variable = antq_m6_roman_tiberius
+			}
+			trigger_event_silently = antq_m6.2
+		}
+		if = {
+			limit = {
+				current_date > 14.8.18
+				has_variable = antq_m6_roman_augustus
+				has_variable = antq_m6_roman_tiberius
+			}
+			trigger_event_silently = antq_m6.3
+		}
+		if = {
+			limit = {
+				current_date > 37.3.15
+				has_variable = antq_m6_roman_tiberius
+			}
+			var:antq_m6_roman_tiberius = {
+				remove_character_modifier = antq_m6_historical_lifespan_guard
+			}
+			remove_variable = antq_m6_roman_tiberius
+		}
+		if = {
+			limit = {
+				has_variable = antq_m6_roman_succession_reserve
+				ruler ?= var:antq_m6_roman_succession_reserve
+			}
+			var:antq_m6_roman_succession_reserve = {
+				remove_character_modifier = antq_m6_historical_lifespan_guard
+			}
+			remove_variable = antq_m6_roman_succession_reserve
+			create_character = {
+				culture = culture:antq_latin
+				religion = religion:antq_religio_romana
+				dynasty = dynasty:antq_julio_claudian_dynasty
+				estate = estate_type:nobles_estate
+				age = { 20 30 }
+				save_scope_as = antq_m6_roman_succession_reserve_scope
+			}
+			scope:antq_m6_roman_succession_reserve_scope = {
+				add_character_modifier = { modifier = antq_m6_historical_lifespan_guard years = -1 mode = add_and_extend }
+			}
+			set_variable = { name = antq_m6_roman_succession_reserve value = scope:antq_m6_roman_succession_reserve_scope }
+			set_as_designated_heir = scope:antq_m6_roman_succession_reserve_scope
+		}
+		# Seat empty cabinet slots after courtiers die so the 0.20
+		# crown-from-cabinet lever does not go unused. The first-open
+		# effect no-ops when every slot is already filled.
+		random_character = {
+			limit = { is_adult = yes in_cabinet = no NOT = { is_heir = yes } }
+			save_scope_as = antq_m6_cabinet_refill_1
+		}
+		if = {
+			limit = { exists = scope:antq_m6_cabinet_refill_1 }
+			add_character_to_first_open_cabinet = { target = scope:antq_m6_cabinet_refill_1 }
+		}
+		random_character = {
+			limit = { is_adult = yes in_cabinet = no NOT = { is_heir = yes } }
+			save_scope_as = antq_m6_cabinet_refill_2
+		}
+		if = {
+			limit = { exists = scope:antq_m6_cabinet_refill_2 }
+			add_character_to_first_open_cabinet = { target = scope:antq_m6_cabinet_refill_2 }
+		}
+		random_character = {
+			limit = { is_adult = yes in_cabinet = no NOT = { is_heir = yes } }
+			save_scope_as = antq_m6_cabinet_refill_3
+		}
+		if = {
+			limit = { exists = scope:antq_m6_cabinet_refill_3 }
+			add_character_to_first_open_cabinet = { target = scope:antq_m6_cabinet_refill_3 }
+		}
+	}
+}
+
+# ANTIQVITAS: standing ancient councils reset the lack-of-parliament penalty.
+antq_ancient_council_session = {
+	trigger = {
+		months_since_last_parliament_called > 36
+		is_active_parliament = no
+	}
+	effect = {
+		start_parliament_effect = yes
+		end_parliament = yes
+	}
+}
+
+# ANTIQVITAS M5: bounded monthly Annona source deliveries; no RGO mutation.
+antq_annona_monthly_supply = {
+	trigger = { tag = XAA }
+	effect = {
+		location:rome.market = {
+			sell_goods_from_location = {
+				goods = goods:wheat
+				amount = 1
+				location = location:cagliari
+			} # OCD-ANNONA;P8.1
+		}
+		location:rome.market = {
+			sell_goods_from_location = {
+				goods = goods:wheat
+				amount = 1
+				location = location:faiyum
+			} # OCD-ANNONA;P12.3
+		}
+		location:rome.market = {
+			sell_goods_from_location = {
+				goods = goods:wheat
+				amount = 1
+				location = location:sousse
+			} # OCD-ANNONA;P8.1
+		}
+		location:rome.market = {
+			sell_goods_from_location = {
+				goods = goods:wheat
+				amount = 1
+				location = location:syracuse
+			} # OCD-ANNONA;P8.1
+		}
+	}
+}
+
+# ANTIQVITAS S7: bounded monthly Roman bullion-source deliveries; no RGO mutation.
+antq_roman_mint_monthly_supply = {
+	trigger = { tag = XAA }
+	effect = {
+		location:rome.market = {
+			sell_goods_from_location = {
+				goods = goods:silver
+				amount = 1
+				location = location:huelva
+			} # P12.1;P8.1;CAH-XI;SPR-RIO-TINTO
+		}
+		location:rome.market = {
+			sell_goods_from_location = {
+				goods = goods:goods_gold
+				amount = 2
+				location = location:kutlovitsa
+			} # P12.1;PER;P8.1;CAH-XI
+		}
+	}
+}

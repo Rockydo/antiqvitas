@@ -11,8 +11,8 @@ western_schism = {
 		always = no # ANTIQVITAS mounted-system quarantine
 		current_date > 476.9.4
 		current_date < 476.9.4
-		country_exists = c:PAP
-		c:PAP = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			has_regent = yes
 			regency_type = regency_type:papal_election_regency
 			num_cardinals > 0
@@ -37,9 +37,9 @@ western_schism = {
 		}
 
 		set_papal_states_schism_cardinal = yes
-		add_to_global_variable_list = { name = western_schism_possible_votes target = c:PAP }
+		add_to_global_variable_list = { name = western_schism_possible_votes target = c:DUMMY }
 
-		c:PAP = {
+		c:DUMMY = {
 			set_variable = {
 				name = western_schism_vote_weight
 				value = 0
@@ -66,7 +66,7 @@ western_schism = {
 			}
 		}
 
-		c:FRA ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = flavor_fra.1150
 		}
 	}
@@ -110,7 +110,7 @@ western_schism = {
 							has_voted_for = {
 								voter = scope:voter
 								resolution = resolution:western_schism_resolution
-								vote = c:PAP
+								vote = c:DUMMY
 							}
 						}
 					}
@@ -168,7 +168,7 @@ western_schism = {
 					}
 				}
 			}
-			c:PAP = {
+			c:DUMMY = {
 				random_list = {
 					1 = { trigger_event_non_silently = western_schism.15 }
 					1 = { trigger_event_non_silently = western_schism.1200 }
@@ -233,7 +233,7 @@ western_schism = {
 				has_owner = yes
 				international_organization:catholic_church ?= {
 					"active_resolution(resolution:western_schism_resolution)" ?= {
-						"vote_in_active_resolution(root.owner)" ?= c:PAP
+						"vote_in_active_resolution(root.owner)" ?= c:DUMMY
 					}
 				}
 			}
@@ -265,7 +265,7 @@ western_schism = {
 				has_owner = yes
 				international_organization:catholic_church ?= {
 					"active_resolution(resolution:western_schism_resolution)" ?= {
-						"vote_in_active_resolution(root.owner)" ?= c:PAP
+						"vote_in_active_resolution(root.owner)" ?= c:DUMMY
 					}
 				}
 			}

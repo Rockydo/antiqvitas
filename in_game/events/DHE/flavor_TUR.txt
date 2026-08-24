@@ -18,7 +18,7 @@ flavor_tur.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -78,7 +78,7 @@ flavor_tur.2 = {
 	historical_info = flavor_tur.2.historical_info
 
 	immediate = {
-		c:TUR = {
+		c:DUMMY = {
 			save_scope_as = ottomans
 		}
 	}
@@ -89,7 +89,7 @@ flavor_tur.2 = {
 		trigger = {
 			has_variable = full_reconciliation
 		}
-		c:TUR = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = full_reconciliation }
 			trigger_event_silently = { id = flavor_tur.3 }
 		}
@@ -99,7 +99,7 @@ flavor_tur.2 = {
 		trigger = {
 			has_variable = moderate_treaty
 		}
-		c:TUR = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = moderate_treaty }
 			trigger_event_silently = { id = flavor_tur.3 }
 		}
@@ -109,7 +109,7 @@ flavor_tur.2 = {
 		add_prestige = prestige_weak_bonus
 		remove_variable = full_reconciliation
 		remove_variable = moderate_treaty
-		c:TUR = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_tur.4 }
 		}
 	}
@@ -187,7 +187,7 @@ flavor_tur.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -274,7 +274,7 @@ flavor_tur.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -317,9 +317,9 @@ flavor_tur.6 = {
 
 		if = {
 			limit = {
-				c:VEN = { has_merchant_in_constantinople = yes }
+				c:DUMMY = { has_merchant_in_constantinople = yes }
 			}
-			c:VEN = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = broken_trade_agreement }
 			}
 		}
@@ -327,13 +327,13 @@ flavor_tur.6 = {
 			limit = {
 				location:constantinople = { has_building = building_type:venetian_quarter }
 			}
-			location:constantinople = { destroy_building = "building(building_type:venetian_quarter|c:VEN)" }
+			location:constantinople = { destroy_building = "building(building_type:venetian_quarter|c:DUMMY)" }
 		}
 		if = {
 			limit = {
-				c:GEN = { has_merchant_in_constantinople = yes }
+				c:DUMMY = { has_merchant_in_constantinople = yes }
 			}
-			c:GEN = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = broken_trade_agreement }
 			}
 		}
@@ -341,7 +341,7 @@ flavor_tur.6 = {
 			limit = {
 				location:constantinople = { has_building = building_type:galata }
 			}
-			location:constantinople = { destroy_building = "building(building_type:galata|c:GEN)" }
+			location:constantinople = { destroy_building = "building(building_type:galata|c:DUMMY)" }
 		}
 	}
 	option = {
@@ -356,10 +356,10 @@ flavor_tur.6 = {
 			limit = {
 				OR = {
 					location:constantinople = { has_building = building_type:venetian_quarter }
-					c:VEN = { has_merchant_in_constantinople = yes }
+					c:DUMMY = { has_merchant_in_constantinople = yes }
 				}
 			}
-			c:VEN = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = honored_trade_agreement }
 			}
 		}
@@ -367,10 +367,10 @@ flavor_tur.6 = {
 			limit = {
 				OR = {
 					location:constantinople = { has_building = building_type:galata }
-					c:GEN = { has_merchant_in_constantinople = yes }
+					c:DUMMY = { has_merchant_in_constantinople = yes }
 				}
 			}
-			c:GEN = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = honored_trade_agreement }
 			}
 		}
@@ -385,7 +385,7 @@ flavor_tur.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -442,7 +442,7 @@ flavor_tur.8 = { #The Enderun Academy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -500,7 +500,7 @@ flavor_tur.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -566,7 +566,7 @@ flavor_tur.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -578,7 +578,7 @@ flavor_tur.10 = {
 		owns = location:alexandria
 		owns = location:constantinople
 
-		country_exists = c:VEN
+		country_exists = c:DUMMY
 	}
 
 	immediate = {
@@ -589,7 +589,7 @@ flavor_tur.10 = {
 	option = {
 		name = flavor_tur.10.a
 		historical_option = yes
-		c:VEN = {
+		c:DUMMY = {
 			custom_tooltip = VEN_will_get_a_cb
 			add_opinion = { target = root modifier = trade_conflict }
 			trigger_event_non_silently = { id = flavor_ven_tur_conflict.1002 }
@@ -598,9 +598,9 @@ flavor_tur.10 = {
 	option = {
 		name = flavor_tur.10.b
 		location:alexandria = {
-			change_location_owner = c:VEN
+			change_location_owner = c:DUMMY
 		}
-		c:VEN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = ceded_alexandria }
 			trigger_event_non_silently = { id = flavor_ven_tur_conflict.1003 }
 		}
@@ -616,7 +616,7 @@ flavor_tur.14 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -666,7 +666,7 @@ flavor_tur.15 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -750,7 +750,7 @@ flavor_tur.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -844,7 +844,7 @@ flavor_tur.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -885,7 +885,7 @@ flavor_tur.18 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -983,7 +983,7 @@ flavor_tur.19 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1048,7 +1048,7 @@ flavor_tur.20 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -1191,7 +1191,7 @@ flavor_tur.21 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1268,7 +1268,7 @@ flavor_tur.22 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1333,7 +1333,7 @@ flavor_tur.23 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1431,7 +1431,7 @@ flavor_tur.24 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1583,7 +1583,7 @@ flavor_tur.25 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1643,7 +1643,7 @@ flavor_tur.27 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -1758,7 +1758,7 @@ flavor_tur.28 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1815,7 +1815,7 @@ flavor_tur.29 = {
 	fire_only_once = yes
 	historical_info = flavor_tur.29.historical_info
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1893,7 +1893,7 @@ flavor_tur.30 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1942,7 +1942,7 @@ flavor_tur.31 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4 #The city was extensively pillaged by the Timurids in 1402
 		monthly_chance = 10
@@ -1994,7 +1994,7 @@ flavor_tur.32 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2034,7 +2034,7 @@ flavor_tur.33 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2116,7 +2116,7 @@ flavor_tur.34 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2176,7 +2176,7 @@ flavor_tur.35 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2223,7 +2223,7 @@ flavor_tur.36 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2323,7 +2323,7 @@ flavor_tur.37 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2375,7 +2375,7 @@ flavor_tur.38 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2440,7 +2440,7 @@ flavor_tur.39 = { #The Mosques of Bursa
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2546,7 +2546,7 @@ flavor_tur.40 = { #The Restoration of Iznik
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2601,7 +2601,7 @@ flavor_tur.43 = { #CB against of Ahi
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2609,13 +2609,13 @@ flavor_tur.43 = { #CB against of Ahi
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:AHI
+		country_exists = c:DUMMY
 		at_war = no
-		religion.group = c:AHI.religion.group
+		religion.group = c:DUMMY.religion.group
 		NOR = {
-			is_allied_with = { target = c:AHI }
-			c:AHI = { is_subject = yes }
-			is_subject_of = c:AHI
+			is_allied_with = { target = c:DUMMY }
+			c:DUMMY = { is_subject = yes }
+			is_subject_of = c:DUMMY
 		}
 		has_ruler = yes
 		ruler = { has_dynasty = yes }
@@ -2623,7 +2623,7 @@ flavor_tur.43 = { #CB against of Ahi
 
 	immediate = {
 
-		c:AHI = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			capital.province_definition = {
 				save_scope_as = ahi_capital_province_definition
@@ -2635,7 +2635,7 @@ flavor_tur.43 = { #CB against of Ahi
 		name = flavor_tur.43.a
 		add_casus_belli =  {
 			type = casus_belli:cb_annex
-			target = c:AHI
+			target = c:DUMMY
 		}
 		historical_option = yes
 
@@ -2648,7 +2648,7 @@ flavor_tur.43 = { #CB against of Ahi
 	option = {
 		name = flavor_tur.43.b
 		trigger = {
-			c:AHI = {
+			c:DUMMY = {
 				is_ai = yes
 				NOR = {
 					is_rival_of = root
@@ -2658,7 +2658,7 @@ flavor_tur.43 = { #CB against of Ahi
 		}
 		custom_tooltip = {
 			text = ahi_vassalage_tooltip
-			c:AHI = {
+			c:DUMMY = {
 				set_variable = {
 					name = more_likely_to_accept_vassalization_variable
 					years = 20
@@ -2676,7 +2676,7 @@ flavor_tur.43 = { #CB against of Ahi
 	}
 }
 
-flavor_tur.44 = { #"The [GetCountry('AHI').GetAdjectiveWithNoTooltip] Brotherhood" triggered by #rise_of_the_ottomans.103 when it selects c:AHI'
+flavor_tur.44 = { #"The [GetCountry('AHI').GetAdjectiveWithNoTooltip] Brotherhood" triggered by #rise_of_the_ottomans.103 when it selects c:DUMMY'
 	type = country_event
 	title = flavor_tur.44.title
 	desc = flavor_tur.44.desc
@@ -2686,7 +2686,7 @@ flavor_tur.44 = { #"The [GetCountry('AHI').GetAdjectiveWithNoTooltip] Brotherhoo
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2695,7 +2695,7 @@ flavor_tur.44 = { #"The [GetCountry('AHI').GetAdjectiveWithNoTooltip] Brotherhoo
 	trigger = {
 		current_date > 476.9.4
 		OR = {
-			c:AHI = {
+			c:DUMMY = {
 				is_subject_of = ROOT
 				own_entire_province = province_definition:ankara_province
 			}
@@ -2717,12 +2717,12 @@ flavor_tur.44 = { #"The [GetCountry('AHI').GetAdjectiveWithNoTooltip] Brotherhoo
 
 		if = {
 			limit = {
-				country_exists = c:AHI
-				capital.province_definition != c:AHI.capital.province_definition
-				c:AHI = {
+				country_exists = c:DUMMY
+				capital.province_definition != c:DUMMY.capital.province_definition
+				c:DUMMY = {
 					capital = {
 						any_pop = {
-							owner = c:AHI
+							owner = c:DUMMY
 							culture = culture:turkish_culture
 							religion = religion:sunni
 							pop_type = pop_type:burghers
@@ -2731,8 +2731,8 @@ flavor_tur.44 = { #"The [GetCountry('AHI').GetAdjectiveWithNoTooltip] Brotherhoo
 				}
 			}
 			add_migration = {
-				owner = c:AHI
-				from = c:AHI.capital.province_definition
+				owner = c:DUMMY
+				from = c:DUMMY.capital.province_definition
 				to = scope:capital_location.province_definition
 				culture = culture:turkish_culture
 				religion = religion:sunni
@@ -2759,12 +2759,12 @@ flavor_tur.44 = { #"The [GetCountry('AHI').GetAdjectiveWithNoTooltip] Brotherhoo
 
 		if = {
 			limit = {
-				country_exists = c:AHI
-				capital.province_definition != c:AHI.capital.province_definition
-				c:AHI = {
+				country_exists = c:DUMMY
+				capital.province_definition != c:DUMMY.capital.province_definition
+				c:DUMMY = {
 					capital = {
 						any_pop = {
-							owner = c:AHI
+							owner = c:DUMMY
 							culture = culture:turkish_culture
 							religion = religion:sunni
 							pop_type = pop_type:burghers
@@ -2773,8 +2773,8 @@ flavor_tur.44 = { #"The [GetCountry('AHI').GetAdjectiveWithNoTooltip] Brotherhoo
 				}
 			}
 			add_migration = {
-				owner = c:AHI
-				from = c:AHI.capital.province_definition
+				owner = c:DUMMY
+				from = c:DUMMY.capital.province_definition
 				to = scope:capital_location.province_definition
 				culture = culture:turkish_culture
 				religion = religion:sunni
@@ -2809,7 +2809,7 @@ flavor_tur.46 = { #The Basilic - # This event can only be triggered after flavor
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2830,7 +2830,7 @@ flavor_tur.46 = { #The Basilic - # This event can only be triggered after flavor
 			save_scope_as = target_location
 		}
 
-		c:TUR = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 
@@ -2908,7 +2908,7 @@ flavor_tur.47 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -2972,7 +2972,7 @@ flavor_tur.48 = { #The Drums of War
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3011,7 +3011,7 @@ flavor_tur.49 = { #A Fifth of the Spoils
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -3051,7 +3051,7 @@ flavor_tur.50 = { #The Heir and the Hurufis
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -3190,7 +3190,7 @@ flavor_tur.51 = { #A Question of Customs
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3200,9 +3200,9 @@ flavor_tur.51 = { #A Question of Customs
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:GEN
+		country_exists = c:DUMMY
 		at_war = no
-		c:GEN = {
+		c:DUMMY = {
 			num_of_non_rural > 0
 			NOR = {
 				at_war = yes
@@ -3218,7 +3218,7 @@ flavor_tur.51 = { #A Question of Customs
 			}
 			province_definition = {
 				NOT = {
-					any_location_in_province_definition = { owner ?= c:GEN }
+					any_location_in_province_definition = { owner ?= c:DUMMY }
 				}
 			}
 		}
@@ -3236,7 +3236,7 @@ flavor_tur.51 = { #A Question of Customs
 			save_scope_as = port_location
 		}
 
-		c:GEN = {
+		c:DUMMY = {
 			ordered_owned_non_rural_location = {
 				limit = {
 					province_definition != scope:port_location.province_definition
@@ -3248,7 +3248,7 @@ flavor_tur.51 = { #A Question of Customs
 				save_scope_as = genoese_location
 				ordered_pop = {
 					limit = {
-						owner = c:GEN
+						owner = c:DUMMY
 						pop_type = pop_type:burghers
 					}
 					order_by = pop_size
@@ -3287,8 +3287,8 @@ flavor_tur.51 = { #A Question of Customs
 
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
 
-		c:GEN = {
-			add_favors = { target = c:TUR value = 15 }
+		c:DUMMY = {
+			add_favors = { target = c:DUMMY value = 15 }
 		}
 	}
 
@@ -3296,7 +3296,7 @@ flavor_tur.51 = { #A Question of Customs
 	option = {
 		name = flavor_tur.51.b
 
-		c:GEN = {
+		c:DUMMY = {
 			add_opinion = {
 				target = root
 				modifier = opinion_irritated
@@ -3316,7 +3316,7 @@ flavor_tur.52 = { #The Anatolian Wheat Ban
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3326,8 +3326,8 @@ flavor_tur.52 = { #The Anatolian Wheat Ban
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:GEN
-		country_exists = c:VEN
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 
 		owns = location:constantinople
 
@@ -3351,19 +3351,19 @@ flavor_tur.52 = { #The Anatolian Wheat Ban
 
 		if = {
 			limit = {
-				c:VEN ?= {
+				c:DUMMY ?= {
 					has_merchant_in_constantinople = yes
 				}
 			}
-			c:VEN = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = opinion_irritated  }
 			}
 		}
 		if = {
 			limit = {
-				c:GEN ?= { has_merchant_in_constantinople = yes }
+				c:DUMMY ?= { has_merchant_in_constantinople = yes }
 			}
-			c:GEN = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = opinion_irritated  }
 			}
 		}
@@ -3393,7 +3393,7 @@ flavor_tur.53 = { #The Wolves of the Aegean
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3532,7 +3532,7 @@ flavor_tur.54 = { #The Pull of Piracy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3549,8 +3549,8 @@ flavor_tur.54 = { #The Pull of Piracy
 
 		monthly_sailors > 0.1
 
-		country_exists = c:BYZ
-		country_exists = c:VEN
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 	}
 
 	option = {
@@ -3591,7 +3591,7 @@ flavor_tur.55 = { #The Fortress at Gallipoli
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -3666,7 +3666,7 @@ flavor_tur.56 = { #The Hurufiyya Arrives
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3860,7 +3860,7 @@ flavor_tur.57 = { #The Lord of the Dervishes
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3977,7 +3977,7 @@ flavor_tur.58 = { #The Island of Death
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 30
@@ -3988,7 +3988,7 @@ flavor_tur.58 = { #The Island of Death
 	trigger = {
 		current_date > 476.9.4
 		war_score_versus = {
-			target = c:VEN
+			target = c:DUMMY
 			value <= -0.01
 		}
 
@@ -3997,7 +3997,7 @@ flavor_tur.58 = { #The Island of Death
 
 		religion.group = religion_group:muslim
 
-		c:VEN = {
+		c:DUMMY = {
 			religion.group = religion_group:christian
 		}
 	}
@@ -4005,7 +4005,7 @@ flavor_tur.58 = { #The Island of Death
 
 	immediate = {
 
-		c:VEN = { save_scope_as = nemesis }
+		c:DUMMY = { save_scope_as = nemesis }
 
 		add_stability = stability_mild_penalty
 	}
@@ -4037,7 +4037,7 @@ flavor_tur.59 = { #Martial Madmen
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4094,7 +4094,7 @@ flavor_tur.60 = { #The Interior Service
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4138,7 +4138,7 @@ flavor_tur.61 = { #The Silent Service
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4187,7 +4187,7 @@ flavor_tur.62 = { #The Hidden Language
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4246,7 +4246,7 @@ flavor_tur.63 = { #The Caesar of Rome
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -4259,7 +4259,7 @@ flavor_tur.63 = { #The Caesar of Rome
 		current_date > 476.9.4
 
 		NOT = {
-			country_exists = c:BYZ
+			country_exists = c:DUMMY
 		}
 
 		owns = location:constantinople
@@ -4285,10 +4285,10 @@ flavor_tur.63 = { #The Caesar of Rome
 
 		if = {
 			limit = {
- 				country_exists = c:PAP
+ 				country_exists = c:DUMMY
  				NOT = { religion = religion:catholic }
 			}
-			c:PAP = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = opinion_refused_claim  }
 			}
 		}
@@ -4302,9 +4302,9 @@ flavor_tur.63 = { #The Caesar of Rome
 		}
 		if = {
 			limit = {
- 				country_exists = c:RUS
+ 				country_exists = c:DUMMY
 			}
-			c:RUS = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = opinion_refused_claim  }
 			}
 		}
@@ -4325,7 +4325,7 @@ flavor_tur.64 = { #Sibling Killing on a fine day
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4415,11 +4415,11 @@ flavor_tur.65 = {
 	historical_info = flavor_tur.65.historical_info
 
 	immediate = {
-		c:GRA = {
+		c:DUMMY = {
 			random_current_war = {
 				limit = {
-					any_defender = { this = c:GRA }
-					any_attacker = { this = c:CAS }
+					any_defender = { this = c:DUMMY }
+					any_attacker = { this = c:DUMMY }
 				}
 				save_scope_as = target_war
 			}
@@ -4433,7 +4433,7 @@ flavor_tur.65 = {
 		custom_tooltip = flavor_tur.65.tt
 
 
-		c:GRA = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_gra.4
 		}
 
@@ -4445,11 +4445,11 @@ flavor_tur.65 = {
 
 		create_relation = {
 			first = this
-			second = c:GRA
+			second = c:DUMMY
 			type = relation_type:alliance
 		}
 		join_war_as_defender = { war = scope:target_war }
-		add_favors = { target = c:GRA value = 50 }
+		add_favors = { target = c:DUMMY value = 50 }
 		add_prestige = prestige_mild_bonus
 	}
 	trigger = {
@@ -4536,7 +4536,7 @@ flavor_tur.67 = { #Shaykh al-Islām #1
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4610,7 +4610,7 @@ flavor_tur.68 = { #Shaykh al-Islām #2
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4690,7 +4690,7 @@ flavor_tur.69 = { #Shaykh al-Islām
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4755,7 +4755,7 @@ flavor_tur.70 = { #Kemal Reis
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -4926,7 +4926,7 @@ flavor_tur.72 = { #Piri Reis
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -5148,7 +5148,7 @@ flavor_tur.74 = { #the Aegean Issue
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -5243,7 +5243,7 @@ flavor_tur.75 = { #The Mirror of God's Will
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -5306,7 +5306,7 @@ flavor_tur.76 = { #The Beauties of [location]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -5395,7 +5395,7 @@ flavor_tur.77 = { #The Words of a Woman
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 30
@@ -5490,7 +5490,7 @@ flavor_tur.78 = { #The Matter of the Nile
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -5611,7 +5611,7 @@ flavor_tur.79 = { #The Arabic Salons
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -5672,7 +5672,7 @@ flavor_tur.80 = { #A foothold in Italy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -5700,13 +5700,13 @@ flavor_tur.80 = { #A foothold in Italy
 
 		location:lecce.owner = {
 			NOR = {
-				is_allied_with = { target = c:TUR }
-				is_at_war_with = c:TUR
-				is_subject_of = c:TUR
+				is_allied_with = { target = c:DUMMY }
+				is_at_war_with = c:DUMMY
+				is_subject_of = c:DUMMY
 			}
 		}
 
-		c:VEN ?= {
+		c:DUMMY ?= {
 			NOT = {
 				owns = location:lecce
 			}
@@ -5731,23 +5731,23 @@ flavor_tur.80 = { #A foothold in Italy
 
 		trigger = {
 
-			country_exists = c:VEN
+			country_exists = c:DUMMY
 
-			opinion = { target = c:VEN value > -100 }
+			opinion = { target = c:DUMMY value > -100 }
 
 			NOR = {
-				is_rival_of = c:VEN
-				is_allied_with = { target = c:VEN }
-				is_at_war_with = c:VEN
+				is_rival_of = c:DUMMY
+				is_allied_with = { target = c:DUMMY }
+				is_at_war_with = c:DUMMY
 			}
 			NOT = {
 				scope:target_country = {
-					is_allied_with = { target = c:VEN }
+					is_allied_with = { target = c:DUMMY }
 				}
 			}
 		}
 
-		c:VEN ?= {
+		c:DUMMY ?= {
 			trigger_event_non_silently = {
 				id = flavor_ven.19
 				days = { 2 3 }
@@ -5791,7 +5791,7 @@ flavor_tur.81 = {
 
 		add_government_power = government_power_mild_bonus
 
-		c:VEN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_diplomatic_move  }
 		}
 	}
@@ -5822,7 +5822,7 @@ flavor_tur.82 = {
 
 		create_relation = {
 			first = this
-			second = c:VEN
+			second = c:DUMMY
 			type = relation_type:alliance
 		}
 	}
@@ -5867,7 +5867,7 @@ flavor_tur.84 = { #The Art of Italy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -5958,7 +5958,7 @@ flavor_tur.85 = { #The Matter of History
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -6103,7 +6103,7 @@ flavor_tur.87 = { #Looking to the Heavens
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -6202,7 +6202,7 @@ flavor_tur.88 = { #The Imperial Harem
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -6264,7 +6264,7 @@ flavor_tur.88 = { #The Imperial Harem
 scripted_trigger is_suitable_rival_for_crimea = {
 	capital = { is_discovered_by = root }
 	NOT = {
-		is_allied_with = { target = c:TUR }
+		is_allied_with = { target = c:DUMMY }
 		is_at_war_with = root
 	}
 	opinion = { target = root value < 25 }
@@ -6290,7 +6290,7 @@ flavor_tur.89 = { #Intervention in Crimea
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -6306,7 +6306,7 @@ flavor_tur.89 = { #Intervention in Crimea
 		area:crimea_area = { #checking that we don't already have a presence in Crimea
 			any_location_in_area = {
 				NOT = {
-					owner = c:TUR
+					owner = c:DUMMY
 				}
 			}
 		}
@@ -6323,8 +6323,8 @@ flavor_tur.89 = { #Intervention in Crimea
 							}
 						}
 					}
-					owner = c:GEN
-					owner = c:VEN
+					owner = c:DUMMY
+					owner = c:DUMMY
 				}
 				save_temporary_scope_as = crimean_colonist
 			}
@@ -6353,8 +6353,8 @@ flavor_tur.89 = { #Intervention in Crimea
 								}
 							}
 						}
-						owner = c:GEN
-						owner = c:VEN
+						owner = c:DUMMY
+						owner = c:DUMMY
 					}
 				}
 				save_scope_as = crimea_location
@@ -6433,8 +6433,8 @@ scripted_trigger is_crimean_khanate = {
 	is_ai = yes
 	is_subject = no
 	NOR = {
-		is_at_war_with = c:TUR
-		is_allied_with = { target = c:TUR }
+		is_at_war_with = c:DUMMY
+		is_allied_with = { target = c:DUMMY }
 	}
 }
 
@@ -6466,7 +6466,7 @@ flavor_tur.90 = { #Securing the Slave Trade
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -6474,11 +6474,11 @@ flavor_tur.90 = { #Securing the Slave Trade
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:TUR
+		country_exists = c:DUMMY
 		has_slavery = yes #the conflict for Crimea doesn't make sense otherwise
 		area:crimea_area = { #checking that we have a presence in Crimea
 			any_location_in_area = {
-				owner ?= c:TUR
+				owner ?= c:DUMMY
 			}
 		}
 
@@ -6543,7 +6543,7 @@ flavor_tur.90 = { #Securing the Slave Trade
 			}
 			custom_tooltip = crimean_vassalage_guaranteed_chance_tooltip
 			scope:crimean_country = {
-				make_subject_of = { target = c:TUR type = subject_type:vassal }
+				make_subject_of = { target = c:DUMMY type = subject_type:vassal }
 			}
 		}
 		else_if = {
@@ -6557,7 +6557,7 @@ flavor_tur.90 = { #Securing the Slave Trade
 			random = {
 				chance = 75
 				scope:crimean_country = {
-					make_subject_of = { target = c:TUR type = subject_type:vassal }
+					make_subject_of = { target = c:DUMMY type = subject_type:vassal }
 				}
 			}
 		}
@@ -6571,7 +6571,7 @@ flavor_tur.90 = { #Securing the Slave Trade
 			random = {
 				chance = 60
 				scope:crimean_country = {
-					make_subject_of = { target = c:TUR type = subject_type:vassal }
+					make_subject_of = { target = c:DUMMY type = subject_type:vassal }
 				}
 			}
 		}
@@ -6585,7 +6585,7 @@ flavor_tur.90 = { #Securing the Slave Trade
 			random = {
 				chance = 25
 				scope:crimean_country = {
-					make_subject_of = { target = c:TUR type = subject_type:vassal }
+					make_subject_of = { target = c:DUMMY type = subject_type:vassal }
 				}
 			}
 		}
@@ -6594,7 +6594,7 @@ flavor_tur.90 = { #Securing the Slave Trade
 			random = {
 				chance = 10
 				scope:crimean_country = {
-					make_subject_of = { target = c:TUR type = subject_type:vassal }
+					make_subject_of = { target = c:DUMMY type = subject_type:vassal }
 				}
 			}
 		}
@@ -6623,7 +6623,7 @@ flavor_tur.91 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -6729,7 +6729,7 @@ flavor_tur.93 = { #The Ottoman Tulip Fever
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -6782,7 +6782,7 @@ flavor_tur.94 = { #Moses Harmon
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -6861,7 +6861,7 @@ flavor_tur.95 = { #The One True Emperor
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -6966,7 +6966,7 @@ flavor_tur.96 = { #The Traitor Prince
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -7164,7 +7164,7 @@ flavor_tur.98 = { #The French Play, triggered by flavor_tur.96
 			has_variable = ruler_at_time_of_tur_96
 		}
 
-		country_exists = c:FRA
+		country_exists = c:DUMMY
 
 	}
 
@@ -7187,12 +7187,12 @@ flavor_tur.98 = { #The French Play, triggered by flavor_tur.96
 
 		if = {
 			limit = {
-				c:FRA = {
-					opinion = { target = c:TUR value <= 50 }
+				c:DUMMY = {
+					opinion = { target = c:DUMMY value <= 50 }
 				}
 			}
 			custom_tooltip = france_will_refuse.tt
-			c:FRA = {
+			c:DUMMY = {
 				add_opinion = {
 					target = root
 					modifier = outrageous_demands
@@ -7202,7 +7202,7 @@ flavor_tur.98 = { #The French Play, triggered by flavor_tur.96
 		}
 		else = {
 			custom_tooltip = france_will_aquiesce.tt
-			c:FRA = {
+			c:DUMMY = {
 				add_opinion = {
 					target = root
 					modifier = tur_courting_the_sublime_porte
@@ -7238,7 +7238,7 @@ flavor_tur.99 = { #The Price of Ambition (Pargalı Ibrahim Pasha)
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -7341,7 +7341,7 @@ flavor_tur.100 = { #Constantinople by Night
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -7486,7 +7486,7 @@ flavor_tur.101 = { #The Power of Night
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -7664,7 +7664,7 @@ flavor_tur.102 = { #A Revolving Wonder
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -7970,7 +7970,7 @@ flavor_tur.106 = { #The Restoration of Jerusalem
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -8070,7 +8070,7 @@ flavor_tur.107 = { #The Coffee of Cairo
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -8175,7 +8175,7 @@ flavor_tur.108 = { #The Great Debasement
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -8244,7 +8244,7 @@ flavor_tur.109 = { #The Cage
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -8312,9 +8312,9 @@ flavor_tur.109 = { #The Cage
 
 scripted_trigger good_candidate_for_capitulations = {
 	religion.group = religion_group:christian
- 	NOT = { is_subject_of = c:TUR }
+ 	NOT = { is_subject_of = c:DUMMY }
  	is_ai = yes
- 	opinion = { target = c:TUR value >= 20 }
+ 	opinion = { target = c:DUMMY value >= 20 }
  	OR = {
  		country_rank_level >= 3
  		has_merchant_in_constantinople = yes
@@ -8332,7 +8332,7 @@ flavor_tur.110 = { #The Capitulations
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -8424,7 +8424,7 @@ flavor_tur.111 = { #Shadow Play
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -8474,7 +8474,7 @@ flavor_tur.112 = { #The End of the Timars
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -8546,7 +8546,7 @@ flavor_tur.113 = { #Advice for Kings
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -8623,7 +8623,7 @@ flavor_tur.114 = { #A Mother's Right is God's Right
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -8709,7 +8709,7 @@ flavor_tur.115 = { #The Sultanate of Women
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -8846,9 +8846,9 @@ scripted_trigger is_slave_origin = {
 	is_ai = yes
 	is_subject = no
 	NOR = {
-		is_at_war_with = c:TUR
-		is_allied_with = { target = c:TUR }
-		is_rival_of = c:TUR
+		is_at_war_with = c:DUMMY
+		is_allied_with = { target = c:DUMMY }
+		is_rival_of = c:DUMMY
 		has_opinion = {
 			target = ROOT
 			modifier = opinion_ottoman_capitulation
@@ -8864,7 +8864,7 @@ flavor_tur.116 = { #The [GetCountryAdjective] Faction
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -8964,7 +8964,7 @@ flavor_tur.117 = { #The Reforms of [ambitious_ruler.GetName]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -9195,7 +9195,7 @@ flavor_tur.119 = { #The Guardians of Felicity
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 30
@@ -9339,7 +9339,7 @@ flavor_tur.120 = { #The Cannons of [super_sinister_rival.GetName]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -9608,7 +9608,7 @@ flavor_tur.123 = { #[target_character.GetNameWithNoTooltip] the Mad
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -9814,7 +9814,7 @@ flavor_tur.124 = { #Anatolian Brigands
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -10094,7 +10094,7 @@ flavor_tur.126 = { #Barbary Sailors
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -10196,7 +10196,7 @@ flavor_tur.127 = { #The Kadızade Movement
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -10300,7 +10300,7 @@ flavor_tur.128 = { #The Age of the Grand Vizier, associated with flavor_tur.20
 	historical_info = flavor_tur.128.historical_info
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -10438,7 +10438,7 @@ flavor_tur.129 = { #The Ayazmakapi Fire
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -10560,7 +10560,7 @@ flavor_tur.130 = { #The Doctrine of Reason
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -10652,7 +10652,7 @@ flavor_tur.131 = { #Sheeps among the Wolves
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -10738,7 +10738,7 @@ flavor_tur.132 = { #The Tax Farming Reform
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -10804,7 +10804,7 @@ flavor_tur.133 = { #The Cost of Science
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -10879,7 +10879,7 @@ flavor_tur.134 = { #The War for Crete
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -10899,10 +10899,10 @@ flavor_tur.134 = { #The War for Crete
 		location:candia.owner = {
 			is_ai = yes
 			NOR = {
-				this = c:TUR
-				is_allied_with = { target = c:TUR }
-				is_at_war_with = c:TUR
-				is_subject_of = c:TUR
+				this = c:DUMMY
+				is_allied_with = { target = c:DUMMY }
+				is_at_war_with = c:DUMMY
+				is_subject_of = c:DUMMY
 				opinion = { target = root value > 25 }
 			}
 		}
@@ -10976,7 +10976,7 @@ flavor_tur.135 = { #The Unsavory Influences on [Sultan]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11098,7 +11098,7 @@ flavor_tur.136 = { #[Ruler] the Extravagant
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -11195,7 +11195,7 @@ flavor_tur.137 = { #The Judges of the Faithful
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11243,7 +11243,7 @@ flavor_tur.138 = { #A Scarcity of Scribes
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11350,7 +11350,7 @@ flavor_tur.140 = { #The Tulip Period
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11416,7 +11416,7 @@ flavor_tur.141 = { #The Power of Printing
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -11608,7 +11608,7 @@ flavor_tur.143 = { #The Iron Castle
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11737,7 +11737,7 @@ flavor_tur.144 = { #Modesty in Peril
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11818,7 +11818,7 @@ flavor_tur.145 = { #The Ransom from Iceland
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -11843,9 +11843,9 @@ flavor_tur.145 = { #The Ransom from Iceland
 			is_ai = yes
 			has_ruler = yes
 			NOR = {
-				is_allied_with = { target = c:TUR }
-				is_at_war_with = c:TUR
-				is_subject_of = c:TUR
+				is_allied_with = { target = c:DUMMY }
+				is_at_war_with = c:DUMMY
+				is_subject_of = c:DUMMY
 			}
 		}
 
@@ -11860,8 +11860,8 @@ flavor_tur.145 = { #The Ransom from Iceland
 				location:algiers = { has_owner = yes }
 				exists = location:algiers.owner.ruler
 				location:algiers.owner = {
-					is_allied_with = { target = c:TUR }
-					is_subject_of = c:TUR
+					is_allied_with = { target = c:DUMMY }
+					is_subject_of = c:DUMMY
 					is_ai = yes
 				}
 			}
@@ -11979,7 +11979,7 @@ flavor_tur.146 = { #The Tree of Corpses
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -12125,7 +12125,7 @@ flavor_tur.147 = { #The Houses of Wisdom
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -12272,7 +12272,7 @@ flavor_tur.148 = { #Blood on Silk
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -12383,7 +12383,7 @@ flavor_tur.149 = { #The Eunuchs in Cairo
 	historical_info = flavor_tur.149.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -12519,7 +12519,7 @@ flavor_tur.150 = { #The Wronged Servant
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -12627,7 +12627,7 @@ flavor_tur.151 = { #The Beauty of Letters
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -12726,7 +12726,7 @@ flavor_tur.152 = { #The Red Coins
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -12803,7 +12803,7 @@ flavor_tur.153 = { #The Baron de Tott
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -12812,8 +12812,8 @@ flavor_tur.153 = { #The Baron de Tott
 	trigger = {
 		current_date > 476.9.4
 
-		country_exists = c:FRA
-		c:FRA = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_great_power = yes
 			NOR = {
 	    		is_rival_of = root
@@ -12893,7 +12893,7 @@ flavor_tur.154 = { #The Burning of [Location]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -12995,7 +12995,7 @@ flavor_tur.155 = { #The Mosques of [Ruler]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -13078,7 +13078,7 @@ flavor_tur.156 = { #Tulip's End
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -13274,7 +13274,7 @@ flavor_tur.157 = { #Suspicious Societies
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -13334,7 +13334,7 @@ flavor_tur.158 = { #The Queen of the Poets
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -13406,7 +13406,7 @@ flavor_tur.159 = { #Dangerous Words
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -13489,7 +13489,7 @@ flavor_tur.160 = { #The Lord of Acre
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -13608,7 +13608,7 @@ flavor_tur.161 = { #Halva Nights
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -13684,7 +13684,7 @@ flavor_tur.162 = { #Black as Sin, Sweet as Sedition
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -13748,7 +13748,7 @@ flavor_tur.163 = { #An Insulting Spectacle?
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -13831,7 +13831,7 @@ flavor_tur.164 = { #The Blessings of Baklava
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -13905,7 +13905,7 @@ flavor_tur.165 = { #The Flooding of the Euphrates
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -14075,7 +14075,7 @@ flavor_tur.167 = { #The Medical School of [capital]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -14145,7 +14145,7 @@ flavor_tur.168 = { #The Grievances of Greece
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -14415,7 +14415,7 @@ flavor_tur.170 = { #The Judge of the Grasslands
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -14535,7 +14535,7 @@ flavor_tur.171 = { #The Circassian Beauty
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -14632,7 +14632,7 @@ flavor_tur.172 = { #Cutting Corners
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -14702,7 +14702,7 @@ flavor_tur.173 = { #Abolishing Devshirme
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -14783,7 +14783,7 @@ flavor_tur.174 = { #The Chief of Poets
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -14883,7 +14883,7 @@ flavor_tur.175 = { #The Local Powers
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -14969,7 +14969,7 @@ flavor_tur.176 = { #The Dash of Death
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -15174,7 +15174,7 @@ flavor_tur.179 = { #The New Order Army
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -15370,7 +15370,7 @@ flavor_tur.181 = { #The Calligrapher Couple
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -15468,7 +15468,7 @@ flavor_tur.182 = { #The Giant
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -15556,7 +15556,7 @@ flavor_tur.183 = { #The Tortoise and the Candle
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -15662,7 +15662,7 @@ flavor_tur.184 = {
 	historical_info = flavor_tur.184.historical_info
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -15717,7 +15717,7 @@ flavor_tur.185 = {
 	historical_info = flavor_tur.185.historical_info
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -15835,7 +15835,7 @@ flavor_tur.186 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -15894,7 +15894,7 @@ flavor_tur.187 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_sugar.dds"
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -16008,7 +16008,7 @@ flavor_tur.189 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -16026,7 +16026,7 @@ flavor_tur.189 = {
 			}
 		}
 
-		NOT = { country_exists = c:BYZ }
+		NOT = { country_exists = c:DUMMY }
 	}
 
 	immediate = {
@@ -16080,7 +16080,7 @@ flavor_tur.190 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_weaponry.dds"
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -16147,7 +16147,7 @@ flavor_tur.191 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -16157,7 +16157,7 @@ flavor_tur.191 = {
 
 	trigger = {
 		current_date > 476.9.4
-		NOT = { country_exists = c:BYZ }
+		NOT = { country_exists = c:DUMMY }
 		own_entire_province = province_definition:messenia_province
 	}
 
@@ -16210,7 +16210,7 @@ flavor_tur.192 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -16290,7 +16290,7 @@ flavor_tur.193 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -16377,7 +16377,7 @@ flavor_tur.194 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -16434,7 +16434,7 @@ flavor_tur.195 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -16503,7 +16503,7 @@ flavor_tur.196 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -16558,7 +16558,7 @@ flavor_tur.197 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -16569,8 +16569,8 @@ flavor_tur.197 = {
 	trigger = {
 		current_date > 476.9.4
 		NOT = {
-			country_exists = c:BYZ
-			country_exists = c:GRE
+			country_exists = c:DUMMY
+			country_exists = c:DUMMY
 		}
 		culture != culture:greek_culture
 		"culture_percentage_in_country(culture:greek_culture)" > 0.05
@@ -16613,7 +16613,7 @@ flavor_tur.198 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -16713,7 +16713,7 @@ flavor_tur.199 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -16766,7 +16766,7 @@ flavor_tur.200 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -16808,7 +16808,7 @@ flavor_tur.201 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -16894,7 +16894,7 @@ flavor_tur.202 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -16962,7 +16962,7 @@ flavor_tur.203 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -17095,7 +17095,7 @@ flavor_tur.205 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -17166,7 +17166,7 @@ flavor_tur.206 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -17225,7 +17225,7 @@ flavor_tur.207 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -17283,7 +17283,7 @@ flavor_tur.208 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -17348,7 +17348,7 @@ flavor_tur.209 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -17433,7 +17433,7 @@ flavor_tur.210 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -17753,7 +17753,7 @@ flavor_tur.215 = {
 			controller = root
 			owner = {
 				is_at_war_with = root
-				this = c:KNI
+				this = c:DUMMY
 			}
 			is_capital = yes
 			modifier:fort_level > 0
@@ -17849,7 +17849,7 @@ flavor_tur.217 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -17978,7 +17978,7 @@ flavor_tur.218 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -18049,7 +18049,7 @@ flavor_tur.219 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -18145,7 +18145,7 @@ flavor_tur.220 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -18201,7 +18201,7 @@ flavor_tur.221 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -18283,7 +18283,7 @@ flavor_tur.1000 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -18428,7 +18428,7 @@ flavor_tur.1002 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -18482,7 +18482,7 @@ flavor_tur.1003 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -18623,7 +18623,7 @@ flavor_tur.1004 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -18723,7 +18723,7 @@ flavor_tur.1005 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -18823,7 +18823,7 @@ flavor_tur.1100 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -18832,16 +18832,16 @@ flavor_tur.1100 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:ZAZ
+		country_exists = c:DUMMY
 		is_great_power = yes
-		c:ZAZ = {
+		c:DUMMY = {
 			is_subject = no
 			is_great_power = no
 		}
 	}
 
 	immediate = {
-		c:ZAZ = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			ruler_or_regent ?= {
 				save_scope_as = target_character
@@ -18941,7 +18941,7 @@ flavor_tur.1200 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -18952,35 +18952,35 @@ flavor_tur.1200 = {
 		current_date > 476.9.4
 		trigger_if = {
 			limit = {
-				country_exists = c:GBR
+				country_exists = c:DUMMY
 			}
-			c:GBR = {
+			c:DUMMY = {
 				is_subject = no
 				is_great_power = yes
 				any_rival ?= {
 					is_rival_of = root
 				}
 			}
-			religion.group != c:GBR.religion.group
+			religion.group != c:DUMMY.religion.group
 		}
 		trigger_else = {
-			country_exists = c:ENG
-			c:ENG = {
+			country_exists = c:DUMMY
+			c:DUMMY = {
 				is_subject = no
 				is_great_power = yes
 				any_rival ?= {
 					is_rival_of = root
 				}
 			}
-			religion.group != c:ENG.religion.group
+			religion.group != c:DUMMY.religion.group
 		}
 	}
 
 	immediate = {
 		if = {
 			limit = {
-				country_exists = c:GBR
-				c:GBR = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					is_subject = no
 					is_great_power = yes
 					any_rival ?= {
@@ -18988,12 +18988,12 @@ flavor_tur.1200 = {
 					}
 				}
 			}
-			c:GBR = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}
 		else = {
-			c:ENG = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}
@@ -19082,7 +19082,7 @@ flavor_tur.1300 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = TUR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -19092,8 +19092,8 @@ flavor_tur.1300 = {
 	trigger = {
 		current_date > 476.9.4
 		is_great_power = yes
-		country_exists = c:MOR
-		c:MOR = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_subject = no
 			NOT = { is_rival_of = root }
 			NOT = { is_enemy_of = root }
@@ -19104,7 +19104,7 @@ flavor_tur.1300 = {
 	}
 
 	immediate = {
-		c:MOR = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			ruler_or_regent ?= {
 				save_scope_as = target_character

@@ -1119,7 +1119,7 @@ member_of_league_of_public_weal = {
 			}
 			has_reform = government_reform:member_of_league_of_public_weal
 		}
-		NOT = { in_union_with = c:FRA }
+		NOT = { in_union_with = c:DUMMY }
 	}
 	allow = {
 		OR = {
@@ -3571,7 +3571,6 @@ timurid_empire = {
 	unique = yes
 	potential = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		has_unlocked_government_reform_trigger = { type = timurid_empire }
 	}
 	locked = {
 		is_locked_mechanic = {

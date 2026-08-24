@@ -228,7 +228,11 @@ def entries() -> list[dict[str, str]]:
         # Coordinate-verified named cities only. Broad societies of peoples and
         # contested anchors remain on their current displayed name until a
         # location-specific historical name can be reviewed.
-        if coordinate["confidence"] != "secure" or row["kind"] == "sop":
+        if (
+            coordinate["confidence"] != "secure"
+            or row["confidence"] != "secure"
+            or row["kind"] == "sop"
+        ):
             continue
         location = row["map_capital"]
         if location not in installed_locations:

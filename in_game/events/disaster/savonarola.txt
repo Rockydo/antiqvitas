@@ -347,7 +347,7 @@ savonarola_disaster.7 = { #Savonarola summoned to Rome
 		current_date > 476.9.4
 		has_savonarola_ruler = yes
 		estate_satisfaction:clergy_estate < 0.5
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 	}
 
 	immediate = {
@@ -368,7 +368,7 @@ savonarola_disaster.7 = { #Savonarola summoned to Rome
 		historical_option = yes
 		add_stability = stability_mild_penalty
 		add_religious_influence = religious_influence_mild_penalty
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = flo_refused_summons }
 		}
 	}
@@ -447,10 +447,10 @@ savonarola_disaster.9 = { #Excommunication of Savonarola
 				character:flo_savonarola ?= { age_in_years > 45 }
 			}
 		}
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 		OR = {
 			estate_satisfaction:clergy_estate < 0.5
-			c:PAP = {
+			c:DUMMY = {
 				opinion = { target = root value < 0 }
 			}
 		}

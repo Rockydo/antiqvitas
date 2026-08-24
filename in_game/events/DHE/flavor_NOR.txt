@@ -8,7 +8,7 @@ flavor_nor.1 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = NOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -16,7 +16,7 @@ flavor_nor.1 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:HSA
+		country_exists = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -44,7 +44,7 @@ flavor_nor.1 = {
 		random_neighbor_country = {
 			save_scope_as = exile_destination
 		}
-		c:HSA = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 	}
 	
 	option = {
@@ -52,8 +52,8 @@ flavor_nor.1 = {
 		historical_option = yes
 
 		scope:target_character = { move_country = root }
-		c:HSA = {
-			add_opinion = { target = c:NOR modifier = hanseatic_conflict }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = hanseatic_conflict }
 		}
 	}
 	option = {
@@ -75,7 +75,7 @@ flavor_nor.2 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = NOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -145,7 +145,7 @@ flavor_nor.3 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = NOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -198,7 +198,7 @@ flavor_nor.5 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = NOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -206,10 +206,10 @@ flavor_nor.5 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:SCO
+		country_exists = c:DUMMY
 		owns_or_non_sovereign_subject_owns = location:orkney
 		owns_or_non_sovereign_subject_owns = location:shetland
-		c:SCO = {
+		c:DUMMY = {
 			NOT = { is_at_war_with = root }
 			NOT = { in_union_with = root }
 			own_entire_area = area:scottish_highlands_area
@@ -227,28 +227,28 @@ flavor_nor.5 = {
 	
 	option = {
 		name = flavor_nor.5.a
-		c:SCO = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_nor.6 }
 		}
 		custom_tooltip = flavor_nor.5.a.tt
 		show_as_tooltip = {
-			c:NOR = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = nor_gave_away_orkney }
 			}
 			location:orkney = {
-				change_location_owner = c:SCO
-				remove_core = c:NOR
+				change_location_owner = c:DUMMY
+				remove_core = c:DUMMY
 			}
 			location:shetland = {
-				change_location_owner = c:SCO
-				remove_core = c:NOR
+				change_location_owner = c:DUMMY
+				remove_core = c:DUMMY
 			}
-			c:SCO = {
+			c:DUMMY = {
 				add_opinion = { target = root modifier = nor_strategic_marriage }
 			}
 
 			add_gold = 200.00
-			add_truce_with = { target = c:SCO }
+			add_truce_with = { target = c:DUMMY }
 		}
 	}
 	option = {
@@ -256,19 +256,19 @@ flavor_nor.5 = {
 		area:hebrides_area = {
 			every_location_in_area = {
 				limit = {
-					NOT = { is_core_of = c:NOR }
+					NOT = { is_core_of = c:DUMMY }
 				}
-				add_core = c:NOR
+				add_core = c:DUMMY
 			}
 		}
 
-		add_opinion = { target = c:SCO modifier = nor_taxation_conflict_over_hebrides }
-		c:SCO = {
+		add_opinion = { target = c:DUMMY modifier = nor_taxation_conflict_over_hebrides }
+		c:DUMMY = {
 			if = {
 				limit = {
 					location:orkney = {
 						NOT = {
-							is_core_of = c:SCO
+							is_core_of = c:DUMMY
 						}
 					}
 				}
@@ -278,7 +278,7 @@ flavor_nor.5 = {
 				limit = {
 					location:shetland = {
 						NOT = {
-							is_core_of = c:SCO
+							is_core_of = c:DUMMY
 						}
 					}
 				}
@@ -307,46 +307,46 @@ flavor_nor.6 = {
 	option = {
 		name = flavor_nor.6.a
 		show_as_tooltip = {
-			c:NOR = {
+			c:DUMMY = {
 				location:orkney = {
-					change_location_owner = c:SCO
-					add_core = c:SCO
-					remove_core = c:NOR
+					change_location_owner = c:DUMMY
+					add_core = c:DUMMY
+					remove_core = c:DUMMY
 				}
 				location:shetland = {
-					change_location_owner = c:SCO
-					add_core = c:SCO
-					remove_core = c:NOR
+					change_location_owner = c:DUMMY
+					add_core = c:DUMMY
+					remove_core = c:DUMMY
 				}
 			}
-			c:NOR = {
+			c:DUMMY = {
 				add_truce_with = { target = root }
 			}
 		}
 		add_opinion = { target = root modifier = nor_strategic_marriage }
 		add_gold = -100.00
-		c:NOR = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_nor.8 }
 		}
 	}
 	option = {
 		name = flavor_nor.6.b
 		add_prestige = prestige_weak_bonus
-		c:NOR = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_nor.9 }
 		}
 		show_as_tooltip = {
 			area:hebrides_area = {
 				every_location_in_area = {
 					limit = {
-						NOT = { is_core_of = c:NOR }
+						NOT = { is_core_of = c:DUMMY }
 					}
-					add_core = c:NOR
+					add_core = c:DUMMY
 				}
 
 			}
 		}
-		c:NOR = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = nor_taxation_conflict_over_hebrides }
 		}
 	}
@@ -373,19 +373,19 @@ flavor_nor.8 = {
 	option = {
 		name = flavor_nor.8.a
 		add_gold = 200.00
-		c:SCO = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = nor_strategic_marriage }
 			add_truce_with = { target = root }
 		}
 		location:orkney = {
-			change_location_owner = c:SCO
-			add_core = c:SCO
-			remove_core = c:NOR
+			change_location_owner = c:DUMMY
+			add_core = c:DUMMY
+			remove_core = c:DUMMY
 		}
 		location:shetland = {
-			change_location_owner = c:SCO
-			add_core = c:SCO
-			remove_core = c:NOR
+			change_location_owner = c:DUMMY
+			add_core = c:DUMMY
+			remove_core = c:DUMMY
 		}
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_penalty }
 	}
@@ -414,14 +414,14 @@ flavor_nor.9 = {
 		area:hebrides_area = {
 			every_location_in_area = {
 				limit = {
-					NOT = { is_core_of = c:NOR }
+					NOT = { is_core_of = c:DUMMY }
 				}
-				add_core = c:NOR
+				add_core = c:DUMMY
 			}
 
 		}
 
-		c:SCO = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = nor_taxation_conflict_over_hebrides }
 		}
 	}
@@ -438,7 +438,7 @@ flavor_nor.16 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = NOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -446,7 +446,7 @@ flavor_nor.16 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:NED
+		country_exists = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -472,7 +472,7 @@ flavor_nor.21 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = NOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -521,7 +521,7 @@ flavor_nor.22 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -568,7 +568,7 @@ flavor_nor.23 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = NOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -616,7 +616,7 @@ flavor_nor.24 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = NOR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5

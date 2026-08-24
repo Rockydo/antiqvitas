@@ -142,10 +142,10 @@ peasants_war.3 = {
 		add_estate_satisfaction = { type = estate_type:peasants_estate value = estate_satisfaction_weak_bonus }
 		if = {
 			limit = {
-				country_exists = c:PAP
+				country_exists = c:DUMMY
 				NOT = { tag = PAP }
 			}
-			reverse_add_opinion = { target = c:PAP modifier = opinion_pope_religious_tolerance }
+			reverse_add_opinion = { target = c:DUMMY modifier = opinion_pope_religious_tolerance }
 		}
 	}
 }

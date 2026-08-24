@@ -26,8 +26,8 @@ crisis_of_the_sayfawa_dynasty.1 = { #Crisis of the Sayfawa Dynasty
 		name = crisis_of_the_sayfawa_dynasty.1.b
 
 		trigger = {
-			country_exists = c:YAO
-			country_exists = c:KOT
+			country_exists = c:DUMMY
+			country_exists = c:DUMMY
 		}
 
 		set_variable = gave_autonomy_to_the_bulala_and_sao_variable
@@ -426,8 +426,8 @@ crisis_of_the_sayfawa_dynasty.7 = { #$bilala_culture$ Raid
 	trigger = {
 		current_date > 476.9.4
 		"culture_percentage_in_country(culture:bilala_culture)" > 0
-		country_exists = c:YAO
-		c:YAO = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			any_owned_nomad_pop = {
 				culture = culture:bilala_culture
 				pop_size > 0.5
@@ -443,7 +443,7 @@ crisis_of_the_sayfawa_dynasty.7 = { #$bilala_culture$ Raid
 			}
 			save_scope_as = target_location
 		}
-		c:YAO = {
+		c:DUMMY = {
 			random_owned_nomad_pop = {
 				limit = {
 					culture = culture:bilala_culture

@@ -1023,29 +1023,6 @@ french_wars_religion.9 = {
 	}
 }
 
-french_wars_religion.10 = {
-	type = country_event
-	category = disaster_event
-	title = french_wars_religion.10.title
-	desc = french_wars_religion.10.desc
-	outcome = neutral
-	image = "gfx/interface/illustrations/disaster/religious_turmoil.dds"
-
-	immediate = {
-		ruler_or_regent = { save_scope_as = target_character }
-	}
-
-	option = {
-		name = french_wars_religion.10.a
-
-		set_parliament_location = capital
-		set_parliament_active = yes
-		set_parliament_issue = parliament_issue:edict_of_nantes_issue
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 french_wars_religion.11 = {
 	type = country_event

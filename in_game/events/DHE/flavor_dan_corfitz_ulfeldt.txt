@@ -26,7 +26,7 @@ flavor_dan_corfitz_ulfeldt.1 = { #Corfits Ulfeldt
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DAN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -123,9 +123,9 @@ flavor_dan_corfitz_ulfeldt.2 = { #The Growing Influence of Corfits Ulfeldt
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		if = {
 			limit = {
-				country_exists = c:SWE
+				country_exists = c:DUMMY
 			}
-			c:SWE = { save_scope_as = target_country }
+			c:DUMMY = { save_scope_as = target_country }
 		}
 		else = {
 			random_known_country = {
@@ -227,7 +227,7 @@ flavor_dan_corfitz_ulfeldt.4 = { #Corfits Ulfeldt Insight
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = SWE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -239,11 +239,11 @@ flavor_dan_corfitz_ulfeldt.4 = { #Corfits Ulfeldt Insight
 			is_alive = yes
 			owner = root
 		}
-		country_exists = c:DAN
-		is_at_war_with = c:DAN
+		country_exists = c:DUMMY
+		is_at_war_with = c:DUMMY
 		any_army = {
 			in_siege = yes
-			unit_location.owner = c:DAN
+			unit_location.owner = c:DUMMY
 		}
 	}
 
@@ -257,7 +257,7 @@ flavor_dan_corfitz_ulfeldt.4 = { #Corfits Ulfeldt Insight
 		random_army = {
 			limit = {
 				in_siege = yes
-				unit_location.owner = c:DAN
+				unit_location.owner = c:DUMMY
 			}
 			unit_location = { save_scope_as = target_location }
 		}
@@ -288,25 +288,25 @@ flavor_dan_corfitz_ulfeldt.5 = { #Corfits Ulfeldt is becoming a nuisance
 			is_alive = yes
 			owner = root
 		}
-		country_exists = c:DAN
+		country_exists = c:DUMMY
 		OR = {
 			AND = {
-				country_exists = c:BRA
-				c:BRA = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					NOT = {
-						has_casus_belli_of_type_on = { type = casus_belli:cb_claim_throne target = c:DAN }
+						has_casus_belli_of_type_on = { type = casus_belli:cb_claim_throne target = c:DUMMY }
 					}
 				}
 			}
 			AND = {
-				c:DAN = {
+				c:DUMMY = {
 					any_known_country = {
 						OR = {
-							is_rival_of = c:DAN
-							opinion = { target = c:DAN value < 0 }
+							is_rival_of = c:DUMMY
+							opinion = { target = c:DUMMY value < 0 }
 						}
 						NOT = {
-							has_casus_belli_of_type_on = { type = casus_belli:cb_claim_throne target = c:DAN }
+							has_casus_belli_of_type_on = { type = casus_belli:cb_claim_throne target = c:DUMMY }
 						}
 					}
 				}
@@ -323,25 +323,25 @@ flavor_dan_corfitz_ulfeldt.5 = { #Corfits Ulfeldt is becoming a nuisance
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		if = {
 			limit = {
-				country_exists = c:BRA
-				c:BRA = {
+				country_exists = c:DUMMY
+				c:DUMMY = {
 					NOT = {
-						has_casus_belli_of_type_on = { type = casus_belli:cb_claim_throne target = c:DAN }
+						has_casus_belli_of_type_on = { type = casus_belli:cb_claim_throne target = c:DUMMY }
 					}
 				}
 			}
-			c:BRA = { save_scope_as = target_country }
+			c:DUMMY = { save_scope_as = target_country }
 		}
 		else = {
-			c:DAN = {
+			c:DUMMY = {
 				random_known_country = {
 					limit = {
 						OR = {
-							is_rival_of = c:DAN
-							opinion = { target = c:DAN value < 0 }
+							is_rival_of = c:DUMMY
+							opinion = { target = c:DUMMY value < 0 }
 						}
 						NOT = {
-							has_casus_belli_of_type_on = { type = casus_belli:cb_claim_throne target = c:DAN }
+							has_casus_belli_of_type_on = { type = casus_belli:cb_claim_throne target = c:DUMMY }
 						}
 					}
 					save_scope_as = target_country
@@ -386,10 +386,10 @@ flavor_dan_corfitz_ulfeldt.6 = { #Corfits Ulfeldt Arrives with a Proposal
 			is_alive = yes
 			owner = root
 		}
-		country_exists = c:DAN
+		country_exists = c:DUMMY
 		exists = ruler
 		NOT = {
-			has_casus_belli_of_type_on = { type = casus_belli:cb_claim_throne target = c:DAN }
+			has_casus_belli_of_type_on = { type = casus_belli:cb_claim_throne target = c:DUMMY }
 		}
 	}
 
@@ -407,7 +407,7 @@ flavor_dan_corfitz_ulfeldt.6 = { #Corfits Ulfeldt Arrives with a Proposal
 		name = flavor_dan_corfitz_ulfeldt.6.a
 		add_legitimacy = legitimacy_mild_penalty
 		change_gold_effect = { scale = 3 }
-		add_casus_belli = { target = c:DAN type = casus_belli:cb_claim_throne }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_claim_throne }
 	}
 
 	option = {
@@ -416,7 +416,7 @@ flavor_dan_corfitz_ulfeldt.6 = { #Corfits Ulfeldt Arrives with a Proposal
 		add_prestige = prestige_mild_bonus
 		add_legitimacy = legitimacy_weak_bonus
 		save_scope_as = origin_country
-		c:DAN = { trigger_event_silently = flavor_dan_corfitz_ulfeldt.7 }
+		c:DUMMY = { trigger_event_silently = flavor_dan_corfitz_ulfeldt.7 }
 	}
 
 }

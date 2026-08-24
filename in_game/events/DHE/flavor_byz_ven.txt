@@ -10,7 +10,7 @@ flavor_byz_ven.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = BYZ
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -19,7 +19,7 @@ flavor_byz_ven.1 = {
 	trigger = {
 		current_date > 476.9.4
 		has_or_had_tag = BYZ
-		country_exists = c:VEN
+		country_exists = c:DUMMY
 		any_active_disaster = {
 			OR = {
 				disaster_type = disaster_type:byzantine_succession_crisis
@@ -32,7 +32,7 @@ flavor_byz_ven.1 = {
 	}
 
 	immediate = {
-		c:VEN = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		save_scope_as = origin_country
@@ -60,7 +60,7 @@ flavor_byz_ven.1 = {
 				id = flavor_byz_ven.2
 			}
 		}
-		c:VEN = {
+		c:DUMMY = {
 			custom_tooltip = BYZ_crown_jewels_tt
 		}
 	}
@@ -134,13 +134,13 @@ flavor_byz_ven.3 = {
 		current_date > 476.9.4
 		exists = work_of_art:byzantine_crown_jewels
 		has_variable = original_crown_jewels_lender
-		country_exists = c:BYZ
+		country_exists = c:DUMMY
 	}
 
 	fire_only_once = yes
 
 	immediate = {
-		c:BYZ = {
+		c:DUMMY = {
 			save_scope_as = origin_country
 		}
 		save_scope_as = target_country
@@ -197,7 +197,7 @@ flavor_byz_ven.4 = {
 		name = flavor_byz_ven.4.a
 
 		remove_country_modifier = BYZ_lacking_jewels
-		c:VEN ?= {
+		c:DUMMY ?= {
 			remove_variable = original_crown_jewels_lender
 		}
 	}
@@ -254,7 +254,7 @@ flavor_byz_ven.6 = {
 		name = flavor_byz_ven.6.a
 
 		remove_country_modifier = BYZ_lacking_jewels
-		c:VEN ?= {
+		c:DUMMY ?= {
 			remove_variable = original_crown_jewels_lender
 		}
 	}
@@ -297,7 +297,7 @@ flavor_byz_ven.7 = {
 		scope:origin_country = {
 			remove_country_modifier = BYZ_lacking_jewels
 		}
-		c:VEN ?= {
+		c:DUMMY ?= {
 			remove_variable = original_crown_jewels_lender
 		}
 
@@ -406,7 +406,7 @@ flavor_byz_ven.11 = {
 
 	immediate = {
 		save_scope_as = target_country
-		c:BYZ = {
+		c:DUMMY = {
 			save_scope_as = origin_country
 		}
 		work_of_art:byzantine_crown_jewels = {
@@ -438,7 +438,7 @@ flavor_byz_ven.12 = {
 
 	immediate = {
 		save_scope_as = origin_country
-		c:VEN = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		work_of_art:byzantine_crown_jewels = {
@@ -456,7 +456,7 @@ flavor_byz_ven.12 = {
 			move_art_and_owner = { location = root.capital country = root }
 		}
 		remove_country_modifier = BYZ_lacking_jewels
-		c:VEN ?= {
+		c:DUMMY ?= {
 			remove_variable = original_crown_jewels_lender
 		}
 	}
@@ -475,7 +475,7 @@ flavor_byz_ven.13 = {
 
 	immediate = {
 		save_scope_as = origin_country
-		c:VEN = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 		work_of_art:byzantine_crown_jewels = {
@@ -503,7 +503,7 @@ flavor_byz_ven.14 = {
 
 	immediate = {
 		save_scope_as = target_country
-		c:BYZ = {
+		c:DUMMY = {
 			save_scope_as = origin_country
 		}
 		work_of_art:byzantine_crown_jewels = {
@@ -530,7 +530,7 @@ flavor_byz_ven.15 = { #"An Opportunity against the Genoese Threat" ## Venice con
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = VEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -538,20 +538,20 @@ flavor_byz_ven.15 = { #"An Opportunity against the Genoese Threat" ## Venice con
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:GEN
-		country_exists = c:BYZ
-		c:BYZ = {
-			has_opinion = { target = c:GEN modifier = gen_has_taken_chios_from_us }
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		c:DUMMY = {
+			has_opinion = { target = c:DUMMY modifier = gen_has_taken_chios_from_us }
 			is_subject = no
 			NOT = { is_allied_with = { target = root } }
 			NOT = { has_truce_with = root }
 		}
-		NOT = { is_at_war_with = c:BYZ }
+		NOT = { is_at_war_with = c:DUMMY }
 	}
 
 	immediate = {
 		save_scope_as = venetian_proposer
-		c:BYZ = { save_scope_as = byzantine_pact_target }
+		c:DUMMY = { save_scope_as = byzantine_pact_target }
 	}
 
 	illustration_tags = {
@@ -593,7 +593,7 @@ flavor_byz_ven.16 = { #"The Venetian Overture" ## Byzantium receives Venice's pr
 		add_country_modifier = { modifier = anti_genoese_pact_modifier years = 10 }
 		scope:venetian_proposer = {
 			add_opinion = { target = root modifier = byz_ven_anti_genoese_pact }
-			add_opinion = { target = c:GEN modifier = ven_anti_genoese_pact_against_them }
+			add_opinion = { target = c:DUMMY modifier = ven_anti_genoese_pact_against_them }
 			add_country_modifier = { modifier = anti_genoese_pact_modifier years = 10 }
 		}
 		if = {

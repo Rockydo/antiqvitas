@@ -9,7 +9,7 @@ flavor_pol.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -85,7 +85,7 @@ flavor_pol.2 = {#https://en.wikipedia.org/wiki/Sigismund%27s_Column
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -178,7 +178,7 @@ flavor_pol.3 = { #https://pl.wikipedia.org/wiki/Merkuriusz_Polski_Ordynaryjny
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -298,7 +298,7 @@ flavor_pol.4 = { #https://en.wikipedia.org/wiki/Vilnius_University
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = LIT
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -322,7 +322,7 @@ flavor_pol.4 = { #https://en.wikipedia.org/wiki/Vilnius_University
 			}
 		}
 		NOT = {
-			country_exists = c:LIT
+			country_exists = c:DUMMY
 		}
 	}
 
@@ -443,7 +443,7 @@ flavor_pol.6 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		#Check if Lithuania is marriable
-		c:LIT = {
+		c:DUMMY = {
 			if = {
 				limit = {
 					OR = {
@@ -459,7 +459,7 @@ flavor_pol.6 = {
 			order_by = total_population
 			limit = {
 				this != scope:lithuania_groom_country
-				this != c:PAP
+				this != c:DUMMY
 				OR = {
 					ruler ?= { is_acceptable_groom =yes }
 					heir ?= { is_acceptable_groom =yes }
@@ -474,7 +474,7 @@ flavor_pol.6 = {
 			limit = {
 				this != scope:first_groom_country
 				this != scope:lithuania_groom_country
-				this != c:PAP
+				this != c:DUMMY
 				OR = {
 					ruler ?= { is_acceptable_groom =yes }
 					heir ?= { is_acceptable_groom =yes }
@@ -490,7 +490,7 @@ flavor_pol.6 = {
 				this != scope:first_groom_country
 				this != scope:second_groom_country
 				this != scope:lithuania_groom_country
-				this != c:PAP
+				this != c:DUMMY
 				OR = {
 					ruler ?= { is_acceptable_groom =yes }
 					heir ?= { is_acceptable_groom =yes }
@@ -635,7 +635,7 @@ flavor_pol.7 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:POL.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = pol_queen_scope
 		}
 	}
@@ -659,7 +659,7 @@ flavor_pol.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -725,7 +725,7 @@ flavor_pol.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -774,7 +774,7 @@ flavor_pol.10 = { #https://en.wikipedia.org/wiki/Sigismund_III_Vasa
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1067,7 +1067,7 @@ flavor_pol.14 = {
 	historical_info = flavor_pol.14.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1189,7 +1189,7 @@ flavor_pol.15 = {
 	historical_info = flavor_pol.15.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1263,7 +1263,7 @@ flavor_pol.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1327,7 +1327,7 @@ flavor_pol.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1454,7 +1454,7 @@ flavor_pol.18 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1463,10 +1463,10 @@ flavor_pol.18 = {
 	trigger = {
 		current_date > 476.9.4
 		religion.group = religion_group:christian
-		country_exists = c:TUR
-		is_neighbor_of = c:TUR
-		can_declare_war_on = c:TUR
-		c:TUR = {
+		country_exists = c:DUMMY
+		is_neighbor_of = c:DUMMY
+		can_declare_war_on = c:DUMMY
+		c:DUMMY = {
 			NOT = { religion.group = religion_group:christian }
 		}
 		monthly_manpower > 0.2
@@ -1485,7 +1485,7 @@ flavor_pol.18 = {
 	option = {
 		name = flavor_pol.18.a
 		add_manpower = { value = root.monthly_manpower multiply = 10 }
-		add_casus_belli = { target = c:TUR type = casus_belli:cb_crusade }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_crusade }
 	}
 }
 
@@ -1499,7 +1499,7 @@ flavor_pol.19 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1551,7 +1551,7 @@ flavor_pol.20 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1600,7 +1600,7 @@ flavor_pol.21 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1639,17 +1639,17 @@ flavor_pol.21 = {
 		add_country_modifier = { modifier = pol_enlightenment_reforms_modifier years = modifier_duration_years_extended mode = add_and_extend }
 		add_prestige = prestige_mild_bonus
 		if = {
-			limit = { country_exists = c:RUS }
-			c:RUS = { add_opinion = { target = ROOT modifier = opinion_pol_reform_threatens_neighbors } }
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = { add_opinion = { target = ROOT modifier = opinion_pol_reform_threatens_neighbors } }
 		}
 		if = {
-			limit = { country_exists = c:PRU }
-			c:PRU = { add_opinion = { target = ROOT modifier = opinion_pol_reform_threatens_neighbors } }
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = { add_opinion = { target = ROOT modifier = opinion_pol_reform_threatens_neighbors } }
 		}
 		if = {
 			limit = {
-				NOT = { country_exists = c:RUS }
-				NOT = { country_exists = c:PRU }
+				NOT = { country_exists = c:DUMMY }
+				NOT = { country_exists = c:DUMMY }
 			}
 			ordered_neighbor_country = {
 				limit = {
@@ -1674,7 +1674,7 @@ flavor_pol.22 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1712,17 +1712,17 @@ flavor_pol.22 = {
 		add_country_modifier = { modifier = pol_may_constitution_modifier years = modifier_duration_years_normal mode = add_and_extend }
 		add_prestige = prestige_extreme_bonus
 		if = {
-			limit = { country_exists = c:RUS }
-			c:RUS = { add_opinion = { target = ROOT modifier = opinion_pol_constitution_threatens_neighbors } }
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = { add_opinion = { target = ROOT modifier = opinion_pol_constitution_threatens_neighbors } }
 		}
 		if = {
-			limit = { country_exists = c:PRU }
-			c:PRU = { add_opinion = { target = ROOT modifier = opinion_pol_constitution_threatens_neighbors } }
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = { add_opinion = { target = ROOT modifier = opinion_pol_constitution_threatens_neighbors } }
 		}
 		if = {
 			limit = {
-				NOT = { country_exists = c:RUS }
-				NOT = { country_exists = c:PRU }
+				NOT = { country_exists = c:DUMMY }
+				NOT = { country_exists = c:DUMMY }
 			}
 			ordered_neighbor_country = {
 				limit = {
@@ -1828,7 +1828,7 @@ flavor_pol.25 = { #The University of Krakow
 	historical_info = flavor_pol.25.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1884,7 +1884,7 @@ flavor_pol.26 = { #The City of [target_location.GetNameWithNoTooltip]
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1950,7 +1950,7 @@ flavor_pol.27 = { #Expanding the Quarter Army
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 1525
 		to = 476.9.4
 		monthly_chance = 5
@@ -2002,7 +2002,7 @@ flavor_pol.28 = { #Collegium Maius & the Growth of Thought
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2050,7 +2050,7 @@ flavor_pol.29 = { #The reforms of [target_character.GetNameWithNoTooltip]
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2134,7 +2134,7 @@ flavor_pol.30 = { #The Statutes of [target_character.GetNameWithNoTooltip] the G
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2476,7 +2476,7 @@ flavor_pol.35 = { #The Passing of [target_character2] / the Queen
 		10 = angry
 	}
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -2527,7 +2527,7 @@ flavor_pol.36 = { #Esterka
 		10 = angry
 	}
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2631,7 +2631,7 @@ flavor_pol.37 = { #The Shooting Societies of Poland
 		10 = regular
 	}
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2704,13 +2704,13 @@ flavor_pol.38 = {
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		in_union_with = c:POL
+		in_union_with = c:DUMMY
 		NOT = { tag = POL }
 		any_international_organizations_member_of = {
 			country_is_senior_partner = { country = root }
 		}
 		at_war = no
-		c:POL = {
+		c:DUMMY = {
 			NOR = {
 				has_estate_privilege = estate_privilege:reduced_responsibilities_for_the_nobles
 				has_estate_privilege = estate_privilege:reduced_taxation_for_the_nobles
@@ -2728,7 +2728,7 @@ flavor_pol.38 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		ruler ?= { save_scope_as = target_character }
-		c:POL ?= {
+		c:DUMMY ?= {
 			save_scope_as = target_country1
 			capital = { save_scope_as = target_location }
 		}
@@ -2738,7 +2738,7 @@ flavor_pol.38 = {
 	option = {	#Yes, promise them privileges
 		name = flavor_pol.38.a
 		historical_option = yes
-		c:POL = {
+		c:DUMMY = {
 			set_variable = granted_privileges_to_secure_throne
 			show_as_tooltip = {
 				grant_estate_privilege = estate_privilege:reduced_responsibilities_for_the_nobles
@@ -2830,7 +2830,7 @@ flavor_pol.40 = {
 	desc = flavor_pol.40.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2891,7 +2891,7 @@ flavor_pol.41 = {
 	desc = flavor_pol.41.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2957,7 +2957,7 @@ flavor_pol.42 = {
 	desc = flavor_pol.42.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3032,7 +3032,7 @@ flavor_pol.43 = {
 	outcome = neutral
 	historical_info = flavor_pol.43.historical_info
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3102,7 +3102,7 @@ flavor_pol.44 = {
 	outcome = neutral
 	historical_info = flavor_pol.44.historical_info
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3180,7 +3180,7 @@ flavor_pol.45 = {
 	historical_info = flavor_pol.45.historical_info
 
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3194,8 +3194,8 @@ flavor_pol.45 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:LIT
-		c:LIT = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			in_union_with = ROOT
 		}
 		has_ruler = yes
@@ -3210,7 +3210,7 @@ flavor_pol.45 = {
 			save_scope_as = pol_dynasty_founder
 		}
 		save_scope_as = pol_country
-		c:LIT = { save_scope_as = lit_country }
+		c:DUMMY = { save_scope_as = lit_country }
 	}
 
 	option = {
@@ -3243,7 +3243,7 @@ scripted_effect clear_marriage_flags_and_set_scope_flags = {
 		remove_character_modifier = pol_blocked_from_marriage_betrothal
 	}
 
-	c:LIT = {
+	c:DUMMY = {
 		var:POL_lit_candidate_global = {
 			save_scope_as = lithuanian_candidate
 			remove_character_modifier = pol_blocked_from_marriage_betrothal
@@ -3252,7 +3252,7 @@ scripted_effect clear_marriage_flags_and_set_scope_flags = {
 }
 
 scripted_effect pol_clear_scope_flags = {
-	c:LIT = {
+	c:DUMMY = {
 		remove_variable = POL_lit_candidate_global
 	}
 	remove_variable = POL_pol_candidate_global
@@ -3268,10 +3268,10 @@ flavor_pol.46 = {
 			triggered_desc = {
 				trigger = {
 					OR = {
-						c:POL.var:POL_pol_candidate_global = {
+						c:DUMMY.var:POL_pol_candidate_global = {
 							is_alive = no
 						}
-						c:LIT.var:POL_lit_candidate_global = {
+						c:DUMMY.var:POL_lit_candidate_global = {
 							is_alive = no
 						}
 					}
@@ -3280,7 +3280,7 @@ flavor_pol.46 = {
 			}
 			triggered_desc = {
 				trigger = {
-					c:POL.var:POL_pol_candidate_global = {
+					c:DUMMY.var:POL_pol_candidate_global = {
 						is_married = yes
 					}
 				}
@@ -3288,7 +3288,7 @@ flavor_pol.46 = {
 			}
 			triggered_desc = {
 				trigger = {
-					c:LIT.var:POL_lit_candidate_global = {
+					c:DUMMY.var:POL_lit_candidate_global = {
 						is_married = yes
 					}
 				}
@@ -3306,13 +3306,13 @@ flavor_pol.46 = {
 		tag = POL
 		has_variable = POL_betrothal_initiated
 		OR = {
-			c:POL.var:POL_pol_candidate_global = {
+			c:DUMMY.var:POL_pol_candidate_global = {
 				OR = {
 					is_alive = no
 					is_married = yes
 				}
 			}
-			c:LIT.var:POL_lit_candidate_global = {
+			c:DUMMY.var:POL_lit_candidate_global = {
 				OR = {
 					is_alive = no
 					is_married = yes
@@ -3332,26 +3332,26 @@ flavor_pol.46 = {
 		if = {
 			limit = {
 				OR = {
-					c:POL.var:POL_pol_candidate_global = {
+					c:DUMMY.var:POL_pol_candidate_global = {
 						is_alive = no
 					}
-					c:LIT.var:POL_lit_candidate_global = {
+					c:DUMMY.var:POL_lit_candidate_global = {
 						is_alive = no
 					}
 				}
 			}
 			if = {
 				limit = {
-					c:POL.var:POL_pol_candidate_global = {
+					c:DUMMY.var:POL_pol_candidate_global = {
 						is_alive = no
 					}
 				}
-				c:POL.var:POL_pol_candidate_global = {
+				c:DUMMY.var:POL_pol_candidate_global = {
 					save_scope_as = dead_character
 				}
 			}
 			else = {
-				c:LIT.var:POL_lit_candidate_global = {
+				c:DUMMY.var:POL_lit_candidate_global = {
 					save_scope_as = dead_character
 				}
 			}
@@ -3379,7 +3379,7 @@ flavor_pol.47 = {
 	historical_info = flavor_pol.47.historical_info
 
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3405,7 +3405,7 @@ flavor_pol.47 = {
 				}
 				custom_tooltip = {
 					text = POL_pol_candidate_ready_tt
-					c:POL.var:POL_pol_candidate_global ?= {
+					c:DUMMY.var:POL_pol_candidate_global ?= {
 						OR = {
 							is_alive = yes
 							is_married = no
@@ -3415,7 +3415,7 @@ flavor_pol.47 = {
 				}
 				custom_tooltip = {
 					text = POL_lit_candidate_ready_tt
-					c:LIT.var:POL_lit_candidate_global ?= {
+					c:DUMMY.var:POL_lit_candidate_global ?= {
 						OR = {
 							is_alive = yes
 							is_married = no
@@ -3454,10 +3454,10 @@ flavor_pol.47 = {
 		add_prestige = prestige_severe_penalty
 
 		remove_opinion = {
-			target = c:LIT
+			target = c:DUMMY
 			modifier = opinion_historical_friend_POL_LIT
 		}
-		c:LIT = {
+		c:DUMMY = {
 			remove_opinion = {
 				target = ROOT
 				modifier = opinion_historical_friend_POL_LIT
@@ -3481,7 +3481,7 @@ flavor_pol.48 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_salt.dds"
 
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4 #21.4.1368 - statutes of Żupy Krakowskie
 		to = 476.9.4
 		monthly_chance = 10
@@ -3539,7 +3539,7 @@ flavor_pol.49 = {
 	outcome = neutral
 	historical_info = flavor_pol.49.historical_info
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3624,7 +3624,7 @@ flavor_pol.50 = {
 	outcome = neutral
 	historical_info = flavor_pol.50.historical_info
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3729,7 +3729,7 @@ flavor_pol.51 = {
 	outcome = neutral
 	historical_info = flavor_pol.51.historical_info
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3788,7 +3788,7 @@ flavor_pol.52 = {
 	desc = flavor_pol.52.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3796,8 +3796,8 @@ flavor_pol.52 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:MOL
-		c:MOL = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_neighbor_of = ROOT
 			NOR = {
 				is_subject_or_below_of = ROOT
@@ -3818,10 +3818,10 @@ flavor_pol.52 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:MOL = {
+		c:DUMMY = {
 			save_scope_as = MOL_tag
 		}
-		c:MOL.ruler = {
+		c:DUMMY.ruler = {
 			save_scope_as = POL_disloyal_vassal
 		}
 	}
@@ -3829,7 +3829,7 @@ flavor_pol.52 = {
 	option = {
 		name = flavor_pol.52.a
 
-		add_casus_belli = { target = c:MOL type = casus_belli:cb_annex }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_annex }
 	}
 }
 
@@ -3842,7 +3842,7 @@ flavor_pol.54 = {
 	outcome = neutral
 	historical_info = flavor_pol.54.historical_info
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -3868,7 +3868,7 @@ flavor_pol.54 = {
 		location:wschowa = {
 			save_scope_as =target_location
 		}
-		c:BOH = { save_scope_as = POL_boh_scope }
+		c:DUMMY = { save_scope_as = POL_boh_scope }
 	}
 
 	option = {
@@ -3930,7 +3930,7 @@ flavor_pol.55 = {
 	desc = flavor_pol.55.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -3939,13 +3939,13 @@ flavor_pol.55 = {
 	trigger = {
 		current_date > 476.9.4
 		country_rank_level >= 3 #kingdom
-		country_exists = c:LIT
-		country_exists = c:TEU
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 		OR = {
 			has_ruler = yes
 			has_heir = yes
 		}
-		c:LIT = {
+		c:DUMMY = {
 			OR = {
 				has_ruler = yes
 				has_heir = yes
@@ -3955,28 +3955,28 @@ flavor_pol.55 = {
 			NOT = { num_locations >= 150 }
 		}
 		OR = {
-			c:LIT.ruler ?= {
+			c:DUMMY.ruler ?= {
 				OR = {
 					ROOT.ruler ?= {
 						is_married = no
-						pol_can_marry = { target = c:LIT.ruler }
+						pol_can_marry = { target = c:DUMMY.ruler }
 					}
 					ROOT.heir ?= {
 						is_married = no
-						pol_can_marry = { target = c:LIT.ruler }
+						pol_can_marry = { target = c:DUMMY.ruler }
 					}
 				}
 				is_married = no
 			}
-			c:LIT.heir ?= {
+			c:DUMMY.heir ?= {
 				OR = {
 					ROOT.ruler ?= {
 						is_married = no
-						pol_can_marry = { target = c:LIT.heir }
+						pol_can_marry = { target = c:DUMMY.heir }
 					}
 					ROOT.heir ?= {
 						is_married = no
-						pol_can_marry = { target = c:LIT.heir }
+						pol_can_marry = { target = c:DUMMY.heir }
 					}
 				}
 				is_married = no
@@ -3993,26 +3993,26 @@ flavor_pol.55 = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		if = {
 			limit = {
-				c:LIT.ruler ?= {
+				c:DUMMY.ruler ?= {
 					OR = {
 						ROOT.ruler ?= {
-							pol_can_marry = { target = c:LIT.ruler }
+							pol_can_marry = { target = c:DUMMY.ruler }
 							is_married = no
 						}
 						ROOT.heir ?= {
 							is_married = no
-							pol_can_marry = { target = c:LIT.ruler }
+							pol_can_marry = { target = c:DUMMY.ruler }
 						}
 					}
 					is_married = no
 				}
 			}
-			c:LIT.ruler = {
+			c:DUMMY.ruler = {
 				save_scope_as = POL_proposed_lithuanian_candidate
 			}
 		}
 		else = {
-			c:LIT.heir = {
+			c:DUMMY.heir = {
 				save_scope_as = POL_proposed_lithuanian_candidate
 			}
 		}
@@ -4033,21 +4033,21 @@ flavor_pol.55 = {
 			}
 		}
 
-		c:LIT = {
+		c:DUMMY = {
 			save_scope_as = POL_partner_country
 			set_variable = {
 				name = POL_lit_candidate_global
 				value = scope:POL_proposed_lithuanian_candidate
 			}
 		}
-		c:POL = {
+		c:DUMMY = {
 			set_variable = {
 				name = POL_pol_candidate_global
 				value = scope:POL_proposed_polish_candidate
 			}
 		}
 
-		c:TEU = { save_scope_as = POL_common_enemy }
+		c:DUMMY = { save_scope_as = POL_common_enemy }
 	}
 
 	fire_only_once = yes
@@ -4066,7 +4066,7 @@ flavor_pol.55 = {
 			}
 			custom_tooltip = POL_accept_betrothal
 
-			c:POL = {
+			c:DUMMY = {
 				set_variable = POL_betrothal_initiated
 			}
 			scope:POL_proposed_polish_candidate = {
@@ -4099,10 +4099,10 @@ flavor_pol.55 = {
 		add_prestige = prestige_severe_bonus
 
 		remove_opinion = {
-			target = c:LIT
+			target = c:DUMMY
 			modifier = opinion_historical_friend_POL_LIT
 		}
-		c:LIT = {
+		c:DUMMY = {
 			remove_opinion = {
 				target = ROOT
 				modifier = opinion_historical_friend_POL_LIT
@@ -4110,7 +4110,7 @@ flavor_pol.55 = {
 		}
 
 		remove_variable = POL_pol_candidate_global
-		c:LIT = {
+		c:DUMMY = {
 			remove_variable = POL_lit_candidate_global
 		}
 	}
@@ -4128,15 +4128,15 @@ flavor_pol.56 = {
 	trigger = {
 		current_date > 476.9.4
 		tag = POL
-		country_exists = c:TUR
-		c:TUR = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_neighbor_of = ROOT
 			OR = {
 				country_rank_level >=4 #Empire
 				owns = location:constantinople
 			}
 		}
-		NOT = { has_casus_belli_on = c:TUR }
+		NOT = { has_casus_belli_on = c:DUMMY }
 		religion = religion:catholic
 	}
 
@@ -4147,17 +4147,17 @@ flavor_pol.56 = {
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
-		c:TUR = {
+		c:DUMMY = {
 			save_scope_as = POL_TUR_tag
 		}
 		random_owned_location = {
 			limit = {
 				any_neighbor_location = {
-					owner ?= c:TUR
+					owner ?= c:DUMMY
 				}
 			}
 			random_neighbor_location = {
-				limit = { owner ?= c:TUR }
+				limit = { owner ?= c:DUMMY }
 				save_scope_as = target_province
 			}
 		}
@@ -4168,7 +4168,7 @@ flavor_pol.56 = {
 
 		historical_option = yes
 
-		add_casus_belli =  { type = casus_belli:cb_conquer_province target = c:TUR province = scope:target_province.province }
+		add_casus_belli =  { type = casus_belli:cb_conquer_province target = c:DUMMY province = scope:target_province.province }
 	}
 }
 
@@ -4183,7 +4183,7 @@ flavor_pol.57 = {
 	historical_info = flavor_pol.57.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4258,7 +4258,7 @@ flavor_pol.58 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4346,7 +4346,7 @@ flavor_pol.1000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -4484,7 +4484,7 @@ flavor_pol.1100 = {#https://en.wikipedia.org/wiki/Jan_Zamoyski
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4540,7 +4540,7 @@ flavor_pol.1101 = {#https://en.wikipedia.org/wiki/Zamoyski_Academy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4618,7 +4618,7 @@ flavor_pol.1102 = {#https://en.wikipedia.org/wiki/Zamoyski_Academy
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4867,7 +4867,7 @@ flavor_pol.1300 = {#https://en.wikipedia.org/wiki/Jan_Kochanowski
 	historical_info = flavor_pol.1300.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4 #when Kochanowski returned to Poland
 		to = 476.9.4
 		monthly_chance = 10
@@ -4944,7 +4944,7 @@ flavor_pol.1301 = {#https://en.wikipedia.org/wiki/Jan_Kochanowski
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4 #when Kochanowski returned to Poland
 		to = 476.9.4
 		monthly_chance = 10
@@ -4997,7 +4997,7 @@ flavor_pol.1400 = {#https://en.wikipedia.org/wiki/Jan_D%C5%82ugosz
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5062,7 +5062,7 @@ flavor_pol.1401 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4 #when Kochanowski returned to Poland
 		to = 476.9.4
 		monthly_chance = 10
@@ -5115,7 +5115,7 @@ flavor_pol.1500 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5181,7 +5181,7 @@ flavor_pol.1501 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5284,7 +5284,7 @@ flavor_pol.1600 = {
 	desc = flavor_pol.1600.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = HUN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5294,17 +5294,17 @@ flavor_pol.1600 = {
 
     trigger = {
     	current_date > 476.9.4
-        country_exists = c:POL
+        country_exists = c:DUMMY
         location:lubica = {
             owner = ROOT
             any_neighbor_location = {
-                owner ?= c:POL
+                owner ?= c:DUMMY
             }
         }
 		has_ruler = yes
-		c:POL = { has_ruler = yes }
+		c:DUMMY = { has_ruler = yes }
         monthly_balance < 0
-        c:POL = {
+        c:DUMMY = {
             gold >= {
 				value = root.monthly_income_trade_and_tax
 				multiply = 24
@@ -5336,7 +5336,7 @@ flavor_pol.1600 = {
 		location:lubica = {
 			save_scope_as = pol_spisz_prov
 		}
-		c:POL = { save_scope_as = pol_the_loan_provider }
+		c:DUMMY = { save_scope_as = pol_the_loan_provider }
 		save_scope_as = pol_requesting_nation
 		ruler = { save_scope_as = pol_requesting_nation_ruler }
 	}
@@ -5347,9 +5347,9 @@ flavor_pol.1600 = {
 
         show_as_tooltip = {
             location:lubica = {
-                change_location_owner = c:POL
+                change_location_owner = c:DUMMY
             }
-            c:POL = {
+            c:DUMMY = {
                 add_prestige = prestige_severe_bonus
 				give_loan = {
 					target = scope:pol_requesting_nation
@@ -5360,7 +5360,7 @@ flavor_pol.1600 = {
             }
         }
 
-		c:POL = {
+		c:DUMMY = {
             trigger_event_non_silently = {
                 id = flavor_pol.1601
                 months = 1
@@ -5383,7 +5383,7 @@ flavor_pol.1601 = {
 	trigger = {
 		current_date > 476.9.4
 		location:lubica = {
-			owner = c:HUN
+			owner = c:DUMMY
 		}
 		has_ruler = yes
 	}
@@ -5432,15 +5432,15 @@ flavor_pol.1602 = {
 
 	trigger = {
 		current_date > 476.9.4
-		NOT = { is_at_war_with = c:HUN }
-		country_exists = c:HUN
+		NOT = { is_at_war_with = c:DUMMY }
+		country_exists = c:DUMMY
 		owns = location:lubica
 		NOT = {
 			any_lent_loan = {
 				has_loc_key = pledge_of_spisz
 			}
 		}
-		c:HUN = {
+		c:DUMMY = {
 			custom_tooltip = {
 				text = variable_has_taken_pledge_of_spisz_tt
 				has_variable = has_taken_pledge_of_spisz
@@ -5449,7 +5449,7 @@ flavor_pol.1602 = {
 	}
 
 	dynamic_historical_event = {
-		tag = POL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -5466,7 +5466,7 @@ flavor_pol.1602 = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		location:lubica = { save_scope_as = loan_pledge }
 		save_scope_as = loan_giver
-		c:HUN = { save_scope_as = loan_repayer }
+		c:DUMMY = { save_scope_as = loan_repayer }
 	}
 
     option = {
@@ -5503,7 +5503,7 @@ flavor_pol.1602 = {
 		scope:loan_repayer = {
 			trigger_event_silently = flavor_pol.1603
 		}
-		c:HUN = { remove_variable = has_taken_pledge_of_spisz }
+		c:DUMMY = { remove_variable = has_taken_pledge_of_spisz }
 	}
 }
 
@@ -5552,7 +5552,7 @@ flavor_pol.1603 = {
 		trigger = {
 			NOT = { owns = location:lubica }
 		}
-		c:HUN = {
+		c:DUMMY = {
 			add_casus_belli = { target = scope:loan_giver type = casus_belli:cb_insulted_us }
 		}
 	}

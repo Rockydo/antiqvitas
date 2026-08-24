@@ -1,0 +1,15 @@
+pdxmesh = {
+	name = "unit_weapon_legionary_gladius_mesh"
+	file = "unit_weapon_legionary_gladius.mesh"
+
+	meshsettings = {
+		name = "unit_weapon_legionary_gladiusShape"
+		index = 0
+		texture_diffuse = "unit_weapon_legionary_gladius_diffuse.dds"
+		texture_normal = "unit_weapon_legionary_gladius_normal.dds"
+		#texture_specular = "unit_weapon_legionary_gladius_properties.dds"
+		texture = { index = 3 srgb = no file = "unit_weapon_legionary_gladius_mask.dds" }
+		shader = "unit_material_repaint"
+		shader_file = "gfx/FX/units.shader"
+	}
+}

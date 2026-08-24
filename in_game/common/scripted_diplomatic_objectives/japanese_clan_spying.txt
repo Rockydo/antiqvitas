@@ -137,8 +137,8 @@ jap_clan_improve_opinion_with_emperor = {
     actor_trigger = {
 		always = no # ANTIQVITAS mounted-system quarantine
         is_member_of_international_organization = international_organization:japanese_shogunate
-        country_exists = c:JAP
-        c:JAP = {
+        country_exists = c:DUMMY
+        c:DUMMY = {
             opinion = {
                 target = root
                 value < 100
@@ -161,8 +161,8 @@ jap_clan_improve_opinion_with_emperor = {
     }
 
     cancel_trigger = {
-        country_exists = c:JAP
-        c:JAP = {
+        country_exists = c:DUMMY
+        c:DUMMY = {
             opinion = {
                 target = scope:actor
                 value > 175

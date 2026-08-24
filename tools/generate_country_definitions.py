@@ -112,11 +112,12 @@ TAG_PROFILES: dict[str, Profile] = {
     "CHI": Profile("arawak_culture", "shamanism", (47, 112, 109), "blue", "white"),
 }
 
-# The country database adds rank-derived words such as "Empire" itself.  The
-# historical roster can retain precise scholarly names while its UI label avoids
-# the engine's duplicate-title warning.
+# Country cards, selection tooltips, and map labels must name a polity
+# consistently.  EU5 reserves rank words such as "Empire" for its generated
+# presentation; use the canonical Latin state style so the engine never emits
+# a duplicate-rank diagnostic for the empire-rank Roman tag.
 DISPLAY_NAMES = {
-    "ROM": "Roman Commonwealth",
+    "ROM": "Roman Imperium",
     "PAR": "Parthia",
 }
 
@@ -374,7 +375,6 @@ def country_definitions(rows: list[dict[str, str]], tags: dict[str, str]) -> str
                 "",
                 f"\tculture_definition = {profile.culture}",
                 f"\treligion_definition = {profile.religion}",
-                "\tis_historic = yes",
                 "}",
             )
         )

@@ -60,16 +60,8 @@ treaty_of_tordesillas = {
 		#Create the cost multipliers for the "Move the Line" action
 		#Keeps track of the amount of times that they have used the action + 1
 		situation:treaty_of_tordesillas.var:var_west_country = {
-			set_variable = {
-				name = var_tordesillas_moved_the_line
-				value = 1
-			}
 		}
 		situation:treaty_of_tordesillas.var:var_east_country = {
-			set_variable = {
-				name = var_tordesillas_moved_the_line
-				value = 1
-			}
 		}
 		#Fallback treaty location
 		if = {

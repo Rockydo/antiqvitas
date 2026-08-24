@@ -7,21 +7,21 @@ hundred_years_war = {
 
 	can_start = {
 		always = no # ANTIQVITAS mounted-system quarantine
-		country_exists = c:FRA
-		country_exists = c:ENG
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 		current_date > 476.9.4
 
-		c:FRA = {
+		c:DUMMY = {
 			has_ruler = yes
 		}
-		c:ENG = {
+		c:DUMMY = {
 			has_ruler = yes
 		}
 
 		custom_tooltip = {
 			text = matter_of_robert_is_settled_tt
 			OR = {
-				c:ENG = {
+				c:DUMMY = {
 					OR = {
 						has_variable = robert_the_fugitive_flag
 						has_variable = france_no_robert_interest
@@ -53,15 +53,15 @@ hundred_years_war = {
 
 			trigger_event_non_silently = hundred_years_war.1
 		}
-		c:ENG = {
+		c:DUMMY = {
 			trigger_event_non_silently = hundred_years_war.2
 			add_country_modifier = { modifier = hundred_years_war_impact years = -1 mode = add }
 			add_opinion_mutual_effect = {
 				modifier = opinion_hyw_enemies
-				target = c:FRA
+				target = c:DUMMY
 			}
 		}
-		c:FRA = {
+		c:DUMMY = {
 			trigger_event_non_silently = hundred_years_war.3
 			add_country_modifier = { modifier = hundred_years_war_impact years = -1 mode = add }
 		}
@@ -69,8 +69,8 @@ hundred_years_war = {
 
 	on_monthly = {
 		random_list = {
-			1 = { c:ENG = { trigger_event_non_silently = hundred_years_war.211 } }
-			1 = { c:FRA = { trigger_event_non_silently = hundred_years_war.211 } }
+			1 = { c:DUMMY = { trigger_event_non_silently = hundred_years_war.211 } }
+			1 = { c:DUMMY = { trigger_event_non_silently = hundred_years_war.211 } }
 			99 = {}
 		}
 		custom_tooltip = {
@@ -80,66 +80,66 @@ hundred_years_war = {
 				# give cb to england
 				20 = {
 					trigger = {
-						c:ENG ?= {
-							NOT = {	has_casus_belli_on = c:FRA	}
-							NOT = {	has_truce_with = c:FRA	}
-							NOT = {	is_at_war_with = c:FRA	}
+						c:DUMMY ?= {
+							NOT = {	has_casus_belli_on = c:DUMMY	}
+							NOT = {	has_truce_with = c:DUMMY	}
+							NOT = {	is_at_war_with = c:DUMMY	}
 							has_ruler = yes
 						}
 					}
-					c:ENG = {	trigger_event_non_silently = hundred_years_war.10 }
+					c:DUMMY = {	trigger_event_non_silently = hundred_years_war.10 }
 				}
 
 				# give cb to france
 				20 = {
 					trigger = {
-						c:FRA ?= {
-							NOT = {	has_casus_belli_on = c:ENG	}
-							NOT = {	has_truce_with = c:ENG	}
-							NOT = {	is_at_war_with = c:ENG	}
+						c:DUMMY ?= {
+							NOT = {	has_casus_belli_on = c:DUMMY	}
+							NOT = {	has_truce_with = c:DUMMY	}
+							NOT = {	is_at_war_with = c:DUMMY	}
 							has_ruler = yes
 						}
 					}
-					c:FRA = {	trigger_event_non_silently = hundred_years_war.11 }
+					c:DUMMY = {	trigger_event_non_silently = hundred_years_war.11 }
 				}
 
 
 				# attempt a war for england
 				20 = {
 					trigger = {
-						c:ENG ?= {
-							has_casus_belli_on = c:FRA
-							NOT = {	has_truce_with = c:FRA	}
-							NOT = {	is_at_war_with = c:FRA	}
+						c:DUMMY ?= {
+							has_casus_belli_on = c:DUMMY
+							NOT = {	has_truce_with = c:DUMMY	}
+							NOT = {	is_at_war_with = c:DUMMY	}
 							at_war = no
 							manpower_percentage > 0.75
 							war_exhaustion_percentage < 0.1
 							relative_strength = {
-								target = c:FRA
+								target = c:DUMMY
 								value > 0.45
 							}
 						}
 					}
-					c:ENG = { trigger_event_non_silently = hundred_years_war.20 }
+					c:DUMMY = { trigger_event_non_silently = hundred_years_war.20 }
 				}
 
 				# attempt a war for france
 				20 = {
 					trigger = {
-						c:FRA ?= {
-							has_casus_belli_on = c:ENG
-							NOT = {	has_truce_with = c:ENG	}
-							NOT = {	is_at_war_with = c:ENG	}
+						c:DUMMY ?= {
+							has_casus_belli_on = c:DUMMY
+							NOT = {	has_truce_with = c:DUMMY	}
+							NOT = {	is_at_war_with = c:DUMMY	}
 							at_war = no
 							manpower_percentage > 0.75
 							war_exhaustion_percentage < 0.1
 							relative_strength = {
-								target = c:ENG
+								target = c:DUMMY
 								value > 0.45
 							}
 						}
 					}
-					c:FRA = { trigger_event_non_silently = hundred_years_war.21 }
+					c:DUMMY = { trigger_event_non_silently = hundred_years_war.21 }
 				}
 				200 = {}
 
@@ -149,21 +149,21 @@ hundred_years_war = {
 
 
 	on_ended = {
-		c:ENG = {
+		c:DUMMY = {
 			remove_country_modifier = hundred_years_war_impact
 			remove_opinion_mutual_effect = {
 				modifier = opinion_hyw_enemies
-				target = c:FRA
+				target = c:DUMMY
 			}
 			remove_casus_belli = {
-				target = c:FRA
+				target = c:DUMMY
 				type = casus_belli:cb_hundred_years_war
 			}
 		}
-		c:FRA = {
+		c:DUMMY = {
 			remove_country_modifier = hundred_years_war_impact
 			remove_casus_belli = {
-				target = c:ENG
+				target = c:DUMMY
 				type = casus_belli:cb_hundred_years_war_fra
 			}
 		}
@@ -172,22 +172,22 @@ hundred_years_war = {
 		if = {
 			limit = {
 				OR = {
-					c:FRA = { is_subject_or_below_of = c:ENG }
-					NOT = { country_exists = c:FRA }
-					c:ENG = {
-						in_union_with = c:FRA
+					c:DUMMY = { is_subject_or_below_of = c:DUMMY }
+					NOT = { country_exists = c:DUMMY }
+					c:DUMMY = {
+						in_union_with = c:DUMMY
 						union ?= {
 							international_organization_has_policy = policy:union_establish_seniority_policy
 							country_has_special_status = {
 								type = special_status:senior_partner
-								country = c:ENG
+								country = c:DUMMY
 							}
 						}
 					}
 					region:france_region = {
 						any_ownable_location_in_region = {
 							owner = {
-								top_overlord_or_this ?= c:ENG
+								top_overlord_or_this ?= c:DUMMY
 							}
 							count > 130
 						}
@@ -204,12 +204,12 @@ hundred_years_war = {
 		else_if = {
 			limit = {
 				OR = {
-					NOT = { country_exists = c:ENG }
+					NOT = { country_exists = c:DUMMY }
 					AND = {
 						region:france_region = {
 							any_ownable_location_in_region = {
 								owner = {
-									top_overlord_or_this ?= c:ENG
+									top_overlord_or_this ?= c:DUMMY
 								}
 								count < 4
 							}
@@ -217,7 +217,7 @@ hundred_years_war = {
 						region:france_region = {
 							any_ownable_location_in_region = {
 								owner = {
-									this = c:FRA
+									this = c:DUMMY
 								}
 								count > 200
 							}
@@ -232,7 +232,7 @@ hundred_years_war = {
 				}
 				trigger_event_non_silently = hundred_years_war.101
 			}
-			c:FRA = { trigger_event_non_silently = flavor_fra.26 }
+			c:DUMMY = { trigger_event_non_silently = flavor_fra.26 }
 		}
 		else = {
 			every_country = {
@@ -245,18 +245,18 @@ hundred_years_war = {
 
 	tooltip = {
 		if = {
-			limit = { owner ?= c:FRA }
+			limit = { owner ?= c:DUMMY }
 			custom_tooltip = this_is_france_tt
 		}
 		else_if = {
-			limit = { owner ?= c:ENG }
+			limit = { owner ?= c:DUMMY }
 			custom_tooltip = this_is_england_tt
 		}
 		else_if = {
 			limit = {
 				owner ?= {
 					AND = {
-						is_subject_or_below_of = c:FRA
+						is_subject_or_below_of = c:DUMMY
 						subject_loyalty >= 50
 					}
 				}
@@ -267,7 +267,7 @@ hundred_years_war = {
 			limit = {
 				owner ?= {
 					AND = {
-						is_subject_or_below_of = c:FRA
+						is_subject_or_below_of = c:DUMMY
 						is_disloyal_subject = yes
 					}
 				}
@@ -278,7 +278,7 @@ hundred_years_war = {
 			limit = {
 				owner ?= {
 					AND = {
-						is_subject_or_below_of = c:ENG
+						is_subject_or_below_of = c:DUMMY
 						subject_loyalty >= 50
 					}
 				}
@@ -289,7 +289,7 @@ hundred_years_war = {
 			limit = {
 				owner ?= {
 					AND = {
-						is_subject_or_below_of = c:ENG
+						is_subject_or_below_of = c:DUMMY
 						is_disloyal_subject = yes
 					}
 				}
@@ -299,8 +299,8 @@ hundred_years_war = {
 		else_if = {
 			limit = {
 				owner ?= {
-					is_allied_with = { target =  c:FRA }
-					NOT = { is_allied_with = { target =  c:ENG }}
+					is_allied_with = { target =  c:DUMMY }
+					NOT = { is_allied_with = { target =  c:DUMMY }}
 				}
 			}
 			custom_tooltip = this_is_ally_of_france_tt
@@ -308,8 +308,8 @@ hundred_years_war = {
 		else_if = {
 			limit = {
 				owner ?= {
-					is_allied_with = { target =  c:ENG }
-					NOT = { is_allied_with = { target =  c:FRA }}
+					is_allied_with = { target =  c:DUMMY }
+					NOT = { is_allied_with = { target =  c:DUMMY }}
 				}
 			}
 			custom_tooltip = this_is_ally_of_england_tt
@@ -317,8 +317,8 @@ hundred_years_war = {
 		else_if = {
 			limit = {
 				owner ?= {
-					is_allied_with = { target = c:ENG }
-					is_allied_with = { target = c:FRA }
+					is_allied_with = { target = c:DUMMY }
+					is_allied_with = { target = c:DUMMY }
 				}
 			}
 			custom_tooltip = this_is_ally_of_both_tt
@@ -328,14 +328,14 @@ hundred_years_war = {
 	map_color = {
 		if = {
 			limit = {
-				owner ?= c:FRA
+				owner ?= c:DUMMY
 			}
 			value = map_FRA
 		}
 		else_if = {
 			limit = {
 				owner ?= {
-					is_subject_or_below_of = c:FRA
+					is_subject_or_below_of = c:DUMMY
 					subject_loyalty > 50
 				}
 			}
@@ -344,7 +344,7 @@ hundred_years_war = {
 		else_if = {
 			limit = {
 				owner ?= {
-					is_subject_or_below_of = c:ENG
+					is_subject_or_below_of = c:DUMMY
 					subject_loyalty > 50
 				}
 			}
@@ -352,20 +352,20 @@ hundred_years_war = {
 		}
 		else_if = {
 			limit = {
-				owner ?= c:ENG
+				owner ?= c:DUMMY
 			}
 			value = map_ENG
 		}
 		else_if = {
 			limit = {
-				owner ?= { is_allied_with = { target =  c:FRA }}
+				owner ?= { is_allied_with = { target =  c:DUMMY }}
 			}
 			value = root.owner.country_color
 		}
 		else_if = {
 			limit = {
 				owner ?= {
-					is_allied_with = { target =  c:ENG }
+					is_allied_with = { target =  c:DUMMY }
 				}
 			}
 			value = root.owner.country_color
@@ -387,43 +387,43 @@ hundred_years_war = {
 	secondary_map_color = {
 		if = {
 			limit = {
-				owner ?= c:FRA
+				owner ?= c:DUMMY
 			}
 			value = map_FRA
 		}
 		else_if = {
 			limit = {
-				owner ?= c:ENG
+				owner ?= c:DUMMY
 			}
 			value = map_ENG
 		}
 		else_if = {
 			limit = {
 				owner ?= {
-					is_allied_with = { target =  c:FRA }
-					NOT = { is_allied_with = { target =  c:ENG }}
+					is_allied_with = { target =  c:DUMMY }
+					NOT = { is_allied_with = { target =  c:DUMMY }}
 				}
 			}
 			value = map_FRA
 		}
 		else_if = {
 			limit = {
-				owner ?= { is_subject_or_below_of = c:FRA }
+				owner ?= { is_subject_or_below_of = c:DUMMY }
 			}
 			value = map_FRA
 		}
 		else_if = {
 			limit = {
-				owner ?= { is_subject_or_below_of = c:ENG }
+				owner ?= { is_subject_or_below_of = c:DUMMY }
 			}
 			value = map_ENG
 		}
 		else_if = {
 			limit = {
 				owner ?= {
-					is_allied_with = { target =  c:ENG }
+					is_allied_with = { target =  c:DUMMY }
 					NOT = {
-						is_allied_with = { target =  c:FRA }
+						is_allied_with = { target =  c:DUMMY }
 					}
 				}
 			}

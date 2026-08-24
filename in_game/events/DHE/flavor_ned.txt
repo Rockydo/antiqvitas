@@ -12,7 +12,7 @@ flavor_ned.1 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -68,7 +68,7 @@ flavor_ned.2 = {
 	historical_info = flavor_ned.2.historical_info
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -225,7 +225,7 @@ flavor_ned.3 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -312,7 +312,7 @@ flavor_ned.4 = {
 	}
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -384,7 +384,7 @@ flavor_ned.5 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -473,7 +473,7 @@ flavor_ned.6 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -550,7 +550,7 @@ flavor_ned.7 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -621,7 +621,7 @@ flavor_ned.8 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -672,7 +672,7 @@ flavor_ned.9 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -738,7 +738,7 @@ flavor_ned.10 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -863,7 +863,7 @@ flavor_ned.11 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -957,7 +957,7 @@ flavor_ned.12 = {
 	historical_info = flavor_ned.12.historical_info
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1040,7 +1040,7 @@ flavor_ned.13 = {
 	}
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1108,7 +1108,7 @@ flavor_ned.14 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1185,7 +1185,7 @@ flavor_ned.15 = {
 	historical_info = flavor_ned.15.historical_info
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1245,7 +1245,7 @@ flavor_ned.16 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1295,7 +1295,7 @@ flavor_ned.17 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1453,7 +1453,7 @@ flavor_ned.18 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1505,7 +1505,7 @@ flavor_ned.19 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1584,7 +1584,7 @@ flavor_ned.20 = {
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_pepper.dds"
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1648,7 +1648,7 @@ flavor_ned.21 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1666,8 +1666,8 @@ flavor_ned.21 = {
 			limit = {
 				this != ROOT
 				trigger_if = {
-					limit = { country_exists = c:FRA }
-					this != c:FRA
+					limit = { country_exists = c:DUMMY }
+					this != c:DUMMY
 				}
 			}
 			order_by = prestige
@@ -1734,7 +1734,7 @@ flavor_ned.22 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1821,7 +1821,7 @@ flavor_ned.23 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1911,7 +1911,7 @@ flavor_ned.24 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1983,7 +1983,7 @@ flavor_ned.25 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2043,7 +2043,7 @@ flavor_ned.26 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2148,7 +2148,7 @@ flavor_ned.27 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2227,7 +2227,7 @@ flavor_ned.28 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2321,7 +2321,7 @@ flavor_ned.29 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2389,7 +2389,7 @@ flavor_ned.30 = {
 	historical_info = flavor_ned.30.historical_info
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2540,7 +2540,7 @@ flavor_ned.31 = {
 	}
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2597,7 +2597,7 @@ flavor_ned.32 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2657,7 +2657,7 @@ flavor_ned.33 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2785,7 +2785,7 @@ flavor_ned.1000 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = GBR
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2798,8 +2798,8 @@ flavor_ned.1000 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:NED
-		c:NED = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_subject = no
 			has_regent = no
 		}
@@ -2812,7 +2812,7 @@ flavor_ned.1000 = {
 		ruler_or_regent ?= {
 			save_scope_as = target_character
 		}
-		c:NED = {
+		c:DUMMY = {
 			ruler_or_regent ?= {
 				save_scope_as = target_character2
 			}
@@ -2825,7 +2825,7 @@ flavor_ned.1000 = {
 		custom_tooltip = {
 			text = NED_UNLESS_IF_WE_SECURE_LEGITIMACY_ENGLISH_NOBLES_WILL_INVITE_DUTCH_RULER
 			set_variable = ned_glorious_revolution_warning
-			c:NED = { trigger_event_silently = { id = flavor_ned.1001 years = 5 } }
+			c:DUMMY = { trigger_event_silently = { id = flavor_ned.1001 years = 5 } }
 		}
 	}
 }
@@ -2846,16 +2846,16 @@ flavor_ned.1001 = {
 	trigger = {
 		current_date > 476.9.4
 		trigger_if = {
-			limit = { country_exists = c:GBR }
-			c:GBR = {
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = {
 				is_subject = no
 				legitimacy <= 80
 				has_variable = ned_glorious_revolution_warning
 			}
 		}
 		trigger_else = {
-			country_exists = c:ENG
-			c:ENG = {
+			country_exists = c:DUMMY
+			c:DUMMY = {
 				is_subject = no
 				legitimacy <= 80
 				has_variable = ned_glorious_revolution_warning
@@ -2869,8 +2869,8 @@ flavor_ned.1001 = {
 			save_scope_as = target_character
 		}
 		if = {
-			limit = { country_exists = c:GBR }
-			c:GBR = {
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = {
 				save_scope_as = target_country
 				ruler_or_regent ?= {
 					save_scope_as = target_character2
@@ -2878,7 +2878,7 @@ flavor_ned.1001 = {
 			}
 		}
 		else = {
-			c:ENG = {
+			c:DUMMY = {
 				save_scope_as = target_country
 				ruler_or_regent ?= {
 					save_scope_as = target_character2
@@ -2928,7 +2928,7 @@ flavor_ned.1002 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NED
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 35
@@ -2946,8 +2946,8 @@ flavor_ned.1002 = {
 			has_variable = glorious_revolution_immortal_seven_flag
 		}
 		OR = {
-			in_union_with = c:ENG
-			in_union_with = c:GBR
+			in_union_with = c:DUMMY
+			in_union_with = c:DUMMY
 		}
 	}
 
@@ -2959,18 +2959,18 @@ flavor_ned.1002 = {
 
 		if = {
 			limit = {
-				in_union_with = c:GBR
+				in_union_with = c:DUMMY
 			}
 
-			c:GBR = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}
 		else_if = {
 			limit = {
-				in_union_with = c:ENG
+				in_union_with = c:DUMMY
 			}
-			c:ENG = {
+			c:DUMMY = {
 				save_scope_as = target_country
 			}
 		}

@@ -117,7 +117,7 @@ western_schism.4 = {
 			}
 		}
 
-		c:BOH = {
+		c:DUMMY = {
 			lots_of_religion = {
 				religion = religion:hussite
 				other_religion = religion:catholic
@@ -318,8 +318,8 @@ western_schism.6 = { #Clash between
 				"active_resolution(resolution:western_schism_resolution)" = {
 					save_temporary_scope_as = resolution
 					if = {
-						limit = { country_exists = c:PAP }
-						c:PAP = {
+						limit = { country_exists = c:DUMMY }
+						c:DUMMY = {
 							save_temporary_scope_as = voter
 							scope:resolution = {
 								"vote_in_active_resolution(scope:voter)" ?= {
@@ -594,7 +594,7 @@ western_schism.10 = { #People demand support for PAP
 	option = {
 		name = western_schism.10.b
 		add_opinion_mutual_effect = {
-			target = c:PAP
+			target = c:DUMMY
 			modifier = western_schism_rethinking_our_approach
 		}
 		custom_tooltip = {
@@ -651,7 +651,7 @@ western_schism.11 = { #Papal Voter praises our church
 						has_voted_for = {
 							voter = scope:voter
 							resolution = resolution:western_schism_resolution
-							vote = c:PAP
+							vote = c:DUMMY
 						}
 					}
 				}
@@ -676,7 +676,7 @@ western_schism.11 = { #Papal Voter praises our church
 					has_voted_for = {
 						voter = scope:voter
 						resolution = resolution:western_schism_resolution
-						vote = c:PAP
+						vote = c:DUMMY
 					}
 				}
 			}
@@ -1127,57 +1127,7 @@ western_schism.15 = { #A Traveling Preacher
 }
 
 
-western_schism.1001 = { #triggered by schism_demand_support_from_one_pope action positive
-	type = country_event
-	category = situation_event
-	title = western_schism.1000.title
-	desc = western_schism.1001.desc
-	outcome = neutral
 
-	image = "gfx/interface/illustrations/situation/western_schism.dds"
-
-
-	immediate = {
-		save_cardinal_scope = yes
-	}
-
-	option = {
-		name = western_schism.1001.a
-
-		change_gold_effect = { scale = 1 }
-		add_opinion = {
-			target = scope:target
-			modifier = schism_rewarded_loyalty
-		}
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
-
-western_schism.1002 = { #triggered by schism_demand_support_from_one_pope action negative
-	type = country_event
-	category = situation_event
-	title = western_schism.1000.title
-	desc = western_schism.1002.desc
-	outcome = neutral
-
-	image = "gfx/interface/illustrations/situation/western_schism.dds"
-
-
-	option = {
-		name = western_schism.1002.a
-
-		add_opinion = {
-			target = scope:target
-			modifier = schism_scorned_loyalty
-		}
-		add_religious_influence = religious_influence_weak_bonus
-	}
-	trigger = {
-		current_date > 476.9.4
-	}
-}
 
 western_schism.1100 = { #Insult our Rival
 	type = country_event
@@ -1201,7 +1151,7 @@ western_schism.1100 = { #Insult our Rival
 							has_voted_for = {
 								voter = scope:voter
 								resolution = resolution:western_schism_resolution
-								vote = c:PAP
+								vote = c:DUMMY
 							}
 							has_voted_for = {
 								voter = scope:voter
@@ -1228,7 +1178,7 @@ western_schism.1100 = { #Insult our Rival
 						has_voted_for = {
 							voter = scope:voter
 							resolution = resolution:western_schism_resolution
-							vote = c:PAP
+							vote = c:DUMMY
 						}
 						has_voted_for = {
 							voter = scope:voter
@@ -1572,7 +1522,7 @@ western_schism.1400 = { #Second Council Event - Council of Pisa
 					has_variable = western_schism_pope_score
 					var:western_schism_pope_score >= 2
 				}
-				c:PAP = { save_scope_as = winner_country }
+				c:DUMMY = { save_scope_as = winner_country }
 			}
 			else_if = {
 				limit = {
@@ -1646,7 +1596,7 @@ western_schism.1500 = { #Third Council Event - Council of Constance
 					has_variable = western_schism_pope_score
 					var:western_schism_pope_score >= 2
 				}
-				c:PAP = { save_scope_as = winner_country }
+				c:DUMMY = { save_scope_as = winner_country }
 			}
 			else_if = {
 				limit = {
@@ -1685,7 +1635,7 @@ western_schism.2000 = { #Schism End Everyone
 	immediate = {
 		save_cardinal_scope = yes
 
-		c:PAP = {
+		c:DUMMY = {
 			ruler_or_regent = {
 				save_scope_as = target_character
 			}
@@ -1739,7 +1689,7 @@ western_schism.2100 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					this = c:PAP
+					this = c:DUMMY
 				}
 				desc = western_schism.2100.desc.a
 			}
@@ -1756,7 +1706,7 @@ western_schism.2100 = {
 	option = {
 		name = western_schism.2100.a
 
-		c:PAP = {
+		c:DUMMY = {
 			ruler_or_regent = {
 				save_scope_as = old_papal_ruler
 			}
@@ -1814,7 +1764,7 @@ western_schism.2100 = {
 			}
 		}
 		else = {
-			c:PAP ?= {
+			c:DUMMY ?= {
 				create_character = {
 					estate = estate_type:clergy_estate
 					religion = religion:catholic
@@ -1866,7 +1816,7 @@ western_schism.2200 = {
 	option = {
 		name = western_schism.2100.a
 
-		c:PAP = {
+		c:DUMMY = {
 			ruler_or_regent = {
 				save_scope_as = old_papal_ruler
 			}
@@ -1884,7 +1834,7 @@ western_schism.2200 = {
 				}
 			}
 		}
-		c:PAP ?= {
+		c:DUMMY ?= {
 			create_character = {
 				estate = estate_type:clergy_estate
 				religion = religion:catholic

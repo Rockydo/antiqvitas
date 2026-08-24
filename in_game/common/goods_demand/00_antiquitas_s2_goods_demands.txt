@@ -21,9 +21,8 @@ antq_elephant_construction = {
 }
 
 antq_elephant_maintenance = {
-	rice = 0.14
+	rice = 0.18
 	antq_coconut_products = 0.05
-	antq_dried_fruit = 0.04
 	category = regiment_maintenance
 }
 
@@ -64,9 +63,8 @@ antq_heavy_infantry_construction = {
 }
 
 antq_heavy_infantry_maintenance = {
-	antq_grain_products = 0.07
+	antq_grain_products = 0.09
 	antq_cured_meat = 0.03
-	antq_dried_fruit = 0.02
 	category = regiment_maintenance
 }
 
@@ -109,7 +107,7 @@ antq_light_cavalry_construction = {
 antq_light_cavalry_maintenance = {
 	antq_barley = 0.08
 	antq_cheese_curds = 0.03
-	antq_dried_fruit = 0.02
+	antq_grain_products = 0.02
 	category = regiment_maintenance
 }
 
@@ -120,9 +118,8 @@ antq_light_infantry_construction = {
 }
 
 antq_light_infantry_maintenance = {
-	antq_grain_products = 0.05
+	antq_grain_products = 0.07
 	antq_cured_meat = 0.02
-	antq_dried_fruit = 0.02
 	category = regiment_maintenance
 }
 
@@ -135,7 +132,7 @@ antq_light_ship_construction = {
 
 antq_light_ship_maintenance = {
 	antq_cordage = 0.04
-	antq_dried_fruit = 0.03
+	antq_grain_products = 0.03
 	antq_preserved_fish = 0.02
 	category = ship_maintenance
 }
@@ -149,8 +146,7 @@ antq_transport_construction = {
 
 antq_transport_maintenance = {
 	antq_cordage = 0.05
-	antq_grain_products = 0.05
+	antq_grain_products = 0.08
 	antq_cured_meat = 0.03
-	antq_dried_fruit = 0.03
 	category = ship_maintenance
 }

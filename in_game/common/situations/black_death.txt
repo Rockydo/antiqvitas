@@ -12,7 +12,6 @@ black_death = {
 	}
 
 	can_end = {
-		NOT = { disease_outbreak_is_active = var:original_outbreak }
 	}
 
 	visible = {
@@ -26,7 +25,6 @@ black_death = {
 				}
 			}
 			OR = {
-				country_has_disease_outbreak = "scope:target.var:original_outbreak"
 				#If you have a modifier you keep seeing the Situation
 				has_country_modifier = hiding_from_black_death
 				has_country_modifier = control_the_food_market
@@ -44,7 +42,6 @@ black_death = {
 	}
 
 	on_start = {
-		set_variable = { name = original_outbreak value = no }
 		every_country = {
 			limit = {
 				capital = {
@@ -74,7 +71,6 @@ black_death = {
 	on_monthly = {
 		every_country = {
 			limit = {
-				country_has_disease_outbreak = root.var:original_outbreak
 			}
 			set_variable = { name = had_black_death value = yes }
 			random_list = {
@@ -113,7 +109,6 @@ black_death = {
 		every_country = {
 			limit = {
 				NOT = {
-					country_has_disease_outbreak = root.var:original_outbreak
 				}
 				has_variable = had_black_death
 			}
@@ -136,10 +131,6 @@ black_death = {
 	tooltip = {
 		if = {
 			limit = {
-				disease_outbreak_presence = {
-					disease_outbreak = "scope:target.var:original_outbreak"
-					value > 0
-				}
 			}
 			custom_tooltip = "BLACK_DEATH_PRESENT_IN_LOCATION"
 		}
@@ -224,15 +215,10 @@ black_death = {
 	map_color = {
 		if = {
 			limit = {
-				disease_outbreak_presence = {
-					disease_outbreak = "scope:target.var:original_outbreak"
-					value > 0
-				}
 			}
 			lerp = {
 				min_color = define:NMapColors|MAP_COLOR_HIGH
 				max_color = define:NMapColors|MAP_COLOR_LOW
-				factor = "disease_outbreak_presence(scope:target.var:original_outbreak)"
 			}
 		}
 		else = {

@@ -1,0 +1,4752 @@
+{
+  "save": "G:\\antiqvitas_user_data\\save games\\autosave_ebd92486-b27d-4a60-b731-bdc08df901cd.eu5",
+  "date": "18.1.1",
+  "real_polities": 442,
+  "stability": {
+    "minimum": -3.65829,
+    "p10": 16.28061,
+    "median": 27.919835,
+    "p90": 68.11785400000001,
+    "maximum": 83.1083,
+    "negative_count": 1,
+    "severe_count": 0
+  },
+  "solvency": {
+    "bankrupt_count": 0,
+    "bankrupt_polities": [],
+    "historical_bankrupt_count": 0,
+    "historical_bankrupt_polities": [],
+    "major_bankrupt_count": 0,
+    "major_bankrupt_polities": [],
+    "indebted_count": 4,
+    "largest_debts": [
+      {
+        "id": 343,
+        "tag": "XHK",
+        "name": "XHK",
+        "province_count": 4,
+        "great_power": false,
+        "debt": 66.78269,
+        "loan_capacity": 2552.86286,
+        "monthly_income": 4.34291,
+        "monthly_expense": 1.04004,
+        "debt_to_annual_income": 1.28145049440736
+      },
+      {
+        "id": 93,
+        "tag": "OMN",
+        "name": "OMN",
+        "province_count": 3,
+        "great_power": false,
+        "debt": 31.89374,
+        "loan_capacity": 2176.7927,
+        "monthly_income": 0.49063,
+        "monthly_expense": 0.49964,
+        "debt_to_annual_income": 5.417140547187629
+      },
+      {
+        "id": 92,
+        "tag": "XER",
+        "name": "XER",
+        "province_count": 2,
+        "great_power": false,
+        "debt": 21.52414,
+        "loan_capacity": 2071.99469,
+        "monthly_income": 0.57201,
+        "monthly_expense": 0.29279,
+        "debt_to_annual_income": 3.1357464613089516
+      },
+      {
+        "id": 342,
+        "tag": "XHJ",
+        "name": "XHJ",
+        "province_count": 3,
+        "great_power": false,
+        "debt": 16.70128,
+        "loan_capacity": 2325.0,
+        "monthly_income": 1.34622,
+        "monthly_expense": 0.2041,
+        "debt_to_annual_income": 1.0338379561537738
+      }
+    ],
+    "major_economies": [
+      {
+        "id": 3,
+        "tag": "XAA",
+        "name": "XAA",
+        "province_count": 399,
+        "great_power": true,
+        "population_thousands": 50211.20682,
+        "gold": 19370.90459,
+        "debt": 0.0,
+        "loan_capacity": 183407.643,
+        "monthly_income": 73.01694,
+        "monthly_expense": 75.87852,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 28,
+        "tag": "XAR",
+        "name": "XAR",
+        "province_count": 391,
+        "great_power": true,
+        "population_thousands": 61300.05278,
+        "gold": 28196.16418,
+        "debt": 0.0,
+        "loan_capacity": 151534.14844,
+        "monthly_income": 99.9814,
+        "monthly_expense": 7.96788,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 14,
+        "tag": "XAH",
+        "name": "XAH",
+        "province_count": 89,
+        "great_power": true,
+        "population_thousands": 7266.45207,
+        "gold": 5926.80455,
+        "debt": 0.0,
+        "loan_capacity": 32885.128,
+        "monthly_income": 34.5149,
+        "monthly_expense": 5.25677,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 173,
+        "tag": "ROX",
+        "name": "ROX",
+        "province_count": 38,
+        "great_power": false,
+        "population_thousands": 601.28133,
+        "gold": 1658.42219,
+        "debt": 0.0,
+        "loan_capacity": 4659.542,
+        "monthly_income": 8.46385,
+        "monthly_expense": 1.08381,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 41,
+        "tag": "SAT",
+        "name": "SAT",
+        "province_count": 35,
+        "great_power": true,
+        "population_thousands": 9303.14262,
+        "gold": 5304.91433,
+        "debt": 0.0,
+        "loan_capacity": 28562.31255,
+        "monthly_income": 15.59573,
+        "monthly_expense": 1.82225,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 29,
+        "tag": "XIO",
+        "name": "XIO",
+        "province_count": 30,
+        "great_power": false,
+        "population_thousands": 568.77109,
+        "gold": 717.63649,
+        "debt": 0.0,
+        "loan_capacity": 2578.82085,
+        "monthly_income": 3.11964,
+        "monthly_expense": 0.2285,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 54,
+        "tag": "AKS",
+        "name": "AKS",
+        "province_count": 30,
+        "great_power": false,
+        "population_thousands": 2035.31477,
+        "gold": 1292.97513,
+        "debt": 0.0,
+        "loan_capacity": 6629.8319,
+        "monthly_income": 5.47899,
+        "monthly_expense": 1.31222,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 188,
+        "tag": "XCM",
+        "name": "XCM",
+        "province_count": 29,
+        "great_power": false,
+        "population_thousands": 938.45703,
+        "gold": 708.65357,
+        "debt": 0.0,
+        "loan_capacity": 4935.794,
+        "monthly_income": 4.4736,
+        "monthly_expense": 0.40925,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      },
+      {
+        "id": 42,
+        "tag": "XAX",
+        "name": "XAX",
+        "province_count": 26,
+        "great_power": false,
+        "population_thousands": 5598.75455,
+        "gold": 3437.25926,
+        "debt": 0.0,
+        "loan_capacity": 11896.11549,
+        "monthly_income": 15.87581,
+        "monthly_expense": 1.89185,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_at": null,
+        "bankruptcy_active": false
+      }
+    ]
+  },
+  "construction": {
+    "active_projects": 60,
+    "active_payers": 38,
+    "busiest_payers": [
+      {
+        "id": 3,
+        "tag": "XAA",
+        "name": "XAA",
+        "province_count": 399,
+        "great_power": true,
+        "active_projects": 6,
+        "rgo_upgrades": 0,
+        "building_projects": 6,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 6
+        }
+      },
+      {
+        "id": 98,
+        "tag": "BTV",
+        "name": "BTV",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 4
+        }
+      },
+      {
+        "id": 96,
+        "tag": "XBL",
+        "name": "XBL",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 4
+        }
+      },
+      {
+        "id": 363,
+        "tag": "XDZ",
+        "name": "XDZ",
+        "province_count": 12,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 4
+        }
+      },
+      {
+        "id": 14,
+        "tag": "XAH",
+        "name": "XAH",
+        "province_count": 89,
+        "great_power": true,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 116.88750999999999,
+        "project_types": {
+          "antq_cult_date_groves": 3
+        }
+      },
+      {
+        "id": 28,
+        "tag": "XAR",
+        "name": "XAR",
+        "province_count": 391,
+        "great_power": true,
+        "active_projects": 3,
+        "rgo_upgrades": 3,
+        "building_projects": 0,
+        "gold_committed": 6.029999999999999,
+        "project_types": {
+          "rgo_upgrade": 3
+        }
+      },
+      {
+        "id": 173,
+        "tag": "ROX",
+        "name": "ROX",
+        "province_count": 38,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 60.12804,
+        "project_types": {
+          "antq_trib_steppe_bowyer": 1,
+          "antq_trib_horse_muster": 1
+        }
+      },
+      {
+        "id": 35,
+        "tag": "GOG",
+        "name": "GOG",
+        "province_count": 12,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 2,
+        "building_projects": 0,
+        "gold_committed": 10.05,
+        "project_types": {
+          "rgo_upgrade": 2
+        }
+      },
+      {
+        "id": 118,
+        "tag": "XBV",
+        "name": "XBV",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 2
+        }
+      },
+      {
+        "id": 122,
+        "tag": "XBZ",
+        "name": "XBZ",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 2
+        }
+      },
+      {
+        "id": 263,
+        "tag": "ZHZ",
+        "name": "ZHZ",
+        "province_count": 9,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 45.79583,
+        "project_types": {
+          "antq_reg_lime_kiln": 1
+        }
+      },
+      {
+        "id": 9,
+        "tag": "XAE",
+        "name": "XAE",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 41.98537,
+        "project_types": {
+          "antq_reg_leatherworks": 1
+        }
+      },
+      {
+        "id": 47,
+        "tag": "XAZ",
+        "name": "XAZ",
+        "province_count": 9,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 35.73832,
+        "project_types": {
+          "antq_cult_wheat_fields": 1
+        }
+      },
+      {
+        "id": 182,
+        "tag": "XIA",
+        "name": "XIA",
+        "province_count": 13,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 35.43511,
+        "project_types": {
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 85,
+        "tag": "HIM",
+        "name": "HIM",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 34.64771,
+        "project_types": {
+          "antq_reg_leatherworks": 1
+        }
+      },
+      {
+        "id": 257,
+        "tag": "XGI",
+        "name": "XGI",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 34.26131,
+        "project_types": {
+          "antq_cult_dye_gardens": 1
+        }
+      },
+      {
+        "id": 25,
+        "tag": "IBR",
+        "name": "IBR",
+        "province_count": 11,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 33.45533,
+        "project_types": {
+          "antq_reg_grain_mill": 1
+        }
+      },
+      {
+        "id": 274,
+        "tag": "XDP",
+        "name": "XDP",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 32.32928,
+        "project_types": {
+          "antq_reg_leatherworks": 1
+        }
+      },
+      {
+        "id": 101,
+        "tag": "HER",
+        "name": "HER",
+        "province_count": 11,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 30.9952,
+        "project_types": {
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 29,
+        "tag": "XIO",
+        "name": "XIO",
+        "province_count": 30,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 30.95433,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 245,
+        "tag": "YNC",
+        "name": "YNC",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 30.65585,
+        "project_types": {
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 49,
+        "tag": "XBB",
+        "name": "XBB",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 30.12152,
+        "project_types": {
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 13,
+        "tag": "XAG",
+        "name": "XAG",
+        "province_count": 21,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 28.27668,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 18,
+        "tag": "XAK",
+        "name": "XAK",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 8.375,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 94,
+        "tag": "XBK",
+        "name": "XBK",
+        "province_count": 10,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 5.8625,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 189,
+        "tag": "JAV",
+        "name": "JAV",
+        "province_count": 12,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 5.025,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 42,
+        "tag": "XAX",
+        "name": "XAX",
+        "province_count": 26,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 5.025,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 48,
+        "tag": "XBA",
+        "name": "XBA",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 5.025,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 102,
+        "tag": "XBO",
+        "name": "XBO",
+        "province_count": 11,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 5.025,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 54,
+        "tag": "AKS",
+        "name": "AKS",
+        "province_count": 30,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 4.1875,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      }
+    ],
+    "all_payers": [
+      {
+        "id": 3,
+        "tag": "XAA",
+        "name": "XAA",
+        "province_count": 399,
+        "great_power": true,
+        "active_projects": 6,
+        "rgo_upgrades": 0,
+        "building_projects": 6,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 6
+        }
+      },
+      {
+        "id": 98,
+        "tag": "BTV",
+        "name": "BTV",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 4
+        }
+      },
+      {
+        "id": 96,
+        "tag": "XBL",
+        "name": "XBL",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 4
+        }
+      },
+      {
+        "id": 363,
+        "tag": "XDZ",
+        "name": "XDZ",
+        "province_count": 12,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 4
+        }
+      },
+      {
+        "id": 14,
+        "tag": "XAH",
+        "name": "XAH",
+        "province_count": 89,
+        "great_power": true,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 116.88750999999999,
+        "project_types": {
+          "antq_cult_date_groves": 3
+        }
+      },
+      {
+        "id": 28,
+        "tag": "XAR",
+        "name": "XAR",
+        "province_count": 391,
+        "great_power": true,
+        "active_projects": 3,
+        "rgo_upgrades": 3,
+        "building_projects": 0,
+        "gold_committed": 6.029999999999999,
+        "project_types": {
+          "rgo_upgrade": 3
+        }
+      },
+      {
+        "id": 173,
+        "tag": "ROX",
+        "name": "ROX",
+        "province_count": 38,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 60.12804,
+        "project_types": {
+          "antq_trib_steppe_bowyer": 1,
+          "antq_trib_horse_muster": 1
+        }
+      },
+      {
+        "id": 35,
+        "tag": "GOG",
+        "name": "GOG",
+        "province_count": 12,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 2,
+        "building_projects": 0,
+        "gold_committed": 10.05,
+        "project_types": {
+          "rgo_upgrade": 2
+        }
+      },
+      {
+        "id": 118,
+        "tag": "XBV",
+        "name": "XBV",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 2
+        }
+      },
+      {
+        "id": 122,
+        "tag": "XBZ",
+        "name": "XBZ",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 2
+        }
+      },
+      {
+        "id": 263,
+        "tag": "ZHZ",
+        "name": "ZHZ",
+        "province_count": 9,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 45.79583,
+        "project_types": {
+          "antq_reg_lime_kiln": 1
+        }
+      },
+      {
+        "id": 9,
+        "tag": "XAE",
+        "name": "XAE",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 41.98537,
+        "project_types": {
+          "antq_reg_leatherworks": 1
+        }
+      },
+      {
+        "id": 47,
+        "tag": "XAZ",
+        "name": "XAZ",
+        "province_count": 9,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 35.73832,
+        "project_types": {
+          "antq_cult_wheat_fields": 1
+        }
+      },
+      {
+        "id": 182,
+        "tag": "XIA",
+        "name": "XIA",
+        "province_count": 13,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 35.43511,
+        "project_types": {
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 85,
+        "tag": "HIM",
+        "name": "HIM",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 34.64771,
+        "project_types": {
+          "antq_reg_leatherworks": 1
+        }
+      },
+      {
+        "id": 257,
+        "tag": "XGI",
+        "name": "XGI",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 34.26131,
+        "project_types": {
+          "antq_cult_dye_gardens": 1
+        }
+      },
+      {
+        "id": 25,
+        "tag": "IBR",
+        "name": "IBR",
+        "province_count": 11,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 33.45533,
+        "project_types": {
+          "antq_reg_grain_mill": 1
+        }
+      },
+      {
+        "id": 274,
+        "tag": "XDP",
+        "name": "XDP",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 32.32928,
+        "project_types": {
+          "antq_reg_leatherworks": 1
+        }
+      },
+      {
+        "id": 101,
+        "tag": "HER",
+        "name": "HER",
+        "province_count": 11,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 30.9952,
+        "project_types": {
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 29,
+        "tag": "XIO",
+        "name": "XIO",
+        "province_count": 30,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 30.95433,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 245,
+        "tag": "YNC",
+        "name": "YNC",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 30.65585,
+        "project_types": {
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 49,
+        "tag": "XBB",
+        "name": "XBB",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 30.12152,
+        "project_types": {
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 13,
+        "tag": "XAG",
+        "name": "XAG",
+        "province_count": 21,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 28.27668,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 18,
+        "tag": "XAK",
+        "name": "XAK",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 8.375,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 94,
+        "tag": "XBK",
+        "name": "XBK",
+        "province_count": 10,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 5.8625,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 189,
+        "tag": "JAV",
+        "name": "JAV",
+        "province_count": 12,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 5.025,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 42,
+        "tag": "XAX",
+        "name": "XAX",
+        "province_count": 26,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 5.025,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 48,
+        "tag": "XBA",
+        "name": "XBA",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 5.025,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 102,
+        "tag": "XBO",
+        "name": "XBO",
+        "province_count": 11,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 5.025,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 54,
+        "tag": "AKS",
+        "name": "AKS",
+        "province_count": 30,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 4.1875,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 17,
+        "tag": "PRS",
+        "name": "PRS",
+        "province_count": 14,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 4.1875,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 364,
+        "tag": "NAR",
+        "name": "NAR",
+        "province_count": 13,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 3.35,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 113,
+        "tag": "BPC",
+        "name": "BPC",
+        "province_count": 11,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 2.5125,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 431,
+        "tag": "SNR",
+        "name": "SNR",
+        "province_count": 11,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 2.5125,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 178,
+        "tag": "WSN",
+        "name": "WSN",
+        "province_count": 13,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 2.5125,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 97,
+        "tag": "XBM",
+        "name": "XBM",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 1
+        }
+      },
+      {
+        "id": 95,
+        "tag": "CRU",
+        "name": "CRU",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 1
+        }
+      },
+      {
+        "id": 130,
+        "tag": "DOB",
+        "name": "DOB",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 1
+        }
+      }
+    ]
+  },
+  "estates": {
+    "records": 2536,
+    "minimum": 0.0481,
+    "p10": 0.76092,
+    "median": 0.96155,
+    "polity_mean_p10": 0.7974840000000001,
+    "below_10_percent": 2,
+    "below_25_percent": 5,
+    "identity_definition_counts": {
+      "cultures": 2731,
+      "religions": 345
+    },
+    "identity_failure_count": 0,
+    "identity_failures": [],
+    "identity_difference_count": 257,
+    "identity_differences": [
+      {
+        "estate_id": 30,
+        "estate_type": "tribes_estate",
+        "country_id": 3,
+        "tag": "XAA",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 47,
+        "country_culture": 41,
+        "estate_religion": 0,
+        "country_religion": 0
+      },
+      {
+        "estate_id": 57,
+        "estate_type": "nobles_estate",
+        "country_id": 7,
+        "tag": "NAB",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 94,
+        "country_culture": 93,
+        "estate_religion": 19,
+        "country_religion": 19
+      },
+      {
+        "estate_id": 58,
+        "estate_type": "clergy_estate",
+        "country_id": 7,
+        "tag": "NAB",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 94,
+        "country_culture": 93,
+        "estate_religion": 19,
+        "country_religion": 19
+      },
+      {
+        "estate_id": 60,
+        "estate_type": "peasants_estate",
+        "country_id": 7,
+        "tag": "NAB",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 94,
+        "country_culture": 93,
+        "estate_religion": 19,
+        "country_religion": 19
+      },
+      {
+        "estate_id": 62,
+        "estate_type": "tribes_estate",
+        "country_id": 7,
+        "tag": "NAB",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 94,
+        "country_culture": 93,
+        "estate_religion": 19,
+        "country_religion": 19
+      },
+      {
+        "estate_id": 66,
+        "estate_type": "clergy_estate",
+        "country_id": 8,
+        "tag": "CAP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 360,
+        "country_culture": 45,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 67,
+        "estate_type": "burghers_estate",
+        "country_id": 8,
+        "tag": "CAP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 360,
+        "country_culture": 45,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 68,
+        "estate_type": "peasants_estate",
+        "country_id": 8,
+        "tag": "CAP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 360,
+        "country_culture": 45,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 70,
+        "estate_type": "tribes_estate",
+        "country_id": 8,
+        "tag": "CAP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 360,
+        "country_culture": 45,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 73,
+        "estate_type": "nobles_estate",
+        "country_id": 9,
+        "tag": "XAE",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 308,
+        "country_culture": 91,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 74,
+        "estate_type": "clergy_estate",
+        "country_id": 9,
+        "tag": "XAE",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 308,
+        "country_culture": 91,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 75,
+        "estate_type": "burghers_estate",
+        "country_id": 9,
+        "tag": "XAE",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 308,
+        "country_culture": 91,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 76,
+        "estate_type": "peasants_estate",
+        "country_id": 9,
+        "tag": "XAE",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 308,
+        "country_culture": 91,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 78,
+        "estate_type": "tribes_estate",
+        "country_id": 9,
+        "tag": "XAE",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 308,
+        "country_culture": 91,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 89,
+        "estate_type": "nobles_estate",
+        "country_id": 11,
+        "tag": "THR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 357,
+        "country_culture": 45,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 90,
+        "estate_type": "clergy_estate",
+        "country_id": 11,
+        "tag": "THR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 357,
+        "country_culture": 45,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 91,
+        "estate_type": "burghers_estate",
+        "country_id": 11,
+        "tag": "THR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 357,
+        "country_culture": 45,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 92,
+        "estate_type": "peasants_estate",
+        "country_id": 11,
+        "tag": "THR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 357,
+        "country_culture": 45,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 94,
+        "estate_type": "tribes_estate",
+        "country_id": 11,
+        "tag": "THR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 357,
+        "country_culture": 45,
+        "estate_religion": 1,
+        "country_religion": 1
+      },
+      {
+        "estate_id": 102,
+        "estate_type": "tribes_estate",
+        "country_id": 12,
+        "tag": "XAF",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 86,
+        "country_culture": 75,
+        "estate_religion": 14,
+        "country_religion": 14
+      },
+      {
+        "estate_id": 113,
+        "estate_type": "nobles_estate",
+        "country_id": 14,
+        "tag": "XAH",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 91,
+        "country_culture": 58,
+        "estate_religion": 4,
+        "country_religion": 4
+      },
+      {
+        "estate_id": 114,
+        "estate_type": "clergy_estate",
+        "country_id": 14,
+        "tag": "XAH",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 91,
+        "country_culture": 58,
+        "estate_religion": 4,
+        "country_religion": 4
+      },
+      {
+        "estate_id": 115,
+        "estate_type": "burghers_estate",
+        "country_id": 14,
+        "tag": "XAH",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 91,
+        "country_culture": 58,
+        "estate_religion": 4,
+        "country_religion": 4
+      },
+      {
+        "estate_id": 116,
+        "estate_type": "peasants_estate",
+        "country_id": 14,
+        "tag": "XAH",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 91,
+        "country_culture": 58,
+        "estate_religion": 4,
+        "country_religion": 4
+      },
+      {
+        "estate_id": 169,
+        "estate_type": "nobles_estate",
+        "country_id": 21,
+        "tag": "XAM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 450,
+        "country_culture": 91,
+        "estate_religion": 4,
+        "country_religion": 4
+      },
+      {
+        "estate_id": 170,
+        "estate_type": "clergy_estate",
+        "country_id": 21,
+        "tag": "XAM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 450,
+        "country_culture": 91,
+        "estate_religion": 4,
+        "country_religion": 4
+      },
+      {
+        "estate_id": 171,
+        "estate_type": "burghers_estate",
+        "country_id": 21,
+        "tag": "XAM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 450,
+        "country_culture": 91,
+        "estate_religion": 4,
+        "country_religion": 4
+      },
+      {
+        "estate_id": 172,
+        "estate_type": "peasants_estate",
+        "country_id": 21,
+        "tag": "XAM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 450,
+        "country_culture": 91,
+        "estate_religion": 4,
+        "country_religion": 4
+      },
+      {
+        "estate_id": 174,
+        "estate_type": "tribes_estate",
+        "country_id": 21,
+        "tag": "XAM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 450,
+        "country_culture": 91,
+        "estate_religion": 4,
+        "country_religion": 4
+      },
+      {
+        "estate_id": 226,
+        "estate_type": "clergy_estate",
+        "country_id": 28,
+        "tag": "XAR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 405,
+        "country_culture": 394,
+        "estate_religion": 10,
+        "country_religion": 10
+      },
+      {
+        "estate_id": 227,
+        "estate_type": "burghers_estate",
+        "country_id": 28,
+        "tag": "XAR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 405,
+        "country_culture": 394,
+        "estate_religion": 10,
+        "country_religion": 10
+      },
+      {
+        "estate_id": 230,
+        "estate_type": "tribes_estate",
+        "country_id": 28,
+        "tag": "XAR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 393,
+        "country_culture": 394,
+        "estate_religion": 10,
+        "country_religion": 10
+      },
+      {
+        "estate_id": 281,
+        "estate_type": "nobles_estate",
+        "country_id": 35,
+        "tag": "GOG",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 144,
+        "country_culture": 143,
+        "estate_religion": 13,
+        "country_religion": 13
+      },
+      {
+        "estate_id": 282,
+        "estate_type": "clergy_estate",
+        "country_id": 35,
+        "tag": "GOG",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 144,
+        "country_culture": 143,
+        "estate_religion": 13,
+        "country_religion": 13
+      },
+      {
+        "estate_id": 283,
+        "estate_type": "burghers_estate",
+        "country_id": 35,
+        "tag": "GOG",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 144,
+        "country_culture": 143,
+        "estate_religion": 13,
+        "country_religion": 13
+      },
+      {
+        "estate_id": 284,
+        "estate_type": "peasants_estate",
+        "country_id": 35,
+        "tag": "GOG",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 144,
+        "country_culture": 143,
+        "estate_religion": 13,
+        "country_religion": 13
+      },
+      {
+        "estate_id": 286,
+        "estate_type": "tribes_estate",
+        "country_id": 35,
+        "tag": "GOG",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 144,
+        "country_culture": 143,
+        "estate_religion": 13,
+        "country_religion": 13
+      },
+      {
+        "estate_id": 289,
+        "estate_type": "nobles_estate",
+        "country_id": 36,
+        "tag": "BUY",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 144,
+        "country_culture": 143,
+        "estate_religion": 13,
+        "country_religion": 13
+      },
+      {
+        "estate_id": 290,
+        "estate_type": "clergy_estate",
+        "country_id": 36,
+        "tag": "BUY",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 144,
+        "country_culture": 143,
+        "estate_religion": 13,
+        "country_religion": 13
+      },
+      {
+        "estate_id": 291,
+        "estate_type": "burghers_estate",
+        "country_id": 36,
+        "tag": "BUY",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 144,
+        "country_culture": 143,
+        "estate_religion": 13,
+        "country_religion": 13
+      },
+      {
+        "estate_id": 292,
+        "estate_type": "peasants_estate",
+        "country_id": 36,
+        "tag": "BUY",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 144,
+        "country_culture": 143,
+        "estate_religion": 13,
+        "country_religion": 13
+      },
+      {
+        "estate_id": 294,
+        "estate_type": "tribes_estate",
+        "country_id": 36,
+        "tag": "BUY",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 144,
+        "country_culture": 143,
+        "estate_religion": 13,
+        "country_religion": 13
+      },
+      {
+        "estate_id": 334,
+        "estate_type": "tribes_estate",
+        "country_id": 41,
+        "tag": "SAT",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 561,
+        "country_culture": 128,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 337,
+        "estate_type": "nobles_estate",
+        "country_id": 42,
+        "tag": "XAX",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 126,
+        "country_culture": 66,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 338,
+        "estate_type": "clergy_estate",
+        "country_id": 42,
+        "tag": "XAX",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 126,
+        "country_culture": 66,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 339,
+        "estate_type": "burghers_estate",
+        "country_id": 42,
+        "tag": "XAX",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 126,
+        "country_culture": 66,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 340,
+        "estate_type": "peasants_estate",
+        "country_id": 42,
+        "tag": "XAX",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 126,
+        "country_culture": 66,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 342,
+        "estate_type": "tribes_estate",
+        "country_id": 42,
+        "tag": "XAX",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 126,
+        "country_culture": 66,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 377,
+        "estate_type": "nobles_estate",
+        "country_id": 47,
+        "tag": "XAZ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 124,
+        "country_culture": 418,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 378,
+        "estate_type": "clergy_estate",
+        "country_id": 47,
+        "tag": "XAZ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 124,
+        "country_culture": 418,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 379,
+        "estate_type": "burghers_estate",
+        "country_id": 47,
+        "tag": "XAZ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 124,
+        "country_culture": 418,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 380,
+        "estate_type": "peasants_estate",
+        "country_id": 47,
+        "tag": "XAZ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 124,
+        "country_culture": 418,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 382,
+        "estate_type": "tribes_estate",
+        "country_id": 47,
+        "tag": "XAZ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 124,
+        "country_culture": 418,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 417,
+        "estate_type": "nobles_estate",
+        "country_id": 52,
+        "tag": "XBD",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 130,
+        "country_culture": 124,
+        "estate_religion": 6,
+        "country_religion": 6
+      },
+      {
+        "estate_id": 418,
+        "estate_type": "clergy_estate",
+        "country_id": 52,
+        "tag": "XBD",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 130,
+        "country_culture": 124,
+        "estate_religion": 6,
+        "country_religion": 6
+      },
+      {
+        "estate_id": 419,
+        "estate_type": "burghers_estate",
+        "country_id": 52,
+        "tag": "XBD",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 130,
+        "country_culture": 124,
+        "estate_religion": 6,
+        "country_religion": 6
+      },
+      {
+        "estate_id": 420,
+        "estate_type": "peasants_estate",
+        "country_id": 52,
+        "tag": "XBD",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 130,
+        "country_culture": 124,
+        "estate_religion": 6,
+        "country_religion": 6
+      },
+      {
+        "estate_id": 422,
+        "estate_type": "tribes_estate",
+        "country_id": 52,
+        "tag": "XBD",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 130,
+        "country_culture": 124,
+        "estate_religion": 6,
+        "country_religion": 6
+      },
+      {
+        "estate_id": 433,
+        "estate_type": "nobles_estate",
+        "country_id": 54,
+        "tag": "AKS",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 367,
+        "country_culture": 98,
+        "estate_religion": 17,
+        "country_religion": 17
+      },
+      {
+        "estate_id": 434,
+        "estate_type": "clergy_estate",
+        "country_id": 54,
+        "tag": "AKS",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 367,
+        "country_culture": 98,
+        "estate_religion": 17,
+        "country_religion": 17
+      },
+      {
+        "estate_id": 435,
+        "estate_type": "burghers_estate",
+        "country_id": 54,
+        "tag": "AKS",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 367,
+        "country_culture": 98,
+        "estate_religion": 17,
+        "country_religion": 17
+      },
+      {
+        "estate_id": 436,
+        "estate_type": "peasants_estate",
+        "country_id": 54,
+        "tag": "AKS",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 367,
+        "country_culture": 98,
+        "estate_religion": 17,
+        "country_religion": 17
+      },
+      {
+        "estate_id": 438,
+        "estate_type": "tribes_estate",
+        "country_id": 54,
+        "tag": "AKS",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 367,
+        "country_culture": 98,
+        "estate_religion": 17,
+        "country_religion": 17
+      },
+      {
+        "estate_id": 673,
+        "estate_type": "nobles_estate",
+        "country_id": 84,
+        "tag": "XBI",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 365,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 674,
+        "estate_type": "clergy_estate",
+        "country_id": 84,
+        "tag": "XBI",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 365,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 675,
+        "estate_type": "burghers_estate",
+        "country_id": 84,
+        "tag": "XBI",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 365,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 676,
+        "estate_type": "peasants_estate",
+        "country_id": 84,
+        "tag": "XBI",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 365,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 678,
+        "estate_type": "tribes_estate",
+        "country_id": 84,
+        "tag": "XBI",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 365,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 689,
+        "estate_type": "nobles_estate",
+        "country_id": 86,
+        "tag": "QAT",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 96,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 690,
+        "estate_type": "clergy_estate",
+        "country_id": 86,
+        "tag": "QAT",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 96,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 691,
+        "estate_type": "burghers_estate",
+        "country_id": 86,
+        "tag": "QAT",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 96,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 692,
+        "estate_type": "peasants_estate",
+        "country_id": 86,
+        "tag": "QAT",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 96,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 694,
+        "estate_type": "tribes_estate",
+        "country_id": 86,
+        "tag": "QAT",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 96,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 697,
+        "estate_type": "nobles_estate",
+        "country_id": 87,
+        "tag": "XBJ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 96,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 698,
+        "estate_type": "clergy_estate",
+        "country_id": 87,
+        "tag": "XBJ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 96,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 699,
+        "estate_type": "burghers_estate",
+        "country_id": 87,
+        "tag": "XBJ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 96,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 700,
+        "estate_type": "peasants_estate",
+        "country_id": 87,
+        "tag": "XBJ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 96,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 702,
+        "estate_type": "tribes_estate",
+        "country_id": 87,
+        "tag": "XBJ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 366,
+        "country_culture": 96,
+        "estate_religion": 20,
+        "country_religion": 20
+      },
+      {
+        "estate_id": 769,
+        "estate_type": "nobles_estate",
+        "country_id": 96,
+        "tag": "XBL",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 443,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 770,
+        "estate_type": "clergy_estate",
+        "country_id": 96,
+        "tag": "XBL",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 443,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 771,
+        "estate_type": "burghers_estate",
+        "country_id": 96,
+        "tag": "XBL",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 443,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 772,
+        "estate_type": "peasants_estate",
+        "country_id": 96,
+        "tag": "XBL",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 443,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 774,
+        "estate_type": "tribes_estate",
+        "country_id": 96,
+        "tag": "XBL",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 443,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 777,
+        "estate_type": "nobles_estate",
+        "country_id": 97,
+        "tag": "XBM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 440,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 778,
+        "estate_type": "clergy_estate",
+        "country_id": 97,
+        "tag": "XBM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 440,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 779,
+        "estate_type": "burghers_estate",
+        "country_id": 97,
+        "tag": "XBM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 440,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 780,
+        "estate_type": "peasants_estate",
+        "country_id": 97,
+        "tag": "XBM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 440,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 782,
+        "estate_type": "tribes_estate",
+        "country_id": 97,
+        "tag": "XBM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 440,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 785,
+        "estate_type": "nobles_estate",
+        "country_id": 98,
+        "tag": "BTV",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 47,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 786,
+        "estate_type": "clergy_estate",
+        "country_id": 98,
+        "tag": "BTV",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 47,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 787,
+        "estate_type": "burghers_estate",
+        "country_id": 98,
+        "tag": "BTV",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 47,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 788,
+        "estate_type": "peasants_estate",
+        "country_id": 98,
+        "tag": "BTV",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 47,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 790,
+        "estate_type": "tribes_estate",
+        "country_id": 98,
+        "tag": "BTV",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 47,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 793,
+        "estate_type": "nobles_estate",
+        "country_id": 99,
+        "tag": "XBN",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 442,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 794,
+        "estate_type": "clergy_estate",
+        "country_id": 99,
+        "tag": "XBN",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 442,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 795,
+        "estate_type": "burghers_estate",
+        "country_id": 99,
+        "tag": "XBN",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 442,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 796,
+        "estate_type": "peasants_estate",
+        "country_id": 99,
+        "tag": "XBN",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 442,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 798,
+        "estate_type": "tribes_estate",
+        "country_id": 99,
+        "tag": "XBN",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 442,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 801,
+        "estate_type": "nobles_estate",
+        "country_id": 100,
+        "tag": "SEM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 444,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 802,
+        "estate_type": "clergy_estate",
+        "country_id": 100,
+        "tag": "SEM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 444,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 803,
+        "estate_type": "burghers_estate",
+        "country_id": 100,
+        "tag": "SEM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 444,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 804,
+        "estate_type": "peasants_estate",
+        "country_id": 100,
+        "tag": "SEM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 444,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 806,
+        "estate_type": "tribes_estate",
+        "country_id": 100,
+        "tag": "SEM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 444,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 809,
+        "estate_type": "nobles_estate",
+        "country_id": 101,
+        "tag": "HER",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 445,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 810,
+        "estate_type": "clergy_estate",
+        "country_id": 101,
+        "tag": "HER",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 445,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 811,
+        "estate_type": "burghers_estate",
+        "country_id": 101,
+        "tag": "HER",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 445,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 812,
+        "estate_type": "peasants_estate",
+        "country_id": 101,
+        "tag": "HER",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 445,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 814,
+        "estate_type": "tribes_estate",
+        "country_id": 101,
+        "tag": "HER",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 445,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 841,
+        "estate_type": "nobles_estate",
+        "country_id": 105,
+        "tag": "RUG",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 313,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 842,
+        "estate_type": "clergy_estate",
+        "country_id": 105,
+        "tag": "RUG",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 53,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 843,
+        "estate_type": "burghers_estate",
+        "country_id": 105,
+        "tag": "RUG",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 313,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 844,
+        "estate_type": "peasants_estate",
+        "country_id": 105,
+        "tag": "RUG",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 53,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 846,
+        "estate_type": "tribes_estate",
+        "country_id": 105,
+        "tag": "RUG",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 53,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 857,
+        "estate_type": "nobles_estate",
+        "country_id": 107,
+        "tag": "XBQ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 324,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 858,
+        "estate_type": "clergy_estate",
+        "country_id": 107,
+        "tag": "XBQ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 324,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 859,
+        "estate_type": "burghers_estate",
+        "country_id": 107,
+        "tag": "XBQ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 324,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 860,
+        "estate_type": "peasants_estate",
+        "country_id": 107,
+        "tag": "XBQ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 324,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 862,
+        "estate_type": "tribes_estate",
+        "country_id": 107,
+        "tag": "XBQ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 324,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 865,
+        "estate_type": "nobles_estate",
+        "country_id": 108,
+        "tag": "XBR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 442,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 866,
+        "estate_type": "clergy_estate",
+        "country_id": 108,
+        "tag": "XBR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 442,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 867,
+        "estate_type": "burghers_estate",
+        "country_id": 108,
+        "tag": "XBR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 442,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 868,
+        "estate_type": "peasants_estate",
+        "country_id": 108,
+        "tag": "XBR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 442,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 870,
+        "estate_type": "tribes_estate",
+        "country_id": 108,
+        "tag": "XBR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 442,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 873,
+        "estate_type": "nobles_estate",
+        "country_id": 109,
+        "tag": "JUT",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 329,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 874,
+        "estate_type": "clergy_estate",
+        "country_id": 109,
+        "tag": "JUT",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 329,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 875,
+        "estate_type": "burghers_estate",
+        "country_id": 109,
+        "tag": "JUT",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 329,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 876,
+        "estate_type": "peasants_estate",
+        "country_id": 109,
+        "tag": "JUT",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 329,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 878,
+        "estate_type": "tribes_estate",
+        "country_id": 109,
+        "tag": "JUT",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 326,
+        "country_culture": 52,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 929,
+        "estate_type": "nobles_estate",
+        "country_id": 116,
+        "tag": "XBT",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 531,
+        "country_culture": 158,
+        "estate_religion": 24,
+        "country_religion": 24
+      },
+      {
+        "estate_id": 930,
+        "estate_type": "clergy_estate",
+        "country_id": 116,
+        "tag": "XBT",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 531,
+        "country_culture": 158,
+        "estate_religion": 24,
+        "country_religion": 24
+      },
+      {
+        "estate_id": 974,
+        "estate_type": "tribes_estate",
+        "country_id": 121,
+        "tag": "XBY",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 488,
+        "country_culture": 475,
+        "estate_religion": 22,
+        "country_religion": 22
+      },
+      {
+        "estate_id": 982,
+        "estate_type": "tribes_estate",
+        "country_id": 122,
+        "tag": "XBZ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 481,
+        "country_culture": 476,
+        "estate_religion": 22,
+        "country_religion": 22
+      },
+      {
+        "estate_id": 990,
+        "estate_type": "tribes_estate",
+        "country_id": 123,
+        "tag": "XCA",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 489,
+        "country_culture": 477,
+        "estate_religion": 22,
+        "country_religion": 22
+      },
+      {
+        "estate_id": 1006,
+        "estate_type": "tribes_estate",
+        "country_id": 125,
+        "tag": "DUM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 483,
+        "country_culture": 479,
+        "estate_religion": 22,
+        "country_religion": 22
+      },
+      {
+        "estate_id": 1412,
+        "estate_type": "peasants_estate",
+        "country_id": 176,
+        "tag": "XCF",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 87,
+        "country_culture": 75,
+        "estate_religion": 14,
+        "country_religion": 14
+      },
+      {
+        "estate_id": 1450,
+        "estate_type": "clergy_estate",
+        "country_id": 181,
+        "tag": "KHW",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 61,
+        "country_culture": 64,
+        "estate_religion": 4,
+        "country_religion": 4
+      },
+      {
+        "estate_id": 1451,
+        "estate_type": "burghers_estate",
+        "country_id": 181,
+        "tag": "KHW",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 61,
+        "country_culture": 64,
+        "estate_religion": 4,
+        "country_religion": 4
+      },
+      {
+        "estate_id": 1452,
+        "estate_type": "peasants_estate",
+        "country_id": 181,
+        "tag": "KHW",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 61,
+        "country_culture": 64,
+        "estate_religion": 4,
+        "country_religion": 4
+      },
+      {
+        "estate_id": 1454,
+        "estate_type": "tribes_estate",
+        "country_id": 181,
+        "tag": "KHW",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 61,
+        "country_culture": 64,
+        "estate_religion": 4,
+        "country_religion": 4
+      },
+      {
+        "estate_id": 1457,
+        "estate_type": "nobles_estate",
+        "country_id": 182,
+        "tag": "XIA",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 150,
+        "country_culture": 147,
+        "estate_religion": 14,
+        "country_religion": 14
+      },
+      {
+        "estate_id": 1458,
+        "estate_type": "clergy_estate",
+        "country_id": 182,
+        "tag": "XIA",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 150,
+        "country_culture": 147,
+        "estate_religion": 14,
+        "country_religion": 14
+      },
+      {
+        "estate_id": 1459,
+        "estate_type": "burghers_estate",
+        "country_id": 182,
+        "tag": "XIA",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 150,
+        "country_culture": 147,
+        "estate_religion": 14,
+        "country_religion": 14
+      },
+      {
+        "estate_id": 1460,
+        "estate_type": "peasants_estate",
+        "country_id": 182,
+        "tag": "XIA",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 150,
+        "country_culture": 147,
+        "estate_religion": 14,
+        "country_religion": 14
+      },
+      {
+        "estate_id": 1462,
+        "estate_type": "tribes_estate",
+        "country_id": 182,
+        "tag": "XIA",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 150,
+        "country_culture": 147,
+        "estate_religion": 14,
+        "country_religion": 14
+      },
+      {
+        "estate_id": 1465,
+        "estate_type": "nobles_estate",
+        "country_id": 183,
+        "tag": "WHU",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 149,
+        "country_culture": 147,
+        "estate_religion": 14,
+        "country_religion": 14
+      },
+      {
+        "estate_id": 1466,
+        "estate_type": "clergy_estate",
+        "country_id": 183,
+        "tag": "WHU",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 149,
+        "country_culture": 147,
+        "estate_religion": 14,
+        "country_religion": 14
+      },
+      {
+        "estate_id": 1467,
+        "estate_type": "burghers_estate",
+        "country_id": 183,
+        "tag": "WHU",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 149,
+        "country_culture": 147,
+        "estate_religion": 14,
+        "country_religion": 14
+      },
+      {
+        "estate_id": 1468,
+        "estate_type": "peasants_estate",
+        "country_id": 183,
+        "tag": "WHU",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 149,
+        "country_culture": 147,
+        "estate_religion": 14,
+        "country_religion": 14
+      },
+      {
+        "estate_id": 1470,
+        "estate_type": "tribes_estate",
+        "country_id": 183,
+        "tag": "WHU",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 149,
+        "country_culture": 147,
+        "estate_religion": 14,
+        "country_religion": 14
+      },
+      {
+        "estate_id": 1753,
+        "estate_type": "nobles_estate",
+        "country_id": 219,
+        "tag": "XCU",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 372,
+        "country_culture": 373,
+        "estate_religion": 31,
+        "country_religion": 31
+      },
+      {
+        "estate_id": 1754,
+        "estate_type": "clergy_estate",
+        "country_id": 219,
+        "tag": "XCU",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 372,
+        "country_culture": 373,
+        "estate_religion": 31,
+        "country_religion": 31
+      },
+      {
+        "estate_id": 1755,
+        "estate_type": "burghers_estate",
+        "country_id": 219,
+        "tag": "XCU",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 372,
+        "country_culture": 373,
+        "estate_religion": 31,
+        "country_religion": 31
+      },
+      {
+        "estate_id": 1756,
+        "estate_type": "peasants_estate",
+        "country_id": 219,
+        "tag": "XCU",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 372,
+        "country_culture": 373,
+        "estate_religion": 31,
+        "country_religion": 31
+      },
+      {
+        "estate_id": 1758,
+        "estate_type": "tribes_estate",
+        "country_id": 219,
+        "tag": "XCU",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 372,
+        "country_culture": 373,
+        "estate_religion": 31,
+        "country_religion": 31
+      },
+      {
+        "estate_id": 1881,
+        "estate_type": "nobles_estate",
+        "country_id": 235,
+        "tag": "PPA",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 463,
+        "country_culture": 649,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1882,
+        "estate_type": "clergy_estate",
+        "country_id": 235,
+        "tag": "PPA",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 463,
+        "country_culture": 649,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1884,
+        "estate_type": "peasants_estate",
+        "country_id": 235,
+        "tag": "PPA",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 463,
+        "country_culture": 649,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1886,
+        "estate_type": "tribes_estate",
+        "country_id": 235,
+        "tag": "PPA",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 463,
+        "country_culture": 649,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1889,
+        "estate_type": "nobles_estate",
+        "country_id": 236,
+        "tag": "MHP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 463,
+        "country_culture": 650,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1890,
+        "estate_type": "clergy_estate",
+        "country_id": 236,
+        "tag": "MHP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 463,
+        "country_culture": 650,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1892,
+        "estate_type": "peasants_estate",
+        "country_id": 236,
+        "tag": "MHP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 463,
+        "country_culture": 650,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1894,
+        "estate_type": "tribes_estate",
+        "country_id": 236,
+        "tag": "MHP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 463,
+        "country_culture": 650,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1897,
+        "estate_type": "nobles_estate",
+        "country_id": 237,
+        "tag": "FLP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 463,
+        "country_culture": 651,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1898,
+        "estate_type": "clergy_estate",
+        "country_id": 237,
+        "tag": "FLP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 463,
+        "country_culture": 651,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1900,
+        "estate_type": "peasants_estate",
+        "country_id": 237,
+        "tag": "FLP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 463,
+        "country_culture": 651,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1902,
+        "estate_type": "tribes_estate",
+        "country_id": 237,
+        "tag": "FLP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 463,
+        "country_culture": 651,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1905,
+        "estate_type": "nobles_estate",
+        "country_id": 238,
+        "tag": "HVI",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 467,
+        "country_culture": 652,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1906,
+        "estate_type": "clergy_estate",
+        "country_id": 238,
+        "tag": "HVI",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 467,
+        "country_culture": 652,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1908,
+        "estate_type": "peasants_estate",
+        "country_id": 238,
+        "tag": "HVI",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 467,
+        "country_culture": 652,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1910,
+        "estate_type": "tribes_estate",
+        "country_id": 238,
+        "tag": "HVI",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 467,
+        "country_culture": 652,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1913,
+        "estate_type": "nobles_estate",
+        "country_id": 239,
+        "tag": "XHH",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 467,
+        "country_culture": 653,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1914,
+        "estate_type": "clergy_estate",
+        "country_id": 239,
+        "tag": "XHH",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 467,
+        "country_culture": 653,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1916,
+        "estate_type": "peasants_estate",
+        "country_id": 239,
+        "tag": "XHH",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 467,
+        "country_culture": 653,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1918,
+        "estate_type": "tribes_estate",
+        "country_id": 239,
+        "tag": "XHH",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 467,
+        "country_culture": 653,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1921,
+        "estate_type": "nobles_estate",
+        "country_id": 240,
+        "tag": "CMW",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 384,
+        "country_culture": 654,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1922,
+        "estate_type": "clergy_estate",
+        "country_id": 240,
+        "tag": "CMW",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 384,
+        "country_culture": 654,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1924,
+        "estate_type": "peasants_estate",
+        "country_id": 240,
+        "tag": "CMW",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 384,
+        "country_culture": 654,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1926,
+        "estate_type": "tribes_estate",
+        "country_id": 240,
+        "tag": "CMW",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 384,
+        "country_culture": 654,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1929,
+        "estate_type": "nobles_estate",
+        "country_id": 241,
+        "tag": "XHI",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 384,
+        "country_culture": 655,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1930,
+        "estate_type": "clergy_estate",
+        "country_id": 241,
+        "tag": "XHI",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 384,
+        "country_culture": 655,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1932,
+        "estate_type": "peasants_estate",
+        "country_id": 241,
+        "tag": "XHI",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 384,
+        "country_culture": 655,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1934,
+        "estate_type": "tribes_estate",
+        "country_id": 241,
+        "tag": "XHI",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 384,
+        "country_culture": 655,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1937,
+        "estate_type": "nobles_estate",
+        "country_id": 242,
+        "tag": "KCP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 384,
+        "country_culture": 656,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1938,
+        "estate_type": "clergy_estate",
+        "country_id": 242,
+        "tag": "KCP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 384,
+        "country_culture": 656,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1940,
+        "estate_type": "peasants_estate",
+        "country_id": 242,
+        "tag": "KCP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 384,
+        "country_culture": 656,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 1942,
+        "estate_type": "tribes_estate",
+        "country_id": 242,
+        "tag": "KCP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 384,
+        "country_culture": 656,
+        "estate_religion": 33,
+        "country_religion": 33
+      },
+      {
+        "estate_id": 2198,
+        "estate_type": "tribes_estate",
+        "country_id": 274,
+        "tag": "XDP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 431,
+        "country_culture": 413,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 2246,
+        "estate_type": "tribes_estate",
+        "country_id": 280,
+        "tag": "XFU",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 562,
+        "country_culture": 422,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 2278,
+        "estate_type": "tribes_estate",
+        "country_id": 284,
+        "tag": "PDR",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 432,
+        "country_culture": 426,
+        "estate_religion": 8,
+        "country_religion": 8
+      },
+      {
+        "estate_id": 2468,
+        "estate_type": "peasants_estate",
+        "country_id": 308,
+        "tag": "XHD",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 637,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2470,
+        "estate_type": "tribes_estate",
+        "country_id": 308,
+        "tag": "XHD",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 637,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2473,
+        "estate_type": "nobles_estate",
+        "country_id": 309,
+        "tag": "BNC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 638,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2474,
+        "estate_type": "clergy_estate",
+        "country_id": 309,
+        "tag": "BNC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 638,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2476,
+        "estate_type": "peasants_estate",
+        "country_id": 309,
+        "tag": "BNC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 638,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2478,
+        "estate_type": "tribes_estate",
+        "country_id": 309,
+        "tag": "BNC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 638,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2484,
+        "estate_type": "peasants_estate",
+        "country_id": 310,
+        "tag": "BGU",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 639,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2486,
+        "estate_type": "tribes_estate",
+        "country_id": 310,
+        "tag": "BGU",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 639,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2490,
+        "estate_type": "clergy_estate",
+        "country_id": 311,
+        "tag": "BTM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 640,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2492,
+        "estate_type": "peasants_estate",
+        "country_id": 311,
+        "tag": "BTM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 640,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2494,
+        "estate_type": "tribes_estate",
+        "country_id": 311,
+        "tag": "BTM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 640,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2500,
+        "estate_type": "peasants_estate",
+        "country_id": 312,
+        "tag": "LRP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 641,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2502,
+        "estate_type": "tribes_estate",
+        "country_id": 312,
+        "tag": "LRP",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 641,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2506,
+        "estate_type": "clergy_estate",
+        "country_id": 313,
+        "tag": "XHE",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 642,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2508,
+        "estate_type": "peasants_estate",
+        "country_id": 313,
+        "tag": "XHE",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 642,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2510,
+        "estate_type": "tribes_estate",
+        "country_id": 313,
+        "tag": "XHE",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 642,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2513,
+        "estate_type": "nobles_estate",
+        "country_id": 314,
+        "tag": "MKS",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 643,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2514,
+        "estate_type": "clergy_estate",
+        "country_id": 314,
+        "tag": "MKS",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 643,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2516,
+        "estate_type": "peasants_estate",
+        "country_id": 314,
+        "tag": "MKS",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 643,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2518,
+        "estate_type": "tribes_estate",
+        "country_id": 314,
+        "tag": "MKS",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 643,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2522,
+        "estate_type": "clergy_estate",
+        "country_id": 315,
+        "tag": "XHF",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 644,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2524,
+        "estate_type": "peasants_estate",
+        "country_id": 315,
+        "tag": "XHF",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 644,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2526,
+        "estate_type": "tribes_estate",
+        "country_id": 315,
+        "tag": "XHF",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 644,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2532,
+        "estate_type": "peasants_estate",
+        "country_id": 316,
+        "tag": "MNH",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 645,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2534,
+        "estate_type": "tribes_estate",
+        "country_id": 316,
+        "tag": "MNH",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 138,
+        "country_culture": 645,
+        "estate_religion": 35,
+        "country_religion": 35
+      },
+      {
+        "estate_id": 2721,
+        "estate_type": "nobles_estate",
+        "country_id": 340,
+        "tag": "XDL",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 471,
+        "country_culture": 664,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2722,
+        "estate_type": "clergy_estate",
+        "country_id": 340,
+        "tag": "XDL",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 471,
+        "country_culture": 664,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2724,
+        "estate_type": "peasants_estate",
+        "country_id": 340,
+        "tag": "XDL",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 471,
+        "country_culture": 664,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2726,
+        "estate_type": "tribes_estate",
+        "country_id": 340,
+        "tag": "XDL",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 471,
+        "country_culture": 664,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2729,
+        "estate_type": "nobles_estate",
+        "country_id": 341,
+        "tag": "REC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 470,
+        "country_culture": 665,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2730,
+        "estate_type": "clergy_estate",
+        "country_id": 341,
+        "tag": "REC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 470,
+        "country_culture": 665,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2731,
+        "estate_type": "burghers_estate",
+        "country_id": 341,
+        "tag": "REC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 470,
+        "country_culture": 665,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2732,
+        "estate_type": "peasants_estate",
+        "country_id": 341,
+        "tag": "REC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 470,
+        "country_culture": 665,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2734,
+        "estate_type": "tribes_estate",
+        "country_id": 341,
+        "tag": "REC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 470,
+        "country_culture": 665,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2737,
+        "estate_type": "nobles_estate",
+        "country_id": 342,
+        "tag": "XHJ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 470,
+        "country_culture": 666,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2738,
+        "estate_type": "clergy_estate",
+        "country_id": 342,
+        "tag": "XHJ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 470,
+        "country_culture": 666,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2740,
+        "estate_type": "peasants_estate",
+        "country_id": 342,
+        "tag": "XHJ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 470,
+        "country_culture": 666,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2742,
+        "estate_type": "tribes_estate",
+        "country_id": 342,
+        "tag": "XHJ",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 470,
+        "country_culture": 666,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2761,
+        "estate_type": "nobles_estate",
+        "country_id": 345,
+        "tag": "WNK",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 469,
+        "country_culture": 669,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2762,
+        "estate_type": "clergy_estate",
+        "country_id": 345,
+        "tag": "WNK",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 469,
+        "country_culture": 669,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2764,
+        "estate_type": "peasants_estate",
+        "country_id": 345,
+        "tag": "WNK",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 469,
+        "country_culture": 669,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2766,
+        "estate_type": "tribes_estate",
+        "country_id": 345,
+        "tag": "WNK",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 469,
+        "country_culture": 669,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2769,
+        "estate_type": "nobles_estate",
+        "country_id": 346,
+        "tag": "XHL",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 665,
+        "country_culture": 670,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2770,
+        "estate_type": "clergy_estate",
+        "country_id": 346,
+        "tag": "XHL",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 665,
+        "country_culture": 670,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2772,
+        "estate_type": "peasants_estate",
+        "country_id": 346,
+        "tag": "XHL",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 665,
+        "country_culture": 670,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2774,
+        "estate_type": "tribes_estate",
+        "country_id": 346,
+        "tag": "XHL",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 665,
+        "country_culture": 670,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2785,
+        "estate_type": "nobles_estate",
+        "country_id": 348,
+        "tag": "YUN",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 661,
+        "country_culture": 672,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2786,
+        "estate_type": "clergy_estate",
+        "country_id": 348,
+        "tag": "YUN",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 661,
+        "country_culture": 672,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2788,
+        "estate_type": "peasants_estate",
+        "country_id": 348,
+        "tag": "YUN",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 661,
+        "country_culture": 672,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2790,
+        "estate_type": "tribes_estate",
+        "country_id": 348,
+        "tag": "YUN",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 661,
+        "country_culture": 672,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 2827,
+        "estate_type": "burghers_estate",
+        "country_id": 353,
+        "tag": "XDW",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 446,
+        "country_culture": 318,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 3641,
+        "estate_type": "nobles_estate",
+        "country_id": 455,
+        "tag": "XHM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 378,
+        "country_culture": 674,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 3642,
+        "estate_type": "clergy_estate",
+        "country_id": 455,
+        "tag": "XHM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 378,
+        "country_culture": 674,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 3644,
+        "estate_type": "peasants_estate",
+        "country_id": 455,
+        "tag": "XHM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 378,
+        "country_culture": 674,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 3646,
+        "estate_type": "tribes_estate",
+        "country_id": 455,
+        "tag": "XHM",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 378,
+        "country_culture": 674,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 3649,
+        "estate_type": "nobles_estate",
+        "country_id": 456,
+        "tag": "SNE",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 378,
+        "country_culture": 675,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 3650,
+        "estate_type": "clergy_estate",
+        "country_id": 456,
+        "tag": "SNE",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 378,
+        "country_culture": 675,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 3652,
+        "estate_type": "peasants_estate",
+        "country_id": 456,
+        "tag": "SNE",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 378,
+        "country_culture": 675,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 3654,
+        "estate_type": "tribes_estate",
+        "country_id": 456,
+        "tag": "SNE",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 378,
+        "country_culture": 675,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 3657,
+        "estate_type": "nobles_estate",
+        "country_id": 457,
+        "tag": "LRC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 378,
+        "country_culture": 676,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 3658,
+        "estate_type": "clergy_estate",
+        "country_id": 457,
+        "tag": "LRC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 378,
+        "country_culture": 676,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 3660,
+        "estate_type": "peasants_estate",
+        "country_id": 457,
+        "tag": "LRC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 378,
+        "country_culture": 676,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 3662,
+        "estate_type": "tribes_estate",
+        "country_id": 457,
+        "tag": "LRC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 378,
+        "country_culture": 676,
+        "estate_religion": 32,
+        "country_religion": 32
+      },
+      {
+        "estate_id": 3729,
+        "estate_type": "nobles_estate",
+        "country_id": 466,
+        "tag": "XEC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 331,
+        "country_culture": 531,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 3730,
+        "estate_type": "clergy_estate",
+        "country_id": 466,
+        "tag": "XEC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 331,
+        "country_culture": 531,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 3731,
+        "estate_type": "burghers_estate",
+        "country_id": 466,
+        "tag": "XEC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 331,
+        "country_culture": 531,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 3732,
+        "estate_type": "peasants_estate",
+        "country_id": 466,
+        "tag": "XEC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 331,
+        "country_culture": 531,
+        "estate_religion": 23,
+        "country_religion": 23
+      },
+      {
+        "estate_id": 3734,
+        "estate_type": "tribes_estate",
+        "country_id": 466,
+        "tag": "XEC",
+        "fields": [
+          "culture"
+        ],
+        "estate_culture": 331,
+        "country_culture": 531,
+        "estate_religion": 23,
+        "country_religion": 23
+      }
+    ]
+  },
+  "wars": {
+    "distinct_civil_wars": 1,
+    "active_wars": 0,
+    "active_civil_wars": 0,
+    "elapsed_years": 17.0,
+    "civil_wars_per_polity_year": 0.00012704865963664082
+  },
+  "epidemics": {
+    "non_endemic_outbreaks": 7,
+    "outbreaks": [
+      {
+        "id": 6700,
+        "type": "influenza",
+        "outbreak_date": "1.8.1",
+        "died_out_date": null,
+        "affected_locations": 29,
+        "age_years": 16.416666666666668,
+        "affected_locations_per_year": 1.766497461928934
+      },
+      {
+        "id": 6701,
+        "type": "influenza",
+        "outbreak_date": "1.9.1",
+        "died_out_date": null,
+        "affected_locations": 2,
+        "age_years": 16.333333333333332,
+        "affected_locations_per_year": 0.12244897959183675
+      },
+      {
+        "id": 6702,
+        "type": "measles",
+        "outbreak_date": "9.9.1",
+        "died_out_date": null,
+        "affected_locations": 20,
+        "age_years": 8.333333333333334,
+        "affected_locations_per_year": 2.4
+      },
+      {
+        "id": 6703,
+        "type": "smallpox",
+        "outbreak_date": "12.1.1",
+        "died_out_date": null,
+        "affected_locations": 6,
+        "age_years": 6.0,
+        "affected_locations_per_year": 1.0
+      },
+      {
+        "id": 6704,
+        "type": "influenza",
+        "outbreak_date": "12.6.1",
+        "died_out_date": null,
+        "affected_locations": 1,
+        "age_years": 5.583333333333334,
+        "affected_locations_per_year": 0.1791044776119403
+      },
+      {
+        "id": 6705,
+        "type": "measles",
+        "outbreak_date": "14.7.1",
+        "died_out_date": null,
+        "affected_locations": 1,
+        "age_years": 3.5,
+        "affected_locations_per_year": 0.2857142857142857
+      },
+      {
+        "id": 6706,
+        "type": "typhus",
+        "outbreak_date": "17.9.1",
+        "died_out_date": null,
+        "affected_locations": 2,
+        "age_years": 0.33333333333333215,
+        "affected_locations_per_year": 6.000000000000021
+      }
+    ]
+  },
+  "mercenaries": {
+    "manager_found": true,
+    "army_pool_found": true,
+    "cells": 447,
+    "empty_cells": 0,
+    "one_role_cells": 0,
+    "minimum_cell_depth": 3,
+    "median_cell_depth": 85.0,
+    "total_subunits": 113065,
+    "leader_states": {
+      "available": 1339
+    },
+    "unit_totals": {
+      "antq_hired_horse_company": 62661,
+      "antq_local_retainer_company": 15501,
+      "antq_caravan_guard_company": 11420,
+      "antq_germanic_bodyguards": 8810,
+      "antq_cretan_archers": 8796,
+      "antq_indian_longbow_company": 2493,
+      "antq_deccan_spear_company": 965,
+      "antq_armenian_horse": 828,
+      "antq_sahel_javelin_company": 590,
+      "antq_mesoamerican_atlatl_company": 494,
+      "antq_thracian_peltasts": 349,
+      "antq_andean_sling_company": 105,
+      "antq_dacian_falxmen": 32,
+      "antq_saka_horse": 18,
+      "antq_galatian_swordsmen": 3
+    },
+    "missing_portable_alternatives": [],
+    "missing_class_cells": {},
+    "deficient_cells": [],
+    "class_representatives": {
+      "a_age_1_traditions_heavy_infantry": {
+        "antq_local_retainer_company": 346,
+        "antq_germanic_bodyguards": 89,
+        "antq_deccan_spear_company": 8,
+        "antq_dacian_falxmen": 2,
+        "antq_galatian_swordsmen": 2
+      },
+      "a_age_1_traditions_light_cavalry": {
+        "antq_hired_horse_company": 442,
+        "antq_armenian_horse": 3,
+        "antq_saka_horse": 2
+      },
+      "a_age_1_traditions_light_infantry": {
+        "antq_caravan_guard_company": 291,
+        "antq_cretan_archers": 86,
+        "antq_mesoamerican_atlatl_company": 28,
+        "antq_indian_longbow_company": 23,
+        "antq_sahel_javelin_company": 11,
+        "antq_andean_sling_company": 5,
+        "antq_thracian_peltasts": 3
+      }
+    },
+    "regional_group_coverage": {
+      "germanic": [
+        "antq_germanic_bodyguards"
+      ],
+      "mediterranean": [
+        "antq_cretan_archers",
+        "antq_dacian_falxmen",
+        "antq_galatian_swordsmen",
+        "antq_thracian_peltasts"
+      ],
+      "indic": [
+        "antq_deccan_spear_company",
+        "antq_indian_longbow_company"
+      ],
+      "african": [
+        "antq_sahel_javelin_company"
+      ],
+      "american": [
+        "antq_mesoamerican_atlatl_company"
+      ],
+      "iranian_steppe": [
+        "antq_armenian_horse",
+        "antq_saka_horse"
+      ]
+    },
+    "missing_regional_groups": [],
+    "portable_cell_coverage": {
+      "antq_hired_horse_company": 442,
+      "antq_local_retainer_company": 346
+    }
+  },
+  "log": {
+    "path": "G:\\antiqvitas_user_data\\logs\\error.log",
+    "ai_path": "G:\\antiqvitas_user_data\\logs\\ai.log",
+    "missing_logs": [],
+    "script_errors": 0,
+    "ai_command_errors": 100,
+    "invalid_ai_commands": {
+      "change_trade_capacity": 58,
+      "transfer_occupation": 31,
+      "toggle_can_attach_to": 6,
+      "merge_army": 2,
+      "diplomaticactioncommand": 1,
+      "move_unit": 1,
+      "set_unit_activity": 1
+    },
+    "locations": {},
+    "control": "G:\\antiqvitas\\docs\\playtests\\V108_VANILLA_WARTIME_COMMAND_BASELINE.json",
+    "control_game_version": "1.3.11 (Pavia)",
+    "control_sample_years": 11.044,
+    "native_warning_limits": {
+      "change_trade_capacity": 536,
+      "merge_army": 73,
+      "move_unit": 25,
+      "diplomaticactioncommand": 208,
+      "perform_generic_action": 219,
+      "set_unit_activity": 10,
+      "toggle_can_attach_to": 167,
+      "transfer_occupation": 267
+    },
+    "native_baseline_ai_warnings": {
+      "change_trade_capacity": 58,
+      "transfer_occupation": 31,
+      "toggle_can_attach_to": 6,
+      "merge_army": 2,
+      "diplomaticactioncommand": 1,
+      "move_unit": 1,
+      "set_unit_activity": 1
+    },
+    "actionable_invalid_ai_commands": {},
+    "actionable_ai_command_errors": 0
+  },
+  "failures": []
+}

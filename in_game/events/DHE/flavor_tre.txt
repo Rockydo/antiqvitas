@@ -10,7 +10,7 @@ flavor_tre.1 = {
 	historical_info = flavor_tre.1.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TRE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -57,7 +57,7 @@ flavor_tre.2 = {	#Scholarioi in Insubordination
 	historical_info = flavor_tre.2.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TRE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -140,7 +140,7 @@ flavor_tre.3 = {	#Poisoning of Basil Megas Komnenos
 	historical_info = flavor_tre.3.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = TRE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -197,12 +197,12 @@ flavor_tre.3 = {	#Poisoning of Basil Megas Komnenos
 			limit = { 
 				has_mutual_scripted_relation = {
 					type = relation_type:alliance
-					target = c:BYZ
+					target = c:DUMMY
 				}
 			}
 			remove_relation = {
 				first = ROOT
-				second = c:BYZ
+				second = c:DUMMY
 				type = relation_type:alliance
 			}	
 		}
@@ -222,7 +222,7 @@ flavor_tre.4 = { #The Reign of Alexios II
 	image = "gfx/interface/illustrations/institutions/feudalism.dds"
 
 	dynamic_historical_event = {
-		tag = TRE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -263,7 +263,7 @@ flavor_tre.5 = { #The Importance of Kerasous
 	image = "gfx/interface/illustrations/trade_market/trade.dds"
 
 	dynamic_historical_event = {
-		tag = TRE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -314,7 +314,7 @@ flavor_tre.6 = { #Tax the Venetians and Genoese
 	image = "gfx/interface/illustrations/trade_market/trade.dds"
 
 	dynamic_historical_event = {
-		tag = TRE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -325,12 +325,12 @@ flavor_tre.6 = { #Tax the Venetians and Genoese
 		at_war = no
 		is_subject = no
 		AND = {
-			country_exists = c:VEN
-			c:VEN = { is_subject = no }
+			country_exists = c:DUMMY
+			c:DUMMY = { is_subject = no }
 		}
 		AND = {
-			country_exists = c:GEN
-			c:GEN = { is_subject = no }
+			country_exists = c:DUMMY
+			c:DUMMY = { is_subject = no }
 		}
 	}
 
@@ -343,7 +343,7 @@ flavor_tre.6 = { #Tax the Venetians and Genoese
 			mode = replace
 		}
 
-		c:GEN ?= {
+		c:DUMMY ?= {
 			add_opinion_mutual_effect = { target = root modifier = broken_trade_agreement }
 
 			add_casus_belli = {
@@ -353,7 +353,7 @@ flavor_tre.6 = { #Tax the Venetians and Genoese
 			}
 		}
 
-		c:VEN ?= {
+		c:DUMMY ?= {
 			add_opinion_mutual_effect = { target = root modifier = broken_trade_agreement }
 
 			add_casus_belli = {
@@ -372,7 +372,7 @@ flavor_tre.6 = { #Tax the Venetians and Genoese
 			value = estate_satisfaction_extreme_penalty 
 		}
 
-		c:GEN ?= {
+		c:DUMMY ?= {
 			add_opinion_mutual_effect = { target = root modifier = honored_trade_agreement }
 
 			add_trust_equilibrium = { 
@@ -381,7 +381,7 @@ flavor_tre.6 = { #Tax the Venetians and Genoese
 			}
 		}
 
-		c:VEN ?= {
+		c:DUMMY ?= {
 			add_opinion_mutual_effect = { target = root modifier = honored_trade_agreement }
 
 			add_trust_equilibrium = { 
@@ -403,7 +403,7 @@ flavor_tre.8 = { #The Inheritance of Constantinople
 	image = "gfx/interface/illustrations/government/throne_rooms/throne_room_byzantium.dds"
 
 	dynamic_historical_event = {
-		tag = TRE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -445,7 +445,7 @@ flavor_tre.7 = { #The Aspron
 	image = "gfx/interface/icons/trade_goods/illustrations/icon_goods_silver.dds"
 
 	dynamic_historical_event = {
-		tag = TRE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1

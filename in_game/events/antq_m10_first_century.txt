@@ -13,11 +13,42 @@ antq_m10.1000 = {
 	option = {
 		name = antq_m10.1000.a
 		historical_option = yes
+		set_variable = antq_m10_gaius_eastern_settlement_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1000.b
+		set_variable = antq_m10_gaius_eastern_settlement_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1000.c
+		set_variable = antq_m10_gaius_eastern_settlement_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -33,11 +64,42 @@ antq_m10.1001 = {
 	option = {
 		name = antq_m10.1001.a
 		historical_option = yes
+		set_variable = antq_m10_immensum_bellum_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1001.b
+		set_variable = antq_m10_immensum_bellum_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1001.c
+		set_variable = antq_m10_immensum_bellum_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -53,11 +115,42 @@ antq_m10.1002 = {
 	option = {
 		name = antq_m10.1002.a
 		historical_option = yes
+		set_variable = antq_m10_illyrian_revolt_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1002.b
+		set_variable = antq_m10_illyrian_revolt_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1002.c
+		set_variable = antq_m10_illyrian_revolt_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -67,23 +160,126 @@ antq_m10.1003 = {
 	type = country_event
 	title = antq_m10.1003.title
 	desc = antq_m10.1003.desc
-	outcome = neutral
+	outcome = negative
 	fire_only_once = yes
 	image = "gfx/interface/illustrations/event/antq_teutoburg.dds"
 	dynamic_historical_event = {
 		tag = XAA
-		from = 9.1.1
+		from = 9.8.8
 		to = 10.1.1
 		monthly_chance = 100
+	}
+	trigger = {
+		antq_teutoburg_campaign_ready_trigger = yes
+		NOT = { has_variable = antq_teutoburg_battle_resolved }
+	}
+	immediate = {
+		if = {
+			limit = { country_exists = c:CRU is_at_war_with = c:CRU }
+			c:CRU = { save_scope_as = antq_teutoburg_selected_opponent }
+			set_variable = { name = antq_teutoburg_opponent value = scope:antq_teutoburg_selected_opponent }
+		}
+		else_if = {
+			limit = { country_exists = c:XBL is_at_war_with = c:XBL }
+			c:XBL = { save_scope_as = antq_teutoburg_selected_opponent }
+			set_variable = { name = antq_teutoburg_opponent value = scope:antq_teutoburg_selected_opponent }
+		}
+		else_if = {
+			limit = { country_exists = c:XDW is_at_war_with = c:XDW }
+			c:XDW = { save_scope_as = antq_teutoburg_selected_opponent }
+			set_variable = { name = antq_teutoburg_opponent value = scope:antq_teutoburg_selected_opponent }
+		}
+		else_if = {
+			limit = { country_exists = c:XBK is_at_war_with = c:XBK }
+			c:XBK = { save_scope_as = antq_teutoburg_selected_opponent }
+			set_variable = { name = antq_teutoburg_opponent value = scope:antq_teutoburg_selected_opponent }
+		}
+		else_if = {
+			limit = { country_exists = c:SEM is_at_war_with = c:SEM }
+			c:SEM = { save_scope_as = antq_teutoburg_selected_opponent }
+			set_variable = { name = antq_teutoburg_opponent value = scope:antq_teutoburg_selected_opponent }
+		}
+		else_if = {
+			limit = { country_exists = c:BTV is_at_war_with = c:BTV }
+			c:BTV = { save_scope_as = antq_teutoburg_selected_opponent }
+			set_variable = { name = antq_teutoburg_opponent value = scope:antq_teutoburg_selected_opponent }
+		}
+		else_if = {
+			limit = { country_exists = c:XBM is_at_war_with = c:XBM }
+			c:XBM = { save_scope_as = antq_teutoburg_selected_opponent }
+			set_variable = { name = antq_teutoburg_opponent value = scope:antq_teutoburg_selected_opponent }
+		}
+		else_if = {
+			limit = { country_exists = c:SGM is_at_war_with = c:SGM }
+			c:SGM = { save_scope_as = antq_teutoburg_selected_opponent }
+			set_variable = { name = antq_teutoburg_opponent value = scope:antq_teutoburg_selected_opponent }
+		}
+		else_if = {
+			limit = { country_exists = c:XBN is_at_war_with = c:XBN }
+			c:XBN = { save_scope_as = antq_teutoburg_selected_opponent }
+			set_variable = { name = antq_teutoburg_opponent value = scope:antq_teutoburg_selected_opponent }
+		}
+		set_variable = antq_teutoburg_battle_resolved
+		if = { limit = { has_variable = antq_teutoburg_chain_active } remove_variable = antq_teutoburg_chain_active }
+		if = {
+			limit = { has_variable = antq_teutoburg_varus }
+			var:antq_teutoburg_varus = {
+				remove_character_modifier = antq_m6_historical_lifespan_guard
+				save_scope_as = antq_teutoburg_departing_varus
+			}
+			kill_character_silently = scope:antq_teutoburg_departing_varus
+			remove_variable = antq_teutoburg_varus
+		}
 	}
 	option = {
 		name = antq_m10.1003.a
 		historical_option = yes
-		add_prestige = prestige_mild_bonus
+		set_variable = antq_m10_teutoburg_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
+		add_manpower = { value = monthly_manpower multiply = -3 }
+		add_war_exhaustion = war_exhaustion_severe_bonus
+		add_stability = stability_mild_penalty
+		add_prestige = prestige_mild_penalty
+		var:antq_teutoburg_opponent ?= {
+			add_prestige = prestige_mild_bonus
+			add_army_tradition = army_tradition_mild_bonus
+		}
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_civic_associations }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1003.b
+		set_variable = antq_m10_teutoburg_compact_path
+		add_gold = -18
+		add_manpower = { value = monthly_manpower multiply = -1 }
+		add_war_exhaustion = war_exhaustion_weak_bonus
+		add_stability = stability_weak_bonus
+		var:antq_teutoburg_opponent ?= { add_prestige = prestige_weak_bonus }
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1003.c
+		set_variable = antq_m10_teutoburg_command_path
+		add_gold = -24
+		add_manpower = { value = monthly_manpower multiply = -2 }
+		add_war_exhaustion = war_exhaustion_mild_bonus
+		add_army_tradition = army_tradition_mild_bonus
+		var:antq_teutoburg_opponent ?= { add_manpower = { value = monthly_manpower multiply = -1 } }
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -99,11 +295,42 @@ antq_m10.1004 = {
 	option = {
 		name = antq_m10.1004.a
 		historical_option = yes
+		set_variable = antq_m10_wang_mang_xin_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1004.b
+		set_variable = antq_m10_wang_mang_xin_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1004.c
+		set_variable = antq_m10_wang_mang_xin_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -125,11 +352,41 @@ antq_m10.1005 = {
 	option = {
 		name = antq_m10.1005.a
 		historical_option = yes
+		set_variable = antq_m10_augustan_succession_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_prestige = prestige_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_civic_associations }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1005.b
+		set_variable = antq_m10_augustan_succession_compact_path
+		add_gold = -18
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1005.c
+		set_variable = antq_m10_augustan_succession_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -145,11 +402,42 @@ antq_m10.1006 = {
 	option = {
 		name = antq_m10.1006.a
 		historical_option = yes
+		set_variable = antq_m10_tacfarinas_war_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1006.b
+		set_variable = antq_m10_tacfarinas_war_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1006.c
+		set_variable = antq_m10_tacfarinas_war_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -171,11 +459,41 @@ antq_m10.1007 = {
 	option = {
 		name = antq_m10.1007.a
 		historical_option = yes
+		set_variable = antq_m10_florus_sacrovir_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_prestige = prestige_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_civic_associations }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1007.b
+		set_variable = antq_m10_florus_sacrovir_compact_path
+		add_gold = -18
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1007.c
+		set_variable = antq_m10_florus_sacrovir_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -197,6 +515,12 @@ antq_m10.1008 = {
 	option = {
 		name = antq_m10.1008.a
 		historical_option = yes
+		set_variable = antq_m10_kushan_unification_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		change_tag_cosmetic = { tag = KSH }
 		set_country_rank = country_rank:rank_empire
 		add_prestige = prestige_mild_bonus
@@ -205,6 +529,29 @@ antq_m10.1008 = {
 		if = {
 			limit = { has_advance = antq_imperial_cult }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1008.b
+		set_variable = antq_m10_kushan_unification_compact_path
+		add_gold = -20
+		add_stability = stability_weak_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1008.c
+		set_variable = antq_m10_kushan_unification_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -226,6 +573,12 @@ antq_m10.1009 = {
 	option = {
 		name = antq_m10.1009.a
 		historical_option = yes
+		set_variable = antq_m10_christianity_foundation_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		religion:antq_early_christianity = {
 			enable_religion = yes
 			create_holy_site = { name = antq_christian_jerusalem_memory type = pilgrimage_city importance = 5 location = location:jerusalem religions = { religion:antq_early_christianity } }
@@ -247,6 +600,29 @@ antq_m10.1009 = {
 			add_prestige = prestige_weak_bonus
 		}
 	}
+	option = {
+		name = antq_m10.1009.b
+		set_variable = antq_m10_christianity_foundation_compact_path
+		add_gold = -18
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1009.c
+		set_variable = antq_m10_christianity_foundation_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
+		}
+	}
 }
 
 # Trung Sisters' Revolt; ANTIQVITAS master plan §9; recipient=HAN
@@ -260,11 +636,42 @@ antq_m10.1010 = {
 	option = {
 		name = antq_m10.1010.a
 		historical_option = yes
+		set_variable = antq_m10_trung_sisters_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1010.b
+		set_variable = antq_m10_trung_sisters_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1010.c
+		set_variable = antq_m10_trung_sisters_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -280,11 +687,42 @@ antq_m10.1011 = {
 	option = {
 		name = antq_m10.1011.a
 		historical_option = yes
+		set_variable = antq_m10_mauretania_annexation_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1011.b
+		set_variable = antq_m10_mauretania_annexation_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1011.c
+		set_variable = antq_m10_mauretania_annexation_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -300,11 +738,42 @@ antq_m10.1012 = {
 	option = {
 		name = antq_m10.1012.a
 		historical_option = yes
+		set_variable = antq_m10_claudian_britain_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1012.b
+		set_variable = antq_m10_claudian_britain_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1012.c
+		set_variable = antq_m10_claudian_britain_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -326,6 +795,12 @@ antq_m10.1013 = {
 	option = {
 		name = antq_m10.1013.a
 		historical_option = yes
+		set_variable = antq_m10_xiongnu_split_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		# Northern slice: IRAN-XIO; local M3 coordinate proxy, documented in docs/m10/.
 		location:anaa = {
 			create_country_from_location = {
@@ -393,6 +868,29 @@ antq_m10.1013 = {
 			add_prestige = prestige_weak_bonus
 		}
 	}
+	option = {
+		name = antq_m10.1013.b
+		set_variable = antq_m10_xiongnu_split_compact_path
+		add_gold = -20
+		add_stability = stability_weak_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1013.c
+		set_variable = antq_m10_xiongnu_split_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
+		}
+	}
 }
 
 # Silphium Extinction; ANTIQVITAS master plan §9; recipient=ROM
@@ -412,6 +910,12 @@ antq_m10.1014 = {
 	option = {
 		name = antq_m10.1014.a
 		historical_option = yes
+		set_variable = antq_m10_silphium_extinction_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_prestige = prestige_mild_bonus
 		capital.market = {
 			add_goods_supply = {
@@ -428,6 +932,29 @@ antq_m10.1014 = {
 			add_prestige = prestige_weak_bonus
 		}
 	}
+	option = {
+		name = antq_m10.1014.b
+		set_variable = antq_m10_silphium_extinction_compact_path
+		add_gold = -20
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1014.c
+		set_variable = antq_m10_silphium_extinction_command_path
+		add_gold = -10
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
+		}
+	}
 }
 
 # Rome-Parthia War over Armenia; ANTIQVITAS master plan §9; recipient=ARM
@@ -441,11 +968,42 @@ antq_m10.1015 = {
 	option = {
 		name = antq_m10.1015.a
 		historical_option = yes
+		set_variable = antq_m10_armenian_war_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1015.b
+		set_variable = antq_m10_armenian_war_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1015.c
+		set_variable = antq_m10_armenian_war_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -461,11 +1019,42 @@ antq_m10.1016 = {
 	option = {
 		name = antq_m10.1016.a
 		historical_option = yes
+		set_variable = antq_m10_boudica_revolt_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1016.b
+		set_variable = antq_m10_boudica_revolt_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1016.c
+		set_variable = antq_m10_boudica_revolt_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -487,6 +1076,12 @@ antq_m10.1017 = {
 	option = {
 		name = antq_m10.1017.a
 		historical_option = yes
+		set_variable = antq_m10_great_fire_rome_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_prestige = prestige_mild_bonus
 		capital.market = {
 			add_goods_supply = {
@@ -502,6 +1097,31 @@ antq_m10.1017 = {
 		if = {
 			limit = { has_advance = antq_civic_associations }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1017.b
+		set_variable = antq_m10_great_fire_rome_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1017.c
+		set_variable = antq_m10_great_fire_rome_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -523,11 +1143,40 @@ antq_m10.1018 = {
 	option = {
 		name = antq_m10.1018.a
 		historical_option = yes
+		set_variable = antq_m10_buddhism_han_court_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_prestige = prestige_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_civic_associations }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1018.b
+		set_variable = antq_m10_buddhism_han_court_compact_path
+		add_gold = -18
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1018.c
+		set_variable = antq_m10_buddhism_han_court_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -549,11 +1198,41 @@ antq_m10.1019 = {
 	option = {
 		name = antq_m10.1019.a
 		historical_option = yes
+		set_variable = antq_m10_tiridates_coronation_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_prestige = prestige_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_civic_associations }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1019.b
+		set_variable = antq_m10_tiridates_coronation_compact_path
+		add_gold = -18
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1019.c
+		set_variable = antq_m10_tiridates_coronation_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -569,11 +1248,42 @@ antq_m10.1020 = {
 	option = {
 		name = antq_m10.1020.a
 		historical_option = yes
+		set_variable = antq_m10_great_jewish_revolt_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1020.b
+		set_variable = antq_m10_great_jewish_revolt_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1020.c
+		set_variable = antq_m10_great_jewish_revolt_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -589,12 +1299,42 @@ antq_m10.1021 = {
 	option = {
 		name = antq_m10.1021.a
 		historical_option = yes
+		set_variable = antq_m10_year_four_emperors_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_mild_penalty
 		add_prestige = prestige_mild_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1021.b
+		set_variable = antq_m10_year_four_emperors_compact_path
+		add_gold = -24
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1021.c
+		set_variable = antq_m10_year_four_emperors_command_path
+		add_manpower = { value = monthly_manpower multiply = -1 }
+		add_stability = stability_weak_penalty
+		add_legitimacy = legitimacy_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -610,11 +1350,42 @@ antq_m10.1022 = {
 	option = {
 		name = antq_m10.1022.a
 		historical_option = yes
+		set_variable = antq_m10_batavian_revolt_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1022.b
+		set_variable = antq_m10_batavian_revolt_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1022.c
+		set_variable = antq_m10_batavian_revolt_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -636,6 +1407,12 @@ antq_m10.1023 = {
 	option = {
 		name = antq_m10.1023.a
 		historical_option = yes
+		set_variable = antq_m10_second_temple_destruction_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		location:jerusalem = {
 			if = {
 				limit = { has_building_with_at_least_one_level = antq_second_temple_jerusalem }
@@ -647,6 +1424,29 @@ antq_m10.1023 = {
 		if = {
 			limit = { has_advance = antq_civic_associations }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1023.b
+		set_variable = antq_m10_second_temple_destruction_compact_path
+		add_gold = -18
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1023.c
+		set_variable = antq_m10_second_temple_destruction_command_path
+		add_legitimacy = legitimacy_mild_bonus
+		add_stability = stability_weak_penalty
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -662,12 +1462,42 @@ antq_m10.1024 = {
 	option = {
 		name = antq_m10.1024.a
 		historical_option = yes
+		set_variable = antq_m10_vesuvius_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_mild_penalty
 		add_prestige = prestige_mild_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1024.b
+		set_variable = antq_m10_vesuvius_compact_path
+		add_gold = -24
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1024.c
+		set_variable = antq_m10_vesuvius_command_path
+		add_manpower = { value = monthly_manpower multiply = -1 }
+		add_stability = stability_weak_penalty
+		add_legitimacy = legitimacy_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -689,11 +1519,42 @@ antq_m10.1025 = {
 	option = {
 		name = antq_m10.1025.a
 		historical_option = yes
+		set_variable = antq_m10_mons_graupius_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_prestige = prestige_mild_bonus
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_civic_associations }
 			add_prestige = prestige_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1025.b
+		set_variable = antq_m10_mons_graupius_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1025.c
+		set_variable = antq_m10_mons_graupius_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -709,11 +1570,42 @@ antq_m10.1026 = {
 	option = {
 		name = antq_m10.1026.a
 		historical_option = yes
+		set_variable = antq_m10_dacian_wars_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
+		}
+	}
+	option = {
+		name = antq_m10.1026.b
+		set_variable = antq_m10_dacian_wars_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1026.c
+		set_variable = antq_m10_dacian_wars_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
 		}
 	}
 }
@@ -729,11 +1621,92 @@ antq_m10.1027 = {
 	option = {
 		name = antq_m10.1027.a
 		historical_option = yes
+		set_variable = antq_m10_han_xianbei_chronicle_path
+		ai_chance = {
+			base = 50
+			modifier = { factor = 1.24 stability >= 20 }
+			modifier = { factor = 0.84 at_war = yes }
+		}
 		add_stability = stability_weak_penalty
 		# Learned practice shapes the response; it never gates the current.
 		if = {
 			limit = { has_advance = antq_professional_standing_armies }
-			add_stability = stability_weak_bonus
+			add_army_tradition = army_tradition_weak_bonus
 		}
+	}
+	option = {
+		name = antq_m10.1027.b
+		set_variable = antq_m10_han_xianbei_compact_path
+		add_gold = -16
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_mild_penalty
+		ai_chance = {
+			base = 30
+			modifier = { factor = 1.6 stability < 0 }
+			modifier = { factor = 0.6 gold < 30 }
+		}
+	}
+	option = {
+		name = antq_m10.1027.c
+		set_variable = antq_m10_han_xianbei_command_path
+		add_gold = -10
+		add_manpower = { value = monthly_manpower multiply = -1.5 }
+		add_stability = stability_weak_penalty
+		add_prestige = prestige_mild_bonus
+		ai_chance = {
+			base = 20
+			modifier = { factor = 1.75 at_war = yes }
+			modifier = { factor = 0.25 monthly_manpower < 1 }
+		}
+	}
+}
+
+# Counterfactual Germania policy; derived from the end of the sourced Teutoburg window.
+antq_m10.1099 = {
+	type = country_event
+	title = antq_m10.1099.title
+	desc = antq_m10.1099.desc
+	outcome = neutral
+	fire_only_once = yes
+	image = "gfx/interface/illustrations/event/antq_immensum_bellum.dds"
+	dynamic_historical_event = {
+		tag = XAA
+		from = 10.1.2
+		to = 11.1.2
+		monthly_chance = 100
+	}
+	trigger = {
+		NOT = { has_variable = antq_teutoburg_battle_resolved }
+		NOT = { has_variable = antq_teutoburg_policy_resolved }
+	}
+	immediate = {
+		set_variable = antq_teutoburg_policy_resolved
+		if = {
+			limit = { has_variable = antq_teutoburg_varus }
+			var:antq_teutoburg_varus = {
+				remove_character_modifier = antq_m6_historical_lifespan_guard
+			}
+			remove_variable = antq_teutoburg_varus
+		}
+	}
+	option = {
+		name = antq_m10.1099.a
+		historical_option = yes
+		add_gold = -12
+		add_stability = stability_weak_bonus
+		add_prestige = prestige_weak_penalty
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = antq_m10.1099.b
+		add_manpower = { value = monthly_manpower multiply = -1 }
+		add_prestige = prestige_weak_bonus
+		ai_chance = { base = 30 }
+	}
+	option = {
+		name = antq_m10.1099.c
+		add_gold = -16
+		add_legitimacy = legitimacy_weak_bonus
+		ai_chance = { base = 20 }
 	}
 }

@@ -1,0 +1,26 @@
+﻿# ANTIQVITAS has no active local-governor/proximity-source building chain.
+# Avoid the engine's unused proximity-candidate market path; ordinary building AI remains enabled.
+# Ancient treasuries commit finite location-scaled project batches on a fifteen-year capital cycle and enter saving mode before debt becomes systemic.
+# Ignore the transient pre-settlement opening balance when sizing the initial queue; location count remains the durable capacity signal.
+# The engine floors the location product, so zero minimum avoids a forced candidate for small states without disabling viable utility candidates or independent RGO upgrades.
+# Disable native same-candidate queue replenishment: it otherwise turns a bounded batch into an unbounded chain before the next clear.
+# Preserve autonomous ancient mercenary hiring while reducing same-tick competition for globally shared captains.
+NAI = {
+	DEFAULT_MERCENARY_ARMY_PREFERENCE = 0.25
+	AI_PROXIMITY_CANDIDATE_UPDATE_CHANCE = 0
+	AI_CONSTRUCTIONS_PREDICTED_INCOME_MONTHS = 6
+	AI_CONSTRUCTIONS_EMPTY_QUEUE_UPDATE_MONTHS = 180
+	AI_CONSTRUCTIONS_CLEAR_QUEUE_MONTHS = 180
+	AI_CONSTRUCTION_QUEUE_SIZE_OWNED_LOCATIONS_MULT = 0.03
+	AI_CONSTRUCTION_QUEUE_SIZE_BUILDING_PRICE_REFERENCE = 1000000
+	AI_CONSTRUCTION_QUEUE_SIZE_MINIMUM = 0
+	AI_CONSTRUCTION_QUEUE_PARALLEL_BUILD_RATIO = 0.005
+	AI_CONSTRUCTION_QUEUE_PARALLEL_CHECK_RATIO = 0.02
+	AI_CONSTRUCTION_QUEUE_PARALLEL_BUILD_MAX = 3
+	AI_CONSTRUCTION_QUEUE_PARALLEL_CHECK_MAX = 20
+	AI_CONSTRUCTION_QUEUE_REPEAT_MULT = 0
+	AI_CONSTRUCTION_QUEUE_REPEAT_BIAS = 1000000
+	AI_CONSTRUCTION_DAILY_RANK_BASE_DIVISION = 18
+	AI_HIGH_DEBT_RATIO_TO_TAX_BASE = 1.5
+	AI_SAVING_MODE_MONTHS_TO_REPAY_DEBT = 36
+}

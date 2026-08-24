@@ -11,8 +11,8 @@ flavor_vol.1 = { #Invite catholic advisors to Galicia
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VOL
-		tag = HAL
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 6
@@ -111,9 +111,9 @@ flavor_vol.2 = { #Growth of Sanok
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VOL
-		tag = HAL
-		tag = KIE
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -173,9 +173,9 @@ flavor_vol.3 = { #Regional Capital of Lviv
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VOL
-		tag = HAL
-		tag = KIE
+		tag = DUMMY
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -272,8 +272,8 @@ flavor_vol.4 = { #Hypatian Codex
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VOL
-		tag = HAL
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -342,7 +342,7 @@ flavor_vol.1000 = { #Designation of Casimir as heir
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = HAL
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -371,9 +371,9 @@ flavor_vol.1000 = { #Designation of Casimir as heir
 		has_ruler = yes
 		ruler = character:vol_boleslaw_jerzy_ii_piast
 		has_heir = no
-		country_exists = c:POL
-		country_exists = c:LIT
-		country_exists = c:VOL
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
 	}
 
 	option = { # Pick Casimir
@@ -415,10 +415,10 @@ flavor_vol.1000 = { #Designation of Casimir as heir
 		set_variable = vol_heir_dedko
 		add_estate_satisfaction = { type = estate_type:nobles_estate value = estate_satisfaction_mild_bonus }
 
-		c:POL = {
+		c:DUMMY = {
 			add_casus_belli = {
 				type = casus_belli:cb_claim_throne
-				target = c:HAL
+				target = c:DUMMY
 				years = 20
 			}
 			trigger_event_non_silently = flavor_vol.1001
@@ -429,10 +429,10 @@ flavor_vol.1000 = { #Designation of Casimir as heir
 					is_alive = yes
 				}
 			}
-			c:LIT = {
+			c:DUMMY = {
 				add_casus_belli = {
 					type = casus_belli:cb_claim_throne
-					target = c:VOL
+					target = c:DUMMY
 					character = scope:lit_target_claimant
 					years = 20
 				}
@@ -471,8 +471,8 @@ flavor_vol.1001 = { #Poland Lithuania Information Event
 		character:lit_liubartas_gediminds ?= {
 			save_scope_as = lit_target_claimant
 		}
-		c:VOL = { save_scope_as = target_country }
-		c:HAL = { save_scope_as = target_country_2 }
+		c:DUMMY = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country_2 }
 	}
 
 	option = {
@@ -481,17 +481,17 @@ flavor_vol.1001 = { #Poland Lithuania Information Event
 		show_as_tooltip = {
 			if = {
 				limit = {
-					c:LIT = {
+					c:DUMMY = {
 						has_casus_belli_of_type_on = {
 							type = casus_belli:cb_claim_throne
-							target = c:VOL
+							target = c:DUMMY
 						}
 					}
 				}
-				c:LIT = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:VOL
+						target = c:DUMMY
 						character = scope:lit_target_claimant
 						years = 20
 					}
@@ -499,17 +499,17 @@ flavor_vol.1001 = { #Poland Lithuania Information Event
 			}
 			if = {
 				limit = {
-					c:POL = {
+					c:DUMMY = {
 						has_casus_belli_of_type_on = {
 							type = casus_belli:cb_claim_throne
-							target = c:HAL
+							target = c:DUMMY
 						}
 					}
 				}
-				c:POL = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:HAL
+						target = c:DUMMY
 						years = 20
 					}
 				}
@@ -531,8 +531,8 @@ flavor_vol.1002 = { #Demands of the Nobility - Religion of the Ruler
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VOL
-		tag = HAL
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -604,8 +604,8 @@ flavor_vol.1003 = { #Demands of the Nobility - Privileges
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VOL
-		tag = HAL
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -685,8 +685,8 @@ flavor_vol.1100 = { #The Poisoning of Yuri II
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = VOL
-		tag = HAL
+		tag = DUMMY
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -731,8 +731,8 @@ flavor_vol.1100 = { #The Poisoning of Yuri II
 		}
 		kill_character = character:vol_boleslaw_jerzy_ii_piast
 
-		c:VOL = { save_scope_as = target_country }
-		c:HAL = { save_scope_as = target_country_2 }
+		c:DUMMY = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country_2 }
 
 	}
 
@@ -752,27 +752,27 @@ flavor_vol.1100 = { #The Poisoning of Yuri II
 			limit = { policy:heir_same_religion_group = { is_available_for = root } }
 			add_policy = policy:heir_same_religion_group
 		}
-		c:LIT ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = {
 					character:lit_liubartas_gediminds = {
 						is_alive = yes
 					}
 				}
-				c:LIT = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:VOL
+						target = c:DUMMY
 						character = scope:lit_target_claimant
 						years = 20
 					}
 				}
 			}
 			else = {
-				c:LIT = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:VOL
+						target = c:DUMMY
 						years = 20
 					}
 				}
@@ -790,18 +790,18 @@ flavor_vol.1100 = { #The Poisoning of Yuri II
 			character:lit_liubartas_gediminds = {
 				is_alive = yes
 			}
-			country_exists = c:LIT
+			country_exists = c:DUMMY
 		}
 
 		set_new_ruler = character:lit_liubartas_gediminds
 		make_subject_of = {
-			target = c:LIT
+			target = c:DUMMY
 			type = subject_type:vassal
 		}
-		c:POL ?= {
+		c:DUMMY ?= {
 			add_casus_belli = {
 				type = casus_belli:cb_claim_throne
-				target = c:HAL
+				target = c:DUMMY
 				years = 20
 			}
 			trigger_event_non_silently = flavor_vol.1001
@@ -821,35 +821,35 @@ flavor_vol.1100 = { #The Poisoning of Yuri II
 
 		set_new_ruler = character:vol_dmytro_dedko
 
-		c:POL ?= {
+		c:DUMMY ?= {
 			add_casus_belli = {
 				type = casus_belli:cb_claim_throne
-				target = c:HAL
+				target = c:DUMMY
 				years = 20
 			}
 			trigger_event_non_silently = flavor_vol.1001
 		}
-		c:LIT ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = {
 					character:lit_liubartas_gediminds = {
 						is_alive = yes
 					}
 				}
-				c:LIT = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:VOL
+						target = c:DUMMY
 						character = scope:lit_target_claimant
 						years = 20
 					}
 				}
 			}
 			else = {
-				c:LIT = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:VOL
+						target = c:DUMMY
 						years = 20
 					}
 				}
@@ -888,35 +888,35 @@ flavor_vol.1100 = { #The Poisoning of Yuri II
 
 		add_stability = stability_mild_penalty
 
-		c:POL ?= {
+		c:DUMMY ?= {
 			add_casus_belli = {
 				type = casus_belli:cb_claim_throne
-				target = c:HAL
+				target = c:DUMMY
 				years = 20
 			}
 			trigger_event_non_silently = flavor_vol.1101
 		}
-		c:LIT ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = {
 					character:lit_liubartas_gediminds = {
 						is_alive = yes
 					}
 				}
-				c:LIT = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:VOL
+						target = c:DUMMY
 						character = scope:lit_target_claimant
 						years = 20
 					}
 				}
 			}
 			else = {
-				c:LIT = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:VOL
+						target = c:DUMMY
 						years = 20
 					}
 				}
@@ -953,8 +953,8 @@ flavor_vol.1101 = { #Poisoning of Yuri II Follow Up
 		name = flavor_vol.1101.a
 		historical_option = yes
 
-		add_casus_belli = { target = c:VOL type = casus_belli:cb_claim_throne years = 20 }
-		add_casus_belli = { target = c:HAL type = casus_belli:cb_claim_throne years = 20 }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_claim_throne years = 20 }
+		add_casus_belli = { target = c:DUMMY type = casus_belli:cb_claim_throne years = 20 }
 	}
 
 	option = {
@@ -1004,8 +1004,8 @@ flavor_vol.1102 = { #The Poisoning of Yuri II - Fallback
 			save_scope_as = pol_the_dead_monarch
 		}
 		kill_character = character:vol_boleslaw_jerzy_ii_piast
-		c:VOL ?= { save_scope_as = target_country }
-		c:HAL ?= { save_scope_as = target_country_2 }
+		c:DUMMY ?= { save_scope_as = target_country }
+		c:DUMMY ?= { save_scope_as = target_country_2 }
 	}
 
 	option = { #Give the Throne to Casimir
@@ -1024,27 +1024,27 @@ flavor_vol.1102 = { #The Poisoning of Yuri II - Fallback
 			limit = { policy:heir_same_religion_group = { is_available_for = root } }
 			add_policy = policy:heir_same_religion_group
 		}
-		c:LIT ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = {
 					character:lit_liubartas_gediminds = {
 						is_alive = yes
 					}
 				}
-				c:LIT = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:VOL
+						target = c:DUMMY
 						character = scope:lit_target_claimant
 						years = 20
 					}
 				}
 			}
 			else = {
-				c:LIT = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:VOL
+						target = c:DUMMY
 						years = 20
 					}
 				}
@@ -1062,18 +1062,18 @@ flavor_vol.1102 = { #The Poisoning of Yuri II - Fallback
 			character:lit_liubartas_gediminds = {
 				is_alive = yes
 			}
-			country_exists = c:LIT
+			country_exists = c:DUMMY
 		}
 
 		set_new_ruler = character:lit_liubartas_gediminds
 		make_subject_of = {
-			target = c:LIT
+			target = c:DUMMY
 			type = subject_type:vassal
 		}
-		c:POL ?= {
+		c:DUMMY ?= {
 			add_casus_belli = {
 				type = casus_belli:cb_claim_throne
-				target = c:HAL
+				target = c:DUMMY
 				years = 20
 			}
 			trigger_event_non_silently = flavor_vol.1001
@@ -1093,35 +1093,35 @@ flavor_vol.1102 = { #The Poisoning of Yuri II - Fallback
 
 		set_new_ruler = character:vol_dmytro_dedko
 
-		c:POL ?= {
+		c:DUMMY ?= {
 			add_casus_belli = {
 				type = casus_belli:cb_claim_throne
-				target = c:HAL
+				target = c:DUMMY
 				years = 20
 			}
 			trigger_event_non_silently = flavor_vol.1001
 		}
-		c:LIT ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = {
 					character:lit_liubartas_gediminds = {
 						is_alive = yes
 					}
 				}
-				c:LIT = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:VOL
+						target = c:DUMMY
 						character = scope:lit_target_claimant
 						years = 20
 					}
 				}
 			}
 			else = {
-				c:LIT = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:VOL
+						target = c:DUMMY
 						years = 20
 					}
 				}
@@ -1160,35 +1160,35 @@ flavor_vol.1102 = { #The Poisoning of Yuri II - Fallback
 
 		add_stability = stability_mild_penalty
 
-		c:POL ?= {
+		c:DUMMY ?= {
 			add_casus_belli = {
 				type = casus_belli:cb_claim_throne
-				target = c:HAL
+				target = c:DUMMY
 				years = 20
 			}
 			trigger_event_non_silently = flavor_vol.1001
 		}
-		c:LIT ?= {
+		c:DUMMY ?= {
 			if = {
 				limit = {
 					character:lit_liubartas_gediminds = {
 						is_alive = yes
 					}
 				}
-				c:LIT = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:VOL
+						target = c:DUMMY
 						character = scope:lit_target_claimant
 						years = 20
 					}
 				}
 			}
 			else = {
-				c:LIT = {
+				c:DUMMY = {
 					add_casus_belli = {
 						type = casus_belli:cb_claim_throne
-						target = c:VOL
+						target = c:DUMMY
 						years = 20
 					}
 				}

@@ -23,7 +23,7 @@ flavor_chi.1 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -276,7 +276,7 @@ flavor_chi.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -343,7 +343,7 @@ flavor_chi.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -431,7 +431,7 @@ flavor_chi.5 = {
 			limit = {
 				religion = religion:catholic
 			}
-			add_opinion = { target = c:CHI modifier = opinion_accepted_jesuits }
+			add_opinion = { target = c:DUMMY modifier = opinion_accepted_jesuits }
 		}
 		if = {
 			limit = { modifier:allow_harmony = yes }
@@ -471,7 +471,7 @@ flavor_chi.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -527,7 +527,7 @@ flavor_chi.7 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -638,7 +638,7 @@ flavor_chi.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -648,18 +648,18 @@ flavor_chi.8 = {
 		current_date > 476.9.4
 		any_market_present_in_country = {
 			OR = {
-				has_merchant = c:GBR
-				has_merchant = c:ENG
+				has_merchant = c:DUMMY
+				has_merchant = c:DUMMY
 			}
 		}
 		OR = {
 			AND = {
-				country_exists = c:GBR
-				c:GBR = { flavor_chi.15_foreign_country_trigger = yes }
+				country_exists = c:DUMMY
+				c:DUMMY = { flavor_chi.15_foreign_country_trigger = yes }
 			}
 			AND = {
-				country_exists = c:ENG
-				c:ENG = { flavor_chi.15_foreign_country_trigger = yes }
+				country_exists = c:DUMMY
+				c:DUMMY = { flavor_chi.15_foreign_country_trigger = yes }
 			}
 		}
 	}
@@ -672,11 +672,11 @@ flavor_chi.8 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:burghers_estate background = estate_type:burghers_estate }
 		if = {
-			limit = { country_exists = c:GBR }
-			c:GBR = { flavor_chi.15_foreign_country_saving_scopes_effect = yes }
+			limit = { country_exists = c:DUMMY }
+			c:DUMMY = { flavor_chi.15_foreign_country_saving_scopes_effect = yes }
 		}
 		else = {
-			c:ENG = { flavor_chi.15_foreign_country_saving_scopes_effect = yes }
+			c:DUMMY = { flavor_chi.15_foreign_country_saving_scopes_effect = yes }
 		}
 	}
 
@@ -700,10 +700,10 @@ flavor_chi.8 = {
 	option = {
 		name = flavor_chi.8.b
 		add_research_progress = research_progress_severe_bonus
-		c:GBR ?= {
+		c:DUMMY ?= {
 			add_opinion = { target = root modifier = opinion_ideas }
 		}
-		c:ENG ?= {
+		c:DUMMY ?= {
 			add_opinion = { target = root modifier = opinion_ideas }
 		}
 		if = {
@@ -722,7 +722,7 @@ flavor_chi.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -734,7 +734,7 @@ flavor_chi.9 = {
 			text = variable_mng_accepted_jesuits_tt
 			has_variable = mng_accepted_jesuits
 		}
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -779,7 +779,7 @@ flavor_chi.9 = {
 	option = {
 		name = flavor_chi.9.b
 		add_stability = stability_severe_bonus
-		scope:target_character = { move_country  = c:PAP }
+		scope:target_character = { move_country  = c:DUMMY }
 		if = {
 			limit = { modifier:allow_harmony = yes }
 			add_harmony = harmony_severe_penalty
@@ -795,7 +795,7 @@ flavor_chi.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -825,9 +825,9 @@ flavor_chi.10 = {
 			every_area = {
 				limit = {
 					continent = continent:europe
-					NOT = { c:CHI = { has_discovered_area = prev } }
+					NOT = { c:DUMMY = { has_discovered_area = prev } }
 				}
-				c:CHI = { discover_area = prev }
+				c:DUMMY = { discover_area = prev }
 			}
 		}
 		if = {
@@ -846,7 +846,7 @@ flavor_chi.11 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1353,7 +1353,7 @@ flavor_chi.18 = {	#Away from Home
 		tag = CHI
 		any_cabinet_character ?= {
 			birth_location.province != root.capital.province
-			birth_location.owner = c:CHI
+			birth_location.owner = c:DUMMY
 		}
 	}
 
@@ -1689,7 +1689,7 @@ flavor_chi.21 = {	#Restoration of Prince's Teng's Pavilion
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1697,7 +1697,7 @@ flavor_chi.21 = {	#Restoration of Prince's Teng's Pavilion
 	trigger = {
 		current_date > 476.9.4
 		character:chi_han_yong_script ?= {
-			owner = c:CHI
+			owner = c:DUMMY
 			is_alive = yes
 			in_cabinet = yes
 		}
@@ -1784,7 +1784,7 @@ flavor_chi.22 = {	#Zheng He
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1893,7 +1893,7 @@ flavor_chi.23 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -1963,7 +1963,7 @@ flavor_chi.24 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -2065,7 +2065,7 @@ flavor_chi.25 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -2133,7 +2133,7 @@ flavor_chi.26 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -2197,7 +2197,7 @@ flavor_chi.27 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -2261,7 +2261,7 @@ flavor_chi.28 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 15
@@ -2307,7 +2307,7 @@ flavor_chi.29 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2411,7 +2411,7 @@ flavor_chi.30 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2518,7 +2518,7 @@ flavor_chi.33 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2567,14 +2567,14 @@ scripted_effect set_up_oirat = {
 				count = 12
 				create_sub_unit_with_owner = {
 					type = a_steppe_horse_archers
-					owner = c:OIR
+					owner = c:DUMMY
 				}
 			}
 		}
 	}
-	create_country_from_cores_in_our_locations = c:OIR
+	create_country_from_cores_in_our_locations = c:DUMMY
 	hidden_effect = {
-		c:OIR = {
+		c:DUMMY = {
 			set_capital = scope:target_location
 			change_country_type = army
 			change_government_type = government_type:steppe_horde
@@ -2624,7 +2624,7 @@ flavor_chi.34 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = YUA
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2653,7 +2653,7 @@ flavor_chi.34 = {
 					has_culture_group = culture_group:mongolian_group
 				}
 			}
-			add_core = c:OIR
+			add_core = c:DUMMY
 		}
 		location:khovd = {
 			save_scope_as = target_location
@@ -2678,7 +2678,7 @@ flavor_chi.34 = {
 		set_up_oirat = yes
 
 
-		change_player = c:OIR
+		change_player = c:DUMMY
 	}
 }
 
@@ -2730,7 +2730,7 @@ flavor_chi.36 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -2863,7 +2863,7 @@ flavor_chi.38 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -2911,7 +2911,7 @@ flavor_chi.39 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -2925,8 +2925,8 @@ flavor_chi.39 = {
 	trigger = {
 		current_date > 476.9.4
 		is_yuan_china = yes
-		c:TMN ?= { is_subject_of = ROOT }
-		country_exists = c:KOR
+		c:DUMMY ?= { is_subject_of = ROOT }
+		country_exists = c:DUMMY
 		NOT = {
 			any_owned_location = {
 				is_coastal = yes
@@ -2947,10 +2947,10 @@ flavor_chi.39 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		save_scope_as = chain_initiator
-		c:KOR = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
-		c:TMN = {
+		c:DUMMY = {
 			save_scope_as = subject_country
 		}
 	}
@@ -2959,7 +2959,7 @@ flavor_chi.39 = {
 		name = flavor_chi.39.a
 
 		cancel_subject = scope:subject_country
-		c:KOR = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = flavor_chi.40
 			}
@@ -3036,7 +3036,7 @@ flavor_chi.41 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3093,7 +3093,7 @@ flavor_chi.42 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3172,28 +3172,28 @@ scripted_trigger set_british_target = {
 	trigger_if = {
 		limit = {
 			tag_exists = GBR
-			country_exists = c:GBR
+			country_exists = c:DUMMY
 		}
-		c:GBR = {
+		c:DUMMY = {
 			save_temporary_scope_as = british_target
 		}
 	}
 	trigger_else = {
-		c:ENG = { save_temporary_scope_as = british_target }
+		c:DUMMY = { save_temporary_scope_as = british_target }
 	}
 }
 scripted_effect set_british_target_effect = {
 	if = {
 		limit = {
 			tag_exists = GBR
-			country_exists = c:GBR
+			country_exists = c:DUMMY
 		}
-		c:GBR = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 	}
 	else = {
-		c:ENG = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country }
 	}
 }
 
@@ -3206,7 +3206,7 @@ flavor_chi.43 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -3220,11 +3220,11 @@ flavor_chi.43 = {
 	trigger = {
 		current_date > 476.9.4
 		OR = {
-			country_exists = c:ENG
+			country_exists = c:DUMMY
 			AND = {
 				tag_exists = GBR
-				country_exists = c:GBR
-				c:GBR = { culture = culture:english }
+				country_exists = c:DUMMY
+				c:DUMMY = { culture = culture:english }
 			}
 		}
 
@@ -3295,7 +3295,7 @@ flavor_chi.44 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3364,7 +3364,7 @@ flavor_chi.45 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3412,7 +3412,7 @@ flavor_chi.46 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3485,7 +3485,7 @@ flavor_chi.47 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -3545,7 +3545,7 @@ flavor_chi.48 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -3622,7 +3622,7 @@ flavor_chi.49 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3695,7 +3695,7 @@ flavor_chi.50 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3751,7 +3751,7 @@ flavor_chi.51 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3854,7 +3854,7 @@ flavor_chi.53 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3981,7 +3981,7 @@ flavor_chi.55 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4165,7 +4165,7 @@ flavor_chi.56 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4253,7 +4253,7 @@ flavor_chi.57 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4299,7 +4299,7 @@ flavor_chi.58 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4410,7 +4410,7 @@ flavor_chi.59 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5005,7 +5005,7 @@ flavor_chi.71 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5067,7 +5067,7 @@ flavor_chi.72 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5128,7 +5128,7 @@ flavor_chi.73 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5191,7 +5191,7 @@ flavor_chi.74 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5240,7 +5240,7 @@ flavor_chi.75 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5336,7 +5336,7 @@ flavor_chi.76 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5433,7 +5433,7 @@ flavor_chi.78 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5490,7 +5490,7 @@ flavor_chi.79 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -5595,7 +5595,7 @@ flavor_chi.80 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -5937,7 +5937,7 @@ flavor_chi.84 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -6180,7 +6180,7 @@ flavor_chi.88 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -6238,7 +6238,7 @@ flavor_chi.89 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -6322,7 +6322,7 @@ flavor_chi.90 = {
 
 	trigger = {
 		current_date > 476.9.4
-		c:PLB ?= {
+		c:DUMMY ?= {
 			is_ai = yes
 			has_ports = yes
 		}
@@ -6335,7 +6335,7 @@ flavor_chi.90 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -6367,7 +6367,7 @@ flavor_chi.90 = {
 
 		save_scope_as = from
 
-		c:PLB = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 	}
@@ -6522,7 +6522,7 @@ flavor_chi.92 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -6629,7 +6629,7 @@ flavor_chi.93 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -6719,7 +6719,7 @@ flavor_chi.94 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -6814,7 +6814,7 @@ flavor_chi.95 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -6907,7 +6907,7 @@ flavor_chi.96 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -7006,7 +7006,7 @@ flavor_chi.97 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -7093,7 +7093,7 @@ flavor_chi.98 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -7179,7 +7179,7 @@ flavor_chi.99 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -7265,7 +7265,7 @@ flavor_chi.100 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -7355,7 +7355,7 @@ flavor_chi.101 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -7436,7 +7436,7 @@ flavor_chi.102 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -7522,7 +7522,7 @@ flavor_chi.103 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -7603,7 +7603,7 @@ flavor_chi.104 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -7684,7 +7684,7 @@ flavor_chi.105 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -7765,7 +7765,7 @@ flavor_chi.106 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -7845,7 +7845,7 @@ flavor_chi.107 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -8115,7 +8115,7 @@ flavor_chi.111 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -8605,7 +8605,7 @@ flavor_chi.117 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -8757,7 +8757,7 @@ flavor_chi.119 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CSH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -8812,7 +8812,7 @@ flavor_chi.120 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CSH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -8876,7 +8876,7 @@ flavor_chi.121 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -9145,7 +9145,7 @@ flavor_chi.126 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -9182,7 +9182,7 @@ flavor_chi.127 = { #Xi'an
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -9251,7 +9251,7 @@ flavor_chi.128 = { #Nanjing
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -9326,7 +9326,7 @@ flavor_chi.1000 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -9597,7 +9597,7 @@ flavor_chi.1100 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = PAP
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -9606,8 +9606,8 @@ flavor_chi.1100 = {
 	trigger = {
 		current_date > 476.9.4
 		has_ruler = yes
-		country_exists = c:CHI
-		c:CHI = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			custom_tooltip = {
 				text = variable_mng_accepted_jesuits_tt
 				has_variable = mng_accepted_jesuits
@@ -9622,22 +9622,22 @@ flavor_chi.1100 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:CHI = { save_scope_as = target_chinese_country }
+		c:DUMMY = { save_scope_as = target_chinese_country }
 		ruler = { save_scope_as = target_character }
 	}
 
 	option = {
 		name = flavor_chi.1100.a
-		c:CHI = {
+		c:DUMMY = {
 			trigger_event_non_silently = { id = flavor_chi.1102 }
 		}
 	}
 	option = {
 		name = flavor_chi.1100.b
 		add_prestige = 20.00
-		c:CHI = {
+		c:DUMMY = {
 			trigger_event_non_silently = { id = flavor_chi.1101 }
-			add_opinion = { target = c:PAP modifier = mng_chinese_rites_denounced }
+			add_opinion = { target = c:DUMMY modifier = mng_chinese_rites_denounced }
 		}
 	}
 }
@@ -9655,7 +9655,7 @@ flavor_chi.1101 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:PAP = { save_scope_as = target_papal_country }
+		c:DUMMY = { save_scope_as = target_papal_country }
 	}
 
 	option = {
@@ -9663,8 +9663,8 @@ flavor_chi.1101 = {
 		historical_option = yes
 		remove_variable = mng_accepted_jesuits
 		custom_tooltip = flavor_chi.1102.a.tt
-		c:PAP = {
-			add_opinion = { target = c:CHI modifier = mng_chinese_rites_denounced }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = mng_chinese_rites_denounced }
 		}
 		if = {
 			limit = { modifier:allow_righteousness = yes }
@@ -9705,7 +9705,7 @@ flavor_chi.1102 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
-		c:PAP = { save_scope_as = target_papal_country }
+		c:DUMMY = { save_scope_as = target_papal_country }
 	}
 
 	option = {
@@ -9713,8 +9713,8 @@ flavor_chi.1102 = {
 		historical_option = yes
 		remove_variable = mng_accepted_jesuits
 		custom_tooltip = flavor_chi.1102.a.tt
-		c:PAP = {
-			add_opinion = { target = c:CHI modifier = mng_chinese_rites_denounced }
+		c:DUMMY = {
+			add_opinion = { target = c:DUMMY modifier = mng_chinese_rites_denounced }
 		}
 		if = {
 			limit = { modifier:allow_righteousness = yes }

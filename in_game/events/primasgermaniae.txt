@@ -7,7 +7,7 @@ primasgermaniae.1 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = MAI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -27,8 +27,8 @@ primasgermaniae.1 = {
 		international_organization:hre = {
 			international_organization_has_policy = policy:golden_bull_policy
 		}
-		country_exists = c:PAP
-		c:PAP = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			opinion = {
 				target = root
 				value > 150
@@ -71,9 +71,9 @@ primasgermaniae.2 = {
 	trigger = {
 		current_date > 476.9.4
 		has_reform = government_reform:primas_germaniae
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 		prestige < 10
-		c:PAP = {
+		c:DUMMY = {
 			opinion = { target = root value < -50 }
 		}
 		has_ruler = yes 
@@ -82,7 +82,7 @@ primasgermaniae.2 = {
 				this != root
 				government_type = government_type:theocracy
 				save_temporary_scope_as = new_target
-				c:PAP = {
+				c:DUMMY = {
 					"opinion(scope:new_target)" > 150
 				}
 			}
@@ -99,7 +99,7 @@ primasgermaniae.2 = {
 					this != root
 					government_type = government_type:theocracy
 					save_temporary_scope_as = new_target
-					c:PAP = {
+					c:DUMMY = {
 						"opinion(scope:new_target)" > 150
 					}
 				}
@@ -237,8 +237,8 @@ primasgermaniae.6 = {
 				}
 			}
 		}
-		country_exists = c:PAP
-		c:PAP = { 
+		country_exists = c:DUMMY
+		c:DUMMY = { 
 			opinion = { target = prev value > 150 }
 			has_ruler = yes
 		}
@@ -249,7 +249,7 @@ primasgermaniae.6 = {
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
 		ruler ?= { save_scope_as = home_ruler }
-		c:PAP ?= { 
+		c:DUMMY ?= { 
 			save_scope_as = pope_country
 			ruler ?= { save_scope_as = pope_ruler }
 		}
@@ -268,7 +268,7 @@ primasgermaniae.6 = {
 	}
 	option = {
 		name = primasgermaniae.6.b
-		reverse_add_opinion = { target = c:PAP modifier = opinion_declined_primas_germaniae }
+		reverse_add_opinion = { target = c:DUMMY modifier = opinion_declined_primas_germaniae }
 	}
 }
 

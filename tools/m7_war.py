@@ -54,7 +54,19 @@ IDENTIFIER = re.compile(r"^[A-Za-z][A-Za-z0-9_]*$")
 NUMBER = re.compile(r"^-?(?:\d+(?:\.\d+)?|\.\d+)$")
 UNLOCK = re.compile(r"^\s*unlock_(?:unit|levy)\s*=", re.IGNORECASE | re.MULTILINE)
 UNIVERSAL_TAG = "ALL"
-MERCENARY_POP_MULTIPLIER = "0.05"
+# AD17 production evidence showed that a one-per-class cell loses its only
+# heavy or light infantry entry when a three-subunit company is hired, while
+# the mounted pool remains several times deeper.  Infantry therefore needs a
+# two-entry reserve floor at the same population where cavalry needs one.
+# EU5 1.3.11 permanently removes availability entries when a company is
+# hired; ending the contract returns the leader but does not replenish the
+# cell.  R33 proved that a single-entry reserve fails by AD17, while R34
+# proved that regional substitutes and all three combat classes can be
+# consumed by AD20.  Five tenths is the smallest reviewed century reserve
+# that leaves several hires in every low-population cell without changing
+# company combat strength or making additional company types buildable.
+MERCENARY_INFANTRY_POP_MULTIPLIER = "0.50"
+MERCENARY_CAVALRY_POP_MULTIPLIER = "0.50"
 DEFAULT_MERCENARY_UNITS = frozenset((
     "antq_frontier_spear_company",
     "antq_caravan_guard_company",
@@ -123,6 +135,7 @@ REQUIRED_MERCENARIES = {
     "antq_numidian_horse_company", "antq_syrian_archers", "antq_iberian_swordsmen",
     "antq_dacian_falxmen", "antq_armenian_horse", "antq_cilician_marines",
     "antq_frontier_spear_company", "antq_caravan_guard_company",
+    "antq_hired_horse_company", "antq_local_retainer_company",
     "antq_han_frontier_crossbow_company", "antq_yellow_river_escort_company",
     "antq_indian_longbow_company", "antq_deccan_spear_company",
     "antq_nile_bow_company", "antq_sahel_javelin_company",
@@ -131,13 +144,19 @@ REQUIRED_MERCENARIES = {
 MERCENARY_PROFILES = {
     "foot skirmishers": {"antq_balearic_slingers", "antq_cretan_archers", "antq_syrian_archers", "antq_thracian_peltasts", "antq_cilician_marines"},
     "heavy foot": {"antq_germanic_bodyguards", "antq_galatian_swordsmen", "antq_iberian_swordsmen", "antq_dacian_falxmen"},
-    "mounted companies": {"antq_saka_horse", "antq_numidian_horse_company", "antq_armenian_horse"},
+    "mounted companies": {"antq_saka_horse", "antq_numidian_horse_company", "antq_armenian_horse", "antq_hired_horse_company"},
     "Han companies": {"antq_han_frontier_crossbow_company", "antq_yellow_river_escort_company"},
     "Indian companies": {"antq_indian_longbow_company", "antq_deccan_spear_company"},
     "African companies": {"antq_nile_bow_company", "antq_sahel_javelin_company"},
     "American companies": {"antq_mesoamerican_atlatl_company", "antq_andean_sling_company"},
 }
 REGIONAL_MERCENARY_PROOFS = ("ROM", "PAR", "SUE", "HAN", "SAT", "KUS", "TEO")
+PORTABLE_MERCENARY_DEPTH = frozenset((
+    "antq_frontier_spear_company",
+    "antq_caravan_guard_company",
+    "antq_hired_horse_company",
+    "antq_local_retainer_company",
+))
 
 # The mounted port graph establishes water access; it does not by itself imply
 # an organized navy.  A five-step capability ladder separates local craft,
@@ -480,6 +499,15 @@ def load_units() -> tuple[Unit, ...]:
         raise ValueError("M7 mercenary audit is missing a reviewed company role")
     if any(not profile <= mercenaries for profile in MERCENARY_PROFILES.values()):
         raise ValueError("M7 mercenary audit is missing a reviewed tactical profile")
+    portable = {
+        unit.key for unit in units
+        if unit.status == "mercenary" and UNIVERSAL_TAG in effective_start_tags(unit)
+    }
+    if not PORTABLE_MERCENARY_DEPTH <= portable:
+        raise ValueError(
+            "portable mercenary roster lacks the four reviewed tactical roles: "
+            f"{sorted(PORTABLE_MERCENARY_DEPTH - portable)}"
+        )
     for tag in REGIONAL_MERCENARY_PROOFS:
         visible = [
             unit for unit in units
@@ -628,18 +656,30 @@ def unit_script(units: tuple[Unit, ...]) -> str:
         elif unit.status == "levy":
             lines.extend(("\tbuildable = no", "\tlevy = yes"))
         else:
+            mercenary_multiplier = (
+                MERCENARY_INFANTRY_POP_MULTIPLIER
+                if unit.copy_from in {
+                    "a_age_1_traditions_heavy_infantry",
+                    "a_age_1_traditions_light_infantry",
+                    "a_age_4_reformation_heavy_infantry",
+                }
+                else MERCENARY_CAVALRY_POP_MULTIPLIER
+            )
             lines.extend((
                 # Installed unit definitions keep mercenary-capable types
                 # recruitable. `buildable = no` suppresses their computed
                 # location pools entirely and produces a live 0/0 panel.
                 "\tbuildable = yes",
-                f"\tmercenaries_per_location = {{ pop_type = peasants multiply = {MERCENARY_POP_MULTIPLIER} }}",
-                f"\tmercenaries_per_location = {{ pop_type = tribesmen multiply = {MERCENARY_POP_MULTIPLIER} }}",
+                f"\tmercenaries_per_location = {{ pop_type = peasants multiply = {mercenary_multiplier} }}",
+                f"\tmercenaries_per_location = {{ pop_type = tribesmen multiply = {mercenary_multiplier} }}",
             ))
-            # EU5 needs one unambiguous default per category to initialize a
-            # captain above zero. Every profile receives these universal
-            # ancient heavy- and light-foot defaults; regional companies remain
-            # selectable alternatives rather than competing defaults.
+            # EU5 1.3.11 has exactly two ordinary mercenary-default slots: the
+            # first eligible heavy-infantry and light-infantry definitions.
+            # Competing defaults do not create extra slots; they disappear from
+            # the live manager. Keep one universal ancient unit in each slot.
+            # The mounted and retainer roles remain universal non-default
+            # alternatives, like regional companies that live saves prove are
+            # added alongside these two startup anchors.
             if unit.key in DEFAULT_MERCENARY_UNITS:
                 lines.append("\tdefault = yes")
         lines.append(f"\tage = {unit.age}")
@@ -711,6 +751,8 @@ def diversity_report(units: tuple[Unit, ...]) -> str:
     lines.extend((
         "",
         f"The roster contains **{len(units)}** ancient unit types, including **{len(REQUIRED_MERCENARIES)}** reviewed mercenary companies. The M7 validator fails if a listed core type loses its bounded country availability, a required company or tactical profile disappears, or a core AD 1 seed no longer contains every required role.",
+        "",
+        "EU5 1.3.11 initializes mercenary availability by combat class: an eligible regional company replaces the universal representative of the same class rather than creating a duplicate slot, and hired entries do not regenerate after a contract. Every ancient company therefore carries the same reviewed multi-hire century reserve. Frontier Spears and Caravan Guards remain the two static defaults; Hired Horse and Local Retainers are universal non-default alternatives unlocked by opening warfare foundations. The production-save audit requires heavy foot, light foot, and mounted coverage in every live cell, both portable systems somewhere in the manager, and six distinct regional company families.",
         "",
     ))
     return "\n".join(lines)
@@ -887,9 +929,34 @@ def check(units: tuple[Unit, ...]) -> bool:
     }
     if default_units != DEFAULT_MERCENARY_UNITS:
         failures.append(
-            "default mercenary units differ from the universal ancient pair: "
+            "default mercenary units differ from the two engine-supported "
+            "universal startup anchors: "
             f"{sorted(default_units)}"
         )
+    for unit in (row for row in units if row.status == "mercenary"):
+        key = unit.key
+        block = re.search(
+            rf"(?ms)^{re.escape(key)}\s*=\s*\{{"
+            rf"(.*?)(?=^[A-Za-z][A-Za-z0-9_]*\s*=\s*\{{|\Z)",
+            unit_text,
+        )
+        if block is None:
+            failures.append(f"mercenary block is missing: {key}")
+            continue
+        expected_multiplier = (
+            MERCENARY_INFANTRY_POP_MULTIPLIER
+            if unit.copy_from in {
+                "a_age_1_traditions_heavy_infantry",
+                "a_age_1_traditions_light_infantry",
+                "a_age_4_reformation_heavy_infantry",
+            }
+            else MERCENARY_CAVALRY_POP_MULTIPLIER
+        )
+        if block.group(1).count(f"multiply = {expected_multiplier}") != 2:
+            failures.append(
+                f"{key} does not retain its production-derived multi-hire "
+                f"mercenary reserve density {expected_multiplier}"
+            )
     for path, content in expected.items():
         if not path.is_file():
             failures.append(f"missing {path.relative_to(ROOT)}")

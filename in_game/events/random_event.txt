@@ -4827,7 +4827,7 @@ random_event.92 = {
 		current_date > 476.9.4
 		government_type = government_type:monarchy
 		religion = religion:catholic
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 		capital ?= { continent = continent:europe }
 		country_has_estate = estate_type:nobles_estate
 		country_has_estate = estate_type:clergy_estate

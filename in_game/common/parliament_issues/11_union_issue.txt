@@ -19,7 +19,9 @@ union_enforce_law_implementation = {
 	}
 	allow = {
 	}
-	chance = 100	#The only parliament issue within the Union
+	chance = {
+		add = 0 # ANTIQVITAS runtime quarantine
+	}
 	on_debate_passed = {
 		custom_tooltip = {
 			text = union_enforce_law_implementation_at

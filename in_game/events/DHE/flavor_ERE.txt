@@ -11,7 +11,7 @@ flavor_ere.1 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = ERE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -54,15 +54,15 @@ flavor_ere.1 = {
 			factor = 100
 		}
 		if = {
-			limit = { is_subject_of = c:JAL }
+			limit = { is_subject_of = c:DUMMY }
 			every_current_war = {
-				limit = { is_on_same_side = { country = root target = c:JAL } }
+				limit = { is_on_same_side = { country = root target = c:DUMMY } }
 				root = { leave_war = { war = prev actor = root } }
 			}
-			c:JAL = { trigger_event_non_silently = flavor_ere.2 }
+			c:DUMMY = { trigger_event_non_silently = flavor_ere.2 }
 			custom_tooltip = declare_indep_war_tt
 			show_as_tooltip = {
-				c:JAL = {
+				c:DUMMY = {
 					add_country_modifier = {
 						modifier = rebellious_subjects_modifier
 						years = 3
@@ -75,7 +75,7 @@ flavor_ere.1 = {
 			add_liberty_desire = 25
 		}
 		drop_antagonism_bomb = {
-			target = c:JAL.capital
+			target = c:DUMMY.capital
 			modifier = antagonism_declaring_independence
 		}
 	}
@@ -122,7 +122,7 @@ flavor_ere.2 = {
 			mode = add_and_extend
 		}
 
-		c:ERE = {
+		c:DUMMY = {
 			leave_all_wars_with = root
 			if = {
 				limit = {
@@ -150,9 +150,9 @@ flavor_ere.2 = {
 
 		if = {
 			limit = {
-				c:ERE = { is_subject_of = root }
+				c:DUMMY = { is_subject_of = root }
 			}
-			cancel_subject = c:ERE
+			cancel_subject = c:DUMMY
 		}
 		add_stability = stability_extreme_penalty
 		add_government_power = government_power_mild_penalty
@@ -189,7 +189,7 @@ flavor_ere.3 = {
 			}
 		}
 		ruler ?= { save_scope_as = target_character }
-		c:JAL = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			ruler_or_regent ?= { save_scope_as = target_character2 }
 		}
@@ -216,7 +216,7 @@ flavor_ere.4 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = ERE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -288,7 +288,7 @@ flavor_ere.5 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = ERE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -424,7 +424,7 @@ flavor_ere.6 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = ERE
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2

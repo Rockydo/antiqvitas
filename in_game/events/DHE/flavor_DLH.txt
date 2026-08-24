@@ -24,7 +24,7 @@ flavor_dlh.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -73,7 +73,7 @@ flavor_dlh.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -185,7 +185,7 @@ flavor_dlh.2 = {
 			change_religion = religion:sunni
 			change_religion_for_ruler_and_family = { country = ROOT religion = religion:sunni }
 			make_subject_of = {
-				target = c:DLH
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 			set_variable = {
@@ -205,7 +205,7 @@ flavor_dlh.2 = {
 
 		scope:target_bahmanis_revolter_scope = {
 			declare_war_with_cb = {	
-				target = c:DLH
+				target = c:DUMMY
 				type = casus_belli:cb_independence_war	
 			}
 		}
@@ -267,7 +267,7 @@ flavor_dlh.2 = {
 		change_player = scope:target_bahmanis_revolter_scope
 		scope:target_bahmanis_revolter_scope = {
 			declare_war_with_cb = {	
-				target = c:DLH
+				target = c:DUMMY
 				type = casus_belli:cb_independence_war	
 			}
 		}
@@ -297,7 +297,7 @@ flavor_dlh.3 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -382,7 +382,7 @@ flavor_dlh.3 = {
 			change_religion = religion:sunni
 			change_religion_for_ruler_and_family = { country = ROOT religion = religion:sunni }
 			make_subject_of = {
-				target = c:DLH
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 			set_variable = {
@@ -414,7 +414,7 @@ flavor_dlh.3 = {
 
 		scope:target_malwa_revolter_scope = {
 			declare_war_with_cb = {	
-				target = c:DLH
+				target = c:DUMMY
 				type = casus_belli:cb_independence_war	
 			}
 		}
@@ -477,7 +477,7 @@ flavor_dlh.3 = {
 		change_player = scope:target_malwa_revolter_scope
 		scope:target_malwa_revolter_scope = {
 			declare_war_with_cb = {	
-				target = c:DLH
+				target = c:DUMMY
 				type = casus_belli:cb_independence_war	
 			}
 		}
@@ -507,7 +507,7 @@ flavor_dlh.4 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -574,7 +574,7 @@ flavor_dlh.4 = {
 			change_religion = religion:sunni
 			change_religion_for_ruler_and_family = { country = ROOT religion = religion:sunni }
 			make_subject_of = {
-				target = c:DLH
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 			set_variable = {
@@ -598,7 +598,7 @@ flavor_dlh.4 = {
 
 		scope:target_gujarat_revolter_scope = {
 			declare_war_with_cb = {	
-				target = c:DLH
+				target = c:DUMMY
 				type = casus_belli:cb_independence_war	
 			}
 		}
@@ -660,7 +660,7 @@ flavor_dlh.4 = {
 		change_player = scope:target_gujarat_revolter_scope
 		scope:target_gujarat_revolter_scope = {
 			declare_war_with_cb = {	
-				target = c:DLH
+				target = c:DUMMY
 				type = casus_belli:cb_independence_war	
 			}
 		}
@@ -690,7 +690,7 @@ flavor_dlh.5 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -774,7 +774,7 @@ flavor_dlh.5 = {
 			change_religion = religion:sunni
 			change_religion_for_ruler_and_family = { country = ROOT religion = religion:sunni }
 			make_subject_of = {
-				target = c:DLH
+				target = c:DUMMY
 				type = subject_type:vassal
 			}
 			set_variable = {
@@ -804,7 +804,7 @@ flavor_dlh.5 = {
 
 		scope:target_jaunpur_revolter_scope = {
 			declare_war_with_cb = {	
-				target = c:DLH
+				target = c:DUMMY
 				type = casus_belli:cb_independence_war	
 			}
 		}
@@ -866,7 +866,7 @@ flavor_dlh.5 = {
 		change_player = scope:target_jaunpur_revolter_scope
 		scope:target_jaunpur_revolter_scope = {
 			declare_war_with_cb = {	
-				target = c:DLH
+				target = c:DUMMY
 				type = casus_belli:cb_independence_war	
 			}
 		}
@@ -897,7 +897,7 @@ flavor_dlh.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -928,7 +928,7 @@ flavor_dlh.6 = {
 				}
 			}
 			any_neighbor_location = {
-				owner ?= c:DLH
+				owner ?= c:DUMMY
 				OR = {
 					this.province = location:chai.province
 					area = area:mithila_area
@@ -1056,7 +1056,7 @@ flavor_dlh.6 = {
 			limit = { is_situation_active = situation:fall_of_delhi }
 			custom_tooltip = gain_2_progress_for_delhi_tt
 			hidden_effect = {
-				c:DLH = {
+				c:DUMMY = {
 					change_variable = {
 						name = fall_of_delhi_vote_weight
 						add = 0.02
@@ -1170,7 +1170,7 @@ flavor_dlh.8 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1220,7 +1220,7 @@ flavor_dlh.8 = {
 		}
 		custom_tooltip = delhi_lose_5_support_tt
 		hidden_effect = {
-			c:DLH = {
+			c:DUMMY = {
 				change_variable = {
 					name = fall_of_delhi_vote_weight
 					add = -0.05
@@ -1240,7 +1240,7 @@ flavor_dlh.9 = {
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1279,7 +1279,7 @@ flavor_dlh.9 = {
 		}
 		custom_tooltip = delhi_lose_5_support_tt
 		hidden_effect = {
-			c:DLH = {
+			c:DUMMY = {
 				change_variable = {
 					name = fall_of_delhi_vote_weight
 					subtract = 0.05
@@ -1300,7 +1300,7 @@ flavor_dlh.10 = {
 	historical_info = flavor_dlh.10.historical_info
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1413,7 +1413,7 @@ flavor_dlh.12 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1497,7 +1497,7 @@ flavor_dlh.12 = {
 
 			scope:target_country = {
 				make_subject_of = {
-					target = c:DLH
+					target = c:DUMMY
 					type = subject_type:vassal
 				}
 			}
@@ -1533,7 +1533,7 @@ flavor_dlh.13 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1552,7 +1552,7 @@ flavor_dlh.13 = {
 			is_subject = yes
 			any_owned_location = {
 				any_neighbor_location = {
-					owner ?= c:DLH
+					owner ?= c:DUMMY
 					any_pop = {
 						culture = culture:afghan_culture
 					}
@@ -1567,7 +1567,7 @@ flavor_dlh.13 = {
 			every_owned_location = {
                 limit = {
                     any_neighbor_location = {
-                        owner ?= c:DLH
+                        owner ?= c:DUMMY
 						any_pop = {
 							culture = culture:afghan_culture
 						}
@@ -1610,7 +1610,7 @@ flavor_dlh.13 = {
 			scope:target_area = {
 				every_location_in_area = {
 					limit = {
-						owner ?= c:DLH
+						owner ?= c:DUMMY
 					}
 					change_location_owner = scope:target_country
 					add_core = scope:target_country
@@ -1708,7 +1708,7 @@ flavor_dlh.15 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1770,7 +1770,7 @@ flavor_dlh.16 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2024,7 +2024,7 @@ flavor_dlh.20 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2129,7 +2129,7 @@ flavor_dlh.21 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2243,7 +2243,7 @@ flavor_dlh.22 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2315,7 +2315,7 @@ flavor_dlh.23 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2379,7 +2379,7 @@ flavor_dlh.24 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2446,7 +2446,7 @@ flavor_dlh.25 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2507,7 +2507,7 @@ flavor_dlh.26 = {
 	}
 
 	dynamic_historical_event = { #Should be created as soon as you have a Lodi ruler
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4			#Can't fire before event 12 which starts checking in 1440
 		to = 476.9.4
 		monthly_chance = 1
@@ -2590,7 +2590,7 @@ flavor_dlh.27 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -2851,7 +2851,7 @@ flavor_dlh.32 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -2927,7 +2927,7 @@ flavor_dlh.33 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3012,7 +3012,7 @@ flavor_dlh.34 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3186,7 +3186,7 @@ flavor_dlh.35 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3250,7 +3250,7 @@ flavor_dlh.36 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3313,7 +3313,7 @@ flavor_dlh.37 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3399,7 +3399,7 @@ flavor_dlh.38 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3523,7 +3523,7 @@ flavor_dlh.40 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -3621,7 +3621,7 @@ flavor_dlh.42 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3706,7 +3706,7 @@ flavor_dlh.43 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -3842,7 +3842,7 @@ flavor_dlh.45 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -3909,7 +3909,7 @@ flavor_dlh.46 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -3970,7 +3970,7 @@ flavor_dlh.47 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -4075,7 +4075,7 @@ flavor_dlh.48 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -4085,8 +4085,8 @@ flavor_dlh.48 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:TIM
-		is_subject_of = c:TIM	
+		country_exists = c:DUMMY
+		is_subject_of = c:DUMMY	
 	}
 
 	immediate = {
@@ -4139,7 +4139,7 @@ flavor_dlh.50 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -4640,7 +4640,7 @@ flavor_dlh.56 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -4683,7 +4683,7 @@ flavor_dlh.57 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -4756,7 +4756,7 @@ flavor_dlh.58 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -4852,7 +4852,7 @@ flavor_dlh.59 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -4886,7 +4886,7 @@ flavor_dlh.59 = {
 			factor = 0.1
 		}
 
-		c:KMN ?= {
+		c:DUMMY ?= {
 			ROOT = {
 				add_casus_belli = {
 					target = PREV
@@ -4895,7 +4895,7 @@ flavor_dlh.59 = {
 			}
 		}
 		
-		c:GWL ?= {
+		c:DUMMY ?= {
 			ROOT = {
 				add_casus_belli = {
 					target = PREV
@@ -4940,7 +4940,7 @@ flavor_dlh.60 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -4992,7 +4992,7 @@ flavor_dlh.61 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -5179,7 +5179,7 @@ flavor_dlh.64 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -5294,21 +5294,21 @@ flavor_dlh.65 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:CHG
+		country_exists = c:DUMMY
 		OR = {
-			is_neighbor_of = c:CHG
+			is_neighbor_of = c:DUMMY
 			any_neighbor_country = {
-				is_subject_or_below_of = c:CHG
+				is_subject_or_below_of = c:DUMMY
 			}
 		}
-		c:CHG ?= {
+		c:DUMMY ?= {
 			can_be_attacked = yes
 		}
 	}
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -5321,7 +5321,7 @@ flavor_dlh.65 = {
 
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
-		c:CHG = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 			ruler_or_regent ?= {
@@ -5397,7 +5397,7 @@ flavor_dlh.66 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 4
@@ -5510,8 +5510,8 @@ flavor_dlh.1000 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:DLH
-		is_subject_of = c:DLH
+		country_exists = c:DUMMY
+		is_subject_of = c:DUMMY
 		overlord = {
 			at_war = no
 		}
@@ -5642,9 +5642,9 @@ flavor_dlh.1002 = {
 
 scripted_trigger is_bengali_country = {
 	OR = {
-		this = c:STN
-		this = c:GAU
-		this = c:SGN
+		this = c:DUMMY
+		this = c:DUMMY
+		this = c:DUMMY
 	}
 }
 
@@ -5662,7 +5662,7 @@ flavor_dlh.1100 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -5672,18 +5672,18 @@ flavor_dlh.1100 = {
 
 	trigger = {
 		current_date > 476.9.4
-		NOT = { exists = c:BNG }
-		c:STN ?= {
+		NOT = { exists = c:DUMMY }
+		c:DUMMY ?= {
 			exists = yes
 			is_subject_of = root
 			is_ai = yes
 		}
-		c:GAU ?= {
+		c:DUMMY ?= {
 			exists = yes
 			is_subject_of = root
 			is_ai = yes
 		}
-		c:SGN ?= {
+		c:DUMMY ?= {
 			exists = yes
 			is_subject_of = root
 			is_ai = yes
@@ -5837,7 +5837,7 @@ flavor_dlh.1200 = {
 	}
 
 	dynamic_historical_event = {
-		tag = DLH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -5847,8 +5847,8 @@ flavor_dlh.1200 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:TIM
-		is_subject_of = c:TIM
+		country_exists = c:DUMMY
+		is_subject_of = c:DUMMY
 	}
 
 	immediate = {

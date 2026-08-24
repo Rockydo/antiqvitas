@@ -22,12 +22,14 @@ from pathlib import Path
 from extract_vanilla import tokenize
 from generate_country_definitions import historical_profile_for, load_integration_profiles
 from m5_regional_buildings import CITY_ONLY_FAMILIES, expanded_seed_rows
+from s3_cultivator_buildings import load as load_cultivators, opening_seed_rows as cultivator_opening_seeds
 from m6_power import (
     PARLIAMENT_BY_REFORM,
     character_manager,
     dynasty_manager,
     government_block,
     load_power_data,
+    runtime_adult_rulers,
 )
 from m7_war import load_units, tag_map as m7_tag_map, validate_start_ledgers
 from m8_knowledge import institution_manager as m8_institution_manager, technology_level as m8_technology_level
@@ -66,8 +68,10 @@ VANILLA_REGIONS = ROOT / "docs/vanilla_symbols/regions.json"
 MARKETS = ROOT / "docs/m5/markets.csv"
 URBAN_NODES = ROOT / "docs/m5/urban_nodes.csv"
 ROAD_SEGMENTS = ROOT / "docs/m5/road_segments.csv"
+ROAD_TOPOLOGY = ROOT / "docs/m5/road_segments_topology.csv"
 DEVELOPMENT_PROFILE = ROOT / "docs/m5/development_profile.csv"
 SPECIAL_BUILDINGS = ROOT / "docs/m5/special_buildings.csv"
+OPENING_SPECIAL_BUILDINGS = ROOT / "docs/m5/opening_special_buildings.txt"
 ROMAN_BUILDINGS = ROOT / "docs/m5/roman_buildings.csv"
 ANCIENT_BUILDING_REPLACEMENTS = ROOT / "docs/m5/ancient_building_replacements.csv"
 REGIONAL_BUILDINGS = ROOT / "docs/m5/regional_building_families.csv"
@@ -105,6 +109,15 @@ OPENING_LIQUIDITY_FLOOR = 250
 COMPATIBILITY_LOCATION = "aachen"
 COMPATIBILITY_POP_SIZE = Decimal("0.001")
 COMPATIBILITY_RELIGION = "antq_germanic_religion"
+# Despite its "upper class" label, EU5 1.3.11's bookmark diagnostic follows
+# noble culture only.  Keep a measured ten-percent dominance margin because
+# the engine's normalized diagnostic values are not raw population totals.
+UPPER_CLASS_POP_TYPES = frozenset({"nobles"})
+# Raw headcounts understate the engine's location/control-weighted culture
+# score by roughly 18% in the most layered Han court. A 1.50 headcount margin
+# remains bounded while proving a unique primary court culture after weighting.
+PRIMARY_COURT_DOMINANCE_MARGIN = Decimal("1.50")
+PRIMARY_COURT_BALANCE_TAGS = frozenset({"CAP", "THR", "HAN", "ISK", "IGR"})
 # EU5 dynamically drops religions with no living pop.  Historically present
 # AD 1 faiths receive a minimum bounded community in a plausible anchor; future
 # faiths are enabled by their dated M10 foundation events using the native
@@ -135,6 +148,16 @@ OPENING_RELIGION_SEEDS = {
     ),
 }
 RELIGION_RETENTION_POP_SIZE = Decimal("1.000")
+# These two empire-internal bullion RGOs feed Rome's live opening coinage law.
+# Runtime testing established that smaller laborer strata do not staff their
+# extractive buildings reliably.  Transfer only the shortfall from the same
+# location's peasants so regional, polity, location, and world totals remain
+# exact.  The route ledger and independent floor are validated by
+# tools/s4_roman_mint_supply.py.
+OPENING_STRATA_FLOORS = {
+    "huelva": {"laborers": Decimal("1.000")},
+    "kutlovitsa": {"laborers": Decimal("1.000")},
+}
 
 TOWN_SETUP_BUILDINGS = (
     ("antq_reg_tabernae_row", 1),
@@ -558,7 +581,21 @@ def urban_manager() -> tuple[str, int]:
 def special_building_manager() -> tuple[str, int, int]:
     """Render source-led M5 buildings, regional production families, and M7 forts."""
     required = ("key", "location", "building", "level", "source", "confidence", "note")
-    entries = [(row, "M5") for row in csv_rows(SPECIAL_BUILDINGS)]
+    opening_special_keys = {
+        line.strip()
+        for line in OPENING_SPECIAL_BUILDINGS.read_text(encoding="utf-8-sig").splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    }
+    all_special_rows = csv_rows(SPECIAL_BUILDINGS)
+    known_special_keys = {row["key"] for row in all_special_rows}
+    unknown_opening_keys = opening_special_keys - known_special_keys
+    if unknown_opening_keys:
+        raise ValueError(
+            f"opening_special_buildings.txt references unknown keys {sorted(unknown_opening_keys)}"
+        )
+    entries = [
+        (row, "M5") for row in all_special_rows if row["key"] in opening_special_keys
+    ]
     for row in expanded_seed_rows():
         entry = dict(row)
         entry["building"] = row["family"]
@@ -570,14 +607,23 @@ def special_building_manager() -> tuple[str, int, int]:
     )
     entries.extend((row, "R5 settled floor") for row in r5_settled_floor_rows())
     entries.extend((row, "M7") for row in csv_rows(M7_FORTS))
+    occupancy: dict[str, int] = defaultdict(int)
+    for row, _layer in entries:
+        occupancy[row["location"].strip()] += int(row.get("level") or "1")
+    for row in cultivator_opening_seeds():
+        location = row["location"].strip()
+        cap = 32 if location == "rome" else 16
+        if occupancy[location] + 1 > cap:
+            continue
+        entries.append((row, "M5 cultivator"))
+        occupancy[location] += 1
     if not entries:
         raise ValueError("special_buildings.csv has no specialist-building entries")
     locations = set(json.loads((ROOT / "docs/vanilla_symbols/locations.json").read_text(encoding="utf-8-sig")))
     buildings = set(json.loads((ROOT / "docs/vanilla_symbols/building.json").read_text(encoding="utf-8-sig")))
-    # M5's named Roman specials are mod-owned building types.  Their complete
-    # contracts, source ledger, generated definitions, direct icons, and start
-    # rows are checked by tools/m5_roman_buildings.py before this manager is
-    # emitted; include only its explicit antq_ keys here.
+    # M5's named Roman specials are mod-owned building types. Their complete
+    # catalogue remains available to authored history, while the reviewed
+    # opening manifest prevents dozens of separate Roma widgets at the bookmark.
     with ROMAN_BUILDINGS.open(encoding="utf-8-sig", newline="") as handle:
         buildings.update((row.get("key") or "").strip() for row in csv.DictReader(handle))
     with ANCIENT_BUILDING_REPLACEMENTS.open(encoding="utf-8-sig", newline="") as handle:
@@ -586,6 +632,7 @@ def special_building_manager() -> tuple[str, int, int]:
         buildings.update((row.get("key") or "").strip() for row in csv.DictReader(handle))
     with TRIBAL_BUILDINGS.open(encoding="utf-8-sig", newline="") as handle:
         buildings.update((row.get("key") or "").strip() for row in csv.DictReader(handle))
+    buildings.update(row["key"] for row in load_cultivators())
     urban_locations = {row["location"].strip() for row in csv_rows(URBAN_NODES)}
     capital_sites = {
         row["map_capital"].strip()
@@ -666,6 +713,26 @@ def special_building_manager() -> tuple[str, int, int]:
         fort_count += layer == "M7"
     if failures:
         raise ValueError("\n".join(sorted(set(failures))))
+    placement_counts: dict[str, int] = defaultdict(int)
+    for row, _layer in entries:
+        placement_counts[row["location"].strip()] += int(row["level"].strip())
+    if len(entries) > 3500:
+        raise ValueError(
+            f"opening building budget exceeded: {len(entries)} instances > 3500"
+        )
+    if placement_counts.get("rome", 0) > 32:
+        raise ValueError(
+            f"Roma opening building budget exceeded: {placement_counts['rome']} levels > 32"
+        )
+    density_outliers = {
+        location: count
+        for location, count in placement_counts.items()
+        if location != "rome" and count > 16
+    }
+    if density_outliers:
+        raise ValueError(
+            f"non-Roma opening building density exceeded 16 levels: {density_outliers}"
+        )
     lines = [
         "# M5 specialist/regional-production buildings plus M7 castra/limes proxies; source rationale: docs/m5/ and docs/m7/.",
         "building_manager = {",
@@ -713,49 +780,59 @@ def m7_unit_manager() -> tuple[str, int]:
 
 
 def road_network() -> tuple[str, int]:
-    """Render a small, source-labelled AD 1 road network using installed syntax."""
+    """Render cited road corridors as installed-map-adjacent location steps."""
     required = ("origin", "destination", "corridor", "source", "confidence", "note")
     locations = set(json.loads((ROOT / "docs/vanilla_symbols/locations.json").read_text(encoding="utf-8-sig")))
     controlled: set[str] = set()
     with OWNERSHIP.open(encoding="utf-8-sig", newline="") as handle:
         for row in csv.DictReader(line for line in handle if not line.startswith("#")):
             controlled.add(row["location"])
-    entries = csv_rows(ROAD_SEGMENTS)
-    if not entries:
+    corridors = csv_rows(ROAD_SEGMENTS)
+    entries = csv_rows(ROAD_TOPOLOGY)
+    if not corridors or not entries:
         raise ValueError("road_segments.csv has no segments")
     failures: list[str] = []
-    seen: set[tuple[str, str]] = set()
+    corridor_keys = {
+        (row["origin"].strip(), row["destination"].strip()) for row in corridors
+    }
+    rendered_corridors = {
+        (row["corridor_origin"].strip(), row["corridor_destination"].strip())
+        for row in entries
+    }
+    if rendered_corridors != corridor_keys:
+        failures.append("road topology does not exactly cover the cited corridor ledger")
+    edges: dict[tuple[str, str], list[dict[str, str]]] = {}
     for row in entries:
         if any(not row.get(field, "").strip() for field in required):
-            failures.append("road_segments.csv contains a blank required field")
+            failures.append("road_segments_topology.csv contains a blank required field")
             continue
         origin, destination = row["origin"].strip(), row["destination"].strip()
         if origin == destination:
-            failures.append(f"road_segments.csv has a self-link at {origin}")
+            failures.append(f"road topology has a self-link at {origin}")
         pair = tuple(sorted((origin, destination)))
-        if pair in seen:
-            failures.append(f"road_segments.csv duplicates undirected segment {pair[0]}-{pair[1]}")
         if origin not in locations or destination not in locations:
-            failures.append(f"road_segments.csv has unknown installed endpoint {origin}-{destination}")
+            failures.append(f"road topology has unknown installed endpoint {origin}-{destination}")
         if origin not in controlled or destination not in controlled:
-            failures.append(f"road_segments.csv has endpoint outside AD 1 control {origin}-{destination}")
+            failures.append(f"road topology has endpoint outside AD 1 control {origin}-{destination}")
         if row["confidence"].strip() not in {"secure", "contested"}:
-            failures.append(f"road_segments.csv {origin}-{destination} has invalid confidence")
-        seen.add(pair)
+            failures.append(f"road topology {origin}-{destination} has invalid confidence")
+        edges.setdefault(pair, []).append(row)
     if failures:
         raise ValueError("\n".join(sorted(set(failures))))
     lines = [
         "# Generated by tools/generate_start_mirror.py --write.",
-        "# M5 AD 1 road corridors; source and route rationale: docs/m5/road_segments.csv.",
-        "# Bare endpoint syntax matches the installed start manager's base-road contract.",
+        "# M5 AD 1 cited corridors expanded through installed-map topology.",
+        "# Route rationale: docs/m5/road_segments.csv; adjacency proof: docs/m5/road_segments_topology.csv.",
         "road_network = {",
     ]
-    for row in sorted(entries, key=lambda item: (item["origin"], item["destination"])):
+    for pair, records in sorted(edges.items()):
+        labels = "; ".join(dict.fromkeys(row["corridor"] for row in records))
+        sources = ";".join(dict.fromkeys(row["source"] for row in records))
         lines.append(
-            f"\t{row['origin']} = {row['destination']} # {row['corridor']}; {row['source']}"
+            f"\t{pair[0]} = {pair[1]} # {labels}; {sources}"
         )
     lines.extend(("}", ""))
-    return "\n".join(lines), len(entries)
+    return "\n".join(lines), len(edges)
 
 
 def development_manager() -> tuple[str, int]:
@@ -1479,31 +1556,53 @@ def population_strata(
 ) -> tuple[tuple[str, Decimal], ...]:
     """Split a location total into ancient social strata with exact preservation."""
     if primary == "tribesmen" or kind == "sop":
-        shares = {
-            "tribesmen": Decimal("0.74"), "peasants": Decimal("0.08"),
-            "soldiers": Decimal("0.07"), "nobles": Decimal("0.04"),
-            "clergy": Decimal("0.03"), "laborers": Decimal("0.02"),
-            "burghers": Decimal("0.02"),
-        }
+        # The engine prices nobles at twenty peasant food-equivalents and
+        # soldiers/clergy at five.  Treating four percent of every stateless
+        # community as nobles and seven percent as soldiers therefore made
+        # synthetic courts consume more food than the cultivating households
+        # of whole provinces.  Keep the sourced 72% tribesmen target, but use
+        # genuinely small elite/retinue strata and let settlement rank move the
+        # remainder between cultivators, craft labour, and exchange households.
+        if rank == "city":
+            shares = {
+                "tribesmen": Decimal("0.72"), "peasants": Decimal("0.11"),
+                "burghers": Decimal("0.10"), "laborers": Decimal("0.03"),
+                "soldiers": Decimal("0.015"), "nobles": Decimal("0.01"),
+                "clergy": Decimal("0.015"),
+            }
+        elif rank == "town":
+            shares = {
+                "tribesmen": Decimal("0.72"), "peasants": Decimal("0.15"),
+                "burghers": Decimal("0.08"), "laborers": Decimal("0.02"),
+                "soldiers": Decimal("0.01"), "nobles": Decimal("0.005"),
+                "clergy": Decimal("0.015"),
+            }
+        else:
+            shares = {
+                "tribesmen": Decimal("0.72"), "peasants": Decimal("0.252"),
+                "laborers": Decimal("0.01"), "soldiers": Decimal("0.005"),
+                "nobles": Decimal("0.003"), "clergy": Decimal("0.005"),
+                "burghers": Decimal("0.005"),
+            }
     elif rank == "city":
         shares = {
-            "peasants": Decimal("0.40"), "burghers": Decimal("0.18"),
-            "laborers": Decimal("0.13"), "soldiers": Decimal("0.07"),
-            "nobles": Decimal("0.05"), "clergy": Decimal("0.05"),
-            "slaves": Decimal("0.12"),
+            "peasants": Decimal("0.60"), "burghers": Decimal("0.18"),
+            "laborers": Decimal("0.07"), "soldiers": Decimal("0.02"),
+            "nobles": Decimal("0.01"), "clergy": Decimal("0.02"),
+            "slaves": Decimal("0.10"),
         }
     elif rank == "town":
         shares = {
-            "peasants": Decimal("0.58"), "burghers": Decimal("0.12"),
-            "laborers": Decimal("0.09"), "soldiers": Decimal("0.06"),
-            "nobles": Decimal("0.04"), "clergy": Decimal("0.04"),
+            "peasants": Decimal("0.77"), "burghers": Decimal("0.10"),
+            "laborers": Decimal("0.04"), "soldiers": Decimal("0.01"),
+            "nobles": Decimal("0.005"), "clergy": Decimal("0.005"),
             "slaves": Decimal("0.07"),
         }
     else:
         shares = {
-            "peasants": Decimal("0.79"), "laborers": Decimal("0.06"),
-            "soldiers": Decimal("0.05"), "nobles": Decimal("0.025"),
-            "clergy": Decimal("0.025"), "slaves": Decimal("0.05"),
+            "peasants": Decimal("0.90"), "laborers": Decimal("0.03"),
+            "soldiers": Decimal("0.01"), "nobles": Decimal("0.005"),
+            "clergy": Decimal("0.005"), "slaves": Decimal("0.05"),
         }
     if primary != "tribesmen" and kind != "sop":
         tribal_share = settled_tribal_share(
@@ -1539,6 +1638,35 @@ def population_strata(
         for key, value in sorted(allocated.items())
         if value > 0
     )
+
+
+def apply_opening_strata_floors(
+    location: str,
+    strata: list[tuple[str, Decimal]],
+) -> list[tuple[str, Decimal]]:
+    """Staff system-critical opening RGOs without changing headcounts."""
+    floors = OPENING_STRATA_FLOORS.get(location)
+    if not floors:
+        return strata
+    amounts = dict(strata)
+    before = sum(amounts.values(), Decimal())
+    for pop_type, floor in floors.items():
+        current = amounts.get(pop_type, Decimal())
+        shortfall = floor - current
+        if shortfall <= 0:
+            continue
+        donor = "peasants"
+        donor_size = amounts.get(donor, Decimal())
+        if donor_size - shortfall < THOUSANDTH:
+            raise ValueError(
+                f"{location}: cannot transfer {shortfall} {donor} to the "
+                f"{floor} {pop_type} opening floor"
+            )
+        amounts[donor] = donor_size - shortfall
+        amounts[pop_type] = current + shortfall
+    if sum(amounts.values(), Decimal()) != before:
+        raise ValueError(f"{location}: opening strata floor changed population")
+    return sorted((key, value) for key, value in amounts.items() if value > 0)
 
 
 def culture_presence_cultures() -> list[str]:
@@ -1744,6 +1872,126 @@ def population_manager(
                 {location: value for location, value in fixed.items() if value is not None},
             )
         )
+    urban_profiles = {
+        entry["location"].strip(): entry["profile"].strip()
+        for entry in csv_rows(URBAN_NODES)
+    }
+    population_geography = {
+        entry["location"].strip(): entry
+        for entry in csv_rows(POPULATION_GEOGRAPHY)
+    }
+    location_cultures: dict[str, str] = {}
+    location_religions: dict[str, str] = {}
+    location_strata: dict[str, list[tuple[str, Decimal]]] = {}
+    upper_by_tag: defaultdict[str, defaultdict[str, Decimal]] = defaultdict(
+        lambda: defaultdict(Decimal)
+    )
+    for location in sorted(owners):
+        row = roster[owners[location]]
+        profile = historical_profile_for(row)
+        override = overrides.get(location, {})
+        pop_type = override.get(
+            "pop_type", "tribesmen" if row["kind"] == "sop" else "peasants"
+        )
+        culture = override.get(
+            "culture", culture_remaps.get(location, {}).get("culture", profile.culture)
+        )
+        religion = override.get(
+            "religion",
+            religion_remaps.get(location, {}).get("religion", profile.religion),
+        )
+        rank = urban_profiles.get(location, "rural")
+        geography = population_geography[location]
+        strata = list(
+            population_strata(
+                sizes[location], pop_type, owners[location], row["kind"], rank,
+                row["region"], geography["topography"].strip(),
+                geography["vegetation"].strip(),
+            )
+        )
+        strata = apply_opening_strata_floors(location, strata)
+        opening_seed = OPENING_RELIGION_SEEDS.get(location)
+        if opening_seed:
+            adjusted: list[tuple[str, Decimal]] = []
+            debited = False
+            _seed_religion, _contemporary, _seed_culture, seed_type = opening_seed
+            for stratum, stratum_size in strata:
+                if stratum == seed_type and not debited:
+                    if stratum_size <= RELIGION_RETENTION_POP_SIZE:
+                        raise ValueError(
+                            f"{location}: opening-faith seed exceeds {seed_type}"
+                        )
+                    stratum_size -= RELIGION_RETENTION_POP_SIZE
+                    debited = True
+                adjusted.append((stratum, stratum_size))
+            if not debited:
+                raise ValueError(f"{location}: opening-faith seed has no {seed_type} debit")
+            strata = adjusted
+        location_cultures[location] = culture
+        location_religions[location] = religion
+        location_strata[location] = strata
+        for stratum, stratum_size in strata:
+            if stratum in UPPER_CLASS_POP_TYPES:
+                upper_by_tag[owners[location]][culture] += stratum_size
+
+    # The bookmark initializer requires the primary culture to be the unique
+    # dominant culture among upper-class pops.  Several deliberately layered
+    # polities use a regional mass-population culture alongside a sourced court
+    # culture (Cappadocia, Thrace, the Indo-Scythian/Greek courts, and Han).
+    # Reassign only the minimum 0.001-quantized upper-class slice needed to make
+    # that court profile dominant.  Population, strata, religion, and location
+    # totals remain unchanged; the adjustment is derived for every roster tag,
+    # so future layered profiles cannot silently regress the initializer gate.
+    primary_reassignments: defaultdict[tuple[str, str], Decimal] = defaultdict(Decimal)
+    for tag, row in roster.items():
+        if tag not in PRIMARY_COURT_BALANCE_TAGS:
+            continue
+        primary = historical_profile_for(row).culture
+        totals = upper_by_tag[tag]
+        candidates: defaultdict[str, list[list[object]]] = defaultdict(list)
+        for location in sorted(location for location, owner in owners.items() if owner == tag):
+            culture = location_cultures[location]
+            if culture == primary:
+                continue
+            for stratum, stratum_size in location_strata[location]:
+                if stratum in UPPER_CLASS_POP_TYPES and stratum_size > 0:
+                    candidates[culture].append([location, stratum, stratum_size])
+        while True:
+            rivals = [(amount, culture) for culture, amount in totals.items() if culture != primary]
+            if not rivals:
+                break
+            dominant_amount, dominant = max(rivals, key=lambda item: (item[0], item[1]))
+            if totals[primary] > dominant_amount * PRIMARY_COURT_DOMINANCE_MARGIN:
+                break
+            needed = (
+                (
+                    dominant_amount * PRIMARY_COURT_DOMINANCE_MARGIN
+                    - totals[primary]
+                )
+                / (Decimal(1) + PRIMARY_COURT_DOMINANCE_MARGIN)
+            ).quantize(
+                THOUSANDTH, rounding=ROUND_HALF_UP
+            ) + THOUSANDTH
+            available = sum(
+                (entry[2] for entry in candidates[dominant]), Decimal()
+            )
+            if available < needed:
+                raise ValueError(
+                    f"{tag}: cannot make primary culture {primary} upper-class dominant"
+                )
+            for entry in sorted(candidates[dominant], key=lambda item: (item[2], item[0], item[1]), reverse=True):
+                if needed <= 0:
+                    break
+                take = min(entry[2], needed)
+                primary_reassignments[(entry[0], entry[1])] += take
+                entry[2] -= take
+                totals[dominant] -= take
+                totals[primary] += take
+                needed -= take
+        rivals = [amount for culture, amount in totals.items() if culture != primary]
+        if rivals and totals[primary] <= max(rivals) * PRIMARY_COURT_DOMINANCE_MARGIN:
+            raise ValueError(f"{tag}: primary upper-class dominance was not established")
+
     lines = [
         "# Generated by tools/generate_start_mirror.py --write.",
         "# M4 AD 1 population totals: plan section 12.4; allocation inputs are source-labelled in docs/m4/.",
@@ -1757,57 +2005,42 @@ def population_manager(
         lambda: defaultdict(Decimal)
     )
     country_populations: defaultdict[str, Decimal] = defaultdict(Decimal)
-    urban_profiles = {
-        entry["location"].strip(): entry["profile"].strip()
-        for entry in csv_rows(URBAN_NODES)
-    }
-    population_geography = {
-        entry["location"].strip(): entry
-        for entry in csv_rows(POPULATION_GEOGRAPHY)
-    }
     for location in sorted(owners):
         row = roster[owners[location]]
         profile = historical_profile_for(row)
-        override = overrides.get(location, {})
-        pop_type = override.get("pop_type", "tribesmen" if row["kind"] == "sop" else "peasants")
-        culture = override.get("culture", culture_remaps.get(location, {}).get("culture", profile.culture))
-        religion = override.get(
-            "religion",
-            religion_remaps.get(location, {}).get("religion", profile.religion),
+        culture = location_cultures[location]
+        religion = location_religions[location]
+        shifted = sum(
+            (
+                primary_reassignments[(location, stratum)]
+                for stratum in UPPER_CLASS_POP_TYPES
+            ),
+            Decimal(),
         )
-        resident_cultures[owners[location]].add(culture)
-        country_culture_populations[owners[location]][culture] += sizes[location]
+        if sizes[location] - shifted > 0:
+            resident_cultures[owners[location]].add(culture)
+            country_culture_populations[owners[location]][culture] += sizes[location] - shifted
+        if shifted:
+            resident_cultures[owners[location]].add(profile.culture)
+            country_culture_populations[owners[location]][profile.culture] += shifted
         country_populations[owners[location]] += sizes[location]
-        rank = urban_profiles.get(location, "rural")
-        geography = population_geography[location]
         lines.append(f"\t{location} = {{")
-        strata = list(population_strata(
-            sizes[location], pop_type, owners[location], row["kind"], rank,
-            row["region"], geography["topography"].strip(),
-            geography["vegetation"].strip(),
-        ))
+        strata = location_strata[location]
         opening_seed = OPENING_RELIGION_SEEDS.get(location)
-        if opening_seed:
-            adjusted: list[tuple[str, Decimal]] = []
-            debited = False
-            seed_religion, _contemporary, _culture, seed_type = opening_seed
-            for stratum, stratum_size in strata:
-                if stratum == seed_type and not debited:
-                    if stratum_size <= RELIGION_RETENTION_POP_SIZE:
-                        raise ValueError(
-                            f"{location}: opening-faith seed exceeds {seed_type}"
-                        )
-                    stratum_size -= RELIGION_RETENTION_POP_SIZE
-                    debited = True
-                adjusted.append((stratum, stratum_size))
-            if not debited:
-                raise ValueError(f"{location}: opening-faith seed has no {seed_type} debit")
-            strata = adjusted
         for stratum, stratum_size in strata:
-            lines.append(
-                f"\t\tdefine_pop = {{ type = {stratum} size = {stratum_size:.3f} "
-                f"culture = {culture} religion = {religion} }}"
-            )
+            reassigned = primary_reassignments[(location, stratum)]
+            retained = stratum_size - reassigned
+            if retained > 0:
+                lines.append(
+                    f"\t\tdefine_pop = {{ type = {stratum} size = {retained:.3f} "
+                    f"culture = {culture} religion = {religion} }}"
+                )
+            if reassigned > 0:
+                lines.append(
+                    f"\t\tdefine_pop = {{ type = {stratum} size = {reassigned:.3f} "
+                    f"culture = {profile.culture} religion = {religion} }} "
+                    "# Minimal primary-court upper-class reassignment; total-neutral."
+                )
         if opening_seed:
             seed_religion, _local_religion, seed_culture, seed_type = opening_seed
             lines.append(
@@ -1857,6 +2090,10 @@ def fallback_government_block(kind: str, design_tag: str) -> list[str]:
         "\t\t\t\t}",
     ]
     lines.append("\t\t\t\tlaws = {")
+    lines.extend((
+        "\t\t\t\t\tmarriage_law = monogamous_marriage",
+        "\t\t\t\t\their_religion_law = heir_same_religion",
+    ))
     lines.extend(
         f"\t\t\t\t\t{law} = {option}"
         for law, option in starting_laws_by_tag()[design_tag]
@@ -1992,7 +2229,8 @@ def country_manager(
         if row["tag"] in power.governments:
             lines.extend(
                 government_block(
-                    power.governments[row["tag"]], current_terms.get(row["tag"])
+                    power.governments[row["tag"]], current_terms.get(row["tag"]),
+                    runtime_adult_rulers(power),
                 )
             )
         else:

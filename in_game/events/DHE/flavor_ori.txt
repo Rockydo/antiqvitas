@@ -7,7 +7,7 @@ flavor_ori.1 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -66,7 +66,7 @@ flavor_ori.2 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -98,7 +98,7 @@ flavor_ori.3 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -153,7 +153,7 @@ flavor_ori.4 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -213,7 +213,7 @@ flavor_ori.5 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -302,7 +302,7 @@ flavor_ori.6 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -444,7 +444,7 @@ flavor_ori.7 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -523,7 +523,7 @@ flavor_ori.8 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -597,7 +597,7 @@ flavor_ori.9 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -653,7 +653,7 @@ flavor_ori.10 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -722,7 +722,7 @@ flavor_ori.11 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -812,7 +812,7 @@ flavor_ori.12 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -865,7 +865,7 @@ flavor_ori.13 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -916,7 +916,7 @@ flavor_ori.14 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -993,7 +993,7 @@ flavor_ori.15 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1073,7 +1073,7 @@ flavor_ori.16 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -1155,7 +1155,7 @@ flavor_ori.1000 = {
 	outcome = neutral
 
 	dynamic_historical_event = {
-		tag = ORI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1193,10 +1193,10 @@ flavor_ori.1000 = {
 
 		add_opinion = {
 			modifier = ori_friendly_portuguese_ties
-			target = c:POR
+			target = c:DUMMY
 		}
 
-		c:POR = {
+		c:DUMMY = {
 			add_opinion = {
 				modifier = ori_friendly_portuguese_ties
 				target = root
@@ -1214,10 +1214,10 @@ flavor_ori.1000 = {
 
 		add_opinion = {
 			modifier = ori_hostility_against_por
-			target = c:POR
+			target = c:DUMMY
 		}
 
-		c:POR = {
+		c:DUMMY = {
 			add_opinion = {
 				modifier = ori_hostility_against_por
 				target = root
@@ -1226,7 +1226,7 @@ flavor_ori.1000 = {
 
 		capital.market = {
 			add_merchant_power = {
-				country = c:POR
+				country = c:DUMMY
 				key = ori_sabotaged_merchants
 				power = merchant_power_mild_penalty
 				years = 10
@@ -1244,7 +1244,7 @@ flavor_ori.1001 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:POR
+		country_exists = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -1264,7 +1264,7 @@ flavor_ori.1001 = {
 
 		save_scope_as = target_country
 
-		c:POR = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 			ruler_or_regent ?= {
 				save_scope_as = target_character2

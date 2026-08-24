@@ -113,8 +113,8 @@ witch_trials.1000 = {
 	trigger = {
 		current_date > 476.9.4
 		religion = religion:catholic
-		country_exists = c:PAP
-		c:PAP = { has_ruler = yes }
+		country_exists = c:DUMMY
+		c:DUMMY = { has_ruler = yes }
 		has_ruler = yes
 		NOT = { has_country_modifier = nationwide_witch_hunts }
 		NOT = { has_country_modifier = forbade_witch_hunts }
@@ -222,7 +222,7 @@ witch_trials.1000 = {
 				tag = PAP
 			}
 		}
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_non_silently = { id = witch_trials.1001 } 
 		}
 		scope:target_location = {
@@ -341,7 +341,7 @@ witch_trials.1002 = {
 			text = witch_trials.remove_modifiers.tt
 			remove_witch_trials_modifiers = yes
 		}
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_witchtrials_good }
 		}
 	}
@@ -350,7 +350,7 @@ witch_trials.1002 = {
 		name = witch_trials.1002.b
 
 		add_religious_influence = religious_influence_weak_penalty
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_witchtrials_bad }
 		}
 	}
@@ -381,7 +381,7 @@ witch_trials.1003 = {
 		name = witch_trials.1003.a
 		
 		add_religious_influence = religious_influence_weak_bonus
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_witchtrials_good }
 		}
 	}
@@ -393,7 +393,7 @@ witch_trials.1003 = {
 			text = witch_trials.remove_modifiers.tt
 			remove_witch_trials_modifiers = yes
 		}
-		c:PAP = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = opinion_witchtrials_bad }
 		}
 	}

@@ -408,20 +408,20 @@ apostolic_tax_privilege = {
 
 	on_activate = {
 		add_opinion = {
-			target = c:PAP
+			target = c:DUMMY
 			modifier = opinion_accepted_apostolic_tax
 		}
 		reverse_add_opinion = {
-			target = c:PAP
+			target = c:DUMMY
 			modifier = opinion_accepted_apostolic_tax
 		}
 	}
 	on_deactivate = {
 		remove_opinion = {
-			target = c:PAP
+			target = c:DUMMY
 			modifier = opinion_accepted_apostolic_tax
 		}
-		c:PAP = {
+		c:DUMMY = {
 			remove_opinion = {
 				target = prev
 				modifier = opinion_accepted_apostolic_tax
@@ -624,7 +624,7 @@ fra_papacy_pragmatic_sanctions = {
 		has_unlocked_estate_privilege_trigger = { type = fra_papacy_pragmatic_sanctions }
 	}
 	allow = {
-		c:PAP ?= {
+		c:DUMMY ?= {
 			opinion = {
 				target = ROOT
 				value < 50
@@ -708,20 +708,20 @@ vienna_concordat_privilege = {
 
 	on_activate = {
 		add_opinion = {
-			target = c:PAP
+			target = c:DUMMY
 			modifier = opinion_accepted_vienna_concordat
 		}
 		reverse_add_opinion = {
-			target = c:PAP
+			target = c:DUMMY
 			modifier = opinion_accepted_vienna_concordat
 		}
 	}
 	on_deactivate = {
 		remove_opinion = {
-			target = c:PAP
+			target = c:DUMMY
 			modifier = opinion_accepted_vienna_concordat
 		}
-		c:PAP = {
+		c:DUMMY = {
 			remove_opinion = {
 				target = prev
 				modifier = opinion_accepted_vienna_concordat

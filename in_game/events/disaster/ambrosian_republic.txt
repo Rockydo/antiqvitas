@@ -59,9 +59,9 @@ ambrosian_republic_disaster.2 = {
 	trigger = {
 		current_date > 476.9.4
 		government_type = government_type:monarchy
-		country_exists = c:FRA
+		country_exists = c:DUMMY
 		country_exists = international_organization:hre.leader_country
-		c:FRA = {
+		c:DUMMY = {
 			is_subject = no
 			government_type = government_type:monarchy
 		}
@@ -71,7 +71,7 @@ ambrosian_republic_disaster.2 = {
 	}
 
 	immediate = {
-		c:FRA.ruler_or_regent ?= { save_scope_as = target_character }
+		c:DUMMY.ruler_or_regent ?= { save_scope_as = target_character }
 		international_organization:hre.leader_country ?= { 
 			ruler_or_regent = { save_scope_as = target_character2 } 
 		}
@@ -79,7 +79,7 @@ ambrosian_republic_disaster.2 = {
 
 	option = {
 		name = ambrosian_republic.2.a
-		c:FRA = {
+		c:DUMMY = {
 			trigger_event_silently = { id = ambrosian_republic_disaster.3 }
 		}
 		international_organization:hre.leader_country = {
@@ -100,12 +100,12 @@ ambrosian_republic_disaster.3 = {
 
 		if = {
 			limit = { 
-				c:MLO = { government_type = government_type:republic }
+				c:DUMMY = { government_type = government_type:republic }
 			}
-			add_casus_belli = {	target = c:MLO	type = casus_belli:cb_subjugation	}
+			add_casus_belli = {	target = c:DUMMY	type = casus_belli:cb_subjugation	}
 		}
 		else = {
-			add_casus_belli = {	target = c:MLO	type = casus_belli:cb_claim_throne	}
+			add_casus_belli = {	target = c:DUMMY	type = casus_belli:cb_claim_throne	}
 		}
 		
 	}
@@ -130,12 +130,12 @@ ambrosian_republic_disaster.4 = {
 		name = ambrosian_republic.4.a
 		if = {
 			limit = { 
-				c:MLO = { government_type = government_type:republic }
+				c:DUMMY = { government_type = government_type:republic }
 			}
-			add_casus_belli = {	target = c:MLO	type = casus_belli:cb_subjugation	}
+			add_casus_belli = {	target = c:DUMMY	type = casus_belli:cb_subjugation	}
 		}
 		else = {
-			add_casus_belli = {	target = c:MLO	type = casus_belli:cb_claim_throne	}
+			add_casus_belli = {	target = c:DUMMY	type = casus_belli:cb_claim_throne	}
 		}
 	}
 	option = {

@@ -260,7 +260,7 @@ popup=yes
 idle=no
 option=yes
 pausepopup=no
-sound=yes
+sound=no
 message_category = society
 }
 CHAR_DEATH={
@@ -573,7 +573,7 @@ popup=yes
 idle=no
 option=yes
 pausepopup=no
-sound=yes
+sound=no
 message_category = government
 }
 
@@ -7047,7 +7047,7 @@ message_category = economy
 CREATE_MARKET_OTHERS={
 log=yes
 onmap=no
-popup=yes
+popup=no
 idle=no
 option=no
 pausepopup=no

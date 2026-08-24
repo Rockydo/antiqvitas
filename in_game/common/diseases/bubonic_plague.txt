@@ -9,7 +9,43 @@ bubonic_plague = {
 	}
 	r0 = { value = { 1.4 2.8 } }
 	calc_interval_days = { 7 15 }
-	location_stagnation_chance = { value = 0.24 }
+	# An outbreak may travel through a regional road/port corridor, but its
+	# original focus remains the distance anchor.  A flat stagnation chance let
+	# lightly infected edges relay smallpox and measles around the whole world
+	# in two to four years during the AD 1 production run.
+	location_stagnation_chance = {
+		if = {
+			limit = { "disease_presence(scope:disease)" > 0.05 }
+			value = "distance_to_squared(scope:disease.origin)"
+			multiply = 0.0006
+			multiply = 0.005
+		}
+		else = {
+			value = "distance_to_squared(scope:disease.origin)"
+			multiply = 0.00006
+		}
+		add = 0.24
+		if = {
+			limit = {
+				OR = {
+					location_rank ?= location_rank:rural_settlement
+					AND = {
+						num_roads = 0
+						OR = {
+							topography = mountains
+							topography = wetlands
+							vegetation = desert
+							vegetation = jungle
+						}
+					}
+				}
+			}
+			add = 0.15
+		}
+	}
+	# Armies can carry sickness, but an isolated marching unit must not bypass
+	# the geographic bound and create a second intercontinental focus.
+	sub_unit_stagnation_chance = { value = 0.65 }
 	percentage_to_meet_their_fate_on_calc = { value = 0.3 }
 	location_spread_threshold = { value = 0.12 }
 	monthly_resistance_reduction = 0.001

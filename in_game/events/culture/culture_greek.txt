@@ -209,7 +209,7 @@ culture_greek.3 = {
 			}
 		}
 
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -237,7 +237,7 @@ culture_greek.3 = {
 			}
 		}
 
-		c:PAP ?= {
+		c:DUMMY ?= {
 			capital = {
 				save_scope_as = papal_capital
 			}
@@ -3146,9 +3146,9 @@ culture_greek.30 = {
 
 	trigger = {
 		current_date > 476.9.4
-		NOT = { country_exists = c:BYZ }
+		NOT = { country_exists = c:DUMMY }
 
-		NOT = { country_exists = c:ROM }
+		NOT = { country_exists = c:DUMMY }
 
 		NOT = { has_or_had_tag = BYZ }
 

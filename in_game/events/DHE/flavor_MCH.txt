@@ -8,7 +8,7 @@ flavor_mch.1 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = MCH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -59,7 +59,7 @@ flavor_mch.2 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = MCH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -73,9 +73,9 @@ flavor_mch.2 = {
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:CHI
+		country_exists = c:DUMMY
 		at_war = no
-		is_neighbor_of = c:CHI
+		is_neighbor_of = c:DUMMY
 	}
 
 	illustration_tags = {
@@ -85,7 +85,7 @@ flavor_mch.2 = {
 	
 	immediate = {
 		event_illustration_poptype_effect = { foreground = pop_type:nobles background = pop_type:soldiers }
-		c:CHI = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 	}
@@ -109,7 +109,7 @@ flavor_mch.3 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = MCH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -154,7 +154,7 @@ flavor_mch.4 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = MCH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -263,7 +263,7 @@ flavor_mch.6 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MCH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -321,7 +321,7 @@ flavor_mch.7 = {
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = MCH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -371,7 +371,7 @@ flavor_mch.8 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MCH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -447,7 +447,7 @@ flavor_mch.9 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MCH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -526,7 +526,7 @@ flavor_mch.10 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MCH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -545,10 +545,10 @@ flavor_mch.10 = {
 	trigger = {
 		current_date > 476.9.4
 		culture ?= { has_culture_group = culture_group:jurchen_group }
-		country_exists = c:KOR
-		NOT = { this = c:KOR }
+		country_exists = c:DUMMY
+		NOT = { this = c:DUMMY }
 		is_leader_of_international_organization = international_organization:middle_kingdom
-		c:KOR = {
+		c:DUMMY = {
 			is_neighbor_of = ROOT
 			NOT = { is_subject_or_below_of = ROOT }
 		}
@@ -556,7 +556,7 @@ flavor_mch.10 = {
 
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:KOR = {
+		c:DUMMY = {
 			save_scope_as = target_country
 		}
 	}
@@ -680,7 +680,7 @@ flavor_mch.12 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -733,7 +733,7 @@ flavor_mch.13 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -810,7 +810,7 @@ flavor_mch.14 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -899,7 +899,7 @@ flavor_mch.15 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -963,7 +963,7 @@ flavor_mch.16 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1011,7 +1011,7 @@ flavor_mch.17 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MCH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -1067,7 +1067,7 @@ flavor_mch.18 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = CHI
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1113,7 +1113,7 @@ flavor_mch.19 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = MCH
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10

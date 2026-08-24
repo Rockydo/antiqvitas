@@ -40,7 +40,7 @@ flavor_gen.1 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25	#We want this to happen almost guaranteed
@@ -122,7 +122,7 @@ flavor_gen.2 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -195,7 +195,7 @@ flavor_gen.3 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -216,9 +216,9 @@ flavor_gen.3 = {
 	trigger = {
 		current_date > 476.9.4
 		has_reform = government_reform:merchant_republic
-		country_exists = c:TUR
+		country_exists = c:DUMMY
 		location:constantinople = {
-			owner = c:TUR
+			owner = c:DUMMY
 		}
 		
 		any_market_with_merchants = {
@@ -235,7 +235,7 @@ flavor_gen.3 = {
 		historical_option = yes
 		custom_tooltip = flavor_gen.3.a.tt
 
-		c:TUR = {
+		c:DUMMY = {
 			trigger_event_silently = { id = flavor_gen.4 days = 23 }
 		}
 	}
@@ -257,7 +257,7 @@ flavor_gen.4 = {
 	}
 	immediate = {
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
-		c:GEN = {
+		c:DUMMY = {
 			random_owned_location = {
 				limit = {
 					area = area:crimea_area
@@ -270,7 +270,7 @@ flavor_gen.4 = {
 	option = {
 		name = flavor_gen.4.a
 		historical_option = yes
-		c:GEN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = gen_trade_access_denied }
 			hidden_effect = {
 				trigger_event_silently = { id = flavor_gen.5 days = 32 }
@@ -280,13 +280,13 @@ flavor_gen.4 = {
 			limit = {
 				exists = scope:target_location
 			}
-			add_casus_belli =  { type = casus_belli:cb_conquer_province province = scope:target_location.province target = c:GEN }
+			add_casus_belli =  { type = casus_belli:cb_conquer_province province = scope:target_location.province target = c:DUMMY }
 		}
 	}
 	option = {
 		name = flavor_gen.4.b
 		custom_tooltip = flavor_gen.4.b.tt
-		c:GEN = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = gen_trade_given }
 			trigger_event_silently = { id = flavor_gen.6 days = 32 }
 		}
@@ -311,7 +311,7 @@ flavor_gen.5 = {
 	}
 	option = {
 		name = flavor_gen.5.a
-		c:TUR = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = gen_trade_access_denied }
 		}
 		add_prestige = prestige_mild_penalty
@@ -338,7 +338,7 @@ flavor_gen.6 = {
 		name = flavor_gen.6.a
 		create_relation = {
 			first = this
-			second = c:TUR
+			second = c:DUMMY
 			type = relation_type:sound_toll_exemption
 		}
 	}
@@ -355,7 +355,7 @@ flavor_gen.7 = {
 	outcome = neutral
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -416,7 +416,7 @@ flavor_gen.8 = {
 	major = yes
 	
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -472,7 +472,7 @@ flavor_gen.9 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -486,11 +486,11 @@ flavor_gen.9 = {
 	}
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:FRA
+		country_exists = c:DUMMY
 		government_type = government_type:republic
-		NOT = { c:FRA = international_organization:hre.leader_country }
+		NOT = { c:DUMMY = international_organization:hre.leader_country }
 
-		c:FRA = {
+		c:DUMMY = {
 			num_of_non_rural >= 10
 		}
 	}
@@ -498,13 +498,13 @@ flavor_gen.9 = {
 	option = {
 		name = flavor_gen.9.a
 		historical_option = yes
-		c:FRA = { add_opinion = { target = root modifier = gen_pro_guelph }	}
+		c:DUMMY = { add_opinion = { target = root modifier = gen_pro_guelph }	}
 		international_organization:hre.leader_country = {	add_opinion = { target = root modifier = gen_anti_ghibellines }	}
 	}
 	option = {
 		name = flavor_gen.9.b
 		international_organization:hre.leader_country = {	add_opinion = { target = root modifier = gen_pro_ghibellines } 	}
-		c:FRA = {	add_opinion = { target = root modifier = gen_anti_guelph } }
+		c:DUMMY = {	add_opinion = { target = root modifier = gen_anti_guelph } }
 	}
 }
 
@@ -516,7 +516,7 @@ flavor_gen.10 = {
 	desc = flavor_gen.10.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -571,7 +571,7 @@ flavor_gen.11 = {
 	outcome = neutral
 	
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -619,7 +619,7 @@ flavor_gen.12 = {
 	outcome = neutral
 	
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -639,12 +639,12 @@ flavor_gen.12 = {
 			any_location_in_region = {
 				OR = {
 					AND = {
-						country_exists = c:FRA
-						owner ?= c:FRA
+						country_exists = c:DUMMY
+						owner ?= c:DUMMY
 					}
 					AND = {
-						country_exists = c:CAS
-						owner ?= c:CAS
+						country_exists = c:DUMMY
+						owner ?= c:DUMMY
 					}
 				}
 			}
@@ -655,14 +655,14 @@ flavor_gen.12 = {
 	option = {
 		name = flavor_gen.12.a
 		historical_option = yes
-		c:FRA = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = gen_andrea_doria_reform }
 		}
 		add_prestige = prestige_weak_bonus
 	}
 	option = {
 		name = flavor_gen.12.b
-		c:CAS = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = gen_andrea_doria_reform }
 		}
 		add_religious_influence = religious_influence_mild_bonus
@@ -678,7 +678,7 @@ flavor_gen.13 = {
 	outcome = neutral
 	
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -720,7 +720,7 @@ flavor_gen.14 = {
 	major = yes
 	
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -817,17 +817,17 @@ flavor_gen.15 = {
 	desc = flavor_gen.15.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
 	}
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:BYZ
-		c:BYZ = { has_ruler = yes }
+		country_exists = c:DUMMY
+		c:DUMMY = { has_ruler = yes }
 		location:chios = {
-			owner = c:BYZ
+			owner = c:DUMMY
 		}
 		estate_tax_base:burghers_estate >= 10
 	}
@@ -869,7 +869,7 @@ flavor_gen.16 = {
 	desc = flavor_gen.16.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -880,8 +880,8 @@ flavor_gen.16 = {
 			text = variable_gen_has_maona_event_tt
 			has_variable = gen_has_maona_event
 		}
-		country_exists = c:BYZ
-		c:BYZ = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			owns = location:chios
 			has_any_active_disaster = yes
 		}
@@ -905,7 +905,7 @@ flavor_gen.16 = {
 			add_location_modifier = { modifier = vignoso_garrison_modifier years = 5 mode = add_and_extend }
 		}
 		if = {
-			limit = { location:ikaria = { owner = c:BYZ } }
+			limit = { location:ikaria = { owner = c:DUMMY } }
 			add_location_as_core = location:ikaria
 			location:ikaria = {
 				change_location_owner = root
@@ -914,7 +914,7 @@ flavor_gen.16 = {
 			}
 		}
 		if = {
-			limit = { location:samos = { owner = c:BYZ } }
+			limit = { location:samos = { owner = c:DUMMY } }
 			add_location_as_core = location:samos
 			location:samos = {
 				change_location_owner = root
@@ -922,7 +922,7 @@ flavor_gen.16 = {
 				add_location_modifier = { modifier = vignoso_garrison_modifier years = 5 mode = add_and_extend }
 			}
 		}
-		c:BYZ = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = gen_has_taken_chios_from_us }
 			trigger_event_non_silently = { id = flavor_gen.51 }
 		}
@@ -930,7 +930,7 @@ flavor_gen.16 = {
 	#We should not anger the Greeks and return the island.
 	option = {
 		name = flavor_gen.16.b
-		c:BYZ = {
+		c:DUMMY = {
 			add_opinion = { target = root modifier = gen_has_returned_chios_to_us }
 		}
 	}
@@ -944,7 +944,7 @@ flavor_gen.17 = {
 	desc = flavor_gen.17.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1053,7 +1053,7 @@ flavor_gen.18 = {
 	desc = flavor_gen.18.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 80
@@ -1139,7 +1139,7 @@ flavor_gen.19 = {
 	desc = flavor_gen.19.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 3
@@ -1196,7 +1196,7 @@ flavor_gen.20 = {
 	desc = flavor_gen.20.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1269,7 +1269,7 @@ flavor_gen.21 = {
 	desc = flavor_gen.21.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1312,20 +1312,20 @@ flavor_gen.22 = {
 	desc = flavor_gen.22.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
 	}
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:FRA
-		country_exists = c:ENG
-		c:FRA = {
-			is_at_war_with = c:ENG
+		country_exists = c:DUMMY
+		country_exists = c:DUMMY
+		c:DUMMY = {
+			is_at_war_with = c:DUMMY
 		}
-		NOT = { is_at_war_with = c:ENG }
-		NOT = { is_at_war_with = c:FRA }
+		NOT = { is_at_war_with = c:DUMMY }
+		NOT = { is_at_war_with = c:DUMMY }
 		situation:hundred_years_war = {
 			situation_is_active = yes
 		}
@@ -1352,18 +1352,18 @@ flavor_gen.22 = {
 			save_scope_as = crossbowmen_unit
 		}
 		save_scope_as = genoese_crossbowmen_seller
-		c:FRA = { save_scope_as = target_country }
-		c:ENG = { save_scope_as = target_country2 }		
+		c:DUMMY = { save_scope_as = target_country }
+		c:DUMMY = { save_scope_as = target_country2 }		
 	}
 	#Let us support the [GetCountry('FRA').GetAdjective].
 	option = {
 		name = flavor_gen.22.a
 		historical_option = yes
-		reverse_add_opinion = { modifier = gen_offered_crossbowmen target = c:FRA }
-		reverse_add_opinion = { modifier = gen_offered_opponent_crossbowmen target = c:ENG }
+		reverse_add_opinion = { modifier = gen_offered_crossbowmen target = c:DUMMY }
+		reverse_add_opinion = { modifier = gen_offered_opponent_crossbowmen target = c:DUMMY }
 		custom_tooltip = {
 			text = flavor_gen.22.a.tt
-			c:FRA = {
+			c:DUMMY = {
 				save_scope_as = genoese_crossbowmen_buyer
 				trigger_event_silently = {
 					id = flavor_gen.23
@@ -1375,11 +1375,11 @@ flavor_gen.22 = {
 	#The [GetCountry('ENG').GetAdjective] will pay nicely.
 	option = {
 		name = flavor_gen.22.b
-		reverse_add_opinion = { modifier = gen_offered_crossbowmen target = c:ENG }
-		reverse_add_opinion = { modifier = gen_offered_opponent_crossbowmen target = c:FRA }
+		reverse_add_opinion = { modifier = gen_offered_crossbowmen target = c:DUMMY }
+		reverse_add_opinion = { modifier = gen_offered_opponent_crossbowmen target = c:DUMMY }
 		custom_tooltip = {
 			text = flavor_gen.22.b.tt
-			c:ENG = {
+			c:DUMMY = {
 				save_scope_as = genoese_crossbowmen_buyer
 				trigger_event_silently = {
 					id = flavor_gen.23
@@ -1428,10 +1428,10 @@ flavor_gen.23 = {
 			limit = {
 				tag = FRA
 			}
-			c:ENG = { save_scope_as = the_enemy }
+			c:DUMMY = { save_scope_as = the_enemy }
 		}
 		else = {
-			c:FRA = { save_scope_as = the_enemy }	#France is by default always the enemy
+			c:DUMMY = { save_scope_as = the_enemy }	#France is by default always the enemy
 		}
 		save_scope_as = genoese_crossbowmen_buyer
 	}
@@ -1598,7 +1598,7 @@ flavor_gen.25 = {
 	desc = flavor_gen.25.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -1612,11 +1612,11 @@ flavor_gen.25 = {
 	}
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:VEN
+		country_exists = c:DUMMY
 		owns = location:chios
-		NOT = { is_allied_with = { target = c:VEN } }
+		NOT = { is_allied_with = { target = c:DUMMY } }
 		has_reform = government_reform:merchant_republic
-		c:VEN = {
+		c:DUMMY = {
 			has_reform = government_reform:merchant_republic
 		}
 		any_owned_location = {
@@ -1631,10 +1631,10 @@ flavor_gen.25 = {
 		name = flavor_gen.25.a
 		historical_option = yes
 		add_casus_belli = {
-			target = c:VEN
+			target = c:DUMMY
 			type = casus_belli:cb_maritime_dominance
 		}
-		c:VEN = {
+		c:DUMMY = {
 			add_casus_belli = {
 				target = root
 				type = casus_belli:cb_maritime_dominance
@@ -1662,7 +1662,7 @@ flavor_gen.26 = {
 	desc = flavor_gen.26.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1680,38 +1680,38 @@ flavor_gen.26 = {
 			text = variable_gen_war_of_straits_tt
 			has_variable = gen_war_of_straits
 		}
-		country_exists = c:VEN
-		NOT = { is_allied_with = { target = c:VEN } }
+		country_exists = c:DUMMY
+		NOT = { is_allied_with = { target = c:DUMMY } }
 		has_reform = government_reform:merchant_republic
-		c:VEN = {
+		c:DUMMY = {
 			has_reform = government_reform:merchant_republic
 		}
 		OR = {
-			is_rival_of = c:VEN
-			is_enemy_of = c:VEN
+			is_rival_of = c:DUMMY
+			is_enemy_of = c:DUMMY
 		}
 		OR = {
 			location:cape_lecton = {
 				location_maritime_presence_power = {
-					country = c:VEN
+					country = c:DUMMY
 					value >= 50
 				}
 			}
 			location:dardanelles = {
 				location_maritime_presence_power = {
-					country = c:VEN
+					country = c:DUMMY
 					value >= 50
 				}
 			}
 			location:gulf_izmit = {
 				location_maritime_presence_power = {
-					country = c:VEN
+					country = c:DUMMY
 					value >= 50
 				}
 			}
 			location:bosphorus = {
 				location_maritime_presence_power = {
-					country = c:VEN
+					country = c:DUMMY
 					value >= 50
 				}
 			}
@@ -1729,10 +1729,10 @@ flavor_gen.26 = {
 		historical_option = yes
 		change_societal_value = { type = belligerent_vs_conciliatory value = societal_value_move_to_left }
 		add_casus_belli = {
-			target = c:VEN
+			target = c:DUMMY
 			type = casus_belli:cb_maritime_dominance
 		}
-		c:VEN = {
+		c:DUMMY = {
 			add_casus_belli = {
 				target = root
 				type = casus_belli:cb_maritime_dominance
@@ -1757,7 +1757,7 @@ flavor_gen.27 = {
 	desc = flavor_gen.27.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -1862,7 +1862,7 @@ flavor_gen.28 = {
 	desc = flavor_gen.28.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1922,7 +1922,7 @@ flavor_gen.29 = {
 	desc = flavor_gen.29.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1963,7 +1963,7 @@ flavor_gen.30 = {
 	desc = flavor_gen.30.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2005,7 +2005,7 @@ flavor_gen.31 = {
 	desc = flavor_gen.31.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2019,8 +2019,8 @@ flavor_gen.31 = {
 	trigger = {
 		current_date > 476.9.4
 		owns = location:genoa
-		country_exists = c:PAP
-		c:PAP = { has_ruler = yes }
+		country_exists = c:DUMMY
+		c:DUMMY = { has_ruler = yes }
 	}
 	#Excellent
 	option = {
@@ -2071,7 +2071,7 @@ flavor_gen.32 = {
 	desc = flavor_gen.32.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2175,7 +2175,7 @@ flavor_gen.33 = {
 	desc = flavor_gen.33.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2191,7 +2191,7 @@ flavor_gen.33 = {
 				pop_type = pop_type:nobles
 			}
 		}
-		NOT = { country_exists = c:COR }
+		NOT = { country_exists = c:DUMMY }
 	}
 	illustration_tags = {
 		10 = regular
@@ -2250,16 +2250,16 @@ flavor_gen.33 = {
 			limit = {
 				is_corsica = yes
 			}
-			add_core = c:COR
+			add_core = c:DUMMY
 			if = {
 				limit = {
 					is_core_of = root
 				}
 				remove_core = root
 			}
-			change_location_owner = c:COR
+			change_location_owner = c:DUMMY
 		}
-		c:COR = {
+		c:DUMMY = {
 			set_new_ruler = scope:luiggi_giafferi
 			change_government_type = government_type:republic
 		}
@@ -2274,7 +2274,7 @@ flavor_gen.34 = {
 	desc = flavor_gen.34.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2292,7 +2292,7 @@ flavor_gen.34 = {
 				culture = culture:corsican
 			}
 		}
-		NOT = { country_exists = c:COR }
+		NOT = { country_exists = c:DUMMY }
 	}
 	illustration_tags = {
 		10 = angry
@@ -2348,16 +2348,16 @@ flavor_gen.34 = {
 			limit = {
 				is_corsica = yes
 			}
-			add_core = c:COR
+			add_core = c:DUMMY
 			if = {
 				limit = {
 					is_core_of = root
 				}
 				remove_core = root
 			}
-			change_location_owner = c:COR
+			change_location_owner = c:DUMMY
 		}
-		c:COR = {
+		c:DUMMY = {
 			set_new_ruler = scope:pasquale_paoli
 			change_government_type = government_type:republic
 		}
@@ -2375,7 +2375,7 @@ flavor_gen.35 = {
 	desc = flavor_gen.35.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2402,7 +2402,7 @@ flavor_gen.35 = {
 		}
 		exists = character:pasquale_paoli
 		character:pasquale_paoli = { is_alive = yes }
-		NOT = { country_exists = c:COR }
+		NOT = { country_exists = c:DUMMY }
 	}
 	#This island is more curse than blessing...
 	option = {
@@ -2412,7 +2412,7 @@ flavor_gen.35 = {
 			limit = {
 				is_corsica = yes
 			}
-			add_core = c:COR
+			add_core = c:DUMMY
 			change_control = control_radical_penalty
 			every_pop = {
 				limit = {
@@ -2437,16 +2437,16 @@ flavor_gen.35 = {
 			limit = {
 				is_corsica = yes
 			}
-			add_core = c:COR
+			add_core = c:DUMMY
 			if = {
 				limit = {
 					is_core_of = root
 				}
 				remove_core = root
 			}
-			change_location_owner = c:COR
+			change_location_owner = c:DUMMY
 		}
-		c:COR = {
+		c:DUMMY = {
 			if = {
 				limit = {
 					exists = character:pasquale_paoli
@@ -2503,7 +2503,7 @@ flavor_gen.37 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2570,7 +2570,7 @@ flavor_gen.38 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2616,7 +2616,7 @@ flavor_gen.39 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2662,7 +2662,7 @@ flavor_gen.40 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2710,7 +2710,7 @@ flavor_gen.41 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2759,7 +2759,7 @@ flavor_gen.42 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2808,7 +2808,7 @@ flavor_gen.43 = {
 	
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -2856,7 +2856,7 @@ flavor_gen.44 = {
 	desc = flavor_gen.44.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2906,7 +2906,7 @@ flavor_gen.45 = {
 	desc = flavor_gen.45.desc
 	outcome = neutral
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -2975,7 +2975,7 @@ flavor_gen.46 = { # Formation of the Bank of Saint George https://en.wikipedia.o
 
 	major = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3279,8 +3279,8 @@ flavor_gen.51 = {
 			triggered_desc = {
 				trigger = {
 					OR = {
-						location:ikaria = { owner = c:GEN }
-						location:samos = { owner = c:GEN }
+						location:ikaria = { owner = c:DUMMY }
+						location:samos = { owner = c:DUMMY }
 					}
 				}
 				desc = flavor_gen.51.desc_aegean
@@ -3308,7 +3308,7 @@ flavor_gen.52 = { # The Grimaldi Bank
 
 	major = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3461,7 +3461,7 @@ flavor_gen.54 = { # The Spinola Bank
 
 	major = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -3615,7 +3615,7 @@ flavor_gen.56 = { # The Pallavicino Bank
 
 	major = yes
 	dynamic_historical_event = {
-		tag = GEN
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10

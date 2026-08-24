@@ -2718,7 +2718,7 @@ qa_debug.28 = {
 				create_sub_unit = unit_type:a_farari_cavalry
 			}
 		}
-		c:MAL = { save_scope_as = spawn_country }
+		c:DUMMY = { save_scope_as = spawn_country }
 		trigger_event_silently = {
 			id = qa_debug.2804
 		}
@@ -2727,7 +2727,7 @@ qa_debug.28 = {
 	option = {
 		name = IRA
 		trigger = {
-			country_exists = c:IRA
+			country_exists = c:DUMMY
 		}
 		custom_tooltip = qa_debug.28.tt
 		show_as_tooltip = {
@@ -2739,7 +2739,7 @@ qa_debug.28 = {
 				create_sub_unit = unit_type:a_jazayerchi
 			}
 		}
-		c:IRA = { save_scope_as = spawn_country }
+		c:DUMMY = { save_scope_as = spawn_country }
 		trigger_event_silently = {
 			id = qa_debug.2805
 		}
@@ -3191,14 +3191,14 @@ qa_debug.33 = {
 		name = qa_debug.33.a
 		drop_antagonism_bomb = {
 			modifier = antagonism_bav_ignore_feudal_traditions_harsh
-			target = c:UBV.capital
+			target = c:DUMMY.capital
 		}
 	}
 	option = {
 		name = qa_debug.33.b
 		drop_antagonism_bomb = {
 			modifier = antagonism_declared_war_on_subject
-			target = c:UBV.capital
+			target = c:DUMMY.capital
 		}
 	}
 	option = {

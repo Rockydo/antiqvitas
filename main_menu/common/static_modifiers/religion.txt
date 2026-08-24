@@ -1,0 +1,351 @@
+﻿#Catholic Faith - Setup
+
+limited_indulgences_religion = { #cc_indulgences limited_indulgences
+	game_data = {
+		category = religion
+	}
+	monthly_reform_desire = 0.0002
+}
+
+tolerated_simony_religion = { #cc_simony tolerated_simony
+	game_data = {
+		category = religion
+	}
+	monthly_reform_desire = 0.0001
+}
+
+#Catholic Faith - possible changes
+
+#western schism
+western_schism_modifier = {
+	game_data = {
+		category = religion
+	}
+	monthly_reform_desire = 0.0005
+	cardinal_price_cost_modifier = -0.5
+	curia_actions_blocked = yes
+}
+
+papal_conclave_modifier = {
+	game_data = {
+		category = religion
+	}
+	curia_actions_blocked = yes
+}
+
+#Saint Peter Basilica Construction
+saint_peter_basilica_being_built_with_indulgences = {
+	game_data = {
+		category = religion
+	}
+	monthly_reform_desire = 0.0005
+}
+
+#Indulgences change
+unlimited_sale_indulgences_religion = { #cc_indulgences unlimited_indulgences
+	game_data = {
+		category = religion
+	}
+	monthly_reform_desire = 0.0005
+}
+
+no_financial_indulgences_religion = { #cc_indulgences unlimited_indulgences
+	game_data = {
+		category = religion
+	}
+	monthly_reform_desire = -0.0003
+}
+
+#Simony
+endorsed_simony_religion = { #cc_simony endorsed_simony
+	game_data = {
+		category = religion
+	}
+	monthly_reform_desire = 0.0005
+}
+
+banned_simony_religion = { #cc_simony banned_simony
+	game_data = {
+		category = religion
+	}
+	monthly_reform_desire = -0.0003
+}
+
+#Nahuatl Festivals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Inti Festivals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Mayan 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Hellenic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###################################
+# Scripted form Curia Actions
+###################################
+christiana_pietas = {
+	game_data = {
+		category = religion
+	}
+	tolerance_heathen = 2
+}
+
+illius_qui_se_pro_divini = {
+	game_data = {
+		category = religion
+	}
+	antagonism_received_modifier = -0.2
+}
+
+apostolicae_servitutis = {
+	game_data = {
+		category = religion
+	}
+	clergy_estate_target_satisfaction = large_permanent_target_satisfaction
+}
+
+immensa_aeterni_dei = {
+	game_data = {
+		category = religion
+	}
+	global_institution_growth_modifier = 0.10
+}
+
+libertas_ecclesiae = {
+	game_data = {
+		category = religion
+	}
+	imperial_authority_modifier = 0.2
+}
+dei_gratia_rex = {
+	game_data = {
+		category = religion
+	}
+	global_estate_target_satisfaction = medium_permanent_target_satisfaction
+}
+
+in_coena_domini = {
+	game_data = {
+		category = religion
+	}
+	global_maritime_presence_modifier = 0.25
+}
+
+benedictus_deus = {
+	game_data = {
+		category = religion
+	}
+	global_pop_conversion_speed_modifier = 0.33
+}
+
+inter_gravissimas = {
+	game_data = {
+		category = religion
+	}
+	legislative_efficiency = 0.2
+}
+
+papacy_blocked_modifier = {
+	game_data = {
+		category = religion
+	}
+	papacy_blocked = yes
+}
+
+high_papal_authority = {
+	game_data = {
+		category = religion
+	}
+	monthly_devotion = 0.05
+	monthly_legitimacy = 0.02
+	tolerance_heretic = 1.0
+}
+
+low_papal_authority = {
+	game_data = {
+		category = religion
+	}
+	monthly_devotion = -0.1
+	monthly_legitimacy = -0.03
+}

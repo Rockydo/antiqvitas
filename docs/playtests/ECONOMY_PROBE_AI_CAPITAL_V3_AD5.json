@@ -1,0 +1,3781 @@
+{
+  "save": "G:\\antiqvitas_user_data\\save games\\autosave_30ef0caa-828a-454d-935d-0e6c9c9deecb.eu5",
+  "date": "5.1.1",
+  "real_polities": 463,
+  "stability": {
+    "minimum": -6.16361,
+    "p10": 4.209668000000001,
+    "median": 13.82239,
+    "p90": 20.59355,
+    "maximum": 25.07963,
+    "negative_count": 9,
+    "severe_count": 3
+  },
+  "solvency": {
+    "bankrupt_count": 0,
+    "bankrupt_polities": [],
+    "major_bankrupt_count": 0,
+    "major_bankrupt_polities": [],
+    "indebted_count": 10,
+    "largest_debts": [
+      {
+        "id": 24,
+        "tag": "XAO",
+        "name": "XAO",
+        "province_count": 14,
+        "great_power": false,
+        "debt": 215.04667,
+        "loan_capacity": 7414.83144,
+        "monthly_income": 10.03594,
+        "monthly_expense": 8.75,
+        "debt_to_annual_income": 1.7856380003600394
+      },
+      {
+        "id": 25,
+        "tag": "IBR",
+        "name": "IBR",
+        "province_count": 5,
+        "great_power": false,
+        "debt": 182.46677,
+        "loan_capacity": 3345.62958,
+        "monthly_income": 14.60654,
+        "monthly_expense": 4.08946,
+        "debt_to_annual_income": 1.0410106819730522
+      },
+      {
+        "id": 91,
+        "tag": "GRH",
+        "name": "GRH",
+        "province_count": 2,
+        "great_power": false,
+        "debt": 179.78178,
+        "loan_capacity": 1789.7162,
+        "monthly_income": 4.03383,
+        "monthly_expense": 12.38916,
+        "debt_to_annual_income": 3.7140422377740263
+      },
+      {
+        "id": 218,
+        "tag": "XCS",
+        "name": "XCS",
+        "province_count": 14,
+        "great_power": false,
+        "debt": 154.26805,
+        "loan_capacity": 4630.71179,
+        "monthly_income": 3.80232,
+        "monthly_expense": 2.23951,
+        "debt_to_annual_income": 3.3810070781347528
+      },
+      {
+        "id": 47,
+        "tag": "XAZ",
+        "name": "XAZ",
+        "province_count": 9,
+        "great_power": false,
+        "debt": 54.94998,
+        "loan_capacity": 3364.36436,
+        "monthly_income": 3.7662,
+        "monthly_expense": 7.96897,
+        "debt_to_annual_income": 1.215858159417981
+      },
+      {
+        "id": 17,
+        "tag": "PRS",
+        "name": "PRS",
+        "province_count": 14,
+        "great_power": false,
+        "debt": 27.76723,
+        "loan_capacity": 3290.49649,
+        "monthly_income": 6.5222,
+        "monthly_expense": 13.82726,
+        "debt_to_annual_income": 0.354778423435855
+      },
+      {
+        "id": 349,
+        "tag": "MYB",
+        "name": "MYB",
+        "province_count": 1,
+        "great_power": false,
+        "debt": 22.46408,
+        "loan_capacity": 1205.3426,
+        "monthly_income": 1.64326,
+        "monthly_expense": 0.19799,
+        "debt_to_annual_income": 1.139202966460978
+      },
+      {
+        "id": 89,
+        "tag": "XEQ",
+        "name": "XEQ",
+        "province_count": 7,
+        "great_power": false,
+        "debt": 18.09995,
+        "loan_capacity": 3441.62723,
+        "monthly_income": 0.36101,
+        "monthly_expense": 0.37638,
+        "debt_to_annual_income": 4.178081401253889
+      },
+      {
+        "id": 343,
+        "tag": "XHK",
+        "name": "XHK",
+        "province_count": 4,
+        "great_power": false,
+        "debt": 14.96894,
+        "loan_capacity": 1923.99694,
+        "monthly_income": 4.49246,
+        "monthly_expense": 0.33659,
+        "debt_to_annual_income": 0.2776678404853169
+      },
+      {
+        "id": 342,
+        "tag": "XHJ",
+        "name": "XHJ",
+        "province_count": 3,
+        "great_power": false,
+        "debt": 10.17837,
+        "loan_capacity": 1977.89502,
+        "monthly_income": 1.64061,
+        "monthly_expense": 0.17005,
+        "debt_to_annual_income": 0.5170012982975845
+      }
+    ],
+    "major_economies": [
+      {
+        "id": 3,
+        "tag": "XAA",
+        "name": "XAA",
+        "province_count": 397,
+        "great_power": true,
+        "population_thousands": 47490.25147,
+        "gold": 12134.99086,
+        "debt": 0.0,
+        "loan_capacity": 165659.82772,
+        "monthly_income": 90.15153,
+        "monthly_expense": 59.52012,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      },
+      {
+        "id": 28,
+        "tag": "XAR",
+        "name": "XAR",
+        "province_count": 382,
+        "great_power": true,
+        "population_thousands": 58239.64632,
+        "gold": 12533.73009,
+        "debt": 0.0,
+        "loan_capacity": 123782.35622,
+        "monthly_income": 70.56382,
+        "monthly_expense": 52.02457,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      },
+      {
+        "id": 14,
+        "tag": "XAH",
+        "name": "XAH",
+        "province_count": 89,
+        "great_power": true,
+        "population_thousands": 7194.50758,
+        "gold": 667.33507,
+        "debt": 0.0,
+        "loan_capacity": 26491.0767,
+        "monthly_income": 41.3211,
+        "monthly_expense": 4.70177,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      },
+      {
+        "id": 173,
+        "tag": "ROX",
+        "name": "ROX",
+        "province_count": 38,
+        "great_power": false,
+        "population_thousands": 482.07922,
+        "gold": 311.74891,
+        "debt": 0.0,
+        "loan_capacity": 3770.3278,
+        "monthly_income": 6.09918,
+        "monthly_expense": 0.50152,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      },
+      {
+        "id": 41,
+        "tag": "SAT",
+        "name": "SAT",
+        "province_count": 31,
+        "great_power": true,
+        "population_thousands": 7921.94137,
+        "gold": 1514.53579,
+        "debt": 0.0,
+        "loan_capacity": 19087.94513,
+        "monthly_income": 22.75692,
+        "monthly_expense": 6.37186,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      },
+      {
+        "id": 29,
+        "tag": "XIO",
+        "name": "XIO",
+        "province_count": 30,
+        "great_power": false,
+        "population_thousands": 465.98268,
+        "gold": 106.90029,
+        "debt": 0.0,
+        "loan_capacity": 1773.61608,
+        "monthly_income": 3.58006,
+        "monthly_expense": 0.63537,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      },
+      {
+        "id": 188,
+        "tag": "XCM",
+        "name": "XCM",
+        "province_count": 29,
+        "great_power": false,
+        "population_thousands": 735.78434,
+        "gold": 54.89508,
+        "debt": 0.0,
+        "loan_capacity": 4304.44407,
+        "monthly_income": 2.6714,
+        "monthly_expense": 0.60322,
+        "debt_to_annual_income": 0.0,
+        "years_of_surplus_to_repay_debt": 0.0,
+        "bankrupt_until": null
+      }
+    ]
+  },
+  "construction": {
+    "active_projects": 553,
+    "active_payers": 190,
+    "busiest_payers": [
+      {
+        "id": 41,
+        "tag": "SAT",
+        "name": "SAT",
+        "province_count": 31,
+        "great_power": true,
+        "active_projects": 10,
+        "rgo_upgrades": 0,
+        "building_projects": 10,
+        "gold_committed": 250.04062000000002,
+        "project_types": {
+          "antq_cult_fruit_orchards": 2,
+          "antq_reg_bargeyard": 2,
+          "antq_reg_ropewalk": 2,
+          "antq_reg_cotton_weavery": 1,
+          "antq_cult_barley_plots": 1,
+          "antq_reg_leatherworks": 1,
+          "antq_reg_wool_carder": 1
+        }
+      },
+      {
+        "id": 42,
+        "tag": "XAX",
+        "name": "XAX",
+        "province_count": 18,
+        "great_power": false,
+        "active_projects": 9,
+        "rgo_upgrades": 2,
+        "building_projects": 7,
+        "gold_committed": 236.88951,
+        "project_types": {
+          "antq_reg_carpet_loom": 2,
+          "antq_cult_horse_pastures": 2,
+          "antq_cult_flax_hemp_fields": 2,
+          "rgo_upgrade": 2,
+          "antq_cult_millet_plots": 1
+        }
+      },
+      {
+        "id": 27,
+        "tag": "XAQ",
+        "name": "XAQ",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 9,
+        "rgo_upgrades": 2,
+        "building_projects": 7,
+        "gold_committed": 211.67599,
+        "project_types": {
+          "antq_cult_grape_arbors": 2,
+          "rgo_upgrade": 2,
+          "antq_cult_millet_plots": 1,
+          "antq_reg_brickworks": 1,
+          "antq_cult_horse_pastures": 1,
+          "antq_cult_dye_gardens": 1,
+          "antq_cult_nut_orchards": 1
+        }
+      },
+      {
+        "id": 8,
+        "tag": "CAP",
+        "name": "CAP",
+        "province_count": 9,
+        "great_power": false,
+        "active_projects": 9,
+        "rgo_upgrades": 2,
+        "building_projects": 7,
+        "gold_committed": 140.79188,
+        "project_types": {
+          "antq_cult_millet_plots": 3,
+          "rgo_upgrade": 2,
+          "antq_cult_grape_arbors": 1,
+          "antq_reg_fruit_brewery": 1,
+          "antq_cult_barley_plots": 1,
+          "antq_cult_dye_gardens": 1
+        }
+      },
+      {
+        "id": 26,
+        "tag": "CLZ",
+        "name": "CLZ",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 8,
+        "rgo_upgrades": 1,
+        "building_projects": 7,
+        "gold_committed": 205.84862999999999,
+        "project_types": {
+          "rgo_upgrade": 1,
+          "antq_cult_dye_gardens": 1,
+          "antq_cult_wheat_fields": 1,
+          "antq_cult_grape_arbors": 1,
+          "antq_reg_brickworks": 1,
+          "antq_reg_linen_weavery": 1,
+          "antq_cult_pulse_plots": 1,
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 14,
+        "tag": "XAH",
+        "name": "XAH",
+        "province_count": 89,
+        "great_power": true,
+        "active_projects": 8,
+        "rgo_upgrades": 1,
+        "building_projects": 7,
+        "gold_committed": 194.26124000000004,
+        "project_types": {
+          "antq_reg_ropewalk": 3,
+          "antq_cult_papyrus_beds": 1,
+          "antq_cult_saffron_beds": 1,
+          "antq_cult_wool_flocks": 1,
+          "antq_reg_carpet_loom": 1,
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 169,
+        "tag": "DAC",
+        "name": "DAC",
+        "province_count": 12,
+        "great_power": false,
+        "active_projects": 8,
+        "rgo_upgrades": 1,
+        "building_projects": 7,
+        "gold_committed": 127.3129,
+        "project_types": {
+          "antq_cult_horse_pastures": 3,
+          "antq_reg_fruit_brewery": 1,
+          "rgo_upgrade": 1,
+          "antq_cult_dye_gardens": 1,
+          "antq_trib_hide_curing_rack": 1,
+          "antq_trib_bone_antler_workshop": 1
+        }
+      },
+      {
+        "id": 3,
+        "tag": "XAA",
+        "name": "XAA",
+        "province_count": 397,
+        "great_power": true,
+        "active_projects": 8,
+        "rgo_upgrades": 0,
+        "building_projects": 8,
+        "gold_committed": 109.76588,
+        "project_types": {
+          "antq_cult_wheat_fields": 2,
+          "antq_cult_fruit_orchards": 1,
+          "antq_cult_saffron_beds": 1,
+          "antq_cult_horse_pastures": 1,
+          "antq_cult_grape_arbors": 1,
+          "antq_cult_sesame_plots": 1,
+          "antq_cult_olive_groves": 1
+        }
+      },
+      {
+        "id": 434,
+        "tag": "ATY",
+        "name": "ATY",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 2,
+        "building_projects": 5,
+        "gold_committed": 226.20621,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 2,
+          "rgo_upgrade": 2,
+          "antq_cult_pulse_plots": 1,
+          "antq_reg_leatherworks": 1,
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 433,
+        "tag": "XDN",
+        "name": "XDN",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 2,
+        "building_projects": 5,
+        "gold_committed": 222.97521,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_reg_wool_carder": 1,
+          "antq_cult_rice_paddies": 1,
+          "antq_reg_ropewalk": 1,
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 19,
+        "tag": "ADI",
+        "name": "ADI",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 0,
+        "building_projects": 7,
+        "gold_committed": 220.95619,
+        "project_types": {
+          "antq_cult_wheat_fields": 3,
+          "antq_cult_dye_gardens": 2,
+          "antq_reg_fruit_brewery": 1,
+          "antq_cult_flax_hemp_fields": 1
+        }
+      },
+      {
+        "id": 43,
+        "tag": "XAY",
+        "name": "XAY",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 0,
+        "building_projects": 7,
+        "gold_committed": 152.28164999999998,
+        "project_types": {
+          "antq_cult_flax_hemp_fields": 3,
+          "antq_cult_millet_plots": 1,
+          "antq_cult_dye_gardens": 1,
+          "antq_reg_wheat_brewery": 1,
+          "antq_cult_horse_pastures": 1
+        }
+      },
+      {
+        "id": 9,
+        "tag": "XAE",
+        "name": "XAE",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 1,
+        "building_projects": 6,
+        "gold_committed": 117.62508,
+        "project_types": {
+          "antq_cult_olive_groves": 1,
+          "antq_cult_nut_orchards": 1,
+          "antq_cult_barley_plots": 1,
+          "antq_reg_linen_weavery": 1,
+          "antq_cult_millet_plots": 1,
+          "antq_reg_ropewalk": 1,
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 101,
+        "tag": "HER",
+        "name": "HER",
+        "province_count": 11,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 0,
+        "building_projects": 7,
+        "gold_committed": 114.36463,
+        "project_types": {
+          "antq_cult_dye_gardens": 2,
+          "antq_trib_watch_mound": 2,
+          "antq_reg_charcoal_hearth": 2,
+          "antq_trib_palisade_ring": 1
+        }
+      },
+      {
+        "id": 91,
+        "tag": "GRH",
+        "name": "GRH",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 2,
+        "building_projects": 4,
+        "gold_committed": 247.94975,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_reg_brickworks": 1,
+          "antq_reg_fruit_brewery": 1,
+          "antq_cult_date_groves": 1,
+          "antq_reg_linen_weavery": 1
+        }
+      },
+      {
+        "id": 21,
+        "tag": "XAM",
+        "name": "XAM",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 0,
+        "building_projects": 6,
+        "gold_committed": 191.7838,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 3,
+          "antq_cult_flax_hemp_fields": 2,
+          "antq_cult_nut_orchards": 1
+        }
+      },
+      {
+        "id": 49,
+        "tag": "XBB",
+        "name": "XBB",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 2,
+        "building_projects": 4,
+        "gold_committed": 167.67566,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_reg_wool_carder": 1,
+          "antq_cult_sesame_plots": 1,
+          "antq_cult_pulse_plots": 1,
+          "antq_cult_cattle_pastures": 1
+        }
+      },
+      {
+        "id": 28,
+        "tag": "XAR",
+        "name": "XAR",
+        "province_count": 382,
+        "great_power": true,
+        "active_projects": 6,
+        "rgo_upgrades": 2,
+        "building_projects": 4,
+        "gold_committed": 167.5,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_cult_wheat_fields": 1,
+          "antq_cult_fruit_orchards": 1,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_cult_flax_hemp_fields": 1
+        }
+      },
+      {
+        "id": 85,
+        "tag": "HIM",
+        "name": "HIM",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 0,
+        "building_projects": 6,
+        "gold_committed": 135.87603000000001,
+        "project_types": {
+          "antq_cult_camel_corrals": 2,
+          "antq_cult_barley_plots": 1,
+          "antq_cult_date_groves": 1,
+          "antq_reg_ropewalk": 1,
+          "antq_reg_fruit_brewery": 1
+        }
+      },
+      {
+        "id": 7,
+        "tag": "NAB",
+        "name": "NAB",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 0,
+        "building_projects": 6,
+        "gold_committed": 127.95078999999998,
+        "project_types": {
+          "antq_cult_date_groves": 2,
+          "antq_cult_camel_corrals": 1,
+          "antq_reg_wheat_brewery": 1,
+          "antq_reg_ropewalk": 1,
+          "antq_reg_brickworks": 1
+        }
+      },
+      {
+        "id": 13,
+        "tag": "XAG",
+        "name": "XAG",
+        "province_count": 21,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 0,
+        "building_projects": 6,
+        "gold_committed": 110.61471,
+        "project_types": {
+          "antq_reg_wheat_brewery": 3,
+          "antq_cult_wheat_fields": 2,
+          "antq_cult_dye_gardens": 1
+        }
+      },
+      {
+        "id": 11,
+        "tag": "THR",
+        "name": "THR",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 1,
+        "building_projects": 5,
+        "gold_committed": 82.40901,
+        "project_types": {
+          "antq_cult_fruit_orchards": 1,
+          "antq_reg_fruit_brewery": 1,
+          "antq_reg_wheat_brewery": 1,
+          "rgo_upgrade": 1,
+          "antq_cult_grape_arbors": 1,
+          "antq_cult_wheat_fields": 1
+        }
+      },
+      {
+        "id": 23,
+        "tag": "MRG",
+        "name": "MRG",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 2,
+        "building_projects": 3,
+        "gold_committed": 289.86346000000003,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_reg_carpet_loom": 1,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 5,
+        "tag": "XAB",
+        "name": "XAB",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 177.03750999999997,
+        "project_types": {
+          "antq_cult_flax_hemp_fields": 3,
+          "antq_cult_horse_pastures": 2
+        }
+      },
+      {
+        "id": 242,
+        "tag": "KCP",
+        "name": "KCP",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 175.45288999999997,
+        "project_types": {
+          "antq_cult_barley_plots": 3,
+          "antq_cult_horse_pastures": 2
+        }
+      },
+      {
+        "id": 238,
+        "tag": "HVI",
+        "name": "HVI",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 173.51559,
+        "project_types": {
+          "antq_cult_barley_plots": 3,
+          "antq_cult_horse_pastures": 2
+        }
+      },
+      {
+        "id": 122,
+        "tag": "XBZ",
+        "name": "XBZ",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 173.29865,
+        "project_types": {
+          "antq_trib_hide_curing_rack": 2,
+          "antq_reg_wheat_brewery": 1,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 435,
+        "tag": "XGD",
+        "name": "XGD",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 170.34906999999998,
+        "project_types": {
+          "antq_cult_fruit_orchards": 2,
+          "antq_reg_ropewalk": 1,
+          "antq_cult_sesame_plots": 1,
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 50,
+        "tag": "XBC",
+        "name": "XBC",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 2,
+        "building_projects": 3,
+        "gold_committed": 162.73863999999998,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_cult_sesame_plots": 1,
+          "antq_cult_millet_plots": 1,
+          "antq_cult_rice_paddies": 1
+        }
+      },
+      {
+        "id": 216,
+        "tag": "XCQ",
+        "name": "XCQ",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 157.87878,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 2,
+          "antq_cult_wheat_fields": 2,
+          "antq_cult_horse_pastures": 1
+        }
+      }
+    ],
+    "all_payers": [
+      {
+        "id": 41,
+        "tag": "SAT",
+        "name": "SAT",
+        "province_count": 31,
+        "great_power": true,
+        "active_projects": 10,
+        "rgo_upgrades": 0,
+        "building_projects": 10,
+        "gold_committed": 250.04062000000002,
+        "project_types": {
+          "antq_cult_fruit_orchards": 2,
+          "antq_reg_bargeyard": 2,
+          "antq_reg_ropewalk": 2,
+          "antq_reg_cotton_weavery": 1,
+          "antq_cult_barley_plots": 1,
+          "antq_reg_leatherworks": 1,
+          "antq_reg_wool_carder": 1
+        }
+      },
+      {
+        "id": 42,
+        "tag": "XAX",
+        "name": "XAX",
+        "province_count": 18,
+        "great_power": false,
+        "active_projects": 9,
+        "rgo_upgrades": 2,
+        "building_projects": 7,
+        "gold_committed": 236.88951,
+        "project_types": {
+          "antq_reg_carpet_loom": 2,
+          "antq_cult_horse_pastures": 2,
+          "antq_cult_flax_hemp_fields": 2,
+          "rgo_upgrade": 2,
+          "antq_cult_millet_plots": 1
+        }
+      },
+      {
+        "id": 27,
+        "tag": "XAQ",
+        "name": "XAQ",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 9,
+        "rgo_upgrades": 2,
+        "building_projects": 7,
+        "gold_committed": 211.67599,
+        "project_types": {
+          "antq_cult_grape_arbors": 2,
+          "rgo_upgrade": 2,
+          "antq_cult_millet_plots": 1,
+          "antq_reg_brickworks": 1,
+          "antq_cult_horse_pastures": 1,
+          "antq_cult_dye_gardens": 1,
+          "antq_cult_nut_orchards": 1
+        }
+      },
+      {
+        "id": 8,
+        "tag": "CAP",
+        "name": "CAP",
+        "province_count": 9,
+        "great_power": false,
+        "active_projects": 9,
+        "rgo_upgrades": 2,
+        "building_projects": 7,
+        "gold_committed": 140.79188,
+        "project_types": {
+          "antq_cult_millet_plots": 3,
+          "rgo_upgrade": 2,
+          "antq_cult_grape_arbors": 1,
+          "antq_reg_fruit_brewery": 1,
+          "antq_cult_barley_plots": 1,
+          "antq_cult_dye_gardens": 1
+        }
+      },
+      {
+        "id": 26,
+        "tag": "CLZ",
+        "name": "CLZ",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 8,
+        "rgo_upgrades": 1,
+        "building_projects": 7,
+        "gold_committed": 205.84862999999999,
+        "project_types": {
+          "rgo_upgrade": 1,
+          "antq_cult_dye_gardens": 1,
+          "antq_cult_wheat_fields": 1,
+          "antq_cult_grape_arbors": 1,
+          "antq_reg_brickworks": 1,
+          "antq_reg_linen_weavery": 1,
+          "antq_cult_pulse_plots": 1,
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 14,
+        "tag": "XAH",
+        "name": "XAH",
+        "province_count": 89,
+        "great_power": true,
+        "active_projects": 8,
+        "rgo_upgrades": 1,
+        "building_projects": 7,
+        "gold_committed": 194.26124000000004,
+        "project_types": {
+          "antq_reg_ropewalk": 3,
+          "antq_cult_papyrus_beds": 1,
+          "antq_cult_saffron_beds": 1,
+          "antq_cult_wool_flocks": 1,
+          "antq_reg_carpet_loom": 1,
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 169,
+        "tag": "DAC",
+        "name": "DAC",
+        "province_count": 12,
+        "great_power": false,
+        "active_projects": 8,
+        "rgo_upgrades": 1,
+        "building_projects": 7,
+        "gold_committed": 127.3129,
+        "project_types": {
+          "antq_cult_horse_pastures": 3,
+          "antq_reg_fruit_brewery": 1,
+          "rgo_upgrade": 1,
+          "antq_cult_dye_gardens": 1,
+          "antq_trib_hide_curing_rack": 1,
+          "antq_trib_bone_antler_workshop": 1
+        }
+      },
+      {
+        "id": 3,
+        "tag": "XAA",
+        "name": "XAA",
+        "province_count": 397,
+        "great_power": true,
+        "active_projects": 8,
+        "rgo_upgrades": 0,
+        "building_projects": 8,
+        "gold_committed": 109.76588,
+        "project_types": {
+          "antq_cult_wheat_fields": 2,
+          "antq_cult_fruit_orchards": 1,
+          "antq_cult_saffron_beds": 1,
+          "antq_cult_horse_pastures": 1,
+          "antq_cult_grape_arbors": 1,
+          "antq_cult_sesame_plots": 1,
+          "antq_cult_olive_groves": 1
+        }
+      },
+      {
+        "id": 434,
+        "tag": "ATY",
+        "name": "ATY",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 2,
+        "building_projects": 5,
+        "gold_committed": 226.20621,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 2,
+          "rgo_upgrade": 2,
+          "antq_cult_pulse_plots": 1,
+          "antq_reg_leatherworks": 1,
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 433,
+        "tag": "XDN",
+        "name": "XDN",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 2,
+        "building_projects": 5,
+        "gold_committed": 222.97521,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_reg_wool_carder": 1,
+          "antq_cult_rice_paddies": 1,
+          "antq_reg_ropewalk": 1,
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 19,
+        "tag": "ADI",
+        "name": "ADI",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 0,
+        "building_projects": 7,
+        "gold_committed": 220.95619,
+        "project_types": {
+          "antq_cult_wheat_fields": 3,
+          "antq_cult_dye_gardens": 2,
+          "antq_reg_fruit_brewery": 1,
+          "antq_cult_flax_hemp_fields": 1
+        }
+      },
+      {
+        "id": 43,
+        "tag": "XAY",
+        "name": "XAY",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 0,
+        "building_projects": 7,
+        "gold_committed": 152.28164999999998,
+        "project_types": {
+          "antq_cult_flax_hemp_fields": 3,
+          "antq_cult_millet_plots": 1,
+          "antq_cult_dye_gardens": 1,
+          "antq_reg_wheat_brewery": 1,
+          "antq_cult_horse_pastures": 1
+        }
+      },
+      {
+        "id": 9,
+        "tag": "XAE",
+        "name": "XAE",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 1,
+        "building_projects": 6,
+        "gold_committed": 117.62508,
+        "project_types": {
+          "antq_cult_olive_groves": 1,
+          "antq_cult_nut_orchards": 1,
+          "antq_cult_barley_plots": 1,
+          "antq_reg_linen_weavery": 1,
+          "antq_cult_millet_plots": 1,
+          "antq_reg_ropewalk": 1,
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 101,
+        "tag": "HER",
+        "name": "HER",
+        "province_count": 11,
+        "great_power": false,
+        "active_projects": 7,
+        "rgo_upgrades": 0,
+        "building_projects": 7,
+        "gold_committed": 114.36463,
+        "project_types": {
+          "antq_cult_dye_gardens": 2,
+          "antq_trib_watch_mound": 2,
+          "antq_reg_charcoal_hearth": 2,
+          "antq_trib_palisade_ring": 1
+        }
+      },
+      {
+        "id": 91,
+        "tag": "GRH",
+        "name": "GRH",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 2,
+        "building_projects": 4,
+        "gold_committed": 247.94975,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_reg_brickworks": 1,
+          "antq_reg_fruit_brewery": 1,
+          "antq_cult_date_groves": 1,
+          "antq_reg_linen_weavery": 1
+        }
+      },
+      {
+        "id": 21,
+        "tag": "XAM",
+        "name": "XAM",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 0,
+        "building_projects": 6,
+        "gold_committed": 191.7838,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 3,
+          "antq_cult_flax_hemp_fields": 2,
+          "antq_cult_nut_orchards": 1
+        }
+      },
+      {
+        "id": 49,
+        "tag": "XBB",
+        "name": "XBB",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 2,
+        "building_projects": 4,
+        "gold_committed": 167.67566,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_reg_wool_carder": 1,
+          "antq_cult_sesame_plots": 1,
+          "antq_cult_pulse_plots": 1,
+          "antq_cult_cattle_pastures": 1
+        }
+      },
+      {
+        "id": 28,
+        "tag": "XAR",
+        "name": "XAR",
+        "province_count": 382,
+        "great_power": true,
+        "active_projects": 6,
+        "rgo_upgrades": 2,
+        "building_projects": 4,
+        "gold_committed": 167.5,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_cult_wheat_fields": 1,
+          "antq_cult_fruit_orchards": 1,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_cult_flax_hemp_fields": 1
+        }
+      },
+      {
+        "id": 85,
+        "tag": "HIM",
+        "name": "HIM",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 0,
+        "building_projects": 6,
+        "gold_committed": 135.87603000000001,
+        "project_types": {
+          "antq_cult_camel_corrals": 2,
+          "antq_cult_barley_plots": 1,
+          "antq_cult_date_groves": 1,
+          "antq_reg_ropewalk": 1,
+          "antq_reg_fruit_brewery": 1
+        }
+      },
+      {
+        "id": 7,
+        "tag": "NAB",
+        "name": "NAB",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 0,
+        "building_projects": 6,
+        "gold_committed": 127.95078999999998,
+        "project_types": {
+          "antq_cult_date_groves": 2,
+          "antq_cult_camel_corrals": 1,
+          "antq_reg_wheat_brewery": 1,
+          "antq_reg_ropewalk": 1,
+          "antq_reg_brickworks": 1
+        }
+      },
+      {
+        "id": 13,
+        "tag": "XAG",
+        "name": "XAG",
+        "province_count": 21,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 0,
+        "building_projects": 6,
+        "gold_committed": 110.61471,
+        "project_types": {
+          "antq_reg_wheat_brewery": 3,
+          "antq_cult_wheat_fields": 2,
+          "antq_cult_dye_gardens": 1
+        }
+      },
+      {
+        "id": 11,
+        "tag": "THR",
+        "name": "THR",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 6,
+        "rgo_upgrades": 1,
+        "building_projects": 5,
+        "gold_committed": 82.40901,
+        "project_types": {
+          "antq_cult_fruit_orchards": 1,
+          "antq_reg_fruit_brewery": 1,
+          "antq_reg_wheat_brewery": 1,
+          "rgo_upgrade": 1,
+          "antq_cult_grape_arbors": 1,
+          "antq_cult_wheat_fields": 1
+        }
+      },
+      {
+        "id": 23,
+        "tag": "MRG",
+        "name": "MRG",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 2,
+        "building_projects": 3,
+        "gold_committed": 289.86346000000003,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_reg_carpet_loom": 1,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 5,
+        "tag": "XAB",
+        "name": "XAB",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 177.03750999999997,
+        "project_types": {
+          "antq_cult_flax_hemp_fields": 3,
+          "antq_cult_horse_pastures": 2
+        }
+      },
+      {
+        "id": 242,
+        "tag": "KCP",
+        "name": "KCP",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 175.45288999999997,
+        "project_types": {
+          "antq_cult_barley_plots": 3,
+          "antq_cult_horse_pastures": 2
+        }
+      },
+      {
+        "id": 238,
+        "tag": "HVI",
+        "name": "HVI",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 173.51559,
+        "project_types": {
+          "antq_cult_barley_plots": 3,
+          "antq_cult_horse_pastures": 2
+        }
+      },
+      {
+        "id": 122,
+        "tag": "XBZ",
+        "name": "XBZ",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 173.29865,
+        "project_types": {
+          "antq_trib_hide_curing_rack": 2,
+          "antq_reg_wheat_brewery": 1,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 435,
+        "tag": "XGD",
+        "name": "XGD",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 170.34906999999998,
+        "project_types": {
+          "antq_cult_fruit_orchards": 2,
+          "antq_reg_ropewalk": 1,
+          "antq_cult_sesame_plots": 1,
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 50,
+        "tag": "XBC",
+        "name": "XBC",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 2,
+        "building_projects": 3,
+        "gold_committed": 162.73863999999998,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_cult_sesame_plots": 1,
+          "antq_cult_millet_plots": 1,
+          "antq_cult_rice_paddies": 1
+        }
+      },
+      {
+        "id": 216,
+        "tag": "XCQ",
+        "name": "XCQ",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 157.87878,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 2,
+          "antq_cult_wheat_fields": 2,
+          "antq_cult_horse_pastures": 1
+        }
+      },
+      {
+        "id": 221,
+        "tag": "XGU",
+        "name": "XGU",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 156.245,
+        "project_types": {
+          "antq_trib_nut_grove": 2,
+          "antq_cult_fruit_orchards": 2,
+          "antq_cult_tobacco_plots": 1
+        }
+      },
+      {
+        "id": 279,
+        "tag": "AYM",
+        "name": "AYM",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 153.27275,
+        "project_types": {
+          "antq_reg_saddlery": 3,
+          "antq_cult_horse_pastures": 1,
+          "antq_reg_leatherworks": 1
+        }
+      },
+      {
+        "id": 46,
+        "tag": "ARJ",
+        "name": "ARJ",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 149.47505999999998,
+        "project_types": {
+          "antq_reg_wool_carder": 1,
+          "antq_cult_barley_plots": 1,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_cult_millet_plots": 1,
+          "antq_reg_joinery": 1
+        }
+      },
+      {
+        "id": 277,
+        "tag": "PCM",
+        "name": "PCM",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 104.29590999999999,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 2,
+          "antq_reg_ropewalk": 1,
+          "antq_reg_saddlery": 1,
+          "antq_cult_horse_pastures": 1
+        }
+      },
+      {
+        "id": 44,
+        "tag": "YUE",
+        "name": "YUE",
+        "province_count": 11,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 101.34824,
+        "project_types": {
+          "antq_reg_fruit_brewery": 1,
+          "antq_trib_shield_workshop": 1,
+          "antq_cult_flax_hemp_fields": 1,
+          "antq_trib_steppe_bowyer": 1,
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 25,
+        "tag": "IBR",
+        "name": "IBR",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 2,
+        "building_projects": 3,
+        "gold_committed": 100.5,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_cult_dye_gardens": 1,
+          "antq_cult_fruit_orchards": 1,
+          "antq_cult_wheat_fields": 1
+        }
+      },
+      {
+        "id": 48,
+        "tag": "XBA",
+        "name": "XBA",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 5,
+        "rgo_upgrades": 0,
+        "building_projects": 5,
+        "gold_committed": 93.45997,
+        "project_types": {
+          "antq_cult_millet_plots": 2,
+          "antq_reg_ropewalk": 1,
+          "antq_cult_pulse_plots": 1,
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 330,
+        "tag": "IZA",
+        "name": "IZA",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 1,
+        "building_projects": 3,
+        "gold_committed": 192.36335,
+        "project_types": {
+          "antq_trib_shield_workshop": 1,
+          "rgo_upgrade": 1,
+          "antq_trib_tuber_mounds": 1,
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 462,
+        "tag": "OLC",
+        "name": "OLC",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 1,
+        "building_projects": 3,
+        "gold_committed": 186.08905000000001,
+        "project_types": {
+          "antq_cult_cattle_pastures": 1,
+          "antq_cult_millet_plots": 1,
+          "rgo_upgrade": 1,
+          "antq_cult_tobacco_plots": 1
+        }
+      },
+      {
+        "id": 299,
+        "tag": "LBR",
+        "name": "LBR",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 159.88521,
+        "project_types": {
+          "antq_trib_camel_camp": 2,
+          "antq_cult_sesame_plots": 1,
+          "antq_cult_saffron_beds": 1
+        }
+      },
+      {
+        "id": 6,
+        "tag": "XAC",
+        "name": "XAC",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 138.63003,
+        "project_types": {
+          "antq_cult_horse_pastures": 2,
+          "antq_cult_flax_hemp_fields": 2
+        }
+      },
+      {
+        "id": 323,
+        "tag": "PTF",
+        "name": "PTF",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 134.80968000000001,
+        "project_types": {
+          "antq_cult_horse_pastures": 2,
+          "antq_cult_millet_plots": 1,
+          "antq_cult_wheat_fields": 1
+        }
+      },
+      {
+        "id": 436,
+        "tag": "VDS",
+        "name": "VDS",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 130.87194,
+        "project_types": {
+          "antq_cult_barley_plots": 2,
+          "antq_reg_ropewalk": 1,
+          "antq_cult_flax_hemp_fields": 1
+        }
+      },
+      {
+        "id": 226,
+        "tag": "PHC",
+        "name": "PHC",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 130.42722,
+        "project_types": {
+          "antq_trib_nut_grove": 2,
+          "antq_trib_tuber_mounds": 2
+        }
+      },
+      {
+        "id": 441,
+        "tag": "BSR",
+        "name": "BSR",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 128.75691,
+        "project_types": {
+          "antq_cult_sesame_plots": 2,
+          "antq_trib_spear_forge": 1,
+          "antq_cult_millet_plots": 1
+        }
+      },
+      {
+        "id": 239,
+        "tag": "XHH",
+        "name": "XHH",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 127.69328999999999,
+        "project_types": {
+          "antq_cult_barley_plots": 3,
+          "antq_cult_horse_pastures": 1
+        }
+      },
+      {
+        "id": 29,
+        "tag": "XIO",
+        "name": "XIO",
+        "province_count": 30,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 121.46363,
+        "project_types": {
+          "antq_cult_dye_gardens": 3,
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 283,
+        "tag": "AGA",
+        "name": "AGA",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 120.78182000000001,
+        "project_types": {
+          "antq_reg_glassworks": 2,
+          "antq_reg_charcoal_hearth": 2
+        }
+      },
+      {
+        "id": 284,
+        "tag": "PDR",
+        "name": "PDR",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 1,
+        "building_projects": 3,
+        "gold_committed": 113.5043,
+        "project_types": {
+          "antq_cult_flax_hemp_fields": 1,
+          "rgo_upgrade": 1,
+          "antq_reg_saddlery": 1,
+          "antq_reg_leatherworks": 1
+        }
+      },
+      {
+        "id": 103,
+        "tag": "GUT",
+        "name": "GUT",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 1,
+        "building_projects": 3,
+        "gold_committed": 113.4531,
+        "project_types": {
+          "antq_trib_river_barricade": 1,
+          "antq_reg_ropewalk": 1,
+          "rgo_upgrade": 1,
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 18,
+        "tag": "XAK",
+        "name": "XAK",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 2,
+        "building_projects": 2,
+        "gold_committed": 100.5,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_cult_millet_plots": 1,
+          "antq_cult_horse_pastures": 1
+        }
+      },
+      {
+        "id": 305,
+        "tag": "ABN",
+        "name": "ABN",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 97.52055999999999,
+        "project_types": {
+          "antq_cult_fruit_orchards": 2,
+          "antq_cult_saffron_beds": 1,
+          "antq_cult_wheat_fields": 1
+        }
+      },
+      {
+        "id": 45,
+        "tag": "YDH",
+        "name": "YDH",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 90.94929,
+        "project_types": {
+          "antq_reg_leatherworks": 1,
+          "antq_reg_saddlery": 1,
+          "antq_cult_fruit_orchards": 1,
+          "antq_cult_flax_hemp_fields": 1
+        }
+      },
+      {
+        "id": 440,
+        "tag": "DKS",
+        "name": "DKS",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 89.41182,
+        "project_types": {
+          "antq_reg_ropewalk": 2,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 437,
+        "tag": "CED",
+        "name": "CED",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 4,
+        "rgo_upgrades": 0,
+        "building_projects": 4,
+        "gold_committed": 61.36801,
+        "project_types": {
+          "antq_cult_horse_pastures": 2,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_cult_barley_plots": 1
+        }
+      },
+      {
+        "id": 341,
+        "tag": "REC",
+        "name": "REC",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 2,
+        "building_projects": 1,
+        "gold_committed": 218.95399,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_trib_floodplain_plots": 1
+        }
+      },
+      {
+        "id": 349,
+        "tag": "MYB",
+        "name": "MYB",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 1,
+        "building_projects": 2,
+        "gold_committed": 175.02859,
+        "project_types": {
+          "antq_trib_nut_grove": 1,
+          "antq_cult_tobacco_plots": 1,
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 251,
+        "tag": "PUL",
+        "name": "PUL",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 147.21442,
+        "project_types": {
+          "antq_cult_barley_plots": 2,
+          "antq_reg_wheelwright": 1
+        }
+      },
+      {
+        "id": 278,
+        "tag": "KSM",
+        "name": "KSM",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 135.47186,
+        "project_types": {
+          "antq_reg_glassworks": 2,
+          "antq_reg_saddlery": 1
+        }
+      },
+      {
+        "id": 272,
+        "tag": "BED",
+        "name": "BED",
+        "province_count": 10,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 2,
+        "building_projects": 1,
+        "gold_committed": 131.05367,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_cult_incense_gardens": 1
+        }
+      },
+      {
+        "id": 276,
+        "tag": "XFT",
+        "name": "XFT",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 130.85313,
+        "project_types": {
+          "antq_reg_saddlery": 2,
+          "antq_reg_leatherworks": 1
+        }
+      },
+      {
+        "id": 344,
+        "tag": "TIW",
+        "name": "TIW",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 1,
+        "building_projects": 2,
+        "gold_committed": 121.05973,
+        "project_types": {
+          "antq_trib_shield_workshop": 1,
+          "antq_cult_barley_plots": 1,
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 75,
+        "tag": "XDF",
+        "name": "XDF",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 116.71209999999999,
+        "project_types": {
+          "antq_trib_horse_herd_camp": 1,
+          "antq_trib_small_stock_enclosure": 1,
+          "antq_trib_camel_camp": 1
+        }
+      },
+      {
+        "id": 89,
+        "tag": "XEQ",
+        "name": "XEQ",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 1,
+        "building_projects": 2,
+        "gold_committed": 114.27118,
+        "project_types": {
+          "antq_cult_date_groves": 1,
+          "rgo_upgrade": 1,
+          "antq_cult_incense_gardens": 1
+        }
+      },
+      {
+        "id": 228,
+        "tag": "TVC",
+        "name": "TVC",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 102.76894999999999,
+        "project_types": {
+          "antq_cult_horse_pastures": 2,
+          "antq_cult_wheat_fields": 1
+        }
+      },
+      {
+        "id": 293,
+        "tag": "UBR",
+        "name": "UBR",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 102.64332999999999,
+        "project_types": {
+          "antq_cult_apiaries": 2,
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 24,
+        "tag": "XAO",
+        "name": "XAO",
+        "province_count": 14,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 2,
+        "building_projects": 1,
+        "gold_committed": 100.5,
+        "project_types": {
+          "rgo_upgrade": 2,
+          "antq_cult_millet_plots": 1
+        }
+      },
+      {
+        "id": 56,
+        "tag": "XBG",
+        "name": "XBG",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 98.36739,
+        "project_types": {
+          "antq_cult_barley_plots": 2,
+          "antq_cult_camel_corrals": 1
+        }
+      },
+      {
+        "id": 280,
+        "tag": "XFU",
+        "name": "XFU",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 97.58708999999999,
+        "project_types": {
+          "antq_reg_leatherworks": 2,
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 15,
+        "tag": "XAI",
+        "name": "XAI",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 97.42047,
+        "project_types": {
+          "antq_cult_date_groves": 2,
+          "antq_reg_instrument_maker": 1
+        }
+      },
+      {
+        "id": 282,
+        "tag": "VDJ",
+        "name": "VDJ",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 94.26732,
+        "project_types": {
+          "antq_cult_barley_plots": 3
+        }
+      },
+      {
+        "id": 294,
+        "tag": "SDY",
+        "name": "SDY",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 93.79026999999999,
+        "project_types": {
+          "antq_trib_nut_grove": 2,
+          "antq_trib_fishing_weir": 1
+        }
+      },
+      {
+        "id": 217,
+        "tag": "XCR",
+        "name": "XCR",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 93.38627,
+        "project_types": {
+          "antq_cult_wheat_fields": 2,
+          "antq_cult_horse_pastures": 1
+        }
+      },
+      {
+        "id": 215,
+        "tag": "XCO",
+        "name": "XCO",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 93.04624,
+        "project_types": {
+          "antq_trib_nut_grove": 2,
+          "antq_cult_coconut_groves": 1
+        }
+      },
+      {
+        "id": 296,
+        "tag": "SKM",
+        "name": "SKM",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 92.53638,
+        "project_types": {
+          "antq_trib_nut_grove": 2,
+          "antq_trib_fishing_weir": 1
+        }
+      },
+      {
+        "id": 53,
+        "tag": "XBE",
+        "name": "XBE",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 91.01680999999999,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 3
+        }
+      },
+      {
+        "id": 22,
+        "tag": "XAN",
+        "name": "XAN",
+        "province_count": 9,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 1,
+        "building_projects": 2,
+        "gold_committed": 89.66439,
+        "project_types": {
+          "rgo_upgrade": 1,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_reg_carpet_loom": 1
+        }
+      },
+      {
+        "id": 192,
+        "tag": "XGX",
+        "name": "XGX",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 89.55956,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 2,
+          "antq_trib_watch_mound": 1
+        }
+      },
+      {
+        "id": 295,
+        "tag": "MYL",
+        "name": "MYL",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 87.94352,
+        "project_types": {
+          "antq_trib_fishing_weir": 1,
+          "antq_trib_nut_grove": 1,
+          "antq_trib_floodplain_plots": 1
+        }
+      },
+      {
+        "id": 230,
+        "tag": "JZH",
+        "name": "JZH",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 87.61287,
+        "project_types": {
+          "antq_trib_floodplain_plots": 2,
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 224,
+        "tag": "XGV",
+        "name": "XGV",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 85.30841,
+        "project_types": {
+          "antq_cult_fruit_orchards": 2,
+          "antq_cult_millet_plots": 1
+        }
+      },
+      {
+        "id": 180,
+        "tag": "SOG",
+        "name": "SOG",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 76.06386,
+        "project_types": {
+          "antq_reg_fruit_brewery": 2,
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 52,
+        "tag": "XBD",
+        "name": "XBD",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 73.64685,
+        "project_types": {
+          "antq_reg_leatherworks": 2,
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 177,
+        "tag": "XCI",
+        "name": "XCI",
+        "province_count": 10,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 71.42524,
+        "project_types": {
+          "antq_cult_saffron_beds": 1,
+          "antq_reg_charcoal_hearth": 1,
+          "antq_reg_instrument_maker": 1
+        }
+      },
+      {
+        "id": 12,
+        "tag": "XAF",
+        "name": "XAF",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 69.39988,
+        "project_types": {
+          "antq_reg_ropewalk": 2,
+          "antq_reg_wheelwright": 1
+        }
+      },
+      {
+        "id": 183,
+        "tag": "WHU",
+        "name": "WHU",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 1,
+        "building_projects": 2,
+        "gold_committed": 68.37,
+        "project_types": {
+          "rgo_upgrade": 1,
+          "antq_cult_flax_hemp_fields": 1,
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 325,
+        "tag": "NHC",
+        "name": "NHC",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 67.56481,
+        "project_types": {
+          "antq_cult_wheat_fields": 2,
+          "antq_cult_horse_pastures": 1
+        }
+      },
+      {
+        "id": 188,
+        "tag": "XCM",
+        "name": "XCM",
+        "province_count": 29,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 62.14685,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 2,
+          "antq_cult_black_pepper": 1
+        }
+      },
+      {
+        "id": 185,
+        "tag": "PYU",
+        "name": "PYU",
+        "province_count": 13,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 61.34855,
+        "project_types": {
+          "antq_cult_dye_gardens": 2,
+          "antq_cult_black_pepper": 1
+        }
+      },
+      {
+        "id": 438,
+        "tag": "NVM",
+        "name": "NVM",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 60.72631,
+        "project_types": {
+          "antq_cult_barley_plots": 1,
+          "antq_cult_fruit_orchards": 1,
+          "antq_trib_hill_refuge": 1
+        }
+      },
+      {
+        "id": 47,
+        "tag": "XAZ",
+        "name": "XAZ",
+        "province_count": 9,
+        "great_power": false,
+        "active_projects": 3,
+        "rgo_upgrades": 0,
+        "building_projects": 3,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_cattle_pastures": 1,
+          "antq_irrigation_network": 1,
+          "antq_cult_apiaries": 1
+        }
+      },
+      {
+        "id": 455,
+        "tag": "XHM",
+        "name": "XHM",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 2,
+        "building_projects": 0,
+        "gold_committed": 136.3725,
+        "project_types": {
+          "rgo_upgrade": 2
+        }
+      },
+      {
+        "id": 454,
+        "tag": "XDG",
+        "name": "XDG",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 1,
+        "building_projects": 1,
+        "gold_committed": 103.80429000000001,
+        "project_types": {
+          "rgo_upgrade": 1,
+          "antq_trib_woodland_pannage": 1
+        }
+      },
+      {
+        "id": 181,
+        "tag": "KHW",
+        "name": "KHW",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 2,
+        "building_projects": 0,
+        "gold_committed": 100.5,
+        "project_types": {
+          "rgo_upgrade": 2
+        }
+      },
+      {
+        "id": 69,
+        "tag": "KWL",
+        "name": "KWL",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 2,
+        "building_projects": 0,
+        "gold_committed": 100.5,
+        "project_types": {
+          "rgo_upgrade": 2
+        }
+      },
+      {
+        "id": 140,
+        "tag": "XFA",
+        "name": "XFA",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 100.06083,
+        "project_types": {
+          "antq_cult_fruit_orchards": 1,
+          "antq_cult_barley_plots": 1
+        }
+      },
+      {
+        "id": 124,
+        "tag": "XCB",
+        "name": "XCB",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 90.31849,
+        "project_types": {
+          "antq_reg_fruit_brewery": 1,
+          "antq_reg_wheat_brewery": 1
+        }
+      },
+      {
+        "id": 88,
+        "tag": "KIN",
+        "name": "KIN",
+        "province_count": 9,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 88.5715,
+        "project_types": {
+          "antq_trib_camel_camp": 1,
+          "antq_trib_transhumance_station": 1
+        }
+      },
+      {
+        "id": 336,
+        "tag": "VIR",
+        "name": "VIR",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 86.32317,
+        "project_types": {
+          "antq_cult_barley_plots": 1,
+          "antq_cult_cattle_pastures": 1
+        }
+      },
+      {
+        "id": 83,
+        "tag": "AZA",
+        "name": "AZA",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 79.21321,
+        "project_types": {
+          "antq_trib_small_stock_enclosure": 1,
+          "antq_trib_horse_herd_camp": 1
+        }
+      },
+      {
+        "id": 73,
+        "tag": "WDP",
+        "name": "WDP",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 77.11164,
+        "project_types": {
+          "antq_cult_dye_gardens": 2
+        }
+      },
+      {
+        "id": 173,
+        "tag": "ROX",
+        "name": "ROX",
+        "province_count": 38,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 76.53927999999999,
+        "project_types": {
+          "antq_trib_steppe_bowyer": 2
+        }
+      },
+      {
+        "id": 16,
+        "tag": "XAJ",
+        "name": "XAJ",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 76.24624,
+        "project_types": {
+          "antq_reg_wheelwright": 2
+        }
+      },
+      {
+        "id": 102,
+        "tag": "XBO",
+        "name": "XBO",
+        "province_count": 11,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 1,
+        "building_projects": 1,
+        "gold_committed": 75.375,
+        "project_types": {
+          "antq_cult_horse_pastures": 1,
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 444,
+        "tag": "SHY",
+        "name": "SHY",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 66.61842999999999,
+        "project_types": {
+          "antq_trib_pulse_garden": 2
+        }
+      },
+      {
+        "id": 320,
+        "tag": "XDR",
+        "name": "XDR",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 66.41796,
+        "project_types": {
+          "antq_trib_camel_camp": 2
+        }
+      },
+      {
+        "id": 300,
+        "tag": "RKU",
+        "name": "RKU",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 65.30423,
+        "project_types": {
+          "antq_cult_black_pepper": 1,
+          "antq_cult_pulse_plots": 1
+        }
+      },
+      {
+        "id": 281,
+        "tag": "XFV",
+        "name": "XFV",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 64.81646,
+        "project_types": {
+          "antq_cult_barley_plots": 2
+        }
+      },
+      {
+        "id": 274,
+        "tag": "XDP",
+        "name": "XDP",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 64.05216,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 1,
+          "antq_reg_glassworks": 1
+        }
+      },
+      {
+        "id": 109,
+        "tag": "JUT",
+        "name": "JUT",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 63.18882,
+        "project_types": {
+          "antq_reg_ropewalk": 1,
+          "antq_trib_horse_muster": 1
+        }
+      },
+      {
+        "id": 223,
+        "tag": "SJB",
+        "name": "SJB",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 61.69326,
+        "project_types": {
+          "antq_trib_floodplain_plots": 2
+        }
+      },
+      {
+        "id": 222,
+        "tag": "TJC",
+        "name": "TJC",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 60.90233,
+        "project_types": {
+          "antq_cult_fruit_orchards": 2
+        }
+      },
+      {
+        "id": 97,
+        "tag": "XBM",
+        "name": "XBM",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 1,
+        "building_projects": 1,
+        "gold_committed": 60.4725,
+        "project_types": {
+          "rgo_upgrade": 1,
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 297,
+        "tag": "IMV",
+        "name": "IMV",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 59.59783,
+        "project_types": {
+          "antq_cult_apiaries": 1,
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 298,
+        "tag": "XCN",
+        "name": "XCN",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 59.18712,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 2
+        }
+      },
+      {
+        "id": 291,
+        "tag": "DDV",
+        "name": "DDV",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 58.05248,
+        "project_types": {
+          "antq_cult_apiaries": 2
+        }
+      },
+      {
+        "id": 264,
+        "tag": "SMP",
+        "name": "SMP",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 52.836529999999996,
+        "project_types": {
+          "antq_trib_indic_clan_stockade": 1,
+          "antq_trib_river_barricade": 1
+        }
+      },
+      {
+        "id": 100,
+        "tag": "SEM",
+        "name": "SEM",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 47.68602,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 1,
+          "antq_trib_river_barricade": 1
+        }
+      },
+      {
+        "id": 307,
+        "tag": "XGR",
+        "name": "XGR",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 42.64361,
+        "project_types": {
+          "antq_cult_nut_orchards": 1,
+          "antq_cult_barley_plots": 1
+        }
+      },
+      {
+        "id": 51,
+        "tag": "PND",
+        "name": "PND",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 38.87412,
+        "project_types": {
+          "antq_reg_leatherworks": 1,
+          "antq_cult_coconut_groves": 1
+        }
+      },
+      {
+        "id": 132,
+        "tag": "XEW",
+        "name": "XEW",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 37.66414,
+        "project_types": {
+          "antq_cult_flax_hemp_fields": 1,
+          "antq_irrigation_network": 1
+        }
+      },
+      {
+        "id": 130,
+        "tag": "DOB",
+        "name": "DOB",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 35.50407,
+        "project_types": {
+          "antq_irrigation_network": 1,
+          "antq_cult_wheat_fields": 1
+        }
+      },
+      {
+        "id": 187,
+        "tag": "XCL",
+        "name": "XCL",
+        "province_count": 22,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 33.7618,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 1,
+          "antq_cult_cotton_plots": 1
+        }
+      },
+      {
+        "id": 244,
+        "tag": "XFZ",
+        "name": "XFZ",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 31.46407,
+        "project_types": {
+          "antq_reg_carpet_loom": 1,
+          "antq_cult_millet_plots": 1
+        }
+      },
+      {
+        "id": 57,
+        "tag": "XBH",
+        "name": "XBH",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 30.38081,
+        "project_types": {
+          "antq_cult_barley_plots": 1,
+          "antq_cult_camel_corrals": 1
+        }
+      },
+      {
+        "id": 84,
+        "tag": "XBI",
+        "name": "XBI",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 29.9634,
+        "project_types": {
+          "antq_reg_ropewalk": 1,
+          "antq_cult_barley_plots": 1
+        }
+      },
+      {
+        "id": 120,
+        "tag": "XBX",
+        "name": "XBX",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 29.53996,
+        "project_types": {
+          "antq_reg_ropewalk": 1,
+          "antq_cult_dye_gardens": 1
+        }
+      },
+      {
+        "id": 178,
+        "tag": "WSN",
+        "name": "WSN",
+        "province_count": 13,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 2
+        }
+      },
+      {
+        "id": 306,
+        "tag": "XGQ",
+        "name": "XGQ",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_sesame_plots": 2
+        }
+      },
+      {
+        "id": 301,
+        "tag": "SRS",
+        "name": "SRS",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_sesame_plots": 2
+        }
+      },
+      {
+        "id": 54,
+        "tag": "AKS",
+        "name": "AKS",
+        "province_count": 23,
+        "great_power": false,
+        "active_projects": 2,
+        "rgo_upgrades": 0,
+        "building_projects": 2,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_barley_plots": 2
+        }
+      },
+      {
+        "id": 189,
+        "tag": "JAV",
+        "name": "JAV",
+        "province_count": 12,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 83.75,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 340,
+        "tag": "XDL",
+        "name": "XDL",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 67.305,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 457,
+        "tag": "LRC",
+        "name": "LRC",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 66.39,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 339,
+        "tag": "XDI",
+        "name": "XDI",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 66.12,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 34,
+        "tag": "XAV",
+        "name": "XAV",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 65.7,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 98,
+        "tag": "BTV",
+        "name": "BTV",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 61.2,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 71,
+        "tag": "LMP",
+        "name": "LMP",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 58.625,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 142,
+        "tag": "XFB",
+        "name": "XFB",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 56.59681,
+        "project_types": {
+          "antq_cult_barley_plots": 1
+        }
+      },
+      {
+        "id": 343,
+        "tag": "XHK",
+        "name": "XHK",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 55.3875,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 72,
+        "tag": "ZHF",
+        "name": "ZHF",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 50.25,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 328,
+        "tag": "GPC",
+        "name": "GPC",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 50.25,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 110,
+        "tag": "XBS",
+        "name": "XBS",
+        "province_count": 9,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 50.25,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 285,
+        "tag": "XFW",
+        "name": "XFW",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 50.25,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 463,
+        "tag": "WIC",
+        "name": "WIC",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 50.25,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 235,
+        "tag": "PPA",
+        "name": "PPA",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 50.25,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 237,
+        "tag": "FLP",
+        "name": "FLP",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 50.25,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 220,
+        "tag": "XCV",
+        "name": "XCV",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 50.25,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 456,
+        "tag": "SNE",
+        "name": "SNE",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 50.25,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 236,
+        "tag": "MHP",
+        "name": "MHP",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 50.25,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 229,
+        "tag": "MZC",
+        "name": "MZC",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 1,
+        "building_projects": 0,
+        "gold_committed": 50.25,
+        "project_types": {
+          "rgo_upgrade": 1
+        }
+      },
+      {
+        "id": 118,
+        "tag": "XBV",
+        "name": "XBV",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 48.64046,
+        "project_types": {
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 302,
+        "tag": "XGN",
+        "name": "XGN",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 48.02555,
+        "project_types": {
+          "antq_trib_camel_camp": 1
+        }
+      },
+      {
+        "id": 143,
+        "tag": "EPD",
+        "name": "EPD",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 47.63498,
+        "project_types": {
+          "antq_cult_wheat_fields": 1
+        }
+      },
+      {
+        "id": 172,
+        "tag": "IAZ",
+        "name": "IAZ",
+        "province_count": 13,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 47.30446,
+        "project_types": {
+          "antq_trib_household_loom": 1
+        }
+      },
+      {
+        "id": 107,
+        "tag": "XBQ",
+        "name": "XBQ",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 46.0854,
+        "project_types": {
+          "antq_cult_cattle_pastures": 1
+        }
+      },
+      {
+        "id": 93,
+        "tag": "OMN",
+        "name": "OMN",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 45.76662,
+        "project_types": {
+          "antq_reg_fruit_brewery": 1
+        }
+      },
+      {
+        "id": 31,
+        "tag": "KUC",
+        "name": "KUC",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 44.75476,
+        "project_types": {
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 338,
+        "tag": "XCW",
+        "name": "XCW",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 43.72683,
+        "project_types": {
+          "antq_cult_barley_plots": 1
+        }
+      },
+      {
+        "id": 304,
+        "tag": "XGP",
+        "name": "XGP",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 41.34162,
+        "project_types": {
+          "antq_cult_rice_paddies": 1
+        }
+      },
+      {
+        "id": 94,
+        "tag": "XBK",
+        "name": "XBK",
+        "province_count": 10,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 40.81828,
+        "project_types": {
+          "antq_trib_shield_workshop": 1
+        }
+      },
+      {
+        "id": 342,
+        "tag": "XHJ",
+        "name": "XHJ",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 38.45862,
+        "project_types": {
+          "antq_cult_barley_plots": 1
+        }
+      },
+      {
+        "id": 346,
+        "tag": "XHL",
+        "name": "XHL",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 38.12197,
+        "project_types": {
+          "antq_trib_spear_forge": 1
+        }
+      },
+      {
+        "id": 250,
+        "tag": "SHC",
+        "name": "SHC",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 37.77535,
+        "project_types": {
+          "antq_reg_carpet_loom": 1
+        }
+      },
+      {
+        "id": 337,
+        "tag": "NAZ",
+        "name": "NAZ",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 36.69848,
+        "project_types": {
+          "antq_cult_maize_plots": 1
+        }
+      },
+      {
+        "id": 255,
+        "tag": "HMR",
+        "name": "HMR",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 33.36601,
+        "project_types": {
+          "antq_trib_horse_herd_camp": 1
+        }
+      },
+      {
+        "id": 348,
+        "tag": "YUN",
+        "name": "YUN",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 32.60768,
+        "project_types": {
+          "antq_cult_maize_plots": 1
+        }
+      },
+      {
+        "id": 290,
+        "tag": "XFY",
+        "name": "XFY",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 32.34559,
+        "project_types": {
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 20,
+        "tag": "OSR",
+        "name": "OSR",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 32.02633,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 345,
+        "tag": "WNK",
+        "name": "WNK",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 31.97491,
+        "project_types": {
+          "antq_trib_spear_forge": 1
+        }
+      },
+      {
+        "id": 186,
+        "tag": "XCK",
+        "name": "XCK",
+        "province_count": 8,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 31.48397,
+        "project_types": {
+          "antq_trib_shield_workshop": 1
+        }
+      },
+      {
+        "id": 322,
+        "tag": "SLC",
+        "name": "SLC",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 31.07058,
+        "project_types": {
+          "antq_cult_wheat_fields": 1
+        }
+      },
+      {
+        "id": 127,
+        "tag": "XES",
+        "name": "XES",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 30.95467,
+        "project_types": {
+          "antq_reg_ropewalk": 1
+        }
+      },
+      {
+        "id": 442,
+        "tag": "MLD",
+        "name": "MLD",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 30.5654,
+        "project_types": {
+          "antq_trib_nut_grove": 1
+        }
+      },
+      {
+        "id": 326,
+        "tag": "XGS",
+        "name": "XGS",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 30.07127,
+        "project_types": {
+          "antq_cult_millet_plots": 1
+        }
+      },
+      {
+        "id": 252,
+        "tag": "FJS",
+        "name": "FJS",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 29.07733,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 245,
+        "tag": "YNC",
+        "name": "YNC",
+        "province_count": 7,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 27.32461,
+        "project_types": {
+          "antq_trib_horse_muster": 1
+        }
+      },
+      {
+        "id": 32,
+        "tag": "XAT",
+        "name": "XAT",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_millet_plots": 1
+        }
+      },
+      {
+        "id": 439,
+        "tag": "XGE",
+        "name": "XGE",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_horse_pastures": 1
+        }
+      },
+      {
+        "id": 121,
+        "tag": "XBY",
+        "name": "XBY",
+        "province_count": 5,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_cattle_pastures": 1
+        }
+      },
+      {
+        "id": 182,
+        "tag": "XIA",
+        "name": "XIA",
+        "province_count": 13,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_fruit_orchards": 1
+        }
+      },
+      {
+        "id": 275,
+        "tag": "XFS",
+        "name": "XFS",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_horse_pastures": 1
+        }
+      },
+      {
+        "id": 286,
+        "tag": "VNG",
+        "name": "VNG",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_horse_pastures": 1
+        }
+      },
+      {
+        "id": 119,
+        "tag": "XBW",
+        "name": "XBW",
+        "province_count": 1,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_reg_charcoal_hearth": 1
+        }
+      },
+      {
+        "id": 87,
+        "tag": "XBJ",
+        "name": "XBJ",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_date_groves": 1
+        }
+      },
+      {
+        "id": 96,
+        "tag": "XBL",
+        "name": "XBL",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_irrigation_network": 1
+        }
+      },
+      {
+        "id": 36,
+        "tag": "BUY",
+        "name": "BUY",
+        "province_count": 6,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_dye_gardens": 1
+        }
+      },
+      {
+        "id": 125,
+        "tag": "DUM",
+        "name": "DUM",
+        "province_count": 3,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_wheat_fields": 1
+        }
+      },
+      {
+        "id": 131,
+        "tag": "XEV",
+        "name": "XEV",
+        "province_count": 4,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_cattle_pastures": 1
+        }
+      },
+      {
+        "id": 92,
+        "tag": "XER",
+        "name": "XER",
+        "province_count": 2,
+        "great_power": false,
+        "active_projects": 1,
+        "rgo_upgrades": 0,
+        "building_projects": 1,
+        "gold_committed": 0.0,
+        "project_types": {
+          "antq_cult_date_groves": 1
+        }
+      }
+    ]
+  },
+  "estates": {
+    "records": 2538,
+    "minimum": 0.1106,
+    "p10": 0.408042,
+    "median": 0.6086849999999999,
+    "polity_mean_p10": 0.553194,
+    "below_10_percent": 0,
+    "below_25_percent": 4
+  },
+  "wars": {
+    "distinct_civil_wars": 0,
+    "active_wars": 0,
+    "active_civil_wars": 0,
+    "elapsed_years": 4.0,
+    "civil_wars_per_polity_year": 0.0
+  },
+  "epidemics": {
+    "non_endemic_outbreaks": 6,
+    "outbreaks": [
+      {
+        "id": 6700,
+        "type": "influenza",
+        "outbreak_date": "2.1.1.2",
+        "died_out_date": "2.5.8",
+        "affected_locations": 86,
+        "age_years": 3.0,
+        "affected_locations_per_year": 28.666666666666668
+      },
+      {
+        "id": 6701,
+        "type": "bubonic_plague",
+        "outbreak_date": "2.6.1",
+        "died_out_date": "2.8.1",
+        "affected_locations": 1,
+        "age_years": 2.5833333333333335,
+        "affected_locations_per_year": 0.3870967741935484
+      },
+      {
+        "id": 6702,
+        "type": "smallpox",
+        "outbreak_date": "2.8.1",
+        "died_out_date": "2.11.1",
+        "affected_locations": 13,
+        "age_years": 2.4166666666666665,
+        "affected_locations_per_year": 5.379310344827586
+      },
+      {
+        "id": 6703,
+        "type": "measles",
+        "outbreak_date": "3.4.1",
+        "died_out_date": "3.8.16",
+        "affected_locations": 46,
+        "age_years": 1.75,
+        "affected_locations_per_year": 26.285714285714285
+      },
+      {
+        "id": 6704,
+        "type": "typhus",
+        "outbreak_date": "3.11.1",
+        "died_out_date": "3.12.14",
+        "affected_locations": 1,
+        "age_years": 1.1666666666666665,
+        "affected_locations_per_year": 0.8571428571428572
+      },
+      {
+        "id": 6705,
+        "type": "smallpox",
+        "outbreak_date": "4.11.1",
+        "died_out_date": "4.12.7",
+        "affected_locations": 1,
+        "age_years": 0.16666666666666696,
+        "affected_locations_per_year": 5.999999999999989
+      }
+    ]
+  },
+  "log": {
+    "path": null,
+    "script_errors": 0,
+    "ai_command_errors": 0,
+    "locations": {}
+  },
+  "failures": []
+}

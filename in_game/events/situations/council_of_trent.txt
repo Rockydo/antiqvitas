@@ -139,7 +139,7 @@ council_of_trent.1001 = {
 	image = "gfx/interface/illustrations/situation/council_of_trent.dds"
 
 	immediate = {
-		c:PAP = {
+		c:DUMMY = {
 			ruler_or_regent ?= {
 				save_scope_as = target_character
 			}

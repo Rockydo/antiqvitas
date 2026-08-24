@@ -9,7 +9,7 @@ flavor_nav.10 = { #The Call of the Church
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 100
@@ -41,7 +41,7 @@ flavor_nav.10 = { #The Call of the Church
 		name = flavor_nav.10.a
 		historical_option = yes #She became a Poor Clare in May 1337
 		character:nav_joana_evreux = {
-			move_country = c:FRA
+			move_country = c:DUMMY
 			change_character_estate = estate_type:clergy_estate
 		}
 	}
@@ -62,7 +62,7 @@ flavor_nav.20 = { #San Francisco de Olite
 	fire_only_once = yes
 	
 	dynamic_historical_event = {
-		tag = NAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -115,7 +115,7 @@ flavor_nav.30 = { #Irrigation Projects in Tudela
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -169,7 +169,7 @@ flavor_nav.40 = { #A Copy of the Fueros of Navarra
 	fire_only_once = yes
 
 	dynamic_historical_event = {
-		tag = NAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -235,7 +235,7 @@ flavor_nav.50 = { #The Siege of Algeciras
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10
@@ -252,7 +252,7 @@ flavor_nav.50 = { #The Siege of Algeciras
 			religion.group = religion_group:muslim
 			owns = location:algeciras
 		}
-		c:CAS = {
+		c:DUMMY = {
 			is_at_war_with = location:algeciras.owner
 		}
 	}
@@ -276,7 +276,7 @@ flavor_nav.50 = { #The Siege of Algeciras
 		name = flavor_nav.50.a
 		historical_option = yes #Philippe went to crusade and died
 		add_prestige = prestige_severe_bonus
-		add_opinion = { target = c:CAS modifier = opinion_they_helped_us }
+		add_opinion = { target = c:DUMMY modifier = opinion_they_helped_us }
 		random_list = {
 			90 = { 
 				kill_character = character:nav_philip_iii_evreux
@@ -286,7 +286,7 @@ flavor_nav.50 = { #The Siege of Algeciras
 	}
 	option = {
 		name = flavor_nav.50.b
-		add_opinion = { target = c:CAS modifier = opinion_they_aid_us }
+		add_opinion = { target = c:DUMMY modifier = opinion_they_aid_us }
 	}
 	option = {
 		name = flavor_nav.50.c
@@ -357,7 +357,7 @@ flavor_nav.70 = { #The Camara de Comptos
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = NAV
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 10

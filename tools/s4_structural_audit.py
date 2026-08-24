@@ -6,14 +6,21 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from m10_situation_actions import action_key, load_situations, responses
+
 ROOT = Path(__file__).resolve().parents[1]
 M10_SITUATIONS = tuple(sorted((ROOT / "in_game/common/situations").glob("antq_m10_*.txt")))
 M10_DISASTERS = tuple(sorted((ROOT / "in_game/common/disasters").glob("antq_m10_*.txt")))
 S2_SITUATIONS = (ROOT / "in_game/common/situations/antq_s2_germania_dynamics.txt",)
 IO_TYPES = ROOT / "in_game/common/international_organizations/00_antiquitas_m9.txt"
 IO_START = ROOT / "main_menu/setup/start/15_international_organizations.txt"
+M9_ACTION_FILE = ROOT / "in_game/common/generic_actions/antq_m9_organization_actions.txt"
+M9_AI_PULSE = ROOT / "in_game/common/on_action/antq_m9_organization_ai_pulse.txt"
+M10_AI_PULSE = ROOT / "in_game/common/on_action/antq_m10_situation_ai_pulse.txt"
+GERMANIA_AI_PULSE = ROOT / "in_game/common/on_action/antq_s2_germania_ai_pulse.txt"
+ARABIA_AI_PULSE = ROOT / "in_game/common/on_action/antq_s2_arabian_route_ai_pulse.txt"
 ACTION_FILES = (
-    ROOT / "in_game/common/generic_actions/antq_m9_organization_actions.txt",
+    M9_ACTION_FILE,
     ROOT / "in_game/common/generic_actions/antq_s2_germania_actions.txt",
     ROOT / "in_game/common/generic_actions/antq_s2_arabian_route_actions.txt",
 )
@@ -42,6 +49,22 @@ def blocks(text: str, prefix: str) -> dict[str, str]:
                     result[match.group(1)] = text[match.start(): index + 1]
                     break
     return result
+
+
+def nested_block(text: str, label: str) -> str:
+    """Return the first balanced named script block, or an empty string."""
+    match = re.search(rf"(?m)^\s*{re.escape(label)}\s*=\s*\{{", text)
+    if not match:
+        return ""
+    depth = 0
+    for index in range(match.end() - 1, len(text)):
+        if text[index] == "{":
+            depth += 1
+        elif text[index] == "}":
+            depth -= 1
+            if depth == 0:
+                return text[match.start(): index + 1]
+    return ""
 
 
 def main() -> int:
@@ -81,7 +104,12 @@ def main() -> int:
     except OSError:
         situation_actions = ""
         failures.append("missing generated ancient situation actions")
+    situation_action_blocks = blocks(situation_actions, "antq_")
     ai_text = "\n".join(path.read_text(encoding="utf-8-sig") for path in AI_LIST_ROOT.glob("*.txt"))
+    authored_responses = {
+        record.key: tuple(action_key(record, response) for response in responses(record))
+        for record in load_situations()
+    }
     for key in situation_managers:
         panel = SITUATION_PANEL_ROOT / f"{key}.gui"
         if not panel.is_file():
@@ -105,20 +133,55 @@ def main() -> int:
             if token not in situation_managers[key]:
                 failures.append(f"situation {key} lacks panel/map presentation token: {token}")
         progress = f"{key}_resolution_progress"
-        for response in ("relief", "mobilize"):
-            action = f"{key}_{response}"
+        actions = authored_responses.get(key, ())
+        if len(actions) != 3:
+            failures.append(
+                f"situation {key} has {len(actions)} authored actions instead of three"
+            )
+        for action in actions:
+            action_block = situation_action_blocks.get(action, "")
             required = (
                 f"{action} = {{",
                 "type = situation",
                 f"situation:{key} = this",
                 f"name = {progress}",
-                "ai_will_do = {",
             )
             for token in required:
-                if token not in situation_actions:
+                if token not in action_block:
                     failures.append(f"situation action {action} lacks {token}")
-            if len(re.findall(rf"(?m)^\s*{re.escape(action)}\s*$", ai_text)) != 1:
-                failures.append(f"situation action AI registry is not exactly once: {action}")
+            for forbidden in (
+                "ai_tick", "automation_tick", "ai_prerequisite",
+                "ai_will_do", "ai_interaction_source_list",
+            ):
+                if forbidden in action_block:
+                    failures.append(
+                        f"situation action {action} exposes unsafe generic-action AI token: {forbidden}"
+                    )
+            registry_path_count = len(
+                re.findall(rf"(?m)^\s*{re.escape(action)}\s*$", ai_text)
+            )
+            if registry_path_count != 1:
+                failures.append(
+                    "situation action AI candidate index is not exactly once "
+                    f"(found {registry_path_count}): {action}"
+                )
+
+    m10_pulse = M10_AI_PULSE.read_text(encoding="utf-8-sig")
+    expected_response_count = sum(len(actions) for actions in authored_responses.values())
+    if m10_pulse.count("\t\tif = {") != expected_response_count:
+        failures.append(
+            "safe M10 situation AI pulse does not contain one branch per authored response"
+        )
+    for token in (
+        "antq_m10_situation_ai_pulse = {", "is_ai = yes", "gold >= 80",
+        "situation_is_active = yes", "_ai_cooldown", "years = 2",
+    ):
+        if token not in m10_pulse:
+            failures.append(f"safe M10 situation AI pulse lacks {token}")
+    for key, actions in authored_responses.items():
+        for action in actions:
+            if f"name = {action}_ai_cooldown" not in m10_pulse:
+                failures.append(f"safe M10 situation AI pulse lacks cooldown for {action}")
 
     disaster_text = "\n".join(path.read_text(encoding="utf-8-sig") for path in M10_DISASTERS)
     for disease in ("antq_m10_second_antonine_plague", "antq_m10_third_cyprian_plague"):
@@ -174,15 +237,51 @@ def main() -> int:
         action_blocks = blocks(text, "antq_")
         actions.update(action_blocks)
         for key, block in action_blocks.items():
-            for forbidden in ("ai_tick = never", "automation_tick = never", "add = -1000"):
+            for forbidden in (
+                "ai_tick", "automation_tick", "ai_prerequisite",
+                "ai_will_do", "ai_interaction_source_list",
+            ):
                 if forbidden in block:
-                    failures.append(f"organization action {key} retains {forbidden}")
-            for token in ("ai_tick = monthly", "automation_tick = monthly", "ai_will_do = {"):
-                if token not in block:
-                    failures.append(f"organization action {key} lacks {token}")
+                    failures.append(
+                        f"organization action {key} exposes unsafe generic-action AI token: {forbidden}"
+                    )
+            if "add_opinion" in block:
+                target_allow = nested_block(nested_block(block, "allow"), "scope:target")
+                if "this != scope:actor" not in target_allow:
+                    failures.append(f"organization action {key} permits an AI self-target")
+                target_effect = nested_block(nested_block(block, "effect"), "scope:target")
+                if "limit = { this != scope:actor }" not in target_effect:
+                    failures.append(f"organization action {key} can execute a self-target effect")
     for key in actions:
         if len(re.findall(rf"(?m)^\s*{re.escape(key)}\s*$", ai_text)) != 1:
             failures.append(f"organization action AI registry is not exactly once: {key}")
+
+    m9_pulse = M9_AI_PULSE.read_text(encoding="utf-8-sig")
+    for token in (
+        "antq_m9_organization_ai_pulse = {", "is_ai = yes",
+        "tag = XAR", "current_month = 3", "tag = XCI", "current_month = 9",
+        "gold >= 80", "antq_m9_han_tribute_cooldown",
+        "antq_m9_kangju_council_cooldown", "years = 3",
+        "international_organization:antq_han_tributary_system = {",
+        "international_organization:antq_kangju_confederation = {",
+    ):
+        if token not in m9_pulse:
+            failures.append(f"safe M9 organization AI pulse lacks {token}")
+
+    for pulse_path, pulse_key, branch_count, cooldown_years in (
+        (GERMANIA_AI_PULSE, "antq_s2_germania_ai_pulse", 12, 5),
+        (ARABIA_AI_PULSE, "antq_s2_arabian_route_ai_pulse", 4, 3),
+    ):
+        pulse = pulse_path.read_text(encoding="utf-8-sig")
+        if pulse.count("\t\tif = {") != branch_count:
+            failures.append(f"{pulse_key} branch inventory mismatch")
+        for token in (
+            f"{pulse_key} = {{", "is_ai = yes", "gold >= 80",
+            "random_international_organization_member = {", "this != scope:",
+            "_ai_cooldown", f"years = {cooldown_years}",
+        ):
+            if token not in pulse:
+                failures.append(f"safe organization AI pulse {pulse_key} lacks {token}")
 
     if failures:
         print("s4_structural_audit: FAIL")
@@ -191,7 +290,7 @@ def main() -> int:
         return 1
     print(
         f"s4_structural_audit: PASS ({len(managers)} staged currents; "
-        f"{len(ACTIVE_IOS)} active IOs; {len(actions)} AI organization actions)"
+        f"{len(ACTIVE_IOS)} active IOs; {len(actions)} registered organization actions)"
     )
     return 0
 

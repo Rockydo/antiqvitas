@@ -10,7 +10,7 @@ flavor_geo.1 = {
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -115,7 +115,7 @@ flavor_geo.2 = { #Trade with the West
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 2
@@ -123,14 +123,14 @@ flavor_geo.2 = { #Trade with the West
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:BYZ
-		c:BYZ = { is_subject = no at_war = no is_during_bankruptcy = no }
+		country_exists = c:DUMMY
+		c:DUMMY = { is_subject = no at_war = no is_during_bankruptcy = no }
 
-		country_exists = c:VEN
-		c:VEN = { is_subject = no at_war = no is_during_bankruptcy = no }
+		country_exists = c:DUMMY
+		c:DUMMY = { is_subject = no at_war = no is_during_bankruptcy = no }
 
-		country_exists = c:GEN
-		c:GEN = { is_subject = no at_war = no is_during_bankruptcy = no }
+		country_exists = c:DUMMY
+		c:DUMMY = { is_subject = no at_war = no is_during_bankruptcy = no }
 	}
 
 	illustration_tags = {
@@ -143,15 +143,15 @@ flavor_geo.2 = { #Trade with the West
 		save_scope_as = target_country
 		capital.market = { save_scope_as = target_location }
 		ruler_or_regent = { save_scope_as = target_character }
-		c:BYZ = {
+		c:DUMMY = {
 			save_scope_as = target_country1
 			ruler_or_regent = { save_scope_as = target_character1 }
 		}
-		c:VEN = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 			ruler_or_regent = { save_scope_as = target_character2 }
 		}
-		c:GEN = {
+		c:DUMMY = {
 			save_scope_as = target_country3
 			ruler_or_regent = { save_scope_as = target_character3 }
 		}
@@ -161,14 +161,14 @@ flavor_geo.2 = { #Trade with the West
 	option = {
 		name = flavor_geo.2.a
 
-		c:BYZ = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_geo.3
 		}
 	}
 	option = {
 		name = flavor_geo.2.b
 
-		c:VEN = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_geo.3
 		}
 	}
@@ -176,7 +176,7 @@ flavor_geo.2 = { #Trade with the West
 	option = {
 		name = flavor_geo.2.c
 
-		c:GEN = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_geo.3
 		}
 	}
@@ -221,7 +221,7 @@ flavor_geo.3 = { #Envoy from [GetCountry('GEO').GetNameWithNoTooltip]
 	option = {
 		name = flavor_geo.3.a
 		add_opinion_mutual_effect = {
-			target = c:GEO
+			target = c:DUMMY
 			modifier = opinion_traders_in_x
 		}
 		scope:target_location = {
@@ -233,7 +233,7 @@ flavor_geo.3 = { #Envoy from [GetCountry('GEO').GetNameWithNoTooltip]
 			}
 		}
 		change_gold_effect = { scale = -2 }
-		c:GEO = {
+		c:DUMMY = {
 			add_gold = {
 				value = prev.monthly_income_total
 				multiply = 2
@@ -245,7 +245,7 @@ flavor_geo.3 = { #Envoy from [GetCountry('GEO').GetNameWithNoTooltip]
 		name = flavor_geo.3.b
 
 		add_estate_satisfaction = { type = estate_type:burghers_estate value = estate_satisfaction_extreme_penalty }
-		c:GEO = {
+		c:DUMMY = {
 			add_prestige = prestige_mild_bonus
 		}
 	}
@@ -263,7 +263,7 @@ flavor_geo.4 = { #Correspondence with a [target_country2.GetGovernment.GetRulerT
 	historical_info = flavor_geo.4.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 25
@@ -272,8 +272,8 @@ flavor_geo.4 = { #Correspondence with a [target_country2.GetGovernment.GetRulerT
 	trigger = {
 		current_date > 476.9.4
 		religion.group = religion_group:christian
-		country_exists = c:MAM
-		c:MAM = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_subject = no
 			at_war = no
 			is_during_bankruptcy = no
@@ -285,11 +285,11 @@ flavor_geo.4 = { #Correspondence with a [target_country2.GetGovernment.GetRulerT
 			}
 		}
 		NOR = {
-			is_rival_of = c:MAM
-			is_enemy_of = c:MAM
+			is_rival_of = c:DUMMY
+			is_enemy_of = c:DUMMY
 			has_mutual_scripted_relation = {
 				type = relation_type:alliance
-				target = c:MAM
+				target = c:DUMMY
 			}
 		}
 	}
@@ -303,7 +303,7 @@ flavor_geo.4 = { #Correspondence with a [target_country2.GetGovernment.GetRulerT
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
 		save_scope_as = target_country
 		ruler_or_regent = { save_scope_as = target_character }
-		c:MAM = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 			ruler_or_regent = { save_scope_as = target_character2 }
 			random_owned_location = {
@@ -334,7 +334,7 @@ flavor_geo.4 = { #Correspondence with a [target_country2.GetGovernment.GetRulerT
 		name = flavor_geo.4.a
 		historical_option = yes
 
-		c:MAM = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_geo.5
 		}
 		add_prestige = prestige_mild_penalty
@@ -379,14 +379,14 @@ flavor_geo.5 = { #Letter from a [target_country.GetGovernment.GetRulerTitle]
 		}
 
 		add_opinion_mutual_effect = {
-			target = c:GEO
+			target = c:DUMMY
 			modifier = opinion_protected_christian_minorities
 		}
 
 		change_societal_value = { type = mysticism_vs_jurisprudence value = societal_value_tiny_move_to_right }
 		create_relation = {
 			first = ROOT
-			second = c:GEO
+			second = c:DUMMY
 			type = relation_type:alliance
 		}
 	}
@@ -394,7 +394,7 @@ flavor_geo.5 = { #Letter from a [target_country.GetGovernment.GetRulerTitle]
 		name = flavor_geo.5.b
 
 		add_opinion_mutual_effect = {
-			target = c:GEO
+			target = c:DUMMY
 			modifier = opinion_refused_to_help_christian_minorities
 		}
 
@@ -402,7 +402,7 @@ flavor_geo.5 = { #Letter from a [target_country.GetGovernment.GetRulerTitle]
 	}
 
 	after = {
-		c:GEO = { trigger_event_non_silently = flavor_geo.6 }
+		c:DUMMY = { trigger_event_non_silently = flavor_geo.6 }
 	}
 	trigger = {
 		current_date > 476.9.4
@@ -418,7 +418,7 @@ flavor_geo.6 = { #The [target_country2.GetAdjectiveWithNoTooltip] Response
 				trigger = {
 					has_mutual_scripted_relation = {
 						type = relation_type:alliance
-						target = c:MAM
+						target = c:DUMMY
 					}
 				}
 				desc = flavor_geo.6.desc.a
@@ -444,19 +444,19 @@ flavor_geo.6 = { #The [target_country2.GetAdjectiveWithNoTooltip] Response
 		trigger = {
 			has_mutual_scripted_relation = {
 				type = relation_type:alliance
-				target = c:MAM
+				target = c:DUMMY
 			}
 		}
 
 		custom_tooltip = every_christian_pop_gains_25_satisfaction_tt
 		show_as_tooltip = {
 			add_opinion_mutual_effect = {
-				target = c:MAM
+				target = c:DUMMY
 				modifier = opinion_protected_christian_minorities
 			}
 			create_relation = {
-				first = c:MAM
-				second = c:GEO
+				first = c:DUMMY
+				second = c:DUMMY
 				type = relation_type:alliance
 			}
 		}
@@ -467,7 +467,7 @@ flavor_geo.6 = { #The [target_country2.GetAdjectiveWithNoTooltip] Response
 			NOT = {
 				has_mutual_scripted_relation = {
 					type = relation_type:alliance
-					target = c:MAM
+					target = c:DUMMY
 				}
 			}
 		}
@@ -475,7 +475,7 @@ flavor_geo.6 = { #The [target_country2.GetAdjectiveWithNoTooltip] Response
 
 		add_prestige = prestige_mild_penalty
 		add_opinion_mutual_effect = {
-			target = c:MAM
+			target = c:DUMMY
 			modifier = denied_aid
 		}
 	}
@@ -493,7 +493,7 @@ flavor_geo.7 = { #Campaign Against the [target_country2.GetLongNameWithNoTooltip
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -503,17 +503,17 @@ flavor_geo.7 = { #Campaign Against the [target_country2.GetLongNameWithNoTooltip
 		current_date > 476.9.4
 		at_war = no
 		is_during_bankruptcy = no
-		c:SRV = { own_entire_province = province_definition:baku_province }
+		c:DUMMY = { own_entire_province = province_definition:baku_province }
 		NOT = {
-			has_casus_belli_of_type_on = { type = casus_belli:cb_conquer_province target = c:SRV }
+			has_casus_belli_of_type_on = { type = casus_belli:cb_conquer_province target = c:DUMMY }
 		}
 		NOR = {
 			has_mutual_scripted_relation = {
 				type = relation_type:alliance
-				target = c:SRV
+				target = c:DUMMY
 			}
-			c:SRV = { is_subject = yes }
-			is_subject_of = c:SRV
+			c:DUMMY = { is_subject = yes }
+			is_subject_of = c:DUMMY
 		}
 	}
 
@@ -526,7 +526,7 @@ flavor_geo.7 = { #Campaign Against the [target_country2.GetLongNameWithNoTooltip
 		event_illustration_poptype_effect = { foreground = pop_type:soldiers background = pop_type:soldiers }
 		save_scope_as = target_country
 		ruler_or_regent = { save_scope_as = target_character }
-		c:SRV = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 			ruler_or_regent = { save_scope_as = target_character2 }
 		}
@@ -537,7 +537,7 @@ flavor_geo.7 = { #Campaign Against the [target_country2.GetLongNameWithNoTooltip
 		add_casus_belli = {
 			type = casus_belli:cb_conquer_province
 			province = location:baku.province
-			target = c:SRV
+			target = c:DUMMY
 		}
 	}
 
@@ -557,7 +557,7 @@ flavor_geo.8 = { #Letters for [target_character2.GetLongName]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -565,20 +565,20 @@ flavor_geo.8 = { #Letters for [target_character2.GetLongName]
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:FRA
+		country_exists = c:DUMMY
 		at_war = no
-		c:FRA = {
+		c:DUMMY = {
 			is_subject = no
 			is_during_bankruptcy = no
 		}
 		location:jerusalem.top_owner = {
 			NOR = {
 				this = ROOT
-				this = c:FRA
+				this = c:DUMMY
 				is_subject_or_below_of = ROOT
 				has_mutual_scripted_relation = {
 					type = relation_type:alliance
-					target = c:GEO
+					target = c:DUMMY
 				}
 			}
 		}
@@ -593,7 +593,7 @@ flavor_geo.8 = { #Letters for [target_character2.GetLongName]
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
 		save_scope_as = target_country
 		ruler_or_regent = { save_scope_as = target_character }
-		c:FRA = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 			ruler_or_regent = { save_scope_as = target_character2 }
 		}
@@ -604,7 +604,7 @@ flavor_geo.8 = { #Letters for [target_character2.GetLongName]
 		name = flavor_geo.8.a
 		historical_option = yes
 
-		c:FRA = { trigger_event_non_silently = flavor_geo.9 }
+		c:DUMMY = { trigger_event_non_silently = flavor_geo.9 }
 		change_gold_effect = { scale = -1 }
 	}
 	option = {
@@ -633,7 +633,7 @@ flavor_geo.9 = { #[ShowReligionGroupNameWithNoTooltip('christian')] in the East
 		name = flavor_geo.9.a
 
 		change_gold_effect = { scale = -5 }
-		c:GEO = {
+		c:DUMMY = {
 			set_variable = received_money_variable
 		}
 	}
@@ -646,13 +646,13 @@ flavor_geo.9 = { #[ShowReligionGroupNameWithNoTooltip('christian')] in the East
 	option = {
 		name = flavor_geo.9.c
 
-		c:GEO = {
+		c:DUMMY = {
 			set_variable = received_nothing_variable
 		}
 	}
 
 	after = {
-		c:GEO = {
+		c:DUMMY = {
 			trigger_event_non_silently = {
 				id = flavor_geo.10
 				months = { 3 4 }
@@ -691,7 +691,7 @@ flavor_geo.10 = { #The [target_country2.GetAdjectiveWithNoTooltip] [target_count
 			limit = { has_variable = received_money_variable }
 			hidden_effect = { remove_variable = received_money_variable }
 			add_gold = {
-				value = c:FRA.monthly_income_total
+				value = c:DUMMY.monthly_income_total
 				multiply = 5
 			}
 		}
@@ -706,10 +706,10 @@ flavor_geo.10 = { #The [target_country2.GetAdjectiveWithNoTooltip] [target_count
 				create_sub_unit = unit_type:a_late_crusader_knights
 			}
 			add_migration = {
-				owner = c:FRA
-				from = c:FRA.capital.province_definition
+				owner = c:DUMMY
+				from = c:DUMMY.capital.province_definition
 				to = root.capital.province_definition
-				religion = c:FRA.religion
+				religion = c:DUMMY.religion
 				type = pop_type:peasants
 				amount = 0.04
 				months = 60
@@ -739,7 +739,7 @@ flavor_geo.11 = { #A Powerful Neighbor
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -748,8 +748,8 @@ flavor_geo.11 = { #A Powerful Neighbor
 	trigger = {
 		current_date > 476.9.4
 		at_war = no
-		country_exists = c:CHB
-		c:CHB = {
+		country_exists = c:DUMMY
+		c:DUMMY = {
 			is_subject = no
 			at_war = no
 			is_during_bankruptcy = no
@@ -757,12 +757,12 @@ flavor_geo.11 = { #A Powerful Neighbor
 		NOR = {
 			has_mutual_scripted_relation = {
 				type = relation_type:alliance
-				target = c:CHB
+				target = c:DUMMY
 			}
-			is_subject_of = c:CHB
+			is_subject_of = c:DUMMY
 		}
 		relative_strength = {
-			target = c:CHB
+			target = c:DUMMY
 			value < 0.5
 		}
 	}
@@ -776,7 +776,7 @@ flavor_geo.11 = { #A Powerful Neighbor
 		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
 		save_scope_as = target_country
 		ruler_or_regent = { save_scope_as = target_character }
-		c:CHB = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 			ruler_or_regent = { save_scope_as = target_character2 }
 		}
@@ -785,13 +785,13 @@ flavor_geo.11 = { #A Powerful Neighbor
 	option = {
 		name = flavor_geo.11.a
 
-		c:CHB = {
+		c:DUMMY = {
 			hidden_effect = {
 				set_variable = geo_accepted_tribute
 			}
 		}
 		make_subject_of = {
-			target = c:CHB
+			target = c:DUMMY
 			type = subject_type:tributary
 		}
 
@@ -799,7 +799,7 @@ flavor_geo.11 = { #A Powerful Neighbor
 	option = {
 		name = flavor_geo.11.b
 
-		c:CHB = {
+		c:DUMMY = {
 			add_casus_belli = {
 				type = casus_belli:cb_subject_broke_free
 				target = ROOT
@@ -808,7 +808,7 @@ flavor_geo.11 = { #A Powerful Neighbor
 	}
 
 	after = {
-		c:CHB = {
+		c:DUMMY = {
 			trigger_event_silently = flavor_geo.12
 		}
 	}
@@ -847,9 +847,9 @@ flavor_geo.12 = { #The [target_country.GetLongNameWithNoTooltip]
 		name = flavor_geo.12.a
 		trigger = { has_variable = geo_accepted_tribute }
 		show_as_tooltip = {
-			c:GEO = {
+			c:DUMMY = {
 				make_subject_of = {
-					target = c:CHB
+					target = c:DUMMY
 					type = subject_type:tributary
 				}
 			}
@@ -864,7 +864,7 @@ flavor_geo.12 = { #The [target_country.GetLongNameWithNoTooltip]
 			root = {
 				add_casus_belli = {
 					type = casus_belli:cb_subject_broke_free
-					target = c:GEO
+					target = c:DUMMY
 				}
 			}
 		}
@@ -886,7 +886,7 @@ flavor_geo.13 = { #Order Across [ShowProvinceDefinitionNameWithNoTooltip('kutais
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -958,7 +958,7 @@ flavor_geo.14 = { #The Mint of Elegir
 	historical_info = flavor_geo.14.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 5
@@ -1044,7 +1044,7 @@ flavor_geo.15 = { #The Walls of [target_location.GetNameWithNoTooltip]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1099,7 +1099,7 @@ flavor_geo.16 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] Presence in 
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1131,7 +1131,7 @@ flavor_geo.16 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] Presence in 
 			save_scope_as = target_location1
 			event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:clergy_estate }
 		}
-		c:PAP = {
+		c:DUMMY = {
 			save_scope_as = target_country
 			capital = { save_scope_as = target_location2 }
 			ruler_or_regent = { save_scope_as = target_character2 }
@@ -1143,7 +1143,7 @@ flavor_geo.16 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] Presence in 
 		historical_option = yes
 
 		add_opinion_mutual_effect = {
-			target = c:PAP
+			target = c:DUMMY
 			modifier = opinion_catholic_presence_in_georgia
 		}
 
@@ -1174,7 +1174,7 @@ flavor_geo.16 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] Presence in 
 			}
 		}
 
-		c:PAP = { trigger_event_non_silently = flavor_geo.17 }
+		c:DUMMY = { trigger_event_non_silently = flavor_geo.17 }
 	}
 
 	option = {
@@ -1202,11 +1202,11 @@ flavor_geo.16 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] Presence in 
 		add_stability = stability_extreme_penalty
 		add_all_estate_satisfaction = { value = estate_satisfaction_extreme_penalty }
 		add_opinion_mutual_effect = {
-			target = c:PAP
+			target = c:DUMMY
 			modifier = opinion_royal_line_embraced_catholicism
 		}
 
-		c:PAP = { trigger_event_non_silently = flavor_geo.18 }
+		c:DUMMY = { trigger_event_non_silently = flavor_geo.18 }
 	}
 }
 
@@ -1232,7 +1232,7 @@ flavor_geo.17 = { #A Messenger from the [target_country2.GetLongNameWithNoToolti
 		show_as_tooltip = {
 			add_opinion = {
 				modifier = opinion_demolished_catholic_embassies
-				target = c:GEO
+				target = c:DUMMY
 			}
 		}
 		add_government_power = government_power_weak_penalty
@@ -1276,7 +1276,7 @@ flavor_geo.19 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] Spreads
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1284,7 +1284,7 @@ flavor_geo.19 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] Spreads
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:PAP
+		country_exists = c:DUMMY
 		any_owned_location = {
 			has_building = building_type:missionary_building
 		}
@@ -1374,7 +1374,7 @@ flavor_geo.19 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] Spreads
 			}
 		}
 
-		c:PAP = { trigger_event_non_silently = flavor_geo.17 }
+		c:DUMMY = { trigger_event_non_silently = flavor_geo.17 }
 
 		every_character = {
 			limit = { religion = religion:catholic }
@@ -1388,7 +1388,7 @@ flavor_geo.19 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] Spreads
 		change_religion = religion:catholic
 		change_religion_for_ruler_and_family = { country = ROOT religion = religion:catholic }
 
-		c:PAP = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_geo.20
 		}
 	}
@@ -1418,8 +1418,8 @@ flavor_geo.20 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] in the [targ
 			construct_building = {
 				building_type = building_type:missionary_building
 				instant = no
-				owner = c:PAP
-				payer = c:PAP
+				owner = c:DUMMY
+				payer = c:DUMMY
 			}
 		}
 		if = {
@@ -1428,8 +1428,8 @@ flavor_geo.20 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] in the [targ
 				construct_building = {
 					building_type = building_type:missionary_building
 					instant = no
-					owner = c:PAP
-					payer = c:PAP
+					owner = c:DUMMY
+					payer = c:DUMMY
 				}
 			}
 		}
@@ -1439,14 +1439,14 @@ flavor_geo.20 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] in the [targ
 				construct_building = {
 					building_type = building_type:missionary_building
 					instant = no
-					owner = c:PAP
-					payer = c:PAP
+					owner = c:DUMMY
+					payer = c:DUMMY
 				}
 			}
 		}
 
 		hidden_effect = {
-			c:GEO = {
+			c:DUMMY = {
 				set_variable = {
 					name = agreed_to_finance_missionaries_variable
 					years = 1
@@ -1463,14 +1463,14 @@ flavor_geo.20 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] in the [targ
 			NOT = {
 				has_mutual_scripted_relation = {
 					type = relation_type:alliance
-					target = c:GEO
+					target = c:DUMMY
 				}
 			}
 		}
 
 		create_relation = {
 			first = this
-			second = c:GEO
+			second = c:DUMMY
 			type = relation_type:alliance
 		}
 	}
@@ -1479,14 +1479,14 @@ flavor_geo.20 = { #[ShowReligionAdjectiveWithNoTooltip('catholic')] in the [targ
 		name = flavor_geo.20.c
 		add_prestige = prestige_weak_bonus
 		hidden_effect = {
-			c:GEO = {
+			c:DUMMY = {
 				set_variable = papacy_refused_help
 			}
 		}
 	}
 
 	after = {
-		c:GEO = {
+		c:DUMMY = {
 			trigger_event_non_silently = flavor_geo.21
 		}
 	}
@@ -1523,8 +1523,8 @@ flavor_geo.21 = { #Correspondence from the [target_country.GetLongNameWithNoTool
 				construct_building = {
 					building_type = building_type:missionary_building
 					instant = no
-					owner = c:PAP
-					payer = c:PAP
+					owner = c:DUMMY
+					payer = c:DUMMY
 				}
 			}
 			if = {
@@ -1533,8 +1533,8 @@ flavor_geo.21 = { #Correspondence from the [target_country.GetLongNameWithNoTool
 					construct_building = {
 						building_type = building_type:missionary_building
 						instant = no
-						owner = c:PAP
-						payer = c:PAP
+						owner = c:DUMMY
+						payer = c:DUMMY
 					}
 				}
 			}
@@ -1544,8 +1544,8 @@ flavor_geo.21 = { #Correspondence from the [target_country.GetLongNameWithNoTool
 					construct_building = {
 						building_type = building_type:missionary_building
 						instant = no
-						owner = c:PAP
-						payer = c:PAP
+						owner = c:DUMMY
+						payer = c:DUMMY
 					}
 				}
 			}
@@ -1562,8 +1562,8 @@ flavor_geo.21 = { #Correspondence from the [target_country.GetLongNameWithNoTool
 		add_religious_influence_if_valid = { VALUE = religious_influence_mild_bonus }
 		show_as_tooltip = {
 			create_relation = {
-				first = c:PAP
-				second = c:GEO
+				first = c:DUMMY
+				second = c:DUMMY
 				type = relation_type:alliance
 			}
 		}
@@ -1601,7 +1601,7 @@ flavor_geo.22 = { #Restoration of the [ROOT.GetCountry.GetGovernment.GetEstateNa
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1715,7 +1715,7 @@ flavor_geo.23 = { #Solar Eclipse of [GetCurrentYear]
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 20
@@ -1769,7 +1769,7 @@ flavor_geo.24 = { #The Demands of [target_character2.GetShortNameWithNoTooltip]
 	historical_info = flavor_geo.24.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -1777,9 +1777,9 @@ flavor_geo.24 = { #The Demands of [target_character2.GetShortNameWithNoTooltip]
 
 	trigger = {
 		current_date > 476.9.4
-		country_exists = c:TIM
-		is_subject_of = c:TIM
-		NOT = { religion = c:TIM.religion }
+		country_exists = c:DUMMY
+		is_subject_of = c:DUMMY
+		NOT = { religion = c:DUMMY.religion }
 	}
 
 	illustration_tags = {
@@ -1791,7 +1791,7 @@ flavor_geo.24 = { #The Demands of [target_character2.GetShortNameWithNoTooltip]
 		event_illustration_estate_effect = { foreground = estate_type:clergy_estate background = estate_type:nobles_estate }
 		save_scope_as = target_country1
 		ruler_or_regent = { save_scope_as = target_character1 }
-		c:TIM = {
+		c:DUMMY = {
 			save_scope_as = target_country2
 			ruler_or_regent = { save_scope_as = target_character2 }
 			religion = { save_scope_as = target_religion }
@@ -1806,21 +1806,21 @@ flavor_geo.24 = { #The Demands of [target_character2.GetShortNameWithNoTooltip]
 			set_variable = timur_conversion_variable
 		}
 		ruler_or_regent = {
-			change_character_religion = c:TIM.religion
-			every_child = { change_character_religion = c:TIM.religion  }
+			change_character_religion = c:DUMMY.religion
+			every_child = { change_character_religion = c:DUMMY.religion  }
 		}
 		if = {
 			limit = { has_consort = yes }
-			consort = { change_character_religion = c:TIM.religion  }
+			consort = { change_character_religion = c:DUMMY.religion  }
 		}
 		if = {
 			limit = { has_heir = yes }
-			heir = { change_character_religion = c:TIM.religion  }
+			heir = { change_character_religion = c:DUMMY.religion  }
 		}
 
 		add_opinion_mutual_effect = {
 			modifier = opinion_embraced_true_faith
-			target = c:TIM
+			target = c:DUMMY
 		}
 		add_liberty_desire = liberty_desire_severe_minus
 	}
@@ -1958,7 +1958,7 @@ flavor_geo.26 = { #[ROOT.GetCountry.GetNameWithNoTooltip]'s Religion Identity
 
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 50
@@ -2014,7 +2014,7 @@ flavor_geo.27 = { #Giorgi Saakadze
 	historical_info = flavor_geo.27.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1
@@ -2082,7 +2082,7 @@ flavor_geo.28 = { #Sulkhan-Saba Orbeliani
 	historical_info = flavor_geo.28.historical_info
 	fire_only_once = yes
 	dynamic_historical_event = {
-		tag = GEO
+		tag = DUMMY
 		from = 476.9.4
 		to = 476.9.4
 		monthly_chance = 1

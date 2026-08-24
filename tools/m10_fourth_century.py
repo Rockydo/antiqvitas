@@ -23,12 +23,16 @@ from pathlib import Path
 from advance_event_packages import knowledge_response_lines
 from dates import AntqDate, M2_MIRROR_LANGUAGES, indexed_timeline, load_timeline
 from m10_history import (
+    alternative_event_option_lines,
     current_lifecycle_lines,
     disaster_modifier_lines,
     engine_tags,
+    event_choice_localization,
+    historical_event_choice_lines,
     resolution_trigger_lines,
     situation_presentation_lines,
     start_country_locations,
+    validate_ai_chance_syntax,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -413,16 +417,20 @@ def event_script(records: tuple[Current, ...], eastern_locations: tuple[tuple[st
             "\toption = {",
             f"\t\tname = {record.event_key}.a",
             "\t\thistorical_option = yes",
+            *historical_event_choice_lines(record),
             *impact_lines(record, eastern_locations),
             *knowledge_response_lines(
                 record.kind,
                 5 if start.year >= 395 else 4 if start.year >= 376 else 3,
             ),
             "\t}",
+            *alternative_event_option_lines(record),
             "}",
             "",
         ))
-    return "\n".join(lines)
+    script = "\n".join(lines)
+    validate_ai_chance_syntax(script, source=str(EVENT_OUTPUT.relative_to(ROOT)))
+    return script
 
 
 def situation_script(records: tuple[Current, ...]) -> str:
@@ -489,11 +497,16 @@ def localization(records: tuple[Current, ...], language: str) -> str:
         ' ERO_ADJ: "Eastern Roman"',
     ]
     for record in records:
-        description = f"{record.summary} This historical current follows the {record.rails.lower()} setting."
+        description = (
+            f"{record.summary}. Decisions taken during this current alter its "
+            "pace, cost, and eventual resolution."
+        )
         lines.extend((
             f' {record.event_key}.title: "{record.label}"',
             f' {record.event_key}.desc: "{description}"',
-            f' {record.event_key}.a: "Meet the historical current."',
+            f' {record.event_key}.a: "{event_choice_localization(record)[0]}"',
+            f' {record.event_key}.b: "{event_choice_localization(record)[1]}"',
+            f' {record.event_key}.c: "{event_choice_localization(record)[2]}"',
             f' {record.event_key}.entry: "{record.label}"',
             f' {record.event_key}.entry_short: "{record.label}"',
         ))

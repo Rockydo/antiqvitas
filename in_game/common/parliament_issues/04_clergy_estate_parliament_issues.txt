@@ -28,34 +28,7 @@ sponsor_a_confucian_academy = {
 	}
 
 	chance = {
-		add = 1
-		add = {
-			if = {
-				limit = {
-					societal_value:traditionalist_vs_innovative > 30
-				}
-				value = 2
-			}
-		}
-		add = {
-			if = {
-				limit = {
-					total_effective_building_levels:confucian_academy < 1
-				}
-				value = 4
-			}
-		}
-		multiply = {
-			if = {
-				limit = {
-					societal_value:traditionalist_vs_innovative < 0
-				}
-				value = 0.5
-			}
-			else = {
-				value = 1	#We need that else or otherwise the whole chance is multiplied with 0
-			}
-		}
+		add = 0 # ANTIQVITAS runtime quarantine
 	}
 
 	on_debate_passed = {
@@ -110,35 +83,7 @@ sponsor_a_cathedral = {
 	}
 
 	chance = {
-		add = 1
-		add = {
-			if = {
-				limit = {
-					societal_value:spiritualist_vs_humanist < -30
-				}
-				value = 2
-			}
-		}
-
-		add = {
-			if = {
-				limit = {
-					total_effective_building_levels:cathedral < 1
-				}
-				value = 4
-			}
-		}
-		multiply = {
-			if = {
-				limit = {
-					societal_value:spiritualist_vs_humanist > 30
-				}
-				value = 0.5
-			}
-			else = {
-				value = 1	#We need that else or otherwise the whole chance is multiplied with 0
-			}
-		}
+		add = 0 # ANTIQVITAS runtime quarantine
 	}
 
 	on_debate_passed = {
@@ -193,26 +138,7 @@ expand_forestry_operations = {
 	}
 
 	chance = {
-		add = 1
-		add = {
-			if = {
-				limit = {
-					societal_value:capital_economy_vs_traditional_economy > 30
-				}
-				value = 2
-			}
-		}
-		multiply = {
-			if = {
-				limit = {
-					societal_value:capital_economy_vs_traditional_economy < -60
-				}
-				value = 0.5
-			}
-			else = {
-				value = 1	#We need that else or otherwise the whole chance is multiplied with 0
-			}
-		}
+		add = 0 # ANTIQVITAS runtime quarantine
 	}
 
 	on_debate_passed = {
@@ -270,26 +196,7 @@ support_clergy_cabinet = {
 	}
 
 	chance = {
-		add = 1
-		add = {
-			if = {
-				limit = {
-					has_advance = government_size_renaissance
-				}
-				value = 2
-			}
-		}
-		multiply = {
-			if = {
-				limit = {
-					societal_value:spiritualist_vs_humanist > 0
-				}
-				value = 0.5
-			}
-			else = {
-				value = 1	#We need that else or otherwise the whole chance is multiplied with 0
-			}
-		}
+		add = 0 # ANTIQVITAS runtime quarantine
 	}
 
 	on_debate_passed = {
@@ -325,27 +232,7 @@ promote_state_religion = {
 	}
 
 	chance = {
-		add = 1
-		add = {
-			if = {
-				limit = {
-					religious_unity <= 0.5
-				}
-				value = 2
-			}
-		}
-		multiply = {
-			if = {
-				limit = {
-					religious_unity >= 0.8
-				}
-				value = 0.5
-			}
-			else = {
-				value = 1	#We need that else or otherwise the whole chance is multiplied with 0
-			}
-		}
-
+		add = 0 # ANTIQVITAS runtime quarantine
 	}
 
 	on_debate_passed = {
@@ -405,34 +292,7 @@ expand_diplomatic_corps_religion = {
 	}
 
 	chance = {
-		add = 1
-		add = {
-			if = {
-				limit = {
-					num_of_diplomats <= 2
-				}
-				value = 2
-			}
-		}
-		add = {
-			if = {
-				limit = {
-					is_situation_active = situation:reformation
-					can_see_situation = situation:reformation
-				}
-			}
-		}
-		multiply = {
-			if = {
-				limit = {
-					num_of_diplomats >= 3
-				}
-				value = 0.5
-			}
-			else = {
-				value = 1	#We need that else or otherwise the whole chance is multiplied with 0
-			}
-		}
+		add = 0 # ANTIQVITAS runtime quarantine
 	}
 
 	on_debate_passed = {
@@ -499,24 +359,7 @@ promote_clergy_member = {
 	}
 
 	chance = {
-		add = 1
-		add = {
-			if = {
-				limit = {
-					has_estate_privilege = estate_privilege:clergy_in_administration
-				}
-				value = 2
-			}
-		}
-		add = {
-			if = {
-				limit = {
-					has_estate_privilege = estate_privilege:clergy_religious_state
-				}
-				value = 2
-			}
-		}
-
+		add = 0 # ANTIQVITAS runtime quarantine
 	}
 
 	on_debate_passed = {
@@ -554,26 +397,7 @@ support_religious_art = {
 	}
 
 	chance = {
-		add = 1
-		add = {
-			if = {
-				limit = {
-					has_advance = patron_of_art
-				}
-				value = 2
-			}
-		}
-		multiply = {
-			if = {
-				limit = {
-					societal_value:spiritualist_vs_humanist > 0
-				}
-				value = 0.5
-			}
-			else = {
-				value = 1	#We need that else or otherwise the whole chance is multiplied with 0
-			}
-		}
+		add = 0 # ANTIQVITAS runtime quarantine
 	}
 
 	on_debate_passed = {
@@ -632,39 +456,7 @@ support_religious_education = {
 	}
 
 	chance = {
-		add = 1
-		add = {
-			if = {
-				limit = {
-					has_advance = educated_bureaucrats
-				}
-				value = 2
-			}
-		}
-		add = {
-			if = {
-				limit = {
-					has_policy = pursuit_of_knowledge_policy
-				}
-				value = 2
-			}
-		}
-		multiply = {
-			if = {
-				limit = {
-					NOT = {
-						OR = {
-							has_advance = innovativeness
-							has_advance = humanism
-						}
-					}
-				}
-				value = 0.5
-			}
-			else = {
-				value = 1	#We need that else or otherwise the whole chance is multiplied with 0
-			}
-		}
+		add = 0 # ANTIQVITAS runtime quarantine
 	}
 
 	on_debate_passed = {
@@ -711,29 +503,7 @@ improve_relations_with_the_faith = {
 	}
 
 	chance = {
-		add = 1
-		add = {
-			if = {
-				limit = {
-					situation:western_schism = {
-						situation_is_active = yes
-					}
-					religion = religion:catholic
-				}
-				value = 2
-			}
-		}
-		add = {
-			if = {
-				limit = {
-					situation:reformation = {
-						situation_is_active = yes
-					}
-					religion.group = religion_group:christian
-				}
-				value = 2
-			}
-		}
+		add = 0 # ANTIQVITAS runtime quarantine
 	}
 
 	on_debate_passed = {
